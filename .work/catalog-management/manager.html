@@ -1,0 +1,10 @@
+<dialog id="catalogDialog" aria-labelledby="catalogDialogTitle">
+ <div class="dialog-head"><h2 id="catalogDialogTitle">담당자 · 업무유형 관리</h2><button class="close-catalog" aria-label="관리 창 닫기">×</button></div>
+ <div class="catalog-body">
+  <div class="catalog-tabs" role="tablist" aria-label="관리 항목"><button id="catalogOwnerTab" role="tab" aria-controls="catalogOwners" aria-selected="true">담당자</button><button id="catalogTypeTab" role="tab" aria-controls="catalogTypes" aria-selected="false" tabindex="-1">업무유형</button></div>
+  <section id="catalogOwners" role="tabpanel" aria-labelledby="catalogOwnerTab"><div class="catalog-intro"><p>이름과 기본 색상을 수정하거나 담당자를 추가하세요.</p><button id="addCatalogOwner" type="button">+ 담당자 추가</button></div><div id="catalogOwnerRows" class="catalog-rows"></div><p class="catalog-hint">기본 색상은 새 일정과 ‘담당자 기본색’ 선택에 사용됩니다.</p></section>
+  <section id="catalogTypes" role="tabpanel" aria-labelledby="catalogTypeTab" hidden><div class="catalog-intro"><p>업무유형 이름을 수정하거나 새 유형을 추가하세요.</p><button id="addCatalogType" type="button">+ 업무유형 추가</button></div><div id="catalogTypeRows" class="catalog-rows"></div><p class="catalog-hint">공동구매 유형은 이름을 바꿔도 공구·매출 집계에 포함됩니다. 새 유형은 일반 일정으로 사용됩니다.</p></section>
+  <p class="catalog-hint">설정은 같은 PC·브라우저에 저장됩니다.</p><p id="catalogError" class="error" role="alert"></p><p id="catalogStorageNote" class="catalog-hint" role="status"></p>
+ </div>
+ <div class="dialog-foot"><button class="close-catalog" type="button">취소</button><button class="primary" id="saveCatalog" type="button">변경 저장</button></div>
+</dialog>

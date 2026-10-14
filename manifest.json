@@ -1,0 +1,588 @@
+{
+  "generatedAt": "2026-10-14",
+  "records": 1679,
+  "sourceRebuildVerified": true,
+  "calendarDataSHA256": "1c46e7926d9603f112829f280486a22207c0f2a5b6fec6f07155b91a3616f274",
+  "files": [
+    {
+      "path": ".work/catalog-management/manager.css",
+      "bytes": 3002,
+      "sha256": "1d5814a253815713ec136c56144eec24b69392d3b8842f13e0d590884efeb64e"
+    },
+    {
+      "path": ".work/catalog-management/manager.html",
+      "bytes": 1894,
+      "sha256": "04314fc0f1e7b26cf10ca0c315adea688fe52ada950ac41d9d75c8d0df537cd9"
+    },
+    {
+      "path": ".work/catalog-management/manager.js",
+      "bytes": 11175,
+      "sha256": "102e33528a3c784c3fa6a86350201292e6199acf229412f5f96e4bd50cb428de"
+    },
+    {
+      "path": ".work/groupbuy-review/classification-rules.json",
+      "bytes": 954,
+      "sha256": "0d0549066d0534e1a383daf403cfb313905a6a2a8f51a549084703ed3c3d97ee"
+    },
+    {
+      "path": ".work/groupbuy-review/classify.js",
+      "bytes": 1436,
+      "sha256": "41f0814225012cb921792c5c0143c34c916199a2badf43827b338c0ab4c5a69b"
+    },
+    {
+      "path": ".work/groupbuy-review/weekly-details.css",
+      "bytes": 1918,
+      "sha256": "a3ef3a37d4e12ad940074113a1b7ed758154a366ac8c1851a908956dbf02ab8f"
+    },
+    {
+      "path": ".work/groupbuy-review/weekly-details.html",
+      "bytes": 356,
+      "sha256": "3624aa853a2e6a79535905ca66c1296da1d9e08c2c18c2d16239fc9d59d7a70d"
+    },
+    {
+      "path": ".work/groupbuy-review/weekly-details.js",
+      "bytes": 6010,
+      "sha256": "fadacea41345f1343ed339ca953f3cf47a69531a31fdb3f41ab4baa04d81d01c"
+    },
+    {
+      "path": ".work/holiday2030/holidays-2028-2030.json",
+      "bytes": 3034,
+      "sha256": "617cf38930ed68924f287c58bb23c71c7be41ff2d5c96ed76a236892a603bd3b"
+    },
+    {
+      "path": ".work/import2026/apply_catalog_management.py",
+      "bytes": 4427,
+      "sha256": "64df6a89674db7a70348df11c60abab89dd617dd6554fd281d78bddf5319aa5f"
+    },
+    {
+      "path": ".work/import2026/apply_csv_calendar.py",
+      "bytes": 5234,
+      "sha256": "4571ee72bd2bcccc950ccbffe3069e1dd0b1064fec76d3d57faf86d1d07451ee"
+    },
+    {
+      "path": ".work/import2026/apply_groupbuy_classification.py",
+      "bytes": 3435,
+      "sha256": "91b8e9094f0778949155329ff784b222a074ecfb7008eb5327634ff65763fc5f"
+    },
+    {
+      "path": ".work/import2026/apply_owner_labels.py",
+      "bytes": 1702,
+      "sha256": "a49cee33b6b3be8c7522ee2f1326b1025da5f6281dedc4c4dc3f0d1e1819ec37"
+    },
+    {
+      "path": ".work/import2026/apply_product_names.py",
+      "bytes": 5495,
+      "sha256": "fff217c2296bdef800ee3015b28582d166dea320e4032a69c5402ecb1834279d"
+    },
+    {
+      "path": ".work/import2026/apply_sales_number_format.py",
+      "bytes": 2805,
+      "sha256": "dfcfb07f3648f5a0d6fae353a27d16eeaa44c16eb788da43f373a5b2c378d63a"
+    },
+    {
+      "path": ".work/import2026/apply_schedule_csv.py",
+      "bytes": 1575,
+      "sha256": "a32dbf163f41dd8fec9d58a4bc1610d163a47626e2bcfc3a3414e6dfef2450c9"
+    },
+    {
+      "path": ".work/import2026/apply_schedule_notes.py",
+      "bytes": 4993,
+      "sha256": "f5a216ac58d22a0d6ca771a61efac9ba15f35344998a0ae23e63497ccf7bcb17"
+    },
+    {
+      "path": ".work/import2026/apply_schedule_refinements.py",
+      "bytes": 4581,
+      "sha256": "18513c3bf4ad181266590d04000515ae8ba94efec927ceff386c07de01bf31fc"
+    },
+    {
+      "path": ".work/import2026/apply_schedule_sales.py",
+      "bytes": 5035,
+      "sha256": "0e3eafa44fc1c9c7b5355311eae68d0d064f2724b9b518f3bef0b3abb5000ca0"
+    },
+    {
+      "path": ".work/import2026/apply_server_cleanup.py",
+      "bytes": 7073,
+      "sha256": "3e1764305a3ddd074ab935ae3cf07a7dcd4e495c15e3689770a6e6abe15b65d3"
+    },
+    {
+      "path": ".work/import2026/apply_settlement_calculator.py",
+      "bytes": 1736,
+      "sha256": "4ed2a32d8910c5e1428c558aba04119115266958c009dc32a7725be8297106ad"
+    },
+    {
+      "path": ".work/import2026/apply_sku_sales.py",
+      "bytes": 1150,
+      "sha256": "f1229beb8dfbfbe83d65925b5f465113daa99d0df48160e8301bd8a450498afe"
+    },
+    {
+      "path": ".work/import2026/apply_weekly_list.py",
+      "bytes": 11904,
+      "sha256": "8c13f51b3e2890fe4042a97da83570769c0e125f064429f476acbb943bf59856"
+    },
+    {
+      "path": ".work/import2026/apply_weekly_report.py",
+      "bytes": 1292,
+      "sha256": "4095c00739f5b22e4047470d2df1caa2270b0f9b9d6a4153a71fe8eb958ef0ee"
+    },
+    {
+      "path": ".work/import2026/apply_work_navigation.py",
+      "bytes": 4189,
+      "sha256": "8cca4cac13ce8dd320f1e23768a32672b78ec05eecf680c0cc698791fdf42d1a"
+    },
+    {
+      "path": ".work/import2026/before-real-import.html",
+      "bytes": 40839,
+      "sha256": "80b36d26467a05207bb0e6d1059fe0af47f2b6f1b6437d4ad8a70d76da9a6657"
+    },
+    {
+      "path": ".work/import2026/integrate_import.py",
+      "bytes": 19335,
+      "sha256": "48f93e50a4899e5b1bd9d3a2007447b7a1c7ff8a9f2165f658b5e5b93930356d"
+    },
+    {
+      "path": ".work/import2026/jan-apr.json",
+      "bytes": 29383,
+      "sha256": "119e61b302501377f8c1048304827309516637cad22be94d3e2075c0d59403fb"
+    },
+    {
+      "path": ".work/import2026/may-aug.json",
+      "bytes": 18199,
+      "sha256": "b7e58c173a7d84d27d5a935f3e4453a96bcbda8d9e984180621bd915f6d8cced"
+    },
+    {
+      "path": ".work/import2026/month-01.png",
+      "bytes": 151491,
+      "sha256": "ec31958aa584f1ae1e8e4e309a997a792887e8d3bc46d7d8147d44443ec4b2c9"
+    },
+    {
+      "path": ".work/import2026/month-02.png",
+      "bytes": 113129,
+      "sha256": "ab2d9ef1757c30b2627a4df1a532969e0a6d0aa51377c73d30844d139c47e3f7"
+    },
+    {
+      "path": ".work/import2026/month-03.png",
+      "bytes": 79757,
+      "sha256": "2dba7f16cdb132af9f1b2878386db1f01fa3d754c048c55a18b457e1b2a23c42"
+    },
+    {
+      "path": ".work/import2026/month-04.png",
+      "bytes": 133820,
+      "sha256": "ffe863e01cc1898c0068238c96f959ae827fe824e3c3c5ee6ec3281edc8fd957"
+    },
+    {
+      "path": ".work/import2026/month-05.png",
+      "bytes": 129700,
+      "sha256": "ae9413b4a65f0add7802a0f281d7c160e5c3c2332219ddd92febcaa30745b5ce"
+    },
+    {
+      "path": ".work/import2026/month-06.png",
+      "bytes": 109962,
+      "sha256": "bb4b6b321e4cc118d20646c4f14bbd0a4049b826a4f9a056070b50f324f199bb"
+    },
+    {
+      "path": ".work/import2026/month-07.png",
+      "bytes": 99063,
+      "sha256": "b150751b70faf31f723001a67c83423534a5ccc0928f793d4b468cd49a7d7804"
+    },
+    {
+      "path": ".work/import2026/month-08.png",
+      "bytes": 123183,
+      "sha256": "a62996e906e7639e0ed5aa3624bafe5a1fc0906eedb32774aa3458c53ad0c31a"
+    },
+    {
+      "path": ".work/import2026/month-09.png",
+      "bytes": 150902,
+      "sha256": "d68e8c3567b43d9a96a0b64cfc3a63cc3ad1aa64139b5a97fbc6562962d37dd8"
+    },
+    {
+      "path": ".work/import2026/month-10.png",
+      "bytes": 123353,
+      "sha256": "6c25e92432da197f85b004e89ad83cb3e03ab57e358a2a35a6209fc8ab443c85"
+    },
+    {
+      "path": ".work/import2026/month-11.png",
+      "bytes": 122065,
+      "sha256": "339e887ae015257a160321d432d1b42b584a00facfa3d9a54c03d8ce9e334ca3"
+    },
+    {
+      "path": ".work/import2026/month-12.png",
+      "bytes": 98209,
+      "sha256": "093e0b574c4e01e74eb510746d939c6da08cf61f81dca53a97588e618227a278"
+    },
+    {
+      "path": ".work/import2026/month-13.png",
+      "bytes": 53647,
+      "sha256": "3518de37a15cde601928e5b51763eecd6402f273826df393e05e0c9617ab1cd1"
+    },
+    {
+      "path": ".work/import2026/owner-colors.png",
+      "bytes": 11105,
+      "sha256": "62a5c3fd91622364326009ef705f5c8025f7427f0e5d2ea3a6cda326661c183d"
+    },
+    {
+      "path": ".work/import2026/sep-jan.json",
+      "bytes": 27513,
+      "sha256": "da5ffbd9ab5fe3a3305c56805785ee4a0c60615b1d2aa9e9124a42c8b229d750"
+    },
+    {
+      "path": ".work/product-names/inventory.json",
+      "bytes": 64580,
+      "sha256": "5a0a906369b3feecbc3ffe0f36ff5688c15e07a6137fe1c373d0abbe41d6d950"
+    },
+    {
+      "path": ".work/schedule-csv/calendar-import.js",
+      "bytes": 7135,
+      "sha256": "9261adfe1d95647096e6bc0a213a70577c8ad234e973f33716d18ef4c7b1afe2"
+    },
+    {
+      "path": ".work/schedule-csv/csv.js",
+      "bytes": 10582,
+      "sha256": "1340190b9bd08334d969aa2c6ccbe45825110ead90975c8dcccfa8078a78b39b"
+    },
+    {
+      "path": ".work/schedule-csv/panel.html",
+      "bytes": 3941,
+      "sha256": "2d9b9b422e76033087cb6d6705587e3b535705ecb3fe97ca169795544257c6f4"
+    },
+    {
+      "path": ".work/schedule-csv/source-id-map.json",
+      "bytes": 87233,
+      "sha256": "bd0e8f87513f8b47ad7a5dc88b27b15e2e4242aa2faf7c8099bb503ba80278fe"
+    },
+    {
+      "path": ".work/schedule-csv/style.css",
+      "bytes": 5869,
+      "sha256": "048be7653dd0ecba1e7bced52f26578d11430278c952bb3fc7e948bcd7f7c46c"
+    },
+    {
+      "path": ".work/schedule-refinement/calendar-history.js",
+      "bytes": 1836,
+      "sha256": "ffe4b98e2eed0050099495514b11356f858dc0b44af00f35ab49222e7c2032db"
+    },
+    {
+      "path": ".work/schedule-refinement/sales-scope.js",
+      "bytes": 4643,
+      "sha256": "9cbaecf777f50c669d918bf9340ae85a76355db4cd9fe4008561e6decf873ee8"
+    },
+    {
+      "path": ".work/schedule-sales/add-fields.html",
+      "bytes": 469,
+      "sha256": "d2745521d086b870c3105d02cf6aa69dc65aa4e92895f8d0f78c98ff23137c30"
+    },
+    {
+      "path": ".work/schedule-sales/bindings.js",
+      "bytes": 1987,
+      "sha256": "5bc6e9b662721934e7cb847fdb7f58032a62a60f716c590d105bc25336098480"
+    },
+    {
+      "path": ".work/schedule-sales/edit-fields.html",
+      "bytes": 1447,
+      "sha256": "0bb8ba28ec0ca3c91377a4bf58b145ef474da91bc47a5406d83a445859383ab7"
+    },
+    {
+      "path": ".work/schedule-sales/export-template.xlsx",
+      "bytes": 6009,
+      "sha256": "1feac9011232906090cddb132c63f57e65a95d6141962489d7843f29a9536816"
+    },
+    {
+      "path": ".work/schedule-sales/panel.html",
+      "bytes": 1415,
+      "sha256": "9e7d4ae302475d64d43a00fb1284b8ab12343de971f1baaadf5454861d741258"
+    },
+    {
+      "path": ".work/schedule-sales/sales.css",
+      "bytes": 6882,
+      "sha256": "8ee1b3bdad91ca3efd49a58b854db8e999f07a10b3658e6f0c093b65b5d42e76"
+    },
+    {
+      "path": ".work/schedule-sales/sales.js",
+      "bytes": 15829,
+      "sha256": "69696d95a7abf0614934fa706716c64e7832e3cf56108d71edc848b7d1ca44d1"
+    },
+    {
+      "path": ".work/schedule-sales/summary.html",
+      "bytes": 1425,
+      "sha256": "35f8f17bf1d92e2aa8b441fdeb8ad14c4c1255e6f268cec2936a042da933e752"
+    },
+    {
+      "path": ".work/settlement-analysis/sales-number-input.js",
+      "bytes": 827,
+      "sha256": "84ddaa99308be26097843f7109b8516a725489da9a9a5258f6ddfec0e5fdf520"
+    },
+    {
+      "path": ".work/settlement-calculator/export-template.xlsx",
+      "bytes": 5627,
+      "sha256": "9a02d2730b1e7a3722d5a918319b3849f1ec619b1d50c6f00399d3325f31ea50"
+    },
+    {
+      "path": ".work/settlement-calculator/panel.html",
+      "bytes": 9812,
+      "sha256": "8423cc3416b62cf24ca956ffdbd0176c23999caa949544b8371259c90b1e09fd"
+    },
+    {
+      "path": ".work/settlement-calculator/schedule-link-dialog.html",
+      "bytes": 3058,
+      "sha256": "5851fc5c47c240b0198d5f415d513866921a49d8ec6b9d7fda6bf70efea79206"
+    },
+    {
+      "path": ".work/settlement-calculator/schedule-link.css",
+      "bytes": 6095,
+      "sha256": "22d294c3a082e2e222f38af5b0f26aa31056eff23f87ce64c21aca4b5590a8d9"
+    },
+    {
+      "path": ".work/settlement-calculator/schedule-link.html",
+      "bytes": 762,
+      "sha256": "1c9a413dfe66a0b5a1eb9a5d5730ff20394b65a183a9b13bbd972a155803cf19"
+    },
+    {
+      "path": ".work/settlement-calculator/schedule-link.js",
+      "bytes": 13768,
+      "sha256": "499431f96f5f5e37c814fdc40506b3ae14302882117d1370519e5434eef80ff9"
+    },
+    {
+      "path": ".work/settlement-calculator/settlement.css",
+      "bytes": 7328,
+      "sha256": "daaf60526ca4f14651310fff0135b1af4604d34701b0377ef63d0b2fcc212bc0"
+    },
+    {
+      "path": ".work/settlement-calculator/settlement.js",
+      "bytes": 24765,
+      "sha256": "885224ec3c8be5f3bbd60e37dcadbda235bf6090fe42195b769e57564ef37f57"
+    },
+    {
+      "path": ".work/settlement-calculator/template.json",
+      "bytes": 32116,
+      "sha256": "8a8e9c4724eaea86aa502477963cac34f8dedb76cd189ec2acc483ac1c5ce6c6"
+    },
+    {
+      "path": ".work/sku-sales/sku.css",
+      "bytes": 5169,
+      "sha256": "b058544173634997b00049412b3cd51fd23119c41316f8a6b3955ff76c5b0b15"
+    },
+    {
+      "path": ".work/sku-sales/sku.html",
+      "bytes": 357,
+      "sha256": "22ac8176c722f918d3a59dee69a007fe23806dd32237cfa89715d5b059635ca7"
+    },
+    {
+      "path": ".work/sku-sales/sku.js",
+      "bytes": 6734,
+      "sha256": "33b0ba76ef04c3d143096e02f2c14d8851d1f819322ebe5005cecfd904c8caae"
+    },
+    {
+      "path": ".work/weekly-report/report.css",
+      "bytes": 1574,
+      "sha256": "4a745eccc353917640a0c0873a807ba7b0f21b006ef39ef0b7418acf479b2a0e"
+    },
+    {
+      "path": ".work/weekly-report/report.html",
+      "bytes": 553,
+      "sha256": "4601076b16c1fdf02cda5f0be74ef2d98f6dd15886865ba639787bcc4ea453d8"
+    },
+    {
+      "path": ".work/weekly-report/report.js",
+      "bytes": 708,
+      "sha256": "84b0b680cf76f27223498cee01590219fc3b2f106855eed63d57796f6fd81121"
+    },
+    {
+      "path": ".work/work-navigation/navigation.css",
+      "bytes": 4048,
+      "sha256": "effc1600f9800fbdd289a8ef1b138f78f76402f434223fddf8595eb211cf9959"
+    },
+    {
+      "path": ".work/work-navigation/navigation.html",
+      "bytes": 3162,
+      "sha256": "2d6847ba79137cbf2b87c210b28059ff9e58f8c40684a5987c9b64d78efccd8b"
+    },
+    {
+      "path": ".work/work-navigation/navigation.js",
+      "bytes": 5041,
+      "sha256": "0416a57effaec63126320081d35e60f48b0da8455ee4803d0b805529fa169ec0"
+    },
+    {
+      "path": ".work/work-navigation/settlement.html",
+      "bytes": 763,
+      "sha256": "5cca1b7ce8b8f1c386d643963fe7c59796ba7a7749cfc784dfbeba66f7ee48e7"
+    },
+    {
+      "path": "03_사내일정관리_시안.html",
+      "bytes": 3348716,
+      "sha256": "b20da0befaa9377f5197ff5b6dd71de6c29ce4e728e11df81ba9cb52085c05b0"
+    },
+    {
+      "path": "09_이미지반영_일정데이터.json",
+      "bytes": 165392,
+      "sha256": "16e314198d421e0b9afd6d42277e81af32fd679f7565e991054d2a9837ccea45"
+    },
+    {
+      "path": "23_제품명_기준_검토.json",
+      "bytes": 4718,
+      "sha256": "7bf7f40e89da6f50f950a7841107f508046de274a6cbadc7e825234440d8fe64"
+    },
+    {
+      "path": "23_제품명_변경이력.json",
+      "bytes": 62671,
+      "sha256": "11ab935486f98471d8378f960cf6002610079cbd21c3586c547b94b5b9d38b5b"
+    },
+    {
+      "path": "26_공구정산_유형별_수수료_반영.md",
+      "bytes": 5338,
+      "sha256": "e81e3e2f185fc30e3072245679ec1a4d39947c1722e9e45bc0dcfa1e1424dd71"
+    },
+    {
+      "path": "27_일정표_판매건수_정산매출_연결.md",
+      "bytes": 3769,
+      "sha256": "d2034e4cd7fe9dd7da6307f235b6ecdc0579eabc7f89999da9eb04cfe7a0d0ff"
+    },
+    {
+      "path": "30_일정원본CSV_입력.md",
+      "bytes": 5611,
+      "sha256": "2af0866abb2ed7d7289d5f07e0e499cfe2c8cd778660dadfa20515956554e45c"
+    },
+    {
+      "path": "31_TimeBlocks_CSV_원본_검토.md",
+      "bytes": 3950,
+      "sha256": "0b6addf0a3fdd4bb36613220befaba83256f2cbfe17daed824e1ebe624360236"
+    },
+    {
+      "path": "32_CSV반영_일정데이터.json",
+      "bytes": 3048802,
+      "sha256": "1c46e7926d9603f112829f280486a22207c0f2a5b6fec6f07155b91a3616f274"
+    },
+    {
+      "path": "33_공구형식분류_주차별상세.md",
+      "bytes": 4311,
+      "sha256": "0f152f0bace2c5a05ac37fcade9ecee2ed9b942a8ac20f890f5f5ed7aca91b1d"
+    },
+    {
+      "path": "AGENTS.md",
+      "bytes": 16850,
+      "sha256": "4fcee5aa099df2f169a96805b2f96bc77714d8e8af0a1a1127122c7bbd7de95a"
+    },
+    {
+      "path": "owners.seed.json",
+      "bytes": 937,
+      "sha256": "531f4ce0253fa8272529cb10d5ad7e09e91228825db41a5f79e122582f76e1a3"
+    },
+    {
+      "path": "quality/csv-apply-verification.json",
+      "bytes": 10180,
+      "sha256": "a17a79ca56364a61223655a73c13434da5d98684b08c6a355caf03f8b637ee87"
+    },
+    {
+      "path": "quality/csv-verification-results.json",
+      "bytes": 6656,
+      "sha256": "3225fe6a38139e8c0f53290807a427128c20250e9a24abc5ef481e8d3f65b25a"
+    },
+    {
+      "path": "quality/groupbuy-classification-result.json",
+      "bytes": 153879,
+      "sha256": "ad37acfba0f05305cbfab6f90d7436c0e88a4106a74b91b46de7540ceea4b5db"
+    },
+    {
+      "path": "quality/groupbuy-classification-verification.json",
+      "bytes": 15199,
+      "sha256": "213b5e0d0ecc8fd38f4173df639d91847b1fc43bc99c071daa29156605e886c7"
+    },
+    {
+      "path": "quality/owner-display-verification.json",
+      "bytes": 5082,
+      "sha256": "9b1c990d698fe11739ef1a638fa2c28c2d392de700be629252405f5baaa5b889"
+    },
+    {
+      "path": "quality/record-statistics.json",
+      "bytes": 405,
+      "sha256": "48df8ba390f2c8a0b029992a5d58666c6f14c0958e6bfdaf40dde1de93b6e164"
+    },
+    {
+      "path": "quality/settlement-verification-results.json",
+      "bytes": 16132,
+      "sha256": "401c7e0b2cf9e2826c7dee3a6e93427be909eeab0f93a45eb1335d83cd106df0"
+    },
+    {
+      "path": "README_개발자인계.md",
+      "bytes": 10420,
+      "sha256": "bd699966870166ec07c38ace8032170de1bc4b2618784196fd3407ac5176b049"
+    },
+    {
+      "path": "SOURCE_MAP.md",
+      "bytes": 2433,
+      "sha256": "9794a214709867fdf0e935cc357f0563daae39cf4fb7e56c237cb2a41cffdea9"
+    },
+    {
+      "path": "자료/2026_원본/2026-01.png",
+      "bytes": 151491,
+      "sha256": "ec31958aa584f1ae1e8e4e309a997a792887e8d3bc46d7d8147d44443ec4b2c9"
+    },
+    {
+      "path": "자료/2026_원본/2026-02.png",
+      "bytes": 113129,
+      "sha256": "ab2d9ef1757c30b2627a4df1a532969e0a6d0aa51377c73d30844d139c47e3f7"
+    },
+    {
+      "path": "자료/2026_원본/2026-03.png",
+      "bytes": 79757,
+      "sha256": "2dba7f16cdb132af9f1b2878386db1f01fa3d754c048c55a18b457e1b2a23c42"
+    },
+    {
+      "path": "자료/2026_원본/2026-04.png",
+      "bytes": 133820,
+      "sha256": "ffe863e01cc1898c0068238c96f959ae827fe824e3c3c5ee6ec3281edc8fd957"
+    },
+    {
+      "path": "자료/2026_원본/2026-05.png",
+      "bytes": 129700,
+      "sha256": "ae9413b4a65f0add7802a0f281d7c160e5c3c2332219ddd92febcaa30745b5ce"
+    },
+    {
+      "path": "자료/2026_원본/2026-06.png",
+      "bytes": 109962,
+      "sha256": "bb4b6b321e4cc118d20646c4f14bbd0a4049b826a4f9a056070b50f324f199bb"
+    },
+    {
+      "path": "자료/2026_원본/2026-07.png",
+      "bytes": 99063,
+      "sha256": "b150751b70faf31f723001a67c83423534a5ccc0928f793d4b468cd49a7d7804"
+    },
+    {
+      "path": "자료/2026_원본/2026-08.png",
+      "bytes": 123183,
+      "sha256": "a62996e906e7639e0ed5aa3624bafe5a1fc0906eedb32774aa3458c53ad0c31a"
+    },
+    {
+      "path": "자료/2026_원본/2026-09.png",
+      "bytes": 150902,
+      "sha256": "d68e8c3567b43d9a96a0b64cfc3a63cc3ad1aa64139b5a97fbc6562962d37dd8"
+    },
+    {
+      "path": "자료/2026_원본/2026-10.png",
+      "bytes": 123353,
+      "sha256": "6c25e92432da197f85b004e89ad83cb3e03ab57e358a2a35a6209fc8ab443c85"
+    },
+    {
+      "path": "자료/2026_원본/2026-11.png",
+      "bytes": 122065,
+      "sha256": "339e887ae015257a160321d432d1b42b584a00facfa3d9a54c03d8ce9e334ca3"
+    },
+    {
+      "path": "자료/2026_원본/2026-12.png",
+      "bytes": 98209,
+      "sha256": "093e0b574c4e01e74eb510746d939c6da08cf61f81dca53a97588e618227a278"
+    },
+    {
+      "path": "자료/2026_원본/2027-01.png",
+      "bytes": 53647,
+      "sha256": "3518de37a15cde601928e5b51763eecd6402f273826df393e05e0c9617ab1cd1"
+    },
+    {
+      "path": "자료/2026_원본/담당자_색상표.png",
+      "bytes": 11105,
+      "sha256": "62a5c3fd91622364326009ef705f5c8025f7427f0e5d2ea3a6cda326661c183d"
+    },
+    {
+      "path": "자료/CSV_원본/calendar_import_2023-02-01_2027-01-31.csv",
+      "bytes": 451821,
+      "sha256": "7e38c429088a3ed78a76dd2f79ef2294c78ee999ad312af9f4a6da0cadb2bada"
+    }
+  ]
+}

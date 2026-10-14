@@ -1,0 +1,16 @@
+# Browser state, test outputs, local exports and secrets
+**/__pycache__/
+**/*.pyc
+**/node_modules/
+**/profile*/
+**/cache*/
+**/temp/
+**/verify.html
+**/*-dom.html
+.env
+.env.*
+*.pem
+*.key
+*.log
+.DS_Store
+Thumbs.db

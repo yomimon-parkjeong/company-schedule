@@ -1,0 +1,2237 @@
+[
+  {
+    "name": "와우펜",
+    "count": 56,
+    "types": [
+      "발송",
+      "행사",
+      "공동구매",
+      "기타"
+    ],
+    "rows": [
+      {
+        "id": 6,
+        "start": "2025-12-29",
+        "type": "발송",
+        "title": "*전달완료 [무브] suksuk_mom_(쑥쑥맘/강수진) 와우펜 수수료 20% - 샘플 발송",
+        "existingProduct": "",
+        "nickname": "suksuk_mom_",
+        "product": "와우펜"
+      },
+      {
+        "id": 10,
+        "start": "2026-01-05",
+        "type": "행사",
+        "title": "맘시터어플(이사님) 와우펜&와우펜북 이벤트",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "와우펜"
+      },
+      {
+        "id": 12,
+        "start": "2026-01-08",
+        "type": "발송",
+        "title": "*샘플 발송 [무브] @lovelybaby_sohee(소희맘/임미선) 와우펜만 - 수수료 20%",
+        "existingProduct": "",
+        "nickname": "lovelybaby_sohee",
+        "product": "와우펜"
+      },
+      {
+        "id": 17,
+        "start": "2026-01-13",
+        "type": "공동구매",
+        "title": "[전달완료]langyoon_mom- 와우펜",
+        "existingProduct": "",
+        "nickname": "langyoon_mom",
+        "product": "와우펜"
+      },
+      {
+        "id": 20,
+        "start": "2026-01-16",
+        "type": "공동구매",
+        "title": "*전달완료 hoo_ttobok(이승미) 와우펜북 공구 (상품발송)",
+        "existingProduct": "",
+        "nickname": "hoo_ttobok",
+        "product": "와우펜"
+      },
+      {
+        "id": 21,
+        "start": "2026-01-17",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 와우펜북 미술 12,400원",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "와우펜"
+      },
+      {
+        "id": 25,
+        "start": "2026-01-22",
+        "type": "공동구매",
+        "title": "*전달완료 labubear.o(김원지) 와우펜 공구 (상품발송)",
+        "existingProduct": "",
+        "nickname": "labubear.o",
+        "product": "와우펜"
+      },
+      {
+        "id": 30,
+        "start": "2026-01-29",
+        "type": "공동구매",
+        "title": "*전달완료 doha_mom__(홍민지) 와우펜북 공구 (상품발송)",
+        "existingProduct": "",
+        "nickname": "doha_mom__",
+        "product": "와우펜"
+      },
+      {
+        "id": 33,
+        "start": "2026-02-01",
+        "type": "공동구매",
+        "title": "hero._luv/이하영-와우펜",
+        "existingProduct": "",
+        "nickname": "hero._luv",
+        "product": "와우펜"
+      },
+      {
+        "id": 36,
+        "start": "2026-02-05",
+        "type": "공동구매",
+        "title": "*전달완료 dal.mom_(박수빈)와우펜 공구(상품발송)",
+        "existingProduct": "",
+        "nickname": "dal.mom_",
+        "product": "와우펜"
+      },
+      {
+        "id": 39,
+        "start": "2026-02-09",
+        "type": "공동구매",
+        "title": "bunnygamza(이종주)- 와우펜",
+        "existingProduct": "",
+        "nickname": "bunnygamza",
+        "product": "와우펜"
+      },
+      {
+        "id": 45,
+        "start": "2026-02-20",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 와우펜북 - 미술 : 12,400원 / 200",
+        "existingProduct": "",
+        "nickname": "200",
+        "product": "와우펜"
+      },
+      {
+        "id": 50,
+        "start": "2026-02-24",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 와우펜북 4종 패키지 : 44,800원 /",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "와우펜"
+      },
+      {
+        "id": 51,
+        "start": "2026-02-24",
+        "type": "발송",
+        "title": "*샘플 발송 [무브] @dani_rang_(양유진/다니당람) 와우펜만 20% - 오후 10시 오픈",
+        "existingProduct": "",
+        "nickname": "dani_rang_",
+        "product": "와우펜"
+      },
+      {
+        "id": 53,
+        "start": "2026-03-05",
+        "type": "공동구매",
+        "title": "■이사님 [레몬트리/학습] 와우펜/북",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "와우펜"
+      },
+      {
+        "id": 54,
+        "start": "2026-03-11",
+        "type": "공동구매",
+        "title": "* 전달완료 [무브] @house.jin(허정림/이유진) 와우펜만 수수료 20%",
+        "existingProduct": "",
+        "nickname": "house.jin",
+        "product": "와우펜"
+      },
+      {
+        "id": 55,
+        "start": "2026-03-17",
+        "type": "공동구매",
+        "title": "[전달완료] okku_mom 오꾸맘- 와우펜",
+        "existingProduct": "",
+        "nickname": "okku_mom",
+        "product": "와우펜"
+      },
+      {
+        "id": 59,
+        "start": "2026-03-25",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 와우펜북 - 미술 : 12,400원 / 150",
+        "existingProduct": "",
+        "nickname": "150",
+        "product": "와우펜"
+      },
+      {
+        "id": 64,
+        "start": "2026-04-02",
+        "type": "발송",
+        "title": "*샘플 발송 [무브 - 예정] @tiding_of_joy(소규람/권예슬) 와우펜만",
+        "existingProduct": "",
+        "nickname": "tiding_of_joy",
+        "product": "와우펜"
+      },
+      {
+        "id": 69,
+        "start": "2026-04-13",
+        "type": "공동구매",
+        "title": "*2차 [무브] (쑥쑥맘/강수진) 와우펜(이번에는 북도) 수수료 20%",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "와우펜"
+      },
+      {
+        "id": 78,
+        "start": "2026-04-20",
+        "type": "공동구매",
+        "title": "bonheur_0926 (오지수) - 와우펜 6차",
+        "existingProduct": "",
+        "nickname": "bonheur_0926",
+        "product": "와우펜"
+      },
+      {
+        "id": 83,
+        "start": "2026-04-27",
+        "type": "공동구매",
+        "title": "dawn_muklog - 와우펜",
+        "existingProduct": "",
+        "nickname": "dawn_muklog",
+        "product": "와우펜"
+      },
+      {
+        "id": 86,
+        "start": "2026-04-29",
+        "type": "공동구매",
+        "title": "*전달완료 senecten(오수미) 와우펜 공구 (상품발송)",
+        "existingProduct": "",
+        "nickname": "senecten",
+        "product": "와우펜"
+      },
+      {
+        "id": 92,
+        "start": "2026-05-05",
+        "type": "행사",
+        "title": "*계약완료 [로켓 타임딜 15시~23시] 와우펜북 - 미술 12,400원…",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "와우펜"
+      },
+      {
+        "id": 93,
+        "start": "2026-05-13",
+        "type": "공동구매",
+        "title": "*전달완료 jelly_ddorl (박지혜) 와우펜 (상품발송)",
+        "existingProduct": "",
+        "nickname": "jelly_ddorl",
+        "product": "와우펜"
+      },
+      {
+        "id": 96,
+        "start": "2026-05-22",
+        "type": "공동구매",
+        "title": "*전달완료 solmom_trip(오다인) 와우펜 (상품발송)",
+        "existingProduct": "",
+        "nickname": "solmom_trip",
+        "product": "와우펜"
+      },
+      {
+        "id": 98,
+        "start": "2026-05-24",
+        "type": "행사",
+        "title": "*계약완료 [로켓 타임딜 15시~23시] 와우펜북 - 미술 12,400원…",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "와우펜"
+      },
+      {
+        "id": 99,
+        "start": "2026-05-28",
+        "type": "공동구매",
+        "title": "*전달완료 yh_pick(전홍우) 와우펜공구 (상품발송)",
+        "existingProduct": "",
+        "nickname": "yh_pick",
+        "product": "와우펜"
+      },
+      {
+        "id": 104,
+        "start": "2026-06-12",
+        "type": "행사",
+        "title": "*계약완료 [로켓 타임딜 15시~23시] 와우펜북 - 미술 12,400원…",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "와우펜"
+      },
+      {
+        "id": 111,
+        "start": "2026-06-30",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 와우펜북-미술 : 12,400원 - 300개",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "와우펜"
+      },
+      {
+        "id": 114,
+        "start": "2026-07-07",
+        "type": "공동구매",
+        "title": "*전달완료 yh_pick(전홍우) 와우펜2차",
+        "existingProduct": "",
+        "nickname": "yh_pick",
+        "product": "와우펜"
+      },
+      {
+        "id": 121,
+        "start": "2026-07-22",
+        "type": "공동구매",
+        "title": "*전달완료 nodaeng_m(이영은) 와우펜 (상품발송-페이백) *기존 협찬자",
+        "existingProduct": "",
+        "nickname": "nodaeng_m",
+        "product": "와우펜"
+      },
+      {
+        "id": 125,
+        "start": "2026-07-30",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 와우펜북-미술 : 12,400원 - 200개",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "와우펜"
+      },
+      {
+        "id": 135,
+        "start": "2026-08-20",
+        "type": "공동구매",
+        "title": "*전달완료 dami.momm(박서현) 와우펜 (상품발송-페이백)",
+        "existingProduct": "",
+        "nickname": "dami.momm",
+        "product": "와우펜"
+      },
+      {
+        "id": 139,
+        "start": "2026-08-26",
+        "type": "공동구매",
+        "title": "*전달완료 mini_ddol(이민희)썬더 와우펜 (상품발송)",
+        "existingProduct": "",
+        "nickname": "mini_ddol",
+        "product": "와우펜"
+      },
+      {
+        "id": 145,
+        "start": "2026-09-09",
+        "type": "공동구매",
+        "title": "*전달완료 momjoy0527(조은) 와우펜 (상품발송)",
+        "existingProduct": "",
+        "nickname": "momjoy0527",
+        "product": "와우펜"
+      },
+      {
+        "id": 149,
+        "start": "2026-09-14",
+        "type": "공동구매",
+        "title": "*전달완료 joyjoa_m(이영주) 와우펜 (상품발송)",
+        "existingProduct": "",
+        "nickname": "joyjoa_m",
+        "product": "와우펜"
+      },
+      {
+        "id": 154,
+        "start": "2026-09-17",
+        "type": "공동구매",
+        "title": "*전달완료 bbomlnl__v(이경호) 와우펜",
+        "existingProduct": "",
+        "nickname": "bbomlnl__v",
+        "product": "와우펜"
+      },
+      {
+        "id": 159,
+        "start": "2026-09-21",
+        "type": "공동구매",
+        "title": "*전달완료 6a.how(김현수) 와우펜 공구 (상품발송)",
+        "existingProduct": "",
+        "nickname": "6a.how",
+        "product": "와우펜"
+      },
+      {
+        "id": 165,
+        "start": "2026-09-30",
+        "type": "공동구매",
+        "title": "(취소) 2ddou(또우맘) 와우펜 (상품발송)",
+        "existingProduct": "",
+        "nickname": "2ddou",
+        "product": "와우펜"
+      },
+      {
+        "id": 166,
+        "start": "2026-09-30",
+        "type": "공동구매",
+        "title": "happpy_hyeon(하남/김은자-도현맘) 와우펜 - 이벤트 1건 차감",
+        "existingProduct": "",
+        "nickname": "happpy_hyeon",
+        "product": "와우펜"
+      },
+      {
+        "id": 174,
+        "start": "2026-10-14",
+        "type": "공동구매",
+        "title": "jihoomom0.0- 와우펜",
+        "existingProduct": "",
+        "listProduct": "와우펜",
+        "nickname": "jihoomom0.0",
+        "product": "와우펜"
+      },
+      {
+        "id": 178,
+        "start": "2026-10-19",
+        "type": "공동구매",
+        "title": "dundun.mom(하남/류연주-든든맘) 와우펜",
+        "existingProduct": "",
+        "listProduct": "와우펜",
+        "nickname": "dundun.mom",
+        "product": "와우펜"
+      },
+      {
+        "id": 179,
+        "start": "2026-10-22",
+        "type": "공동구매",
+        "title": "urlu_grow(심다인) 와우펜 (상품발송)",
+        "existingProduct": "",
+        "listProduct": "와우펜",
+        "nickname": "uriu_grow",
+        "product": "와우펜"
+      },
+      {
+        "id": 186,
+        "start": "2026-10-30",
+        "type": "공동구매",
+        "title": "kkanghyun_mom(최수진) 와우펜 (상품발송)",
+        "existingProduct": "",
+        "nickname": "kkanghyun_mom",
+        "product": "와우펜"
+      },
+      {
+        "id": 187,
+        "start": "2026-11-01",
+        "type": "기타",
+        "title": "joo.rang_mom/(연락해보기-와우펜)",
+        "existingProduct": "",
+        "nickname": "joo.rang_mom",
+        "product": "와우펜"
+      },
+      {
+        "id": 191,
+        "start": "2026-11-05",
+        "type": "공동구매",
+        "title": "lucky__jihoo(이은솔) 와우펜 (상품발송 페이백)",
+        "existingProduct": "",
+        "nickname": "lucky__jihoo",
+        "product": "와우펜"
+      },
+      {
+        "id": 197,
+        "start": "2026-11-13",
+        "type": "공동구매",
+        "title": "woo__umom(우유정) 와우펜 (상품발송)",
+        "existingProduct": "",
+        "nickname": "woo__umom",
+        "product": "와우펜"
+      },
+      {
+        "id": 205,
+        "start": "2026-12-02",
+        "type": "공동구매",
+        "title": "minl_ddol(이민채)엔더 와우펜2차 (상품발송 페이백)",
+        "existingProduct": "",
+        "nickname": "minl_ddol",
+        "product": "와우펜"
+      },
+      {
+        "id": 209,
+        "start": "2026-12-07",
+        "type": "공동구매",
+        "title": "hero__luv(하남/마이히로) 와우펜",
+        "existingProduct": "",
+        "nickname": "hero__luv",
+        "product": "와우펜"
+      },
+      {
+        "id": 211,
+        "start": "2026-12-11",
+        "type": "공동구매",
+        "title": "ameri__mom(이서예) 와우펜 (상품발송)",
+        "existingProduct": "",
+        "nickname": "ameri__mom",
+        "product": "와우펜"
+      },
+      {
+        "id": 214,
+        "start": "2026-12-15",
+        "type": "공동구매",
+        "title": "hyun__brother(최진영) 와우펜 (상품발송)",
+        "existingProduct": "",
+        "nickname": "hyun__brother",
+        "product": "와우펜"
+      },
+      {
+        "id": 215,
+        "start": "2026-12-17",
+        "type": "공동구매",
+        "title": "dapeunjj100(담은지) 와우펜 (상품발송완료)",
+        "existingProduct": "",
+        "nickname": "dapeunjj100",
+        "product": "와우펜"
+      },
+      {
+        "id": 218,
+        "start": "2027-01-01",
+        "type": "기타",
+        "title": "cherub.456 와우펜 연락해보기 27년도",
+        "existingProduct": "",
+        "nickname": "cherub.456",
+        "product": "와우펜"
+      },
+      {
+        "id": 219,
+        "start": "2027-01-01",
+        "type": "기타",
+        "title": "dollakong_와우펜_플레이도 연락해보기",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "와우펜"
+      },
+      {
+        "id": 222,
+        "start": "2027-01-01",
+        "type": "기타",
+        "title": "seo1seoa_mom 와우펜 연락해보기",
+        "existingProduct": "",
+        "nickname": "seo1seoa_mom",
+        "product": "와우펜"
+      }
+    ]
+  },
+  {
+    "name": "상품 확인 필요",
+    "count": 44,
+    "types": [
+      "행사",
+      "발송"
+    ],
+    "rows": [
+      {
+        "id": 1,
+        "start": "2025-12-28",
+        "type": "행사",
+        "title": "[로켓] 도서 12월 페어",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 13,
+        "start": "2026-01-09",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 사운드북 그린 15,900원",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 16,
+        "start": "2026-01-10",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 차트 3종 패키지 35,900원",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 18,
+        "start": "2026-01-16",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 사운드북 3종 패키지 44,800원",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 26,
+        "start": "2026-01-24",
+        "type": "행사",
+        "title": "*계약 X [로켓-골드박스] 프리미엄세트 35,800원",
+        "existingProduct": "",
+        "nickname": "X",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 27,
+        "start": "2026-01-25",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 공룡돈 패키지 25,900원",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 28,
+        "start": "2026-01-26",
+        "type": "발송",
+        "title": "* 샘플만 발송 [무브] @house.jin(허정림/이유진) 3/11~14 전",
+        "existingProduct": "",
+        "nickname": "house.jin",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 32,
+        "start": "2026-01-30",
+        "type": "행사",
+        "title": "*계약 X [로켓-골드박스] 차트 한글첫걸음 12,840원",
+        "existingProduct": "",
+        "nickname": "X",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 41,
+        "start": "2026-02-12",
+        "type": "행사",
+        "title": "*계약완료 [로켓-15시 타임딜] 공룡돈 패키지 26,900원",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 42,
+        "start": "2026-02-13",
+        "type": "행사",
+        "title": "*계약완료 [로켓-15시 타임딜] 프리미엄세트 35,800원",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 44,
+        "start": "2026-02-16",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 차트 3종 패키지 35,900원",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 46,
+        "start": "2026-02-21",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 차트 - 숫자 : 12,840원 / 200개",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 47,
+        "start": "2026-02-22",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 사운드북 - 그린 : 15,900원 / 150",
+        "existingProduct": "",
+        "nickname": "150",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 48,
+        "start": "2026-02-23",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 사운드북 3종 패키지 : 44,800원 /",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 56,
+        "start": "2026-03-18",
+        "type": "행사",
+        "title": "*계약완료 [골드박스] 공룡돈 패키지 26,900원",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 57,
+        "start": "2026-03-18",
+        "type": "행사",
+        "title": "*계약완료 [골드박스] 프리미엄세트 35,800원",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 60,
+        "start": "2026-03-25",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 차트 - 숫자 : 12,840원 / 100개",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 65,
+        "start": "2026-04-06",
+        "type": "행사",
+        "title": "[로켓-골드박스] 사운드북 3종 패키지",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 66,
+        "start": "2026-04-06",
+        "type": "행사",
+        "title": "[로켓-골드박스] 차트 3종 패키지",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 68,
+        "start": "2026-04-10",
+        "type": "행사",
+        "title": "[로켓-골드박스] 그리고지우고 프리미엄세트 35,800원 70개",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 73,
+        "start": "2026-04-16",
+        "type": "행사",
+        "title": "[로켓-골드박스] 키즈점프 프로 218,000원",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 91,
+        "start": "2026-05-05",
+        "type": "행사",
+        "title": "*계약완료 [로켓 타임딜 07시~15시] 사운드차트 - 숫자 12,84…",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 97,
+        "start": "2026-05-24",
+        "type": "행사",
+        "title": "*계약완료 [로켓 타임딜 07시~15시] 사운드차트 - 숫자 12,84…",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 103,
+        "start": "2026-06-10",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 차트 3종 : 35,900원 - 150개",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 105,
+        "start": "2026-06-13",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 차트-한글 : 11,940원 - 220개",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 108,
+        "start": "2026-06-26",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 차트 3종 : 35,900원 - 150개",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 110,
+        "start": "2026-06-29",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 차트-한글 : 11,940원 - 200개 (40…",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 115,
+        "start": "2026-07-08",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 사운드북 3종 패키지 44,800원 (10…",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 117,
+        "start": "2026-07-12",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 차트 3종 : 35,900원 - 150개",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 122,
+        "start": "2026-07-23",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 사운드북 3종 패키지 44,800원 (50…",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 123,
+        "start": "2026-07-27",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 차트 3종 : 35,900원 - 100개",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 131,
+        "start": "2026-08-11",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 차트 3종 : 35,910원 - 100개",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 133,
+        "start": "2026-08-17",
+        "type": "행사",
+        "title": "로켓-도서) 베이비페어 - 베이비&키즈템 빅세일",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 138,
+        "start": "2026-08-26",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 차트 3종 : 35,910원 - 100개",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 146,
+        "start": "2026-09-10",
+        "type": "행사",
+        "title": "[로켓-골드박스] 사운드북 그린 16,020원 / 행사수량 100개",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 147,
+        "start": "2026-09-10",
+        "type": "행사",
+        "title": "[로켓-골드박스] 차트 3종 패키지 35,910원 / 행사수량 100개",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 153,
+        "start": "2026-09-16",
+        "type": "행사",
+        "title": "로켓-도서) CRM 광고 - 유아도서 할인전",
+        "existingProduct": "",
+        "nickname": "CRM",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 160,
+        "start": "2026-09-23",
+        "type": "행사",
+        "title": "자사몰 타임특가-민감케어 패키지",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 161,
+        "start": "2026-09-25",
+        "type": "행사",
+        "title": "[로켓-골드박스] 사운드북 그린 16,020원 / 행사수량 100개",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 162,
+        "start": "2026-09-25",
+        "type": "행사",
+        "title": "[로켓-골드박스] 차트 3종 패키지 35,910원 / 행사수량 100개",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 167,
+        "start": "2026-10-02",
+        "type": "행사",
+        "title": "자사몰 타임특가_미술놀이 패키지",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 170,
+        "start": "2026-10-08",
+        "type": "행사",
+        "title": "자사몰 타임특가_한글놀이 패키지",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 171,
+        "start": "2026-10-10",
+        "type": "행사",
+        "title": "[로켓-골드박스] 차트 3종 패키지 35,910원 / 행사수량 100개",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      },
+      {
+        "id": 182,
+        "start": "2026-10-26",
+        "type": "행사",
+        "title": "[네이버-보다세일]",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "상품 확인 필요"
+      }
+    ]
+  },
+  {
+    "name": "멀티보드",
+    "count": 21,
+    "types": [
+      "행사",
+      "공동구매",
+      "기타"
+    ],
+    "rows": [
+      {
+        "id": 2,
+        "start": "2025-12-28",
+        "type": "행사",
+        "title": "[로켓] 페어 대표상품 노출 : 멀티보드 39,900원 / 차트 3종 32",
+        "existingProduct": "",
+        "nickname": "32",
+        "product": "멀티보드"
+      },
+      {
+        "id": 14,
+        "start": "2026-01-09",
+        "type": "공동구매",
+        "title": "*전달완료 luv_d.m.s(박민지) 멀티보드 공구 (상품발송)",
+        "existingProduct": "",
+        "nickname": "luv_d.m.s",
+        "product": "멀티보드"
+      },
+      {
+        "id": 31,
+        "start": "2026-01-29",
+        "type": "공동구매",
+        "title": "*전달완료 kongkong.mommy(은지) 멀티보드 공구 (상품발송)",
+        "existingProduct": "",
+        "nickname": "kongkong.mommy",
+        "product": "멀티보드"
+      },
+      {
+        "id": 37,
+        "start": "2026-02-05",
+        "type": "공동구매",
+        "title": "(취소) lovelybaby_sohee(임미선) 멀티보드 공구 (상품발송/샘플비받음)",
+        "existingProduct": "",
+        "nickname": "lovelybaby_sohee",
+        "product": "멀티보드"
+      },
+      {
+        "id": 40,
+        "start": "2026-02-09",
+        "type": "공동구매",
+        "title": "■이사님 맘시터-멀티보드/플레이",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "멀티보드"
+      },
+      {
+        "id": 62,
+        "start": "2026-03-31",
+        "type": "공동구매",
+        "title": "*전달완료 hyun__brother(최진영) 멀티보드 공구",
+        "existingProduct": "",
+        "nickname": "hyun__brother",
+        "product": "멀티보드"
+      },
+      {
+        "id": 77,
+        "start": "2026-04-20",
+        "type": "공동구매",
+        "title": "*전달완료 luv_d.m.s(박민지) 멀티보드 2차 (1차는 25)",
+        "existingProduct": "",
+        "nickname": "luv_d.m.s",
+        "product": "멀티보드"
+      },
+      {
+        "id": 85,
+        "start": "2026-04-29",
+        "type": "공동구매",
+        "title": "(취소) newnewnl_(이승미) 멀티보드(샘플비받음)",
+        "existingProduct": "",
+        "nickname": "newnewnl_",
+        "product": "멀티보드"
+      },
+      {
+        "id": 100,
+        "start": "2026-05-29",
+        "type": "행사",
+        "title": "[로켓-골드박스] 멀티보드 44,800원 - 300개",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "멀티보드"
+      },
+      {
+        "id": 134,
+        "start": "2026-08-19",
+        "type": "공동구매",
+        "title": "*전달완료 gguml_geonhu (현희지) 멀티보드 (상품발송-페이백)",
+        "existingProduct": "",
+        "nickname": "gguml_geonhu",
+        "product": "멀티보드"
+      },
+      {
+        "id": 141,
+        "start": "2026-09-01",
+        "type": "공동구매",
+        "title": "jihoomom0.0 - 멀티보드",
+        "existingProduct": "",
+        "nickname": "jihoomom0.0",
+        "product": "멀티보드"
+      },
+      {
+        "id": 148,
+        "start": "2026-09-10",
+        "type": "공동구매",
+        "title": "*전달완료 kimnunu_suwon(박아름) 멀티보드 (상품발송)",
+        "existingProduct": "",
+        "nickname": "kimnunu_suwon",
+        "product": "멀티보드"
+      },
+      {
+        "id": 155,
+        "start": "2026-09-17",
+        "type": "공동구매",
+        "title": "won2_mompld(최다솜)- 멀티보드",
+        "existingProduct": "",
+        "nickname": "won2_mompld",
+        "product": "멀티보드"
+      },
+      {
+        "id": 169,
+        "start": "2026-10-06",
+        "type": "공동구매",
+        "title": "ttoeyoon_mom-멀티보드",
+        "existingProduct": "",
+        "nickname": "ttoeyoon_mom",
+        "product": "멀티보드"
+      },
+      {
+        "id": 181,
+        "start": "2026-10-23",
+        "type": "공동구매",
+        "title": "hodomom.pick(호도맘) 멀티보드 (상품발송)",
+        "existingProduct": "",
+        "listProduct": "멀티보드",
+        "nickname": "hodomom.pick",
+        "product": "멀티보드"
+      },
+      {
+        "id": 185,
+        "start": "2026-10-29",
+        "type": "공동구매",
+        "title": "uloppolhs(이희선) 멀티보드 (상품발송)",
+        "existingProduct": "",
+        "nickname": "uloppolhs",
+        "product": "멀티보드"
+      },
+      {
+        "id": 190,
+        "start": "2026-11-05",
+        "type": "공동구매",
+        "title": "jjuml__mom(장효은) 멀티보드 (상품발송)",
+        "existingProduct": "",
+        "nickname": "jjuml__mom",
+        "product": "멀티보드"
+      },
+      {
+        "id": 195,
+        "start": "2026-11-11",
+        "type": "공동구매",
+        "title": "2doa_dyoa(문경아) 멀티보드 (상품발송)",
+        "existingProduct": "",
+        "nickname": "2doa_dyoa",
+        "product": "멀티보드"
+      },
+      {
+        "id": 199,
+        "start": "2026-11-18",
+        "type": "공동구매",
+        "title": "mo.jj.mom(모찌맘) 멀티보드 (상품발송)",
+        "existingProduct": "",
+        "nickname": "mo.jj.mom",
+        "product": "멀티보드"
+      },
+      {
+        "id": 206,
+        "start": "2026-12-03",
+        "type": "공동구매",
+        "title": "jjj.mama_(최민정) 멀티보드 (상품발송)",
+        "existingProduct": "",
+        "nickname": "jjj.mama_",
+        "product": "멀티보드"
+      },
+      {
+        "id": 221,
+        "start": "2027-01-01",
+        "type": "기타",
+        "title": "kimnunu_suwon(박아름)멀티보드 연락하기",
+        "existingProduct": "",
+        "nickname": "kimnunu_suwon",
+        "product": "멀티보드"
+      }
+    ]
+  },
+  {
+    "name": "플레이5",
+    "count": 19,
+    "types": [
+      "공동구매",
+      "행사"
+    ],
+    "rows": [
+      {
+        "id": 3,
+        "start": "2025-12-28",
+        "type": "공동구매",
+        "title": "*전달완료 my_sun_is_u(이지수) 플레이5 공구(상품발송)",
+        "existingProduct": "",
+        "nickname": "my_sun_is_u",
+        "product": "플레이5"
+      },
+      {
+        "id": 15,
+        "start": "2026-01-09",
+        "type": "공동구매",
+        "title": "*전달완료 sogeumdaek_(김미경) 플레이5 공구 (상품발송)",
+        "existingProduct": "",
+        "nickname": "sogeumdaek_",
+        "product": "플레이5"
+      },
+      {
+        "id": 19,
+        "start": "2026-01-16",
+        "type": "공동구매",
+        "title": "[전달완료] liyune__(유리) / 플레이5",
+        "existingProduct": "",
+        "nickname": "liyune__",
+        "product": "플레이5"
+      },
+      {
+        "id": 24,
+        "start": "2026-01-22",
+        "type": "공동구매",
+        "title": "[무브] daesol_mommy(슬맘/김다연) 플레이5 수수료 15%",
+        "existingProduct": "",
+        "nickname": "daesol_mommy",
+        "product": "플레이5"
+      },
+      {
+        "id": 29,
+        "start": "2026-01-27",
+        "type": "공동구매",
+        "title": "*전달완료 lily__mom(정수진) 플레이5 공구 (상품발송)",
+        "existingProduct": "",
+        "nickname": "lily__mom",
+        "product": "플레이5"
+      },
+      {
+        "id": 34,
+        "start": "2026-02-04",
+        "type": "공동구매",
+        "title": "*전달완료 honeybread(한수영) 플레이5 공구(상품발송)",
+        "existingProduct": "",
+        "nickname": "honeybread",
+        "product": "플레이5"
+      },
+      {
+        "id": 52,
+        "start": "2026-03-03",
+        "type": "공동구매",
+        "title": "*전달완료 hyun__brother 플레이5 공구(상품발송)",
+        "existingProduct": "",
+        "nickname": "hyun__brother",
+        "product": "플레이5"
+      },
+      {
+        "id": 58,
+        "start": "2026-03-21",
+        "type": "행사",
+        "title": "*계약완료 [골드박스] 플레이5 109,000원 / 50개",
+        "existingProduct": "",
+        "nickname": "5",
+        "product": "플레이5"
+      },
+      {
+        "id": 63,
+        "start": "2026-04-01",
+        "type": "공동구매",
+        "title": "*전달완료 my_nayul(박민영) 플레이5(+max사전예약) 공구 (상품발송)",
+        "existingProduct": "",
+        "nickname": "my_nayul",
+        "product": "플레이5"
+      },
+      {
+        "id": 67,
+        "start": "2026-04-09",
+        "type": "행사",
+        "title": "[로켓-골드박스] 플레이5 99,000원",
+        "existingProduct": "",
+        "nickname": "5",
+        "product": "플레이5"
+      },
+      {
+        "id": 72,
+        "start": "2026-04-15",
+        "type": "공동구매",
+        "title": "*전달완료 just_mom(최상아) 플레이5 공구(상품발송)",
+        "existingProduct": "",
+        "nickname": "just_mom",
+        "product": "플레이5"
+      },
+      {
+        "id": 87,
+        "start": "2026-04-30",
+        "type": "공동구매",
+        "title": "morak_mom(이지현) 플레이5 2차",
+        "existingProduct": "",
+        "nickname": "morak_mom",
+        "product": "플레이5"
+      },
+      {
+        "id": 88,
+        "start": "2026-05-01",
+        "type": "공동구매",
+        "title": "5월로 변경(날짜미정) / hyen__mama(김혜미) 플레이5 (상품…",
+        "existingProduct": "",
+        "nickname": "hyen__mama",
+        "product": "플레이5"
+      },
+      {
+        "id": 90,
+        "start": "2026-05-03",
+        "type": "행사",
+        "title": "*계약완료 [로켓-골드박스] 플레이5 99,000원",
+        "existingProduct": "",
+        "nickname": "5",
+        "product": "플레이5"
+      },
+      {
+        "id": 95,
+        "start": "2026-05-20",
+        "type": "공동구매",
+        "title": "*전달완료 sammy__dragon(최지유) 플레이5 (상품발송)",
+        "existingProduct": "",
+        "nickname": "sammy__dragon",
+        "product": "플레이5"
+      },
+      {
+        "id": 106,
+        "start": "2026-06-15",
+        "type": "공동구매",
+        "title": "*전달완료 soyou_record(윤소혜) 플레이5 (상품발송)",
+        "existingProduct": "",
+        "nickname": "soyou_record",
+        "product": "플레이5"
+      },
+      {
+        "id": 112,
+        "start": "2026-07-02",
+        "type": "행사",
+        "title": "[로켓-골드박스] 플레이5 109,000원 , 50개 (20개 판매)",
+        "existingProduct": "",
+        "nickname": "5",
+        "product": "플레이5"
+      },
+      {
+        "id": 113,
+        "start": "2026-07-06",
+        "type": "행사",
+        "title": "[로켓-도서] 와우 멤버스 프로모션 : 일괄 5% 할인 - 플레이5,…",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "플레이5"
+      },
+      {
+        "id": 128,
+        "start": "2026-08-03",
+        "type": "공동구매",
+        "title": "[전달完]스타일 셀러(텐더)- Joon.table 플레이5",
+        "existingProduct": "",
+        "nickname": "Joon.table",
+        "product": "플레이5"
+      }
+    ]
+  },
+  {
+    "name": "듀얼USB",
+    "count": 10,
+    "types": [
+      "공동구매"
+    ],
+    "rows": [
+      {
+        "id": 4,
+        "start": "2025-12-28",
+        "type": "공동구매",
+        "title": "*전달완료 3blnz__sisters(최유린) 듀얼USB 공구 (상품발송)",
+        "existingProduct": "",
+        "nickname": "3blnz__sisters",
+        "product": "듀얼USB"
+      },
+      {
+        "id": 9,
+        "start": "2026-01-05",
+        "type": "공동구매",
+        "title": "*전달완료 yoonluv.s2(채니네) 듀얼USB 공구 (상품발송)",
+        "existingProduct": "",
+        "nickname": "yoonluv.s2",
+        "product": "듀얼USB"
+      },
+      {
+        "id": 23,
+        "start": "2026-01-20",
+        "type": "공동구매",
+        "title": "(취소)memmem_home(슬맘) 듀얼USB 공구 (*상품 미발송)",
+        "existingProduct": "",
+        "nickname": "memmem_home",
+        "product": "듀얼USB"
+      },
+      {
+        "id": 35,
+        "start": "2026-02-04",
+        "type": "공동구매",
+        "title": "jjhome_and_life (박혜람) - 듀얼USB",
+        "existingProduct": "",
+        "nickname": "jjhome_and_life",
+        "product": "듀얼USB"
+      },
+      {
+        "id": 74,
+        "start": "2026-04-16",
+        "type": "공동구매",
+        "title": "morak_mom(이지현) 듀얼USB 3차",
+        "existingProduct": "",
+        "nickname": "morak_mom",
+        "product": "듀얼USB"
+      },
+      {
+        "id": 142,
+        "start": "2026-09-03",
+        "type": "공동구매",
+        "title": "*전달완료 dalkom__mom(원혜민) 듀얼USB 2차",
+        "existingProduct": "",
+        "nickname": "dalkom__mom",
+        "product": "듀얼USB"
+      },
+      {
+        "id": 176,
+        "start": "2026-10-15",
+        "type": "공동구매",
+        "title": "daml.momm(박서현) 듀얼USB (상품발송+페이백)",
+        "existingProduct": "",
+        "listProduct": "듀얼USB",
+        "nickname": "dami.momm",
+        "product": "듀얼USB"
+      },
+      {
+        "id": 183,
+        "start": "2026-10-29",
+        "type": "공동구매",
+        "title": "2doa_dyoa(문경아) 듀얼usb (상품발송)",
+        "existingProduct": "",
+        "nickname": "2doa_dyoa",
+        "product": "듀얼USB"
+      },
+      {
+        "id": 201,
+        "start": "2026-11-20",
+        "type": "공동구매",
+        "title": "3blnz__sisters(천유란) 듀얼usb 2차",
+        "existingProduct": "",
+        "nickname": "3blnz__sisters",
+        "product": "듀얼USB"
+      },
+      {
+        "id": 212,
+        "start": "2026-12-11",
+        "type": "공동구매",
+        "title": "dalkom__mom(원혜민) 듀얼usb3차",
+        "existingProduct": "",
+        "nickname": "dalkom__mom",
+        "product": "듀얼USB"
+      }
+    ]
+  },
+  {
+    "name": "플레이도 믹스",
+    "count": 10,
+    "types": [
+      "공동구매"
+    ],
+    "rows": [
+      {
+        "id": 140,
+        "start": "2026-09-01",
+        "type": "공동구매",
+        "title": "*전달완료 _hayldam(김윤실) 플레이도 믹스 (상품발송+페이백)",
+        "existingProduct": "",
+        "nickname": "_hayldam",
+        "product": "플레이도 믹스"
+      },
+      {
+        "id": 143,
+        "start": "2026-09-07",
+        "type": "공동구매",
+        "title": "*전달완료 e.anlll(이한솔) 플레이도 믹스 (상품발송+페이백)",
+        "existingProduct": "",
+        "nickname": "e.anlll",
+        "product": "플레이도 믹스"
+      },
+      {
+        "id": 152,
+        "start": "2026-09-16",
+        "type": "공동구매",
+        "title": "(취소) with.soll - 플레이도 믹스",
+        "existingProduct": "",
+        "nickname": "with.soll",
+        "product": "플레이도 믹스"
+      },
+      {
+        "id": 156,
+        "start": "2026-09-17",
+        "type": "공동구매",
+        "title": "*전달완료 dungdung2__ne(정선이) 플레이도 믹스 (상품발송+페이백)",
+        "existingProduct": "",
+        "nickname": "dungdung2__ne",
+        "product": "플레이도 믹스"
+      },
+      {
+        "id": 184,
+        "start": "2026-10-29",
+        "type": "공동구매",
+        "title": "happy_el77(천수현) 플레이도 믹스 (상품발송+페이백)",
+        "existingProduct": "",
+        "nickname": "happy_el77",
+        "product": "플레이도 믹스"
+      },
+      {
+        "id": 194,
+        "start": "2026-11-09",
+        "type": "공동구매",
+        "title": "ggobook_mom(김예지) 플레이도 믹스(상품발송+페이백)",
+        "existingProduct": "",
+        "nickname": "ggobook_mom",
+        "product": "플레이도 믹스"
+      },
+      {
+        "id": 200,
+        "start": "2026-11-19",
+        "type": "공동구매",
+        "title": "ln_damlland(다미맘) 플레이도 믹스 (상품발송+페이백)",
+        "existingProduct": "",
+        "nickname": "ln_damlland",
+        "product": "플레이도 믹스"
+      },
+      {
+        "id": 203,
+        "start": "2026-11-26",
+        "type": "공동구매",
+        "title": "genius.papalee(이범석) 플레이도 믹스(상품발송+페이백)",
+        "existingProduct": "",
+        "nickname": "genius.papalee",
+        "product": "플레이도 믹스"
+      },
+      {
+        "id": 210,
+        "start": "2026-12-10",
+        "type": "공동구매",
+        "title": "woo__umom(우유정) 플레이도 믹스 (상품발송+페이백)",
+        "existingProduct": "",
+        "nickname": "woo__umom",
+        "product": "플레이도 믹스"
+      },
+      {
+        "id": 216,
+        "start": "2026-12-17",
+        "type": "공동구매",
+        "title": "geoml_mom(천정은) 플레이도 믹스 3차진행",
+        "existingProduct": "",
+        "nickname": "geoml_mom",
+        "product": "플레이도 믹스"
+      }
+    ]
+  },
+  {
+    "name": "플레이도",
+    "count": 10,
+    "types": [
+      "공동구매",
+      "행사",
+      "기타"
+    ],
+    "rows": [
+      {
+        "id": 163,
+        "start": "2026-09-28",
+        "type": "공동구매",
+        "title": "*전달완료 daml.momm(박서현) 플레이도 (상품발송+페이백)",
+        "existingProduct": "",
+        "nickname": "daml.momm",
+        "product": "플레이도"
+      },
+      {
+        "id": 168,
+        "start": "2026-10-02",
+        "type": "공동구매",
+        "title": "*전달완료 __klmlf(김가영) 플레이도 (상품발송+페이백)",
+        "existingProduct": "",
+        "nickname": "__klmlf",
+        "product": "플레이도"
+      },
+      {
+        "id": 175,
+        "start": "2026-10-15",
+        "type": "행사",
+        "title": "[로켓-골드박스] 플레이도 109,000원 / 행사수량 30개",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "플레이도"
+      },
+      {
+        "id": 177,
+        "start": "2026-10-16",
+        "type": "공동구매",
+        "title": "(취소) grow_mom1004(이슬기) 플레이도 (상품발송+페이백)",
+        "existingProduct": "",
+        "nickname": "grow_mom1004",
+        "product": "플레이도"
+      },
+      {
+        "id": 188,
+        "start": "2026-11-01",
+        "type": "기타",
+        "title": "seo.joo.ha(연락해보기-플레이도)",
+        "existingProduct": "",
+        "nickname": "seo.joo.ha",
+        "product": "플레이도"
+      },
+      {
+        "id": 192,
+        "start": "2026-11-05",
+        "type": "공동구매",
+        "title": "poopu_zip(김수빈) 플레이도2차",
+        "existingProduct": "",
+        "nickname": "poopu_zip",
+        "product": "플레이도"
+      },
+      {
+        "id": 198,
+        "start": "2026-11-16",
+        "type": "공동구매",
+        "title": "plkomom__(산남비) 플레이도 (상품발송+페이백)",
+        "existingProduct": "",
+        "nickname": "plkomom__",
+        "product": "플레이도"
+      },
+      {
+        "id": 208,
+        "start": "2026-12-04",
+        "type": "공동구매",
+        "title": "nayul.days 플레이도 (상품발송+페이백)",
+        "existingProduct": "",
+        "nickname": "nayul.days",
+        "product": "플레이도"
+      },
+      {
+        "id": 217,
+        "start": "2026-12-28",
+        "type": "공동구매",
+        "title": "lily__mom(정수진) 플레이도2차",
+        "existingProduct": "",
+        "nickname": "lily__mom",
+        "product": "플레이도"
+      },
+      {
+        "id": 220,
+        "start": "2027-01-01",
+        "type": "기타",
+        "title": "gabihome90 플레이도/멀티보드 연락해보기",
+        "existingProduct": "",
+        "nickname": "gabihome90",
+        "product": "플레이도"
+      }
+    ]
+  },
+  {
+    "name": "무선마이크",
+    "count": 9,
+    "types": [
+      "공동구매",
+      "행사"
+    ],
+    "rows": [
+      {
+        "id": 5,
+        "start": "2025-12-28",
+        "type": "공동구매",
+        "title": "■이사님 레몬트리(학습)_키즈 무선마이크",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "무선마이크"
+      },
+      {
+        "id": 38,
+        "start": "2026-02-05",
+        "type": "공동구매",
+        "title": "(취소) solmom_trip(오다인) 무선마이크 공구 (상품발송/샘플비받음)",
+        "existingProduct": "",
+        "nickname": "solmom_trip",
+        "product": "무선마이크"
+      },
+      {
+        "id": 49,
+        "start": "2026-02-23",
+        "type": "공동구매",
+        "title": "*전달완료 3blnz__sisters(최유린) 무선마이크 공구",
+        "existingProduct": "",
+        "nickname": "3blnz__sisters",
+        "product": "무선마이크"
+      },
+      {
+        "id": 61,
+        "start": "2026-03-26",
+        "type": "공동구매",
+        "title": "*전달완료 weekndhome(현아름) 키즈무선마이크",
+        "existingProduct": "",
+        "nickname": "weekndhome",
+        "product": "무선마이크"
+      },
+      {
+        "id": 82,
+        "start": "2026-04-25",
+        "type": "공동구매",
+        "title": "*전달완료 bellymom_hi(박혜림) 무선마이크공구(상품발송)",
+        "existingProduct": "",
+        "nickname": "bellymom_hi",
+        "product": "무선마이크"
+      },
+      {
+        "id": 101,
+        "start": "2026-06-01",
+        "type": "공동구매",
+        "title": "*전달완료 y.y_world(윤성은) 무선마이크 공구(상품발송) - 6…",
+        "existingProduct": "",
+        "nickname": "y.y_world",
+        "product": "무선마이크"
+      },
+      {
+        "id": 107,
+        "start": "2026-06-22",
+        "type": "공동구매",
+        "title": "(취소) s2_saaaarang (최사랑) 무선마이크",
+        "existingProduct": "",
+        "nickname": "s2_saaaarang",
+        "product": "무선마이크"
+      },
+      {
+        "id": 129,
+        "start": "2026-08-05",
+        "type": "공동구매",
+        "title": "*전달완료 congdduck__lovely(김지수) 무선마이크 (상품발송-페이백)",
+        "existingProduct": "",
+        "nickname": "congdduck__lovely",
+        "product": "무선마이크"
+      },
+      {
+        "id": 150,
+        "start": "2026-09-14",
+        "type": "행사",
+        "title": "[로켓-장난감] 추석 메인 앵커 : 무선마이크 26,820원 (10% 할인)",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "무선마이크"
+      }
+    ]
+  },
+  {
+    "name": "키즈점프프로",
+    "count": 9,
+    "types": [
+      "공동구매"
+    ],
+    "rows": [
+      {
+        "id": 7,
+        "start": "2025-12-29",
+        "type": "공동구매",
+        "title": "*전달완료 _I_love_home_(이주연) 키즈점프프로 공구 (상품발송)",
+        "existingProduct": "",
+        "nickname": "_I_love_home_",
+        "product": "키즈점프프로"
+      },
+      {
+        "id": 22,
+        "start": "2026-01-19",
+        "type": "공동구매",
+        "title": "*전달완료 uzam_universe(임사라) 키즈점프프로 공구(상품발송)",
+        "existingProduct": "",
+        "nickname": "uzam_universe",
+        "product": "키즈점프프로"
+      },
+      {
+        "id": 76,
+        "start": "2026-04-17",
+        "type": "공동구매",
+        "title": "podomami(이은지)-키즈점프프로",
+        "existingProduct": "",
+        "nickname": "podomami",
+        "product": "키즈점프프로"
+      },
+      {
+        "id": 89,
+        "start": "2026-05-01",
+        "type": "공동구매",
+        "title": "5월로 변경(날짜미정) / hyen__mama(김혜미)키즈점프프로(상…",
+        "existingProduct": "",
+        "nickname": "hyen__mama",
+        "product": "키즈점프프로"
+      },
+      {
+        "id": 94,
+        "start": "2026-05-16",
+        "type": "공동구매",
+        "title": "*전달완료 podomami(이은지) 키즈점프프로2차",
+        "existingProduct": "",
+        "nickname": "podomami",
+        "product": "키즈점프프로"
+      },
+      {
+        "id": 157,
+        "start": "2026-09-18",
+        "type": "공동구매",
+        "title": "*전달완료 __my.ddang(김민원) 키즈점프프로 (상품발송+페이백)",
+        "existingProduct": "",
+        "nickname": "__my.ddang",
+        "product": "키즈점프프로"
+      },
+      {
+        "id": 189,
+        "start": "2026-11-05",
+        "type": "공동구매",
+        "title": "(취소)songa_mom_(이경진) 키즈점프프로 (상품발송+페이백)",
+        "existingProduct": "",
+        "nickname": "songa_mom_",
+        "product": "키즈점프프로"
+      },
+      {
+        "id": 207,
+        "start": "2026-12-03",
+        "type": "공동구매",
+        "title": "chaea__mom(김소희) 키즈점프프로 (상품발송+페이백)",
+        "existingProduct": "",
+        "nickname": "chaea__mom",
+        "product": "키즈점프프로"
+      },
+      {
+        "id": 213,
+        "start": "2026-12-14",
+        "type": "공동구매",
+        "title": "podomami(이은지) 키즈점프프로 3차공구",
+        "existingProduct": "",
+        "nickname": "podomami",
+        "product": "키즈점프프로"
+      }
+    ]
+  },
+  {
+    "name": "플레이5 믹스",
+    "count": 7,
+    "types": [
+      "공동구매"
+    ],
+    "rows": [
+      {
+        "id": 102,
+        "start": "2026-06-05",
+        "type": "공동구매",
+        "title": "hero._luv(이하영) 플레이5 믹스 (취소)",
+        "existingProduct": "",
+        "nickname": "hero._luv",
+        "product": "플레이5 믹스"
+      },
+      {
+        "id": 109,
+        "start": "2026-06-26",
+        "type": "공동구매",
+        "title": "ddarl__ddarl(이윤아)-플레이5 믹스",
+        "existingProduct": "",
+        "nickname": "ddarl__ddarl",
+        "product": "플레이5 믹스"
+      },
+      {
+        "id": 116,
+        "start": "2026-07-09",
+        "type": "공동구매",
+        "title": "*전달완료 crys__tal(최수정) 플레이5 믹스 (상품발송-페이백)",
+        "existingProduct": "",
+        "nickname": "crys__tal",
+        "product": "플레이5 믹스"
+      },
+      {
+        "id": 118,
+        "start": "2026-07-13",
+        "type": "공동구매",
+        "title": "bella_haus_ 플레이5 믹스",
+        "existingProduct": "",
+        "nickname": "bella_haus_",
+        "product": "플레이5 믹스"
+      },
+      {
+        "id": 124,
+        "start": "2026-07-27",
+        "type": "공동구매",
+        "title": "*전달완료 geoml_mom(천정은) 플레이5 믹스 (상품발송-페이백)",
+        "existingProduct": "",
+        "nickname": "geoml_mom",
+        "product": "플레이5 믹스"
+      },
+      {
+        "id": 130,
+        "start": "2026-08-06",
+        "type": "공동구매",
+        "title": "*전달완료 poopu_zip(김수빈) 플레이5 믹스(상품발송-페이백)",
+        "existingProduct": "",
+        "nickname": "poopu_zip",
+        "product": "플레이5 믹스"
+      },
+      {
+        "id": 137,
+        "start": "2026-08-25",
+        "type": "공동구매",
+        "title": "(취소)sl_won_mom(김민지) 플레이5 믹스 (상품발송-페이백)",
+        "existingProduct": "",
+        "nickname": "sl_won_mom",
+        "product": "플레이5 믹스"
+      }
+    ]
+  },
+  {
+    "name": "클레이",
+    "count": 6,
+    "types": [
+      "공동구매",
+      "기타"
+    ],
+    "rows": [
+      {
+        "id": 151,
+        "start": "2026-09-16",
+        "type": "공동구매",
+        "title": "*전달완료 chaeeun2_mom(남여지) 클레이",
+        "existingProduct": "",
+        "nickname": "chaeeun2_mom",
+        "product": "클레이"
+      },
+      {
+        "id": 164,
+        "start": "2026-09-28",
+        "type": "공동구매",
+        "title": "*전달완료 mylittleclass_(이수녕) 클레이 (상품발송)",
+        "existingProduct": "",
+        "nickname": "mylittleclass_",
+        "product": "클레이"
+      },
+      {
+        "id": 173,
+        "start": "2026-10-13",
+        "type": "공동구매",
+        "title": "bunnygamza(이중주)-클레이",
+        "existingProduct": "",
+        "listProduct": "클레이",
+        "nickname": "bunnygamza",
+        "product": "클레이"
+      },
+      {
+        "id": 193,
+        "start": "2026-11-07",
+        "type": "기타",
+        "title": "맘맘 클레이",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "클레이"
+      },
+      {
+        "id": 196,
+        "start": "2026-11-13",
+        "type": "공동구매",
+        "title": "bd_mom(남궁람) 클레이 (상품발송 페이백)",
+        "existingProduct": "",
+        "nickname": "bd_mom",
+        "product": "클레이"
+      },
+      {
+        "id": 202,
+        "start": "2026-11-25",
+        "type": "공동구매",
+        "title": "bbomm__02(소이네) 클레이 (상품발송)",
+        "existingProduct": "",
+        "nickname": "bbomm__02",
+        "product": "클레이"
+      }
+    ]
+  },
+  {
+    "name": "낱말카드",
+    "count": 3,
+    "types": [
+      "공동구매",
+      "행사"
+    ],
+    "rows": [
+      {
+        "id": 8,
+        "start": "2026-01-05",
+        "type": "공동구매",
+        "title": "*전달완료 morak_mom(이지현) 낱말카드(상품발송)",
+        "existingProduct": "",
+        "nickname": "morak_mom",
+        "product": "낱말카드"
+      },
+      {
+        "id": 120,
+        "start": "2026-07-22",
+        "type": "공동구매",
+        "title": "*전달완료 ehnts_m(조혜린) 낱말카드 (상품발송-페이백)",
+        "existingProduct": "",
+        "nickname": "ehnts_m",
+        "product": "낱말카드"
+      },
+      {
+        "id": 158,
+        "start": "2026-09-20",
+        "type": "행사",
+        "title": "[로켓-골드박스] 낱말카드 22,500원 / 행사수량 100개",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "낱말카드"
+      }
+    ]
+  },
+  {
+    "name": "플레이",
+    "count": 3,
+    "types": [
+      "행사",
+      "공동구매"
+    ],
+    "rows": [
+      {
+        "id": 11,
+        "start": "2026-01-06",
+        "type": "행사",
+        "title": "[로켓] 골드박스 - 플레이 10중택 - 13,900원",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "플레이"
+      },
+      {
+        "id": 127,
+        "start": "2026-08-01",
+        "type": "공동구매",
+        "title": "[전달完]3doong_home(이경남)-플레이",
+        "existingProduct": "",
+        "nickname": "3doong_home",
+        "product": "플레이"
+      },
+      {
+        "id": 136,
+        "start": "2026-08-24",
+        "type": "공동구매",
+        "title": "*전달완료 hello_seonmom(박찬아) 플레이 (상품발송)",
+        "existingProduct": "",
+        "nickname": "hello_seonmom",
+        "product": "플레이"
+      }
+    ]
+  },
+  {
+    "name": "무한워크북보드",
+    "count": 3,
+    "types": [
+      "공동구매"
+    ],
+    "rows": [
+      {
+        "id": 43,
+        "start": "2026-02-13",
+        "type": "공동구매",
+        "title": "■이사님 [레몬트리/학습] 무한워크북보드 패키지",
+        "existingProduct": "",
+        "nickname": "",
+        "product": "무한워크북보드"
+      },
+      {
+        "id": 75,
+        "start": "2026-04-16",
+        "type": "공동구매",
+        "title": "*전달완료 sese_art(윤정원) 무한워크북보드 공구(상품발송)",
+        "existingProduct": "",
+        "nickname": "sese_art",
+        "product": "무한워크북보드"
+      },
+      {
+        "id": 126,
+        "start": "2026-07-30",
+        "type": "공동구매",
+        "title": "*전달완료 gguml_geonhu (현희지) 무한워크북보드 (상품발송-페이백)",
+        "existingProduct": "",
+        "nickname": "gguml_geonhu",
+        "product": "무한워크북보드"
+      }
+    ]
+  },
+  {
+    "name": "플레이5max",
+    "count": 2,
+    "types": [
+      "공동구매"
+    ],
+    "rows": [
+      {
+        "id": 71,
+        "start": "2026-04-14",
+        "type": "공동구매",
+        "title": "*전달완료 hhappy_ayola(고혜린) 플레이5max (플레이5만 일반발송)",
+        "existingProduct": "",
+        "nickname": "hhappy_ayola",
+        "product": "플레이5max"
+      },
+      {
+        "id": 84,
+        "start": "2026-04-28",
+        "type": "공동구매",
+        "title": "*전달완료 momjoy0527(조은) 플레이5max 공동구매 (플레이5만발송)",
+        "existingProduct": "",
+        "nickname": "momjoy0527",
+        "product": "플레이5max"
+      }
+    ]
+  },
+  {
+    "name": "플레이돌",
+    "count": 2,
+    "types": [
+      "공동구매"
+    ],
+    "rows": [
+      {
+        "id": 172,
+        "start": "2026-10-12",
+        "type": "공동구매",
+        "title": "ebenbebe_(김진경) 플레이도 믹스 (상품발송+페이백)",
+        "existingProduct": "",
+        "listProduct": "플레이돌",
+        "nickname": "ebenbebe_",
+        "product": "플레이돌"
+      },
+      {
+        "id": 180,
+        "start": "2026-10-22",
+        "type": "공동구매",
+        "title": "crys___tal(최수정) 플레이도 믹스 2차",
+        "existingProduct": "",
+        "listProduct": "플레이돌",
+        "nickname": "crys.__tal",
+        "product": "플레이돌"
+      }
+    ]
+  },
+  {
+    "name": "플레이10중택",
+    "count": 1,
+    "types": [
+      "공동구매"
+    ],
+    "rows": [
+      {
+        "id": 70,
+        "start": "2026-04-13",
+        "type": "공동구매",
+        "title": "*전달완료 ssolmom.art(이임경) 플레이10중택 공구(상품발송)",
+        "existingProduct": "",
+        "nickname": "ssolmom.art",
+        "product": "플레이10중택"
+      }
+    ]
+  },
+  {
+    "name": "키즈점프로",
+    "count": 1,
+    "types": [
+      "공동구매"
+    ],
+    "rows": [
+      {
+        "id": 79,
+        "start": "2026-04-20",
+        "type": "공동구매",
+        "title": "s2_saaaarang (최사랑) - 키즈점프로 2차 (1차는 19일)",
+        "existingProduct": "",
+        "nickname": "s2_saaaarang",
+        "product": "키즈점프로"
+      }
+    ]
+  },
+  {
+    "name": "세타글단본",
+    "count": 1,
+    "types": [
+      "공동구매"
+    ],
+    "rows": [
+      {
+        "id": 80,
+        "start": "2026-04-23",
+        "type": "공동구매",
+        "title": "*전달완료 hyun.myung_mom(장현경) 세타글단본 공동구매 (상품발송)",
+        "existingProduct": "",
+        "nickname": "hyun.myung_mom",
+        "product": "세타글단본"
+      }
+    ]
+  },
+  {
+    "name": "USB",
+    "count": 1,
+    "types": [
+      "공동구매"
+    ],
+    "rows": [
+      {
+        "id": 81,
+        "start": "2026-04-23",
+        "type": "공동구매",
+        "title": "*전달완료 dalkom__mom(원하연) USB 공구 (상품발송)",
+        "existingProduct": "",
+        "nickname": "dalkom__mom",
+        "product": "USB"
+      }
+    ]
+  },
+  {
+    "name": "뉴원USB",
+    "count": 1,
+    "types": [
+      "공동구매"
+    ],
+    "rows": [
+      {
+        "id": 119,
+        "start": "2026-07-21",
+        "type": "공동구매",
+        "title": "sortie2017/김혜란 - 뉴원USB",
+        "existingProduct": "",
+        "nickname": "sortie2017",
+        "product": "뉴원USB"
+      }
+    ]
+  },
+  {
+    "name": "샤워타월",
+    "count": 1,
+    "types": [
+      "공동구매"
+    ],
+    "rows": [
+      {
+        "id": 132,
+        "start": "2026-08-11",
+        "type": "공동구매",
+        "title": "*전달완료 soeun_growup(문아름) 샤워타월 (상품발송-페이백)",
+        "existingProduct": "",
+        "nickname": "soeun_growup",
+        "product": "샤워타월"
+      }
+    ]
+  },
+  {
+    "name": "클레이+무한워크북",
+    "count": 1,
+    "types": [
+      "공동구매"
+    ],
+    "rows": [
+      {
+        "id": 144,
+        "start": "2026-09-09",
+        "type": "공동구매",
+        "title": "*전달완료 danl.mom22(박현수) 클레이+무한워크북 (상품발송+페이백)",
+        "existingProduct": "",
+        "nickname": "danl.mom22",
+        "product": "클레이+무한워크북"
+      }
+    ]
+  },
+  {
+    "name": "플레이도믹스",
+    "count": 1,
+    "types": [
+      "공동구매"
+    ],
+    "rows": [
+      {
+        "id": 204,
+        "start": "2026-12-01",
+        "type": "공동구매",
+        "title": "kkomi__house(권민지) 플레이도믹스 (상품발송+페이백)",
+        "existingProduct": "",
+        "nickname": "kkomi__house",
+        "product": "플레이도믹스"
+      }
+    ]
+  }
+]

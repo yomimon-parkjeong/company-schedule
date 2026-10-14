@@ -1,0 +1,23 @@
+
+ <dialog id="settleCalendarDialog" class="settlement-calendar-dialog" aria-labelledby="settleCalendarTitle">
+  <div class="settlement-calendar-dialog-head"><div><h2 id="settleCalendarTitle">매출을 반영할 일정 선택</h2><p>닉네임·상품·기간·담당자를 확인해주세요.</p></div><button id="settleCalendarClose" type="button" aria-label="일정 선택 닫기">×</button></div>
+  <div class="settlement-link-values"><span>판매건수 <strong id="settleLinkCount"></strong></span><span>주문금액 <strong id="settleLinkAmount"></strong></span></div>
+  <p id="settleLinkCampaign" class="settlement-link-campaign"></p>
+  <p id="settleLinkError" class="settlement-link-error" role="alert"></p>
+  <div id="settleCalendarPick">
+   <div class="settlement-mini-toolbar"><div class="settlement-mini-month"><button id="settleMiniPrev" type="button" aria-label="이전 달">‹</button><input id="settleMiniMonth" type="month" min="2026-01" max="2030-12" aria-label="일정 선택 월"><button id="settleMiniNext" type="button" aria-label="다음 달">›</button></div><input id="settleMiniSearch" type="search" placeholder="닉네임·상품·담당자 검색" aria-label="반영할 일정 검색"></div>
+   <p id="settleMiniCount" class="settlement-help"></p>
+   <div class="settlement-mini-scroll"><div class="settlement-mini-calendar"><div class="settlement-mini-weekdays" aria-hidden="true"><span class="sunday">일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span class="saturday">토</span></div><div id="settleMiniWeeks"></div></div></div>
+   <p class="settlement-help">파란 테두리: 공구명과 닉네임 일치 · 취소 일정은 선택 대상에서 제외</p>
+  </div>
+  <div id="settleCalendarConfirm" hidden>
+   <h3 id="settleConfirmTitle">정말 일정표에 해당 매출을 반영하시겠습니까?</h3>
+   <div class="settlement-link-target"><strong id="settleConfirmSchedule"></strong><span id="settleConfirmPeriod"></span><span id="settleConfirmOwner"></span><span id="settleConfirmSource"></span></div>
+   <table class="settlement-link-comparison" aria-label="기존 값과 이번 정산 합산 확인">
+    <thead><tr><th scope="col">항목</th><th scope="col">기존 값</th><th scope="col">이번 정산</th><th scope="col">반영 후 합계</th></tr></thead>
+    <tbody><tr><th scope="row">판매건수</th><td id="settleBeforeCount"></td><td id="settleIncomingCount"></td><td><strong id="settleAfterCount"></strong></td></tr><tr><th scope="row">매출액</th><td id="settleBeforeAmount"></td><td id="settleIncomingAmount"></td><td><strong id="settleAfterAmount"></strong></td></tr></tbody>
+   </table>
+   <p id="settleConfirmNote">이번 정산의 판매건수와 주문금액을 선택한 일정에 저장합니다.</p>
+   <div class="settlement-link-confirm-actions"><button id="settleCalendarNo" type="button">아니요</button><button id="settleCalendarYes" type="button" class="primary">예, 반영하기</button></div>
+  </div>
+ </dialog>

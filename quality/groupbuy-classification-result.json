@@ -1,0 +1,4590 @@
+{
+  "records": 1679,
+  "types": {
+    "공동구매": 739,
+    "미분류": 821,
+    "발송": 56,
+    "행사": 32,
+    "페이백": 31
+  },
+  "classificationRules": {
+    "nickname-name-product": 540,
+    "unresolved": 166,
+    "explicit-type": 287,
+    "unresolved-product": 1,
+    "other-category": 651,
+    "other-work": 3,
+    "payback-keyword": 31
+  },
+  "changed": 571,
+  "changes": [
+    {
+      "sourceId": "7bc11fbb-65b0-12b3-788b-0256f2b957f6",
+      "date": "2023-02-10",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bbee._.bbee(이은민) 매직패드 完"
+    },
+    {
+      "sourceId": "tb_13162778TB1675838463935",
+      "date": "2023-02-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "raon__mom_(김다흰) 사운드차트 完"
+    },
+    {
+      "sourceId": "fba3add8-c852-63a9-a1e9-ef0d8eeae605",
+      "date": "2023-02-13",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "muse_jhj(정희정) 사운드차트, 빅북 完"
+    },
+    {
+      "sourceId": "tb_13162778TB1675845939418",
+      "date": "2023-02-13",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "inyoung0106 (이인영) 빅북★세팅완료★"
+    },
+    {
+      "sourceId": "tb_13162778TB1675920531114",
+      "date": "2023-02-13",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "imo_loveu(신혜원) 매직패드 ★세팅완료★"
+    },
+    {
+      "sourceId": "010a5908-50c9-0f6b-7afa-78291898f6ef",
+      "date": "2023-02-14",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "seul.mom(이영로) 키즈탭 회수完"
+    },
+    {
+      "sourceId": "686f2298-d4e5-b67c-af04-53eb2970a385",
+      "date": "2023-02-14",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "inyoung0106 (이인영) 빅북 完"
+    },
+    {
+      "sourceId": "tb_13162778TB1675920762415",
+      "date": "2023-02-14",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "muse_jhj(정희정) 사운드차트, 빅북★세팅완료★"
+    },
+    {
+      "sourceId": "tb_13162778TB1675920569495",
+      "date": "2023-02-14",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "se__a_vely(김시언) 요미몬 빅북 (오류 후 대답X) 完"
+    },
+    {
+      "sourceId": "tb_13162778TB1676272575136",
+      "date": "2023-02-14",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "heewoo._.s2(홍혜진) 키즈탭 完 >재진행"
+    },
+    {
+      "sourceId": "tb_13162778TB1676003366090",
+      "date": "2023-02-16",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "dear.y.baby(선지수) 사운드차트 (진행불가로 인한 취소)"
+    },
+    {
+      "sourceId": "tb_13162778TB1676006475981",
+      "date": "2023-02-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "imo_loveu(신혜원) 키즈탭 ★세팅완료★"
+    },
+    {
+      "sourceId": "1dbfe8e9-4ef4-cc96-7b6d-180c599d18e8",
+      "date": "2023-02-21",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_______eunzoo(심은주) 빅북 ★세팅완료★"
+    },
+    {
+      "sourceId": "73624efe-f5b6-63a4-8b9b-5599c9d2c9f6",
+      "date": "2023-02-27",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "loveday_maket2(김하나) 매직패드 회수完"
+    },
+    {
+      "sourceId": "dfbe4f36-e63f-6940-c2e5-ca27cb37b7ba",
+      "date": "2023-02-28",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "welms847716(이미숙) 빅북 ★세팅완료★"
+    },
+    {
+      "sourceId": "52bdb022-c130-23f8-d832-b99258aa9807",
+      "date": "2023-03-01",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "yekong_m(서은지) 빅북 ★세팅완료★"
+    },
+    {
+      "sourceId": "7970466b-bebf-2ee5-738a-074d74202a66",
+      "date": "2023-03-05",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "raon__mom_(김다흰) 매직패드+매직폰"
+    },
+    {
+      "sourceId": "490428b1-064a-e3ea-a708-1dab62ab9aa3",
+      "date": "2023-03-06",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "d.guni_(이은지) 빅북"
+    },
+    {
+      "sourceId": "af27a8d9-67f2-372f-e869-ed120228b16b",
+      "date": "2023-03-08",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "dal2unni(김은지) : 요미몬 매직패드"
+    },
+    {
+      "sourceId": "07e758cf-ae5f-21c6-553d-32ffdc6ca2f4",
+      "date": "2023-03-09",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "__3mom(이정애) : 요미몬 매직패드"
+    },
+    {
+      "sourceId": "a8d95c4a-86dc-32c0-8e79-fa06f3a270e9",
+      "date": "2023-03-09",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "se__a_vely(김시언) 매직패드"
+    },
+    {
+      "sourceId": "625caf33-b96c-a055-34cd-7ec6b9098531",
+      "date": "2023-03-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "eunjizing(이은지) : 매직패드 종료"
+    },
+    {
+      "sourceId": "14b538d6-5687-2083-4fa1-ff72de4086e0",
+      "date": "2023-03-13",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "rang._goo(우다현) 매직패드, 매직폰 完"
+    },
+    {
+      "sourceId": "ae31f9be-ea3f-4e57-e7f1-6602f2e5c5bc",
+      "date": "2023-03-13",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "wony__bebe(이성미) 베이비오디오 ★세팅완료★"
+    },
+    {
+      "sourceId": "22ea101c-16ea-27e7-20e1-aa781418dd09",
+      "date": "2023-03-14",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "estelleful(차아름) 매직폰,매직패드 完"
+    },
+    {
+      "sourceId": "432902d0-abd8-53e5-1b7d-91bb4a5b6cd6",
+      "date": "2023-03-14",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bin_na1230(윤빛나) 빅북★세팅완료★"
+    },
+    {
+      "sourceId": "fe3494aa-e2ae-eb67-9e7e-9119097e585b",
+      "date": "2023-03-15",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ok_guyang(김민옥) 키즈탭★세팅완료★"
+    },
+    {
+      "sourceId": "0c268111-e265-1262-ecdc-6d1fcc39c8be",
+      "date": "2023-03-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hjskylove(이현주) 매직폰, 매직패드★세팅완료★"
+    },
+    {
+      "sourceId": "816eb944-23c9-0e4d-f51d-2931db43025c",
+      "date": "2023-03-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_uni._.v(이지혜) 매직폰+패드"
+    },
+    {
+      "sourceId": "0bc0d8c5-a50d-9ab4-078e-61ed1f713131",
+      "date": "2023-03-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "luv__any_(김유진) : 베이비오디오"
+    },
+    {
+      "sourceId": "f8fe12e0-6429-0f31-e06b-af0b80066aca",
+      "date": "2023-03-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jae._.heeya (RAMADHIANI) 매직패드+폰"
+    },
+    {
+      "sourceId": "53b87a80-7d70-e2fe-b64b-6ad44cbd32f6",
+      "date": "2023-03-21",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ssong.mom_(하송이) 매직패드+매직폰(1차)★세팅완료★"
+    },
+    {
+      "sourceId": "b2180521-109a-b5f5-d61e-a5e73d179a6a",
+      "date": "2023-03-21",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "eunjizing(이은지) : 키즈탭"
+    },
+    {
+      "sourceId": "9b81fb3f-f181-9855-c4a8-8ca688e3f58c",
+      "date": "2023-03-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jj._.mom(이은지) 키즈탭"
+    },
+    {
+      "sourceId": "e544734b-4787-7e1e-a493-7c4152e5b042",
+      "date": "2023-03-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "dal2unni(김은지) : 요미몬 빅북(1차)★세팅완료★"
+    },
+    {
+      "sourceId": "8210536c-54e3-ead9-8ffc-7d020cdbb26c",
+      "date": "2023-03-26",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "eunjizing(이은지) : 베이비오디오"
+    },
+    {
+      "sourceId": "2550dcef-bc04-77d8-0990-9919aca5e724",
+      "date": "2023-03-27",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "___s___e___o(서미라) 빅북完"
+    },
+    {
+      "sourceId": "ef735793-d17a-44e5-86f5-746526d4e51b",
+      "date": "2023-03-27",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "heewoo._.s2(홍혜진) 키즈탭 샘플有★세팅완료★"
+    },
+    {
+      "sourceId": "3454ee7c-5c1d-7f74-8ceb-7012a720c131",
+      "date": "2023-03-27",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hanbyul1024(권화경) 매직패드+폰"
+    },
+    {
+      "sourceId": "e7e7d6d1-60e1-3090-a872-80d71bb4c57c",
+      "date": "2023-03-27",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "dana_closet_(김보람) : 베이비오디오"
+    },
+    {
+      "sourceId": "f3401b14-eb52-b442-c4b6-fe1ab30fa323",
+      "date": "2023-03-27",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "eokeun_(신소진) 매직패드+매직폰★세팅완료★"
+    },
+    {
+      "sourceId": "6f35b4a8-3f9d-a320-f518-a134d8d081d3",
+      "date": "2023-03-29",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "luvluvluv_won(손혜원)매직패드+매직폰1 ★세팅완료★"
+    },
+    {
+      "sourceId": "77dc7982-fdd1-deb8-0aa9-5537446c18aa",
+      "date": "2023-03-31",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_pomme_be(박유나) 패드+폰 ★세팅완료★"
+    },
+    {
+      "sourceId": "ccbc5325-5535-5035-7b89-90c062d0cad1",
+      "date": "2023-03-31",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hehesisters_js(이지수) 매직패드+매직폰 完"
+    },
+    {
+      "sourceId": "8dc4dea5-d8bd-f01c-dec4-8d9518781246",
+      "date": "2023-04-01",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "Jerry_youn(윤여진) 매직패드+매직폰(1)★세팅완료★"
+    },
+    {
+      "sourceId": "6cb0169e-4de8-845f-475f-11ec97cfc3b8",
+      "date": "2023-04-03",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "heewoo._.s2(홍혜진) 빅북(2)★세팅완료★"
+    },
+    {
+      "sourceId": "860783de-5a44-85ee-df96-5fa159adba04",
+      "date": "2023-04-03",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bijjoou(한은경) 매직패드 +매직폰 *세팅완료*"
+    },
+    {
+      "sourceId": "b32787c8-8e51-24ef-a762-f3818b499f84",
+      "date": "2023-04-03",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jj._.mom(이은지) 베이비오디오 ★세팅완료★"
+    },
+    {
+      "sourceId": "f20a114f-f0cc-4d4a-414f-6c838caa3a34",
+      "date": "2023-04-03",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "u.jinni(소유진) 매직패드+매직폰 /기존업체/*세팅완료*"
+    },
+    {
+      "sourceId": "08b2bd66-5f52-5f5a-5b83-0125e432e6b7",
+      "date": "2023-04-03",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "xgxg0667(이지은)-키즈탭 *세팅완료*"
+    },
+    {
+      "sourceId": "4aabc3fe-c882-1988-bbbd-305f036f836b",
+      "date": "2023-04-03",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ssssungjiin(안성진)매직패드+매직폰*세팅완료*/ 일정변경 /기존업체"
+    },
+    {
+      "sourceId": "i4000EDA1-90B0-436F-BA6B-5DBBD1642735",
+      "date": "2023-04-03",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "j_une_uly(김예원) 매직패드+매직폰★세팅완료★"
+    },
+    {
+      "sourceId": "8311421e-a190-ea9e-dd83-9a1be6a67935",
+      "date": "2023-04-05",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "twins_roa_robin(김진영)-키즈탭/기존업체/*오픈완료*"
+    },
+    {
+      "sourceId": "06072de7-4cfa-a5f6-91aa-2bd728375cf2",
+      "date": "2023-04-05",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jae._.heeya (RAMADHIANI) 매직패드+폰 (2차) ★세팅완료★"
+    },
+    {
+      "sourceId": "603c6348-b9e7-db9d-1b19-6f067fec262f",
+      "date": "2023-04-05",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_pomme_be(박유나) 키즈탭"
+    },
+    {
+      "sourceId": "07db61ba-7b59-2db3-0740-a091b15adeb2",
+      "date": "2023-04-06",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "doyoon._.yell(이예림) 사운드차트 (샘플o)*오픈완료*"
+    },
+    {
+      "sourceId": "5b846b96-9cc5-adb8-8af5-0a5e1bb218be",
+      "date": "2023-04-07",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ddabong2mo(강서현)매직패드+매직폰 패키지 ★세팅완료★"
+    },
+    {
+      "sourceId": "d56be240-9ab9-17af-c46b-d1af16d6a7d2",
+      "date": "2023-04-07",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_sonia.home(박선영) 키즈탭 - 기존"
+    },
+    {
+      "sourceId": "d96fb8eb-5cbb-22f6-1877-1e9f294fba8e",
+      "date": "2023-04-07",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bin_na1230(윤빛나) 베이비오디오(2) ★세팅완료★"
+    },
+    {
+      "sourceId": "dd6b6001-c058-a355-3da0-61a25c73d707",
+      "date": "2023-04-10",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "uni._.uniluv(김은경) 베이비오디오 (회수예정)"
+    },
+    {
+      "sourceId": "ed8f0558-f87a-4135-7b88-70e81506f5d5",
+      "date": "2023-04-10",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jio_____jio(권진희) 매직패드+매직폰(1) 完"
+    },
+    {
+      "sourceId": "f66d57e0-268d-e983-6f5f-a0b2f8bd72c9",
+      "date": "2023-04-10",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "by_yundy(김윤정) 키즈탭 完"
+    },
+    {
+      "sourceId": "2c2640cc-883b-1b02-f057-6318f805f478",
+      "date": "2023-04-10",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "dahyeholic_(다혜)-빅북 샘플O"
+    },
+    {
+      "sourceId": "2f463970-7ef1-d711-682c-d531acb47675",
+      "date": "2023-04-10",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bijjoou(한은경)-사운드차트*샘플O"
+    },
+    {
+      "sourceId": "647e977e-2d67-e111-30a0-0f9b302f33ad",
+      "date": "2023-04-10",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ji_hyun_jjang(이지현) 매직패드+매직폰(1차)-진행불가"
+    },
+    {
+      "sourceId": "83ce4f59-fdfd-9a5c-39c2-055b6be469f5",
+      "date": "2023-04-10",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "raon__mom_(김다흰) 매직패드+폰 (2차)  ★세팅완료★"
+    },
+    {
+      "sourceId": "c0dd5be3-7f58-6ac9-f3cb-e228d4a6af40",
+      "date": "2023-04-10",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "aa_kimb(김도연) : 매직패드+매직폰 完"
+    },
+    {
+      "sourceId": "iD81678A9-DDCD-4BC2-94F5-F739294C8F20",
+      "date": "2023-04-10",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "j_une_uly(김예원) 빅북 完"
+    },
+    {
+      "sourceId": "e0f4bca4-d556-2652-13e5-3ddcb077fc34",
+      "date": "2023-04-10",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "__biju_dohye(한정아) 키즈탭 ★세팅완료★"
+    },
+    {
+      "sourceId": "b8160096-713f-f5b6-e28d-13292b281ed7",
+      "date": "2023-04-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "babisei(곽세희) 차트5종  ★세팅완료★"
+    },
+    {
+      "sourceId": "34a9d497-3028-5cd8-0274-b152e9baec5d",
+      "date": "2023-04-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_______eunzoo(심은주) 키즈탭(재) 完"
+    },
+    {
+      "sourceId": "ddc4e835-0982-9fbd-6066-b46cb24953e1",
+      "date": "2023-04-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hae.in.mom(박송이) 키즈탭 ★세팅완료★"
+    },
+    {
+      "sourceId": "ded63c20-e6b7-21c5-aa37-1554e096b98b",
+      "date": "2023-04-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "Seulandming (신보라-기존) 폰+패드 ★세팅완료★"
+    },
+    {
+      "sourceId": "f0042181-6c31-42b1-c225-5865039b166c",
+      "date": "2023-04-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "dal2unni(김은지) 사운드차트 完"
+    },
+    {
+      "sourceId": "1bcecd83-77b1-41ff-981d-cd8ff5b53be3",
+      "date": "2023-04-12",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_comelym(오윤미) 베이비오디오 ★세팅완료★"
+    },
+    {
+      "sourceId": "1dacdf77-52f3-e7b3-26c3-786cc0182eea",
+      "date": "2023-04-12",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "yekong_m(서은지) 차트5종 ★세팅완료★"
+    },
+    {
+      "sourceId": "a838be5c-e74c-09d1-a7ef-062b2dc7b9db",
+      "date": "2023-04-12",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_pomme_be(박유나) 빅북 ★세팅완료★"
+    },
+    {
+      "sourceId": "c8975025-8860-b73d-b8fb-74ca0d1269ec",
+      "date": "2023-04-13",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "juwon_mom22(윤지호)-사운드차트*세팅완료*"
+    },
+    {
+      "sourceId": "226db05e-9e6a-67c5-a6ba-4d4b1df459cf",
+      "date": "2023-04-13",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ok_guyang(김민옥) 베이비오디오(2)-★세팅완료★"
+    },
+    {
+      "sourceId": "952dd858-48d4-2d3b-ed88-1f8ac557627c",
+      "date": "2023-04-13",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "juniyul_home(김나경) 빅북 ★세팅완료★"
+    },
+    {
+      "sourceId": "a6c6336c-0d64-4f29-b2a3-2736911b22b2",
+      "date": "2023-04-13",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "eunjizing(이은지) 사운드차트 *세팅완료*"
+    },
+    {
+      "sourceId": "219031d0-0c08-a4c6-833d-1444502f33a6",
+      "date": "2023-04-14",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hooray_yuhyeon(한보람) 빅북"
+    },
+    {
+      "sourceId": "81994298-99ce-0e7c-3bd1-fc69b6341e9a",
+      "date": "2023-04-14",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "withmin(변다슬-기존) 폰+패드"
+    },
+    {
+      "sourceId": "911ebdcb-a43b-e1a9-a5c4-2bac54a5df3f",
+      "date": "2023-04-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "uni._.uniluv(김은경) 키즈탭-★세팅완료★"
+    },
+    {
+      "sourceId": "07ec4bc6-49da-55e7-0987-535482856938",
+      "date": "2023-04-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "wony__bebe(이성미) : 매직패드+매직폰 ★세팅완료★"
+    },
+    {
+      "sourceId": "0fe3ee15-eb07-26ee-53e0-d1983d65b604",
+      "date": "2023-04-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "raon__mom_(김다흰) 차트5종 (2차)"
+    },
+    {
+      "sourceId": "440b63e2-df4d-6a87-7d4f-4ad5185eeb7b",
+      "date": "2023-04-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jiyu_jjyu(김가영) 베이비오디오"
+    },
+    {
+      "sourceId": "e79e9db8-e74c-7d9d-706d-1cc005aa6262",
+      "date": "2023-04-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hi._.uu(박수정) 매직패드+매직폰 ★세팅완료★"
+    },
+    {
+      "sourceId": "f79f3227-1a3b-05be-ac8b-74091c94026f",
+      "date": "2023-04-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "eunji.ari(오은지) 키즈탭"
+    },
+    {
+      "sourceId": "fce065d3-bda5-2aea-ea25-895197519f4e",
+      "date": "2023-04-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bijjoou(한은경)-베이비오디오"
+    },
+    {
+      "sourceId": "ba8b012f-5a36-cc57-80aa-975c342a6e98",
+      "date": "2023-04-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "gold._.yi(정혜영)  베이비오디오*세팅완료*"
+    },
+    {
+      "sourceId": "78829583-939d-c911-679b-f8822523f074",
+      "date": "2023-04-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "cho_hyeini(조혜인) 폰+패드 (기존업체)"
+    },
+    {
+      "sourceId": "8b6cd443-5a8b-a610-c9f9-0e35ee89f2a0",
+      "date": "2023-04-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "yekong_m(서은지) 빅북(2차)"
+    },
+    {
+      "sourceId": "3092a67d-dda3-1437-4ee8-03f7c60edd41",
+      "date": "2023-04-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "eunjizing(이은지)-빅북3종"
+    },
+    {
+      "sourceId": "dab91418-f692-c59a-693c-8595761321ec",
+      "date": "2023-04-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "dal2unni(김은지) 매직패드+매직폰(2차) ★세팅완료★"
+    },
+    {
+      "sourceId": "35a3e8cf-1c3a-d88f-0a43-971a920545da",
+      "date": "2023-04-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hooray_yuhyeon(한보람) 매직폰+패드"
+    },
+    {
+      "sourceId": "917e4ed1-6877-d5df-a343-66eeeb9b815b",
+      "date": "2023-04-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "Jerry_youn(윤여진) 키즈탭(2) ★세팅완료★"
+    },
+    {
+      "sourceId": "de3d352b-4f59-c3ad-69a3-9849d075ce05",
+      "date": "2023-04-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "eian_0808(송보배) 베이비오디오 ★세팅완료★"
+    },
+    {
+      "sourceId": "713c1e77-e3d9-2e6d-2180-46e30598e9c0",
+      "date": "2023-04-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jae._.heeya (RAMADHIANI) 차트5종"
+    },
+    {
+      "sourceId": "33dded7f-e717-96cb-8e90-7b9cacb3d590",
+      "date": "2023-04-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "kk_coke_(박지애) 사운드차트 5종 *세팅완료*"
+    },
+    {
+      "sourceId": "50eb14e4-fbe1-cd08-6c5b-c0696eb33402",
+      "date": "2023-04-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "daily.taejun(이선경)-빅북 3종 *세팅완료*"
+    },
+    {
+      "sourceId": "05613a48-42e9-1aeb-4fef-77f96bd49772",
+      "date": "2023-04-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "with_daisy_(박인애) 차트+빅북 ★세팅완료★"
+    },
+    {
+      "sourceId": "1fdcc7ba-e4e2-1e23-b9ce-04fb32677379",
+      "date": "2023-04-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hello_18.0521(신영은) : 빅북,사운드차트 ★세팅완료★"
+    },
+    {
+      "sourceId": "de893450-8437-121e-897a-d18bfb76cbd1",
+      "date": "2023-04-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "yanni_bebe.shop(최새얀) 빅북+차트 ★세팅완료★"
+    },
+    {
+      "sourceId": "5ed83c1c-bb4f-b468-4fda-36f1a2048efe",
+      "date": "2023-04-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hjskylove(이현주) 폰+패드 / 키즈탭 / 2차 ★세팅완료★"
+    },
+    {
+      "sourceId": "62b3bda4-b31c-6c56-bdf6-6afd59abc3c3",
+      "date": "2023-04-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "im__hanwool(김은진) 베이비오디오 ★세팅완료★"
+    },
+    {
+      "sourceId": "6c35b491-ddfe-8973-b978-bf9d60faad86",
+      "date": "2023-04-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "kongkong_you(유한나)-사운드차트 *세팅완료*"
+    },
+    {
+      "sourceId": "a6a9c087-f7a3-0eb8-02c0-36f6fb8a7891",
+      "date": "2023-04-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "luv__cindy(김정민) 키즈탭 *세팅완료*"
+    },
+    {
+      "sourceId": "6f63059a-cc33-ca6c-eeac-b197cc06dd72",
+      "date": "2023-04-21",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "3mom(이정애)-베이비오디오/기존업체"
+    },
+    {
+      "sourceId": "c800e466-2fac-3587-9156-8d9853e83431",
+      "date": "2023-04-21",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "siwoo_1day(이소영) 키즈탭 ★세팅완료★"
+    },
+    {
+      "sourceId": "3904c56a-ac95-4cc1-04e5-5171a38ea572",
+      "date": "2023-04-21",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "withmin(변다슬-기존) 차트5종"
+    },
+    {
+      "sourceId": "9460b389-9ee6-84e4-784c-3b5044f8b531",
+      "date": "2023-04-23",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "eunjizing(이은지)- 매직패드+매직폰"
+    },
+    {
+      "sourceId": "2d31c573-41d2-df17-6a92-a9b5c794a5b8",
+      "date": "2023-04-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jio_____jio(권진희) 빅북(2)★세팅완료★/오완"
+    },
+    {
+      "sourceId": "9bac1577-7627-338f-4341-4b34e555bc52",
+      "date": "2023-04-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "yanni_bebe.shop(최새얀) 매직폰+패드 페이지完/오완"
+    },
+    {
+      "sourceId": "0d0d2097-417f-cff6-82c4-e679c06470f9",
+      "date": "2023-04-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "sea0_702(김재인) 차트5종"
+    },
+    {
+      "sourceId": "22e5f857-052c-e633-5c47-d37008c68817",
+      "date": "2023-04-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "cho_hyeini(조혜인) 베이비오디오 (기존업체)"
+    },
+    {
+      "sourceId": "74afb615-c4ea-10e6-181e-b2ea9b6e8367",
+      "date": "2023-04-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bijjoou(한은경)-키즈탭"
+    },
+    {
+      "sourceId": "080b1b09-bce5-ca25-1e80-3aa3e389dac4",
+      "date": "2023-04-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "dal2unni(김은지) 빅북 (2차)-페이지完"
+    },
+    {
+      "sourceId": "89aa94c0-e2b7-ce72-0d24-ff0546bb4eda",
+      "date": "2023-04-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ji_hyun_jjang(이지현) 키즈탭(2차) 샘플有-보류(진행X)"
+    },
+    {
+      "sourceId": "af7db0fe-32e8-4d61-3ff2-9d3643926aec",
+      "date": "2023-04-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ogoguuu333(이은민) 차트 -★세팅완료★오완"
+    },
+    {
+      "sourceId": "f14c788a-44d6-75cb-9b19-d4009a8eecb9",
+      "date": "2023-04-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ujs0818(엄정숙): 매직패드 + 폰 /기존업체/오완"
+    },
+    {
+      "sourceId": "50e94700-e8e1-90e9-a69c-e7e34f78e70b",
+      "date": "2023-04-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "wonny_mom_(나희영)-사운드차트/오완/2차 앵콜"
+    },
+    {
+      "sourceId": "152c9d2d-ebfa-30c4-b859-3ff97d00abfb",
+      "date": "2023-04-25",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jjiyu__p(정연정) 키즈탭 ★세팅완료★"
+    },
+    {
+      "sourceId": "5cda1337-5dff-de1f-2c70-f1a9d7747b5a",
+      "date": "2023-04-25",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "yujumam___(김은지) 빅북 ★세팅완료★"
+    },
+    {
+      "sourceId": "0fc7fbbe-c9a3-3e44-6f90-911748f51b89",
+      "date": "2023-04-25",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hae.in.mom(박송이) 오디오"
+    },
+    {
+      "sourceId": "76407a2b-5ba5-245a-4873-1da265ec8d50",
+      "date": "2023-04-25",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_uni._.v(이지혜) 매직폰+패드(2차)"
+    },
+    {
+      "sourceId": "c76b1074-2718-fdf7-130a-a94fb4897342",
+      "date": "2023-04-25",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "oxo._.ddu(천미림) 키즈탭"
+    },
+    {
+      "sourceId": "e77630c1-80c9-5249-9ec9-2a291b58d019",
+      "date": "2023-04-25",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_vivian_store_(김부금) 키즈탭,베이비오디오/오완"
+    },
+    {
+      "sourceId": "d1f521e4-c692-6a81-7106-9c0b7a9a82f2",
+      "date": "2023-04-26",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "havelycloset(김유정) 패드+폰"
+    },
+    {
+      "sourceId": "79509d23-b0cc-5578-9660-57fa564c9eab",
+      "date": "2023-04-26",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "choi_saessak(김수현) 빅북 ★세팅완료★"
+    },
+    {
+      "sourceId": "b39c1f54-2eaa-23a9-cb80-40ad3e613a0b",
+      "date": "2023-04-26",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bianca_seojun(이보영) 키즈탭(1)★세팅완료★"
+    },
+    {
+      "sourceId": "ba7bb896-c090-2932-12f8-7d9122e0812f",
+      "date": "2023-04-26",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "daily.taejun(선경) 베이비오디오 *세팅완료*"
+    },
+    {
+      "sourceId": "433cec7f-2187-377b-79e9-4af52377e4b8",
+      "date": "2023-04-27",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "alo_hyunee(고아름) 빅북 페이지完/전달완"
+    },
+    {
+      "sourceId": "99e8f808-bbf4-f934-73ec-13a414a97872",
+      "date": "2023-04-27",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "yanni_bebe.shop(최새얀) 키즈탭 페이지完/전달완"
+    },
+    {
+      "sourceId": "08fe8bb8-6dfd-4da3-75b8-a8e6a938b757",
+      "date": "2023-04-27",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "heewoo._.s2(홍혜진) 키즈탭(2차) 페이지完/전달완"
+    },
+    {
+      "sourceId": "f455297e-3a2d-3b64-3840-734db952054e",
+      "date": "2023-04-27",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bless_1124(최은혜) 차트5종"
+    },
+    {
+      "sourceId": "04b45d8f-b4f8-dba5-269c-04d611c90918",
+      "date": "2023-04-28",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "juwon_mom22(윤지효)-베이비오디오"
+    },
+    {
+      "sourceId": "1d486fcc-dfcc-2ac5-5a03-0c65394b1f3a",
+      "date": "2023-04-28",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "dd_ssori(임다솔) 사운드차트-페이지完/전달완"
+    },
+    {
+      "sourceId": "77983347-0245-d19a-83e1-8fca146f72c0",
+      "date": "2023-04-28",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hy.e(정하율)-키즈탭/전달완"
+    },
+    {
+      "sourceId": "095fc028-8221-76bc-593f-b553ac2a6b65",
+      "date": "2023-04-28",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "juniyul_home(김나경) 키즈탭"
+    },
+    {
+      "sourceId": "9b251a94-606c-dd2f-27d0-b4077612925c",
+      "date": "2023-04-28",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "yj161113(조윤정) 차트+빅북 페이지完/전달완"
+    },
+    {
+      "sourceId": "f15341c8-85d3-6b7e-478f-778e0d02e897",
+      "date": "2023-04-29",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ssong.mom_(하송이) 매직패드+매직폰(2차) 페이지完"
+    },
+    {
+      "sourceId": "58137fb4-b966-4f3c-3d80-5032bc039f28",
+      "date": "2023-04-30",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "seohui_jeong(정서희) : 사운드차트"
+    },
+    {
+      "sourceId": "b82a4d3e-413d-c888-0545-b02c5f77f0de",
+      "date": "2023-05-01",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "100hayun(송지현) 사운드차트-페이지完/전달완"
+    },
+    {
+      "sourceId": "920cb443-8b5a-19bc-e1e8-20df41b2a818",
+      "date": "2023-05-01",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ji_hyun_jjang(이지현) 매직패드+매직폰(3차) 샘플有"
+    },
+    {
+      "sourceId": "5275c530-78e2-d419-c29e-eec943c8b2cb",
+      "date": "2023-05-02",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hjskylove(이현주) 폰+패드 / 키즈탭 / 연장★세팅완료★"
+    },
+    {
+      "sourceId": "109e5a33-2f48-815b-baa4-dc2cda3c0d5c",
+      "date": "2023-05-06",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "withmin(변다슬-기존) 차트5종(2차)"
+    },
+    {
+      "sourceId": "3db68b8a-e099-7a4c-229f-71e8ca7abf3d",
+      "date": "2023-05-08",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "j_une_uly(김예원) 빅북 재진행-페이지完/전달완"
+    },
+    {
+      "sourceId": "5898c1e3-ac3e-2ab6-da72-1d66aa8a05ed",
+      "date": "2023-05-08",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "juimlee(이주임)_폰/패드"
+    },
+    {
+      "sourceId": "5e02b822-289f-43b5-03cf-f051f3f4c88f",
+      "date": "2023-05-08",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jae._.heeya(RAMADHIANI) 폰/패드(2차)"
+    },
+    {
+      "sourceId": "da36d9a9-cb7b-51bf-5113-ef7fef020020",
+      "date": "2023-05-15",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hwa8904(김경화)-빅북*전달완료*"
+    },
+    {
+      "sourceId": "27cd386c-a84c-91ee-8715-bdb915cf4947",
+      "date": "2023-05-16",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "eunji.ari(오은지) 차트"
+    },
+    {
+      "sourceId": "1e580d10-d21d-92cd-f131-d83e80c3d66a",
+      "date": "2023-05-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "pm8.26(이지성)-키즈탭*전달완*"
+    },
+    {
+      "sourceId": "c143904d-5a6b-fb06-abb4-3755792d9938",
+      "date": "2023-05-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "____eun_woo(김예슬) 사운드차트"
+    },
+    {
+      "sourceId": "c27917ce-117c-bc5a-6d91-7384b2d1372a",
+      "date": "2023-05-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ro.hee__(권수빈) 빅북3종"
+    },
+    {
+      "sourceId": "85127231-7553-3172-e5f6-d49ba049870e",
+      "date": "2023-05-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bianca_seojun(이보영) 매직패드+매직폰(2)"
+    },
+    {
+      "sourceId": "64e7c7a4-4dbf-50db-e23f-9064da1acb60",
+      "date": "2023-05-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "Seulandming (신보라) 빅북"
+    },
+    {
+      "sourceId": "2282ed58-276d-6745-3b5c-3c4101ccee43",
+      "date": "2023-05-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "seonju0815(이선주) 매직폰+매직패드"
+    },
+    {
+      "sourceId": "96858a3b-02eb-5974-98b8-92fe83a0e378",
+      "date": "2023-05-23",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jae._.heeya(RAMADHIANI) 차트(2차)"
+    },
+    {
+      "sourceId": "bb3d14be-21f5-ff24-ef5f-dea6bb1a6e4c",
+      "date": "2023-05-23",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "with_daisy_(박인애) 키즈탭+오디오 페이지完 ◆인스타 피드 비노출 오류"
+    },
+    {
+      "sourceId": "44b4fdb5-0b5b-8fee-b3a0-4002bbf4651d",
+      "date": "2023-05-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hi._.uu(박수정) 폰+패드 (2차)"
+    },
+    {
+      "sourceId": "483f6d80-f9ce-835d-db36-07fba8a3e68b",
+      "date": "2023-05-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "yekong_m(서은지) 빅북(3차)"
+    },
+    {
+      "sourceId": "ffe898fe-6e2e-f6a9-9f03-7d3d6062b69b",
+      "date": "2023-05-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "eian_0808(송보배)-베이비오디오 ★세팅완료★"
+    },
+    {
+      "sourceId": "fac587c7-e8fc-64b0-1776-5cf8ad28f608",
+      "date": "2023-05-26",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "juimlee(이주임) 키즈탭"
+    },
+    {
+      "sourceId": "2ffc2b6c-199a-b2a5-5341-7c7ed669be18",
+      "date": "2023-05-31",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_pomme_be(박유나) 폰+패드"
+    },
+    {
+      "sourceId": "826ff2bd-ad93-c323-adb9-d9d7483e0fb4",
+      "date": "2023-06-01",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "with_daisy_(박인애) 키즈탭+오디오(2차re)"
+    },
+    {
+      "sourceId": "9d397b04-60ac-cb3f-b33d-3e3ad2dfdeef",
+      "date": "2023-06-01",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "seochan_home(천한슬) 차트5종"
+    },
+    {
+      "sourceId": "b4c90b74-e359-ec8b-8faf-e37fcdbe515c",
+      "date": "2023-06-03",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "yekong_m(서은지) 차트(2차)"
+    },
+    {
+      "sourceId": "a94835a8-5823-d9e7-4428-98e36b9aab9b",
+      "date": "2023-06-05",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "j_une_uly(김예원) 폰+패드 재진행 - *전달完"
+    },
+    {
+      "sourceId": "4973cd37-60a6-2dec-1635-74a3786a3231",
+      "date": "2023-06-05",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "seovely__mom(김상미) 매직패드+매직폰 *전달完"
+    },
+    {
+      "sourceId": "e24986b4-95fd-a505-f799-37381f682dcf",
+      "date": "2023-06-05",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_pomme_be(박유나) 키즈탭"
+    },
+    {
+      "sourceId": "570d14f9-6859-43e1-64f8-cb4cd4e7f24d",
+      "date": "2023-06-07",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hajin_.ii(나예은) 차트5종"
+    },
+    {
+      "sourceId": "25426f89-8454-1654-3d70-50bacb0a29a2",
+      "date": "2023-06-07",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_uni._.v(이지혜) 폰/패드(3차)"
+    },
+    {
+      "sourceId": "8e9aff44-7d7b-bbb8-37b9-1a4059c2c15f",
+      "date": "2023-06-07",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "juwon_mom22(윤지효)-빅북3종*샘완*"
+    },
+    {
+      "sourceId": "abb03ebb-f012-cae6-4f4e-7e1162cea04c",
+      "date": "2023-06-07",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "__biju_dohye(한정아) 키즈탭(2차)"
+    },
+    {
+      "sourceId": "d08e8d5e-447b-5925-d314-ea6923ac9006",
+      "date": "2023-06-07",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_yenamom(박연준) 차트5종"
+    },
+    {
+      "sourceId": "3afe8e5d-991a-86e2-18cd-88740f0747ef",
+      "date": "2023-06-08",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jiyu_jjyu(김가영) 오디오(2차)"
+    },
+    {
+      "sourceId": "11b3b180-7162-0416-6079-483105bebe51",
+      "date": "2023-06-12",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_pomme_be(박유나) 빅북"
+    },
+    {
+      "sourceId": "8584cf0e-3a78-c615-a9de-d0163ac16cf7",
+      "date": "2023-06-12",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ggu_8d(박유진) 키즈탭(2차)"
+    },
+    {
+      "sourceId": "e51e6141-81fd-8559-a708-dac53e66f96a",
+      "date": "2023-06-12",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ssugssug_baby(오채은) 차트5종"
+    },
+    {
+      "sourceId": "22d25bbe-a989-a8d5-ee59-1a4260056226",
+      "date": "2023-06-15",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hooray_yuhyeon(한보람) 빅북(2차)"
+    },
+    {
+      "sourceId": "5672c582-66aa-f712-d04b-4c9832ad8606",
+      "date": "2023-06-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bless_1124(최은혜) 폰/패드"
+    },
+    {
+      "sourceId": "ca618e85-dd36-639a-b403-e634e4311e08",
+      "date": "2023-06-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ddubum_(이수인) 오디오"
+    },
+    {
+      "sourceId": "ac1cc08d-f0fd-581e-fc80-efc55efcddf2",
+      "date": "2023-06-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "two_chae1104(송은지) 폰/패드"
+    },
+    {
+      "sourceId": "52ba00a4-9389-7b7c-1063-e3606b0b61ac",
+      "date": "2023-06-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "with_daisy_(박인애) 키즈탭(2차)"
+    },
+    {
+      "sourceId": "a1dd2663-868e-bced-e33f-39bb6109ab07",
+      "date": "2023-06-21",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hajin_.ii(나예은) 빅북"
+    },
+    {
+      "sourceId": "46252fc3-c6b9-18bd-a54d-1e6fb63da563",
+      "date": "2023-06-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "with_daisy_(박인애) 오디오(2차)"
+    },
+    {
+      "sourceId": "89e66b04-026d-ec2a-b362-0316d35adb1b",
+      "date": "2023-06-23",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "dd_ssori(임다솔)- 빅북"
+    },
+    {
+      "sourceId": "caf607c8-b6b2-51d6-e35e-e87c55479461",
+      "date": "2023-06-26",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_joavely__hweeya_(장한별)-베이비오디오 ✔세팅/전달완"
+    },
+    {
+      "sourceId": "4ae33b9a-e573-537d-0504-a8a88fb00032",
+      "date": "2023-06-27",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "pm8.26(이지성,라라랜드)-빅북 3종 시리즈 & 키즈탭"
+    },
+    {
+      "sourceId": "a7e09cbd-8391-e4ca-ca18-ff9be095ffd1",
+      "date": "2023-06-27",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "two_chae1104(송은지) 차트(5종)"
+    },
+    {
+      "sourceId": "df73031e-ba80-6b38-7219-710031b5297a",
+      "date": "2023-06-27",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "gguni_bebe(박미숙) 차트5종"
+    },
+    {
+      "sourceId": "89f48950-ff3d-0fc0-c2f6-1cce722cf60a",
+      "date": "2023-06-28",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "prettyjiyoon.mom(정영아)-사운드차트 5종"
+    },
+    {
+      "sourceId": "50865c8b-2e19-4c36-21bb-4b4571a2540b",
+      "date": "2023-07-03",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_joavely__hweeya(장한별)-매직패드+매직폰 ✔세팅/전달완"
+    },
+    {
+      "sourceId": "4c2978fd-1578-283c-d4fb-9b7c679b21eb",
+      "date": "2023-07-06",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jae._.heeya(RAMADHIANI) 차트5종(3차)"
+    },
+    {
+      "sourceId": "f7822be4-9da1-1125-9882-6148a564462e",
+      "date": "2023-07-10",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_yenamom(박연준) 차트(2차)"
+    },
+    {
+      "sourceId": "13826aa7-0dad-cdf3-6de4-b00291dcbd0e",
+      "date": "2023-07-10",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_uni._.v(이지혜) 폰/패드 (4차)"
+    },
+    {
+      "sourceId": "dabf439a-078d-ca75-bf4b-df20434114d2",
+      "date": "2023-07-14",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "seonju0815(이선주) 폰+패드(2차) - 도배"
+    },
+    {
+      "sourceId": "d1db8491-cff6-0141-3e45-2b7e1b92fca5",
+      "date": "2023-07-15",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bds_s2(변다슬) 차트5종(3차)"
+    },
+    {
+      "sourceId": "6f146538-2368-d293-ef5b-77635a3ad9a9",
+      "date": "2023-07-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "juimlee(이주임) 키즈탭 (2차)"
+    },
+    {
+      "sourceId": "08700d79-27bb-e7b0-4420-fdc6d28e8a06",
+      "date": "2023-07-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jellynini0(장연정)- 사운드차트5종"
+    },
+    {
+      "sourceId": "5cb958db-0f37-fb81-39f4-0783970f6f31",
+      "date": "2023-07-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "siwoo_1day(이소영) 키즈탭(2차)"
+    },
+    {
+      "sourceId": "9f88a998-2c9f-3caa-2a55-dc695d09f343",
+      "date": "2023-07-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "yekong_m(서은지) 빅북(4차)"
+    },
+    {
+      "sourceId": "d9466329-8041-da81-e482-6eb8172bf2e6",
+      "date": "2023-07-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bijjoou(한은경) 베이비오디오"
+    },
+    {
+      "sourceId": "aca3365d-7f83-4302-b051-e7685613af5c",
+      "date": "2023-07-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hajin_.ii(나예은) 차트5종(2차) /전달完"
+    },
+    {
+      "sourceId": "268f8b8f-b911-6ace-fd8b-4f64c6576814",
+      "date": "2023-07-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "wonny_mom(나희영) - 키즈탭/전달完"
+    },
+    {
+      "sourceId": "aeea1865-dc7a-b25f-36df-8110f08404a8",
+      "date": "2023-07-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "tenten_vely(황유리)-차트5종"
+    },
+    {
+      "sourceId": "ed7801ab-e01d-67f7-e776-6ac18a80af60",
+      "date": "2023-07-25",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "yekong_m(서은지) 차트5종(3차) /전달完"
+    },
+    {
+      "sourceId": "b6f79eb6-dff3-4a2f-181a-47f3a2405796",
+      "date": "2023-07-26",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "in_ssssunny(정인선) 차트5종(1차)"
+    },
+    {
+      "sourceId": "36ae6b9d-9b26-83dc-6f95-f6faeab609a6",
+      "date": "2023-07-26",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "dodo_hyunny(지혜)/베이비오디오 (보류)"
+    },
+    {
+      "sourceId": "7ddc26a2-693f-5444-b076-799cd371e402",
+      "date": "2023-07-26",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "yess_ming(김민지) 폰/패드(3차)"
+    },
+    {
+      "sourceId": "d29d6057-a6b4-ebd8-591a-d041b72cab6e",
+      "date": "2023-08-01",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "dd_ssori(임다솔) 차트5종(2차)"
+    },
+    {
+      "sourceId": "02700c00-6ad7-cd75-a4e9-0f18c3383dfe",
+      "date": "2023-08-07",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ujs0818(엄정숙)- 키즈탭"
+    },
+    {
+      "sourceId": "c5bd6b17-7316-97f9-69dd-010d9db4b2b9",
+      "date": "2023-08-07",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jae._.heeya(RAMADHIANI) 차트5종(4차)"
+    },
+    {
+      "sourceId": "83719939-a00e-4d3d-c980-926f8a15a3d3",
+      "date": "2023-08-07",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "in_ssssunny(정인선) 폰/패드(1차)"
+    },
+    {
+      "sourceId": "445c602e-b2b8-bb49-134f-2f449d2d6cbf",
+      "date": "2023-08-09",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hajin_.ii(나예은) 빅북(2차)"
+    },
+    {
+      "sourceId": "654992c7-20c6-18b5-56d2-92ff70f39abd",
+      "date": "2023-08-09",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "two_chae1104(송은지) 차트5종(2차)"
+    },
+    {
+      "sourceId": "370abba6-801e-4378-63df-e22b7df700c4",
+      "date": "2023-08-10",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ujs0818(엄정숙)-사운드차트"
+    },
+    {
+      "sourceId": "704b7438-b662-42a0-731e-143e9f3dc985",
+      "date": "2023-08-15",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "yoony_the_day(홍나윤) 오디오(1차) - 전달完"
+    },
+    {
+      "sourceId": "b35e41a0-a7ff-9fd0-3642-55489769aed0",
+      "date": "2023-08-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_yenamom(박연준) 차트5종(3차) - 전달完"
+    },
+    {
+      "sourceId": "4062f5d1-c0c0-395f-46e2-b37bddb5aa6b",
+      "date": "2023-08-21",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "in_ssssunny(정인선) 오디오(1차) - 전달完"
+    },
+    {
+      "sourceId": "1248f094-8825-1c51-b1fa-a6999a66bbee",
+      "date": "2023-08-21",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "yoony_the_day(홍나윤) 차트5종(1차) - 전달完"
+    },
+    {
+      "sourceId": "821142d1-7ef2-d8a0-066a-1d3466a4484c",
+      "date": "2023-08-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "uni._.uniluv(김은경)-키즈탭"
+    },
+    {
+      "sourceId": "22356d67-51de-7464-d440-56c90ff60957",
+      "date": "2023-08-28",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "uni._.uniluv(김은경)-베이비오디오"
+    },
+    {
+      "sourceId": "57e13b81-aa79-cebf-e6b7-c453008a87d0",
+      "date": "2023-08-30",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "two_chae1104(송은지) 오디오(1차) - 전달完"
+    },
+    {
+      "sourceId": "668cfbfa-5515-fef4-d37e-46576dd6e9dd",
+      "date": "2023-08-31",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_sheisbin_ (김가을) 사운드차트"
+    },
+    {
+      "sourceId": "3a2cffaf-08cb-87bc-0544-5c601c164c1e",
+      "date": "2023-09-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "leeroun_21(구자연) 키즈탭(1차)"
+    },
+    {
+      "sourceId": "a6badbc6-794e-8c25-624e-283349e304e7",
+      "date": "2023-09-13",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "two_chae1104(송은지) 차트5종(3차)"
+    },
+    {
+      "sourceId": "bbb69589-d751-aa12-414d-88030e8a2e18",
+      "date": "2023-09-13",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "yoony_the_day(홍나윤) 오디오(2차)"
+    },
+    {
+      "sourceId": "05bb2f1e-48fd-8333-eaf2-558133093146",
+      "date": "2023-09-14",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "serendipity_cha(차희정) 매직패드+매직폰/전달完"
+    },
+    {
+      "sourceId": "3ccf9680-e03f-7708-ee95-501868945315",
+      "date": "2023-09-15",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bovelybebe(최지은) 멀티보드(1차)"
+    },
+    {
+      "sourceId": "244799c3-a131-f9f0-a496-562c4ecfb463",
+      "date": "2023-09-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jh_ddubang(박진희)-사운드차트/전달完"
+    },
+    {
+      "sourceId": "a70bbadf-4f5e-697f-b8b3-923c407d19e9",
+      "date": "2023-09-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "serendipity_cha(차희정)- 빅북3종/전달完"
+    },
+    {
+      "sourceId": "1e962da9-ee3c-d2e8-8f95-ed985834dc1d",
+      "date": "2023-09-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "two_chae1104(송은지) 오디오(2차)"
+    },
+    {
+      "sourceId": "ec36b7e7-9e6a-5ba5-0374-a50b98e4238d",
+      "date": "2023-09-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ggo_meng_2(송은영) 멀티보드(1차)"
+    },
+    {
+      "sourceId": "29bf45e9-2a55-a42b-db28-2eedc32c37e7",
+      "date": "2023-09-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jjju._.ha(김지은)-멀티보드"
+    },
+    {
+      "sourceId": "8a5fc0f7-deaa-c0cc-34bc-6231047f69db",
+      "date": "2023-09-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "uni._.uniluv(김은경)-키즈탭"
+    },
+    {
+      "sourceId": "0a56be58-9779-0988-f189-09ec44a7a11b",
+      "date": "2023-09-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "yoony_the_day(홍나윤) 차트5종(2차)"
+    },
+    {
+      "sourceId": "690549b7-2931-2924-f23b-d41dd24b59a4",
+      "date": "2023-09-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "in_ssssunny(정인선) 멀티보드 (1차)"
+    },
+    {
+      "sourceId": "e9e88907-4541-270f-d3f9-7cd6ad0ade25",
+      "date": "2023-09-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_do_yyun_(우지형) 차트5종(1차)"
+    },
+    {
+      "sourceId": "b91a276e-8497-0467-b33d-648bd19f0e62",
+      "date": "2023-09-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "two_chae1104(송은지) 멀티보드 (1차)"
+    },
+    {
+      "sourceId": "ccc8a467-199e-07cc-89da-8f8690f40d5b",
+      "date": "2023-09-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "aroongluv(이민지)-멀티보드/전完"
+    },
+    {
+      "sourceId": "478eda3f-e09b-3062-0f86-4f50163923d6",
+      "date": "2023-09-21",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "lovely_eunwoo(이영현) 키즈탭 (1차)"
+    },
+    {
+      "sourceId": "6f8a454d-bd52-47db-7f2d-8d8c925ac37a",
+      "date": "2023-09-21",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "uni._.uniluv(김은경)-멀티보드"
+    },
+    {
+      "sourceId": "a6185a04-b335-bf63-9e7e-e0c089efa2bb",
+      "date": "2023-09-21",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "goh.kw26(고경원)- 멀티보드"
+    },
+    {
+      "sourceId": "f58b8363-e9d1-9f4d-a4ae-79a40a34e0aa",
+      "date": "2023-09-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "b_eunjuuu(손하준) 멀티보드(1차)"
+    },
+    {
+      "sourceId": "1391a1bd-8452-92b1-e49e-9f5f9ecf8028",
+      "date": "2023-09-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "__mjs2(임미지) 멀티보드"
+    },
+    {
+      "sourceId": "39f2dd14-3363-7731-9e33-f160b71d0653",
+      "date": "2023-09-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "solee_daily(성소라)-멀티보드"
+    },
+    {
+      "sourceId": "b4312522-f18d-a648-5607-83b455141f0f",
+      "date": "2023-09-25",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bd_.mom(주소희)- 멀티보드"
+    },
+    {
+      "sourceId": "e836fcf8-c6f6-52bb-b5c7-7bcab670e517",
+      "date": "2023-09-26",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jisu__118(배지수) 멀티보드"
+    },
+    {
+      "sourceId": "fcf57933-a632-5ccb-eb72-ec44773be1fa",
+      "date": "2023-09-27",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "chae.a_mommy (임지수)-멀티보드"
+    },
+    {
+      "sourceId": "425bc21f-5cfa-6dbd-6283-82c82b13dbbb",
+      "date": "2023-10-01",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_luv_yuyu(백양지) 멀티보드 (1차)"
+    },
+    {
+      "sourceId": "cbdfe6e2-060f-0ba8-eecb-8374807001d8",
+      "date": "2023-10-01",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "k.daaa(강다혜)-멀티보드"
+    },
+    {
+      "sourceId": "3e44f644-4313-d166-cf2f-0d09f623b640",
+      "date": "2023-10-04",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jae._.heeya(RAMADHIANI) 차트5종(5차)"
+    },
+    {
+      "sourceId": "781441b7-8c70-f5c0-868f-a4058d7ded3a",
+      "date": "2023-10-04",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hajin_.ii(나예은) 차트5종(3차)"
+    },
+    {
+      "sourceId": "f8274099-2be7-d569-41c5-0f4393b258e4",
+      "date": "2023-10-09",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jisu__118(백지수)-멀티보드/일정취소완"
+    },
+    {
+      "sourceId": "6616b6bc-0b8c-d3a7-1725-22722e6727d5",
+      "date": "2023-10-09",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jh_ddubang(박진희)-매직패드+매직폰"
+    },
+    {
+      "sourceId": "fd55969e-d697-c811-36f0-0b1e38c19b71",
+      "date": "2023-10-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "chae.a_mommy (임지수)-사운드차트"
+    },
+    {
+      "sourceId": "d3023347-0c0d-90d8-1c87-17ab93ec709b",
+      "date": "2023-10-16",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "serendipity_cha(차희정)-빅북"
+    },
+    {
+      "sourceId": "d3ec66b3-2ef1-e56f-9cd9-e9e3591141a3",
+      "date": "2023-10-16",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jellynini0816(장연정)- 사운드 차트 2차"
+    },
+    {
+      "sourceId": "324d9291-3572-ea13-b8d3-398174dbc700",
+      "date": "2023-10-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hajin_.ii(나예은) 멀티보드(1차) / 취소"
+    },
+    {
+      "sourceId": "3b59b002-1a54-b020-4a26-3bcd685ba17b",
+      "date": "2023-10-21",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "yoony_the_day(홍나윤) 오디오(3차)"
+    },
+    {
+      "sourceId": "d2719016-abd2-b837-b30e-f9c024a2e0d8",
+      "date": "2023-10-23",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jio_____jio(권진희) 베이비오디오"
+    },
+    {
+      "sourceId": "7fc5c19c-ee8d-3f6f-97ca-910873e50054",
+      "date": "2023-10-23",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jisu__118(배지수) 멀티보드 2차/일정 취소완"
+    },
+    {
+      "sourceId": "87592a6a-f197-0d7e-f05e-db71d46e887e",
+      "date": "2023-10-25",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "two_chae1104(송은지) 멀티보드 (2차) / 취소"
+    },
+    {
+      "sourceId": "35df01d4-59fb-a1f2-2eac-93338f94d791",
+      "date": "2023-11-08",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "Seojiyeon._(서지연)- 멀티보드 (47,800원 신규)"
+    },
+    {
+      "sourceId": "94fc5f3b-faf7-386f-7453-a191d7082a95",
+      "date": "2023-11-10",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "s2ruddnjs(goh.kw26)/고경원- 멀티보드2 차"
+    },
+    {
+      "sourceId": "c1f6acab-724f-0e76-dd8c-58f235945bbe",
+      "date": "2023-11-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "dmspzlzl(김은혜) 사운드차트"
+    },
+    {
+      "sourceId": "83733239-78a3-dba1-8056-133b928da699",
+      "date": "2023-11-13",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jisu__118(배지수)- 멀티보드 2차"
+    },
+    {
+      "sourceId": "1e588666-0c5b-d05c-ac6b-4d96b97c36bc",
+      "date": "2023-11-16",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jco._.jco(RAMADHIANI) 사운드북(1차)"
+    },
+    {
+      "sourceId": "c0413b6b-f109-89d2-be1c-d832a9c258cc",
+      "date": "2023-11-16",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bds_s2(변다슬) 사운드북(1차)"
+    },
+    {
+      "sourceId": "c0d76fa2-830d-b179-463b-4a6be846fd29",
+      "date": "2023-11-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "solee_daily(성소라)- 사운드북"
+    },
+    {
+      "sourceId": "05a06902-3de0-761b-c6cc-6b0136c04d85",
+      "date": "2023-11-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hajin_.ii(나예은) 사운드북(1차)"
+    },
+    {
+      "sourceId": "05269729-2f85-5757-4c45-4d85a6254597",
+      "date": "2023-11-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bd_.mom(주소희)- 멀티보드 2차"
+    },
+    {
+      "sourceId": "21b14acf-75c0-3f9a-481d-6812cfe1ddab",
+      "date": "2023-11-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jisu__118(배지수) - 사운드북"
+    },
+    {
+      "sourceId": "da9207a7-4cc0-1f8b-1d1d-b8d17420338a",
+      "date": "2023-11-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hatoto_mom(김은희) 멀티보드(1차)"
+    },
+    {
+      "sourceId": "0c192dd0-f515-f80d-77cb-3a6f1eab43e5",
+      "date": "2023-11-27",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "aroongluv(이민지) 사운드북"
+    },
+    {
+      "sourceId": "8fd276ff-23bd-faf9-5315-a9b3e96417be",
+      "date": "2023-11-28",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "lovely_eunwoo(이영현) 사운드북(1차)"
+    },
+    {
+      "sourceId": "27130e1b-4d17-e58f-eda3-481f643d8c29",
+      "date": "2023-11-30",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ujs0818(엄정숙)-사운드북"
+    },
+    {
+      "sourceId": "08534f7d-0a5e-4acf-5fb6-e4be4c3c7f7d",
+      "date": "2023-12-01",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hajin_.ii(나예은) 차트(4차)"
+    },
+    {
+      "sourceId": "2d2ecda2-dd05-1684-a0c9-cd1ca551e34c",
+      "date": "2023-12-01",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "gguni_bebe(박미숙) 차트(2차)"
+    },
+    {
+      "sourceId": "13e9052b-6f0a-d2c7-2352-0a63051c5aaa",
+      "date": "2023-12-01",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "yoony_the_day(홍나윤) 차트(3차)"
+    },
+    {
+      "sourceId": "dc940492-21fd-febc-032f-8c51a5f8971a",
+      "date": "2023-12-04",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "lovely_eunwoo(이영현) 키즈탭 (2차)"
+    },
+    {
+      "sourceId": "806dea38-d08a-167f-e344-cd49277e78d7",
+      "date": "2023-12-04",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ddabong._.s2(이다은)- 멀티보드"
+    },
+    {
+      "sourceId": "d4a12477-b7ff-f886-f107-d91d112d9749",
+      "date": "2023-12-04",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "woovely.____.mom(김윤희)- 멀티보드"
+    },
+    {
+      "sourceId": "930b301f-e69f-5a61-554f-ea4525b74d8b",
+      "date": "2023-12-06",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hatoto_mom(김은희) 사운드북(1차)"
+    },
+    {
+      "sourceId": "1facde22-3f0d-4796-b302-4c94c621d470",
+      "date": "2023-12-06",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "aroongluv(이민지)-멀티보드 2차"
+    },
+    {
+      "sourceId": "f16997bf-a790-54dc-0b62-e9e0140db593",
+      "date": "2023-12-06",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "chae.a_mommy (임지수)- 사운드북,멀티보드"
+    },
+    {
+      "sourceId": "69899db7-2d73-3b98-7498-cbfdc525025a",
+      "date": "2023-12-07",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "je_0ng_97(김민정)- 멀티보드"
+    },
+    {
+      "sourceId": "d6118834-ad78-80c6-885f-cb523bbb951f",
+      "date": "2023-12-08",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "heewoo._.s2(홍혜진) 키즈탭(3차)"
+    },
+    {
+      "sourceId": "e58daa80-5e8e-e896-a17c-ce56a91bc9b8",
+      "date": "2023-12-08",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hajin_.ii(나예은) 키즈탭(1차)"
+    },
+    {
+      "sourceId": "f3e22881-e26d-bd59-fff7-95459be6afbd",
+      "date": "2023-12-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_do_yyun_(우지형) 차트5종(2차)"
+    },
+    {
+      "sourceId": "c649c3cf-353c-fadb-f150-6bbf1b70f622",
+      "date": "2023-12-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "kumson.mom(나지현)- 멀티보드"
+    },
+    {
+      "sourceId": "3555f375-fb89-68a3-3d23-3ea32d9bf548",
+      "date": "2023-12-12",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "Seojiyeon._(서지연)- 사운드북"
+    },
+    {
+      "sourceId": "136ad5ce-f79a-54f9-44fe-191bbf4219c3",
+      "date": "2023-12-13",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ujs0818(엄정숙)-멀티보드"
+    },
+    {
+      "sourceId": "5741b688-ccca-4cfc-7b27-b6814fa5539c",
+      "date": "2023-12-15",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "two_chae1104(송은지) 와우펜(1차)"
+    },
+    {
+      "sourceId": "61f41f61-686b-d185-61a2-dc214b35250d",
+      "date": "2023-12-15",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jellynini0816(장연정)-사운드차트"
+    },
+    {
+      "sourceId": "13805df5-73c6-fc39-95dc-983bddbd6f59",
+      "date": "2023-12-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "coolcool308(박정은) - 사운드차트"
+    },
+    {
+      "sourceId": "52b7e391-73c1-65fd-399d-428736536a82",
+      "date": "2023-12-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ttoyuri_(한병준) 사운드북(1차)"
+    },
+    {
+      "sourceId": "c3f11821-310f-2b44-d723-8865521c8013",
+      "date": "2023-12-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jellynini0816(장연정)- 베이비오디오"
+    },
+    {
+      "sourceId": "a958ab4e-aac3-b184-fe1a-a485ad1b2931",
+      "date": "2023-12-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jco._.jco(RAMADHIANI) 와우펜(1차)"
+    },
+    {
+      "sourceId": "63d9f9c6-cade-11c5-59b1-d66bc8a49ec6",
+      "date": "2023-12-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "solee_daily(성소라) 멀티보드2차, 사운드북2차 ,와우펜"
+    },
+    {
+      "sourceId": "c6f0edac-9eed-f63e-cb8e-2e8448e250f0",
+      "date": "2023-12-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "kumson.mom(나지현)- 와우펜"
+    },
+    {
+      "sourceId": "def11119-771a-3fc9-87c9-f7c4ed7fd404",
+      "date": "2023-12-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "luv._.ggyu(배정화)-멀티보드"
+    },
+    {
+      "sourceId": "dcb51432-977a-955e-8a45-c03cec31a156",
+      "date": "2023-12-28",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hajin_.ii(나예은) 와우펜(1차)"
+    },
+    {
+      "sourceId": "36bc1b67-6550-4219-840e-a2e2f29b0003",
+      "date": "2023-12-28",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "my.lyn__(최영경) 차트&사운드북 (1차)"
+    },
+    {
+      "sourceId": "ef895bf6-1a5e-af9b-943f-58ffe575f69f",
+      "date": "2024-01-03",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "yekong_m(서은지) 차트(4차)"
+    },
+    {
+      "sourceId": "e0b41642-54d8-3234-d015-3488e8de7204",
+      "date": "2024-01-08",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jae._.heeya(RAMADHIANI) 차트(5차)"
+    },
+    {
+      "sourceId": "8f03637a-7563-ca44-3fda-588a32f5755a",
+      "date": "2024-01-15",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "two_chae1104(송은지) 와우펜(2차)"
+    },
+    {
+      "sourceId": "59c175a6-fe36-1d55-0a35-3b139bcb6133",
+      "date": "2024-01-16",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "yekong_m(서은지) 빅북(5차)"
+    },
+    {
+      "sourceId": "487e366a-1d94-145c-81cf-4e528563bfbb",
+      "date": "2024-01-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_do_yyun_(우지형) 차트(3차)"
+    },
+    {
+      "sourceId": "b3b592f3-5363-20c3-fcae-c8406520b6ee",
+      "date": "2024-01-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "baem_bi(배은비)-키즈탭"
+    },
+    {
+      "sourceId": "faed6c1f-a5e1-9d48-3b68-563ff00568b7",
+      "date": "2024-01-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "paro_ym(방윤미)- 와우펜"
+    },
+    {
+      "sourceId": "21e513b8-e397-6485-3cb4-674ac4c1b24f",
+      "date": "2024-01-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "seohui_jeong(정서희)-사운드차트 /전달 完"
+    },
+    {
+      "sourceId": "3cbd9bec-270b-b0c6-7967-0860ae323d82",
+      "date": "2024-01-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "fitts_melo(김지현) 멀티보드(1차)"
+    },
+    {
+      "sourceId": "4fa281be-b8c3-af57-8e8b-99588fcc8be9",
+      "date": "2024-01-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hatoto_mom(김은희) 멀티보드 2차"
+    },
+    {
+      "sourceId": "90cab339-a58b-773c-7ec3-e5724e489193",
+      "date": "2024-01-23",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jae._.heeya(RAMADHIANI) 와우펜(2차)"
+    },
+    {
+      "sourceId": "585cf654-9eee-8ce0-d58a-80084a24e625",
+      "date": "2024-01-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "biny_mamma(최지원)- ★3월 와우펜+사운드북 구성으로 일정 변경"
+    },
+    {
+      "sourceId": "d4d297cc-c063-b3f3-866a-29b5c01d586c",
+      "date": "2024-01-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_haha_mommy(홍은영)-멀티보드"
+    },
+    {
+      "sourceId": "cbc882ba-ea7a-efc3-44c8-1e2df6523ad2",
+      "date": "2024-01-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "zuzu.mom(주주맘)-베이비오디오"
+    },
+    {
+      "sourceId": "444f4e81-ad09-5bff-6863-575d1c80cc16",
+      "date": "2024-01-25",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ttoyuri_(한병준) 멀티보드(1차)"
+    },
+    {
+      "sourceId": "db37d691-d68f-2bd1-0493-790283f0b525",
+      "date": "2024-01-25",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bd_.mom(주소희)_ 키즈탭 2차 20%"
+    },
+    {
+      "sourceId": "04b74d50-62da-2ab9-ed82-aa55c449842c",
+      "date": "2024-01-26",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[할인링크] love_peach0724 (양은영) - 키즈탭 ※원고료 : 12만원"
+    },
+    {
+      "sourceId": "2202eeed-d9a7-0222-d17d-3d5c2156a8d3",
+      "date": "2024-01-29",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "selah_withyou(김지혜)-멀티보드/카톡 中"
+    },
+    {
+      "sourceId": "9c61bf66-65bd-fea2-48b4-060978f49ef2",
+      "date": "2024-01-29",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "lovely_eunwoo(이영현) 키즈탭 (3차)"
+    },
+    {
+      "sourceId": "ff2e50b7-5cec-59fb-a1c6-709f18b4a129",
+      "date": "2024-01-29",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "drawing_onu(이일노)-멀티보드 오픈가능일"
+    },
+    {
+      "sourceId": "f8c11e37-3dde-5311-7015-69c9fa000a25",
+      "date": "2024-01-29",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jae._.heeya(RAMADHIANI) 사운드북(2차)"
+    },
+    {
+      "sourceId": "6f804ed5-c75e-67a2-9d99-6f3da8b5f3f5",
+      "date": "2024-01-31",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hatoto_mom(김은희) 사운드북 2차"
+    },
+    {
+      "sourceId": "55e58977-360e-246e-6a37-67e6b38c570c",
+      "date": "2024-02-01",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "(취소) biny_mamma(최지원) - 키즈탭"
+    },
+    {
+      "sourceId": "d172c57d-27c3-76a5-8463-a14d12ca67b7",
+      "date": "2024-02-01",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "taeandseo(김가람) 멀티보드 1차"
+    },
+    {
+      "sourceId": "8ffa129e-7ceb-96d7-200c-3157a45a916c",
+      "date": "2024-02-02",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "two_chae1104(송은지) 멀티보드(3차)"
+    },
+    {
+      "sourceId": "64fd2f36-089e-0dce-51df-3c46d5cf7481",
+      "date": "2024-03-06",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hajin_.ii(나예은) 사운드북 2차"
+    },
+    {
+      "sourceId": "8ee71546-b021-a02b-a2a0-dbe614974435",
+      "date": "2024-03-06",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "kimssam_art(김연숙)-멀티보드&와우펜"
+    },
+    {
+      "sourceId": "43d5590b-a4be-0f12-f1e1-e446255eae4a",
+      "date": "2024-03-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "two_chae1104(송은지) 와우펜 3차"
+    },
+    {
+      "sourceId": "5b37d876-0176-075e-f5ee-b0d2392fed45",
+      "date": "2024-03-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "fitts_melo(김지현) 키즈탭 1차"
+    },
+    {
+      "sourceId": "0766ae40-40e4-b0f1-17b0-604e3a3928cc",
+      "date": "2024-03-13",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hajin_.ii(나예은) 키즈탭 2차"
+    },
+    {
+      "sourceId": "4166cf3d-5ce1-57c4-cf72-c30b3cb8bb9b",
+      "date": "2024-03-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "baem_bi(배은비)-키즈탭 2차"
+    },
+    {
+      "sourceId": "f3badaaf-4457-7d28-8f55-122a8c763c36",
+      "date": "2024-03-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "taeandseo(김가람) 사운드북1차 + 와우펜2차"
+    },
+    {
+      "sourceId": "9aeedb5d-a838-d511-32e8-d7ac58769e36",
+      "date": "2024-03-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "popopapa_mom(김은혜) 멀티보드 1차 + 와우펜"
+    },
+    {
+      "sourceId": "c36a023e-f86a-8825-085a-7e9c0e82cb04",
+      "date": "2024-03-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "★연기biny_mamma (최지원) 사운드북+와우펜"
+    },
+    {
+      "sourceId": "cfe51b4b-2d32-33b1-ba1b-bb01e56d69a1",
+      "date": "2024-03-21",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ragazza_zzo(성함:최신)- 와우펜(J)"
+    },
+    {
+      "sourceId": "ac67071a-3993-df30-4882-737fafff6adf",
+      "date": "2024-03-27",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "oxo._.ddu(천미림) 키즈탭 2차"
+    },
+    {
+      "sourceId": "5e974079-8d8f-9be5-538d-4dcd81c6e892",
+      "date": "2024-03-28",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jellynini0816(장연정)-와우펜(J)"
+    },
+    {
+      "sourceId": "2a74288a-b785-c12a-8b43-4a1567c596f7",
+      "date": "2024-04-01",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "봄동맘/bd_.mom(주소희)-키즈탭4차"
+    },
+    {
+      "sourceId": "faa95bff-a4e1-c2cc-1017-011e5d0e3c48",
+      "date": "2024-04-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "biny_mamma (최지원)-사운드차트&와우펜"
+    },
+    {
+      "sourceId": "4d06dd76-c565-e2e6-b0eb-78e1049619a9",
+      "date": "2024-04-15",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "biny_mamma (최지원)- 사운드북+ 와우펜"
+    },
+    {
+      "sourceId": "3967f336-fef9-b41b-e6f9-af13c2ef976b",
+      "date": "2024-04-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hari__baby21(김나진)- 와우펜"
+    },
+    {
+      "sourceId": "505aa3d2-662e-c054-ea30-46517e32d7db",
+      "date": "2024-04-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "oxo._.ddu(천미림) 와우펜 1차"
+    },
+    {
+      "sourceId": "404859bf-670e-69e0-d68b-c1c151511a15",
+      "date": "2024-04-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_vivian_store_(김부금)- 베이비오디오"
+    },
+    {
+      "sourceId": "3378c594-dd1f-abff-eead-34334f4de66e",
+      "date": "2024-04-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "seohui_jeong(정서희)-사운드차트 +와우펜"
+    },
+    {
+      "sourceId": "5be37fb1-9381-f7d5-ed1b-f6e571bb1971",
+      "date": "2024-04-23",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "wooha_luv(임한울)-와우펜+와우펜북"
+    },
+    {
+      "sourceId": "ddca0ad6-f418-a2d5-60ad-44b849a610e1",
+      "date": "2024-04-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "baem_bi(배은비)-키즈탭&프로"
+    },
+    {
+      "sourceId": "13654a61-83b1-62e1-b4c1-63f0336d8075",
+      "date": "2024-04-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "dmspzlzl(김은혜)-사운드차트2차"
+    },
+    {
+      "sourceId": "4bce33f6-5f92-6631-8dcc-1a6f05c50d12",
+      "date": "2024-04-25",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hajin_.ii(나예은) 와우펜 2차"
+    },
+    {
+      "sourceId": "b402f08c-70f2-0180-d8e7-1fbcb4dee0c9",
+      "date": "2024-04-25",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "elite.mom.planner(권희원) - 와우펜 1차"
+    },
+    {
+      "sourceId": "47e79a22-7faa-ea7c-b3a0-b4b4ab6f382e",
+      "date": "2024-04-26",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "selah_withyou(김지혜)-멀티보드+와우펜"
+    },
+    {
+      "sourceId": "496a8d1f-19ed-6115-7408-398a11f9e745",
+      "date": "2024-04-26",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "23.___.home(다영)- 와우펜"
+    },
+    {
+      "sourceId": "838bb9c1-6b74-8efa-8fe9-52fa40885f79",
+      "date": "2024-04-29",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ddabong._.s2(이다은)- 멀티보드 2차"
+    },
+    {
+      "sourceId": "9ff08743-98ff-bdfd-88c7-2f5e48f8d16e",
+      "date": "2024-04-29",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "Seojiyeon._(서지연)-와우펜"
+    },
+    {
+      "sourceId": "ff56437f-12c1-1687-57a6-f4d986ae2328",
+      "date": "2024-04-29",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "pikachu__mom(박이슬)-멀티보드"
+    },
+    {
+      "sourceId": "219584a8-0103-625f-4f10-5ea1f6ac19f3",
+      "date": "2024-05-02",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ddohuni_mom(임채린)-와우펜"
+    },
+    {
+      "sourceId": "5439a61c-cbde-f690-6668-ec7e2998a6bc",
+      "date": "2024-05-07",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "gyu._.babyfood(박희정)-사운드차트,와우펜"
+    },
+    {
+      "sourceId": "0a473b51-3021-9707-9330-7740c9c2967a",
+      "date": "2024-05-07",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "lovely_eunwoo(이영현) 멀티보드(1차) / 키즈탭(4차) / 사운드북(2차)"
+    },
+    {
+      "sourceId": "87e546a8-673a-7a84-db2f-767fb7b0ace7",
+      "date": "2024-05-10",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "pikachu__mom(박이슬)-와우펜"
+    },
+    {
+      "sourceId": "9b686b05-79e4-8a84-7f29-b5db885e76ce",
+      "date": "2024-05-15",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "chae_a_mommy(임지수)-와우펜"
+    },
+    {
+      "sourceId": "5f02b98d-dcc5-4b0a-7423-81734a141b98",
+      "date": "2024-05-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "23.___.home(다영)-베이비오디오"
+    },
+    {
+      "sourceId": "a6eaa336-978c-5562-c693-19ad0a8a71a7",
+      "date": "2024-05-21",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "baem_bi(배은비) 멀티보드 1차 39,800원"
+    },
+    {
+      "sourceId": "4ac1615e-f163-ff0d-1fe6-dfb857b4492c",
+      "date": "2024-05-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "chae_a_mommy(임지수)-멀티보드"
+    },
+    {
+      "sourceId": "10e5874c-bf1f-683c-aa4b-05a48a295b6c",
+      "date": "2024-05-29",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "lovely_eunwoo(이영현) 멀티보드 - 업그레이드"
+    },
+    {
+      "sourceId": "209a3ef1-bf76-a5a6-70f8-a6fdbb122492",
+      "date": "2024-05-30",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "mindset_ainmom(전현주) 와우펜2차"
+    },
+    {
+      "sourceId": "fcc55b20-ff48-5389-2c34-3bd361a7aa1f",
+      "date": "2024-06-07",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "23.___.home(다영)-사운드차트"
+    },
+    {
+      "sourceId": "edcc93a7-c5bd-98e4-2018-ed6b1628415d",
+      "date": "2024-07-02",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "baem_bi(배은비)- 멀티보드"
+    },
+    {
+      "sourceId": "fdd611f5-d03b-0aef-882b-2bd5b04268c9",
+      "date": "2024-07-02",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hatoto_mom(김은희) 와우펜 1차"
+    },
+    {
+      "sourceId": "9154e1af-c127-e7ca-aee2-8cb58d37ac83",
+      "date": "2024-07-08",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hari__baby21(김나진)- 멀티보드"
+    },
+    {
+      "sourceId": "a6cdf1d5-5395-7a55-3049-b7befbf7873a",
+      "date": "2024-07-08",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "wooha_luv(임한울)-와우펜2차"
+    },
+    {
+      "sourceId": "add63cd8-1083-f196-a82c-16e5f2769c6f",
+      "date": "2024-07-16",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "play__mom(박지혜)- 와우펜"
+    },
+    {
+      "sourceId": "d99252ea-3174-2487-d479-dfb0116ac5f7",
+      "date": "2024-07-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "baem_bi (배은비)- 와우펜북"
+    },
+    {
+      "sourceId": "ed3c380d-7d57-de62-c9f1-9f803c336251",
+      "date": "2024-07-28",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "chica_mamiii(지미은) - 사운드차트"
+    },
+    {
+      "sourceId": "ba1b452d-38cf-bc9f-071e-d248cb2a6741",
+      "date": "2024-07-29",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bd_.mom(주소희)- 키즈탭프로"
+    },
+    {
+      "sourceId": "7435bcfe-ad24-8019-4543-2fa737c489aa",
+      "date": "2024-08-23",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "chica_mamiii(지미은) - 사운드차트 2차"
+    },
+    {
+      "sourceId": "3d1d9fd0-bc61-6df9-c65b-aa95d326bb0d",
+      "date": "2024-08-26",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ayooni.story(신혜리)- 멀티보드"
+    },
+    {
+      "sourceId": "a3a1a974-b150-0a3f-a581-d38c3155bed0",
+      "date": "2024-08-29",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "soy_ssam_(성소라)- 멀티보드&빅북"
+    },
+    {
+      "sourceId": "d4830374-3b60-a0c2-27fc-600de5ce8ee7",
+      "date": "2024-08-30",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "baem_bi (배은비)-키즈탭프로"
+    },
+    {
+      "sourceId": "eed83485-cecb-29cb-20b8-11195bd792ce",
+      "date": "2024-09-02",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "23.___.home(다영)- 빅북"
+    },
+    {
+      "sourceId": "3845a6dc-5469-6a3f-cb88-38f31140121f",
+      "date": "2024-09-06",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "byeori_market__(박진민)- 와우펜북"
+    },
+    {
+      "sourceId": "63d38424-e8a9-0342-4f1a-054641264ec3",
+      "date": "2024-09-06",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "oxo._.dduddu(천미림) ★★★단독★★★ 키즈탭프로"
+    },
+    {
+      "sourceId": "be0d6579-a0ec-2b6e-6768-227a0f047d13",
+      "date": "2024-09-07",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "baem_bi (배은비) -멀티보드"
+    },
+    {
+      "sourceId": "c0634450-042f-0638-217f-5b2adbc153c0",
+      "date": "2024-09-09",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "lovely_eunwoo(이영현) 키즈탭프로"
+    },
+    {
+      "sourceId": "6a1e132f-ef6e-f6f4-e130-d1e785f970e3",
+      "date": "2024-09-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "lovely_playtime_mom(정혜란)- 와우펜&와우펜북"
+    },
+    {
+      "sourceId": "a2c3d62a-35e7-f160-33ce-98df8f5523af",
+      "date": "2024-09-25",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "23.___.home(다영)- 사운드차트 2차"
+    },
+    {
+      "sourceId": "3138b869-edda-5ed8-ad19-3de7e98131cc",
+      "date": "2024-10-31",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bd_.mom(주소희)- 빅북"
+    },
+    {
+      "sourceId": "32b43e97-5a6c-0303-9fa1-0986ba3d4af4",
+      "date": "2024-11-01",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "chica_mamiii(지미은)-와우펜 3차"
+    },
+    {
+      "sourceId": "203e1105-d45f-60a7-7bae-8f497bec2902",
+      "date": "2024-11-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "okku_mom(윤신혜)-플레이돌"
+    },
+    {
+      "sourceId": "eeb43d11-b469-dc6c-2538-a9ea68c6a1f1",
+      "date": "2024-12-02",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "lovely_eunwoo(이영현) 클레이 1차"
+    },
+    {
+      "sourceId": "fe6ffb39-3ffd-2442-07a5-cdc5e48d4072",
+      "date": "2024-12-02",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bd_.mom(주소희)\n키즈탭프로 2차"
+    },
+    {
+      "sourceId": "86f57533-27cf-499d-2a0a-cf51fa2bb03d",
+      "date": "2024-12-09",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "lovely_eunwoo(이영현) 키즈탭프로 2차"
+    },
+    {
+      "sourceId": "a6e17c7f-695a-f97b-883f-fce750856437",
+      "date": "2024-12-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "23.___.home(다영)-플레이돌"
+    },
+    {
+      "sourceId": "b3e4d3b4-3e54-e864-8310-cae5a2a00a76",
+      "date": "2024-12-16",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "oxo._.ddu(천미림) 키즈탭프로 2차"
+    },
+    {
+      "sourceId": "276e2361-cfb9-5e6b-7a03-4b010837bd2a",
+      "date": "2025-01-13",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "seohui_jeong(정서희)- 플레이돌&사운드북&와우펜"
+    },
+    {
+      "sourceId": "6b49558a-1c80-7a06-d2bc-962d523d7e5d",
+      "date": "2025-01-21",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ddohuni_mom(또후니맘/임채린)- 와우펜"
+    },
+    {
+      "sourceId": "d74ad367-5cb8-fd58-8c53-8fe63284ab8a",
+      "date": "2025-01-21",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "23._.home(다영)-클레이"
+    },
+    {
+      "sourceId": "3f947faa-ba3d-4b1b-9b77-203699980339",
+      "date": "2025-02-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bd_.mom(주소희)-플레이돌"
+    },
+    {
+      "sourceId": "ded2fa30-9d61-f7f4-b48a-f55885a56f33",
+      "date": "2025-02-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_vivian_store_(김부금)_: 요미몬 듀얼USB"
+    },
+    {
+      "sourceId": "7e1e16e1-b819-5080-21fc-702425a13f86",
+      "date": "2025-04-02",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) rachel_.rr (송혜원) - 플레이돌 2차"
+    },
+    {
+      "sourceId": "f294b92e-2529-0225-e58f-3b97a2fad428",
+      "date": "2025-04-02",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) tiding_of_joy(권예슬) 동화툰 패키지"
+    },
+    {
+      "sourceId": "6b87095b-9d3e-bd31-5ba8-57f7e01c94b2",
+      "date": "2025-04-02",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) bovelybebe(최지은) 키즈탭 프로"
+    },
+    {
+      "sourceId": "fbd213f5-13df-d8a6-12fa-c30f5cbb0e4d",
+      "date": "2025-04-03",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) _s.anni_ (김미혜) - 와우펜 2차"
+    },
+    {
+      "sourceId": "ba77ffdb-4295-809d-cd69-3a17801040f4",
+      "date": "2025-04-05",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) moongsil_mom(김은지) 클레이"
+    },
+    {
+      "sourceId": "5a18f3e6-f024-2b49-da78-354d6def320e",
+      "date": "2025-04-07",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) imji_0624 (임지연) - 와우펜"
+    },
+    {
+      "sourceId": "dece7b94-a01b-7ab3-6555-bb9c0c1e7134",
+      "date": "2025-04-07",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) [성훈] morak_mom(이지안) - 플레이돌"
+    },
+    {
+      "sourceId": "344ae470-9651-97cc-ccfc-4d9a8c7ad766",
+      "date": "2025-04-07",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) my_a_kr (최서은) - 듀얼USB"
+    },
+    {
+      "sourceId": "554f6335-a869-1012-cbc0-c718b7bc6998",
+      "date": "2025-04-09",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료] _vivian_store_(김부금)_-키즈탭프로"
+    },
+    {
+      "sourceId": "708bffb5-522b-2b05-6560-ed666dab9eb0",
+      "date": "2025-04-10",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료]mandoo__mommy(김민지)- 클레이"
+    },
+    {
+      "sourceId": "a7b6cbe4-98f7-aa1c-1383-ede2131f77af",
+      "date": "2025-04-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) tiding_of_joy(권예슬) 플레이돌"
+    },
+    {
+      "sourceId": "7efa14bb-efce-4372-66d0-2a276bf9a130",
+      "date": "2025-04-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) bovelybebe(최지은) 와우펜"
+    },
+    {
+      "sourceId": "dfd08618-b9b8-862d-3a23-f490db302003",
+      "date": "2025-04-14",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료] sua_play(오가영) 듀얼USB"
+    },
+    {
+      "sourceId": "a8b45470-58dc-6e9b-99f4-1b96ffd3ec9a",
+      "date": "2025-04-15",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료]ddoa_mam(홍해솔) 플레이돌"
+    },
+    {
+      "sourceId": "45e51536-1573-b61f-df8c-13468ea06ff2",
+      "date": "2025-04-16",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료 - 건강상의 이유로 진행불가) lovely_eunwoo(이영현) 키즈탭프로 3차 + 멀티보드"
+    },
+    {
+      "sourceId": "9f1d0407-df79-22a2-563d-5c7b6019c378",
+      "date": "2025-04-21",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료] doong_eatt(이윤정)-와우펜"
+    },
+    {
+      "sourceId": "4cc17984-13bf-3286-1d23-25f2d0c62cc3",
+      "date": "2025-04-21",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) s2_saaaarang (최사랑) - 키즈탭프로"
+    },
+    {
+      "sourceId": "82859238-e03d-35b9-ca40-f07106efc29d",
+      "date": "2025-04-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료]mommy_r_my(전아름)- 클레이"
+    },
+    {
+      "sourceId": "e5a35e6f-8e85-d67e-c933-17cc5e06da18",
+      "date": "2025-04-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료]_vivian_store_(김부금)_-듀얼USB 2차"
+    },
+    {
+      "sourceId": "46e77c71-1465-2b82-5ee5-59ca909ff4b0",
+      "date": "2025-04-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) bonheur_0926 (오지수) - 와우펜 4차"
+    },
+    {
+      "sourceId": "2c75699e-8447-5065-9a8a-19a5d21bf958",
+      "date": "2025-04-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) tiding_of_joy(권예슬) 사운드차트"
+    },
+    {
+      "sourceId": "68723433-a9e7-c948-c1c9-04d510941937",
+      "date": "2025-05-12",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) morak_mom(이지안) - 듀얼USB"
+    },
+    {
+      "sourceId": "66a47452-62f6-7952-7e0a-543dcf83f70b",
+      "date": "2025-05-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료)  mo.jji.mom(고서은) - 플레이돌 2차 ★단.독.  ㅎ.ㅎ"
+    },
+    {
+      "sourceId": "1c37d5ae-4f4f-8265-16ac-8651422a2d36",
+      "date": "2025-05-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) momlingo(지예솔) - 와우펜 ★ 동화툰 20개 396,000원 차감 필요 ★"
+    },
+    {
+      "sourceId": "2d48c05e-4aa8-9ffb-dba3-2186699a9a03",
+      "date": "2025-05-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "연락두절) kikimi033(연정현) - 듀얼USB"
+    },
+    {
+      "sourceId": "4feeadb5-a560-f700-5e3c-7db536a3169c",
+      "date": "2025-05-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "(종료) 23._.home(이다영)- 멀티보드"
+    },
+    {
+      "sourceId": "fff27777-b26a-7db3-3985-f85de5dbf063",
+      "date": "2025-05-23",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "latte.sister(라떼언니)- 플레이돌"
+    },
+    {
+      "sourceId": "3170d9d7-28bc-a413-94f8-6d286164c18a",
+      "date": "2025-05-25",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료] seohui_jeong(정서희)- 듀얼USB"
+    },
+    {
+      "sourceId": "ded531c0-9224-b81b-3cf6-79e62c81014f",
+      "date": "2025-05-27",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료] you_too_boram(최보람)-멀티보드"
+    },
+    {
+      "sourceId": "1097d876-3147-fa64-a2e4-498f4c1fae08",
+      "date": "2025-06-02",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) bianca_boyoung(이보영) - 듀얼 USB ( 下)"
+    },
+    {
+      "sourceId": "68b69e2e-68a0-9a71-a21c-565e4159c0e0",
+      "date": "2025-06-09",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "★일정 변경 vitnal_h(김연희)- 멀티보드"
+    },
+    {
+      "sourceId": "d9130a5e-f442-45b5-0fa7-b0b4350a4cb3",
+      "date": "2025-06-10",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료]조동모임okku_mom(윤신혜)- 와우펜 (上)"
+    },
+    {
+      "sourceId": "73e2a2e2-8fbe-679b-2917-e0633559dda6",
+      "date": "2025-06-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료] onlmom._.ilbo(신현정) - 듀얼USB 디즈니 2차  (上이지만 2차)"
+    },
+    {
+      "sourceId": "eaa5a63f-1a5e-1d0e-f243-d259bdde4e4e",
+      "date": "2025-06-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) sihoo.mom_ (김민지) 와우펜 3차 (中)"
+    },
+    {
+      "sourceId": "a1ab43b6-e8f2-7e19-665b-c523b253479b",
+      "date": "2025-06-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) nunune_home(김서현) 플레이돌 2차 (中)"
+    },
+    {
+      "sourceId": "20339cd1-4fd3-a267-ab8d-b164b5ed76a9",
+      "date": "2025-06-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료] oni_mom(김가람)__- 듀얼USB (上)"
+    },
+    {
+      "sourceId": "63157c34-8870-4a9f-6821-b0dcd198cd0f",
+      "date": "2025-06-23",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) vely_mom03(김아름) 플레이돌  (中下)"
+    },
+    {
+      "sourceId": "57176807-85bb-3d73-5537-8d08b5722939",
+      "date": "2025-06-23",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "simkungdong(이수진)- 와우펜"
+    },
+    {
+      "sourceId": "3d0f2918-10f4-9c0e-d71b-0328afe8bcab",
+      "date": "2025-07-08",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) b_eunjuuu(배은주)- 클레이 (中)"
+    },
+    {
+      "sourceId": "bef4cdb3-b739-16d9-ce04-f39c4ca7a6b7",
+      "date": "2025-07-10",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "취소) binymamma(최지원)- 듀얼USB (中上)"
+    },
+    {
+      "sourceId": "a4fe4342-6481-4e9e-3194-c3deb348d543",
+      "date": "2025-07-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료] ★가능한 단독 a.el_papa (신혁) - 와우펜 (中上)"
+    },
+    {
+      "sourceId": "d5ba7186-d910-08d0-8ef0-f9d2d21a85eb",
+      "date": "2025-07-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_lulumom(윤소라)-플레이돌 (中上)"
+    },
+    {
+      "sourceId": "89294a7a-3348-1557-1c66-795738a2aec2",
+      "date": "2025-07-23",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "min__edu(이유정)- 듀얼USB  (上下)"
+    },
+    {
+      "sourceId": "8ecfa7bf-c1d6-aceb-2a2e-1d690bd88f4e",
+      "date": "2025-07-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bonheur_0926 (오지수) - 와우펜 5차  (上上)인데 다소 짧은 간격의 앵콜"
+    },
+    {
+      "sourceId": "b01dd3a0-6640-17c1-c8eb-ae7f465cbac6",
+      "date": "2025-07-30",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료]ddoa_mam(홍해솔)- 와우펜 2차 (中)"
+    },
+    {
+      "sourceId": "6f0cb2dd-f368-1ec5-e155-b269070db57d",
+      "date": "2025-08-04",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료]jjhome_and_life(째째홈)-듀얼USB"
+    },
+    {
+      "sourceId": "d5779b2b-cbd7-3e56-8434-1a70dc4791a1",
+      "date": "2025-08-14",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) morak_mom(이지안) - 듀얼USB 2차"
+    },
+    {
+      "sourceId": "c7749e41-4369-b6e3-3e24-fbc3b2747a1b",
+      "date": "2025-09-05",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료]sortie2017(김혜란)-듀얼 usb"
+    },
+    {
+      "sourceId": "5bda2e76-8472-a88b-3c4d-b9747ba9ecfe",
+      "date": "2025-09-08",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료]xoxo.siwoo(김유라)-플레이돌"
+    },
+    {
+      "sourceId": "c0a3b71c-31d4-cc4a-fc9b-5e124958fb80",
+      "date": "2025-09-09",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료]laloo_mi(이미래)- 사운드북"
+    },
+    {
+      "sourceId": "9b588741-d131-6688-5d4a-d58a2498c63e",
+      "date": "2025-09-10",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료]hero._luv(이하영)-듀얼USB"
+    },
+    {
+      "sourceId": "a9ed76fb-1c9a-fdc4-6c4f-7a496b8a44af",
+      "date": "2025-09-15",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bella_haus_(염승예)- 플레이돌"
+    },
+    {
+      "sourceId": "79dee1a2-f0d2-d500-dc5c-76991abf3df3",
+      "date": "2025-09-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료]okku_mom(윤신혜)- 와우펜 2차"
+    },
+    {
+      "sourceId": "5478940f-2ad8-c4c3-77ac-b44bc190984e",
+      "date": "2025-09-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료]23.__.home(다영) 멀티보드 2차"
+    },
+    {
+      "sourceId": "18f4e9a7-d977-bf35-c39f-ef74c6513915",
+      "date": "2025-09-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료/베송비수정완]seohui_jeong(정서희)-듀얼USB 2차"
+    },
+    {
+      "sourceId": "b7533f9e-8bab-1370-1b30-bcaae26d0341",
+      "date": "2025-10-14",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_vivian_store_(김부금) - 듀얼USB 디즈니 3차"
+    },
+    {
+      "sourceId": "bf92807f-3c53-bdeb-b4e1-bfabad787ba7",
+      "date": "2025-10-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*취소건) applemom.s(송지은) 와우펜 무기한 연장 날짜 미정"
+    },
+    {
+      "sourceId": "0fc7febf-4e75-016e-74ad-eaffe51c5b83",
+      "date": "2025-10-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료]23.__.home(고다영)-그리고지우고  프리미엄 세트"
+    },
+    {
+      "sourceId": "a5df0a8c-564e-f44c-a38c-ff3ef2281d2d",
+      "date": "2025-10-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "_vivian_store_(김부금)- 키즈탭프로"
+    },
+    {
+      "sourceId": "60833768-bb21-9de4-7520-cda3fe2c4354",
+      "date": "2025-10-27",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) morak_mom(이지안) 와우펜"
+    },
+    {
+      "sourceId": "b967908a-4e6d-12aa-d891-b2b3d38a77f3",
+      "date": "2025-11-03",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "myong.mommy(권미영)-와우펜"
+    },
+    {
+      "sourceId": "47966c61-39de-16af-17f3-8412c341cd0f",
+      "date": "2025-11-05",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료] 23.___.home(다영) -클레이"
+    },
+    {
+      "sourceId": "add03477-b622-d410-69fc-eaa05a35fe13",
+      "date": "2025-11-10",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료] jjhome_and_life(째째홈/카톡)-듀얼USB 2차"
+    },
+    {
+      "sourceId": "9039cc83-7486-d4f3-1c6e-ba3d7b216b43",
+      "date": "2025-11-14",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) *박정 / bbangzzi.sam(김은지) 와우펜"
+    },
+    {
+      "sourceId": "a518a931-cf61-4c49-3c71-2d27b5418938",
+      "date": "2025-11-24",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "전달완료) *김태수 / ayooni.story(신혜리) - 듀얼 usb 공구 (샘플 발송)  ※ 하루 연장해서 28일까지"
+    },
+    {
+      "sourceId": "b04ee06a-89d5-b40f-d524-2e18fc26a66b",
+      "date": "2025-12-01",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달完] jy_nori(김수현) - 듀얼USB (샘플전달完)"
+    },
+    {
+      "sourceId": "1e482c6b-eb85-ff12-8bf3-e28f5064642d",
+      "date": "2025-12-01",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달完] hero._luv(이하영)- 플레이돌"
+    },
+    {
+      "sourceId": "93f65c6b-477a-2e51-c570-155f855ac2ad",
+      "date": "2025-12-04",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "tuntun2mom(이지연)-와우펜"
+    },
+    {
+      "sourceId": "4216fba5-6faf-6034-b211-d0d4755be8e7",
+      "date": "2025-12-05",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달完][★안나님 인수인계 계정]baebae_yn(배선미)-플레이돌"
+    },
+    {
+      "sourceId": "614066d5-1920-e933-f47c-18fa52159258",
+      "date": "2025-12-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 morak_mom(이지안) 키즈탭 프로"
+    },
+    {
+      "sourceId": "874301a9-fb95-42b3-d09d-135c78de591f",
+      "date": "2025-12-15",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 yello_rangrang(박진경) 플레이돌 공구(상품발송)"
+    },
+    {
+      "sourceId": "14bc427d-c9dc-22df-2744-ff1345a87183",
+      "date": "2025-12-16",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 labubear.o(김원지) 클레이공구 (상품발송)"
+    },
+    {
+      "sourceId": "6f86eaf2-e70d-cb2b-e282-93f2c8b02f7c",
+      "date": "2025-12-18",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 hari__baby21(김나진)키즈탭 프로 공구(상품발송)"
+    },
+    {
+      "sourceId": "efd170b2-f557-527b-6646-ad2c443dde85",
+      "date": "2025-12-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료]okku_mom (윤신혜) 와우펜"
+    },
+    {
+      "sourceId": "549f5c48-b601-867f-202a-70befdb3ec1e",
+      "date": "2025-12-23",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 podomami(이은지)키즈탭 프로 공구 (상품발송)"
+    },
+    {
+      "sourceId": "a06f8490-3cd0-9f0d-d4ac-0c921fad31c4",
+      "date": "2025-12-25",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 my_.sun_is_u(이지수) 플레이돌 공구(상품발송)"
+    },
+    {
+      "sourceId": "c32ea09e-4535-367d-0827-9ded226e2a19",
+      "date": "2025-12-26",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 3binz__sisters(천유란) 듀얼USB 공구 (상품발송)"
+    },
+    {
+      "sourceId": "a0ecfedf-9fb0-5400-775e-719a3934ef86",
+      "date": "2025-12-29",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 _i_love_home_(이주연) 키즈탭프로 공구 (상품발송)"
+    },
+    {
+      "sourceId": "c518423a-52d5-a2d7-b9d7-1f06f6aec53d",
+      "date": "2026-01-05",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 yoonluv.s2(최나래) 듀얼USB 공구 (상품발송)"
+    },
+    {
+      "sourceId": "626d2e9a-6a83-08b1-bfb4-ca303ae7042a",
+      "date": "2026-01-09",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 luv_d.m.s(박민지) 멀티보드 공구 (상품발송)"
+    },
+    {
+      "sourceId": "c3556ca4-5110-f509-f043-6bccb658c8f4",
+      "date": "2026-01-09",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 sogeumdaek_(김미정) 플레이돌 공구 (상품발송)"
+    },
+    {
+      "sourceId": "cbf08161-1ff3-bd1d-9922-06c596cc9689",
+      "date": "2026-01-16",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달완료] liyune__(유리) / 플레이돌"
+    },
+    {
+      "sourceId": "4b2b0032-ad15-5636-ebc9-8f91aaf9554d",
+      "date": "2026-01-16",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 hoo_ttobok(이승미) 와우펜북 공구 (상품발송)"
+    },
+    {
+      "sourceId": "1f21698d-1ae4-457f-5488-e6a0ed2e4173",
+      "date": "2026-01-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 uzam_universe(임세라) 키즈탭프로 공구(상품발송)"
+    },
+    {
+      "sourceId": "3830c46c-d0da-8fc5-fe17-3c7e3f42c9dc",
+      "date": "2026-01-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[무브] dearsol_mommy(솔맘/김다은) 플레이돌  수수료 15%"
+    },
+    {
+      "sourceId": "048ec900-351f-4f80-1fdd-bed0af0b1ff7",
+      "date": "2026-01-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 labubear.o(김원지) 와우펜 공구 (상품발송 )"
+    },
+    {
+      "sourceId": "aa246090-9ccc-eda9-a2fd-23722f931811",
+      "date": "2026-01-27",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 lily._.mom(정수진 ) 플레이돌 공구 (상품발송)"
+    },
+    {
+      "sourceId": "c6524da3-b55c-34f6-3bf6-d2bf88bc6315",
+      "date": "2026-01-29",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 doha_mom__(홍민지) 와우펜북 공구 (상품발송)"
+    },
+    {
+      "sourceId": "ffb4fd22-c734-8ead-2550-5ba99996f328",
+      "date": "2026-01-29",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 kongkong.mommy(은지) 멀티보드 공구 (상품발송)"
+    },
+    {
+      "sourceId": "cc01b08d-0ee1-7683-8d73-8c6e58af57f3",
+      "date": "2026-02-04",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 honeybrread(안수영) 플레이돌 공구(상품발송)"
+    },
+    {
+      "sourceId": "0f86ebb9-cb9f-7855-7403-48e863dc4189",
+      "date": "2026-02-04",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "jjhome_and_life (째째홈) - 듀얼USB"
+    },
+    {
+      "sourceId": "608c9ed3-5e08-2171-88ad-3ee0afa38b01",
+      "date": "2026-02-05",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 dal.mom_(박수빈)와우펜 공구(상품발송)"
+    },
+    {
+      "sourceId": "8172ac26-f259-7a6a-f3d7-bb7fbe3af037",
+      "date": "2026-02-05",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "(취소) soimom_trip(오다인) 무선마이크 공구 (상품발송/샘플비받음)"
+    },
+    {
+      "sourceId": "ae85678c-dd2c-2e3d-3e0c-a25cfaf02bef",
+      "date": "2026-02-05",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "(취소) lovelybaby_sohe(임미선) 멀티보드 공구 (상품발송/샘플비받음)"
+    },
+    {
+      "sourceId": "1b0f2837-815a-456d-a05a-7ef70584fcd7",
+      "date": "2026-02-09",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bunnygamza(이종주)- 와우펜"
+    },
+    {
+      "sourceId": "96648756-b0e2-e493-0e36-eaf1b8da17fd",
+      "date": "2026-03-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "* 전달완료 [무브] @house.jin(하정맘/이유진) 와우펜만 수수료 20%"
+    },
+    {
+      "sourceId": "d13b9730-6db1-05f9-ffd2-7d86f92bcf73",
+      "date": "2026-03-26",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 weekndhome(한아름) 키즈무선마이크"
+    },
+    {
+      "sourceId": "f6950d9e-875f-fa1e-43d7-329f54ea2160",
+      "date": "2026-04-01",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 my_nayul(박민영) 플레이돌(+max사전예약) 공구 (상품발송)"
+    },
+    {
+      "sourceId": "1928d022-82df-4f69-46ba-f471f359474f",
+      "date": "2026-04-13",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 ssolmom.art(이임경) 클레이10종팩 공구(상품발송)"
+    },
+    {
+      "sourceId": "09ebd126-b8ef-eb52-5f47-4714808a4665",
+      "date": "2026-04-15",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 jjust_mom(최상아) 플레이돌 공구(상품발송)"
+    },
+    {
+      "sourceId": "72564d5b-6e4d-be7e-8d4e-5a50a4bc76ce",
+      "date": "2026-04-16",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "morak_mom(이지안) 듀얼USB 3차"
+    },
+    {
+      "sourceId": "69a01e2f-3c6b-2e40-1f50-a656c3f312b2",
+      "date": "2026-04-16",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 sese_.art(윤정원) 무한워크북보드 공구(상품발송)"
+    },
+    {
+      "sourceId": "1060a704-cb5f-51f5-67a7-73de925e1d51",
+      "date": "2026-04-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "podomami(이은지)-키즈탭프로"
+    },
+    {
+      "sourceId": "47e05bd5-d434-abec-d90a-e458f7ca3740",
+      "date": "2026-04-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bonheur_0926 (오지수) - 와우펜 6차"
+    },
+    {
+      "sourceId": "66e26ffd-a03b-487b-adb6-ae83ed0dba0d",
+      "date": "2026-04-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 luv_d.m.s(박민지) 멀티보드 2차 (1차는 25)"
+    },
+    {
+      "sourceId": "9a37803d-786a-5f49-1b7a-1b9144365217",
+      "date": "2026-04-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "s2_saaaarang (최사랑) - 키즈탭프로 2차 (1차는 198)"
+    },
+    {
+      "sourceId": "62e55be3-848e-7a47-bec2-23347d3d6ee4",
+      "date": "2026-04-23",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 hyun.myung_mom(장현경) 세탁클린볼 공동구매 (상품발송)"
+    },
+    {
+      "sourceId": "a81bd5b0-749f-8867-f180-ce6c9aac7b18",
+      "date": "2026-04-23",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 dalkom__mom(원하연) USB 공구 (상품발송)"
+    },
+    {
+      "sourceId": "a6e21cbe-7778-1da5-4168-8754663eecbf",
+      "date": "2026-04-25",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 bellymom_hi(박하림) 무선마이크공구(상품발송)"
+    },
+    {
+      "sourceId": "8f3c342d-6dd7-6cbd-be35-849bb8f22bc5",
+      "date": "2026-04-28",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 momjoy0527(조은) 플레이돌max 공동구매 (플레이돌만발송)"
+    },
+    {
+      "sourceId": "4fbf240a-547f-1911-1879-654e03004481",
+      "date": "2026-04-29",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "(취소) newnewni_(이승미) 멀티보드(샘플비받음)"
+    },
+    {
+      "sourceId": "c0bfd47c-0edb-5988-4245-b113d7ae993b",
+      "date": "2026-04-29",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 seneeten(오수미) 와우펜 공구 (상품발송)"
+    },
+    {
+      "sourceId": "74ec6b5f-9029-740b-9c8a-e8829109f655",
+      "date": "2026-04-30",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "morak_mom(이지안) 플레이돌 2차"
+    },
+    {
+      "sourceId": "fd71c960-3c9d-0b77-8820-a78319320f06",
+      "date": "2026-05-16",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 podomami(이은지) 키즈탭프로2차"
+    },
+    {
+      "sourceId": "fb8e3e12-da8d-b9c3-169b-9e6781ca013d",
+      "date": "2026-05-28",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 yh_pick(전홍우) 와우펜공구 (상품발송)"
+    },
+    {
+      "sourceId": "d204faf1-003b-7eef-d6cf-09f4e1f50439",
+      "date": "2026-06-01",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 y.y_world(윤성은) 무선마이크 공구(상품발송) - 6월로"
+    },
+    {
+      "sourceId": "cf2e6f3c-84e9-0389-e954-7f615da946e4",
+      "date": "2026-06-05",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hero._luv(이하영) 플레이돌 맥스  (취소)"
+    },
+    {
+      "sourceId": "db184b39-2dc2-6e54-928c-62711ffc0549",
+      "date": "2026-06-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "(취소) s2_saaaarang (최사랑) 무선마이크"
+    },
+    {
+      "sourceId": "a1c8cf41-3b40-f8d2-0d03-6b6c583a65aa",
+      "date": "2026-06-26",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "ddari__ddari(이윤아)-플레이돌 맥스"
+    },
+    {
+      "sourceId": "65365ac5-363b-63cb-a923-a471bdd31fd6",
+      "date": "2026-07-07",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 yh_pick(전홍우) 와우펜2차"
+    },
+    {
+      "sourceId": "dad640af-00b2-1b41-5b63-81fd8bf905c9",
+      "date": "2026-07-09",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "*전달완료 crys.__tal(최수정) 플레이돌 맥스 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "2dcf6de2-319c-a637-df39-f3bc474a3eb7",
+      "date": "2026-07-22",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "*전달완료 nodaeng.m(이영은) 와우펜 (상품발송-페이백) *기존 협찬자"
+    },
+    {
+      "sourceId": "4f1c6b61-af17-a6b5-4385-14a1f6077d1b",
+      "date": "2026-07-22",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "*전달완료 ehnts_m(조혜린) 낱말카드 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "37a7993a-d6d1-dbfd-9bea-522064f4b787",
+      "date": "2026-07-27",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "*전달완료 geomi_mom(천정은) 플레이돌 맥스 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "8da3a57d-023a-c66c-a2f2-25d6ac5ae41b",
+      "date": "2026-07-30",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "*전달완료 ggumi_geonhu (한희재) 무한워크북보드 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "c3c61f3b-767b-db65-f056-15c0bed26049",
+      "date": "2026-08-01",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "[전달完]3doong_home(이경낭)-클레이"
+    },
+    {
+      "sourceId": "dbc1ba6a-dc85-da16-30f2-8c770450c0e3",
+      "date": "2026-08-05",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "*전달완료 congdduck__lovely(김지수) 무선마이크 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "6edc09ac-ca1f-ecdf-3f71-9f1b581405cd",
+      "date": "2026-08-06",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "*전달완료 poopu_zip(김수빈) 플레이돌 맥스(상품발송-페이백)"
+    },
+    {
+      "sourceId": "49703d1e-0dd6-548a-b2bc-84d70604fc0f",
+      "date": "2026-08-11",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "*전달완료 soeun.growup(문아롬) 샤워타월 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "251b4ae2-88b7-4a01-ba1f-ce280a8340dc",
+      "date": "2026-08-19",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "*전달완료 ggumi_geonhu (한희재) 멀티보드 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "e784991b-b203-60a9-8f01-b85ed6c3e57e",
+      "date": "2026-08-20",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "*전달완료 dami.momm(박서현) 와우펜 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "113a711e-1b57-c6f9-d340-82769c1f1a91",
+      "date": "2026-08-25",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "(취소)si_won_mom(김민지) 플레이돌 맥스 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "59892abd-5ddd-0961-4175-a612ea118ec7",
+      "date": "2026-09-01",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "*전달완료 _hayidam(김은실) 플레이돌 맥스 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "ebb9811b-0ca9-7417-ac2e-1aa2587601e3",
+      "date": "2026-09-03",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "* 전달완료 dalkom__mom(원하연) 듀얼USB 2차"
+    },
+    {
+      "sourceId": "644194f5-4ed4-3369-1af0-a07b22c016d1",
+      "date": "2026-09-07",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "*전달완료 e.aniii(이한솔) 플레이돌 맥스 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "0740b162-5a33-9b62-cea2-ff95433060a1",
+      "date": "2026-09-09",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "*전달완료 dani.mom22(배현수) 클레이+무한워크북 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "a90d2472-5521-e727-c0ea-0a3e20009bd2",
+      "date": "2026-09-16",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 chaeeun2_mom(남예지) 클레이"
+    },
+    {
+      "sourceId": "7ba366f9-a64b-9cc1-c64e-991a0eab2bc3",
+      "date": "2026-09-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 bbomini__v(이정효) 와우펜"
+    },
+    {
+      "sourceId": "a2af67d4-39d4-acf7-d89b-1d4bee3609bd",
+      "date": "2026-09-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "won2_mompic(최다솜)- 멀티보드"
+    },
+    {
+      "sourceId": "6e638ee1-bb65-a652-b4f9-f65563909ac5",
+      "date": "2026-09-17",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "*전달완료 dungdung2__ne(명선이) 플레이돌 맥스 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "f7187579-29da-8575-1e7e-88785b969484",
+      "date": "2026-09-18",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "*전달완료 __my.ddang(김민원) 키즈탭프로 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "31738f1e-7466-e390-4fb6-41761a86507b",
+      "date": "2026-09-21",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "*전달완료 6a.how(김현수) 와우펜 공구 (상품발송)"
+    },
+    {
+      "sourceId": "c3473a37-4994-a97c-9379-116efa4c4028",
+      "date": "2026-09-28",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "*전달완료 dami.momm(박서현) 플레이돌 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "22059d65-8648-7a8a-31dd-8d52fc872685",
+      "date": "2026-09-30",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "happpy_hyeon(하봄/김은지-도현맘) 와우펜 - 이벤트 1건 차감"
+    },
+    {
+      "sourceId": "12a11afb-a13a-384a-1537-85919a3a32dc",
+      "date": "2026-10-02",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "*전달완료 __kimif(김가령) 플레이돌 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "46049cd1-f5b2-dffb-23cc-abb7a9db926b",
+      "date": "2026-10-12",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "ebenbebe_(김진경) 플레이돌 맥스 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "ade8583f-7b18-7bea-496e-815ea48821c8",
+      "date": "2026-10-13",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "bunnygamza(이종주)-클레이"
+    },
+    {
+      "sourceId": "ce30649a-210a-07f7-e659-6d527f8d8f51",
+      "date": "2026-10-15",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "dami.momm(박서현) 듀얼USB (상품발송-페이백)"
+    },
+    {
+      "sourceId": "2294a4b8-15e8-21f9-f608-8663424d194b",
+      "date": "2026-10-16",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "(취소) grow_mom1004(이슬기) 플레이돌 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "90ae8093-5778-78fa-8a9d-205b86275b43",
+      "date": "2026-10-19",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "dundun.mom(하봄/류연주-둔둔맘) 와우펜"
+    },
+    {
+      "sourceId": "8a60f1c5-e45d-b34d-c16c-ef945ebe9341",
+      "date": "2026-10-22",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "crys.__tal(최수정) 플레이돌 맥스 2차"
+    },
+    {
+      "sourceId": "550a7447-6364-4077-3d9e-74bf2eca0a1e",
+      "date": "2026-10-29",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "happy_el77(전수현) 플레이돌 맥스 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "065f421a-fa1c-be4d-a9c9-1946ca720f8f",
+      "date": "2026-11-05",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "(취소)songa_mom_(이경진) 키즈탭프로 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "71ee1228-f40c-6567-ad68-5ee5a6f20f90",
+      "date": "2026-11-05",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "poopu_zip(김수빈) 플레이돌2차"
+    },
+    {
+      "sourceId": "1d4bba4f-2f43-fbf4-140a-39e7d71be308",
+      "date": "2026-11-09",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "ggobook_mom(김예지) 플레이돌 맥스(상품발송-페이백)"
+    },
+    {
+      "sourceId": "38533c4d-e982-f7c4-3fff-f65f6a740741",
+      "date": "2026-11-16",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "pikomom__(신담비) 플레이돌 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "85699038-b3a3-90c4-e948-0c9e473f4a9a",
+      "date": "2026-11-19",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "in_damiland(다미맘) 플레이돌 맥스 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "292674b1-e26b-ab60-060d-a6a9e59d9259",
+      "date": "2026-11-20",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "3binz__sisters(천유란) 듀얼usb 2차"
+    },
+    {
+      "sourceId": "397671d0-e7c7-3dfe-c517-269218ff6629",
+      "date": "2026-11-26",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "genius.papalee(이범석) 플레이돌 맥스(상품발송-페이백)"
+    },
+    {
+      "sourceId": "48451678-db6f-faea-0ab8-ce10ff619cf8",
+      "date": "2026-12-01",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "kkomi__house(권민지) 플레이돌맥스 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "999444b9-3590-5cbc-4209-e88962a53f4b",
+      "date": "2026-12-03",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "chaea___mom(김소희) 키즈탭프로 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "29be4421-0b6a-0e39-0fd8-b9b539abdee1",
+      "date": "2026-12-04",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "nayul.days 플레이돌 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "452f0148-98c9-ba30-31f6-448394115d4d",
+      "date": "2026-12-07",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "hero._luv(하봄/마이희로) 와우펜"
+    },
+    {
+      "sourceId": "6e989379-5c20-7071-8a1e-1653e08f15f9",
+      "date": "2026-12-10",
+      "from": "미분류",
+      "to": "페이백",
+      "reason": "payback-keyword",
+      "title": "woo._.umom(우유정) 플레이돌 맥스 (상품발송-페이백)"
+    },
+    {
+      "sourceId": "4d6a1e85-6bdb-01d5-6ec2-798f7d3d0066",
+      "date": "2026-12-11",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "dalkom__mom(원하연) 듀얼usb3차"
+    },
+    {
+      "sourceId": "af1bf3fb-48fb-aec4-d75e-4ae18aa42576",
+      "date": "2026-12-17",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "geomi_mom(천정은) 플레이돌 맥스 3차진행"
+    },
+    {
+      "sourceId": "bd67ed46-e848-7b69-210d-12895bbab24c",
+      "date": "2026-12-28",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "lily._.mom(정수진) 플레이돌2차"
+    },
+    {
+      "sourceId": "440655f4-81cc-f83c-3772-2e7f43a29a7d",
+      "date": "2027-01-01",
+      "from": "미분류",
+      "to": "공동구매",
+      "reason": "nickname-name-product",
+      "title": "kimnunu_suwon(백아름)멀티보드 연락하기"
+    }
+  ]
+}

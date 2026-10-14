@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>사내 일정 관리</title>
+<style>
+:root{--line:#c7d1dd;--muted:#526175;--ink:#243044;--blue:#245fc5;--bg:#f5f7fa;--a:#1859b8;--b:#7343ad;--c:#087364}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 'Malgun Gothic',Arial,sans-serif}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #8eb8ff;outline-offset:2px}button{border:1px solid #d5dce5;background:white;border-radius:5px;padding:7px 12px;color:var(--ink)}button:hover{background:#f0f4fa}.primary{background:var(--blue);border-color:var(--blue);color:#fff}.primary:hover{background:#194fae}header{height:64px;background:#fff;border-bottom:1px solid var(--line);padding:0 28px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:19px;font-weight:700;display:flex;align-items:center;gap:11px}.mark{width:27px;height:27px;background:var(--blue);color:#fff;border-radius:5px;text-align:center;line-height:27px;font-size:16px}.topmeta{display:flex;align-items:center;gap:14px;font-size:12px;color:var(--muted)}.badge{border:1px solid #dbe1ea;border-radius:4px;padding:2px 7px;background:#f6f8fb}.layout{display:grid;grid-template-columns:220px minmax(0,1fr);min-height:calc(100vh - 64px)}aside{background:#fff;border-right:1px solid var(--line);padding:25px 18px}.nav-title{font-size:12px;color:var(--muted);margin:0 10px 12px}.nav-item{background:#edf3ff;color:var(--blue);padding:10px 12px;border-radius:5px;font-weight:700}.filter-group{margin-top:29px}.filter-heading{font-size:12px;font-weight:700;color:var(--muted);margin-bottom:12px}.check{display:flex;align-items:center;gap:9px;padding:8px 3px;cursor:pointer}.check input{accent-color:var(--blue);width:15px;height:15px}.dot{width:9px;height:9px;border-radius:50%;display:inline-block}.owner-count{margin-left:auto;font-size:12px;color:var(--muted)}.side-note{font-size:12px;line-height:1.8;color:var(--muted);border-top:1px solid var(--line);padding-top:17px;margin-top:28px}main{padding:25px 28px;min-width:0}.page-head{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:18px}h1{font-size:23px;margin:0 0 3px;letter-spacing:-.8px}.subtitle{font-size:13px;color:var(--muted);margin:0}.summary{display:flex;gap:12px;margin:16px 0 20px}.summary-item{background:#fff;border:1px solid var(--line);padding:11px 17px;border-radius:6px;min-width:145px;display:flex;justify-content:space-between;gap:24px;align-items:center;color:var(--muted);font-size:12px}.summary-item strong{color:var(--ink);font-size:20px}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:13px;flex-wrap:wrap}.month-control{display:flex;align-items:center;gap:7px}.month{font-size:20px;font-weight:700;margin-right:12px;min-width:100px}.arrow{padding:5px 11px;font-size:19px}.tools{display:flex;gap:8px;flex-wrap:wrap}input[type=search],select,input[type=text],input[type=date]{border:1px solid #d5dce5;border-radius:5px;background:#fff;padding:7px 10px;color:var(--ink)}input[type=search]{width:210px}.view-switch{display:flex}.view-switch button{border-radius:0}.view-switch button:first-child{border-radius:5px 0 0 5px}.view-switch button:last-child{border-radius:0 5px 5px 0;border-left:0}.view-switch .active{background:#eaf1fe;color:var(--blue);font-weight:700}.calendar{border:1px solid var(--line);background:#fff;border-radius:6px;overflow:hidden}.weekdays{display:grid;grid-template-columns:repeat(7,1fr);border-bottom:1px solid var(--line);background:#f9fafc}.weekdays div{text-align:center;padding:10px;color:#34465e;font-size:13px;font-weight:600}.weekdays div:first-child{color:#c55656}.weekdays div:last-child{color:#5676a2}.week{position:relative;min-height:128px;border-bottom:1px solid var(--line);padding:34px 0 12px}.week:last-child{border-bottom:0}.day-grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(7,1fr);pointer-events:none}.day{border-right:1px solid var(--line);padding:7px 9px}.day:last-child{border-right:0}.day.outside{background:#f3f5f8;color:#637083}.day-number{font-size:13px;font-weight:600;display:inline-flex;width:23px;height:23px;align-items:center;justify-content:center}.day.sunday .day-number{color:#be5555}.day.saturday .day-number{color:#5278ab}.day.today .day-number{background:var(--blue);color:#fff;border-radius:50%}.events{position:relative;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));grid-auto-rows:46px;row-gap:4px;padding:0 4px;pointer-events:none}.event{pointer-events:auto;display:block;text-align:left;padding:5px 8px;margin:0 2px;border:0;border-left:3px solid var(--owner);background:var(--owner);color:#fff;border-radius:3px;font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:22px}.event:hover{filter:brightness(.90)}.event.cancelled{color:#fff;background:#536071;border-color:#536071}.event.done{opacity:1}.event .who{font-weight:800;margin-right:5px}.calendar-bottom{display:flex;justify-content:space-between;gap:10px;font-size:12px;color:var(--muted);padding:12px 2px}.legend{display:flex;gap:15px}.legend span{display:flex;gap:5px;align-items:center}.list-wrap{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:auto}table{border-collapse:collapse;width:100%;min-width:720px;text-align:left}th{background:#f9fafc;color:var(--muted);font-size:12px;font-weight:500}th,td{padding:13px 16px;border-bottom:1px solid var(--line)}td button{padding:0;border:0;color:var(--blue);background:none}.empty{padding:35px;text-align:center;color:var(--muted)}[hidden]{display:none!important}dialog{border:0;border-radius:9px;padding:0;width:min(480px,calc(100vw - 30px));box-shadow:0 20px 80px #17283b33;color:var(--ink)}dialog::backdrop{background:#17283b66}.dialog-head{display:flex;justify-content:space-between;align-items:center;padding:19px 22px;border-bottom:1px solid var(--line)}.dialog-head h2{font-size:17px;margin:0}.dialog-body{padding:20px 22px}.details{display:grid;grid-template-columns:88px 1fr;gap:13px;font-size:13px}.details dt{color:var(--muted)}.details dd{margin:0}.dialog-foot{border-top:1px solid var(--line);padding:14px 22px;display:flex;justify-content:flex-end;gap:8px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.form-grid label{display:flex;flex-direction:column;gap:5px;font-size:12px;color:var(--muted)}.full{grid-column:1/-1}.form-note{font-size:12px;color:var(--muted);margin:15px 0 0}.error{color:#be4141;font-size:12px;margin:10px 0 0}footer{font-size:11px;color:#8893a2;margin-top:12px}
+@media(max-width:1050px){.layout{grid-template-columns:180px minmax(0,1fr)}main{padding:20px 16px}.toolbar{align-items:flex-start}.tools{width:100%}.event{font-size:13px}.summary-item{min-width:130px}}
+@media(max-width:700px){header{padding:0 15px}.topmeta .badge{display:none}.layout{display:block}aside{border-right:0;border-bottom:1px solid var(--line);padding:12px 16px}.nav-title,.nav-item,.side-note{display:none}.filter-group{margin-top:0;display:inline-block;margin-right:18px;vertical-align:top}.filter-group .check{display:inline-flex;margin-right:8px}.filter-heading{margin-bottom:3px}.owner-count{display:none}.page-head{align-items:flex-start}h1{font-size:20px}.summary{gap:6px}.summary-item{min-width:0;flex:1;padding:9px;gap:5px}.calendar-scroll{overflow:auto}.calendar{min-width:700px}.calendar-bottom{flex-direction:column}.tools input[type=search]{width:170px}.week{min-height:112px}}
+.groupbuy-summary{display:grid;grid-template-columns:minmax(240px,.8fr) minmax(540px,2fr);gap:14px;margin:18px 0 0}.monthly-panel,.weekly-panel{background:#fff;border:1px solid var(--line);border-radius:6px;min-width:0}.monthly-panel{padding:15px 18px}.weekly-panel{padding:15px 18px 10px}.stats-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}.stats-heading h2{font-size:14px;margin:0;font-weight:700}.stats-heading>span{font-size:11px;color:var(--muted);white-space:nowrap}.monthly-total{display:flex;align-items:baseline;gap:7px;padding:0 0 9px}.monthly-total strong{font-size:33px;line-height:1.25;letter-spacing:-1px;color:#1859b8}.monthly-total>span{font-size:14px;color:var(--muted)}.owner-totals{display:flex;flex-direction:column;gap:7px}.owner-totals>div{display:flex;justify-content:space-between;gap:15px;font-size:13px}.owner-label{display:flex;align-items:center;gap:7px}.owner-totals strong{font-size:14px}.weekly-scroll{overflow:auto}.weekly-table{width:100%;min-width:540px;table-layout:fixed;text-align:center}.weekly-table th,.weekly-table td{padding:5px 4px;font-size:13px;border-bottom:1px solid #dde3eb;vertical-align:middle}.weekly-table th{color:#34465e;font-weight:600;background:#f4f6f9}.weekly-table th:first-child{width:105px;text-align:left;padding-left:9px}.weekly-table td{font-weight:700}.weekly-table .week-range{display:block;font-size:10px;font-weight:400;color:#526175;white-space:nowrap}.weekly-table .owner-label{font-size:12px;font-weight:500}.weekly-table .zero{color:#637083;font-weight:400}.weekly-table .weekly-total th,.weekly-table .weekly-total td{background:#edf3ff;color:#1859b8;border-bottom:0}.weekly-table td:not(.zero){font-variant-numeric:tabular-nums}.stats-note{font-size:11px;color:var(--muted);margin:7px 0 17px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.stats-heading h2,.stats-note{overflow-wrap:anywhere}@media(max-width:1150px){.groupbuy-summary{grid-template-columns:1fr}.monthly-panel{padding:13px 18px}.monthly-panel .stats-heading{margin-bottom:5px}.monthly-total{display:inline-flex;padding:0 28px 0 0;vertical-align:middle}.owner-totals{display:inline-flex;flex-direction:row;gap:26px;flex-wrap:wrap;vertical-align:middle}.owner-totals>div{gap:12px}.weekly-panel{padding:12px 15px 8px}}@media(max-width:700px){.owner-totals{display:flex;margin-top:12px;gap:16px}.weekly-panel{padding:12px}.weekly-table{min-width:510px}}
+.event{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:1px;padding:4px 8px;background:var(--owner);color:var(--event-text,#fff);border:1px solid color-mix(in srgb,var(--owner) 70%,#000);border-left:3px solid var(--owner);line-height:18px;white-space:normal}.event.cancelled{background:var(--owner);color:var(--event-text,#fff);border-color:color-mix(in srgb,var(--owner) 70%,#000)}.event-title{display:block;max-width:100%;font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:18px}.event-owner{display:block;max-width:100%;font-size:11px;font-weight:400;line-height:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.color-settings{border:0;border-top:1px solid var(--line);padding:16px 0 0;margin:22px 0 0;min-width:0}.color-settings legend{font-size:13px;font-weight:700;padding:0 8px 0 0}.color-control{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.color-control label{font-size:12px;color:var(--muted)}input[type=color]{width:46px;height:34px;padding:3px;border:1px solid #b8c4d4;border-radius:4px;background:#fff;cursor:pointer}.color-control output{font-size:12px;color:#34465e;font-family:Consolas,monospace}.color-control button{padding:5px 8px;font-size:12px;margin-left:auto}.color-presets{display:flex;gap:9px;margin:12px 0}.color-presets button{width:30px;height:30px;padding:0;border-radius:4px;background:var(--swatch);border:1px solid #8795a7}.color-presets button:hover{outline:2px solid #526175;outline-offset:2px}.color-preview{display:flex;flex-direction:column;gap:4px;background:var(--preview-bg,#1859b8);color:var(--preview-text,#fff);padding:9px 10px;border:1px solid color-mix(in srgb,var(--preview-bg,#1859b8) 70%,#000);border-radius:4px;min-height:53px}.color-preview-title{font-size:13px;font-weight:600;overflow-wrap:anywhere}.color-preview-owner{font-size:11px;line-height:15px}.form-grid .color-control{margin-top:2px}
+.color-presets{display:grid;grid-template-columns:repeat(4,42px);gap:9px 11px;width:max-content;margin:12px 0 16px}.color-presets button{display:flex;align-items:center;justify-content:center;width:42px;height:42px;padding:8px;background:transparent;border:1px solid transparent;border-radius:8px;margin:0;box-shadow:none}.color-presets button .chip-swatch{display:flex;align-items:center;justify-content:center;width:23px;height:23px;flex-shrink:0;border-radius:4px;background:var(--swatch);border:1px solid color-mix(in srgb,var(--swatch) 85%,#64748b);color:var(--chip-ink);font-weight:700;font-size:14px}.color-presets button:hover{background:#f2f6fa;outline:none}.color-presets button[aria-pressed=true]{background:#edf7ff;border-color:#72bbec;box-shadow:0 0 0 2px #e4f2fc}.color-presets button[aria-pressed=true] .chip-swatch::after{content:'✓'}.color-presets button:focus-visible{outline:3px solid #1859b8;outline-offset:2px}.color-kind{font-size:11px;color:#526175}.color-field-label{font-size:12px;color:var(--muted)}.color-control{gap:8px}.color-control button{margin-left:auto}
+:root{--holiday-red:#b42332}
+.weekdays div:first-child,.day.sunday .day-number{color:var(--holiday-red)}
+.weekdays div:last-child,.day.saturday .day-number{color:#235a9f}
+.week{padding-top:68px;min-height:138px}
+.day-header{position:relative;min-width:0}
+.day.holiday{background:#fff7f7}.day.outside.holiday{background:#fff2f3}
+.day.holiday .day-number{color:var(--holiday-red);font-weight:700}
+.day.today .day-number{color:#fff}
+.day.holiday.today .day-number,.day.sunday.today .day-number{background:var(--holiday-red);color:#fff}
+.holiday-name{display:block;color:var(--holiday-red);font-size:11px;line-height:14px;font-weight:600;margin-top:2px;overflow-wrap:anywhere}
+.holiday-reason{display:block;font-size:10px;font-weight:400;line-height:13px}
+.calendar-meta{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin:0 2px 8px}
+.holiday-key{display:flex;align-items:center;gap:6px;color:var(--holiday-red);font-weight:600}.holiday-key .dot{background:var(--holiday-red);width:7px;height:7px}
+.calendar-meta .coverage-warning{color:#9a4d00;font-weight:600}
+</style>
+</head>
+<body>
+<header><div class="brand"><span class="mark" aria-hidden="true">▦</span>사내 일정 관리</div><div class="topmeta"><span class="badge">검토용 시안 · 예시 데이터</span><span>공통 업무 캘린더</span></div></header>
+<div class="layout">
+<aside aria-label="일정 필터"><p class="nav-title">업무 관리</p><div class="nav-item">▦ &nbsp; 전체 일정</div>
+<div class="filter-group"><div class="filter-heading">담당자</div>
+<label class="check"><input class="owner-filter" type="checkbox" value="A" checked><span class="dot" style="background:var(--a)"></span>담당자 A<span class="owner-count" id="countA"></span></label>
+<label class="check"><input class="owner-filter" type="checkbox" value="B" checked><span class="dot" style="background:var(--b)"></span>담당자 B<span class="owner-count" id="countB"></span></label>
+<label class="check"><input class="owner-filter" type="checkbox" value="C" checked><span class="dot" style="background:var(--c)"></span>담당자 C<span class="owner-count" id="countC"></span></label></div>
+<div class="filter-group"><div class="filter-heading">업무 유형</div><label class="check"><input class="type-filter" type="checkbox" value="공동구매" checked>공동구매</label><label class="check"><input class="type-filter" type="checkbox" value="행사" checked>행사</label><label class="check"><input class="type-filter" type="checkbox" value="발송" checked>상품 발송</label><label class="check"><input class="type-filter" type="checkbox" value="페이백" checked>페이백</label></div>
+<div class="side-note">담당자별 기본색을 제공합니다.<br>각 일정의 색상은 직접<br>변경할 수 있습니다.</div>
+</aside>
+<main><div class="page-head"><div><h1>업무 스케줄</h1><p class="subtitle">행사 기간과 후속 업무를 한눈에 확인합니다.</p></div><button class="primary" id="add">+ 일정 등록</button></div>
+<section class="groupbuy-summary" aria-label="월별 공동구매 집계">
+<div class="monthly-panel"><div class="stats-heading"><h2 id="statsMonth">10월 공동구매</h2><span>월 전체</span></div><div class="monthly-total"><strong id="groupbuyTotal">0</strong><span>건</span></div><div class="owner-totals"><div><span class="owner-label"><i class="dot" style="background:var(--a)"></i>담당자 A</span><strong id="groupbuyA">0건</strong></div><div><span class="owner-label"><i class="dot" style="background:var(--b)"></i>담당자 B</span><strong id="groupbuyB">0건</strong></div><div><span class="owner-label"><i class="dot" style="background:var(--c)"></i>담당자 C</span><strong id="groupbuyC">0건</strong></div></div></div>
+<div class="weekly-panel"><div class="stats-heading"><h2>주차별 담당자 공구 건수</h2><span>일요일~토요일</span></div><div class="weekly-scroll"><table class="weekly-table"><caption class="sr-only">선택한 달의 시작일 기준 담당자별 공동구매 건수</caption><thead id="weeklyHead"></thead><tbody id="weeklyBody"></tbody></table></div></div>
+</section><p class="stats-note" id="statsNote">공구 시작일 기준 · 취소 제외 · 검색·필터와 관계없이 월 전체 집계</p>
+<div class="toolbar"><div class="month-control"><span class="month" id="month"></span><button class="arrow" id="prev" aria-label="이전 달">‹</button><button class="arrow" id="next" aria-label="다음 달">›</button><button id="today">오늘</button></div><div class="tools"><input type="search" id="search" aria-label="일정 검색" placeholder="일정명 · 상품 · 거래처 검색"><select id="status" aria-label="상태 필터"><option value="">모든 상태</option><option>예정</option><option>진행</option><option>완료</option><option>취소</option></select><div class="view-switch"><button id="calendarTab" class="active" aria-pressed="true">월간</button><button id="listTab" aria-pressed="false">목록</button></div></div></div>
+<div class="calendar-meta"><span class="holiday-key"><i class="dot" aria-hidden="true"></i>대한민국 공휴일 · 대체공휴일</span><span id="holidayCoverage" role="status"></span></div>
+<div class="calendar-scroll" id="calendarView"><div class="calendar"><div class="weekdays"><div>일</div><div>월</div><div>화</div><div>수</div><div>목</div><div>금</div><div>토</div></div><div id="weeks"></div></div></div>
+<div class="list-wrap" id="listView" hidden><table><thead><tr><th>일정 / 상품</th><th>담당자</th><th>업무</th><th>기간</th><th>상태</th></tr></thead><tbody id="rows"></tbody></table></div>
+<div class="calendar-bottom"><div class="legend"><span><i class="dot" style="background:var(--a)"></i>A 기본색</span><span><i class="dot" style="background:var(--b)"></i>B 기본색</span><span><i class="dot" style="background:var(--c)"></i>C 기본색</span></div><span id="result" role="status"></span></div>
+<footer>일정을 클릭하면 상세 내용을 확인할 수 있습니다. 등록한 일정과 변경한 색상은 새로고침하면 초기화됩니다.</footer>
+</main></div>
+<dialog id="detailDialog"><div class="dialog-head"><h2>일정 상세</h2><button class="close-detail" aria-label="상세 창 닫기">×</button></div><div class="dialog-body"><h3 id="detailTitle" style="margin:0 0 20px;font-size:18px"></h3><dl class="details" id="details"></dl><fieldset class="color-settings"><legend>일정 색상</legend><div class="color-control"><label for="detailColor">직접 선택</label><input type="color" id="detailColor" value="#1859b8"><output id="detailColorValue" for="detailColor">#1859B8</output><span class="color-kind" id="detailColorKind">사용자 지정</span><button type="button" id="resetDetailColor">담당자 기본색</button></div><div class="color-presets" id="detailPalette" aria-label="일정 색상 팔레트"></div><div class="color-preview" id="detailColorPreview"><span class="color-preview-title"></span><span class="color-preview-owner"></span></div></fieldset></div><div class="dialog-foot"><button class="close-detail">닫기</button><button class="primary" id="saveDetailColor">색상 저장</button></div></dialog>
+<dialog id="addDialog"><form id="addForm"><div class="dialog-head"><h2>일정 등록</h2><button type="button" class="close-add" aria-label="등록 창 닫기">×</button></div><div class="dialog-body"><div class="form-grid"><label class="full">일정명<input type="text" name="title" maxlength="80" required placeholder="예: 거래처 D 공동구매"></label><label>담당자<select name="owner"><option>A</option><option>B</option><option>C</option></select></label><label>업무 유형<select name="type"><option>공동구매</option><option>행사</option><option>발송</option><option>페이백</option></select></label><label>시작일<input type="date" name="start" required></label><label>종료일<input type="date" name="end" required></label><label>상품<input type="text" name="product" maxlength="60" placeholder="상품명"></label><label>거래처<input type="text" name="partner" maxlength="60" placeholder="거래처명"></label><label class="full">상태<select name="status"><option>예정</option><option>진행</option><option>완료</option><option>취소</option></select></label><div class="full color-add-section"><span class="color-field-label">일정 색상</span><div class="color-presets" id="addPalette" aria-label="새 일정 색상 팔레트"></div><div class="color-control"><label for="addColor">직접 선택</label><input type="color" id="addColor" name="color" value="#1859b8"><output id="addColorValue" for="addColor">#1859B8</output><span class="color-kind" id="addColorKind">사용자 지정</span></div></div><div class="color-preview full" id="addColorPreview"><span class="color-preview-title"></span><span class="color-preview-owner"></span></div></div><p class="form-note">선택한 색상에 맞춰 글자색이 자동 조정됩니다. 시안의 변경 내용은 현재 화면에만 반영됩니다.</p><p class="error" id="formError" role="alert"></p></div><div class="dialog-foot"><button type="button" class="close-add">취소</button><button class="primary" type="submit">등록</button></div></form></dialog>
+<script>
+'use strict';
+const $=id=>document.getElementById(id), dayMs=86400000;
+const date=s=>new Date(s+'T00:00:00Z');
+const iso=d=>d.toISOString().slice(0,10);
+const shift=(d,n)=>new Date(d.getTime()+n*dayMs);
+// 대한민국 공휴일: 2026-10-12 확인. 출처와 추가 지정 사항은 08_공휴일_반영기준.md 참조.
+// 음력·대체·선거·임시 공휴일은 공식 발표 날짜를 등록하며 임의로 추정하지 않는다.
+const holidaysByYear={
+ 2025:[
+  ['01-01','신정'],['01-27','임시공휴일'],['01-28','설날 연휴'],['01-29','설날'],['01-30','설날 연휴'],
+  ['03-01','3·1절'],['03-03','대체공휴일(3·1절)'],['05-05','어린이날','부처님오신날'],['05-06','대체공휴일(부처님오신날)'],
+  ['06-03','대통령선거(임시공휴일)'],['06-06','현충일'],['08-15','광복절'],
+  ['10-03','개천절'],['10-05','추석 연휴'],['10-06','추석'],['10-07','추석 연휴'],['10-08','대체공휴일(추석)'],['10-09','한글날'],['12-25','성탄절']
+ ],
+ 2026:[
+  ['01-01','신정'],['02-16','설날 연휴'],['02-17','설날'],['02-18','설날 연휴'],['03-01','3·1절'],['03-02','대체공휴일(3·1절)'],
+  ['05-01','노동절'],['05-05','어린이날'],['05-24','부처님오신날'],['05-25','대체공휴일(부처님오신날)'],
+  ['06-03','제9회 전국동시지방선거'],['06-06','현충일'],['07-17','제헌절'],['08-15','광복절'],['08-17','대체공휴일(광복절)'],
+  ['09-24','추석 연휴'],['09-25','추석'],['09-26','추석 연휴'],['10-03','개천절'],['10-05','대체공휴일(개천절)'],['10-09','한글날'],['12-25','성탄절']
+ ],
+ 2027:[
+  ['01-01','신정'],['02-06','설날 연휴'],['02-07','설날'],['02-08','설날 연휴'],['02-09','대체공휴일(설날)'],['03-01','3·1절'],
+  ['05-01','노동절'],['05-03','대체공휴일(노동절)'],['05-05','어린이날'],['05-13','부처님오신날'],['06-06','현충일'],
+  ['07-17','제헌절'],['07-19','대체공휴일(제헌절)'],['08-15','광복절'],['08-16','대체공휴일(광복절)'],
+  ['09-14','추석 연휴'],['09-15','추석'],['09-16','추석 연휴'],['10-03','개천절'],['10-04','대체공휴일(개천절)'],
+  ['10-09','한글날'],['10-11','대체공휴일(한글날)'],['12-25','성탄절'],['12-27','대체공휴일(성탄절)']
+ ]
+};
+const holidayByDate=new Map(Object.entries(holidaysByYear).flatMap(([y,items])=>items.map(([md,...names])=>[y+'-'+md,names])));
+const holidayNames=day=>holidayByDate.get(day)||[];
+const colors={A:['#1859b8','#1859b8'],B:['#7343ad','#7343ad'],C:['#087364','#087364']};
+let year=2026,month=9;
+let schedules=[
+{id:1,title:'거래처 D 공동구매',owner:'A',type:'공동구매',start:'2026-09-29',end:'2026-10-05',status:'완료',product:'상품 P',partner:'거래처 D',related:'업무 001'},
+{id:2,title:'상품 P 체험단 모집',owner:'B',type:'행사',start:'2026-10-03',end:'2026-10-09',status:'완료',product:'상품 P',partner:'거래처 E',related:'업무 002'},
+{id:3,title:'사이트 기획전',owner:'C',type:'행사',start:'2026-10-08',end:'2026-10-14',status:'진행',product:'상품 Q',partner:'사내몰',related:'업무 003'},
+{id:4,title:'상품 R 공동구매',owner:'A',type:'공동구매',start:'2026-10-12',end:'2026-10-18',status:'진행',product:'상품 R',partner:'거래처 F',related:'업무 004'},
+{id:5,title:'상품 R 사전 발송',owner:'B',type:'발송',start:'2026-10-12',end:'2026-10-13',status:'예정',product:'상품 R',partner:'거래처 F',related:'업무 004'},
+{id:6,title:'상품 P 페이백 처리',owner:'C',type:'페이백',start:'2026-10-15',end:'2026-10-16',status:'예정',product:'상품 P',partner:'거래처 E',related:'업무 002'},
+{id:7,title:'거래처 G 공동구매',owner:'B',type:'공동구매',start:'2026-10-16',end:'2026-10-20',status:'예정',product:'상품 S',partner:'거래처 G',related:'업무 005'},
+{id:8,title:'상품 T 체험단',owner:'A',type:'행사',start:'2026-10-19',end:'2026-10-22',status:'취소',product:'상품 T',partner:'거래처 H',related:'업무 006',reason:'거래처 일정 변경'},
+{id:9,title:'사내몰 주말 행사',owner:'C',type:'행사',start:'2026-10-22',end:'2026-10-25',status:'예정',product:'상품 Q',partner:'사내몰',related:'업무 007'},
+{id:10,title:'상품 S 추가 발송',owner:'A',type:'발송',start:'2026-10-23',end:'2026-10-23',status:'예정',product:'상품 S',partner:'거래처 G',related:'업무 005'},
+{id:11,title:'거래처 J 월말 공동구매',owner:'B',type:'공동구매',start:'2026-10-29',end:'2026-11-02',status:'예정',product:'상품 U',partner:'거래처 J',related:'업무 008'},
+{id:12,title:'월말 발송 확인',owner:'C',type:'발송',start:'2026-10-30',end:'2026-10-31',status:'예정',product:'상품 U',partner:'거래처 J',related:'업무 008'}
+];
+const colorPalette=[
+ {hex:'#3fa9f5',label:'하늘색'},{hex:'#7ba0c4',label:'블루그레이'},{hex:'#b980d0',label:'보라색'},{hex:'#ff4d00',label:'주홍색'},
+ {hex:'#00b392',label:'청록색'},{hex:'#66c9ba',label:'민트색'},{hex:'#fb91a3',label:'분홍색'},{hex:'#f5333f',label:'빨간색'},
+ {hex:'#70d44b',label:'초록색'},{hex:'#d3d655',label:'라임색'},{hex:'#ffd235',label:'노란색'},{hex:'#ff9e18',label:'주황색'}
+];
+function buildColorChips(prefix){const container=$(prefix+'Palette');container.replaceChildren();for(const color of colorPalette){const button=node('button');button.type='button';button.dataset.colorFor=prefix;button.dataset.color=color.hex;button.setAttribute('aria-label',color.label+' '+color.hex.toUpperCase());button.setAttribute('aria-pressed','false');button.style.setProperty('--swatch',color.hex);button.style.setProperty('--chip-ink',colorText(color.hex));const swatch=node('span',undefined,'chip-swatch');swatch.setAttribute('aria-hidden','true');button.append(swatch);container.append(button);}}
+function syncColorChips(prefix,color){const normalized=color.toLowerCase();for(const button of $(prefix+'Palette').querySelectorAll('button'))button.setAttribute('aria-pressed',String(button.dataset.color===normalized));$(prefix+'ColorKind').textContent=colorPalette.some(c=>c.hex===normalized)?'팔레트 색상':'사용자 지정';}
+let selectedScheduleId=null,addColorIsManual=false;
+function relativeLuminance(hex){const values=hex.slice(1).match(/../g).map(v=>parseInt(v,16)/255).map(v=>v<=0.04045?v/12.92:Math.pow((v+0.055)/1.055,2.4));return values[0]*0.2126+values[1]*0.7152+values[2]*0.0722;}
+function colorText(hex){const luminance=relativeLuminance(hex);return 1.05/(luminance+0.05)>=(luminance+0.05)/0.05?'#ffffff':'#000000';}
+function scheduleColor(s){return /^#[0-9a-f]{6}$/i.test(s.color||'')?s.color:(s.status==='취소'?'#536071':colors[s.owner][0]);}
+function eventTitle(s){return s.title+(s.title.includes(s.type)?'':' · '+s.type)+' / '+s.status;}
+function updateColorPreview(prefix,color,title,owner){const preview=$(prefix+'ColorPreview');preview.style.setProperty('--preview-bg',color);preview.style.setProperty('--preview-text',colorText(color));preview.querySelector('.color-preview-title').textContent=title;preview.querySelector('.color-preview-owner').textContent='담당자 '+owner+'의 일정';$(prefix+'ColorValue').textContent=color.toUpperCase();syncColorChips(prefix,color);}
+function updateAddPreview(){const form=$('addForm');updateColorPreview('add',$('addColor').value,form.elements.title.value.trim()||'새 일정',form.elements.owner.value);}
+function node(tag,text,className){const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(className)e.className=className;return e;}
+function openDetail(s){selectedScheduleId=s.id;$('detailTitle').textContent=s.title;$('details').replaceChildren();const items=[['담당자','담당자 '+s.owner],['업무 유형',s.type],['기간',s.start+' ~ '+s.end],['상태',s.status],['상품',s.product||'—'],['거래처',s.partner||'—'],['연결 업무',s.related||'—']];if(s.reason)items.push(['취소 사유',s.reason]);for(const [k,v]of items)$('details').append(node('dt',k),node('dd',v));$('detailColor').value=scheduleColor(s);updateColorPreview('detail',$('detailColor').value,s.title,s.owner);$('detailDialog').showModal();}
+function getGroupbuyStats(items,y,m){
+ const first=new Date(Date.UTC(y,m,1)),last=new Date(Date.UTC(y,m+1,0)),gridStart=shift(first,-first.getUTCDay());
+ const weekCount=Math.ceil((first.getUTCDay()+last.getUTCDate())/7);
+ const counts={A:0,B:0,C:0},weeks=Array.from({length:weekCount},(_,index)=>({index,start:new Date(Math.max(first,shift(gridStart,index*7))),end:new Date(Math.min(last,shift(gridStart,index*7+6))),counts:{A:0,B:0,C:0},total:0}));
+ const itemsInMonth=items.filter(s=>s.type==='공동구매'&&s.status!=='취소'&&date(s.start)>=first&&date(s.start)<=last);
+ for(const s of itemsInMonth){const index=Math.floor((date(s.start)-gridStart)/dayMs/7);counts[s.owner]++;weeks[index].counts[s.owner]++;weeks[index].total++;}
+ return {total:itemsInMonth.length,counts,weeks};
+}
+function renderGroupbuyStats(){
+ const stats=getGroupbuyStats(schedules,year,month);
+ $('statsMonth').textContent=(month+1)+'월 공동구매';$('groupbuyTotal').textContent=stats.total;
+ for(const owner of ['A','B','C'])$('groupbuy'+owner).textContent=stats.counts[owner]+'건';
+ const header=node('tr');header.append(node('th','담당자'));
+ const shortDate=d=>(d.getUTCMonth()+1)+'/'+String(d.getUTCDate()).padStart(2,'0');
+ for(const week of stats.weeks){const cell=node('th',(week.index+1)+'주차');cell.scope='col';cell.append(node('span',shortDate(week.start)+'~'+String(week.end.getUTCDate()).padStart(2,'0'),'week-range'));header.append(cell);}
+ $('weeklyHead').replaceChildren(header);$('weeklyBody').replaceChildren();
+ for(const owner of ['A','B','C']){const row=node('tr'),heading=node('th'),label=node('span',undefined,'owner-label'),dot=node('i',undefined,'dot');dot.style.background=colors[owner][0];label.append(dot,document.createTextNode('담당자 '+owner));heading.scope='row';heading.append(label);row.append(heading);for(const week of stats.weeks){const n=week.counts[owner];row.append(node('td',n+'건',n?'':'zero'));}$('weeklyBody').append(row);}
+ const totalRow=node('tr',undefined,'weekly-total'),label=node('th','합계');label.scope='row';totalRow.append(label);for(const week of stats.weeks)totalRow.append(node('td',week.total+'건'));$('weeklyBody').append(totalRow);
+}
+function render(){
+ const first=new Date(Date.UTC(year,month,1)),last=new Date(Date.UTC(year,month+1,0)),gridStart=shift(first,-first.getUTCDay());
+ const all=schedules.filter(s=>date(s.start)<=last&&date(s.end)>=first);
+ const owners=[...document.querySelectorAll('.owner-filter:checked')].map(e=>e.value),types=[...document.querySelectorAll('.type-filter:checked')].map(e=>e.value),query=$('search').value.trim().toLowerCase(),status=$('status').value;
+ const shown=all.filter(s=>owners.includes(s.owner)&&types.includes(s.type)&&(!status||s.status===status)&&[s.title,s.product,s.partner].join(' ').toLowerCase().includes(query)).sort((a,b)=>a.start.localeCompare(b.start)||a.id-b.id);
+ $('month').textContent=year+'.'+String(month+1).padStart(2,'0');renderGroupbuyStats();
+ const holidayYearKnown=Object.hasOwn(holidaysByYear,year);
+ $('holidayCoverage').textContent=holidayYearKnown?'공휴일 정보: 2025~2027년':year+'년 공휴일 정보 미등록';
+ $('holidayCoverage').classList.toggle('coverage-warning',!holidayYearKnown);
+ for(const owner of ['A','B','C'])$('count'+owner).textContent=all.filter(s=>s.owner===owner).length;
+ $('result').textContent='선택한 달의 '+all.length+'건 중 '+shown.length+'건 표시';$('weeks').replaceChildren();$('rows').replaceChildren();
+ const nowParts=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());const parts=Object.fromEntries(nowParts.map(p=>[p.type,p.value]));const now=parts.year+'-'+parts.month+'-'+parts.day;
+ const weekCount=Math.ceil((first.getUTCDay()+last.getUTCDate())/7);
+ for(let w=0;w<weekCount;w++){
+  const ws=shift(gridStart,w*7),we=shift(ws,6),week=node('div',undefined,'week'),days=node('div',undefined,'day-grid'),events=node('div',undefined,'events');
+  for(let d=0;d<7;d++){
+   const dt=shift(ws,d),day=iso(dt),names=holidayNames(day);
+   const cell=node('div',undefined,'day'+(dt.getUTCMonth()!==month?' outside':'')+(d===0?' sunday':d===6?' saturday':'')+(day===now?' today':'')+(names.length?' holiday':''));
+   cell.dataset.date=day;cell.setAttribute('role','group');cell.setAttribute('aria-label',day+' '+['일요일','월요일','화요일','수요일','목요일','금요일','토요일'][d]+(names.length?' · '+names.join(' · '):''));
+   const heading=node('div',undefined,'day-header');heading.append(node('span',String(dt.getUTCDate()),'day-number'));
+   if(names.length){const label=node('span',undefined,'holiday-name');label.title=names.join(' · ');for(const name of names){const substitute=name.match(/^대체공휴일\((.+)\)$/);if(substitute){label.append(node('span','대체공휴일'),node('span','('+substitute[1]+')','holiday-reason'));}else{label.append(node('span',name));if(names.length>1)label.lastChild.style.display='block';}}heading.append(label);}
+   cell.append(heading);days.append(cell);
+  }
+  const lanes=[];
+  for(const s of shown.filter(s=>date(s.start)<=we&&date(s.end)>=ws)){
+   const start=Math.max(0,Math.round((date(s.start)-ws)/dayMs)),end=Math.min(6,Math.round((date(s.end)-ws)/dayMs));let lane=0;while(lanes[lane]&&lanes[lane].some(v=>start<=v[1]&&end>=v[0]))lane++;(lanes[lane]??=[]).push([start,end]);
+   const e=node('button',undefined,'event'+(s.status==='취소'?' cancelled':s.status==='완료'?' done':''));const eventColor=scheduleColor(s);e.dataset.scheduleId=String(s.id);e.style.gridColumn=(start+1)+' / '+(end+2);e.style.gridRow=String(lane+1);e.style.setProperty('--owner',eventColor);e.style.setProperty('--event-text',colorText(eventColor));e.append(node('span',eventTitle(s),'event-title'),node('span','담당자 '+s.owner+'의 일정','event-owner'));e.title='담당자 '+s.owner+' | '+s.title+' | '+s.start+' ~ '+s.end+' | '+s.status;e.setAttribute('aria-label',e.title);e.addEventListener('click',()=>openDetail(s));events.append(e);
+  }
+  week.style.minHeight=Math.max(138,80+lanes.length*50)+'px';week.append(days,events);$('weeks').append(week);
+ }
+ for(const s of shown){const row=node('tr'),titleCell=node('td'),btn=node('button',s.title);btn.addEventListener('click',()=>openDetail(s));titleCell.append(btn,node('div',s.product,'subtitle'));row.append(titleCell,node('td',s.owner),node('td',s.type),node('td',s.start+' ~ '+s.end),node('td',s.status));$('rows').append(row);}
+ if(!shown.length){const row=node('tr'),cell=node('td','조건에 맞는 일정이 없습니다.','empty');cell.colSpan=5;row.append(cell);$('rows').append(row);}
+}
+function changeMonth(n){const d=new Date(Date.UTC(year,month+n,1));year=d.getUTCFullYear();month=d.getUTCMonth();render();}
+$('prev').onclick=()=>changeMonth(-1);$('next').onclick=()=>changeMonth(1);$('today').onclick=()=>{const values=Object.fromEntries(new Intl.DateTimeFormat('en',{timeZone:'Asia/Seoul',year:'numeric',month:'numeric'}).formatToParts(new Date()).map(p=>[p.type,p.value]));year=Number(values.year);month=Number(values.month)-1;render();};
+for(const e of document.querySelectorAll('.owner-filter,.type-filter'))e.addEventListener('change',render);$('search').addEventListener('input',render);$('status').addEventListener('change',render);
+function setView(list){$('calendarView').hidden=list;$('listView').hidden=!list;for(const [id,active]of [['calendarTab',!list],['listTab',list]]){$(id).classList.toggle('active',active);$(id).setAttribute('aria-pressed',String(active));}}
+$('calendarTab').onclick=()=>setView(false);$('listTab').onclick=()=>setView(true);
+for(const e of document.querySelectorAll('.close-detail'))e.onclick=()=>$('detailDialog').close();for(const e of document.querySelectorAll('.close-add'))e.onclick=()=>$('addDialog').close();
+$('add').onclick=()=>{$('addForm').reset();addColorIsManual=false;$('addColor').value=colors[$('addForm').elements.owner.value][0];const d=iso(new Date(Date.UTC(year,month,12)));$('addForm').elements.start.value=d;$('addForm').elements.end.value=d;$('formError').textContent='';updateAddPreview();$('addDialog').showModal();};
+$('addForm').onsubmit=e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.target));if(!f.title.trim()){$('formError').textContent='일정명을 입력해주세요.';return;}if(f.end<f.start){$('formError').textContent='종료일은 시작일보다 빠를 수 없습니다.';return;}schedules.push({...f,title:f.title.trim(),id:Math.max(0,...schedules.map(s=>s.id))+1,related:'시안 추가 일정'});const d=date(f.start);year=d.getUTCFullYear();month=d.getUTCMonth();$('addDialog').close();render();};
+$('detailColor').addEventListener('input',()=>{const s=schedules.find(s=>s.id===selectedScheduleId);if(s)updateColorPreview('detail',$('detailColor').value,s.title,s.owner);});
+$('resetDetailColor').onclick=()=>{const s=schedules.find(s=>s.id===selectedScheduleId);if(s){$('detailColor').value=colors[s.owner][0];updateColorPreview('detail',$('detailColor').value,s.title,s.owner);}};
+$('saveDetailColor').onclick=()=>{const s=schedules.find(s=>s.id===selectedScheduleId);if(!s)return;s.color=$('detailColor').value;$('detailDialog').close();render();};
+buildColorChips('detail');buildColorChips('add');
+for(const button of document.querySelectorAll('[data-color-for]'))button.addEventListener('click',()=>{const prefix=button.dataset.colorFor;$(prefix+'Color').value=button.dataset.color;if(prefix==='add'){addColorIsManual=true;updateAddPreview();}else{const s=schedules.find(s=>s.id===selectedScheduleId);if(s)updateColorPreview('detail',$('detailColor').value,s.title,s.owner);}});
+$('addColor').addEventListener('input',()=>{addColorIsManual=true;updateAddPreview();});
+$('addForm').elements.owner.addEventListener('change',()=>{if(!addColorIsManual)$('addColor').value=colors[$('addForm').elements.owner.value][0];updateAddPreview();});
+$('addForm').elements.title.addEventListener('input',updateAddPreview);
+render();
+</script>
+</body>
+</html>
+
+
+
+
+
+

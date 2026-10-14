@@ -1,0 +1,60 @@
+/* Product totals stay folded until an employee chooses to inspect them. */
+.sku-month-breakdown{margin:12px 0}
+.sales-summary .sku-month-breakdown>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#29405e;font-size:13px;font-weight:700;list-style:none}
+.sku-month-breakdown>summary::-webkit-details-marker{display:none}
+.sku-month-breakdown>summary>span::before{content:'▸';display:inline-block;width:18px;color:#245fc5}
+.sku-month-breakdown[open]>summary>span::before{content:'▾'}
+.sku-month-breakdown>summary small{font-size:11px;font-weight:400;color:#526175}
+.sku-month-breakdown>summary:focus-visible{outline:3px solid #8eb8ff;outline-offset:2px}
+.sku-help{font-size:11px;color:#526175;margin:6px 0 9px;line-height:1.7}
+.sku-table-scroll{overflow:auto;width:100%}
+.sku-product-table{min-width:680px;width:100%;table-layout:fixed;font-size:12px}
+.sku-product-table>thead>tr>th:first-child{width:28%}
+.sku-product-table>thead>tr>th:nth-child(2){width:11%}
+.sku-product-table>thead>tr>th:nth-child(3){width:18%}
+.sku-product-table>thead>tr>th:nth-child(4){width:19%}
+.sku-product-table>thead>tr>th:nth-child(5){width:24%}
+.sku-product-table>thead>tr>th,.sku-product-table>tbody>.sku-product-total>th,.sku-product-table>tbody>.sku-product-total>td,.sku-product-table>tfoot>tr>*{font-size:12px;padding:10px 12px;border-bottom:1px solid #d3dce8;vertical-align:middle}
+.sku-product-table>thead>tr>th{background:#eef3f9;color:#34465e;font-weight:600}
+.sku-product-table>tbody>.sku-product-total>th{background:#fff;font-weight:600}
+.sku-product-table>tbody>.sku-product-total>td{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.sku-product-table>tbody>.sku-product-total>td:last-child{white-space:normal;font-size:11px;line-height:1.7}
+.sku-product-table>tfoot>tr>*{background:#edf3ff;color:#194fae;font-weight:700}
+.sku-product-table>tfoot>tr>td{text-align:right;font-variant-numeric:tabular-nums}
+.sku-toggle{display:flex;align-items:center;gap:6px;min-height:28px;width:100%;text-align:left;border:0;border-radius:3px;padding:0;background:transparent;color:#245fc5;font-size:12px}
+.sku-toggle:hover{background:#edf3fc}.sku-toggle:focus-visible{outline:3px solid #8eb8ff;outline-offset:2px}
+.sku-toggle-title{font-weight:700;overflow-wrap:anywhere}.sku-toggle-hint{color:#526175;font-weight:400;font-size:10px;margin-left:3px;white-space:nowrap}.sku-chevron{font-size:12px;width:11px;flex-shrink:0}
+.sales-weekly .sales-week-summary>th{padding:7px 10px}
+.sales-weekly .sales-week-summary .week-range{margin-top:2px;font-weight:400;color:#526175;font-size:11px}
+.sales-weekly .sku-week-detail>td{padding:12px 14px;background:#f7f9fc}
+.sku-week-detail h3{font-size:13px;font-weight:700;color:#29405e;margin:0 0 7px}
+.sku-week-detail .sku-help{margin:0 0 9px}
+.sku-campaign-detail>td{background:#f8fafd;padding:11px 14px!important}
+.sku-campaign-table{min-width:660px;width:100%;table-layout:fixed;text-align:left}
+.sku-campaign-table th,.sku-campaign-table td{font-size:11px;padding:8px 10px;border-bottom:1px solid #dde4ef;vertical-align:middle}
+.sku-campaign-table th{font-weight:600;background:#edf2f8}
+.sku-campaign-table th:first-child{width:15%}.sku-campaign-table th:nth-child(2){width:27%}.sku-campaign-table th:nth-child(3){width:24%}.sku-campaign-table th:nth-child(4){width:15%}.sku-campaign-table th:nth-child(5){width:19%}
+.sku-campaign-table td:nth-child(n+4){text-align:right;font-variant-numeric:tabular-nums}
+.sku-campaign-table td:nth-child(-n+3){overflow-wrap:anywhere}
+.sku-campaign-table td button.sku-schedule-button{font-size:12px;line-height:1.5;color:#245fc5;padding:3px 0;text-align:left;overflow-wrap:anywhere;white-space:normal}
+.sku-schedule-button[aria-pressed=true]{font-weight:700;text-decoration:underline}
+.sku-missing-note{display:block;color:#526175;font-size:10px;font-weight:400}
+.sku-empty{margin:0;padding:15px;color:#526175;font-size:12px}
+@media(max-width:700px){.sales-summary .sku-month-breakdown>summary{align-items:flex-start;gap:5px;flex-wrap:wrap}.sku-month-breakdown>summary small{margin-left:18px}.sales-weekly .sku-week-detail>td{padding:10px}.sku-toggle-hint{font-size:10px}}
+
+/* Match each numeric heading to its value and separate campaign counts from orders. */
+.sales-weekly>thead>tr>th:nth-child(n+2),
+.sku-product-table>thead>tr>th:nth-child(n+2),
+.sku-campaign-table>thead>tr>th:nth-child(n+4){text-align:right}
+.sales-weekly>thead>tr>*+*,
+.sales-weekly>tbody>.sales-week-summary>*+*,
+.sku-product-table>thead>tr>*+*,
+.sku-product-table>tbody>.sku-product-total>*+*,
+.sku-product-table>tfoot>tr>*+*,
+.sku-campaign-table>thead>tr>*+*,
+.sku-campaign-table>tbody>tr>*+*,
+.sku-campaign-table>tfoot>tr>*+*{border-left:1px solid #d3dce8}
+.sku-campaign-table>tbody>tr>td:nth-child(-n+3){text-align:left;font-weight:400}
+.sku-campaign-table>tfoot>tr>*{padding:8px 10px;border-bottom:1px solid #d3dce8;background:#edf3ff;color:#194fae;font-weight:700;font-size:11px}
+.sku-campaign-table>tfoot>tr>td{text-align:right;font-variant-numeric:tabular-nums}
+.sku-campaign-table>tfoot>tr>th{text-align:left}

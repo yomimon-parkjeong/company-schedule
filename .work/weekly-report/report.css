@@ -1,0 +1,15 @@
+/* A compact weekly schedule summary, expanded only when needed. */
+.week-focus-controls{flex-wrap:wrap;justify-content:flex-end}
+.weekly-report-panel{margin:-3px 0 12px}
+.weekly-report-panel details{border:1px solid #c7d1dd;border-radius:6px;background:#fff}
+.weekly-report-panel summary{display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;padding:10px 14px;color:#29405e;font-size:12px;font-weight:700;list-style:none}
+.weekly-report-panel summary::-webkit-details-marker{display:none}
+.weekly-report-panel summary>span::before{content:'▸';display:inline-block;width:17px;color:#245fc5}
+.weekly-report-panel details[open] summary>span::before{content:'▾'}
+.weekly-report-panel summary small{color:#526175;font-size:11px;font-weight:400}
+.weekly-report-panel summary:hover{background:#f5f8fd}
+.weekly-report-panel summary:focus-visible{outline:3px solid #8eb8ff;outline-offset:2px}
+.weekly-report-body{border-top:1px solid #dde3eb;padding:12px 14px}
+.weekly-report-guide{margin:0 0 8px;color:#526175;font-size:11px}
+#weeklyReportText{display:block;width:100%;min-height:170px;resize:vertical;padding:12px 14px;border:1px solid #becbdb;border-radius:5px;background:#f8fafd;color:#243044;font:13px/1.9 'Malgun Gothic',Arial,sans-serif;white-space:pre;overflow:auto}
+@media(max-width:700px){.week-focus-controls{justify-content:flex-start}.weekly-report-panel summary{align-items:flex-start;flex-direction:column;gap:4px}.weekly-report-panel summary small{margin-left:17px}#weeklyReportText{font-size:12px;padding:10px;min-height:160px}}

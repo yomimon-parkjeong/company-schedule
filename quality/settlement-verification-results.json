@@ -1,0 +1,657 @@
+{
+  "desktop-test": {
+    "passed": true,
+    "results": [
+      {
+        "name": "file input gated by recipient",
+        "passed": true
+      },
+      {
+        "name": "settlement isolated from calendar",
+        "passed": true
+      },
+      {
+        "name": "rate prompt before every file",
+        "passed": true
+      },
+      {
+        "name": "cancel does not select rate or file",
+        "passed": true
+      },
+      {
+        "name": "explicit rate opens picker",
+        "passed": true
+      },
+      {
+        "name": "actual source orders and quantities",
+        "passed": true
+      },
+      {
+        "name": "coupons do not reduce basis",
+        "passed": true
+      },
+      {
+        "name": "quantity not multiplied twice",
+        "passed": true
+      },
+      {
+        "name": "individual 10% exact payouts",
+        "passed": true
+      },
+      {
+        "name": "individual 10% UI matches model",
+        "passed": true
+      },
+      {
+        "name": "individual grey tax branch",
+        "passed": true
+      },
+      {
+        "name": "individual 10% valid export and preserved source",
+        "passed": true
+      },
+      {
+        "name": "individual 15% exact payouts",
+        "passed": true
+      },
+      {
+        "name": "individual 15% UI matches model",
+        "passed": true
+      },
+      {
+        "name": "individual grey tax branch",
+        "passed": true
+      },
+      {
+        "name": "individual 15% valid export and preserved source",
+        "passed": true
+      },
+      {
+        "name": "individual 20% exact payouts",
+        "passed": true
+      },
+      {
+        "name": "individual 20% UI matches model",
+        "passed": true
+      },
+      {
+        "name": "individual grey tax branch",
+        "passed": true
+      },
+      {
+        "name": "individual 20% valid export and preserved source",
+        "passed": true
+      },
+      {
+        "name": "business 10% exact payouts",
+        "passed": true
+      },
+      {
+        "name": "business 10% UI matches model",
+        "passed": true
+      },
+      {
+        "name": "business grey tax branch",
+        "passed": true
+      },
+      {
+        "name": "business 10% valid export and preserved source",
+        "passed": true
+      },
+      {
+        "name": "business 15% exact payouts",
+        "passed": true
+      },
+      {
+        "name": "business 15% UI matches model",
+        "passed": true
+      },
+      {
+        "name": "business grey tax branch",
+        "passed": true
+      },
+      {
+        "name": "business 15% valid export and preserved source",
+        "passed": true
+      },
+      {
+        "name": "business 20% exact payouts",
+        "passed": true
+      },
+      {
+        "name": "business 20% UI matches model",
+        "passed": true
+      },
+      {
+        "name": "business grey tax branch",
+        "passed": true
+      },
+      {
+        "name": "business 20% valid export and preserved source",
+        "passed": true
+      },
+      {
+        "name": "cancel rate change preserves calculation",
+        "passed": true
+      },
+      {
+        "name": "changing rate updates preview",
+        "passed": true
+      },
+      {
+        "name": "cancellation deducts once",
+        "passed": true
+      },
+      {
+        "name": "cancelled export round trip",
+        "passed": true
+      },
+      {
+        "name": "status 취소 classified",
+        "passed": true
+      },
+      {
+        "name": "status 입금대기 classified",
+        "passed": true
+      },
+      {
+        "name": "status 반품완료 classified",
+        "passed": true
+      },
+      {
+        "name": "status 반품완료 - 환불완료 classified",
+        "passed": true
+      },
+      {
+        "name": "status  반품 완료 – 환불 완료  classified",
+        "passed": true
+      },
+      {
+        "name": "status 취소 - 환불완료 classified",
+        "passed": true
+      },
+      {
+        "name": "status 교환완료 classified",
+        "passed": true
+      },
+      {
+        "name": "status 교환완료 - 발송완료 classified",
+        "passed": true
+      },
+      {
+        "name": "status 교환완료 - 반품완료 classified",
+        "passed": true
+      },
+      {
+        "name": "unresolved status 부분취소 not guessed",
+        "passed": true
+      },
+      {
+        "name": "unresolved status 부분환불 not guessed",
+        "passed": true
+      },
+      {
+        "name": "unresolved status 반품완료 - 부분환불 not guessed",
+        "passed": true
+      },
+      {
+        "name": "unresolved status 교환접수 not guessed",
+        "passed": true
+      },
+      {
+        "name": "unresolved status 반품접수 not guessed",
+        "passed": true
+      },
+      {
+        "name": "unresolved status 교환완료 - 확인필요 not guessed",
+        "passed": true
+      },
+      {
+        "name": "unresolved status  not guessed",
+        "passed": true
+      },
+      {
+        "name": "mixed statuses exclude only non-sales rows",
+        "passed": true
+      },
+      {
+        "name": "exchange rows remain sales",
+        "passed": true
+      },
+      {
+        "name": "compound raw status preserved",
+        "passed": true
+      },
+      {
+        "name": "mixed status UI totals and payment",
+        "passed": true
+      },
+      {
+        "name": "excluded rows are visibly marked",
+        "passed": true
+      },
+      {
+        "name": "calendar amount uses gross order total and valid order count",
+        "passed": true
+      },
+      {
+        "name": "individual compound status in Excel exclusion formula",
+        "passed": true
+      },
+      {
+        "name": "business compound status in Excel exclusion formula",
+        "passed": true
+      },
+      {
+        "name": "invalid partial import preserves previous settlement",
+        "passed": true
+      },
+      {
+        "name": "missing numeric input is rejected",
+        "passed": true
+      },
+      {
+        "name": "partial refunds never guessed",
+        "passed": true
+      },
+      {
+        "name": "unsupported commission rejected",
+        "passed": true
+      },
+      {
+        "name": "legitimate zero tax remains zero",
+        "passed": true
+      },
+      {
+        "name": "one-row file uses shifted footer and totals",
+        "passed": true
+      },
+      {
+        "name": "300 rows and cancellations preserve totals",
+        "passed": true
+      },
+      {
+        "name": "cancellation formula does not enumerate 150 arguments",
+        "passed": true
+      },
+      {
+        "name": "literal formula and markup is not executed",
+        "passed": true
+      },
+      {
+        "name": "schedule records and sales unaffected before confirmation",
+        "passed": true
+      },
+      {
+        "name": "mini calendar opens without writing sales",
+        "passed": true
+      },
+      {
+        "name": "mini calendar suggests matching nickname",
+        "passed": true
+      },
+      {
+        "name": "mini calendar navigation leaves main history alone",
+        "passed": true
+      },
+      {
+        "name": "mini calendar search filters schedules",
+        "passed": true
+      },
+      {
+        "name": "schedule choice opens explicit confirmation",
+        "passed": true
+      },
+      {
+        "name": "confirmation uses sales count not quantity",
+        "passed": true
+      },
+      {
+        "name": "choice alone does not write",
+        "passed": true
+      },
+      {
+        "name": "no returns to mini calendar without write",
+        "passed": true
+      },
+      {
+        "name": "close cancels without write",
+        "passed": true
+      },
+      {
+        "name": "empty schedule uses initial confirmation",
+        "passed": true
+      },
+      {
+        "name": "empty schedule receives gross order amount",
+        "passed": true
+      },
+      {
+        "name": "existing sales show explicit addition prompt",
+        "passed": true
+      },
+      {
+        "name": "existing plus incoming totals visible",
+        "passed": true
+      },
+      {
+        "name": "declining addition keeps fields and history",
+        "passed": true
+      },
+      {
+        "name": "changed target requires a fresh confirmation",
+        "passed": true
+      },
+      {
+        "name": "yes adds gross order amount and sales count",
+        "passed": true
+      },
+      {
+        "name": "success closes popup and marks completion",
+        "passed": true
+      },
+      {
+        "name": "monthly totals immediately updated",
+        "passed": true
+      },
+      {
+        "name": "weekly totals equal month after addition",
+        "passed": true
+      },
+      {
+        "name": "SKU totals reflect added schedule",
+        "passed": true
+      },
+      {
+        "name": "calendar Excel report receives added values",
+        "passed": true
+      },
+      {
+        "name": "sales count terminology unified",
+        "passed": true
+      },
+      {
+        "name": "duplicate clicks do not sum sales",
+        "passed": true
+      },
+      {
+        "name": "recipient and rate changes keep sales completion",
+        "passed": true
+      },
+      {
+        "name": "same orders reimported retain completion",
+        "passed": true
+      },
+      {
+        "name": "second settlement permits adding",
+        "passed": true
+      },
+      {
+        "name": "second settlement previews cumulative gross totals",
+        "passed": true
+      },
+      {
+        "name": "no on second settlement preserves first history",
+        "passed": true
+      },
+      {
+        "name": "second settlement adds without replacing first",
+        "passed": true
+      },
+      {
+        "name": "link history records individual contributions",
+        "passed": true
+      },
+      {
+        "name": "net settlement calculation unchanged after gross transfer",
+        "passed": true
+      },
+      {
+        "name": "monthly weekly SKU totals agree after second addition",
+        "passed": true
+      },
+      {
+        "name": "month Excel data has full cumulative totals",
+        "passed": true
+      },
+      {
+        "name": "week Excel data has full cumulative totals",
+        "passed": true
+      },
+      {
+        "name": "first source remains blocked after second source",
+        "passed": true
+      },
+      {
+        "name": "renamed first source cannot be re-added after second",
+        "passed": true
+      },
+      {
+        "name": "second source duplicate also blocked",
+        "passed": true
+      },
+      {
+        "name": "manual totals edit retains duplicate protection",
+        "passed": true
+      },
+      {
+        "name": "view applied schedule opens cumulative calendar selection",
+        "passed": true
+      },
+      {
+        "name": "different source resets apply state",
+        "passed": true
+      },
+      {
+        "name": "changing to applied source during confirmation cannot duplicate",
+        "passed": true
+      },
+      {
+        "name": "previous single-link history still blocks duplicates",
+        "passed": true
+      },
+      {
+        "name": "entered zero still asks addition and null uses zero",
+        "passed": true
+      },
+      {
+        "name": "partial existing sales preserve amount while adding incoming",
+        "passed": true
+      },
+      {
+        "name": "overflow is blocked without any write",
+        "passed": true
+      },
+      {
+        "name": "amount overflow is independently blocked",
+        "passed": true
+      },
+      {
+        "name": "cancelled schedule cannot receive settlement",
+        "passed": true
+      },
+      {
+        "name": "verification restores all source schedule records",
+        "passed": true
+      },
+      {
+        "name": "week navigation preserved",
+        "passed": true
+      },
+      {
+        "name": "month navigation preserved",
+        "passed": true
+      },
+      {
+        "name": "settlement viewport has no horizontal overflow",
+        "passed": true
+      },
+      {
+        "name": "settlement stays inside content width",
+        "passed": true
+      }
+    ]
+  },
+  "business": {
+    "passed": true,
+    "results": [
+      {
+        "name": "settlement viewport has no horizontal overflow",
+        "passed": true
+      },
+      {
+        "name": "settlement stays inside content width",
+        "passed": true
+      }
+    ]
+  },
+  "narrow": {
+    "passed": true,
+    "results": [
+      {
+        "name": "settlement viewport has no horizontal overflow",
+        "passed": true
+      },
+      {
+        "name": "settlement stays inside content width",
+        "passed": true
+      }
+    ]
+  },
+  "rate": {
+    "passed": true,
+    "results": [
+      {
+        "name": "settlement viewport has no horizontal overflow",
+        "passed": true
+      },
+      {
+        "name": "settlement stays inside content width",
+        "passed": true
+      }
+    ]
+  },
+  "link": {
+    "passed": true,
+    "results": [
+      {
+        "name": "mini popup fits viewport",
+        "passed": true
+      },
+      {
+        "name": "settlement viewport has no horizontal overflow",
+        "passed": true
+      },
+      {
+        "name": "settlement stays inside content width",
+        "passed": true
+      }
+    ]
+  },
+  "confirm": {
+    "passed": true,
+    "results": [
+      {
+        "name": "mini popup fits viewport",
+        "passed": true
+      },
+      {
+        "name": "all comparison columns fit dialog",
+        "passed": true
+      },
+      {
+        "name": "settlement viewport has no horizontal overflow",
+        "passed": true
+      },
+      {
+        "name": "settlement stays inside content width",
+        "passed": true
+      }
+    ]
+  },
+  "done": {
+    "passed": true,
+    "results": [
+      {
+        "name": "settlement viewport has no horizontal overflow",
+        "passed": true
+      },
+      {
+        "name": "settlement stays inside content width",
+        "passed": true
+      }
+    ]
+  },
+  "narrow-link": {
+    "passed": true,
+    "results": [
+      {
+        "name": "mini popup fits viewport",
+        "passed": true
+      },
+      {
+        "name": "settlement viewport has no horizontal overflow",
+        "passed": true
+      },
+      {
+        "name": "settlement stays inside content width",
+        "passed": true
+      }
+    ]
+  },
+  "add-confirm": {
+    "passed": true,
+    "results": [
+      {
+        "name": "mini popup fits viewport",
+        "passed": true
+      },
+      {
+        "name": "all comparison columns fit dialog",
+        "passed": true
+      },
+      {
+        "name": "settlement viewport has no horizontal overflow",
+        "passed": true
+      },
+      {
+        "name": "settlement stays inside content width",
+        "passed": true
+      }
+    ]
+  },
+  "add-done": {
+    "passed": true,
+    "results": [
+      {
+        "name": "settlement viewport has no horizontal overflow",
+        "passed": true
+      },
+      {
+        "name": "settlement stays inside content width",
+        "passed": true
+      }
+    ]
+  },
+  "narrow-add": {
+    "passed": true,
+    "results": [
+      {
+        "name": "mini popup fits viewport",
+        "passed": true
+      },
+      {
+        "name": "all comparison columns fit dialog",
+        "passed": true
+      },
+      {
+        "name": "settlement viewport has no horizontal overflow",
+        "passed": true
+      },
+      {
+        "name": "settlement stays inside content width",
+        "passed": true
+      }
+    ]
+  }
+}
