@@ -1,0 +1,39 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "name": "requested guidance text",
+      "ok": true
+    },
+    {
+      "name": "guide has no controls",
+      "ok": true
+    },
+    {
+      "name": "only popup controls recipient",
+      "ok": true
+    },
+    {
+      "name": "popup recipient controls preserved",
+      "ok": true
+    },
+    {
+      "name": "recipient guidance is static",
+      "ok": true
+    },
+    {
+      "name": "real schedules unchanged",
+      "ok": true
+    },
+    {
+      "name": "public data fictional only",
+      "ok": true
+    },
+    {
+      "name": "no private names in public",
+      "ok": true
+    }
+  ],
+  "browserQA": "unverified: local memory and browser runtime failures",
+  "syntaxScriptCount": 2
+}

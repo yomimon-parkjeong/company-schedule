@@ -34,7 +34,6 @@ function settlementStageFiles(files){
  settlementDropNotice(file.name+' · 수수료율 선택 대기');
  settlementOpenRate('import',file);
 }
-for(const button of document.querySelectorAll('[data-settle-type]'))button.onclick=()=>settlementSelectType(button.dataset.settleType);
 for(const radio of document.querySelectorAll('input[name="settleRate"]'))radio.onchange=()=>{settlementPendingRate=Number(radio.value);settlementUpdateRateContinue();};
 for(const radio of document.querySelectorAll('input[name="settleRateRecipient"]'))radio.onchange=()=>{settlementPendingRecipient=radio.value;settlementUpdateRateContinue();};
 $('settleImport').onclick=()=>{if(!settlementState.busy){$('settleFile').value='';$('settleFile').click();}};

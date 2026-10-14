@@ -135,9 +135,7 @@ function settlementCalculate(book,recipient,rate){
 }
 function settlementRender(){
  const state=settlementState,business=state.recipient==='business';
- for(const button of document.querySelectorAll('[data-settle-type]')){button.setAttribute('aria-pressed',String(button.dataset.settleType===state.recipient));button.disabled=state.busy;}
  $('settleImport').disabled=state.busy;$('settleDropZone').classList.toggle('is-busy',state.busy);$('settleDropZone').setAttribute('aria-busy',String(state.busy));
- $('settleTypeNote').textContent=!state.recipient?'정산 대상을 미리 선택하거나, 엑셀을 넣은 뒤 팝업에서 선택할 수 있습니다.':business?'사업자는 소득세·지방소득세만 공제하지 않습니다.':'일반 개인은 기존 방식의 소득세·지방소득세 3.3% 공제를 적용합니다.';
  $('settleResult').hidden=!state.book;$('settleEmpty').hidden=!!state.book;
  settlementRenderCalendarLink();
  if(!state.book)return;
@@ -160,11 +158,6 @@ function settlementRenderOrders(book){
  const fragment=document.createDocumentFragment();
  for(const row of book.rows){const tr=node('tr');if(row.excluded)tr.classList.add('excluded');for(let i=0;i<10;i++)tr.append(node('td',typeof row.values[i]==='number'?row.values[i].toLocaleString('ko-KR'):String(row.values[i])));fragment.append(tr);}
  $('settleOrderBody').replaceChildren(fragment);
-}
-function settlementSelectType(type){
- if(settlementState.busy||!Object.hasOwn(settlementRecipients,type))return;
- settlementState.recipient=type;settlementRender();
- if(settlementState.book)settlementNotice(settlementRecipients[type]+' 기준으로 지급액과 전달용 시트를 변경했습니다.');
 }
 async function settlementImportFile(file,rate,recipient=settlementState.recipient){
  if(!file)return;

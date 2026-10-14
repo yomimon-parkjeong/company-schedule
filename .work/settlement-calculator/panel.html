@@ -1,10 +1,15 @@
 <section id="settlementWorkspace" class="settlement-workspace" aria-labelledby="settlementTitle" hidden>
  <div class="page-head"><div><h1 id="settlementTitle">공구정산</h1><p class="subtitle">주문 엑셀을 불러와 수수료와 지급액을 계산합니다.</p></div><button id="backToSchedule" type="button">일정표로 돌아가기</button></div>
  <div class="settlement-setup">
-  <section class="settlement-step"><h2><span class="settlement-step-number">1</span> 정산 대상</h2><div class="settlement-type-options" role="group" aria-label="정산 대상 선택">
-   <button id="settleBusiness" type="button" data-settle-type="business" aria-pressed="false"><strong>사업자</strong><span>소득세·지방소득세 미공제</span></button>
-   <button id="settleIndividual" type="button" data-settle-type="individual" aria-pressed="false"><strong>일반 개인</strong><span>소득세·지방소득세 3.3% 공제</span></button>
-  </div><p id="settleTypeNote" class="settlement-help">먼저 정산 대상을 선택해주세요.</p></section>
+  <section class="settlement-step settlement-type-guide" aria-labelledby="settleTypeHeading">
+   <h2 id="settleTypeHeading"><span class="settlement-step-number">1</span> 정산 대상</h2>
+   <div class="settlement-type-explanation">
+    <p class="settlement-type-guide-title"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 11v6M12 7v.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><strong>정산 전 대상 유형 사전 확인필요</strong></p>
+    <p class="settlement-type-guide-intro">사업자 여부에 따라 세금 공제 방식이 달라집니다.</p>
+    <dl class="settlement-type-reference"><div><dt>사업자</dt><dd>소득세·지방소득세 미공제</dd></div><div><dt>일반 개인</dt><dd>소득세·지방소득세 3.3% 공제</dd></div></dl>
+    <p id="settleTypeNote" class="settlement-help">엑셀 파일을 넣은 뒤 중앙 팝업에서 대상 유형과 수수료율을 선택해주세요.</p>
+   </div>
+  </section>
   <section class="settlement-step settlement-upload-step"><h2><span class="settlement-step-number">2</span> 주문 엑셀</h2>
    <div id="settleDropZone" class="settlement-drop-zone" role="region" aria-labelledby="settleDropTitle" aria-describedby="settleDropHelp" aria-busy="false">
     <svg viewBox="0 0 48 48" width="48" height="48" fill="none" aria-hidden="true"><path d="M28 5H13a3 3 0 0 0-3 3v32a3 3 0 0 0 3 3h23a3 3 0 0 0 3-3V16L28 5Z" stroke="currentColor" stroke-width="2"/><path d="M28 5v11h11M24 35V22m-6 6 6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>

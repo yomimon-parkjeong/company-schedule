@@ -341,13 +341,13 @@
     },
     {
       "path": ".work/settlement-calculator/import-ui.js",
-      "bytes": 5950,
-      "sha256": "04c82a5c71beacceb151d6c96081530f22a2b185f60514764e1409d0c95a5249"
+      "bytes": 5813,
+      "sha256": "5dbf596670cc086873a439a4599b784b9d971ecd4d32a2332c49287b7d2afc18"
     },
     {
       "path": ".work/settlement-calculator/panel.html",
-      "bytes": 10837,
-      "sha256": "41c4326e0c8d333435277ac79772cb6e0c95a31ff96b10dc081118fa4c1ccf95"
+      "bytes": 11259,
+      "sha256": "dd5e042b4b4c23fb5c0ba5db5d50fa16520822616b51395994b982dc20475451"
     },
     {
       "path": ".work/settlement-calculator/prepare-template.py",
@@ -376,13 +376,13 @@
     },
     {
       "path": ".work/settlement-calculator/settlement.css",
-      "bytes": 10654,
-      "sha256": "c7a8ef9b8471126a4aab05eef2eb1cf849940ffc24e5ab7a2c3b048f1083593a"
+      "bytes": 11174,
+      "sha256": "fe292701b2232bb332b04328d4d0f7c8bbee0c5529988c2e67a4ce124f2662b7"
     },
     {
       "path": ".work/settlement-calculator/settlement.js",
-      "bytes": 24745,
-      "sha256": "2507f2020e643ed51db24363bcf3eadbf8e456c4f9186e5f945fe9b9ef23bce3"
+      "bytes": 23912,
+      "sha256": "b21f62b8efc70133b362a798e8da57c101c87d3a6cb904390a609de89cad09b1"
     },
     {
       "path": ".work/settlement-calculator/template.json",
@@ -441,8 +441,8 @@
     },
     {
       "path": "03_사내일정관리_시안.html",
-      "bytes": 3387555,
-      "sha256": "841d51beba9fbf0e67845741f00d28dc47ee520958606e27c5891e3e9949467c"
+      "bytes": 3387527,
+      "sha256": "7c10eac755874dcf31a60e8fcba972d098f227990ffa920985395ab6a9b04d80"
     },
     {
       "path": "09_이미지반영_일정데이터.json",
@@ -496,8 +496,8 @@
     },
     {
       "path": "38_공구정산_끌어넣기_중앙선택.md",
-      "bytes": 2578,
-      "sha256": "29ffdc414c5de9c16d456d671092244698415b34455e7d52af4b48aabc23b577"
+      "bytes": 3563,
+      "sha256": "f5f9f2490573278b2b21267e50c170afe85ee6610a3a60e750dfb06f1e271cf3"
     },
     {
       "path": "39_전달용엑셀_레이아웃.md",
@@ -506,8 +506,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 19494,
-      "sha256": "b82247cb83d9c24be4b97e65e4aadeb356a0c0f081aef0cb8cc06f560fb9e2f2"
+      "bytes": 20039,
+      "sha256": "313c8eb70f89f3b56d2dfe1b86f01d1e5a59d0ab7d7a8ca8e3d36673d24d9559"
     },
     {
       "path": "owners.seed.json",
@@ -558,6 +558,11 @@
       "path": "quality/settlement-export-layout-verification.json",
       "bytes": 7358,
       "sha256": "498fcdd2c2c4cc3a74576ad6f42c32cb993fb79860ba5daa4d60661272815259"
+    },
+    {
+      "path": "quality/settlement-type-guide-verification.json",
+      "bytes": 770,
+      "sha256": "f6d25cc5d3e400a876f955323026032513930f75f144c37eca64d9c8da74e2b1"
     },
     {
       "path": "quality/settlement-verification-results.json",
