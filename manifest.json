@@ -111,8 +111,8 @@
     },
     {
       "path": ".work/import2026/apply_settlement_calculator.py",
-      "bytes": 1736,
-      "sha256": "4ed2a32d8910c5e1428c558aba04119115266958c009dc32a7725be8297106ad"
+      "bytes": 1791,
+      "sha256": "b355102dd2f4e45e79a02ed5fdbea40cbc44b5cf61b46e41bf33a78bb1fb4ccc"
     },
     {
       "path": ".work/import2026/apply_sku_sales.py",
@@ -335,9 +335,14 @@
       "sha256": "9a02d2730b1e7a3722d5a918319b3849f1ec619b1d50c6f00399d3325f31ea50"
     },
     {
+      "path": ".work/settlement-calculator/import-ui.js",
+      "bytes": 5950,
+      "sha256": "04c82a5c71beacceb151d6c96081530f22a2b185f60514764e1409d0c95a5249"
+    },
+    {
       "path": ".work/settlement-calculator/panel.html",
-      "bytes": 9812,
-      "sha256": "8423cc3416b62cf24ca956ffdbd0176c23999caa949544b8371259c90b1e09fd"
+      "bytes": 10837,
+      "sha256": "41c4326e0c8d333435277ac79772cb6e0c95a31ff96b10dc081118fa4c1ccf95"
     },
     {
       "path": ".work/settlement-calculator/schedule-link-dialog.html",
@@ -361,13 +366,13 @@
     },
     {
       "path": ".work/settlement-calculator/settlement.css",
-      "bytes": 7328,
-      "sha256": "daaf60526ca4f14651310fff0135b1af4604d34701b0377ef63d0b2fcc212bc0"
+      "bytes": 10654,
+      "sha256": "c7a8ef9b8471126a4aab05eef2eb1cf849940ffc24e5ab7a2c3b048f1083593a"
     },
     {
       "path": ".work/settlement-calculator/settlement.js",
-      "bytes": 24765,
-      "sha256": "885224ec3c8be5f3bbd60e37dcadbda235bf6090fe42195b769e57564ef37f57"
+      "bytes": 23594,
+      "sha256": "2a4da7c7de9b39c1bb053c68142e7d1f392ca35500287579c92579654d81c1d9"
     },
     {
       "path": ".work/settlement-calculator/template.json",
@@ -426,8 +431,8 @@
     },
     {
       "path": "03_사내일정관리_시안.html",
-      "bytes": 3355394,
-      "sha256": "66ffe19ab942a157752e8c4eb0a86f5dd7cd19cd0ca891bd508b04833667f726"
+      "bytes": 3364522,
+      "sha256": "8ef3543212d5a71e084af3260db35d12d708b8e084f7166e0e1f0207cd7071b8"
     },
     {
       "path": "09_이미지반영_일정데이터.json",
@@ -480,9 +485,14 @@
       "sha256": "048d038f8d583b922a764bca6ec1903e0ecdadcae4143c27473ef9a707c5f161"
     },
     {
+      "path": "38_공구정산_끌어넣기_중앙선택.md",
+      "bytes": 2578,
+      "sha256": "29ffdc414c5de9c16d456d671092244698415b34455e7d52af4b48aabc23b577"
+    },
+    {
       "path": "AGENTS.md",
-      "bytes": 17757,
-      "sha256": "9777dcf50af87965f6a8014600fff4eeaab4f217aa3ba08303d2b844c107f745"
+      "bytes": 18622,
+      "sha256": "b6feed924e10cf82794bbff748764f804f4ecef206ea0a2fce127a169f5105ec"
     },
     {
       "path": "owners.seed.json",
@@ -523,6 +533,11 @@
       "path": "quality/schedule-popup-verification.json",
       "bytes": 2550,
       "sha256": "adec4388b99c7212544c28edc49a868a0f94a0090475783db052391e1dd5d414"
+    },
+    {
+      "path": "quality/settlement-drop-verification.json",
+      "bytes": 2528,
+      "sha256": "820385a872ccb1f44f6126ce69b3d7ad8a0fb9c6efafe6b581c97fec6538d540"
     },
     {
       "path": "quality/settlement-verification-results.json",

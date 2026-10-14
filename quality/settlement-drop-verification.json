@@ -1,0 +1,137 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "name": "settlement view ready",
+      "ok": true
+    },
+    {
+      "name": "drop area centered in workspace",
+      "ok": true
+    },
+    {
+      "name": "file button available before choosing recipient",
+      "ok": true
+    },
+    {
+      "name": "drag highlight visible",
+      "ok": true
+    },
+    {
+      "name": "drag highlight clears",
+      "ok": true
+    },
+    {
+      "name": "multiple files rejected",
+      "ok": true
+    },
+    {
+      "name": "wrong extension rejected",
+      "ok": true
+    },
+    {
+      "name": "empty file rejected",
+      "ok": true
+    },
+    {
+      "name": "drop opens native modal",
+      "ok": true
+    },
+    {
+      "name": "filename visible",
+      "ok": true
+    },
+    {
+      "name": "nothing imported before confirmation",
+      "ok": true
+    },
+    {
+      "name": "rate has no default",
+      "ok": true
+    },
+    {
+      "name": "fee popup centered",
+      "ok": true
+    },
+    {
+      "name": "recipient required",
+      "ok": true
+    },
+    {
+      "name": "explicit selections enable import",
+      "ok": true
+    },
+    {
+      "name": "import busy after confirmation",
+      "ok": true
+    },
+    {
+      "name": "second drop blocked while reading",
+      "ok": true
+    },
+    {
+      "name": "dropped workbook imported",
+      "ok": true
+    },
+    {
+      "name": "recipient and selected rate applied",
+      "ok": true
+    },
+    {
+      "name": "gross and exclusion rules unchanged",
+      "ok": true
+    },
+    {
+      "name": "individual calculation unchanged",
+      "ok": true
+    },
+    {
+      "name": "preview updated",
+      "ok": true
+    },
+    {
+      "name": "cancel preserves prior settlement",
+      "ok": true
+    },
+    {
+      "name": "cancel clears staged file",
+      "ok": true
+    },
+    {
+      "name": "picker uses same fee popup",
+      "ok": true
+    },
+    {
+      "name": "each import requires new rate",
+      "ok": true
+    },
+    {
+      "name": "picker import uses requested criteria",
+      "ok": true
+    },
+    {
+      "name": "business tax disabled",
+      "ok": true
+    },
+    {
+      "name": "rate change also centered",
+      "ok": true
+    },
+    {
+      "name": "rate change updates existing workbook",
+      "ok": true
+    },
+    {
+      "name": "bad workbook preserves previous result",
+      "ok": true
+    },
+    {
+      "name": "failed read reports error",
+      "ok": true
+    },
+    {
+      "name": "settlement export still generated",
+      "ok": true
+    }
+  ]
+}

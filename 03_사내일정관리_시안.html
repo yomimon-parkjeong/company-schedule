@@ -194,6 +194,39 @@ input[type=number]{border:1px solid #d5dce5;border-radius:5px;padding:7px 10px;w
 @media(max-width:1000px){.settlement-kpis{grid-template-columns:repeat(2,1fr)}.settlement-calculation-grid{grid-template-columns:1fr}.settlement-setup{grid-template-columns:1fr}.settlement-step{padding:18px}}@media(max-width:600px){.settlement-result{padding:16px}.settlement-kpis{gap:8px}.settlement-kpis>div{padding:12px}.settlement-kpis strong{font-size:19px}.settlement-export{align-items:stretch;flex-direction:column}.settlement-calculation th,.settlement-calculation td{padding:10px 5px;font-size:12px}.settlement-campaign-label{align-items:flex-start;flex-direction:column;gap:7px}.settlement-campaign-label input{width:100%;max-width:none}.settlement-rate-dialog{inset:auto 16px 16px 16px;margin:0 auto}.settlement-type-options button{padding:11px}.settlement-type-options button span{font-size:11px}.settlement-result-head{align-items:center}}
 
 .settlement-calculation{min-width:0}.settlement-calculation-grid>*{min-width:0}.settlement-workspace button:disabled{opacity:.5;cursor:not-allowed}.settlement-campaign-label input{width:min(500px,100%)}
+/* Centered Excel drop area and import options. */
+.settlement-setup{grid-template-columns:minmax(0,1fr);max-width:960px;margin:0 auto}
+.settlement-upload-step{padding:20px}
+.settlement-drop-zone{border:2px dashed #9cb9dd;border-radius:10px;padding:32px 20px;text-align:center;background:#f7faff;color:#245fc5;transition:background .15s,border-color .15s,box-shadow .15s}
+.settlement-drop-zone>svg{display:block;margin:0 auto 12px}
+.settlement-drop-zone h3{font-size:19px;color:#1e3a5f;margin:0 0 9px}
+.settlement-drop-zone>p:not(.settlement-drop-status){color:#526175;font-size:13px;line-height:1.7;margin:0 0 18px}
+.settlement-drop-zone .primary{padding:10px 20px}
+.settlement-drop-format{display:block;font-size:11px;color:#64748b;margin-top:12px}
+.settlement-drop-status{margin:10px 0 0;font-size:12px;line-height:1.7;color:#526175;overflow-wrap:anywhere}
+.settlement-drop-status.error{color:#b91c1c;font-weight:600}
+.settlement-drop-zone.is-dragging{border-color:#245fc5;background:#e6efff;box-shadow:0 0 0 4px #dce9ff}
+.settlement-drop-zone.is-busy{opacity:.65}
+#settleRateDialog{position:fixed;inset:0;margin:auto;width:min(480px,calc(100vw - 32px));height:fit-content;max-height:calc(100dvh - 32px);overflow:auto;padding:24px;animation:settlement-rate-enter .18s ease-out}
+#settleRateDialog::backdrop{background:#17283b80}
+#settleRateDialog .settlement-rate-dialog-head h2{font-size:19px}
+#settleRateDialog .settlement-rate-file{padding:10px 12px;background:#f1f5fa;border:1px solid #d8e1ee;border-radius:5px;color:#243e5f;font-size:13px;font-weight:600;overflow-wrap:anywhere}
+.settlement-rate-recipient{display:grid;grid-template-columns:1fr 1fr;gap:10px;border:0;padding:0;margin:18px 0}
+.settlement-rate-recipient legend,.settlement-rate-label{color:#40516a;font-size:12px;font-weight:700;padding:0;margin:0 0 9px}
+.settlement-rate-recipient label{cursor:pointer;position:relative}
+.settlement-rate-recipient input{position:absolute;opacity:0;width:1px;height:1px}
+.settlement-rate-recipient span{display:block;border:2px solid #d5dfec;border-radius:5px;text-align:center;padding:11px 5px}
+.settlement-rate-recipient strong{display:block;font-size:14px}
+.settlement-rate-recipient small{display:block;font-size:11px;margin-top:3px;color:#526175}
+.settlement-rate-recipient input:checked+span{border-color:#245fc5;background:#edf4ff;color:#1d4ed8}
+.settlement-rate-recipient input:focus-visible+span{outline:3px solid #93c5fd;outline-offset:2px}
+#settleRateDialog .settlement-rate-choices{margin-top:0}
+#settleRateDialog .settlement-rate-choices span{font-size:24px;padding:18px 3px}
+#settleRateDialog .settlement-rate-dialog-actions{padding-top:14px;border-top:1px solid #dbe3ed}
+@keyframes settlement-rate-enter{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+@media(max-width:600px){.settlement-upload-step{padding:15px}.settlement-drop-zone{padding:26px 14px}.settlement-drop-zone h3{font-size:17px}#settleRateDialog{inset:0;margin:auto;padding:20px;width:calc(100vw - 24px);max-height:calc(100dvh - 24px)}#settleRateDialog .settlement-rate-dialog-head h2{font-size:17px}.settlement-rate-dialog-actions button{font-size:12px}}
+@media(prefers-reduced-motion:reduce){#settleRateDialog{animation:none}.settlement-drop-zone{transition:none}}
+
 
 .settlement-calendar-link{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:-7px 0 22px}.settlement-calendar-link>p{width:100%;margin:0}.settlement-calendar-link button{display:inline-flex;gap:7px;align-items:center;font-size:13px}.settlement-calendar-link button[hidden]{display:none}.settlement-calendar-link button.is-applied:disabled{background:#ecfdf5;color:#166534;border-color:#86c9a3;opacity:1;cursor:default}.settlement-calendar-link .just-applied{animation:settlement-applied-pulse .85s ease-in-out 2}@keyframes settlement-applied-pulse{0%,100%{box-shadow:0 0 0 0 #22a46800;transform:scale(1)}50%{box-shadow:0 0 0 6px #22a46822;transform:scale(1.025)}}
 .settlement-calendar-dialog{width:min(970px,calc(100vw - 40px));max-height:90vh;padding:22px;border:1px solid #bacbe0;border-radius:9px;box-sizing:border-box;color:#193653;box-shadow:0 16px 55px #10223a33;overflow:auto}.settlement-calendar-dialog::backdrop{background:#17263f66}.settlement-calendar-dialog-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}.settlement-calendar-dialog h2{font-size:19px;margin:0}.settlement-calendar-dialog-head p{margin:6px 0 0;color:#526175;font-size:12px}.settlement-calendar-dialog-head>button{font-size:22px;padding:0 9px;flex-shrink:0}.settlement-link-values{display:flex;gap:20px;flex-wrap:wrap;background:#eff6ff;border:1px solid #c8dbf5;border-radius:5px;padding:13px 16px;margin-top:18px;font-size:13px}.settlement-link-values strong{margin-left:6px;color:#164bb4;font-size:18px}.settlement-link-campaign{font-size:12px;color:#526175;overflow-wrap:anywhere;margin:10px 0}.settlement-link-error{font-size:12px;line-height:1.6;color:#b91c1c;margin:7px 0}.settlement-link-error:empty{display:none}.settlement-mini-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:16px 0 0}.settlement-mini-month{display:flex;align-items:center;gap:6px}.settlement-mini-month input{font-size:15px;font-weight:700;width:162px;min-width:0}.settlement-mini-month button{font-size:20px;padding:3px 12px}.settlement-mini-toolbar>input{width:245px;max-width:100%;font-size:12px}.settlement-mini-scroll{overflow:auto;margin-top:11px;border:1px solid #cedaeb;border-radius:5px}.settlement-mini-calendar{min-width:560px}.settlement-mini-weekdays,.settlement-mini-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}.settlement-mini-weekdays{background:#edf2f8;font-size:12px;text-align:center;padding:9px 0}.settlement-mini-week{border-top:1px solid #cedaeb;padding-bottom:8px;background:linear-gradient(90deg,#f8fafc 14.285%,#fff 14.285%,#fff 85.715%,#f8fafc 85.715%)}.settlement-mini-days>div{min-height:34px;border-right:1px solid #e4eaf3;padding:7px 8px;font-size:12px;box-sizing:border-box}.settlement-mini-days>div:last-child{border-right:0}.settlement-mini-days small{display:block;font-size:9px;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.settlement-mini-calendar .sunday,.settlement-mini-calendar .holiday{color:#c62828}.settlement-mini-calendar .saturday{color:#2769c4}.settlement-mini-days .outside{opacity:.4}.settlement-mini-events{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px 2px;padding:1px 3px;min-height:36px}.settlement-mini-event{padding:5px 6px;text-align:left;min-width:0;overflow:hidden;border:1px solid #ccd8e7;border-left:4px solid var(--schedule-color);border-radius:4px;background:#fff;color:#243954;font-size:11px}.settlement-mini-event strong,.settlement-mini-event small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.settlement-mini-event small{font-size:9px;color:#526175;margin-top:3px}.settlement-mini-event.matched{background:#eff6ff;outline:1px solid #2563eb;outline-offset:-1px}.settlement-mini-event:hover,.settlement-mini-event:focus-visible{background:#dfeeff;border-color:#2563eb;outline:2px solid #2563eb;outline-offset:0}.settlement-calendar-dialog h3{font-size:18px;line-height:1.6;margin:24px 0 14px}.settlement-link-target{display:flex;flex-direction:column;gap:7px;padding:17px;background:#f3f6fa;border:1px solid #d9e3ef;border-radius:5px}.settlement-link-target strong{font-size:16px}.settlement-link-target span{font-size:12px;color:#526175}.settlement-link-comparison{width:100%;min-width:0;border-collapse:collapse;table-layout:fixed;font-size:14px;margin:24px 0}.settlement-link-comparison th,.settlement-link-comparison td{padding:13px 12px;border-bottom:1px solid #d5dfed;text-align:right;overflow-wrap:anywhere;line-height:1.6}.settlement-link-comparison thead th{font-size:12px;background:#edf2f8;color:#526175}.settlement-link-comparison th:first-child{text-align:left;width:22%}.settlement-link-comparison tbody th{font-size:13px;font-weight:500}.settlement-link-comparison td:first-of-type{color:#64748b}.settlement-link-comparison th:last-child,.settlement-link-comparison td:last-child{background:#eff6ff}.settlement-link-comparison strong{color:#164bb4}.settlement-calendar-dialog #settleCalendarConfirm>p{font-size:12px;line-height:1.7;color:#526175}.settlement-link-confirm-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:22px}.settlement-calendar-dialog [hidden]{display:none!important}
@@ -297,10 +330,18 @@ input[type=number]{border:1px solid #d5dce5;border-radius:5px;padding:7px 10px;w
    <button id="settleBusiness" type="button" data-settle-type="business" aria-pressed="false"><strong>사업자</strong><span>소득세·지방소득세 미공제</span></button>
    <button id="settleIndividual" type="button" data-settle-type="individual" aria-pressed="false"><strong>일반 개인</strong><span>소득세·지방소득세 3.3% 공제</span></button>
   </div><p id="settleTypeNote" class="settlement-help">먼저 정산 대상을 선택해주세요.</p></section>
-  <section class="settlement-step"><h2><span class="settlement-step-number">2</span> 주문 엑셀</h2><p class="settlement-help">불러오기 전에 수수료율 10%·15%·20% 중 하나를 선택합니다.</p><button id="settleImport" type="button" class="primary" disabled>엑셀 넣기</button><input id="settleFile" type="file" accept=".xlsx" hidden><p id="settleFileName" class="settlement-file-name">선택한 파일 없음</p></section>
+  <section class="settlement-step settlement-upload-step"><h2><span class="settlement-step-number">2</span> 주문 엑셀</h2>
+   <div id="settleDropZone" class="settlement-drop-zone" role="region" aria-labelledby="settleDropTitle" aria-describedby="settleDropHelp" aria-busy="false">
+    <svg viewBox="0 0 48 48" width="48" height="48" fill="none" aria-hidden="true"><path d="M28 5H13a3 3 0 0 0-3 3v32a3 3 0 0 0 3 3h23a3 3 0 0 0 3-3V16L28 5Z" stroke="currentColor" stroke-width="2"/><path d="M28 5v11h11M24 35V22m-6 6 6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <h3 id="settleDropTitle">엑셀 파일을 여기에 끌어 놓으세요</h3><p id="settleDropHelp">파일을 넣으면 화면 중앙에서 정산 대상과 수수료율을 선택합니다.</p>
+    <button id="settleImport" type="button" class="primary">또는 엑셀 파일 선택</button><input id="settleFile" type="file" accept=".xlsx" hidden>
+    <span class="settlement-drop-format">.xlsx · 파일 1개 · 최대 20 MB</span>
+    <p id="settleDropStatus" class="settlement-drop-status" role="status" aria-live="polite">엑셀을 여기에 끌어 놓거나 파일을 선택해주세요.</p>
+   </div><p id="settleFileName" class="settlement-file-name">불러온 파일 없음</p>
+  </section>
  </div>
  <p id="settleMessage" class="settlement-message" role="status" aria-live="polite"></p>
- <section id="settleEmpty" class="settlement-start"><svg viewBox="0 0 40 40" width="40" height="40" fill="none" aria-hidden="true"><rect x="9" y="4" width="23" height="32" rx="4" stroke="currentColor" stroke-width="2"/><path d="M14 12h13M14 19h5M24 19h3M14 25h5M24 25h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><h2>정산할 엑셀을 넣어주세요</h2><p>주문 내역과 선택한 수수료율로 전달용 시트를 만듭니다.</p></section>
+ <div id="settleEmpty" class="sr-only">불러온 정산 내역이 없습니다.</div>
  <section id="settleResult" class="settlement-result" hidden>
   <div class="settlement-result-head"><div><h2>정산 미리보기</h2><p id="settlePeriod" class="settlement-help"></p></div><button id="settleRateChange" type="button">수수료율 변경</button></div>
   <label class="settlement-campaign-label">공구명<input id="settleCampaign" type="text" maxlength="80" placeholder="전달용 시트에 표시할 공구명"></label>
@@ -326,7 +367,7 @@ input[type=number]{border:1px solid #d5dce5;border-radius:5px;padding:7px 10px;w
   <div class="settlement-export"><div><strong id="settleSheetName"></strong><p id="settleOutputNote" class="settlement-help"></p></div><button id="settleDownload" type="button" class="primary">전달용 엑셀 다운로드</button></div>
   <details class="settlement-orders"><summary>주문 상세 보기 <span id="settleDetailCount"></span></summary><div class="settlement-source-table"><table><thead id="settleOrderHead"></thead><tbody id="settleOrderBody"></tbody></table></div></details>
  </section>
- <dialog id="settleRateDialog" class="settlement-rate-dialog" aria-labelledby="settleRateTitle" aria-describedby="settleRateHelp"><div class="settlement-rate-dialog-head"><h2 id="settleRateTitle">수수료율을 선택해주세요</h2><button id="settleRateClose" type="button" aria-label="수수료율 선택 닫기">×</button></div><p id="settleRateHelp">이번 공동구매에 적용할 수수료율입니다.</p><fieldset class="settlement-rate-choices"><legend class="sr-only">수수료율</legend><label><input type="radio" name="settleRate" value="10"><span>10%</span></label><label><input type="radio" name="settleRate" value="15"><span>15%</span></label><label><input type="radio" name="settleRate" value="20"><span>20%</span></label></fieldset><div class="settlement-rate-dialog-actions"><button id="settleRateCancel" type="button">취소</button><button id="settleRateContinue" type="button" class="primary" disabled>선택 후 엑셀 넣기</button></div></dialog>
+ <dialog id="settleRateDialog" class="settlement-rate-dialog" aria-labelledby="settleRateTitle" aria-describedby="settleRateHelp"><div class="settlement-rate-dialog-head"><h2 id="settleRateTitle">수수료율을 선택해주세요</h2><button id="settleRateClose" type="button" aria-label="수수료율 선택 닫기">×</button></div><p id="settleRateFile" class="settlement-rate-file"></p><p id="settleRateHelp">이번 공동구매에 적용할 수수료율입니다.</p><fieldset id="settleRateRecipientGroup" class="settlement-rate-recipient"><legend>정산 대상</legend><label><input type="radio" name="settleRateRecipient" value="business"><span><strong>사업자</strong><small>3.3% 미공제</small></span></label><label><input type="radio" name="settleRateRecipient" value="individual"><span><strong>일반 개인</strong><small>3.3% 공제</small></span></label></fieldset><p class="settlement-rate-label">공구 수수료율</p><fieldset class="settlement-rate-choices"><legend class="sr-only">수수료율</legend><label><input type="radio" name="settleRate" value="10"><span>10%</span></label><label><input type="radio" name="settleRate" value="15"><span>15%</span></label><label><input type="radio" name="settleRate" value="20"><span>20%</span></label></fieldset><div class="settlement-rate-dialog-actions"><button id="settleRateCancel" type="button">취소</button><button id="settleRateContinue" type="button" class="primary" disabled>선택 후 정산 불러오기</button></div></dialog>
 
  <dialog id="settleCalendarDialog" class="settlement-calendar-dialog" aria-labelledby="settleCalendarTitle">
   <div class="settlement-calendar-dialog-head"><div><h2 id="settleCalendarTitle">매출을 반영할 일정 선택</h2><p>닉네임·상품·기간·담당자를 확인해주세요.</p></div><button id="settleCalendarClose" type="button" aria-label="일정 선택 닫기">×</button></div>
@@ -102666,8 +102707,8 @@ function settlementCalculate(book,recipient,rate){
 function settlementRender(){
  const state=settlementState,business=state.recipient==='business';
  for(const button of document.querySelectorAll('[data-settle-type]')){button.setAttribute('aria-pressed',String(button.dataset.settleType===state.recipient));button.disabled=state.busy;}
- $('settleImport').disabled=!state.recipient||state.busy;
- $('settleTypeNote').textContent=!state.recipient?'먼저 정산 대상을 선택해주세요.':business?'사업자는 소득세·지방소득세만 공제하지 않습니다.':'일반 개인은 기존 방식의 소득세·지방소득세 3.3% 공제를 적용합니다.';
+ $('settleImport').disabled=state.busy;$('settleDropZone').classList.toggle('is-busy',state.busy);$('settleDropZone').setAttribute('aria-busy',String(state.busy));
+ $('settleTypeNote').textContent=!state.recipient?'정산 대상을 미리 선택하거나, 엑셀을 넣은 뒤 팝업에서 선택할 수 있습니다.':business?'사업자는 소득세·지방소득세만 공제하지 않습니다.':'일반 개인은 기존 방식의 소득세·지방소득세 3.3% 공제를 적용합니다.';
  $('settleResult').hidden=!state.book;$('settleEmpty').hidden=!!state.book;
  settlementRenderCalendarLink();
  if(!state.book)return;
@@ -102696,22 +102737,16 @@ function settlementSelectType(type){
  settlementState.recipient=type;settlementRender();
  if(settlementState.book)settlementNotice(settlementRecipients[type]+' 기준으로 지급액과 전달용 시트를 변경했습니다.');
 }
-function settlementOpenRate(action='import'){
- if(!settlementState.recipient||settlementState.busy)return;
- settlementRateAction=action;settlementPendingRate=null;
- for(const input of document.querySelectorAll('input[name="settleRate"]'))input.checked=false;
- $('settleRateContinue').disabled=true;$('settleRateContinue').textContent=action==='import'?'선택 후 엑셀 넣기':'수수료율 적용';
- $('settleRateDialog').showModal();document.querySelector('input[name="settleRate"]').focus();
-}
-async function settlementImportFile(file,rate){
+async function settlementImportFile(file,rate,recipient=settlementState.recipient){
  if(!file)return;
  const previous=settlementState.book;
  try{
+  if(!Object.hasOwn(settlementRecipients,recipient)||![10,15,20].includes(rate))throw new Error('정산 대상과 수수료율을 선택해주세요.');
   if(!/\.xlsx$/i.test(file.name))throw new Error('.xlsx 형식의 주문 엑셀을 넣어주세요.');
   if(file.size>20000000)throw new Error('파일이 너무 큽니다. 공구별로 나누어 넣어주세요.');
   settlementState.busy=true;settlementRender();settlementNotice('엑셀 주문 내역을 확인하고 있습니다.');
   const book=await settlementReadWorkbook(new Uint8Array(await file.arrayBuffer()));
-  book.filename=file.name;settlementState.book=book;settlementState.rate=rate;
+  book.filename=file.name;settlementState.book=book;settlementState.rate=rate;settlementState.recipient=recipient;
   $('settleFileName').textContent=file.name;
   $('settleCampaign').value=file.name.replace(/\.xlsx$/i,'').replace(/_공구.*$/,'')||'공동구매';
   settlementRenderOrders(book);settlementNotice('주문 상세 '+book.rows.length+'행을 불러왔습니다. 수수료 '+rate+'%를 적용했습니다.');
@@ -102758,18 +102793,77 @@ function settlementDownload(){
  try{const result=settlementWorkbook(),url=URL.createObjectURL(new Blob([result.bytes],{type:settlementXlsxMime})),link=node('a');link.href=url;link.download=result.filename;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);settlementNotice(result.sheetName+' 시트를 다운로드했습니다. 지급액 '+settlementMoney(result.model.payment));}
  catch(error){settlementNotice(error.message,true);}
 }
+/* A file is staged locally; calculation starts only after confirming recipient and rate. */
+let settlementPendingFile=null,settlementPendingRecipient=null;
+function settlementDropNotice(message,error=false){
+ $('settleDropStatus').textContent=message;$('settleDropStatus').classList.toggle('error',error);
+}
+function settlementUpdateRateContinue(){
+ const valid=[10,15,20].includes(settlementPendingRate)&&Object.hasOwn(settlementRecipients,settlementPendingRecipient);
+ $('settleRateContinue').disabled=!valid||settlementState.busy;
+ $('settleRateContinue').textContent=settlementRateAction==='change'?'수수료율 적용':valid?settlementPendingRate+'%로 정산 불러오기':'선택 후 정산 불러오기';
+}
+function settlementOpenRate(action='import',file=null){
+ if(settlementState.busy||$('settleRateDialog').open)return;
+ if(action==='change'&&!settlementState.book)return;
+ if(action==='import'&&!file){$('settleFile').value='';$('settleFile').click();return;}
+ settlementRateAction=action;settlementPendingFile=file;settlementPendingRate=null;settlementPendingRecipient=settlementState.recipient;
+ for(const input of document.querySelectorAll('input[name="settleRate"]'))input.checked=false;
+ for(const input of document.querySelectorAll('input[name="settleRateRecipient"]'))input.checked=input.value===settlementPendingRecipient;
+ $('settleRateRecipientGroup').hidden=action==='change';
+ $('settleRateFile').textContent=file?file.name:settlementState.book.filename;
+ $('settleRateHelp').textContent=action==='change'?'현재 정산에 적용할 수수료율을 선택해주세요.':'정산 대상과 수수료율을 확인하면 선택한 엑셀을 불러옵니다.';
+ settlementUpdateRateContinue();$('settleRateDialog').showModal();
+ const first=settlementPendingRecipient?document.querySelector('input[name="settleRate"]'):document.querySelector('input[name="settleRateRecipient"]');
+ first.focus({preventScroll:true});
+}
+function settlementStageFiles(files){
+ $('settleDropZone').classList.remove('is-dragging');
+ if(settlementState.busy){settlementDropNotice('엑셀을 읽고 있습니다. 잠시 후 다시 넣어주세요.',true);return;}
+ if($('settleRateDialog').open)return;
+ if(files.length!==1){settlementDropNotice('정산할 엑셀 파일을 한 개씩 넣어주세요.',true);return;}
+ const file=files[0];
+ if(!/\.xlsx$/i.test(file.name)){settlementDropNotice('.xlsx 형식의 주문 엑셀을 넣어주세요.',true);return;}
+ if(!file.size){settlementDropNotice('비어 있는 파일입니다. 엑셀 내용을 확인해주세요.',true);return;}
+ if(file.size>20000000){settlementDropNotice('파일이 너무 큽니다. 20 MB 이하로 나누어 넣어주세요.',true);return;}
+ settlementDropNotice(file.name+' · 수수료율 선택 대기');
+ settlementOpenRate('import',file);
+}
 for(const button of document.querySelectorAll('[data-settle-type]'))button.onclick=()=>settlementSelectType(button.dataset.settleType);
-for(const radio of document.querySelectorAll('input[name="settleRate"]'))radio.onchange=()=>{settlementPendingRate=Number(radio.value);$('settleRateContinue').disabled=false;};
-$('settleImport').onclick=()=>settlementOpenRate('import');$('settleRateChange').onclick=()=>settlementOpenRate('change');
+for(const radio of document.querySelectorAll('input[name="settleRate"]'))radio.onchange=()=>{settlementPendingRate=Number(radio.value);settlementUpdateRateContinue();};
+for(const radio of document.querySelectorAll('input[name="settleRateRecipient"]'))radio.onchange=()=>{settlementPendingRecipient=radio.value;settlementUpdateRateContinue();};
+$('settleImport').onclick=()=>{if(!settlementState.busy){$('settleFile').value='';$('settleFile').click();}};
+$('settleRateChange').onclick=()=>settlementOpenRate('change');
 $('settleRateClose').onclick=$('settleRateCancel').onclick=()=>$('settleRateDialog').close();
-$('settleRateContinue').onclick=()=>{
- if(![10,15,20].includes(settlementPendingRate))return;
- $('settleRateDialog').close();
- if(settlementRateAction==='change'){settlementState.rate=settlementPendingRate;settlementRender();settlementNotice('수수료 '+settlementPendingRate+'%를 적용했습니다.');}
- else{$('settleFile').value='';$('settleFile').click();}
+$('settleRateDialog').addEventListener('close',()=>{
+ if($('settleRateDialog').open)return;
+ settlementPendingFile=null;settlementPendingRate=null;settlementPendingRecipient=null;
+ if(!settlementState.busy)settlementDropNotice('엑셀을 여기에 끌어 놓거나 파일을 선택해주세요.');
+});
+$('settleRateContinue').onclick=async()=>{
+ if(settlementState.busy||![10,15,20].includes(settlementPendingRate)||!Object.hasOwn(settlementRecipients,settlementPendingRecipient))return;
+ const action=settlementRateAction,rate=settlementPendingRate,recipient=settlementPendingRecipient,file=settlementPendingFile;
+ if(action==='import'&&!file)return;
+ $('settleRateContinue').disabled=true;$('settleRateDialog').close();
+ if(action==='change'){
+  settlementState.rate=rate;settlementRender();settlementNotice('수수료 '+rate+'%를 적용했습니다.');
+ }else{
+  await settlementImportFile(file,rate,recipient);
+  settlementDropNotice(settlementState.book?.filename===file.name?'다른 엑셀로 교체하려면 여기에 끌어 놓으세요.':'엑셀을 여기에 끌어 놓거나 파일을 선택해주세요.');
+ }
 };
-$('settleFile').onchange=()=>settlementImportFile($('settleFile').files[0],settlementPendingRate);
+$('settleFile').onchange=event=>{const files=Array.from(event.target.files);event.target.value='';if(files.length)settlementStageFiles(files);};
+const settleDropZone=$('settleDropZone');
+settleDropZone.addEventListener('dragenter',event=>{event.preventDefault();if(!settlementState.busy)settleDropZone.classList.add('is-dragging');});
+settleDropZone.addEventListener('dragover',event=>{event.preventDefault();if(event.dataTransfer)event.dataTransfer.dropEffect=settlementState.busy?'none':'copy';});
+settleDropZone.addEventListener('dragleave',event=>{if(!settleDropZone.contains(event.relatedTarget))settleDropZone.classList.remove('is-dragging');});
+settleDropZone.addEventListener('drop',event=>{event.preventDefault();event.stopPropagation();settlementStageFiles(Array.from(event.dataTransfer?.files||[]));});
+$('settlementWorkspace').addEventListener('dragover',event=>{if(event.dataTransfer?.types.includes('Files'))event.preventDefault();});
+$('settlementWorkspace').addEventListener('drop',event=>{
+ if(!event.dataTransfer?.files.length)return;event.preventDefault();settlementStageFiles(Array.from(event.dataTransfer.files));
+});
 $('settleDownload').onclick=settlementDownload;
+
 
 /* A settlement writes calendar sales only after schedule selection and explicit confirmation. */
 const settlementCalendarState={year:2026,month:0,pending:null,linkedId:null};

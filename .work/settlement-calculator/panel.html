@@ -5,10 +5,18 @@
    <button id="settleBusiness" type="button" data-settle-type="business" aria-pressed="false"><strong>사업자</strong><span>소득세·지방소득세 미공제</span></button>
    <button id="settleIndividual" type="button" data-settle-type="individual" aria-pressed="false"><strong>일반 개인</strong><span>소득세·지방소득세 3.3% 공제</span></button>
   </div><p id="settleTypeNote" class="settlement-help">먼저 정산 대상을 선택해주세요.</p></section>
-  <section class="settlement-step"><h2><span class="settlement-step-number">2</span> 주문 엑셀</h2><p class="settlement-help">불러오기 전에 수수료율 10%·15%·20% 중 하나를 선택합니다.</p><button id="settleImport" type="button" class="primary" disabled>엑셀 넣기</button><input id="settleFile" type="file" accept=".xlsx" hidden><p id="settleFileName" class="settlement-file-name">선택한 파일 없음</p></section>
+  <section class="settlement-step settlement-upload-step"><h2><span class="settlement-step-number">2</span> 주문 엑셀</h2>
+   <div id="settleDropZone" class="settlement-drop-zone" role="region" aria-labelledby="settleDropTitle" aria-describedby="settleDropHelp" aria-busy="false">
+    <svg viewBox="0 0 48 48" width="48" height="48" fill="none" aria-hidden="true"><path d="M28 5H13a3 3 0 0 0-3 3v32a3 3 0 0 0 3 3h23a3 3 0 0 0 3-3V16L28 5Z" stroke="currentColor" stroke-width="2"/><path d="M28 5v11h11M24 35V22m-6 6 6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <h3 id="settleDropTitle">엑셀 파일을 여기에 끌어 놓으세요</h3><p id="settleDropHelp">파일을 넣으면 화면 중앙에서 정산 대상과 수수료율을 선택합니다.</p>
+    <button id="settleImport" type="button" class="primary">또는 엑셀 파일 선택</button><input id="settleFile" type="file" accept=".xlsx" hidden>
+    <span class="settlement-drop-format">.xlsx · 파일 1개 · 최대 20 MB</span>
+    <p id="settleDropStatus" class="settlement-drop-status" role="status" aria-live="polite">엑셀을 여기에 끌어 놓거나 파일을 선택해주세요.</p>
+   </div><p id="settleFileName" class="settlement-file-name">불러온 파일 없음</p>
+  </section>
  </div>
  <p id="settleMessage" class="settlement-message" role="status" aria-live="polite"></p>
- <section id="settleEmpty" class="settlement-start"><svg viewBox="0 0 40 40" width="40" height="40" fill="none" aria-hidden="true"><rect x="9" y="4" width="23" height="32" rx="4" stroke="currentColor" stroke-width="2"/><path d="M14 12h13M14 19h5M24 19h3M14 25h5M24 25h3" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><h2>정산할 엑셀을 넣어주세요</h2><p>주문 내역과 선택한 수수료율로 전달용 시트를 만듭니다.</p></section>
+ <div id="settleEmpty" class="sr-only">불러온 정산 내역이 없습니다.</div>
  <section id="settleResult" class="settlement-result" hidden>
   <div class="settlement-result-head"><div><h2>정산 미리보기</h2><p id="settlePeriod" class="settlement-help"></p></div><button id="settleRateChange" type="button">수수료율 변경</button></div>
   <label class="settlement-campaign-label">공구명<input id="settleCampaign" type="text" maxlength="80" placeholder="전달용 시트에 표시할 공구명"></label>
@@ -34,7 +42,7 @@
   <div class="settlement-export"><div><strong id="settleSheetName"></strong><p id="settleOutputNote" class="settlement-help"></p></div><button id="settleDownload" type="button" class="primary">전달용 엑셀 다운로드</button></div>
   <details class="settlement-orders"><summary>주문 상세 보기 <span id="settleDetailCount"></span></summary><div class="settlement-source-table"><table><thead id="settleOrderHead"></thead><tbody id="settleOrderBody"></tbody></table></div></details>
  </section>
- <dialog id="settleRateDialog" class="settlement-rate-dialog" aria-labelledby="settleRateTitle" aria-describedby="settleRateHelp"><div class="settlement-rate-dialog-head"><h2 id="settleRateTitle">수수료율을 선택해주세요</h2><button id="settleRateClose" type="button" aria-label="수수료율 선택 닫기">×</button></div><p id="settleRateHelp">이번 공동구매에 적용할 수수료율입니다.</p><fieldset class="settlement-rate-choices"><legend class="sr-only">수수료율</legend><label><input type="radio" name="settleRate" value="10"><span>10%</span></label><label><input type="radio" name="settleRate" value="15"><span>15%</span></label><label><input type="radio" name="settleRate" value="20"><span>20%</span></label></fieldset><div class="settlement-rate-dialog-actions"><button id="settleRateCancel" type="button">취소</button><button id="settleRateContinue" type="button" class="primary" disabled>선택 후 엑셀 넣기</button></div></dialog>
+ <dialog id="settleRateDialog" class="settlement-rate-dialog" aria-labelledby="settleRateTitle" aria-describedby="settleRateHelp"><div class="settlement-rate-dialog-head"><h2 id="settleRateTitle">수수료율을 선택해주세요</h2><button id="settleRateClose" type="button" aria-label="수수료율 선택 닫기">×</button></div><p id="settleRateFile" class="settlement-rate-file"></p><p id="settleRateHelp">이번 공동구매에 적용할 수수료율입니다.</p><fieldset id="settleRateRecipientGroup" class="settlement-rate-recipient"><legend>정산 대상</legend><label><input type="radio" name="settleRateRecipient" value="business"><span><strong>사업자</strong><small>3.3% 미공제</small></span></label><label><input type="radio" name="settleRateRecipient" value="individual"><span><strong>일반 개인</strong><small>3.3% 공제</small></span></label></fieldset><p class="settlement-rate-label">공구 수수료율</p><fieldset class="settlement-rate-choices"><legend class="sr-only">수수료율</legend><label><input type="radio" name="settleRate" value="10"><span>10%</span></label><label><input type="radio" name="settleRate" value="15"><span>15%</span></label><label><input type="radio" name="settleRate" value="20"><span>20%</span></label></fieldset><div class="settlement-rate-dialog-actions"><button id="settleRateCancel" type="button">취소</button><button id="settleRateContinue" type="button" class="primary" disabled>선택 후 정산 불러오기</button></div></dialog>
 
  <dialog id="settleCalendarDialog" class="settlement-calendar-dialog" aria-labelledby="settleCalendarTitle">
   <div class="settlement-calendar-dialog-head"><div><h2 id="settleCalendarTitle">매출을 반영할 일정 선택</h2><p>닉네임·상품·기간·담당자를 확인해주세요.</p></div><button id="settleCalendarClose" type="button" aria-label="일정 선택 닫기">×</button></div>

@@ -3,3 +3,35 @@
 @media(max-width:1000px){.settlement-kpis{grid-template-columns:repeat(2,1fr)}.settlement-calculation-grid{grid-template-columns:1fr}.settlement-setup{grid-template-columns:1fr}.settlement-step{padding:18px}}@media(max-width:600px){.settlement-result{padding:16px}.settlement-kpis{gap:8px}.settlement-kpis>div{padding:12px}.settlement-kpis strong{font-size:19px}.settlement-export{align-items:stretch;flex-direction:column}.settlement-calculation th,.settlement-calculation td{padding:10px 5px;font-size:12px}.settlement-campaign-label{align-items:flex-start;flex-direction:column;gap:7px}.settlement-campaign-label input{width:100%;max-width:none}.settlement-rate-dialog{inset:auto 16px 16px 16px;margin:0 auto}.settlement-type-options button{padding:11px}.settlement-type-options button span{font-size:11px}.settlement-result-head{align-items:center}}
 
 .settlement-calculation{min-width:0}.settlement-calculation-grid>*{min-width:0}.settlement-workspace button:disabled{opacity:.5;cursor:not-allowed}.settlement-campaign-label input{width:min(500px,100%)}
+/* Centered Excel drop area and import options. */
+.settlement-setup{grid-template-columns:minmax(0,1fr);max-width:960px;margin:0 auto}
+.settlement-upload-step{padding:20px}
+.settlement-drop-zone{border:2px dashed #9cb9dd;border-radius:10px;padding:32px 20px;text-align:center;background:#f7faff;color:#245fc5;transition:background .15s,border-color .15s,box-shadow .15s}
+.settlement-drop-zone>svg{display:block;margin:0 auto 12px}
+.settlement-drop-zone h3{font-size:19px;color:#1e3a5f;margin:0 0 9px}
+.settlement-drop-zone>p:not(.settlement-drop-status){color:#526175;font-size:13px;line-height:1.7;margin:0 0 18px}
+.settlement-drop-zone .primary{padding:10px 20px}
+.settlement-drop-format{display:block;font-size:11px;color:#64748b;margin-top:12px}
+.settlement-drop-status{margin:10px 0 0;font-size:12px;line-height:1.7;color:#526175;overflow-wrap:anywhere}
+.settlement-drop-status.error{color:#b91c1c;font-weight:600}
+.settlement-drop-zone.is-dragging{border-color:#245fc5;background:#e6efff;box-shadow:0 0 0 4px #dce9ff}
+.settlement-drop-zone.is-busy{opacity:.65}
+#settleRateDialog{position:fixed;inset:0;margin:auto;width:min(480px,calc(100vw - 32px));height:fit-content;max-height:calc(100dvh - 32px);overflow:auto;padding:24px;animation:settlement-rate-enter .18s ease-out}
+#settleRateDialog::backdrop{background:#17283b80}
+#settleRateDialog .settlement-rate-dialog-head h2{font-size:19px}
+#settleRateDialog .settlement-rate-file{padding:10px 12px;background:#f1f5fa;border:1px solid #d8e1ee;border-radius:5px;color:#243e5f;font-size:13px;font-weight:600;overflow-wrap:anywhere}
+.settlement-rate-recipient{display:grid;grid-template-columns:1fr 1fr;gap:10px;border:0;padding:0;margin:18px 0}
+.settlement-rate-recipient legend,.settlement-rate-label{color:#40516a;font-size:12px;font-weight:700;padding:0;margin:0 0 9px}
+.settlement-rate-recipient label{cursor:pointer;position:relative}
+.settlement-rate-recipient input{position:absolute;opacity:0;width:1px;height:1px}
+.settlement-rate-recipient span{display:block;border:2px solid #d5dfec;border-radius:5px;text-align:center;padding:11px 5px}
+.settlement-rate-recipient strong{display:block;font-size:14px}
+.settlement-rate-recipient small{display:block;font-size:11px;margin-top:3px;color:#526175}
+.settlement-rate-recipient input:checked+span{border-color:#245fc5;background:#edf4ff;color:#1d4ed8}
+.settlement-rate-recipient input:focus-visible+span{outline:3px solid #93c5fd;outline-offset:2px}
+#settleRateDialog .settlement-rate-choices{margin-top:0}
+#settleRateDialog .settlement-rate-choices span{font-size:24px;padding:18px 3px}
+#settleRateDialog .settlement-rate-dialog-actions{padding-top:14px;border-top:1px solid #dbe3ed}
+@keyframes settlement-rate-enter{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+@media(max-width:600px){.settlement-upload-step{padding:15px}.settlement-drop-zone{padding:26px 14px}.settlement-drop-zone h3{font-size:17px}#settleRateDialog{inset:0;margin:auto;padding:20px;width:calc(100vw - 24px);max-height:calc(100dvh - 24px)}#settleRateDialog .settlement-rate-dialog-head h2{font-size:17px}.settlement-rate-dialog-actions button{font-size:12px}}
+@media(prefers-reduced-motion:reduce){#settleRateDialog{animation:none}.settlement-drop-zone{transition:none}}

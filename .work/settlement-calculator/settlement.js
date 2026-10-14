@@ -136,8 +136,8 @@ function settlementCalculate(book,recipient,rate){
 function settlementRender(){
  const state=settlementState,business=state.recipient==='business';
  for(const button of document.querySelectorAll('[data-settle-type]')){button.setAttribute('aria-pressed',String(button.dataset.settleType===state.recipient));button.disabled=state.busy;}
- $('settleImport').disabled=!state.recipient||state.busy;
- $('settleTypeNote').textContent=!state.recipient?'먼저 정산 대상을 선택해주세요.':business?'사업자는 소득세·지방소득세만 공제하지 않습니다.':'일반 개인은 기존 방식의 소득세·지방소득세 3.3% 공제를 적용합니다.';
+ $('settleImport').disabled=state.busy;$('settleDropZone').classList.toggle('is-busy',state.busy);$('settleDropZone').setAttribute('aria-busy',String(state.busy));
+ $('settleTypeNote').textContent=!state.recipient?'정산 대상을 미리 선택하거나, 엑셀을 넣은 뒤 팝업에서 선택할 수 있습니다.':business?'사업자는 소득세·지방소득세만 공제하지 않습니다.':'일반 개인은 기존 방식의 소득세·지방소득세 3.3% 공제를 적용합니다.';
  $('settleResult').hidden=!state.book;$('settleEmpty').hidden=!!state.book;
  settlementRenderCalendarLink();
  if(!state.book)return;
@@ -166,22 +166,16 @@ function settlementSelectType(type){
  settlementState.recipient=type;settlementRender();
  if(settlementState.book)settlementNotice(settlementRecipients[type]+' 기준으로 지급액과 전달용 시트를 변경했습니다.');
 }
-function settlementOpenRate(action='import'){
- if(!settlementState.recipient||settlementState.busy)return;
- settlementRateAction=action;settlementPendingRate=null;
- for(const input of document.querySelectorAll('input[name="settleRate"]'))input.checked=false;
- $('settleRateContinue').disabled=true;$('settleRateContinue').textContent=action==='import'?'선택 후 엑셀 넣기':'수수료율 적용';
- $('settleRateDialog').showModal();document.querySelector('input[name="settleRate"]').focus();
-}
-async function settlementImportFile(file,rate){
+async function settlementImportFile(file,rate,recipient=settlementState.recipient){
  if(!file)return;
  const previous=settlementState.book;
  try{
+  if(!Object.hasOwn(settlementRecipients,recipient)||![10,15,20].includes(rate))throw new Error('정산 대상과 수수료율을 선택해주세요.');
   if(!/\.xlsx$/i.test(file.name))throw new Error('.xlsx 형식의 주문 엑셀을 넣어주세요.');
   if(file.size>20000000)throw new Error('파일이 너무 큽니다. 공구별로 나누어 넣어주세요.');
   settlementState.busy=true;settlementRender();settlementNotice('엑셀 주문 내역을 확인하고 있습니다.');
   const book=await settlementReadWorkbook(new Uint8Array(await file.arrayBuffer()));
-  book.filename=file.name;settlementState.book=book;settlementState.rate=rate;
+  book.filename=file.name;settlementState.book=book;settlementState.rate=rate;settlementState.recipient=recipient;
   $('settleFileName').textContent=file.name;
   $('settleCampaign').value=file.name.replace(/\.xlsx$/i,'').replace(/_공구.*$/,'')||'공동구매';
   settlementRenderOrders(book);settlementNotice('주문 상세 '+book.rows.length+'행을 불러왔습니다. 수수료 '+rate+'%를 적용했습니다.');
@@ -228,18 +222,6 @@ function settlementDownload(){
  try{const result=settlementWorkbook(),url=URL.createObjectURL(new Blob([result.bytes],{type:settlementXlsxMime})),link=node('a');link.href=url;link.download=result.filename;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);settlementNotice(result.sheetName+' 시트를 다운로드했습니다. 지급액 '+settlementMoney(result.model.payment));}
  catch(error){settlementNotice(error.message,true);}
 }
-for(const button of document.querySelectorAll('[data-settle-type]'))button.onclick=()=>settlementSelectType(button.dataset.settleType);
-for(const radio of document.querySelectorAll('input[name="settleRate"]'))radio.onchange=()=>{settlementPendingRate=Number(radio.value);$('settleRateContinue').disabled=false;};
-$('settleImport').onclick=()=>settlementOpenRate('import');$('settleRateChange').onclick=()=>settlementOpenRate('change');
-$('settleRateClose').onclick=$('settleRateCancel').onclick=()=>$('settleRateDialog').close();
-$('settleRateContinue').onclick=()=>{
- if(![10,15,20].includes(settlementPendingRate))return;
- $('settleRateDialog').close();
- if(settlementRateAction==='change'){settlementState.rate=settlementPendingRate;settlementRender();settlementNotice('수수료 '+settlementPendingRate+'%를 적용했습니다.');}
- else{$('settleFile').value='';$('settleFile').click();}
-};
-$('settleFile').onchange=()=>settlementImportFile($('settleFile').files[0],settlementPendingRate);
-$('settleDownload').onclick=settlementDownload;
 settlementRender();
 
 document.addEventListener('DOMContentLoaded',()=>{if(new URLSearchParams(location.search).get('view')==='settlement')switchWorkView('settlement');},{once:true});
