@@ -330,9 +330,14 @@
       "sha256": "84ddaa99308be26097843f7109b8516a725489da9a9a5258f6ddfec0e5fdf520"
     },
     {
+      "path": ".work/settlement-calculator/build-template.mjs",
+      "bytes": 9180,
+      "sha256": "ecad681ed556d1e5aa4e47f1b74f3542ca56b4351cfc8b6bb529249f78be49c5"
+    },
+    {
       "path": ".work/settlement-calculator/export-template.xlsx",
-      "bytes": 5627,
-      "sha256": "9a02d2730b1e7a3722d5a918319b3849f1ec619b1d50c6f00399d3325f31ea50"
+      "bytes": 6401,
+      "sha256": "811d21ac7a1a6bc4a3465cf8bb21db2ccb3998885dcdae7fb87f02ec05e21d26"
     },
     {
       "path": ".work/settlement-calculator/import-ui.js",
@@ -343,6 +348,11 @@
       "path": ".work/settlement-calculator/panel.html",
       "bytes": 10837,
       "sha256": "41c4326e0c8d333435277ac79772cb6e0c95a31ff96b10dc081118fa4c1ccf95"
+    },
+    {
+      "path": ".work/settlement-calculator/prepare-template.py",
+      "bytes": 1680,
+      "sha256": "4d51f65aaad0e41c0ada8d358f7cc2743ba455d4696fafe338ff4636bfc1133c"
     },
     {
       "path": ".work/settlement-calculator/schedule-link-dialog.html",
@@ -371,13 +381,13 @@
     },
     {
       "path": ".work/settlement-calculator/settlement.js",
-      "bytes": 23594,
-      "sha256": "2a4da7c7de9b39c1bb053c68142e7d1f392ca35500287579c92579654d81c1d9"
+      "bytes": 24745,
+      "sha256": "2507f2020e643ed51db24363bcf3eadbf8e456c4f9186e5f945fe9b9ef23bce3"
     },
     {
       "path": ".work/settlement-calculator/template.json",
-      "bytes": 32116,
-      "sha256": "8a8e9c4724eaea86aa502477963cac34f8dedb76cd189ec2acc483ac1c5ce6c6"
+      "bytes": 53872,
+      "sha256": "2f1883c1af98647787513075b3739d13562cc3380a77ba9123ca5e387b1f1c38"
     },
     {
       "path": ".work/sku-sales/sku.css",
@@ -431,8 +441,8 @@
     },
     {
       "path": "03_사내일정관리_시안.html",
-      "bytes": 3364522,
-      "sha256": "8ef3543212d5a71e084af3260db35d12d708b8e084f7166e0e1f0207cd7071b8"
+      "bytes": 3387555,
+      "sha256": "841d51beba9fbf0e67845741f00d28dc47ee520958606e27c5891e3e9949467c"
     },
     {
       "path": "09_이미지반영_일정데이터.json",
@@ -490,9 +500,14 @@
       "sha256": "29ffdc414c5de9c16d456d671092244698415b34455e7d52af4b48aabc23b577"
     },
     {
+      "path": "39_전달용엑셀_레이아웃.md",
+      "bytes": 2709,
+      "sha256": "25221b83e945fe64a07458c035acfb2f2f33ca38a7963815e3940f2c310548c5"
+    },
+    {
       "path": "AGENTS.md",
-      "bytes": 18622,
-      "sha256": "b6feed924e10cf82794bbff748764f804f4ecef206ea0a2fce127a169f5105ec"
+      "bytes": 19494,
+      "sha256": "b82247cb83d9c24be4b97e65e4aadeb356a0c0f081aef0cb8cc06f560fb9e2f2"
     },
     {
       "path": "owners.seed.json",
@@ -540,6 +555,11 @@
       "sha256": "820385a872ccb1f44f6126ce69b3d7ad8a0fb9c6efafe6b581c97fec6538d540"
     },
     {
+      "path": "quality/settlement-export-layout-verification.json",
+      "bytes": 7358,
+      "sha256": "498fcdd2c2c4cc3a74576ad6f42c32cb993fb79860ba5daa4d60661272815259"
+    },
+    {
       "path": "quality/settlement-verification-results.json",
       "bytes": 16132,
       "sha256": "401c7e0b2cf9e2826c7dee3a6e93427be909eeab0f93a45eb1335d83cd106df0"
@@ -551,8 +571,8 @@
     },
     {
       "path": "SOURCE_MAP.md",
-      "bytes": 2433,
-      "sha256": "9794a214709867fdf0e935cc357f0563daae39cf4fb7e56c237cb2a41cffdea9"
+      "bytes": 2614,
+      "sha256": "b7c740114a10fd931d416ada4e3f14a7781ecb261152bbdd64451515e8ced323"
     },
     {
       "path": "자료/2026_원본/2026-01.png",

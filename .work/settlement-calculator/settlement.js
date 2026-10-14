@@ -192,26 +192,33 @@ function settlementWorkbook(){
   return '<x:c r="'+ref+'" s="'+style+'" t="inlineStr"><x:is><x:t xml:space="preserve">'+xmlText(value)+'</x:t></x:is></x:c>';
  };
  const rows=['<x:row r="1" ht="30" customHeight="1">'+settlementHeaders.map((v,c)=>cell(String.fromCharCode(65+c)+'1',v,template.headerStyles[c])).join('')+'</x:row>'];
- b.rows.forEach((row,i)=>rows.push('<x:row r="'+(i+2)+'" ht="64" customHeight="1">'+row.values.map((v,c)=>cell(String.fromCharCode(65+c)+(i+2),v,template.bodyStyles[c])).join('')+'</x:row>'));
+ // Compact by default; keep long raw product names readable without clipping.
+ const widths=template.columnWidths;
+ const lineCount=(value,width)=>String(value??'').split(/\r?\n/).reduce((sum,line)=>sum+Math.max(1,Math.ceil(Array.from(line).reduce((n,ch)=>n+(ch.charCodeAt(0)>255?2:1),0)/Math.max(1,width-2))),0);
+ b.rows.forEach((row,i)=>{const height=Math.max(28,...row.values.map((v,c)=>lineCount(v,widths[c])*14+4));rows.push('<x:row r="'+(i+2)+'" ht="'+height+'" customHeight="1">'+row.values.map((v,c)=>cell(String.fromCharCode(65+c)+(i+2),v,template.bodyStyles[c])).join('')+'</x:row>');});
  const exclude=(col)=>{const statuses=[...new Set(b.rows.filter(r=>r.excluded).map(r=>String(r.values[8])))],last=b.rows.length+1;if(statuses.length>200)throw new Error('처리현황 표기가 너무 많습니다. 동일 상태의 표기를 정리해주세요.');return statuses.length?'SUM('+statuses.map(status=>'SUMIF($I$2:$I$'+last+',"'+status.replaceAll('"','""')+'",$'+col+'$2:$'+col+'$'+last+')').join(',')+')':'0';};
- const formulas={'D13':'SUM(D2:D'+(b.rows.length+1)+')','E13':'SUM(E2:E'+(b.rows.length+1)+')','F13':'SUM(F2:F'+(b.rows.length+1)+')',
+ const formulas={'D13':'SUM(D2:D'+(b.rows.length+1)+')','E13':'SUM(E2:E'+(b.rows.length+1)+')',
  'A16':'IF($I$'+at(16)+'=0,0,ROUNDDOWN(E'+at(18)+'*0.03,-1))','B16':'IF($I$'+at(16)+'=0,0,ROUNDDOWN(A'+at(16)+'*0.1,-1))',
  'D15':'D'+at(13),'E15':'E'+at(13),'D16':exclude('D'),'E16':exclude('E'),'D17':'D'+at(15)+'-D'+at(16),'E17':'E'+at(15)+'-E'+at(16),
  'D18':'$I$'+at(15),'E18':'E'+at(17)+'*D'+at(18),'E19':'A'+at(16)+'+B'+at(16),'D20':'D'+at(17),'E20':'E'+at(18)+'-E'+at(19)};
- const values={'A13':'주문 내역 합계','D13':b.grossQuantity,'E13':b.gross,'F13':b.coupon,'A14':'소득세 계산','A15':'소득세 3%','B15':'지방소득세','A16':m.income,'B16':m.local,'A17':business?'사업자: 세금 미적용':'세목별 10원 단위 버림',
- 'C14':'공구수수료 정산','D14':'수량','E14':'금액','D15':b.grossQuantity,'E15':b.gross,'C16':'정산 제외 내역','D16':b.excludedQuantity,'E16':b.excludedSales,'D17':m.quantity,'E17':m.basis,'D18':state.rate/100,'E18':m.commission,'D19':business?'미적용':0.033,'E19':m.tax,'D20':m.quantity,'E20':m.payment,
- 'F15':business?'사업자 정산: 소득세·지방소득세 미부과.\n쿠폰은 별도로 차감하지 않습니다.':'일반 개인: 소득세 3%와 지방소득세 공제.\n세목별 10원 단위 버림.\n쿠폰은 별도로 차감하지 않습니다.',
- 'I14':settlementRecipients[state.recipient],'I15':state.rate/100,'I16':business?0:1,'I17':$('settleCampaign').value.trim(),'I18':b.start+' ~ '+b.end,'I19':'별도 차감 안 함','I20':b.filename};
+ const values={'A13':'주문 내역 합계','D13':b.grossQuantity,'E13':b.gross,'F13':'합산 제외','A14':'소득세 계산','A15':'소득세 3%','B15':'지방소득세 0.3%','A16':m.income,'B16':m.local,'A17':business?'사업자: 세금 미적용':'세목별 10원 단위 버림',
+ 'C14':'공구수수료 정산','D14':'수량','E14':'금액','D15':b.grossQuantity,'E15':b.gross,'C16':'취소건','D16':b.excludedQuantity,'E16':b.excludedSales,'D17':m.quantity,'E17':m.basis,'D18':state.rate/100,'E18':m.commission,'D19':business?'미적용':0.033,'E19':m.tax,'D20':m.quantity,'E20':m.payment,
+ 'F15':business?'사업자 정산: 소득세·지방소득세 미부과.\n쿠폰은 원본 참고값이며 합산·차감하지 않습니다.':'일반 개인: 소득세 3%와 지방소득세 공제.\n세목별 10원 단위 버림.\n쿠폰은 원본 참고값이며 합산·차감하지 않습니다.',
+ 'I14':settlementRecipients[state.recipient],'I15':state.rate/100,'I16':business?0:1,'I17':$('settleCampaign').value.trim(),'I18':b.start+' ~ '+b.end,'I19':'참고용 · 합산/차감 제외','I20':b.filename};
  for(const original of template.footer){
   const nr=at(original.row);
   const cells=original.cells.map(c=>{
    const ref=c.ref.replace(/\d+$/,String(nr)),inactive=business&&((original.row>=14&&original.row<=17&&/^[AB]/.test(c.ref))||original.row===19&&/^[CDE]/.test(c.ref)||c.ref==='F15');
-   const value=Object.hasOwn(values,c.ref)?values[c.ref]:c.value;const moneyCell=['E13','F13','A16','B16','E15','E16','E17','E18','E19','E20'].includes(c.ref);const style=inactive?template.disabledStyle:moneyCell&&typeof value==='number'&&!Number.isInteger(value)?template.decimalStyle:c.style;return cell(ref,value,style,formulas[c.ref]||'');
+   const value=Object.hasOwn(values,c.ref)?values[c.ref]:c.value;const moneyCell=['E13','F13','A16','B16','E15','E16','E17','E18','E19','E20'].includes(c.ref);const style=inactive?template.disabledStyle:moneyCell&&typeof value==='number'&&!Number.isInteger(value)?(c.ref==='E20'?template.finalDecimalStyle:template.decimalStyle):c.style;return cell(ref,value,style,formulas[c.ref]||'');
   });
-  rows.push('<x:row r="'+nr+'" ht="'+(original.row===20?38:32)+'" customHeight="1">'+cells.join('')+'</x:row>');
+  const meta=values['I'+original.row],height=Math.max(original.row===20?38:32,[17,20].includes(original.row)?lineCount(meta,widths[8]+widths[9])*14+4:0);
+  rows.push('<x:row r="'+nr+'" ht="'+height+'" customHeight="1">'+cells.join('')+'</x:row>');
  }
  const shiftRef=ref=>ref.replace(/([A-Z]+)(\d+)/g,(_,col,row)=>col+(Number(row)>=13?at(Number(row)):row));
- const suffix=template.suffix.replace(/ref="([^"]+)"/g,(_,ref)=>'ref="'+shiftRef(ref)+'"');
+ const statuses=[...new Set(b.rows.filter(r=>r.excluded).map(r=>String(r.values[8])))];
+ // Use the exact same excluded status values as the financial SUMIF formulas.
+ const cancelFormula=statuses.length?'OR('+statuses.map(status=>'$I2="'+status.replaceAll('"','""')+'"').join(',')+')':'FALSE';
+ const suffix=template.suffix.replace(/<x:conditionalFormatting[\s\S]*?<\/x:conditionalFormatting>/g,block=>block.replace(/sqref="[^"]+"/,'sqref="A2:J'+(b.rows.length+1)+'"').replace(/<x:formula>[\s\S]*?<\/x:formula>/,'<x:formula>'+xmlText(cancelFormula)+'</x:formula>')).replace(/(?<!sq)ref="([^"]+)"/g,(_,ref)=>'ref="'+shiftRef(ref)+'"');
  parts['xl/worksheets/sheet1.xml']=template.prefix.replace(/<x:dimension[^>]*\/>/,'<x:dimension ref="A1:J'+at(20)+'"/>')+'<x:sheetData>'+rows.join('')+'</x:sheetData>'+suffix;
  const sheetName=business?'전달용_사업자':'전달용_개인';
  parts['xl/workbook.xml']=parts['xl/workbook.xml'].replace(/name="전달용_개인"/,'name="'+sheetName+'"');

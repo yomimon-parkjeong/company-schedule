@@ -19,6 +19,7 @@
 - 주차별 일정 정리: .work/weekly-report/
 - 제품별 매출: .work/sku-sales/
 - 정산 계산·엑셀: .work/settlement-calculator/settlement.js, template.json
+- 전달용 엑셀 서식: .work/settlement-calculator/build-template.mjs, prepare-template.py (서식 재작성에 @oai/artifact-tool 필요, 브라우저 실행에는 불필요)
 - 정산에서 일정 매출 합산: .work/settlement-calculator/schedule-link.js
 - 원문 이미지: 자료/2026_원본/
 - 이미지 전사 자료: .work/import2026/jan-apr.json, may-aug.json, sep-jan.json
