@@ -70,6 +70,11 @@
       "sha256": "a49cee33b6b3be8c7522ee2f1326b1025da5f6281dedc4c4dc3f0d1e1819ec37"
     },
     {
+      "path": ".work/import2026/apply_popup_feedback.py",
+      "bytes": 2417,
+      "sha256": "789c1f6688d68d11798c33887a4a82628ecd25111cba816e864916a01c81e20c"
+    },
+    {
       "path": ".work/import2026/apply_product_names.py",
       "bytes": 5495,
       "sha256": "fff217c2296bdef800ee3015b28582d166dea320e4032a69c5402ecb1834279d"
@@ -136,8 +141,8 @@
     },
     {
       "path": ".work/import2026/integrate_import.py",
-      "bytes": 19335,
-      "sha256": "48f93e50a4899e5b1bd9d3a2007447b7a1c7ff8a9f2165f658b5e5b93930356d"
+      "bytes": 19437,
+      "sha256": "dcd2253d4322f4eba65a64e128760560f8d5b60f8ef5eb2fab9412cfc6d6d9df"
     },
     {
       "path": ".work/import2026/jan-apr.json",
@@ -253,6 +258,21 @@
       "path": ".work/schedule-csv/style.css",
       "bytes": 5869,
       "sha256": "048be7653dd0ecba1e7bced52f26578d11430278c952bb3fc7e948bcd7f7c46c"
+    },
+    {
+      "path": ".work/schedule-popup/popup.css",
+      "bytes": 3188,
+      "sha256": "cf4367ca83be8f40bbf84bffcdbe7e2b8389de8b448f40f20abaeafac57be022"
+    },
+    {
+      "path": ".work/schedule-popup/popup.html",
+      "bytes": 598,
+      "sha256": "cc283b53fe4633ccb46b043693028750a2238e4ad3388f5d42ec8c71f3b2e833"
+    },
+    {
+      "path": ".work/schedule-popup/popup.js",
+      "bytes": 2209,
+      "sha256": "a024de07aca7a373ad8dca236275ae5a3257fd2cc6c50bcf5e0ba01e851b2cb3"
     },
     {
       "path": ".work/schedule-refinement/calendar-history.js",
@@ -406,8 +426,8 @@
     },
     {
       "path": "03_사내일정관리_시안.html",
-      "bytes": 3348716,
-      "sha256": "b20da0befaa9377f5197ff5b6dd71de6c29ce4e728e11df81ba9cb52085c05b0"
+      "bytes": 3355394,
+      "sha256": "66ffe19ab942a157752e8c4eb0a86f5dd7cd19cd0ca891bd508b04833667f726"
     },
     {
       "path": "09_이미지반영_일정데이터.json",
@@ -455,9 +475,14 @@
       "sha256": "0f152f0bace2c5a05ac37fcade9ecee2ed9b942a8ac20f890f5f5ed7aca91b1d"
     },
     {
+      "path": "37_일정클릭_팝업_완료알림.md",
+      "bytes": 2869,
+      "sha256": "048d038f8d583b922a764bca6ec1903e0ecdadcae4143c27473ef9a707c5f161"
+    },
+    {
       "path": "AGENTS.md",
-      "bytes": 16850,
-      "sha256": "4fcee5aa099df2f169a96805b2f96bc77714d8e8af0a1a1127122c7bbd7de95a"
+      "bytes": 17757,
+      "sha256": "9777dcf50af87965f6a8014600fff4eeaab4f217aa3ba08303d2b844c107f745"
     },
     {
       "path": "owners.seed.json",
@@ -493,6 +518,11 @@
       "path": "quality/record-statistics.json",
       "bytes": 405,
       "sha256": "48df8ba390f2c8a0b029992a5d58666c6f14c0958e6bfdaf40dde1de93b6e164"
+    },
+    {
+      "path": "quality/schedule-popup-verification.json",
+      "bytes": 2550,
+      "sha256": "adec4388b99c7212544c28edc49a868a0f94a0090475783db052391e1dd5d414"
     },
     {
       "path": "quality/settlement-verification-results.json",

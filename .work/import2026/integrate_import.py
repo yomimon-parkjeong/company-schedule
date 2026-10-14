@@ -145,6 +145,8 @@ markup,data=apply_schedule_csv(markup,data)
 (root/'09_이미지반영_일정데이터.json').write_text(json.dumps(data,ensure_ascii=False,indent=2),encoding='utf-8')
 from apply_csv_calendar import apply_csv_calendar
 markup,data=apply_csv_calendar(markup,data)
+from apply_popup_feedback import apply_popup_feedback
+markup,data=apply_popup_feedback(markup,data)
 html.write_text(markup,encoding='utf-8')
 report={'records':len(data),'byStartMonth':{},'owners':{},'reviewRecords':sum(bool(s['uncertain']) for s in data)}
 for s in data:

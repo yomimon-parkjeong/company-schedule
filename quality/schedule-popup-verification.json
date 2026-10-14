@@ -1,0 +1,134 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "name": "calendar click directly opens modal",
+      "ok": true
+    },
+    {
+      "name": "editable title focused",
+      "ok": true
+    },
+    {
+      "name": "selected schedule matches click",
+      "ok": true
+    },
+    {
+      "name": "no left selection pane or layout jump",
+      "ok": true
+    },
+    {
+      "name": "accessible popup heading",
+      "ok": true
+    },
+    {
+      "name": "open motion enabled",
+      "ok": true
+    },
+    {
+      "name": "popup centered on viewport",
+      "ok": true
+    },
+    {
+      "name": "save footer initially visible",
+      "ok": true
+    },
+    {
+      "name": "popup scroll does not move calendar",
+      "ok": true
+    },
+    {
+      "name": "footer stays visible after scroll",
+      "ok": true
+    },
+    {
+      "name": "new popup resets scroll",
+      "ok": true
+    },
+    {
+      "name": "invalid edit has no success toast",
+      "ok": true
+    },
+    {
+      "name": "comma formatter preserved",
+      "ok": true
+    },
+    {
+      "name": "edit saved and modal closed",
+      "ok": true
+    },
+    {
+      "name": "edit toast names schedule",
+      "ok": true
+    },
+    {
+      "name": "month totals update",
+      "ok": true
+    },
+    {
+      "name": "week totals match month",
+      "ok": true
+    },
+    {
+      "name": "dismiss button works",
+      "ok": true
+    },
+    {
+      "name": "invalid registration has no success",
+      "ok": true
+    },
+    {
+      "name": "registration completed once",
+      "ok": true
+    },
+    {
+      "name": "title includes product and notes",
+      "ok": true
+    },
+    {
+      "name": "new sales stay blank",
+      "ok": true
+    },
+    {
+      "name": "registration toast names schedule",
+      "ok": true
+    },
+    {
+      "name": "screen reader announces completion",
+      "ok": true
+    },
+    {
+      "name": "toast visible without scroll",
+      "ok": true
+    },
+    {
+      "name": "toast auto dismisses",
+      "ok": true
+    },
+    {
+      "name": "list opens same editor",
+      "ok": true
+    },
+    {
+      "name": "weekly calendar opens editor",
+      "ok": true
+    },
+    {
+      "name": "weekly owner detail opens editor",
+      "ok": true
+    },
+    {
+      "name": "weekly instructions updated",
+      "ok": true
+    },
+    {
+      "name": "toast cannot inject HTML",
+      "ok": true
+    }
+  ],
+  "registeredTitle": "sample_popup(예시A) - 멀티보드 - 수수료 협의",
+  "keyboard": {
+    "initialScrollStable": true,
+    "escapeClosesAndRestoresFocus": true
+  }
+}
