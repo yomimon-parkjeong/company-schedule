@@ -18,10 +18,10 @@ template={'parts':parts,'prefix':sheet.split('<x:sheetData>')[0],
 'suffix':sheet.split('</x:sheetData>')[1],
 'headerStyles':[c.attrib.get('s','0') for c in rows[1]],
 'bodyStyles':[c.attrib.get('s','0') for c in rows[2]],
-'columnWidths':[14,23,64,10,18,14,14,26,24,32],
+'columnWidths':[14,23,64,10,18,14,26,24,38],
 'disabledStyle':rows[21][0].attrib.get('s','0'),
 'decimalStyle':rows[22][0].attrib.get('s','0'),
-'finalDecimalStyle':rows[22][1].attrib.get('s','0'),
+'finalDecimalStyle':rows[23][0].attrib.get('s','0'),
 'footer':[{'row':r,'cells':[{'ref':c.attrib['r'],'style':c.attrib.get('s','0'),'value':value(c)} for c in rows[r]]} for r in range(13,21)]}
 # Placeholder row is not present in generated delivery sheets.
 (root/'template.json').write_text(json.dumps(template,ensure_ascii=False),encoding='utf-8')

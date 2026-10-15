@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-14",
+  "generatedAt": "2026-10-15",
   "records": 1679,
   "sourceRebuildVerified": true,
   "calendarDataSHA256": "1c46e7926d9603f112829f280486a22207c0f2a5b6fec6f07155b91a3616f274",
@@ -331,13 +331,13 @@
     },
     {
       "path": ".work/settlement-calculator/build-template.mjs",
-      "bytes": 9180,
-      "sha256": "ecad681ed556d1e5aa4e47f1b74f3542ca56b4351cfc8b6bb529249f78be49c5"
+      "bytes": 8136,
+      "sha256": "01ae31307b464e783ee7eca39fccdf2318c2a701509980caad13245e84ca0f95"
     },
     {
       "path": ".work/settlement-calculator/export-template.xlsx",
-      "bytes": 6401,
-      "sha256": "811d21ac7a1a6bc4a3465cf8bb21db2ccb3998885dcdae7fb87f02ec05e21d26"
+      "bytes": 6087,
+      "sha256": "a5dacdc27fdf6bda87cd500dd8446e220755e15bfbd9c54f218a9589e1a3365b"
     },
     {
       "path": ".work/settlement-calculator/import-ui.js",
@@ -346,13 +346,13 @@
     },
     {
       "path": ".work/settlement-calculator/panel.html",
-      "bytes": 11259,
-      "sha256": "dd5e042b4b4c23fb5c0ba5db5d50fa16520822616b51395994b982dc20475451"
+      "bytes": 11210,
+      "sha256": "9c7458129ad7213a30cbca46914e0bd4e9076a6a4a0b38040cd69e2ae91bb6d8"
     },
     {
       "path": ".work/settlement-calculator/prepare-template.py",
-      "bytes": 1680,
-      "sha256": "4d51f65aaad0e41c0ada8d358f7cc2743ba455d4696fafe338ff4636bfc1133c"
+      "bytes": 1677,
+      "sha256": "262cbb12b0f029ea25e0ba884395e60f8c1dc5a26e985653388c8ed1def8d968"
     },
     {
       "path": ".work/settlement-calculator/schedule-link-dialog.html",
@@ -376,18 +376,18 @@
     },
     {
       "path": ".work/settlement-calculator/settlement.css",
-      "bytes": 11174,
-      "sha256": "fe292701b2232bb332b04328d4d0f7c8bbee0c5529988c2e67a4ce124f2662b7"
+      "bytes": 11133,
+      "sha256": "e88ec4b01882f42c9535ff008e147d90d50c27e846486f6af5d97fcc85403ec3"
     },
     {
       "path": ".work/settlement-calculator/settlement.js",
-      "bytes": 23912,
-      "sha256": "b21f62b8efc70133b362a798e8da57c101c87d3a6cb904390a609de89cad09b1"
+      "bytes": 23720,
+      "sha256": "b3b110c9a0cbad9a42d159002e72d3d9d99a91f93d4027f0bdca7d4515c559d9"
     },
     {
       "path": ".work/settlement-calculator/template.json",
-      "bytes": 53872,
-      "sha256": "2f1883c1af98647787513075b3739d13562cc3380a77ba9123ca5e387b1f1c38"
+      "bytes": 49088,
+      "sha256": "d21fb5d6c50346fffee4463de811ddbfb225ced691897b9e4285966cf727cb11"
     },
     {
       "path": ".work/sku-sales/sku.css",
@@ -441,8 +441,8 @@
     },
     {
       "path": "03_사내일정관리_시안.html",
-      "bytes": 3387527,
-      "sha256": "7c10eac755874dcf31a60e8fcba972d098f227990ffa920985395ab6a9b04d80"
+      "bytes": 3382439,
+      "sha256": "39b193a9c287912f7746ec91a5ae0a0d739a3e265c0c645cf9a07330ed201283"
     },
     {
       "path": "09_이미지반영_일정데이터.json",
@@ -505,14 +505,24 @@
       "sha256": "25221b83e945fe64a07458c035acfb2f2f33ca38a7963815e3940f2c310548c5"
     },
     {
+      "path": "40_쿠폰항목_제거.md",
+      "bytes": 2805,
+      "sha256": "6e6a5fab8979778575cc418aa1dcb71554f39c7d65e50ee5b0698b5a0db0a138"
+    },
+    {
       "path": "AGENTS.md",
-      "bytes": 20039,
-      "sha256": "313c8eb70f89f3b56d2dfe1b86f01d1e5a59d0ab7d7a8ca8e3d36673d24d9559"
+      "bytes": 21095,
+      "sha256": "d09b88f1b961d70be18360174c382e5ddc9a3330bc70463ee00b8a44c57de522"
     },
     {
       "path": "owners.seed.json",
       "bytes": 937,
       "sha256": "531f4ce0253fa8272529cb10d5ad7e09e91228825db41a5f79e122582f76e1a3"
+    },
+    {
+      "path": "quality/coupon-removal-verification.json",
+      "bytes": 9491,
+      "sha256": "2d0b6420d1300bfdf1d1f589334fc320dfbfd0bdf56ad0f258f87438051c4cde"
     },
     {
       "path": "quality/csv-apply-verification.json",
