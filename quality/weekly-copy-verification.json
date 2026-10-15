@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "date": "2026-10-15",
+  "copyFormatExactMatch": true,
+  "individualCopyGuard": true,
+  "staleMonthGuard": true,
+  "uiChecks": {
+    "defaultCollapsed": true,
+    "clearClosedIndicator": true,
+    "totalCopyBesideCollapse": true,
+    "copyClickSuccessToast": true,
+    "individualCopyHidden": true,
+    "innerCollapse": true,
+    "keyboardEnterToggle": true,
+    "monthChangeCollapsed": true,
+    "consoleErrors": 0
+  },
+  "clipboardReadback": "CUA virtual clipboard did not expose navigator clipboard; format verified against production function and visible detail independently.",
+  "duplicateCandidatesReviewed": 4,
+  "privateScheduleRecords": 1679,
+  "publicFictionalRecords": 228
+}

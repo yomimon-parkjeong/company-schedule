@@ -257,6 +257,27 @@ input[type=number]{border:1px solid #d5dce5;border-radius:5px;padding:7px 10px;w
 
 .groupbuy-count{display:inline-flex;align-items:center;justify-content:center;gap:5px;min-width:54px;padding:4px 7px;border:1px solid transparent;background:transparent;color:#245fc5;font-size:12px;font-weight:700;white-space:nowrap}.groupbuy-count:hover{background:#edf3ff;border-color:#bdcef0}.groupbuy-count.is-active{background:#e4edff;border-color:#7da6ec}.groupbuy-count:focus-visible,.groupbuy-schedule-button:focus-visible{outline:2px solid #245fc5;outline-offset:2px}.groupbuy-count-arrow{font-size:10px}.groupbuy-week-detail{margin-top:12px;border:1px solid #c5d4eb;border-radius:6px;background:#fff;overflow:hidden}.groupbuy-detail-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:12px 14px;background:#f0f5fd}.groupbuy-detail-head h3{font-size:13px;margin:0;line-height:1.6}.groupbuy-detail-head p{font-size:11px;line-height:1.6;color:#526175;margin:3px 0 0}.groupbuy-detail-head button{padding:3px 9px;font-size:11px;white-space:nowrap}.groupbuy-detail-items{list-style:none;margin:0;padding:0;max-height:330px;overflow:auto}.groupbuy-detail-items li+li{border-top:1px solid #e0e7f1}.groupbuy-schedule-button{width:100%;border:0;border-radius:0;padding:11px 14px;background:#fff;text-align:left;display:flex;align-items:flex-start;gap:10px;line-height:1.7;color:#23324a;font-size:12px}.groupbuy-schedule-button:hover,.groupbuy-schedule-button.selected{background:#edf3ff}.groupbuy-detail-date{white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:700;flex:none}.groupbuy-detail-text{min-width:0;overflow-wrap:anywhere}.groupbuy-detail-owner{display:block;font-size:11px;color:#526175}.groupbuy-detail-accent{width:4px;min-height:32px;flex:none;border-radius:2px;margin-top:3px;background:var(--groupbuy-color)}@media(max-width:700px){.groupbuy-detail-head{padding:10px}.groupbuy-schedule-button{padding:10px;gap:8px}.groupbuy-detail-date{font-size:11px}}
 
+.weekly-panel.groupbuy-disclosure{padding:0;align-self:start;border:1px solid #b9cdeb;overflow:hidden}
+.groupbuy-disclosure-toggle{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:54px;padding:12px 16px;cursor:pointer;list-style:none;background:#eef4ff;color:#173f75}
+.groupbuy-disclosure-toggle::-webkit-details-marker{display:none}
+.groupbuy-disclosure-toggle::marker{content:''}
+.groupbuy-disclosure-toggle:focus-visible{outline:3px solid #245fc5;outline-offset:-3px}
+.groupbuy-disclosure-title{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:700;line-height:1.6}
+.groupbuy-disclosure-title svg{flex:none;transition:transform .15s ease}
+.groupbuy-disclosure-status{flex:none;padding:5px 10px;border-radius:4px;background:#245fc5;color:#fff;font-size:12px;font-weight:700;white-space:nowrap}
+.groupbuy-when-open{display:none}
+.groupbuy-disclosure[open] .groupbuy-when-closed{display:none}
+.groupbuy-disclosure[open] .groupbuy-when-open{display:inline}
+.groupbuy-disclosure[open] .groupbuy-disclosure-title svg{transform:rotate(90deg)}
+.groupbuy-disclosure[open] .groupbuy-disclosure-status{background:#dfe9f7;color:#214c85}
+.groupbuy-disclosure-content{padding:12px 16px 14px;border-top:1px solid #c9d9ef}
+.groupbuy-table-period{margin:0 0 9px;color:#526175;font-size:11px}
+.groupbuy-detail-actions{display:flex;align-items:center;gap:7px;flex:none}
+.groupbuy-detail-head .groupbuy-copy-button{border-color:#245fc5;background:#245fc5;color:#fff;font-weight:700}
+.groupbuy-detail-head .groupbuy-copy-button.is-copied{border-color:#23744d;background:#23744d}
+@media(max-width:700px){.groupbuy-disclosure-toggle{padding:11px 12px;gap:8px}.groupbuy-disclosure-title{font-size:13px;gap:6px}.groupbuy-disclosure-status{padding:5px 7px;font-size:11px}.groupbuy-disclosure-content{padding:10px}.groupbuy-detail-head{flex-wrap:wrap}.groupbuy-detail-actions{margin-left:auto}}
+@media(prefers-reduced-motion:reduce){.groupbuy-disclosure-title svg{transition:none}}
+
 /* Schedule popup feedback */
 .side-tabs{display:none}
 #detailDialog,#addDialog{width:min(640px,calc(100vw - 32px));max-height:calc(100dvh - 32px);overflow:hidden;border:1px solid #ccd8e8}
@@ -309,10 +330,10 @@ input[type=number]{border:1px solid #d5dce5;border-radius:5px;padding:7px 10px;w
 <main><section id="scheduleWorkspace" aria-labelledby="schedulePageTitle"><div class="page-head"><div><h1 id="schedulePageTitle" tabindex="-1">업무 스케줄</h1><p class="subtitle" id="schedulePageSubtitle">담당자별 공동구매 일정과 주차·월별 매출을 관리합니다.</p></div><div class="schedule-header-actions"><button id="manageCatalog" type="button">담당자 · 업무유형 관리</button><button id="openScheduleCsv" type="button"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" aria-hidden="true"><path d="M6 3h8l5 5v13H5V3h1Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 3v6h5M8 14h8M8 17h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>일정 원본 CSV</span></button></div></div>
 <section class="groupbuy-summary" aria-label="월별 공동구매 집계">
 <div class="monthly-panel"><div class="stats-heading"><h2 id="statsMonth">10월 공동구매</h2><span>월 전체</span></div><div class="monthly-total"><strong id="groupbuyTotal">0</strong><span>건</span></div><div class="owner-totals"><div><span class="owner-label"><i class="dot" style="background:var(--a)"></i>김태수</span><strong id="groupbuyA">0건</strong></div><div><span class="owner-label"><i class="dot" style="background:var(--b)"></i>박정</span><strong id="groupbuyB">0건</strong></div><div><span class="owner-label"><i class="dot" style="background:var(--c)"></i>손안나</span><strong id="groupbuyC">0건</strong></div><div id="ownerTotalS"><span class="owner-label"><i class="dot" style="background:#00b392"></i>사이트 행사</span><strong id="groupbuyS">0건</strong></div><div id="ownerTotalU"><span class="owner-label"><i class="dot" style="background:#7ba0c4"></i>담당자 미지정</span><strong id="groupbuyU">0건</strong></div></div></div>
-<div class="weekly-panel"><div class="stats-heading"><h2>주차별 담당자 공구 건수</h2><span>일요일~토요일 · 건수 클릭 시 상세</span></div><div class="weekly-scroll"><table class="weekly-table"><caption class="sr-only">선택한 달의 시작일 기준 담당자별 공동구매 건수</caption><thead id="weeklyHead"></thead><tbody id="weeklyBody"></tbody></table></div><section id="groupbuyWeekDetail" class="groupbuy-week-detail" hidden aria-labelledby="groupbuyWeekTitle">
- <div class="groupbuy-detail-head"><div><h3 id="groupbuyWeekTitle"></h3><p id="groupbuyWeekPeriod"></p></div><button id="closeGroupbuyWeek" type="button">접기</button></div>
+<details id="weeklyGroupbuyPanel" class="weekly-panel groupbuy-disclosure"><summary id="weeklyGroupbuyToggle" class="groupbuy-disclosure-toggle" aria-controls="weeklyGroupbuyContent" aria-expanded="false"><span class="groupbuy-disclosure-title"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" aria-hidden="true"><path d="m9 5 7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>주차별 담당자 공구 건수</span><span class="groupbuy-disclosure-status"><span class="groupbuy-when-closed">접힘 · 펼치기</span><span class="groupbuy-when-open">펼침 · 접기</span></span></summary><div id="weeklyGroupbuyContent" class="groupbuy-disclosure-content"><p class="groupbuy-table-period">일요일~토요일 · 공구 시작일 기준</p><div class="weekly-scroll"><table class="weekly-table"><caption class="sr-only">선택한 달의 시작일 기준 담당자별 공동구매 건수</caption><thead id="weeklyHead"></thead><tbody id="weeklyBody"></tbody></table></div><section id="groupbuyWeekDetail" class="groupbuy-week-detail" hidden aria-labelledby="groupbuyWeekTitle">
+ <div class="groupbuy-detail-head"><div><h3 id="groupbuyWeekTitle"></h3><p id="groupbuyWeekPeriod"></p></div><div class="groupbuy-detail-actions"><button id="closeGroupbuyWeek" type="button">접기</button><button id="copyGroupbuyWeek" class="groupbuy-copy-button" type="button" aria-label="주차별 합계 일정 복사" hidden>복사</button></div></div>
  <ul id="groupbuyWeekItems" class="groupbuy-detail-items"></ul>
-</section></div>
+</section></div></details>
 </section><p class="stats-note" id="statsNote">공구 시작일 기준 · 취소 제외 · 검색·필터와 관계없이 월 전체 집계 · 담당 미확인 별도 표시</p>
 <section class="sales-summary sales-collapsed" id="monthSalesSummary" aria-label="월별 주차별 매출 집계"><div class="sales-fold-head"><div><h2 id="salesMonthTitle">월 매출 종합</h2><p id="salesCollapsedSummary"></p></div><button id="toggleSalesSummary" type="button" aria-expanded="false" aria-controls="salesSummaryBody"><span id="salesToggleText">매출 펼치기</span><span id="salesToggleArrow" aria-hidden="true">▾</span></button></div><div id="salesSummaryBody" hidden><div class="sales-summary-head"><div><p id="salesScopeDescription">선택 월에 진행한 공구 기준</p></div><div class="sales-summary-controls"><label class="sales-scope-label">집계 기준<select id="salesScope" aria-label="매출 집계 기준"><option value="active">선택 월에 진행한 공구</option><option value="start">공구 시작일</option></select></label><div class="export-actions"><button id="exportMonthly">월별 엑셀</button><button id="exportWeekly">주차별 엑셀</button></div></div></div><p id="salesScopeNote" class="sales-scope-note"></p><div class="sales-metrics"><div class="sales-metric"><label>판매건수</label><strong id="salesMonthCount">미입력</strong><small id="salesCountCoverage"></small></div><div class="sales-metric"><label>매출액</label><strong id="salesMonthAmount">미입력</strong><small id="salesAmountCoverage"></small></div><div class="sales-metric"><label>매출 입력 완료 공구</label><strong id="salesMonthComplete"></strong><small>건수와 금액을 모두 입력한 일정</small></div></div><details id="salesProductBreakdown" class="sku-month-breakdown">
  <summary><span>제품별(SKU) 보기</span><small id="salesProductCount"></small></summary>
@@ -101755,7 +101776,7 @@ function getGroupbuyStats(items,y,m){
  for(const s of itemsInMonth){const index=Math.floor((date(s.start)-gridStart)/dayMs/7);counts[s.owner]++;weeks[index].counts[s.owner]++;weeks[index].total++;}
  return {total:itemsInMonth.length,counts,weeks};
 }
-let groupbuyWeekSelection=null;
+let groupbuyWeekSelection=null,groupbuyTableContext=null;
 function groupbuyWeekContext(){return year+'-'+String(month+1).padStart(2,'0');}
 function groupbuyWeekItems(owner,index){
  const stats=getGroupbuyStats(schedules,year,month),week=stats.weeks[index];if(!week)return [];
@@ -101783,6 +101804,8 @@ function renderGroupbuyWeekDetail(){
  if(selection&&selection.context!==groupbuyWeekContext())groupbuyWeekSelection=null;
  const state=groupbuyWeekSelection,items=state?groupbuyWeekItems(state.owner,state.index):[];
  $('groupbuyWeekDetail').hidden=!state||!items.length;
+ const copy=$('copyGroupbuyWeek');copy.hidden=!state||state.owner!=='*'||!items.length;
+ copy.disabled=false;copy.textContent='복사';copy.classList.remove('is-copied');
  for(const button of document.querySelectorAll('[data-groupbuy-owner]')){
   const active=!!state&&items.length>0&&button.dataset.groupbuyOwner===state.owner&&Number(button.dataset.groupbuyWeek)===state.index;
   button.setAttribute('aria-expanded',String(active));button.classList.toggle('is-active',active);button.querySelector('.groupbuy-count-arrow').textContent=active?'▾':'▸';
@@ -101799,6 +101822,8 @@ function renderGroupbuyWeekDetail(){
  }
 }
 function renderGroupbuyStats(){
+ const context=groupbuyWeekContext();
+ if(groupbuyTableContext!==context){$('weeklyGroupbuyPanel').open=false;groupbuyWeekSelection=null;groupbuyTableContext=context;}
  const stats=getGroupbuyStats(schedules,year,month);
  $('statsMonth').textContent=(month+1)+'월 공동구매';$('groupbuyTotal').textContent=stats.total;
  for(const owner of ownerOrder)$('groupbuy'+owner).textContent=stats.counts[owner]+'건';
@@ -101819,6 +101844,39 @@ $('closeGroupbuyWeek').onclick=()=>{
  const state=groupbuyWeekSelection;groupbuyWeekSelection=null;renderGroupbuyWeekDetail();
  if(state)document.querySelector('[data-groupbuy-owner="'+state.owner+'"][data-groupbuy-week="'+state.index+'"]')?.focus();
 };
+
+function groupbuyWeekCopyText(){
+ const state=groupbuyWeekSelection;
+ if(!state||state.owner!=='*'||state.context!==groupbuyWeekContext())return '';
+ const items=groupbuyWeekItems('*',state.index);if(!items.length)return '';
+ const heading=(month+1)+'월 '+(state.index+1)+'주차 공동구매 '+items.length+'건';
+ const entries=items.map(s=>[openingDate(s.start),groupbuyDetailLine(s),scheduleOwnerName(s)+' · '+s.start+' ~ '+s.end].join('\n'));
+ return [heading,...entries].join('\n\n');
+}
+async function writeGroupbuyWeekClipboard(text){
+ if(navigator.clipboard?.writeText){
+  try{await navigator.clipboard.writeText(text);return;}catch{}
+ }
+ const previous=document.activeElement,field=document.createElement('textarea');
+ field.value=text;field.readOnly=true;field.style.cssText='position:fixed;left:-10000px;top:0';document.body.append(field);
+ try{field.select();if(!document.execCommand('copy'))throw new Error('Clipboard unavailable');}
+ finally{field.remove();previous?.focus({preventScroll:true});}
+}
+$('copyGroupbuyWeek').onclick=async()=>{
+ const text=groupbuyWeekCopyText();if(!text)return;
+ const state=groupbuyWeekSelection,key=state.context+'/'+state.owner+'/'+state.index,button=$('copyGroupbuyWeek');button.disabled=true;
+ try{
+  await writeGroupbuyWeekClipboard(text);
+  const current=groupbuyWeekSelection;
+  if(current&&key===current.context+'/'+current.owner+'/'+current.index){button.textContent='복사 완료';button.classList.add('is-copied');}
+  showScheduleToast('복사 완료',text.split('\n')[0]+'을 복사했습니다.');
+ }catch{showScheduleToast('복사 실패','주차별 일정을 복사하지 못했습니다.');}
+ finally{button.disabled=false;}
+};
+$('weeklyGroupbuyPanel').addEventListener('toggle',()=>{
+ const panel=$('weeklyGroupbuyPanel');$('weeklyGroupbuyToggle').setAttribute('aria-expanded',String(panel.open));
+ if(!panel.open&&groupbuyWeekSelection){groupbuyWeekSelection=null;renderGroupbuyWeekDetail();}
+});
 
 
 function openingFields(s){

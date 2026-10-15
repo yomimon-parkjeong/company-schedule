@@ -26,10 +26,10 @@ def apply_groupbuy_weekly(markup,data):
  start=markup.index('function renderGroupbuyStats(){')
  end=markup.index('\nfunction openingFields(s){',start)
  markup=markup[:start]+(WORK/'weekly-details.js').read_text(encoding='utf-8')+'\n'+markup[end:]
- anchor='<tbody id="weeklyBody"></tbody></table></div></div>'
- if markup.count(anchor)!=1:raise ValueError('Weekly detail panel anchor mismatch')
- markup=markup.replace(anchor,'<tbody id="weeklyBody"></tbody></table></div>'+(WORK/'weekly-details.html').read_text(encoding='utf-8')+'</div>',1)
- markup=markup.replace('<h2>주차별 담당자 공구 건수</h2><span>일요일~토요일</span>','<h2>주차별 담당자 공구 건수</h2><span>일요일~토요일 · 건수 클릭 시 상세</span>',1)
+ panel='<div class="weekly-panel"><div class="stats-heading"><h2>주차별 담당자 공구 건수</h2><span>일요일~토요일</span></div><div class="weekly-scroll"><table class="weekly-table"><caption class="sr-only">선택한 달의 시작일 기준 담당자별 공동구매 건수</caption><thead id="weeklyHead"></thead><tbody id="weeklyBody"></tbody></table></div></div>'
+ if markup.count(panel)!=1:raise ValueError('Weekly disclosure anchor mismatch')
+ disclosure='<details id="weeklyGroupbuyPanel" class="weekly-panel groupbuy-disclosure"><summary id="weeklyGroupbuyToggle" class="groupbuy-disclosure-toggle" aria-controls="weeklyGroupbuyContent" aria-expanded="false"><span class="groupbuy-disclosure-title"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" aria-hidden="true"><path d="m9 5 7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>주차별 담당자 공구 건수</span><span class="groupbuy-disclosure-status"><span class="groupbuy-when-closed">접힘 · 펼치기</span><span class="groupbuy-when-open">펼침 · 접기</span></span></summary><div id="weeklyGroupbuyContent" class="groupbuy-disclosure-content"><p class="groupbuy-table-period">일요일~토요일 · 공구 시작일 기준</p><div class="weekly-scroll"><table class="weekly-table"><caption class="sr-only">선택한 달의 시작일 기준 담당자별 공동구매 건수</caption><thead id="weeklyHead"></thead><tbody id="weeklyBody"></tbody></table></div>'+(WORK/'weekly-details.html').read_text(encoding='utf-8')+'</div></details>'
+ markup=markup.replace(panel,disclosure,1)
  markup=markup.replace('</style>',(WORK/'weekly-details.css').read_text(encoding='utf-8')+'\n</style>',1)
  # Use a parsed product for an inferred historical record without rewriting its source field.
  markup=markup.replace("let product=s.listProduct||s.product?.trim()||'';","let product=s.listProduct||s.product?.trim()||s.typeClassification?.product||'';",1)

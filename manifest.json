@@ -31,18 +31,18 @@
     },
     {
       "path": ".work/groupbuy-review/weekly-details.css",
-      "bytes": 1918,
-      "sha256": "a3ef3a37d4e12ad940074113a1b7ed758154a366ac8c1851a908956dbf02ab8f"
+      "bytes": 3949,
+      "sha256": "ef94e73f778581c4701979450da500bdc3e3c8af0f3f5cdf9beeeefc6f9e7548"
     },
     {
       "path": ".work/groupbuy-review/weekly-details.html",
-      "bytes": 356,
-      "sha256": "3624aa853a2e6a79535905ca66c1296da1d9e08c2c18c2d16239fc9d59d7a70d"
+      "bytes": 541,
+      "sha256": "1c64adb664df186d2a391de0542ab39e181b0f0a898038bcce13b284e405cb14"
     },
     {
       "path": ".work/groupbuy-review/weekly-details.js",
-      "bytes": 6010,
-      "sha256": "fadacea41345f1343ed339ca953f3cf47a69531a31fdb3f41ab4baa04d81d01c"
+      "bytes": 8440,
+      "sha256": "4fbd9a6f68e7684ddef50f4a328f4afe1413a7800524dd969b8210746f69ec4d"
     },
     {
       "path": ".work/holiday2030/holidays-2028-2030.json",
@@ -61,8 +61,8 @@
     },
     {
       "path": ".work/import2026/apply_groupbuy_classification.py",
-      "bytes": 3435,
-      "sha256": "91b8e9094f0778949155329ff784b222a074ecfb7008eb5327634ff65763fc5f"
+      "bytes": 4608,
+      "sha256": "c7939e614439e049cdfb4b2c01392e41dcd66b4113063c040054d6e9e4dffa8e"
     },
     {
       "path": ".work/import2026/apply_owner_labels.py",
@@ -441,8 +441,8 @@
     },
     {
       "path": "03_사내일정관리_시안.html",
-      "bytes": 3382439,
-      "sha256": "39b193a9c287912f7746ec91a5ae0a0d739a3e265c0c645cf9a07330ed201283"
+      "bytes": 3387674,
+      "sha256": "f831fe73b2b1201d33e8a6fcbe450f12bcb78a66058fd81f67fa9f74f70eda4f"
     },
     {
       "path": "09_이미지반영_일정데이터.json",
@@ -510,9 +510,14 @@
       "sha256": "6e6a5fab8979778575cc418aa1dcb71554f39c7d65e50ee5b0698b5a0db0a138"
     },
     {
+      "path": "41_주차집계_접기_복사_중복검토.md",
+      "bytes": 3919,
+      "sha256": "ff96cbfa2611800cee72cb37659755db8a379a337bb50feeaf662cf9aeaad6df"
+    },
+    {
       "path": "AGENTS.md",
-      "bytes": 21095,
-      "sha256": "d09b88f1b961d70be18360174c382e5ddc9a3330bc70463ee00b8a44c57de522"
+      "bytes": 22004,
+      "sha256": "ccd587b6cbdb0b043af5e51904b0650a9ba429df051ed82f70495a0e058b6949"
     },
     {
       "path": "owners.seed.json",
@@ -578,6 +583,11 @@
       "path": "quality/settlement-verification-results.json",
       "bytes": 16132,
       "sha256": "401c7e0b2cf9e2826c7dee3a6e93427be909eeab0f93a45eb1335d83cd106df0"
+    },
+    {
+      "path": "quality/weekly-copy-verification.json",
+      "bytes": 707,
+      "sha256": "40c71b80795da8d2f9445082610c1bf60488f7c9f2b11a87aab3a5ed22e4a643"
     },
     {
       "path": "README_개발자인계.md",

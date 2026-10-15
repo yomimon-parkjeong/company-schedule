@@ -1,4 +1,4 @@
-let groupbuyWeekSelection=null;
+let groupbuyWeekSelection=null,groupbuyTableContext=null;
 function groupbuyWeekContext(){return year+'-'+String(month+1).padStart(2,'0');}
 function groupbuyWeekItems(owner,index){
  const stats=getGroupbuyStats(schedules,year,month),week=stats.weeks[index];if(!week)return [];
@@ -26,6 +26,8 @@ function renderGroupbuyWeekDetail(){
  if(selection&&selection.context!==groupbuyWeekContext())groupbuyWeekSelection=null;
  const state=groupbuyWeekSelection,items=state?groupbuyWeekItems(state.owner,state.index):[];
  $('groupbuyWeekDetail').hidden=!state||!items.length;
+ const copy=$('copyGroupbuyWeek');copy.hidden=!state||state.owner!=='*'||!items.length;
+ copy.disabled=false;copy.textContent='복사';copy.classList.remove('is-copied');
  for(const button of document.querySelectorAll('[data-groupbuy-owner]')){
   const active=!!state&&items.length>0&&button.dataset.groupbuyOwner===state.owner&&Number(button.dataset.groupbuyWeek)===state.index;
   button.setAttribute('aria-expanded',String(active));button.classList.toggle('is-active',active);button.querySelector('.groupbuy-count-arrow').textContent=active?'▾':'▸';
@@ -42,6 +44,8 @@ function renderGroupbuyWeekDetail(){
  }
 }
 function renderGroupbuyStats(){
+ const context=groupbuyWeekContext();
+ if(groupbuyTableContext!==context){$('weeklyGroupbuyPanel').open=false;groupbuyWeekSelection=null;groupbuyTableContext=context;}
  const stats=getGroupbuyStats(schedules,year,month);
  $('statsMonth').textContent=(month+1)+'월 공동구매';$('groupbuyTotal').textContent=stats.total;
  for(const owner of ownerOrder)$('groupbuy'+owner).textContent=stats.counts[owner]+'건';
@@ -62,3 +66,36 @@ $('closeGroupbuyWeek').onclick=()=>{
  const state=groupbuyWeekSelection;groupbuyWeekSelection=null;renderGroupbuyWeekDetail();
  if(state)document.querySelector('[data-groupbuy-owner="'+state.owner+'"][data-groupbuy-week="'+state.index+'"]')?.focus();
 };
+
+function groupbuyWeekCopyText(){
+ const state=groupbuyWeekSelection;
+ if(!state||state.owner!=='*'||state.context!==groupbuyWeekContext())return '';
+ const items=groupbuyWeekItems('*',state.index);if(!items.length)return '';
+ const heading=(month+1)+'월 '+(state.index+1)+'주차 공동구매 '+items.length+'건';
+ const entries=items.map(s=>[openingDate(s.start),groupbuyDetailLine(s),scheduleOwnerName(s)+' · '+s.start+' ~ '+s.end].join('\n'));
+ return [heading,...entries].join('\n\n');
+}
+async function writeGroupbuyWeekClipboard(text){
+ if(navigator.clipboard?.writeText){
+  try{await navigator.clipboard.writeText(text);return;}catch{}
+ }
+ const previous=document.activeElement,field=document.createElement('textarea');
+ field.value=text;field.readOnly=true;field.style.cssText='position:fixed;left:-10000px;top:0';document.body.append(field);
+ try{field.select();if(!document.execCommand('copy'))throw new Error('Clipboard unavailable');}
+ finally{field.remove();previous?.focus({preventScroll:true});}
+}
+$('copyGroupbuyWeek').onclick=async()=>{
+ const text=groupbuyWeekCopyText();if(!text)return;
+ const state=groupbuyWeekSelection,key=state.context+'/'+state.owner+'/'+state.index,button=$('copyGroupbuyWeek');button.disabled=true;
+ try{
+  await writeGroupbuyWeekClipboard(text);
+  const current=groupbuyWeekSelection;
+  if(current&&key===current.context+'/'+current.owner+'/'+current.index){button.textContent='복사 완료';button.classList.add('is-copied');}
+  showScheduleToast('복사 완료',text.split('\n')[0]+'을 복사했습니다.');
+ }catch{showScheduleToast('복사 실패','주차별 일정을 복사하지 못했습니다.');}
+ finally{button.disabled=false;}
+};
+$('weeklyGroupbuyPanel').addEventListener('toggle',()=>{
+ const panel=$('weeklyGroupbuyPanel');$('weeklyGroupbuyToggle').setAttribute('aria-expanded',String(panel.open));
+ if(!panel.open&&groupbuyWeekSelection){groupbuyWeekSelection=null;renderGroupbuyWeekDetail();}
+});
