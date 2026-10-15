@@ -16,7 +16,7 @@
 - 일정 편집·매출: .work/schedule-sales/
 - 월 이력·집계 기준: .work/schedule-refinement/
 - 월·주차·정산 메뉴: .work/work-navigation/
-- 주차별 일정 정리: .work/weekly-report/
+- 기존 주차별 보고 소스(현재 삽입 중단): .work/weekly-report/
 - 제품별 매출: .work/sku-sales/
 - 정산 계산·엑셀: .work/settlement-calculator/settlement.js, template.json
 - 전달용 엑셀 서식: .work/settlement-calculator/build-template.mjs, prepare-template.py (서식 재작성에 @oai/artifact-tool 필요, 브라우저 실행에는 불필요)

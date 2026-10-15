@@ -40,7 +40,7 @@ def apply_catalog_management(markup,data):
  replace('const sales=readSalesInputs(f.salesCount,f.salesAmount);',
          "if(!ownerOrder.includes(f.owner)||!workTypeOrder.includes(f.type))throw new Error('담당자와 업무유형을 확인해주세요.');const sales=readSalesInputs(f.salesCount,f.salesAmount);")
  # Update the compact summary even while the sales panel is hidden.
- replace('function renderSales(){\n const items=', 'function renderSales(){\n updateSalesCollapsedSummary();\n const items=')
+ replace('function renderSales(){\n const context=', 'function renderSales(){\n updateSalesCollapsedSummary();\n const context=')
  replace('restoreCalendarHistory();',(WORK/'manager.js').read_text(encoding='utf-8')+'\nrestoreCalendarHistory();')
  replace('마지막으로 본 월은 같은 PC·브라우저에서 기억합니다.',
          '마지막으로 본 월과 담당자·업무유형 설정은 같은 PC·브라우저에서 기억합니다.')

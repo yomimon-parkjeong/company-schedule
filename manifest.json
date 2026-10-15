@@ -16,8 +16,8 @@
     },
     {
       "path": ".work/catalog-management/manager.js",
-      "bytes": 11175,
-      "sha256": "102e33528a3c784c3fa6a86350201292e6199acf229412f5f96e4bd50cb428de"
+      "bytes": 11299,
+      "sha256": "a5448d79bf9bd87bf7a0019ac426418af667daa478b0830f9636777be2053304"
     },
     {
       "path": ".work/groupbuy-review/classification-rules.json",
@@ -51,8 +51,8 @@
     },
     {
       "path": ".work/import2026/apply_catalog_management.py",
-      "bytes": 4427,
-      "sha256": "64df6a89674db7a70348df11c60abab89dd617dd6554fd281d78bddf5319aa5f"
+      "bytes": 4431,
+      "sha256": "cef141bb6271e5819a8964b3fd399c471c8a3c8ffe266673d482960b8bc9a016"
     },
     {
       "path": ".work/import2026/apply_csv_calendar.py",
@@ -126,8 +126,8 @@
     },
     {
       "path": ".work/import2026/apply_weekly_report.py",
-      "bytes": 1292,
-      "sha256": "4095c00739f5b22e4047470d2df1caa2270b0f9b9d6a4153a71fe8eb958ef0ee"
+      "bytes": 135,
+      "sha256": "56b2153d5ba70e9fe005dd5ca3b686c9f34d26c7d7c59dee5e15f7eadaf08802"
     },
     {
       "path": ".work/import2026/apply_work_navigation.py",
@@ -281,8 +281,8 @@
     },
     {
       "path": ".work/schedule-refinement/sales-scope.js",
-      "bytes": 4643,
-      "sha256": "9cbaecf777f50c669d918bf9340ae85a76355db4cd9fe4008561e6decf873ee8"
+      "bytes": 5799,
+      "sha256": "c863aab60670dab7a69b80d83c0eca8514ba011672ef211f98f4c2dffd755ed6"
     },
     {
       "path": ".work/schedule-sales/add-fields.html",
@@ -401,8 +401,8 @@
     },
     {
       "path": ".work/sku-sales/sku.js",
-      "bytes": 6734,
-      "sha256": "33b0ba76ef04c3d143096e02f2c14d8851d1f819322ebe5005cecfd904c8caae"
+      "bytes": 6841,
+      "sha256": "fb6f018b633a0e2f615550e517d26635a01983e3b8d82afd16fa9be2483f67f2"
     },
     {
       "path": ".work/weekly-report/report.css",
@@ -426,13 +426,13 @@
     },
     {
       "path": ".work/work-navigation/navigation.html",
-      "bytes": 3162,
-      "sha256": "2d6847ba79137cbf2b87c210b28059ff9e58f8c40684a5987c9b64d78efccd8b"
+      "bytes": 2240,
+      "sha256": "3d2b8d31293e18da9218fb8d50342afa67bb39cbab532cc13964d0ff754f9c37"
     },
     {
       "path": ".work/work-navigation/navigation.js",
-      "bytes": 5041,
-      "sha256": "0416a57effaec63126320081d35e60f48b0da8455ee4803d0b805529fa169ec0"
+      "bytes": 5049,
+      "sha256": "80a24a07bdd9f1a8902213fe25d320c9efa2b059171ba439e2d7410a0de4c4f4"
     },
     {
       "path": ".work/work-navigation/settlement.html",
@@ -441,8 +441,8 @@
     },
     {
       "path": "03_사내일정관리_시안.html",
-      "bytes": 3387674,
-      "sha256": "f831fe73b2b1201d33e8a6fcbe450f12bcb78a66058fd81f67fa9f74f70eda4f"
+      "bytes": 3384934,
+      "sha256": "e48c513ef753ba9ce8a1b8d5abacc86208b81ee4b074b806a7b65c7b149c9cd5"
     },
     {
       "path": "09_이미지반영_일정데이터.json",
@@ -515,9 +515,14 @@
       "sha256": "ff96cbfa2611800cee72cb37659755db8a379a337bb50feeaf662cf9aeaad6df"
     },
     {
+      "path": "42_전체일정_기준_주차매출.md",
+      "bytes": 3083,
+      "sha256": "302cf2579392e7a799cb5e59ef93766591a31f8db9117c2687c519a246a9f6e4"
+    },
+    {
       "path": "AGENTS.md",
-      "bytes": 22004,
-      "sha256": "ccd587b6cbdb0b043af5e51904b0650a9ba429df051ed82f70495a0e058b6949"
+      "bytes": 22985,
+      "sha256": "c58d4bffb4640ca95d205be9b07dfa91c05ecf3ff104ba8847b54fe0d0309cf1"
     },
     {
       "path": "owners.seed.json",
@@ -548,6 +553,11 @@
       "path": "quality/groupbuy-classification-verification.json",
       "bytes": 15199,
       "sha256": "213b5e0d0ecc8fd38f4173df639d91847b1fc43bc99c071daa29156605e886c7"
+    },
+    {
+      "path": "quality/navigation-cleanup-verification.json",
+      "bytes": 513,
+      "sha256": "8303ffc7c4f3c029c30b3b75aa1acf9af0c48f9369e459ebffae85cc70556d1e"
     },
     {
       "path": "quality/owner-display-verification.json",
@@ -596,8 +606,8 @@
     },
     {
       "path": "SOURCE_MAP.md",
-      "bytes": 2614,
-      "sha256": "b7c740114a10fd931d416ada4e3f14a7781ecb261152bbdd64451515e8ced323"
+      "bytes": 2643,
+      "sha256": "a6f94735b34d0fa53123ac7b9af9fd91baeae58ce97db0ae5130a6c1e651ba25"
     },
     {
       "path": "자료/2026_원본/2026-01.png",

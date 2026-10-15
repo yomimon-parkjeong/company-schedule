@@ -101,7 +101,7 @@ function saveCatalog(){
  }catch(error){$('catalogError').textContent=error.message;}
 }
 function updateSalesCollapsedSummary(){
- const total=summarizeSales(currentSalesItems());$('salesCollapsedSummary').textContent='주문·결제 '+salesText(total.count,'건')+' · 매출 '+salesText(total.amount,'원');
+ const total=summarizeSales(salesViewContext().items);$('salesCollapsedSummary').textContent='주문·결제 '+salesText(total.count,'건')+' · 매출 '+salesText(total.amount,'원');
 }
 function setSalesSummaryExpanded(expanded,persist=true){
  $('salesSummaryBody').hidden=!expanded;$('monthSalesSummary').classList.toggle('sales-collapsed',!expanded);

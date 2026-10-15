@@ -42,11 +42,12 @@ function skuProductTable(items,namespace,label){
  table.append(caption,thead,body,foot);return table;
 }
 function renderSkuSales(items,first){
- const context=year+'-'+month+'-'+salesScope();
+ const view=salesViewContext(),context=year+'-'+month+'-'+salesScope()+'-'+(view.weekly?view.index:'all');
  if(context!==skuSalesContext){skuSalesContext=context;skuWeekExpanded.clear();skuProductExpanded.clear();$('salesProductBreakdown').open=false;}
  const groups=groupSkuSales(items);$('salesProductCount').textContent=groups.length+'개 제품 · '+items.length+'개 공구';
- $('salesMonthlyProducts').replaceChildren(skuProductTable(items,'month',(month+1)+'월'));
+ $('salesMonthlyProducts').replaceChildren(skuProductTable(items,view.weekly?'selected-week':'month',view.label));
  $('salesWeeklyBody').replaceChildren();
+ if(view.weekly)return;
  for(const w of salesWeeks(items)){
   const v=summarizeSales(w.items),tr=node('tr',undefined,'sales-week-summary'),th=node('th'),panel=node('tr',undefined,'sku-week-detail'),cell=node('td'),id='sku-week-'+w.index+'-detail';th.scope='row';tr.dataset.week=String(w.index);panel.id=id;panel.hidden=!skuWeekExpanded.has(w.index);cell.colSpan=6;
   const toggle=skuToggle(w.index+'주차',id,!panel.hidden,open=>{panel.hidden=!open;if(open)skuWeekExpanded.add(w.index);else skuWeekExpanded.delete(w.index);});toggle.append(node('span','제품별 보기','sku-toggle-hint'));toggle.setAttribute('aria-label',w.index+'주차 제품별(SKU) 매출 보기');th.append(toggle,node('div',openingDate(w.start)+' ~ '+openingDate(w.end),'week-range'));

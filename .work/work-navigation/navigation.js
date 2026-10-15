@@ -1,6 +1,6 @@
 /* Settlement is an isolated entry screen; no settlement data or calculations are loaded here. */
-let workView='all',lastScheduleView='all',weeklyAnchor='',navigationShown=[],listBeforeSettlement=false;
-const workViewLabels={all:'업무 스케줄',week:'주차 일정',month:'월별 일정'};
+let workView='all',lastScheduleView='all',weeklyAnchor='',navigationShown=[],mainListView=false;
+const workViewLabels={all:'전체일정',week:'주차 일정'};
 function koreaToday(){
  const parts=Object.fromEntries(new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date()).map(p=>[p.type,p.value]));
  return parts.year+'-'+parts.month+'-'+parts.day;
@@ -39,7 +39,7 @@ function applyWorkView(shown=navigationShown){
  $('weekFocusHeader').hidden=!weekly;document.querySelector('.view-switch').hidden=weekly;
  document.querySelector('.groupbuy-summary').hidden=weekly;$('statsNote').hidden=weekly;
  $('calendarView').classList.toggle('week-focus',weekly);
- $('prev').setAttribute('aria-label',weekly?'이전 주':'이전 달');$('next').setAttribute('aria-label',weekly?'다음 주':'다음 달');
+ $('prev').hidden=weekly;$('next').hidden=weekly;$('prev').setAttribute('aria-label','이전 달');$('next').setAttribute('aria-label','다음 달');
  let range=null;
  if(weekly){
   range=ensureWeeklyAnchor();const index=Math.round((range.start-range.gridStart)/dayMs/7)+1;
@@ -55,15 +55,16 @@ function applyWorkView(shown=navigationShown){
  sizeCalendarHeaders();
 }
 function switchWorkView(view){
- if(!['all','week','month','settlement'].includes(view))return;
+ if(view==='month')view='all';
+ if(!['all','week','settlement'].includes(view))return;
+ if(workView==='all'&&view!=='all')mainListView=!$('listView').hidden;
  if(view==='settlement'){
-  if(workView!=='settlement'){lastScheduleView=workView;listBeforeSettlement=!$('listView').hidden;}
+  if(workView!=='settlement'){lastScheduleView=workView;}
   workView=view;applyWorkView();return;
  }
- const returning=workView==='settlement'&&view===lastScheduleView;
  workView=view;lastScheduleView=view;
  if(view==='week')ensureWeeklyAnchor();
- setView(returning&&view!=='week'?listBeforeSettlement:false);
+ setView(view==='all'?mainListView:false);
 }
 for(const button of document.querySelectorAll('[data-work-view]'))button.onclick=()=>switchWorkView(button.dataset.workView);
 $('backToSchedule').onclick=()=>{switchWorkView(lastScheduleView);$('schedulePageTitle').focus();};
