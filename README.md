@@ -1,6 +1,13 @@
 # 사내 일정·공동구매 정산 — 개발자 CSV 테스트
 최신 전달 기준: 2026-10-19
 
+## 브라우저 미리보기
+https://yomimon-parkjeong.github.io/company-schedule/
+
+GitHub Pages는 docs/ 폴더의 빈 일정 HTML 화면만 제공합니다. 원본 CSV·과거 자료·PHP 원문은 Pages 배포 폴더에 포함하지 않습니다.
+미리보기는 일정 0건으로 시작하고 CSV를 직접 선택해 반영합니다. 새로고침하면 0건으로 돌아갑니다.
+PHP 실행·서버 저장을 검증하는 주소는 아닙니다.
+
 ## 실행할 파일
 [developer-empty/public/index.php](developer-empty/public/index.php) 하나를 사용합니다. **처음에는 일정 0건**입니다.
 
@@ -25,4 +32,12 @@ CSV 1,679건은 코드에 내장하지 않았으며 자동 로딩하지 않습�
 PHP는 기존 클라이언트 시안을 제공하는 진입점입니다. 서버 DB·로그인·권한·공용 저장은 아직 구현되지 않았습니다.
 CSV 반영·일정 수정·매출·정산 이력은 현재 페이지 메모리에만 유지되며 새로고침하면 일정 0건으로 돌아갑니다.
 원본 CSV는 상품명 전체 교정 완료본이 아닙니다.
-실제 사내 원본 CSV를 포함하므로 이 저장소는 비공개로 관리합니다.
+저장소에는 실제 사내 원본 CSV와 과거 자료가 있습니다. 해당 자료의 공개 범위는 GitHub 저장소 공개 설정을 따릅니다. Pages 배포 폴더에서 제외하는 것만으로 저장소 자료가 비공개로 바뀌지는 않습니다.
+
+## 미리보기 갱신
+developer-empty/public/index.php를 수정한 후 다음을 실행하고 docs/ 변경도 커밋합니다.
+
+    python tools/build-pages-preview.py
+
+빌더는 PHP의 응답 헤더 부분만 제거하여 같은 HTML/CSS/JavaScript를 생성합니다.
+초기 일정이 빈 배열이 아니면 빌드를 중단합니다. Pages 게시 소스는 main 브랜치의 /docs입니다.

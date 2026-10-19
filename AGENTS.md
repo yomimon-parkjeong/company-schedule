@@ -194,3 +194,10 @@
 - 현재 README, SOURCE_MAP 및 developer-empty 안내를 우선한다. archive 문서는 당시 참고 자료다.
 - 원본 CSV는 수동 입력으로만 사용하고 이미지 전사 데이터와 자동 합치지 않는다.
 - 실제 D드라이브 대시보드와 공개 베타는 변경하지 않는다.
+
+## 사용자 요청 GitHub Pages 실행 미리보기 (2026-10-19)
+- Pages 게시 폴더는 docs/만 사용한다. 루트 README를 첫 화면으로 게시하지 않는다.
+- docs/index.html은 developer-empty/public/index.php에서 tools/build-pages-preview.py로 생성한다.
+- 초기 일정 0건, 수동 CSV 입력과 기존 UI 기능을 유지한다. CSV·이미지·archive·PHP 파일을 docs에 복사하지 않는다.
+- Pages에서 PHP/DB가 실행되거나 공용 저장이 된다고 설명하지 않는다.
+- 저장소 공개 여부와 Pages 배포 범위를 구분한다. 저장소 공개 상태 자체는 이 미리보기 작업으로 변경하지 않는다.

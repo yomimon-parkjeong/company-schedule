@@ -17,8 +17,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 24344,
-      "sha256": "266c08f43e5085ad783f5beef91267707bb6ac2ba496f570d723abdd705b280d"
+      "bytes": 25016,
+      "sha256": "515b9886cd93aa4439ec3cf4f68b47fa689aa1bf8210288b8d671e3a10a1bcb8"
     },
     {
       "path": "archive/legacy-before-csv-test/.work/catalog-management/manager.css",
@@ -736,6 +736,16 @@
       "sha256": "bf141cbd5553cff78c05b202f4fb83bd2fca909c4d677ad823cca1e9c8a8f3c5"
     },
     {
+      "path": "docs/.nojekyll",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "docs/index.html",
+      "bytes": 334889,
+      "sha256": "f42c7ccdaf6820e3e20be9cf32208267e18c61f0d0b21c9d9717436fbcfb954f"
+    },
+    {
       "path": "quality/csv-only-cleanup-verification.json",
       "bytes": 2178,
       "sha256": "7338670bea06cbb33e87d082bce4c5ffd1083d2dc85c14db4d6560409f17c716"
@@ -746,9 +756,14 @@
       "sha256": "bdb90abf3c719c9a86bfc7bb881820c1ccb68be7b5ea1d73f08513b6aaa23cc4"
     },
     {
+      "path": "quality/pages-preview-verification.json",
+      "bytes": 537,
+      "sha256": "14816b02b8599bc74c61ac9b851024e985fd5e2fc99703e97c8d7c8a0e22f209"
+    },
+    {
       "path": "README.md",
-      "bytes": 1731,
-      "sha256": "17c44bdf2a0744ed31ecf2c22e2ecb9eb56f3da4028b8fc34e8e892fd3d8dcaf"
+      "bytes": 2759,
+      "sha256": "4764f05883f06cfa539b530b65ee82dc3cb78acf1d3bc4b36758f9dbeccf35f5"
     },
     {
       "path": "README_개발자인계.md",
@@ -757,8 +772,15 @@
     },
     {
       "path": "SOURCE_MAP.md",
-      "bytes": 1152,
-      "sha256": "fe1585b4b6dcaccdaba196e74db284c77c8b4bd2c3cec5be04db95200023f9c9"
+      "bytes": 1508,
+      "sha256": "347e398190e17c91744ae22c2ac40da8877ac8a7a2930c64801accb361eda2c2"
+    },
+    {
+      "path": "tools/build-pages-preview.py",
+      "bytes": 1148,
+      "sha256": "5ed1af30d11bd27c4bc32461e50ab47748a015ab5ac3ec04b0d8fffcc7655b08"
     }
-  ]
+  ],
+  "pagesPreviewEntry": "docs/index.html",
+  "pagesPublishPath": "/docs"
 }

@@ -15,3 +15,9 @@ index.php에 기존 HTML/CSS/JavaScript, CSV 입력·중복 판별·일정 편�
 초기 schedules는 빈 배열이며 별도 JSON/이미지/CSV를 자동으로 읽지 않습니다.
 현재 코드를 검토할 때는 index.php를 기준으로 합니다. archive의 패치 체인은 과거 생성 과정이므로 현재 전달본 빌드 명령으로 사용하지 않습니다.
 기능을 모듈화하거나 PHP/DB API로 이관하는 후속 개발은 별도 범위입니다.
+
+## GitHub Pages 전용 미리보기
+- docs/index.html: 빈 PHP 전달본과 동일한 클라이언트 화면.
+- docs/.nojekyll: Jekyll 문서 변환 없이 HTML 제공.
+- tools/build-pages-preview.py: 빈 PHP에서 미리보기 생성. 초기 일정이 0건인지 검증.
+- 게시 소스: main /docs. data·archive·quality 폴더를 배포하지 않음.
