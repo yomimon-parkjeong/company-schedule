@@ -1,0 +1,389 @@
+{
+  "csv-apply": {
+    "passed": true,
+    "results": [
+      {
+        "name": "1679 CSV records replace 222 image entries",
+        "passed": true
+      },
+      {
+        "name": "unique source IDs and stable numeric IDs",
+        "passed": true
+      },
+      {
+        "name": "all original 24 columns preserved",
+        "passed": true
+      },
+      {
+        "name": "Python and browser normalization agree for all records",
+        "passed": true
+      },
+      {
+        "name": "explicit owners retained without color inference",
+        "passed": true
+      },
+      {
+        "name": "category label retained for all unassigned entries",
+        "passed": true
+      },
+      {
+        "name": "known staff and conflicting colors remain independent",
+        "passed": true
+      },
+      {
+        "name": "1392 raw blanks preserved with authorized classification",
+        "passed": true
+      },
+      {
+        "name": "source colors exact and two unknowns neutral",
+        "passed": true
+      },
+      {
+        "name": "37 explicit cancellations retained; text does not infer cancellation",
+        "passed": true
+      },
+      {
+        "name": "no imported order totals invented",
+        "passed": true
+      },
+      {
+        "name": "time record preserved exactly",
+        "passed": true
+      },
+      {
+        "name": "historical months reachable",
+        "passed": true
+      },
+      {
+        "name": "saved catalog migration retains custom settings",
+        "passed": true
+      },
+      {
+        "name": "historic calendar renders source entries",
+        "passed": true
+      },
+      {
+        "name": "selection shows category and no invented person",
+        "passed": true
+      },
+      {
+        "name": "selection exposes time and timezone",
+        "passed": true
+      },
+      {
+        "name": "unclassified event can be edited without changing type",
+        "passed": true
+      },
+      {
+        "name": "reimport original has zero new or updated records",
+        "passed": true
+      },
+      {
+        "name": "same-file reapply cannot create duplicates",
+        "passed": true
+      },
+      {
+        "name": "duplicate source IDs reject atomically",
+        "passed": true
+      },
+      {
+        "name": "invalid calendar dates reject atomically",
+        "passed": true
+      },
+      {
+        "name": "unknown owner rejects without guessing",
+        "passed": true
+      },
+      {
+        "name": "invalid colors reject atomically",
+        "passed": true
+      },
+      {
+        "name": "reversed date range rejects atomically",
+        "passed": true
+      },
+      {
+        "name": "unknown explicit work type rejects atomically",
+        "passed": true
+      },
+      {
+        "name": "preview does not write schedules",
+        "passed": true
+      },
+      {
+        "name": "apply adds one unassigned category entry",
+        "passed": true
+      },
+      {
+        "name": "apply refreshes duplicate check and success message",
+        "passed": true
+      },
+      {
+        "name": "reapplying new CSV is idempotent",
+        "passed": true
+      },
+      {
+        "name": "preview identifies protected manual values",
+        "passed": true
+      },
+      {
+        "name": "update preserves edited title product and original id",
+        "passed": true
+      },
+      {
+        "name": "update refreshes unchanged fields and raw metadata",
+        "passed": true
+      },
+      {
+        "name": "sales and settlement contribution history preserved",
+        "passed": true
+      },
+      {
+        "name": "partial CSV does not delete absent existing schedules",
+        "passed": true
+      },
+      {
+        "name": "repeat updated source does not overwrite manual edits",
+        "passed": true
+      },
+      {
+        "name": "edits made after preview are protected at apply",
+        "passed": true
+      },
+      {
+        "name": "calendar is still free of duplicate IDs",
+        "passed": true
+      },
+      {
+        "name": "test-only calendar changes restored",
+        "passed": true
+      }
+    ]
+  },
+  "csv-category": {
+    "passed": true,
+    "results": [
+      {
+        "name": "1679 CSV records replace 222 image entries",
+        "passed": true
+      },
+      {
+        "name": "unique source IDs and stable numeric IDs",
+        "passed": true
+      },
+      {
+        "name": "all original 24 columns preserved",
+        "passed": true
+      },
+      {
+        "name": "Python and browser normalization agree for all records",
+        "passed": true
+      },
+      {
+        "name": "explicit owners retained without color inference",
+        "passed": true
+      },
+      {
+        "name": "category label retained for all unassigned entries",
+        "passed": true
+      },
+      {
+        "name": "known staff and conflicting colors remain independent",
+        "passed": true
+      },
+      {
+        "name": "1392 raw blanks preserved with authorized classification",
+        "passed": true
+      },
+      {
+        "name": "source colors exact and two unknowns neutral",
+        "passed": true
+      },
+      {
+        "name": "37 explicit cancellations retained; text does not infer cancellation",
+        "passed": true
+      },
+      {
+        "name": "no imported order totals invented",
+        "passed": true
+      },
+      {
+        "name": "time record preserved exactly",
+        "passed": true
+      },
+      {
+        "name": "historical months reachable",
+        "passed": true
+      },
+      {
+        "name": "saved catalog migration retains custom settings",
+        "passed": true
+      },
+      {
+        "name": "historic calendar renders source entries",
+        "passed": true
+      },
+      {
+        "name": "selection shows category and no invented person",
+        "passed": true
+      },
+      {
+        "name": "selection exposes time and timezone",
+        "passed": true
+      },
+      {
+        "name": "unclassified event can be edited without changing type",
+        "passed": true
+      },
+      {
+        "name": "reimport original has zero new or updated records",
+        "passed": true
+      },
+      {
+        "name": "same-file reapply cannot create duplicates",
+        "passed": true
+      },
+      {
+        "name": "duplicate source IDs reject atomically",
+        "passed": true
+      },
+      {
+        "name": "invalid calendar dates reject atomically",
+        "passed": true
+      },
+      {
+        "name": "unknown owner rejects without guessing",
+        "passed": true
+      },
+      {
+        "name": "invalid colors reject atomically",
+        "passed": true
+      },
+      {
+        "name": "reversed date range rejects atomically",
+        "passed": true
+      },
+      {
+        "name": "unknown explicit work type rejects atomically",
+        "passed": true
+      },
+      {
+        "name": "test-only calendar changes restored",
+        "passed": true
+      }
+    ]
+  },
+  "csv-narrow": {
+    "passed": true,
+    "results": [
+      {
+        "name": "1679 CSV records replace 222 image entries",
+        "passed": true
+      },
+      {
+        "name": "unique source IDs and stable numeric IDs",
+        "passed": true
+      },
+      {
+        "name": "all original 24 columns preserved",
+        "passed": true
+      },
+      {
+        "name": "Python and browser normalization agree for all records",
+        "passed": true
+      },
+      {
+        "name": "explicit owners retained without color inference",
+        "passed": true
+      },
+      {
+        "name": "category label retained for all unassigned entries",
+        "passed": true
+      },
+      {
+        "name": "known staff and conflicting colors remain independent",
+        "passed": true
+      },
+      {
+        "name": "1392 raw blanks preserved with authorized classification",
+        "passed": true
+      },
+      {
+        "name": "source colors exact and two unknowns neutral",
+        "passed": true
+      },
+      {
+        "name": "37 explicit cancellations retained; text does not infer cancellation",
+        "passed": true
+      },
+      {
+        "name": "no imported order totals invented",
+        "passed": true
+      },
+      {
+        "name": "time record preserved exactly",
+        "passed": true
+      },
+      {
+        "name": "historical months reachable",
+        "passed": true
+      },
+      {
+        "name": "saved catalog migration retains custom settings",
+        "passed": true
+      },
+      {
+        "name": "historic calendar renders source entries",
+        "passed": true
+      },
+      {
+        "name": "selection shows category and no invented person",
+        "passed": true
+      },
+      {
+        "name": "selection exposes time and timezone",
+        "passed": true
+      },
+      {
+        "name": "unclassified event can be edited without changing type",
+        "passed": true
+      },
+      {
+        "name": "reimport original has zero new or updated records",
+        "passed": true
+      },
+      {
+        "name": "same-file reapply cannot create duplicates",
+        "passed": true
+      },
+      {
+        "name": "duplicate source IDs reject atomically",
+        "passed": true
+      },
+      {
+        "name": "invalid calendar dates reject atomically",
+        "passed": true
+      },
+      {
+        "name": "unknown owner rejects without guessing",
+        "passed": true
+      },
+      {
+        "name": "invalid colors reject atomically",
+        "passed": true
+      },
+      {
+        "name": "reversed date range rejects atomically",
+        "passed": true
+      },
+      {
+        "name": "unknown explicit work type rejects atomically",
+        "passed": true
+      },
+      {
+        "name": "test-only calendar changes restored",
+        "passed": true
+      }
+    ]
+  }
+}

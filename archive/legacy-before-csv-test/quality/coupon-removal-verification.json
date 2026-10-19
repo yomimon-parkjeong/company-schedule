@@ -1,0 +1,387 @@
+{
+  "browser": {
+    "passed": true,
+    "results": [
+      {
+        "name": "plain workbook accepted",
+        "ok": true
+      },
+      {
+        "name": "plain columns correctly mapped",
+        "ok": true
+      },
+      {
+        "name": "plain coupon is absent from model",
+        "ok": true
+      },
+      {
+        "name": "plain financial status rules unchanged",
+        "ok": true
+      },
+      {
+        "name": "legacy workbook accepted",
+        "ok": true
+      },
+      {
+        "name": "legacy columns correctly mapped",
+        "ok": true
+      },
+      {
+        "name": "legacy coupon is absent from model",
+        "ok": true
+      },
+      {
+        "name": "legacy financial status rules unchanged",
+        "ok": true
+      },
+      {
+        "name": "reordered workbook accepted",
+        "ok": true
+      },
+      {
+        "name": "reordered columns correctly mapped",
+        "ok": true
+      },
+      {
+        "name": "reordered coupon is absent from model",
+        "ok": true
+      },
+      {
+        "name": "reordered financial status rules unchanged",
+        "ok": true
+      },
+      {
+        "name": "optional column does not change import identity",
+        "ok": true
+      },
+      {
+        "name": "ignored amounts do not change totals or identity",
+        "ok": true
+      },
+      {
+        "name": "no coupon UI labels or aggregate",
+        "ok": true
+      },
+      {
+        "name": "nine headers and detail cells",
+        "ok": true
+      },
+      {
+        "name": "buyer/order/status/tracking retain correct columns",
+        "ok": true
+      },
+      {
+        "name": "individual10 export has nine columns",
+        "ok": true
+      },
+      {
+        "name": "individual10 no coupon references in any XLSX part",
+        "ok": true
+      },
+      {
+        "name": "individual10 buyer and status output map correctly",
+        "ok": true
+      },
+      {
+        "name": "individual10 conditional range uses all nine columns",
+        "ok": true
+      },
+      {
+        "name": "individual10 export payment unchanged",
+        "ok": true
+      },
+      {
+        "name": "individual15 export has nine columns",
+        "ok": true
+      },
+      {
+        "name": "individual15 no coupon references in any XLSX part",
+        "ok": true
+      },
+      {
+        "name": "individual15 buyer and status output map correctly",
+        "ok": true
+      },
+      {
+        "name": "individual15 conditional range uses all nine columns",
+        "ok": true
+      },
+      {
+        "name": "individual15 export payment unchanged",
+        "ok": true
+      },
+      {
+        "name": "exported nine-column file can be imported again",
+        "ok": true
+      },
+      {
+        "name": "individual20 export has nine columns",
+        "ok": true
+      },
+      {
+        "name": "individual20 no coupon references in any XLSX part",
+        "ok": true
+      },
+      {
+        "name": "individual20 buyer and status output map correctly",
+        "ok": true
+      },
+      {
+        "name": "individual20 conditional range uses all nine columns",
+        "ok": true
+      },
+      {
+        "name": "individual20 export payment unchanged",
+        "ok": true
+      },
+      {
+        "name": "business10 export has nine columns",
+        "ok": true
+      },
+      {
+        "name": "business10 no coupon references in any XLSX part",
+        "ok": true
+      },
+      {
+        "name": "business10 buyer and status output map correctly",
+        "ok": true
+      },
+      {
+        "name": "business10 conditional range uses all nine columns",
+        "ok": true
+      },
+      {
+        "name": "business10 export payment unchanged",
+        "ok": true
+      },
+      {
+        "name": "business15 export has nine columns",
+        "ok": true
+      },
+      {
+        "name": "business15 no coupon references in any XLSX part",
+        "ok": true
+      },
+      {
+        "name": "business15 buyer and status output map correctly",
+        "ok": true
+      },
+      {
+        "name": "business15 conditional range uses all nine columns",
+        "ok": true
+      },
+      {
+        "name": "business15 export payment unchanged",
+        "ok": true
+      },
+      {
+        "name": "business20 export has nine columns",
+        "ok": true
+      },
+      {
+        "name": "business20 no coupon references in any XLSX part",
+        "ok": true
+      },
+      {
+        "name": "business20 buyer and status output map correctly",
+        "ok": true
+      },
+      {
+        "name": "business20 conditional range uses all nine columns",
+        "ok": true
+      },
+      {
+        "name": "business20 export payment unchanged",
+        "ok": true
+      }
+    ]
+  },
+  "recalculation": {
+    "passed": true,
+    "results": [
+      {
+        "name": "개인-10",
+        "payment": 29010,
+        "changedInputPayment": 59960,
+        "errorScan": {
+          "recordCount": 1,
+          "truncated": false,
+          "metadata": {
+            "revision": "rnp45f",
+            "target": {
+              "id": "wb/gnbr2a",
+              "beforeLines": 0,
+              "afterLines": 0
+            },
+            "kind": {
+              "requested": "match",
+              "tokens": [
+                "match"
+              ]
+            },
+            "include": {
+              "tokens": []
+            },
+            "exclude": {
+              "tokens": []
+            },
+            "notices": []
+          }
+        }
+      },
+      {
+        "name": "개인-15",
+        "payment": 43520,
+        "changedInputPayment": 59960,
+        "errorScan": {
+          "recordCount": 1,
+          "truncated": false,
+          "metadata": {
+            "revision": "zel7ux",
+            "target": {
+              "id": "wb/0igdsa",
+              "beforeLines": 0,
+              "afterLines": 0
+            },
+            "kind": {
+              "requested": "match",
+              "tokens": [
+                "match"
+              ]
+            },
+            "include": {
+              "tokens": []
+            },
+            "exclude": {
+              "tokens": []
+            },
+            "notices": []
+          }
+        }
+      },
+      {
+        "name": "개인-20",
+        "payment": 58020,
+        "changedInputPayment": 59960,
+        "errorScan": {
+          "recordCount": 1,
+          "truncated": false,
+          "metadata": {
+            "revision": "kvp4dp",
+            "target": {
+              "id": "wb/qgqcsy",
+              "beforeLines": 0,
+              "afterLines": 0
+            },
+            "kind": {
+              "requested": "match",
+              "tokens": [
+                "match"
+              ]
+            },
+            "include": {
+              "tokens": []
+            },
+            "exclude": {
+              "tokens": []
+            },
+            "notices": []
+          }
+        }
+      },
+      {
+        "name": "사업자-10",
+        "payment": 30000,
+        "changedInputPayment": 62000,
+        "errorScan": {
+          "recordCount": 1,
+          "truncated": false,
+          "metadata": {
+            "revision": "0lqiv0",
+            "target": {
+              "id": "wb/iqrel7",
+              "beforeLines": 0,
+              "afterLines": 0
+            },
+            "kind": {
+              "requested": "match",
+              "tokens": [
+                "match"
+              ]
+            },
+            "include": {
+              "tokens": []
+            },
+            "exclude": {
+              "tokens": []
+            },
+            "notices": []
+          }
+        }
+      },
+      {
+        "name": "사업자-15",
+        "payment": 45000,
+        "changedInputPayment": 62000,
+        "errorScan": {
+          "recordCount": 1,
+          "truncated": false,
+          "metadata": {
+            "revision": "6x7b7w",
+            "target": {
+              "id": "wb/ntrfl0",
+              "beforeLines": 0,
+              "afterLines": 0
+            },
+            "kind": {
+              "requested": "match",
+              "tokens": [
+                "match"
+              ]
+            },
+            "include": {
+              "tokens": []
+            },
+            "exclude": {
+              "tokens": []
+            },
+            "notices": []
+          }
+        }
+      },
+      {
+        "name": "사업자-20",
+        "payment": 60000,
+        "changedInputPayment": 62000,
+        "errorScan": {
+          "recordCount": 1,
+          "truncated": false,
+          "metadata": {
+            "revision": "fhxkk8",
+            "target": {
+              "id": "wb/9vim1c",
+              "beforeLines": 0,
+              "afterLines": 0
+            },
+            "kind": {
+              "requested": "match",
+              "tokens": [
+                "match"
+              ]
+            },
+            "include": {
+              "tokens": []
+            },
+            "exclude": {
+              "tokens": []
+            },
+            "notices": []
+          }
+        }
+      }
+    ]
+  },
+  "xlsxIntegrityFiles": 7,
+  "couponLabelsInExport": 0,
+  "nativeExcelChecked": false
+}

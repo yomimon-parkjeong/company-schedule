@@ -1,0 +1,228 @@
+{
+  "owners": {
+    "passed": true,
+    "results": [
+      {
+        "name": "default names omit roles",
+        "passed": true
+      },
+      {
+        "name": "all 222 original schedules retained",
+        "passed": true
+      },
+      {
+        "name": "filters use names",
+        "passed": true
+      },
+      {
+        "name": "A selected sidebar uses name",
+        "passed": true
+      },
+      {
+        "name": "A weekly list uses name",
+        "passed": true
+      },
+      {
+        "name": "A editor uses name",
+        "passed": true
+      },
+      {
+        "name": "A Excel details use name",
+        "passed": true
+      },
+      {
+        "name": "B selected sidebar uses name",
+        "passed": true
+      },
+      {
+        "name": "B weekly list uses name",
+        "passed": true
+      },
+      {
+        "name": "B editor uses name",
+        "passed": true
+      },
+      {
+        "name": "B Excel details use name",
+        "passed": true
+      },
+      {
+        "name": "C selected sidebar uses name",
+        "passed": true
+      },
+      {
+        "name": "C weekly list uses name",
+        "passed": true
+      },
+      {
+        "name": "C editor uses name",
+        "passed": true
+      },
+      {
+        "name": "C Excel details use name",
+        "passed": true
+      },
+      {
+        "name": "owner manager uses names",
+        "passed": true
+      },
+      {
+        "name": "stored old roles display names",
+        "passed": true
+      },
+      {
+        "name": "saved color is retained",
+        "passed": true
+      },
+      {
+        "name": "additional owners and types retained",
+        "passed": true
+      },
+      {
+        "name": "reading settings does not rewrite saved source names",
+        "passed": true
+      },
+      {
+        "name": "previous alternative role also displays name",
+        "passed": true
+      },
+      {
+        "name": "other custom display names remain editable",
+        "passed": true
+      },
+      {
+        "name": "name change preserves all event fields",
+        "passed": true
+      },
+      {
+        "name": "new schedule selector uses names",
+        "passed": true
+      },
+      {
+        "name": "month totals use names",
+        "passed": true
+      },
+      {
+        "name": "page fits viewport",
+        "passed": true
+      },
+      {
+        "name": "owner dialog fits viewport",
+        "passed": true
+      }
+    ]
+  },
+  "owners-narrow": {
+    "passed": true,
+    "results": [
+      {
+        "name": "default names omit roles",
+        "passed": true
+      },
+      {
+        "name": "all 222 original schedules retained",
+        "passed": true
+      },
+      {
+        "name": "filters use names",
+        "passed": true
+      },
+      {
+        "name": "A selected sidebar uses name",
+        "passed": true
+      },
+      {
+        "name": "A weekly list uses name",
+        "passed": true
+      },
+      {
+        "name": "A editor uses name",
+        "passed": true
+      },
+      {
+        "name": "A Excel details use name",
+        "passed": true
+      },
+      {
+        "name": "B selected sidebar uses name",
+        "passed": true
+      },
+      {
+        "name": "B weekly list uses name",
+        "passed": true
+      },
+      {
+        "name": "B editor uses name",
+        "passed": true
+      },
+      {
+        "name": "B Excel details use name",
+        "passed": true
+      },
+      {
+        "name": "C selected sidebar uses name",
+        "passed": true
+      },
+      {
+        "name": "C weekly list uses name",
+        "passed": true
+      },
+      {
+        "name": "C editor uses name",
+        "passed": true
+      },
+      {
+        "name": "C Excel details use name",
+        "passed": true
+      },
+      {
+        "name": "owner manager uses names",
+        "passed": true
+      },
+      {
+        "name": "stored old roles display names",
+        "passed": true
+      },
+      {
+        "name": "saved color is retained",
+        "passed": true
+      },
+      {
+        "name": "additional owners and types retained",
+        "passed": true
+      },
+      {
+        "name": "reading settings does not rewrite saved source names",
+        "passed": true
+      },
+      {
+        "name": "previous alternative role also displays name",
+        "passed": true
+      },
+      {
+        "name": "other custom display names remain editable",
+        "passed": true
+      },
+      {
+        "name": "name change preserves all event fields",
+        "passed": true
+      },
+      {
+        "name": "new schedule selector uses names",
+        "passed": true
+      },
+      {
+        "name": "month totals use names",
+        "passed": true
+      },
+      {
+        "name": "page fits viewport",
+        "passed": true
+      },
+      {
+        "name": "owner dialog fits viewport",
+        "passed": true
+      }
+    ]
+  }
+}

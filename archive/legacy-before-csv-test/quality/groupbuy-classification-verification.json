@@ -1,0 +1,606 @@
+{
+  "groupbuy-test": {
+    "passed": true,
+    "results": [
+      {
+        "name": "all records retained",
+        "passed": true
+      },
+      {
+        "name": "classification matches actual reviewed counts",
+        "passed": true
+      },
+      {
+        "name": "nickname name and product format classified",
+        "passed": true
+      },
+      {
+        "name": "product round retained",
+        "passed": true
+      },
+      {
+        "name": "fullwidth parentheses and no gap supported",
+        "passed": true
+      },
+      {
+        "name": "old products also recognized",
+        "passed": true
+      },
+      {
+        "name": "payback overrides groupbuy shape and explicit type",
+        "passed": true
+      },
+      {
+        "name": "payback with no name still separated",
+        "passed": true
+      },
+      {
+        "name": "reels category not merged into groupbuys",
+        "passed": true
+      },
+      {
+        "name": "sponsorship title remains separate",
+        "passed": true
+      },
+      {
+        "name": "explicit shipment type retained",
+        "passed": true
+      },
+      {
+        "name": "sample dispatch inside explicit groupbuy does not remove campaign",
+        "passed": true
+      },
+      {
+        "name": "no guess without product",
+        "passed": true
+      },
+      {
+        "name": "date weekday is not mistaken for influencer",
+        "passed": true
+      },
+      {
+        "name": "name missing stays unresolved",
+        "passed": true
+      },
+      {
+        "name": "all payback words excluded from joint purchase count",
+        "passed": true
+      },
+      {
+        "name": "source title color staff and money unchanged",
+        "passed": true
+      },
+      {
+        "name": "browser and build classifications agree for every original record",
+        "passed": true
+      },
+      {
+        "name": "week detail initially folded",
+        "passed": true
+      },
+      {
+        "name": "weekly and monthly totals reconcile",
+        "passed": true
+      },
+      {
+        "name": "nonzero cell is keyboard accessible",
+        "passed": true
+      },
+      {
+        "name": "click expands requested owner and week",
+        "passed": true
+      },
+      {
+        "name": "expanded details count equals cell count",
+        "passed": true
+      },
+      {
+        "name": "only the chosen person and start dates appear",
+        "passed": true
+      },
+      {
+        "name": "each row includes date product name and owner",
+        "passed": true
+      },
+      {
+        "name": "detail row opens left selection panel",
+        "passed": true
+      },
+      {
+        "name": "rerender keeps same expanded owner/week",
+        "passed": true
+      },
+      {
+        "name": "collapse hides details and restores aria state",
+        "passed": true
+      },
+      {
+        "name": "same count toggles open and closed",
+        "passed": true
+      },
+      {
+        "name": "weekly total expands all staff",
+        "passed": true
+      },
+      {
+        "name": "only one count expanded at a time",
+        "passed": true
+      },
+      {
+        "name": "different month defaults to folded",
+        "passed": true
+      },
+      {
+        "name": "October stats exclude payback campaigns",
+        "passed": true
+      },
+      {
+        "name": "owner counts reconcile after separation",
+        "passed": true
+      },
+      {
+        "name": "detail label includes product round",
+        "passed": true
+      },
+      {
+        "name": "no test financial values saved",
+        "passed": true
+      }
+    ]
+  },
+  "groupbuy-folded": {
+    "passed": true,
+    "results": [
+      {
+        "name": "all records retained",
+        "passed": true
+      },
+      {
+        "name": "classification matches actual reviewed counts",
+        "passed": true
+      },
+      {
+        "name": "nickname name and product format classified",
+        "passed": true
+      },
+      {
+        "name": "product round retained",
+        "passed": true
+      },
+      {
+        "name": "fullwidth parentheses and no gap supported",
+        "passed": true
+      },
+      {
+        "name": "old products also recognized",
+        "passed": true
+      },
+      {
+        "name": "payback overrides groupbuy shape and explicit type",
+        "passed": true
+      },
+      {
+        "name": "payback with no name still separated",
+        "passed": true
+      },
+      {
+        "name": "reels category not merged into groupbuys",
+        "passed": true
+      },
+      {
+        "name": "sponsorship title remains separate",
+        "passed": true
+      },
+      {
+        "name": "explicit shipment type retained",
+        "passed": true
+      },
+      {
+        "name": "sample dispatch inside explicit groupbuy does not remove campaign",
+        "passed": true
+      },
+      {
+        "name": "no guess without product",
+        "passed": true
+      },
+      {
+        "name": "date weekday is not mistaken for influencer",
+        "passed": true
+      },
+      {
+        "name": "name missing stays unresolved",
+        "passed": true
+      },
+      {
+        "name": "all payback words excluded from joint purchase count",
+        "passed": true
+      },
+      {
+        "name": "source title color staff and money unchanged",
+        "passed": true
+      },
+      {
+        "name": "browser and build classifications agree for every original record",
+        "passed": true
+      },
+      {
+        "name": "week detail initially folded",
+        "passed": true
+      },
+      {
+        "name": "weekly and monthly totals reconcile",
+        "passed": true
+      },
+      {
+        "name": "nonzero cell is keyboard accessible",
+        "passed": true
+      },
+      {
+        "name": "click expands requested owner and week",
+        "passed": true
+      },
+      {
+        "name": "expanded details count equals cell count",
+        "passed": true
+      },
+      {
+        "name": "only the chosen person and start dates appear",
+        "passed": true
+      },
+      {
+        "name": "each row includes date product name and owner",
+        "passed": true
+      },
+      {
+        "name": "detail row opens left selection panel",
+        "passed": true
+      },
+      {
+        "name": "rerender keeps same expanded owner/week",
+        "passed": true
+      },
+      {
+        "name": "collapse hides details and restores aria state",
+        "passed": true
+      },
+      {
+        "name": "same count toggles open and closed",
+        "passed": true
+      },
+      {
+        "name": "weekly total expands all staff",
+        "passed": true
+      },
+      {
+        "name": "only one count expanded at a time",
+        "passed": true
+      },
+      {
+        "name": "different month defaults to folded",
+        "passed": true
+      },
+      {
+        "name": "October stats exclude payback campaigns",
+        "passed": true
+      },
+      {
+        "name": "owner counts reconcile after separation",
+        "passed": true
+      },
+      {
+        "name": "detail label includes product round",
+        "passed": true
+      },
+      {
+        "name": "no test financial values saved",
+        "passed": true
+      },
+      {
+        "name": "preview folded by default",
+        "passed": true
+      }
+    ]
+  },
+  "groupbuy-expanded": {
+    "passed": true,
+    "results": [
+      {
+        "name": "all records retained",
+        "passed": true
+      },
+      {
+        "name": "classification matches actual reviewed counts",
+        "passed": true
+      },
+      {
+        "name": "nickname name and product format classified",
+        "passed": true
+      },
+      {
+        "name": "product round retained",
+        "passed": true
+      },
+      {
+        "name": "fullwidth parentheses and no gap supported",
+        "passed": true
+      },
+      {
+        "name": "old products also recognized",
+        "passed": true
+      },
+      {
+        "name": "payback overrides groupbuy shape and explicit type",
+        "passed": true
+      },
+      {
+        "name": "payback with no name still separated",
+        "passed": true
+      },
+      {
+        "name": "reels category not merged into groupbuys",
+        "passed": true
+      },
+      {
+        "name": "sponsorship title remains separate",
+        "passed": true
+      },
+      {
+        "name": "explicit shipment type retained",
+        "passed": true
+      },
+      {
+        "name": "sample dispatch inside explicit groupbuy does not remove campaign",
+        "passed": true
+      },
+      {
+        "name": "no guess without product",
+        "passed": true
+      },
+      {
+        "name": "date weekday is not mistaken for influencer",
+        "passed": true
+      },
+      {
+        "name": "name missing stays unresolved",
+        "passed": true
+      },
+      {
+        "name": "all payback words excluded from joint purchase count",
+        "passed": true
+      },
+      {
+        "name": "source title color staff and money unchanged",
+        "passed": true
+      },
+      {
+        "name": "browser and build classifications agree for every original record",
+        "passed": true
+      },
+      {
+        "name": "week detail initially folded",
+        "passed": true
+      },
+      {
+        "name": "weekly and monthly totals reconcile",
+        "passed": true
+      },
+      {
+        "name": "nonzero cell is keyboard accessible",
+        "passed": true
+      },
+      {
+        "name": "click expands requested owner and week",
+        "passed": true
+      },
+      {
+        "name": "expanded details count equals cell count",
+        "passed": true
+      },
+      {
+        "name": "only the chosen person and start dates appear",
+        "passed": true
+      },
+      {
+        "name": "each row includes date product name and owner",
+        "passed": true
+      },
+      {
+        "name": "detail row opens left selection panel",
+        "passed": true
+      },
+      {
+        "name": "rerender keeps same expanded owner/week",
+        "passed": true
+      },
+      {
+        "name": "collapse hides details and restores aria state",
+        "passed": true
+      },
+      {
+        "name": "same count toggles open and closed",
+        "passed": true
+      },
+      {
+        "name": "weekly total expands all staff",
+        "passed": true
+      },
+      {
+        "name": "only one count expanded at a time",
+        "passed": true
+      },
+      {
+        "name": "different month defaults to folded",
+        "passed": true
+      },
+      {
+        "name": "October stats exclude payback campaigns",
+        "passed": true
+      },
+      {
+        "name": "owner counts reconcile after separation",
+        "passed": true
+      },
+      {
+        "name": "detail label includes product round",
+        "passed": true
+      },
+      {
+        "name": "no test financial values saved",
+        "passed": true
+      }
+    ]
+  },
+  "groupbuy-narrow": {
+    "passed": true,
+    "results": [
+      {
+        "name": "all records retained",
+        "passed": true
+      },
+      {
+        "name": "classification matches actual reviewed counts",
+        "passed": true
+      },
+      {
+        "name": "nickname name and product format classified",
+        "passed": true
+      },
+      {
+        "name": "product round retained",
+        "passed": true
+      },
+      {
+        "name": "fullwidth parentheses and no gap supported",
+        "passed": true
+      },
+      {
+        "name": "old products also recognized",
+        "passed": true
+      },
+      {
+        "name": "payback overrides groupbuy shape and explicit type",
+        "passed": true
+      },
+      {
+        "name": "payback with no name still separated",
+        "passed": true
+      },
+      {
+        "name": "reels category not merged into groupbuys",
+        "passed": true
+      },
+      {
+        "name": "sponsorship title remains separate",
+        "passed": true
+      },
+      {
+        "name": "explicit shipment type retained",
+        "passed": true
+      },
+      {
+        "name": "sample dispatch inside explicit groupbuy does not remove campaign",
+        "passed": true
+      },
+      {
+        "name": "no guess without product",
+        "passed": true
+      },
+      {
+        "name": "date weekday is not mistaken for influencer",
+        "passed": true
+      },
+      {
+        "name": "name missing stays unresolved",
+        "passed": true
+      },
+      {
+        "name": "all payback words excluded from joint purchase count",
+        "passed": true
+      },
+      {
+        "name": "source title color staff and money unchanged",
+        "passed": true
+      },
+      {
+        "name": "browser and build classifications agree for every original record",
+        "passed": true
+      },
+      {
+        "name": "week detail initially folded",
+        "passed": true
+      },
+      {
+        "name": "weekly and monthly totals reconcile",
+        "passed": true
+      },
+      {
+        "name": "nonzero cell is keyboard accessible",
+        "passed": true
+      },
+      {
+        "name": "click expands requested owner and week",
+        "passed": true
+      },
+      {
+        "name": "expanded details count equals cell count",
+        "passed": true
+      },
+      {
+        "name": "only the chosen person and start dates appear",
+        "passed": true
+      },
+      {
+        "name": "each row includes date product name and owner",
+        "passed": true
+      },
+      {
+        "name": "detail row opens left selection panel",
+        "passed": true
+      },
+      {
+        "name": "rerender keeps same expanded owner/week",
+        "passed": true
+      },
+      {
+        "name": "collapse hides details and restores aria state",
+        "passed": true
+      },
+      {
+        "name": "same count toggles open and closed",
+        "passed": true
+      },
+      {
+        "name": "weekly total expands all staff",
+        "passed": true
+      },
+      {
+        "name": "only one count expanded at a time",
+        "passed": true
+      },
+      {
+        "name": "different month defaults to folded",
+        "passed": true
+      },
+      {
+        "name": "October stats exclude payback campaigns",
+        "passed": true
+      },
+      {
+        "name": "owner counts reconcile after separation",
+        "passed": true
+      },
+      {
+        "name": "detail label includes product round",
+        "passed": true
+      },
+      {
+        "name": "no test financial values saved",
+        "passed": true
+      },
+      {
+        "name": "detail panel fits container",
+        "passed": true
+      }
+    ]
+  }
+}

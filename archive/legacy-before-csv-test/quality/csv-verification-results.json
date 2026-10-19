@@ -1,0 +1,286 @@
+{
+  "csv-tests": {
+    "passed": true,
+    "results": [
+      {
+        "name": "CSV entry beside catalog manager",
+        "passed": true
+      },
+      {
+        "name": "entry opens original CSV dialog",
+        "passed": true
+      },
+      {
+        "name": "choose button opens file picker",
+        "passed": true
+      },
+      {
+        "name": "UTF-8 CSV imported",
+        "passed": true
+      },
+      {
+        "name": "row and column counts shown",
+        "passed": true
+      },
+      {
+        "name": "commas in quoted fields preserved",
+        "passed": true
+      },
+      {
+        "name": "quoted newlines preserved",
+        "passed": true
+      },
+      {
+        "name": "preview uses physical source lines",
+        "passed": true
+      },
+      {
+        "name": "escaped quotes parsed correctly",
+        "passed": true
+      },
+      {
+        "name": "trailing empty fields preserved",
+        "passed": true
+      },
+      {
+        "name": "utf8Bom decoded and Korean header retained",
+        "passed": true
+      },
+      {
+        "name": "cp949 decoded and Korean header retained",
+        "passed": true
+      },
+      {
+        "name": "utf16Le decoded and Korean header retained",
+        "passed": true
+      },
+      {
+        "name": "utf16Be decoded and Korean header retained",
+        "passed": true
+      },
+      {
+        "name": "bad manual encoding keeps previous preview",
+        "passed": true
+      },
+      {
+        "name": "semicolon auto-detected",
+        "passed": true
+      },
+      {
+        "name": "tab auto-detected",
+        "passed": true
+      },
+      {
+        "name": "manual separator reflected",
+        "passed": true
+      },
+      {
+        "name": "Excel separator hint supported",
+        "passed": true
+      },
+      {
+        "name": "unequal widths are flagged without calendar writes",
+        "passed": true
+      },
+      {
+        "name": "blank duplicate headers visibly flagged",
+        "passed": true
+      },
+      {
+        "name": "markup stays literal text",
+        "passed": true
+      },
+      {
+        "name": "malformed CSV preserves previous file",
+        "passed": true
+      },
+      {
+        "name": "empty file rejected without losing prior file",
+        "passed": true
+      },
+      {
+        "name": "wrong extension rejected",
+        "passed": true
+      },
+      {
+        "name": "oversized file rejected before reading",
+        "passed": true
+      },
+      {
+        "name": "unclosed quotes rejected",
+        "passed": true
+      },
+      {
+        "name": "characters after closing quote rejected",
+        "passed": true
+      },
+      {
+        "name": "unexpected embedded quote rejected",
+        "passed": true
+      },
+      {
+        "name": "more than 200 columns rejected",
+        "passed": true
+      },
+      {
+        "name": "header-only CSV rejected",
+        "passed": true
+      },
+      {
+        "name": "preview bounded to 20 with full row count",
+        "passed": true
+      },
+      {
+        "name": "closing retains selected source",
+        "passed": true
+      },
+      {
+        "name": "reopening retains preview",
+        "passed": true
+      },
+      {
+        "name": "native file input reads selected CSV",
+        "passed": true
+      },
+      {
+        "name": "drop zone reads original CSV",
+        "passed": true
+      },
+      {
+        "name": "multi-file drop retains current original",
+        "passed": true
+      },
+      {
+        "name": "late reads cannot overwrite newer source",
+        "passed": true
+      },
+      {
+        "name": "clear cancels pending read",
+        "passed": true
+      },
+      {
+        "name": "existing schedule records unchanged",
+        "passed": true
+      },
+      {
+        "name": "catalog and month history unchanged",
+        "passed": true
+      },
+      {
+        "name": "CSV dialog fits viewport",
+        "passed": true
+      },
+      {
+        "name": "CSV dialog has no outer horizontal overflow",
+        "passed": true
+      },
+      {
+        "name": "page has no horizontal overflow",
+        "passed": true
+      }
+    ],
+    "exports": []
+  },
+  "csv-empty": {
+    "passed": true,
+    "results": [
+      {
+        "name": "CSV entry beside catalog manager",
+        "passed": true
+      },
+      {
+        "name": "entry opens original CSV dialog",
+        "passed": true
+      },
+      {
+        "name": "existing schedule records unchanged",
+        "passed": true
+      },
+      {
+        "name": "catalog and month history unchanged",
+        "passed": true
+      },
+      {
+        "name": "CSV dialog fits viewport",
+        "passed": true
+      },
+      {
+        "name": "CSV dialog has no outer horizontal overflow",
+        "passed": true
+      },
+      {
+        "name": "page has no horizontal overflow",
+        "passed": true
+      }
+    ],
+    "exports": []
+  },
+  "csv-preview": {
+    "passed": true,
+    "results": [
+      {
+        "name": "CSV entry beside catalog manager",
+        "passed": true
+      },
+      {
+        "name": "entry opens original CSV dialog",
+        "passed": true
+      },
+      {
+        "name": "existing schedule records unchanged",
+        "passed": true
+      },
+      {
+        "name": "catalog and month history unchanged",
+        "passed": true
+      },
+      {
+        "name": "CSV dialog fits viewport",
+        "passed": true
+      },
+      {
+        "name": "CSV dialog has no outer horizontal overflow",
+        "passed": true
+      },
+      {
+        "name": "page has no horizontal overflow",
+        "passed": true
+      }
+    ],
+    "exports": []
+  },
+  "csv-narrow": {
+    "passed": true,
+    "results": [
+      {
+        "name": "CSV entry beside catalog manager",
+        "passed": true
+      },
+      {
+        "name": "entry opens original CSV dialog",
+        "passed": true
+      },
+      {
+        "name": "existing schedule records unchanged",
+        "passed": true
+      },
+      {
+        "name": "catalog and month history unchanged",
+        "passed": true
+      },
+      {
+        "name": "CSV dialog fits viewport",
+        "passed": true
+      },
+      {
+        "name": "CSV dialog has no outer horizontal overflow",
+        "passed": true
+      },
+      {
+        "name": "page has no horizontal overflow",
+        "passed": true
+      }
+    ],
+    "exports": []
+  }
+}

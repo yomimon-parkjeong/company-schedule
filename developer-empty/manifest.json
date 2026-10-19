@@ -6,11 +6,16 @@
   "serverPersistence": false,
   "dashboardUnchanged": true,
   "dashboardSha256": "e48c513ef753ba9ce8a1b8d5abacc86208b81ee4b074b806a7b65c7b149c9cd5",
-  "phpPayloadSha256": "673ed3923ea44148f7e6773c9a7322fe8fe5df7fd2afaab530cde940eb23a7b6",
+  "phpPayloadSha256": "c3df4dbe7fd5a662f026a94cfc1361430c77b25430823c0cf9f7d64ccf7ffccf",
   "containsSourceIds": false,
   "containsRawScheduleTitles": false,
   "storageNamespace": "company-schedule.dev-empty.",
   "files": [
+    {
+      "path": "CSV대체_검토.md",
+      "bytes": 2671,
+      "sha256": "4711e330f62f709039d58c7c5f35ecb1602538f4f3633a97409c39a75ac49255"
+    },
     {
       "path": "data/calendar_import_2023-02-01_2027-01-31.csv",
       "bytes": 451821,
@@ -23,8 +28,11 @@
     },
     {
       "path": "README.md",
-      "bytes": 2406,
-      "sha256": "58f654a46f8675e2c213158a9f6896469be4d6934bba6c4699aacb973bf0577c"
+      "bytes": 2775,
+      "sha256": "bf141cbd5553cff78c05b202f4fb83bd2fca909c4d677ad823cca1e9c8a8f3c5"
     }
-  ]
+  ],
+  "screenshotRecordsEmbedded": 0,
+  "screenshotAssetsIncluded": false,
+  "csvProductNamesFullyCorrected": false
 }

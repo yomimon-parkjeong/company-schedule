@@ -1,0 +1,744 @@
+[
+  {
+    "title": "5월로 변경(날짜미정) / hyen__mama(김혜미) 플레이5 (상품…",
+    "start": "2026-05-01",
+    "end": "2026-05-01",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      4,
+      5
+    ],
+    "uncertain": [
+      "제목 오른쪽이 잘려 플레이5 뒤 내용 확인 필요",
+      "제목은 날짜미정이나 화면 막대는 5월 1일에 표시",
+      "계정명 구두점과 밑줄 원문 확인 필요"
+    ]
+  },
+  {
+    "title": "5월로 변경(날짜미정) / hyen__mama(김혜미)키즈점프프로(상…",
+    "start": "2026-05-01",
+    "end": "2026-05-01",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      4,
+      5
+    ],
+    "uncertain": [
+      "제목 오른쪽이 잘려 키즈점프프로 뒤 내용 확인 필요",
+      "제목은 날짜미정이나 화면 막대는 5월 1일에 표시",
+      "계정명 구두점과 밑줄 원문 확인 필요"
+    ]
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 플레이5 99,000원",
+    "start": "2026-05-03",
+    "end": "2026-05-03",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미확인",
+    "sourceMonths": [
+      5
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "*계약완료 [로켓 타임딜 07시~15시] 사운드차트 - 숫자 12,84…",
+    "start": "2026-05-05",
+    "end": "2026-05-05",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미확인",
+    "sourceMonths": [
+      5
+    ],
+    "uncertain": [
+      "짧은 막대로 가격 끝자리와 이후 내용이 잘림"
+    ]
+  },
+  {
+    "title": "*계약완료 [로켓 타임딜 15시~23시] 와우펜북 - 미술 12,400원…",
+    "start": "2026-05-05",
+    "end": "2026-05-05",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미확인",
+    "sourceMonths": [
+      5
+    ],
+    "uncertain": [
+      "짧은 막대로 가격 이후 내용이 잘림"
+    ]
+  },
+  {
+    "title": "*전달완료 jelly_ddorl (박지혜) 와우펜 (상품발송)",
+    "start": "2026-05-13",
+    "end": "2026-05-15",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      5
+    ],
+    "uncertain": [
+      "계정명 마지막 영문 l/i와 실명 판독 확인 필요"
+    ]
+  },
+  {
+    "title": "*전달완료 podomami(이은지) 키즈점프프로2차",
+    "start": "2026-05-16",
+    "end": "2026-05-19",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      5
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "*전달완료 sammy__dragon(최지유) 플레이5 (상품발송)",
+    "start": "2026-05-20",
+    "end": "2026-05-25",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      5
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "*전달완료 solmom_trip(오다인) 와우펜 (상품발송)",
+    "start": "2026-05-22",
+    "end": "2026-05-26",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      5
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "*계약완료 [로켓 타임딜 07시~15시] 사운드차트 - 숫자 12,84…",
+    "start": "2026-05-24",
+    "end": "2026-05-24",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미확인",
+    "sourceMonths": [
+      5
+    ],
+    "uncertain": [
+      "짧은 막대로 가격 끝자리와 이후 내용이 잘림"
+    ]
+  },
+  {
+    "title": "*계약완료 [로켓 타임딜 15시~23시] 와우펜북 - 미술 12,400원…",
+    "start": "2026-05-24",
+    "end": "2026-05-24",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미확인",
+    "sourceMonths": [
+      5
+    ],
+    "uncertain": [
+      "짧은 막대로 가격 이후 내용이 잘림"
+    ]
+  },
+  {
+    "title": "*전달완료 yh_pick(전홍우) 와우펜공구 (상품발송)",
+    "start": "2026-05-28",
+    "end": "2026-06-01",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      5,
+      6
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "[로켓-골드박스] 멀티보드 44,800원 - 300개",
+    "start": "2026-05-29",
+    "end": "2026-05-29",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미확인",
+    "sourceMonths": [
+      5
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "*전달완료 y.y_world(윤성은) 무선마이크 공구(상품발송) - 6…",
+    "start": "2026-06-01",
+    "end": "2026-06-01",
+    "color": "#7ba0c4",
+    "owner": "U",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      5,
+      6
+    ],
+    "uncertain": [
+      "제목 뒤 - 6 이후 잘림",
+      "공구취소 범주 색이나 제목에 취소 표기가 없어 원담당과 취소 여부 확인 필요"
+    ]
+  },
+  {
+    "title": "hero._luv(이하영) 플레이5 믹스 (취소)",
+    "start": "2026-06-05",
+    "end": "2026-06-08",
+    "color": "#7ba0c4",
+    "owner": "U",
+    "type": "공동구매",
+    "status": "취소",
+    "sourceMonths": [
+      5,
+      6
+    ],
+    "uncertain": [
+      "취소 색상만으로 원담당을 식별할 수 없음",
+      "계정명 hero 뒤의 점과 밑줄 원문 확인 필요"
+    ]
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 차트 3종 : 35,900원 - 150개",
+    "start": "2026-06-10",
+    "end": "2026-06-10",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미확인",
+    "sourceMonths": [
+      6
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "*계약완료 [로켓 타임딜 15시~23시] 와우펜북 - 미술 12,400원…",
+    "start": "2026-06-12",
+    "end": "2026-06-12",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미확인",
+    "sourceMonths": [
+      6
+    ],
+    "uncertain": [
+      "짧은 막대로 가격 이후 내용이 잘림"
+    ]
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 차트-한글 : 11,940원 - 220개",
+    "start": "2026-06-13",
+    "end": "2026-06-13",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미확인",
+    "sourceMonths": [
+      6
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "*전달완료 soyou_record(윤소혜) 플레이5 (상품발송)",
+    "start": "2026-06-15",
+    "end": "2026-06-19",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      6
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "(취소) s2_saaaarang (최사랑) 무선마이크",
+    "start": "2026-06-22",
+    "end": "2026-06-25",
+    "color": "#7ba0c4",
+    "owner": "U",
+    "type": "공동구매",
+    "status": "취소",
+    "sourceMonths": [
+      6
+    ],
+    "uncertain": [
+      "취소 색상만으로 원담당을 식별할 수 없음"
+    ]
+  },
+  {
+    "title": "ddarl__ddarl(이윤아)-플레이5 믹스",
+    "start": "2026-06-26",
+    "end": "2026-06-30",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      6,
+      7
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 차트 3종 : 35,900원 - 150개",
+    "start": "2026-06-26",
+    "end": "2026-06-26",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미확인",
+    "sourceMonths": [
+      6
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 차트-한글 : 11,940원 - 200개 (40…",
+    "start": "2026-06-29",
+    "end": "2026-06-29",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미확인",
+    "sourceMonths": [
+      6,
+      7
+    ],
+    "uncertain": [
+      "짧은 막대로 괄호 내용이 잘림"
+    ]
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 와우펜북-미술 : 12,400원 - 300개",
+    "start": "2026-06-30",
+    "end": "2026-06-30",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미확인",
+    "sourceMonths": [
+      6,
+      7
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "[로켓-골드박스] 플레이5 109,000원 , 50개 (20개 판매)",
+    "start": "2026-07-02",
+    "end": "2026-07-02",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미확인",
+    "sourceMonths": [
+      6,
+      7
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "[로켓-도서] 와우 멤버스 프로모션 : 일괄 5% 할인 - 플레이5,…",
+    "start": "2026-07-06",
+    "end": "2026-07-06",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미확인",
+    "sourceMonths": [
+      7
+    ],
+    "uncertain": [
+      "짧은 막대로 플레이5 이후 행사 대상 목록이 잘림"
+    ]
+  },
+  {
+    "title": "*전달완료 yh_pick(전홍우) 와우펜2차",
+    "start": "2026-07-07",
+    "end": "2026-07-13",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      7
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 사운드북 3종 패키지 44,800원 (10…",
+    "start": "2026-07-08",
+    "end": "2026-07-08",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미확인",
+    "sourceMonths": [
+      7
+    ],
+    "uncertain": [
+      "짧은 막대로 괄호 안 수량 내용이 잘림"
+    ]
+  },
+  {
+    "title": "*전달완료 crys__tal(최수정) 플레이5 믹스 (상품발송-페이백)",
+    "start": "2026-07-09",
+    "end": "2026-07-13",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      7
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 차트 3종 : 35,900원 - 150개",
+    "start": "2026-07-12",
+    "end": "2026-07-12",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미확인",
+    "sourceMonths": [
+      7
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "bella_haus_ 플레이5 믹스",
+    "start": "2026-07-13",
+    "end": "2026-07-15",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      7
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "sortie2017/김혜란 - 뉴원USB",
+    "start": "2026-07-21",
+    "end": "2026-07-27",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      7,
+      8
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "*전달완료 ehnts_m(조혜린) 낱말카드 (상품발송-페이백)",
+    "start": "2026-07-22",
+    "end": "2026-07-24",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      7
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "*전달완료 nodaeng_m(이영은) 와우펜 (상품발송-페이백) *기존 협찬자",
+    "start": "2026-07-22",
+    "end": "2026-07-24",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      7
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 사운드북 3종 패키지 44,800원 (50…",
+    "start": "2026-07-23",
+    "end": "2026-07-23",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미확인",
+    "sourceMonths": [
+      7
+    ],
+    "uncertain": [
+      "짧은 막대로 괄호 안 수량 내용이 잘림"
+    ]
+  },
+  {
+    "title": "*전달완료 geoml_mom(천정은) 플레이5 믹스 (상품발송-페이백)",
+    "start": "2026-07-27",
+    "end": "2026-07-31",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      7,
+      8
+    ],
+    "uncertain": [
+      "계정명 geoml/geomi 마지막 영문 판독 확인 필요"
+    ]
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 차트 3종 : 35,900원 - 100개",
+    "start": "2026-07-27",
+    "end": "2026-07-27",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미확인",
+    "sourceMonths": [
+      7,
+      8
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "*전달완료 gguml_geonhu (현희지) 무한워크북보드 (상품발송-페이백)",
+    "start": "2026-07-30",
+    "end": "2026-08-03",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      7,
+      8
+    ],
+    "uncertain": [
+      "계정명 gguml/ggumi 마지막 영문 판독 확인 필요"
+    ]
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 와우펜북-미술 : 12,400원 - 200개",
+    "start": "2026-07-30",
+    "end": "2026-07-30",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미확인",
+    "sourceMonths": [
+      7,
+      8
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "[전달完]3doong_home(이경남)-플레이",
+    "start": "2026-08-01",
+    "end": "2026-08-04",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      7,
+      8
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "[전달完]스타일 셀러(텐더)- Joon.table 플레이5",
+    "start": "2026-08-03",
+    "end": "2026-08-05",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      8
+    ],
+    "uncertain": [
+      "스타일 셀러(텐더) 판독 확인 필요"
+    ]
+  },
+  {
+    "title": "*전달완료 congdduck__lovely(김지수) 무선마이크 (상품발송-페이백)",
+    "start": "2026-08-05",
+    "end": "2026-08-10",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      8
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "*전달완료 poopu_zip(김수빈) 플레이5 믹스(상품발송-페이백)",
+    "start": "2026-08-06",
+    "end": "2026-08-11",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      8
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "*전달완료 soeun_growup(문아름) 샤워타월 (상품발송-페이백)",
+    "start": "2026-08-11",
+    "end": "2026-08-13",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      8
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 차트 3종 : 35,910원 - 100개",
+    "start": "2026-08-11",
+    "end": "2026-08-11",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미확인",
+    "sourceMonths": [
+      8
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "로켓-도서) 베이비페어 - 베이비&키즈템 빅세일",
+    "start": "2026-08-17",
+    "end": "2026-08-30",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미확인",
+    "sourceMonths": [
+      8,
+      9
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "*전달완료 gguml_geonhu (현희지) 멀티보드 (상품발송-페이백)",
+    "start": "2026-08-19",
+    "end": "2026-08-21",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      8
+    ],
+    "uncertain": [
+      "계정명 gguml/ggumi 마지막 영문 판독 확인 필요"
+    ]
+  },
+  {
+    "title": "*전달완료 dami.momm(박서현) 와우펜 (상품발송-페이백)",
+    "start": "2026-08-20",
+    "end": "2026-08-24",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      8
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "*전달완료 hello_seonmom(박찬아) 플레이 (상품발송)",
+    "start": "2026-08-24",
+    "end": "2026-08-27",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      8
+    ],
+    "uncertain": []
+  },
+  {
+    "title": "(취소)sl_won_mom(김민지) 플레이5 믹스 (상품발송-페이백)",
+    "start": "2026-08-25",
+    "end": "2026-08-30",
+    "color": "#7ba0c4",
+    "owner": "U",
+    "type": "공동구매",
+    "status": "취소",
+    "sourceMonths": [
+      8,
+      9
+    ],
+    "uncertain": [
+      "취소 색상만으로 원담당을 식별할 수 없음"
+    ]
+  },
+  {
+    "title": "*전달완료 mini_ddol(이민희)썬더 와우펜 (상품발송)",
+    "start": "2026-08-26",
+    "end": "2026-09-02",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미확인",
+    "sourceMonths": [
+      8,
+      9
+    ],
+    "uncertain": [
+      "상품 앞 썬더 텍스트 판독 확인 필요"
+    ]
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 차트 3종 : 35,910원 - 100개",
+    "start": "2026-08-26",
+    "end": "2026-08-26",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미확인",
+    "sourceMonths": [
+      8
+    ],
+    "uncertain": []
+  }
+]

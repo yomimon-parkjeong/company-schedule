@@ -1,0 +1,5956 @@
+[
+  {
+    "title": "[로켓] 도서 12월 페어",
+    "start": "2025-12-28",
+    "end": "2025-12-28",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [
+      "시작일이 화면 왼쪽 경계보다 이전일 수 있음"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 1,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "[로켓] 페어 대표상품 노출 : 멀티보드 39,900원 / 차트 3종 32",
+    "start": "2025-12-28",
+    "end": "2025-12-28",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [
+      "시작일이 화면 왼쪽 경계보다 이전일 수 있음",
+      "제목 오른쪽이 잘림"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "멀티보드",
+    "related": "첨부 월별 일정 화면",
+    "id": 2,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "멀티보드",
+    "productNameReview": {
+      "source": "멀티보드",
+      "canonical": "멀티보드",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 my_sun_is_u(이지수) 플레이돌 공구(상품발송)",
+    "start": "2025-12-28",
+    "end": "2025-12-29",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [
+      "시작일이 화면 왼쪽 경계보다 이전일 수 있음"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 3,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 my_sun_is_u(이지수) 플레이5 공구(상품발송)",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이5",
+      "canonical": "플레이돌",
+      "basis": "플레이돌의 발췌 오탈자; 모델 표시 없는 기본명",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 3blnz__sisters(최유린) 듀얼USB 공구 (상품발송)",
+    "start": "2025-12-28",
+    "end": "2025-12-30",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [
+      "시작일이 화면 왼쪽 경계보다 이전일 수 있음",
+      "계정의 blnz 표기 판독 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "듀얼USB",
+    "related": "첨부 월별 일정 화면",
+    "id": 4,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "듀얼USB",
+    "productNameReview": {
+      "source": "듀얼USB",
+      "canonical": "듀얼USB",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "■이사님 레몬트리(학습)_키즈 무선마이크",
+    "start": "2025-12-28",
+    "end": "2026-01-04",
+    "color": "#3fa9f5",
+    "owner": "A",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [
+      "시작일이 화면 왼쪽 경계보다 이전일 수 있음"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "무선마이크",
+    "related": "첨부 월별 일정 화면",
+    "id": 5,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "무선마이크",
+    "productNameReview": {
+      "source": "무선마이크",
+      "canonical": "무선마이크",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 [무브] suksuk_mom_(쑥쑥맘/강수진) 와우펜 수수료 20% - 샘플 발송",
+    "start": "2025-12-29",
+    "end": "2025-12-31",
+    "color": "#3fa9f5",
+    "owner": "A",
+    "type": "발송",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 6,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 _I_love_home_(이주연) 키즈탭프로 공구 (상품발송)",
+    "start": "2025-12-29",
+    "end": "2026-01-05",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "키즈탭프로",
+    "related": "첨부 월별 일정 화면",
+    "id": 7,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 _I_love_home_(이주연) 키즈점프프로 공구 (상품발송)",
+    "listProduct": "키즈탭프로",
+    "productNameReview": {
+      "source": "키즈점프프로",
+      "canonical": "키즈탭프로",
+      "basis": "키즈·프로 공통 어근 및 제공한 기준 제품",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 morak_mom(이지현) 낱말카드(상품발송)",
+    "start": "2026-01-05",
+    "end": "2026-01-08",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 8,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*전달완료 yoonluv.s2(채니네) 듀얼USB 공구 (상품발송)",
+    "start": "2026-01-05",
+    "end": "2026-01-08",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "듀얼USB",
+    "related": "첨부 월별 일정 화면",
+    "id": 9,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "듀얼USB",
+    "productNameReview": {
+      "source": "듀얼USB",
+      "canonical": "듀얼USB",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "맘시터어플(이사님) 와우펜&와우펜북 이벤트",
+    "start": "2026-01-05",
+    "end": "2026-01-16",
+    "color": "#66c9ba",
+    "owner": "U",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [
+      "카테고리의 실제 담당자 미확인"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 10,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "[로켓] 골드박스 - 플레이돌 맥스 - 13,900원",
+    "start": "2026-01-06",
+    "end": "2026-01-06",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [
+      "상품 문구의 10중택 판독 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 11,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "[로켓] 골드박스 - 플레이 10중택 - 13,900원",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 확인한 4건 직접 지정",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*샘플 발송 [무브] @lovelybaby_sohee(소희맘/임미선) 와우펜만 - 수수료 20%",
+    "start": "2026-01-08",
+    "end": "2026-01-11",
+    "color": "#3fa9f5",
+    "owner": "A",
+    "type": "발송",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 12,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 사운드북 그린 15,900원",
+    "start": "2026-01-09",
+    "end": "2026-01-09",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 13,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*전달완료 luv_d.m.s(박민지) 멀티보드 공구 (상품발송)",
+    "start": "2026-01-09",
+    "end": "2026-01-13",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "멀티보드",
+    "related": "첨부 월별 일정 화면",
+    "id": 14,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "멀티보드",
+    "productNameReview": {
+      "source": "멀티보드",
+      "canonical": "멀티보드",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 sogeumdaek_(김미경) 플레이돌 공구 (상품발송)",
+    "start": "2026-01-09",
+    "end": "2026-01-13",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 15,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 sogeumdaek_(김미경) 플레이5 공구 (상품발송)",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이5",
+      "canonical": "플레이돌",
+      "basis": "플레이돌의 발췌 오탈자; 모델 표시 없는 기본명",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 차트 3종 패키지 35,900원",
+    "start": "2026-01-10",
+    "end": "2026-01-10",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 16,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "[전달완료]langyoon_mom- 와우펜",
+    "start": "2026-01-13",
+    "end": "2026-01-16",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 17,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 사운드북 3종 패키지 44,800원",
+    "start": "2026-01-16",
+    "end": "2026-01-16",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 18,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "[전달완료] liyune__(유리) / 플레이돌",
+    "start": "2026-01-16",
+    "end": "2026-01-18",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 19,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "[전달완료] liyune__(유리) / 플레이5",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이5",
+      "canonical": "플레이돌",
+      "basis": "플레이돌의 발췌 오탈자; 모델 표시 없는 기본명",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 hoo_ttobok(이승미) 와우펜북 공구 (상품발송)",
+    "start": "2026-01-16",
+    "end": "2026-01-20",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 20,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 와우펜북 미술 12,400원",
+    "start": "2026-01-17",
+    "end": "2026-01-17",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 21,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 uzam_universe(임사라) 키즈탭프로 공구(상품발송)",
+    "start": "2026-01-19",
+    "end": "2026-01-23",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "키즈탭프로",
+    "related": "첨부 월별 일정 화면",
+    "id": 22,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 uzam_universe(임사라) 키즈점프프로 공구(상품발송)",
+    "listProduct": "키즈탭프로",
+    "productNameReview": {
+      "source": "키즈점프프로",
+      "canonical": "키즈탭프로",
+      "basis": "키즈·프로 공통 어근 및 제공한 기준 제품",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "(취소)memmem_home(슬맘) 듀얼USB 공구 (*상품 미발송)",
+    "start": "2026-01-20",
+    "end": "2026-01-23",
+    "color": "#7ba0c4",
+    "owner": "U",
+    "type": "공동구매",
+    "status": "취소",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [
+      "취소 전 실제 담당자 미확인"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "듀얼USB",
+    "related": "첨부 월별 일정 화면",
+    "id": 23,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "듀얼USB",
+    "productNameReview": {
+      "source": "듀얼USB",
+      "canonical": "듀얼USB",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "[무브] daesol_mommy(슬맘/김다연) 플레이돌 수수료 15%",
+    "start": "2026-01-22",
+    "end": "2026-01-24",
+    "color": "#3fa9f5",
+    "owner": "A",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 24,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "[무브] daesol_mommy(슬맘/김다연) 플레이5 수수료 15%",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이5",
+      "canonical": "플레이돌",
+      "basis": "플레이돌의 발췌 오탈자; 모델 표시 없는 기본명",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 labubear.o(김원지) 와우펜 공구 (상품발송)",
+    "start": "2026-01-22",
+    "end": "2026-01-26",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 25,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약 X [로켓-골드박스] 프리미엄세트 35,800원",
+    "start": "2026-01-24",
+    "end": "2026-01-24",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 26,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 공룡돈 패키지 25,900원",
+    "start": "2026-01-25",
+    "end": "2026-01-25",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [
+      "상품명 공룡돈 판독 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 27,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "* 샘플만 발송 [무브] @house.jin(허정림/이유진) 3/11~14 전",
+    "start": "2026-01-26",
+    "end": "2026-01-26",
+    "color": "#3fa9f5",
+    "owner": "A",
+    "type": "발송",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [
+      "제목 오른쪽이 잘림",
+      "허정림 판독 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 28,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*전달완료 lily__mom(정수진) 플레이돌 공구 (상품발송)",
+    "start": "2026-01-27",
+    "end": "2026-01-30",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 29,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 lily__mom(정수진) 플레이5 공구 (상품발송)",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이5",
+      "canonical": "플레이돌",
+      "basis": "플레이돌의 발췌 오탈자; 모델 표시 없는 기본명",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 doha_mom__(홍민지) 와우펜북 공구 (상품발송)",
+    "start": "2026-01-29",
+    "end": "2026-02-02",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01",
+      "2026-02"
+    ],
+    "uncertain": [
+      "홍민지/홍민찌 판독 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 30,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 kongkong.mommy(은지) 멀티보드 공구 (상품발송)",
+    "start": "2026-01-29",
+    "end": "2026-02-02",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01",
+      "2026-02"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "멀티보드",
+    "related": "첨부 월별 일정 화면",
+    "id": 31,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "멀티보드",
+    "productNameReview": {
+      "source": "멀티보드",
+      "canonical": "멀티보드",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약 X [로켓-골드박스] 차트 한글첫걸음 12,840원",
+    "start": "2026-01-30",
+    "end": "2026-01-30",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-01"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 32,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "hero._luv/이하영-와우펜",
+    "start": "2026-02-01",
+    "end": "2026-02-04",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-02"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 33,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 honeybread(한수영) 플레이돌 공구(상품발송)",
+    "start": "2026-02-04",
+    "end": "2026-02-06",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-02"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 34,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 honeybread(한수영) 플레이5 공구(상품발송)",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이5",
+      "canonical": "플레이돌",
+      "basis": "플레이돌의 발췌 오탈자; 모델 표시 없는 기본명",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "jjhome_and_life (박혜람) - 듀얼USB",
+    "start": "2026-02-04",
+    "end": "2026-02-10",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-02"
+    ],
+    "uncertain": [
+      "박혜람 판독 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "듀얼USB",
+    "related": "첨부 월별 일정 화면",
+    "id": 35,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "듀얼USB",
+    "productNameReview": {
+      "source": "듀얼USB",
+      "canonical": "듀얼USB",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 dal.mom_(박수빈)와우펜 공구(상품발송)",
+    "start": "2026-02-05",
+    "end": "2026-02-08",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-02"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 36,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "(취소) lovelybaby_sohee(임미선) 멀티보드 공구 (상품발송/샘플비받음)",
+    "start": "2026-02-05",
+    "end": "2026-02-09",
+    "color": "#7ba0c4",
+    "owner": "U",
+    "type": "공동구매",
+    "status": "취소",
+    "sourceMonths": [
+      "2026-02"
+    ],
+    "uncertain": [
+      "취소 전 실제 담당자 미확인"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "멀티보드",
+    "related": "첨부 월별 일정 화면",
+    "id": 37,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "멀티보드",
+    "productNameReview": {
+      "source": "멀티보드",
+      "canonical": "멀티보드",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "(취소) solmom_trip(오다인) 무선마이크 공구 (상품발송/샘플비받음)",
+    "start": "2026-02-05",
+    "end": "2026-02-09",
+    "color": "#7ba0c4",
+    "owner": "U",
+    "type": "공동구매",
+    "status": "취소",
+    "sourceMonths": [
+      "2026-02"
+    ],
+    "uncertain": [
+      "취소 전 실제 담당자 미확인"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "무선마이크",
+    "related": "첨부 월별 일정 화면",
+    "id": 38,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "무선마이크",
+    "productNameReview": {
+      "source": "무선마이크",
+      "canonical": "무선마이크",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "bunnygamza(이종주)- 와우펜",
+    "start": "2026-02-09",
+    "end": "2026-02-11",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-02"
+    ],
+    "uncertain": [
+      "이종주 판독 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 39,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "■이사님 맘시터-멀티보드/플레이",
+    "start": "2026-02-09",
+    "end": "2026-02-13",
+    "color": "#3fa9f5",
+    "owner": "A",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-02"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "멀티보드",
+    "related": "첨부 월별 일정 화면",
+    "id": 40,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "멀티보드",
+    "productNameReview": {
+      "source": "멀티보드",
+      "canonical": "멀티보드",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓-15시 타임딜] 공룡돈 패키지 26,900원",
+    "start": "2026-02-12",
+    "end": "2026-02-12",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-02"
+    ],
+    "uncertain": [
+      "상품명 공룡돈 판독 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 41,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*계약완료 [로켓-15시 타임딜] 프리미엄세트 35,800원",
+    "start": "2026-02-13",
+    "end": "2026-02-13",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-02"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 42,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "■이사님 [레몬트리/학습] 무한워크북 패키지",
+    "start": "2026-02-13",
+    "end": "2026-02-23",
+    "color": "#3fa9f5",
+    "owner": "A",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-02"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "무한워크북",
+    "related": "첨부 월별 일정 화면",
+    "id": 43,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "■이사님 [레몬트리/학습] 무한워크북보드 패키지",
+    "listProduct": "무한워크북",
+    "productNameReview": {
+      "source": "무한워크북보드",
+      "canonical": "무한워크북",
+      "basis": "무한워크북의 부가 표기",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 차트 3종 패키지 35,900원",
+    "start": "2026-02-16",
+    "end": "2026-02-16",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-02"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 44,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 와우펜북 - 미술 : 12,400원 / 200",
+    "start": "2026-02-20",
+    "end": "2026-02-20",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-02"
+    ],
+    "uncertain": [
+      "제목 오른쪽이 잘림"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 45,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 차트 - 숫자 : 12,840원 / 200개",
+    "start": "2026-02-21",
+    "end": "2026-02-21",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-02"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 46,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 사운드북 - 그린 : 15,900원 / 150",
+    "start": "2026-02-22",
+    "end": "2026-02-22",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-02"
+    ],
+    "uncertain": [
+      "제목 오른쪽이 잘림"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 47,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 사운드북 3종 패키지 : 44,800원 /",
+    "start": "2026-02-23",
+    "end": "2026-02-23",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-02"
+    ],
+    "uncertain": [
+      "제목 오른쪽이 잘림"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 48,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*전달완료 3blnz__sisters(최유린) 무선마이크 공구",
+    "start": "2026-02-23",
+    "end": "2026-02-26",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-02"
+    ],
+    "uncertain": [
+      "계정의 blnz 표기 판독 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "무선마이크",
+    "related": "첨부 월별 일정 화면",
+    "id": 49,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "무선마이크",
+    "productNameReview": {
+      "source": "무선마이크",
+      "canonical": "무선마이크",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 와우펜북 4종 패키지 : 44,800원 /",
+    "start": "2026-02-24",
+    "end": "2026-02-24",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-02"
+    ],
+    "uncertain": [
+      "제목 오른쪽이 잘림"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 50,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*샘플 발송 [무브] @dani_rang_(양유진/다니당람) 와우펜만 20% - 오후 10시 오픈",
+    "start": "2026-02-24",
+    "end": "2026-02-27",
+    "color": "#3fa9f5",
+    "owner": "A",
+    "type": "발송",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-02"
+    ],
+    "uncertain": [
+      "괄호 내 이름 판독 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 51,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 hyun__brother 플레이돌 공구(상품발송)",
+    "start": "2026-03-03",
+    "end": "2026-03-05",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-03"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 52,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 hyun__brother 플레이5 공구(상품발송)",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이5",
+      "canonical": "플레이돌",
+      "basis": "플레이돌의 발췌 오탈자; 모델 표시 없는 기본명",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "■이사님 [레몬트리/학습] 와우펜/북",
+    "start": "2026-03-05",
+    "end": "2026-03-11",
+    "color": "#3fa9f5",
+    "owner": "A",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-03"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 53,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "* 전달완료 [무브] @house.jin(허정림/이유진) 와우펜만 수수료 20%",
+    "start": "2026-03-11",
+    "end": "2026-03-14",
+    "color": "#3fa9f5",
+    "owner": "A",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-03"
+    ],
+    "uncertain": [
+      "허정림 판독 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 54,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "[전달완료] okku_mom 오꾸맘- 와우펜",
+    "start": "2026-03-17",
+    "end": "2026-03-20",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-03"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 55,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [골드박스] 공룡돈 패키지 26,900원",
+    "start": "2026-03-18",
+    "end": "2026-03-18",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-03"
+    ],
+    "uncertain": [
+      "상품명 공룡돈 판독 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 56,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*계약완료 [골드박스] 프리미엄세트 35,800원",
+    "start": "2026-03-18",
+    "end": "2026-03-18",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-03"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 57,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*계약완료 [골드박스] 플레이돌 109,000원 / 50개",
+    "start": "2026-03-21",
+    "end": "2026-03-21",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-03"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 58,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*계약완료 [골드박스] 플레이5 109,000원 / 50개",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이5",
+      "canonical": "플레이돌",
+      "basis": "플레이돌의 발췌 오탈자; 모델 표시 없는 기본명",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 와우펜북 - 미술 : 12,400원 / 150",
+    "start": "2026-03-25",
+    "end": "2026-03-25",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-03"
+    ],
+    "uncertain": [
+      "제목 오른쪽이 잘림"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 59,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 차트 - 숫자 : 12,840원 / 100개",
+    "start": "2026-03-25",
+    "end": "2026-03-25",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-03"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 60,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*전달완료 weekndhome(현아름) 키즈무선마이크",
+    "start": "2026-03-26",
+    "end": "2026-03-31",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-03",
+      "2026-04"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "무선마이크",
+    "related": "첨부 월별 일정 화면",
+    "id": 61,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "무선마이크",
+    "productNameReview": {
+      "source": "무선마이크",
+      "canonical": "무선마이크",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 hyun__brother(최진영) 멀티보드 공구",
+    "start": "2026-03-31",
+    "end": "2026-04-03",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-03",
+      "2026-04"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "멀티보드",
+    "related": "첨부 월별 일정 화면",
+    "id": 62,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "멀티보드",
+    "productNameReview": {
+      "source": "멀티보드",
+      "canonical": "멀티보드",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 my_nayul(박민영) 플레이돌(+max사전예약) 공구 (상품발송)",
+    "start": "2026-04-01",
+    "end": "2026-04-03",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-03",
+      "2026-04"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 63,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 my_nayul(박민영) 플레이5(+max사전예약) 공구 (상품발송)",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이5",
+      "canonical": "플레이돌",
+      "basis": "플레이돌의 발췌 오탈자; 모델 표시 없는 기본명",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*샘플 발송 [무브 - 예정] @tiding_of_joy(소규람/권예슬) 와우펜만",
+    "start": "2026-04-02",
+    "end": "2026-04-04",
+    "color": "#3fa9f5",
+    "owner": "A",
+    "type": "발송",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-03",
+      "2026-04"
+    ],
+    "uncertain": [
+      "소규람 판독 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 64,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "[로켓-골드박스] 사운드북 3종 패키지",
+    "start": "2026-04-06",
+    "end": "2026-04-06",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-04"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 65,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "[로켓-골드박스] 차트 3종 패키지",
+    "start": "2026-04-06",
+    "end": "2026-04-06",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-04"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 66,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "[로켓-골드박스] 플레이돌 99,000원",
+    "start": "2026-04-09",
+    "end": "2026-04-09",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-04"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 67,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "[로켓-골드박스] 플레이5 99,000원",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이5",
+      "canonical": "플레이돌",
+      "basis": "플레이돌의 발췌 오탈자; 모델 표시 없는 기본명",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "[로켓-골드박스] 그리고지우고북 프리미엄세트 35,800원 70개",
+    "start": "2026-04-10",
+    "end": "2026-04-10",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-04"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "그리고지우고북",
+    "related": "첨부 월별 일정 화면",
+    "id": 68,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "[로켓-골드박스] 그리고지우고 프리미엄세트 35,800원 70개",
+    "listProduct": "그리고지우고북",
+    "productNameReview": {
+      "source": "상품 확인 필요",
+      "canonical": "그리고지우고북",
+      "basis": "원문의 그리고지우고 제품 어근과 기준명 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*2차 [무브] (쑥쑥맘/강수진) 와우펜(이번에는 북도) 수수료 20%",
+    "start": "2026-04-13",
+    "end": "2026-04-15",
+    "color": "#3fa9f5",
+    "owner": "A",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-04"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 69,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 ssolmom.art(이임경) 플레이돌 맥스 공구(상품발송)",
+    "start": "2026-04-13",
+    "end": "2026-04-16",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-04"
+    ],
+    "uncertain": [
+      "이임경/이경림 판독 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 70,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 ssolmom.art(이임경) 플레이10중택 공구(상품발송)",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이10중택",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 확인한 4건 직접 지정",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 hhappy_ayola(고혜린) 플레이돌 맥스 (플레이돌만 일반발송)",
+    "start": "2026-04-14",
+    "end": "2026-04-17",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-04"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 71,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 hhappy_ayola(고혜린) 플레이5max (플레이5만 일반발송)",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이5max",
+      "canonical": "플레이돌 맥스",
+      "basis": "맥스 모델이 명시된 발췌 표기",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 just_mom(최상아) 플레이돌 공구(상품발송)",
+    "start": "2026-04-15",
+    "end": "2026-04-20",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-04"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 72,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 just_mom(최상아) 플레이5 공구(상품발송)",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이5",
+      "canonical": "플레이돌",
+      "basis": "플레이돌의 발췌 오탈자; 모델 표시 없는 기본명",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "[로켓-골드박스] 키즈탭프로 218,000원",
+    "start": "2026-04-16",
+    "end": "2026-04-16",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-04"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "키즈탭프로",
+    "related": "첨부 월별 일정 화면",
+    "id": 73,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "[로켓-골드박스] 키즈점프 프로 218,000원",
+    "listProduct": "키즈탭프로",
+    "productNameReview": {
+      "source": "상품 확인 필요",
+      "canonical": "키즈탭프로",
+      "basis": "원문에서 띄어 쓴 키즈·프로 제품명 확인",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "morak_mom(이지현) 듀얼USB 3차",
+    "start": "2026-04-16",
+    "end": "2026-04-19",
+    "color": "#3fa9f5",
+    "owner": "A",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-04"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "듀얼USB",
+    "related": "첨부 월별 일정 화면",
+    "id": 74,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "듀얼USB",
+    "productNameReview": {
+      "source": "듀얼USB",
+      "canonical": "듀얼USB",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 sese_art(윤정원) 무한워크북 공구(상품발송)",
+    "start": "2026-04-16",
+    "end": "2026-04-20",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-04"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "무한워크북",
+    "related": "첨부 월별 일정 화면",
+    "id": 75,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 sese_art(윤정원) 무한워크북보드 공구(상품발송)",
+    "listProduct": "무한워크북",
+    "productNameReview": {
+      "source": "무한워크북보드",
+      "canonical": "무한워크북",
+      "basis": "무한워크북의 부가 표기",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "podomami(이은지)-키즈탭프로",
+    "start": "2026-04-17",
+    "end": "2026-04-21",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-04"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "키즈탭프로",
+    "related": "첨부 월별 일정 화면",
+    "id": 76,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "podomami(이은지)-키즈점프프로",
+    "listProduct": "키즈탭프로",
+    "productNameReview": {
+      "source": "키즈점프프로",
+      "canonical": "키즈탭프로",
+      "basis": "키즈·프로 공통 어근 및 제공한 기준 제품",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 luv_d.m.s(박민지) 멀티보드 2차 (1차는 25)",
+    "start": "2026-04-20",
+    "end": "2026-04-23",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-04"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "멀티보드",
+    "related": "첨부 월별 일정 화면",
+    "id": 77,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "멀티보드",
+    "productNameReview": {
+      "source": "멀티보드",
+      "canonical": "멀티보드",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "bonheur_0926 (오지수) - 와우펜 6차",
+    "start": "2026-04-20",
+    "end": "2026-04-23",
+    "color": "#3fa9f5",
+    "owner": "A",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-04"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 78,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "s2_saaaarang (최사랑) - 키즈탭프로 2차 (1차는 19일)",
+    "start": "2026-04-20",
+    "end": "2026-04-23",
+    "color": "#3fa9f5",
+    "owner": "A",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-04"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "키즈탭프로",
+    "related": "첨부 월별 일정 화면",
+    "id": 79,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "s2_saaaarang (최사랑) - 키즈점프로 2차 (1차는 19일)",
+    "listProduct": "키즈탭프로",
+    "productNameReview": {
+      "source": "키즈점프로",
+      "canonical": "키즈탭프로",
+      "basis": "키즈·프로 공통 어근 및 제공한 기준 제품",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 hyun.myung_mom(장현경) 세탁볼 공동구매 (상품발송)",
+    "start": "2026-04-23",
+    "end": "2026-04-28",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-04",
+      "2026-05"
+    ],
+    "uncertain": [
+      "상품명 세타글단본 판독 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "세탁볼",
+    "related": "첨부 월별 일정 화면",
+    "id": 80,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 hyun.myung_mom(장현경) 세타글단본 공동구매 (상품발송)",
+    "listProduct": "세탁볼",
+    "productNameReview": {
+      "source": "세타글단본",
+      "canonical": "세탁볼",
+      "basis": "사용자 직접 확인",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 dalkom__mom(원하연) 듀얼USB 공구 (상품발송)",
+    "start": "2026-04-23",
+    "end": "2026-05-05",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-04",
+      "2026-05"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "듀얼USB",
+    "related": "첨부 월별 일정 화면",
+    "id": 81,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 dalkom__mom(원하연) USB 공구 (상품발송)",
+    "listProduct": "듀얼USB",
+    "productNameReview": {
+      "source": "USB",
+      "canonical": "듀얼USB",
+      "basis": "캡처의 USB 제품군과 제공한 듀얼USB 기준",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 bellymom_hi(박혜림) 무선마이크공구(상품발송)",
+    "start": "2026-04-25",
+    "end": "2026-04-29",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-04",
+      "2026-05"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "무선마이크",
+    "related": "첨부 월별 일정 화면",
+    "id": 82,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "무선마이크",
+    "productNameReview": {
+      "source": "무선마이크",
+      "canonical": "무선마이크",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "dawn_muklog - 와우펜",
+    "start": "2026-04-27",
+    "end": "2026-04-29",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-04",
+      "2026-05"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 83,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 momjoy0527(조은) 플레이돌 맥스 공동구매 (플레이돌만발송)",
+    "start": "2026-04-28",
+    "end": "2026-05-06",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-04",
+      "2026-05"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 84,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 momjoy0527(조은) 플레이5max 공동구매 (플레이5만발송)",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이5max",
+      "canonical": "플레이돌 맥스",
+      "basis": "맥스 모델이 명시된 발췌 표기",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "(취소) newnewnl_(이승미) 멀티보드(샘플비받음)",
+    "start": "2026-04-29",
+    "end": "2026-05-04",
+    "color": "#7ba0c4",
+    "owner": "U",
+    "type": "공동구매",
+    "status": "취소",
+    "sourceMonths": [
+      "2026-04",
+      "2026-05"
+    ],
+    "uncertain": [
+      "취소 전 실제 담당자 미확인",
+      "계정 newnewnl 판독 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "멀티보드",
+    "related": "첨부 월별 일정 화면",
+    "id": 85,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "멀티보드",
+    "productNameReview": {
+      "source": "멀티보드",
+      "canonical": "멀티보드",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 senecten(오수미) 와우펜 공구 (상품발송)",
+    "start": "2026-04-29",
+    "end": "2026-05-05",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-04",
+      "2026-05"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 86,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "morak_mom(이지현) 플레이돌 2차",
+    "start": "2026-04-30",
+    "end": "2026-05-03",
+    "color": "#3fa9f5",
+    "owner": "A",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-04",
+      "2026-05"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 87,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "morak_mom(이지현) 플레이5 2차",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이5",
+      "canonical": "플레이돌",
+      "basis": "플레이돌의 발췌 오탈자; 모델 표시 없는 기본명",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "5월로 변경(날짜미정) / hyen__mama(김혜미) 플레이돌 (상품…",
+    "start": "2026-05-01",
+    "end": "2026-05-01",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      4,
+      5
+    ],
+    "uncertain": [
+      "제목 오른쪽이 잘려 플레이5 뒤 내용 확인 필요",
+      "제목은 날짜미정이나 화면 막대는 5월 1일에 표시",
+      "계정명 구두점과 밑줄 원문 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 88,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "5월로 변경(날짜미정) / hyen__mama(김혜미) 플레이5 (상품…",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이5",
+      "canonical": "플레이돌",
+      "basis": "플레이돌의 발췌 오탈자; 모델 표시 없는 기본명",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "5월로 변경(날짜미정) / hyen__mama(김혜미)키즈탭프로(상…",
+    "start": "2026-05-01",
+    "end": "2026-05-01",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      4,
+      5
+    ],
+    "uncertain": [
+      "제목 오른쪽이 잘려 키즈점프프로 뒤 내용 확인 필요",
+      "제목은 날짜미정이나 화면 막대는 5월 1일에 표시",
+      "계정명 구두점과 밑줄 원문 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "키즈탭프로",
+    "related": "첨부 월별 일정 화면",
+    "id": 89,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "5월로 변경(날짜미정) / hyen__mama(김혜미)키즈점프프로(상…",
+    "listProduct": "키즈탭프로",
+    "productNameReview": {
+      "source": "키즈점프프로",
+      "canonical": "키즈탭프로",
+      "basis": "키즈·프로 공통 어근 및 제공한 기준 제품",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 플레이돌 99,000원",
+    "start": "2026-05-03",
+    "end": "2026-05-03",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      5
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 90,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*계약완료 [로켓-골드박스] 플레이5 99,000원",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이5",
+      "canonical": "플레이돌",
+      "basis": "플레이돌의 발췌 오탈자; 모델 표시 없는 기본명",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓 타임딜 07시~15시] 사운드차트 - 숫자 12,84…",
+    "start": "2026-05-05",
+    "end": "2026-05-05",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      5
+    ],
+    "uncertain": [
+      "짧은 막대로 가격 끝자리와 이후 내용이 잘림"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 91,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*계약완료 [로켓 타임딜 15시~23시] 와우펜북 - 미술 12,400원…",
+    "start": "2026-05-05",
+    "end": "2026-05-05",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      5
+    ],
+    "uncertain": [
+      "짧은 막대로 가격 이후 내용이 잘림"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 92,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 jelly_ddorl (박지혜) 와우펜 (상품발송)",
+    "start": "2026-05-13",
+    "end": "2026-05-15",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      5
+    ],
+    "uncertain": [
+      "계정명 마지막 영문 l/i와 실명 판독 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 93,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 podomami(이은지) 키즈탭프로2차",
+    "start": "2026-05-16",
+    "end": "2026-05-19",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      5
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "키즈탭프로",
+    "related": "첨부 월별 일정 화면",
+    "id": 94,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 podomami(이은지) 키즈점프프로2차",
+    "listProduct": "키즈탭프로",
+    "productNameReview": {
+      "source": "키즈점프프로",
+      "canonical": "키즈탭프로",
+      "basis": "키즈·프로 공통 어근 및 제공한 기준 제품",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 sammy__dragon(최지유) 플레이돌 (상품발송)",
+    "start": "2026-05-20",
+    "end": "2026-05-25",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      5
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 95,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 sammy__dragon(최지유) 플레이5 (상품발송)",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이5",
+      "canonical": "플레이돌",
+      "basis": "플레이돌의 발췌 오탈자; 모델 표시 없는 기본명",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 solmom_trip(오다인) 와우펜 (상품발송)",
+    "start": "2026-05-22",
+    "end": "2026-05-26",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      5
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 96,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓 타임딜 07시~15시] 사운드차트 - 숫자 12,84…",
+    "start": "2026-05-24",
+    "end": "2026-05-24",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      5
+    ],
+    "uncertain": [
+      "짧은 막대로 가격 끝자리와 이후 내용이 잘림"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 97,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*계약완료 [로켓 타임딜 15시~23시] 와우펜북 - 미술 12,400원…",
+    "start": "2026-05-24",
+    "end": "2026-05-24",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      5
+    ],
+    "uncertain": [
+      "짧은 막대로 가격 이후 내용이 잘림"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 98,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 yh_pick(전홍우) 와우펜공구 (상품발송)",
+    "start": "2026-05-28",
+    "end": "2026-06-01",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      5,
+      6
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 99,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "[로켓-골드박스] 멀티보드 44,800원 - 300개",
+    "start": "2026-05-29",
+    "end": "2026-05-29",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      5
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "멀티보드",
+    "related": "첨부 월별 일정 화면",
+    "id": 100,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "멀티보드",
+    "productNameReview": {
+      "source": "멀티보드",
+      "canonical": "멀티보드",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 y.y_world(윤성은) 무선마이크 공구(상품발송) - 6…",
+    "start": "2026-06-01",
+    "end": "2026-06-01",
+    "color": "#7ba0c4",
+    "owner": "U",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      5,
+      6
+    ],
+    "uncertain": [
+      "제목 뒤 - 6 이후 잘림",
+      "공구취소 범주 색이나 제목에 취소 표기가 없어 원담당과 취소 여부 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "무선마이크",
+    "related": "첨부 월별 일정 화면",
+    "id": 101,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "무선마이크",
+    "productNameReview": {
+      "source": "무선마이크",
+      "canonical": "무선마이크",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "hero._luv(이하영) 플레이돌 맥스 (취소)",
+    "start": "2026-06-05",
+    "end": "2026-06-08",
+    "color": "#7ba0c4",
+    "owner": "U",
+    "type": "공동구매",
+    "status": "취소",
+    "sourceMonths": [
+      5,
+      6
+    ],
+    "uncertain": [
+      "취소 색상만으로 원담당을 식별할 수 없음",
+      "계정명 hero 뒤의 점과 밑줄 원문 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 102,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "hero._luv(이하영) 플레이5 믹스 (취소)",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이5 믹스",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 믹스 표기 20건 모두 플레이돌 맥스로 직접 확인; 이전 주차 예시보다 최신 확인을 우선",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 차트 3종 : 35,900원 - 150개",
+    "start": "2026-06-10",
+    "end": "2026-06-10",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      6
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 103,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*계약완료 [로켓 타임딜 15시~23시] 와우펜북 - 미술 12,400원…",
+    "start": "2026-06-12",
+    "end": "2026-06-12",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      6
+    ],
+    "uncertain": [
+      "짧은 막대로 가격 이후 내용이 잘림"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 104,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 차트-한글 : 11,940원 - 220개",
+    "start": "2026-06-13",
+    "end": "2026-06-13",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      6
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 105,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*전달완료 soyou_record(윤소혜) 플레이돌 (상품발송)",
+    "start": "2026-06-15",
+    "end": "2026-06-19",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      6
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 106,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 soyou_record(윤소혜) 플레이5 (상품발송)",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이5",
+      "canonical": "플레이돌",
+      "basis": "플레이돌의 발췌 오탈자; 모델 표시 없는 기본명",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "(취소) s2_saaaarang (최사랑) 무선마이크",
+    "start": "2026-06-22",
+    "end": "2026-06-25",
+    "color": "#7ba0c4",
+    "owner": "U",
+    "type": "공동구매",
+    "status": "취소",
+    "sourceMonths": [
+      6
+    ],
+    "uncertain": [
+      "취소 색상만으로 원담당을 식별할 수 없음"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "무선마이크",
+    "related": "첨부 월별 일정 화면",
+    "id": 107,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "무선마이크",
+    "productNameReview": {
+      "source": "무선마이크",
+      "canonical": "무선마이크",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 차트 3종 : 35,900원 - 150개",
+    "start": "2026-06-26",
+    "end": "2026-06-26",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      6
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 108,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "ddarl__ddarl(이윤아)-플레이돌 맥스",
+    "start": "2026-06-26",
+    "end": "2026-06-30",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      6,
+      7
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 109,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "ddarl__ddarl(이윤아)-플레이5 믹스",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이5 믹스",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 믹스 표기 20건 모두 플레이돌 맥스로 직접 확인; 이전 주차 예시보다 최신 확인을 우선",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 차트-한글 : 11,940원 - 200개 (40…",
+    "start": "2026-06-29",
+    "end": "2026-06-29",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      6,
+      7
+    ],
+    "uncertain": [
+      "짧은 막대로 괄호 내용이 잘림"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 110,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 와우펜북-미술 : 12,400원 - 300개",
+    "start": "2026-06-30",
+    "end": "2026-06-30",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      6,
+      7
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 111,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "[로켓-골드박스] 플레이돌 109,000원 , 50개 (20개 판매)",
+    "start": "2026-07-02",
+    "end": "2026-07-02",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      6,
+      7
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 112,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "[로켓-골드박스] 플레이5 109,000원 , 50개 (20개 판매)",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이5",
+      "canonical": "플레이돌",
+      "basis": "플레이돌의 발췌 오탈자; 모델 표시 없는 기본명",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "[로켓-도서] 와우 멤버스 프로모션 : 일괄 5% 할인 - 플레이돌,…",
+    "start": "2026-07-06",
+    "end": "2026-07-06",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      7
+    ],
+    "uncertain": [
+      "짧은 막대로 플레이5 이후 행사 대상 목록이 잘림"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 113,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "[로켓-도서] 와우 멤버스 프로모션 : 일괄 5% 할인 - 플레이5,…",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이5",
+      "canonical": "플레이돌",
+      "basis": "플레이돌의 발췌 오탈자; 모델 표시 없는 기본명",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 yh_pick(전홍우) 와우펜2차",
+    "start": "2026-07-07",
+    "end": "2026-07-13",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      7
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 114,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 사운드북 3종 패키지 44,800원 (10…",
+    "start": "2026-07-08",
+    "end": "2026-07-08",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      7
+    ],
+    "uncertain": [
+      "짧은 막대로 괄호 안 수량 내용이 잘림"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 115,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*전달완료 crys__tal(최수정) 플레이돌 맥스 (상품발송-페이백)",
+    "start": "2026-07-09",
+    "end": "2026-07-13",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      7
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 116,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 crys__tal(최수정) 플레이5 믹스 (상품발송-페이백)",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이5 믹스",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 믹스 표기 20건 모두 플레이돌 맥스로 직접 확인; 이전 주차 예시보다 최신 확인을 우선",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 차트 3종 : 35,900원 - 150개",
+    "start": "2026-07-12",
+    "end": "2026-07-12",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      7
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 117,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "bella_haus_ 플레이돌 맥스",
+    "start": "2026-07-13",
+    "end": "2026-07-15",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      7
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 118,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "bella_haus_ 플레이5 믹스",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이5 믹스",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 믹스 표기 20건 모두 플레이돌 맥스로 직접 확인; 이전 주차 예시보다 최신 확인을 우선",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "sortie2017/김혜란 - 듀얼USB",
+    "start": "2026-07-21",
+    "end": "2026-07-27",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      7,
+      8
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "듀얼USB",
+    "related": "첨부 월별 일정 화면",
+    "id": 119,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "sortie2017/김혜란 - 뉴원USB",
+    "listProduct": "듀얼USB",
+    "productNameReview": {
+      "source": "뉴원USB",
+      "canonical": "듀얼USB",
+      "basis": "USB 제품군의 발췌 오류",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 ehnts_m(조혜린) 낱말카드 (상품발송-페이백)",
+    "start": "2026-07-22",
+    "end": "2026-07-24",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      7
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 120,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*전달완료 nodaeng_m(이영은) 와우펜 (상품발송-페이백) *기존 협찬자",
+    "start": "2026-07-22",
+    "end": "2026-07-24",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      7
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 121,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 사운드북 3종 패키지 44,800원 (50…",
+    "start": "2026-07-23",
+    "end": "2026-07-23",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      7
+    ],
+    "uncertain": [
+      "짧은 막대로 괄호 안 수량 내용이 잘림"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 122,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 차트 3종 : 35,900원 - 100개",
+    "start": "2026-07-27",
+    "end": "2026-07-27",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      7,
+      8
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 123,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*전달완료 geoml_mom(천정은) 플레이돌 맥스 (상품발송-페이백)",
+    "start": "2026-07-27",
+    "end": "2026-07-31",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      7,
+      8
+    ],
+    "uncertain": [
+      "계정명 geoml/geomi 마지막 영문 판독 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 124,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 geoml_mom(천정은) 플레이5 믹스 (상품발송-페이백)",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이5 믹스",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 믹스 표기 20건 모두 플레이돌 맥스로 직접 확인; 이전 주차 예시보다 최신 확인을 우선",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 와우펜북-미술 : 12,400원 - 200개",
+    "start": "2026-07-30",
+    "end": "2026-07-30",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      7,
+      8
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 125,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 gguml_geonhu (현희지) 무한워크북 (상품발송-페이백)",
+    "start": "2026-07-30",
+    "end": "2026-08-03",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      7,
+      8
+    ],
+    "uncertain": [
+      "계정명 gguml/ggumi 마지막 영문 판독 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "무한워크북",
+    "related": "첨부 월별 일정 화면",
+    "id": 126,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 gguml_geonhu (현희지) 무한워크북보드 (상품발송-페이백)",
+    "listProduct": "무한워크북",
+    "productNameReview": {
+      "source": "무한워크북보드",
+      "canonical": "무한워크북",
+      "basis": "무한워크북의 부가 표기",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "[전달完]3doong_home(이경남)-플레이돌 맥스",
+    "start": "2026-08-01",
+    "end": "2026-08-04",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      7,
+      8
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 127,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "[전달完]3doong_home(이경남)-플레이",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 확인한 4건 직접 지정",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "[전달完]스타일 셀러(텐더)- Joon.table 플레이돌",
+    "start": "2026-08-03",
+    "end": "2026-08-05",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      8
+    ],
+    "uncertain": [
+      "스타일 셀러(텐더) 판독 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 128,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "[전달完]스타일 셀러(텐더)- Joon.table 플레이5",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이5",
+      "canonical": "플레이돌",
+      "basis": "플레이돌의 발췌 오탈자; 모델 표시 없는 기본명",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 congdduck__lovely(김지수) 무선마이크 (상품발송-페이백)",
+    "start": "2026-08-05",
+    "end": "2026-08-10",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      8
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "무선마이크",
+    "related": "첨부 월별 일정 화면",
+    "id": 129,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "무선마이크",
+    "productNameReview": {
+      "source": "무선마이크",
+      "canonical": "무선마이크",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 poopu_zip(김수빈) 플레이돌 맥스(상품발송-페이백)",
+    "start": "2026-08-06",
+    "end": "2026-08-11",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      8
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 130,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 poopu_zip(김수빈) 플레이5 믹스(상품발송-페이백)",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이5 믹스",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 믹스 표기 20건 모두 플레이돌 맥스로 직접 확인; 이전 주차 예시보다 최신 확인을 우선",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 차트 3종 : 35,910원 - 100개",
+    "start": "2026-08-11",
+    "end": "2026-08-11",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      8
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 131,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*전달완료 soeun_growup(문아름) 샤워타월 (상품발송-페이백)",
+    "start": "2026-08-11",
+    "end": "2026-08-13",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      8
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 132,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "로켓-도서) 베이비페어 - 베이비&키즈템 빅세일",
+    "start": "2026-08-17",
+    "end": "2026-08-30",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      8,
+      9
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 133,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*전달완료 gguml_geonhu (현희지) 멀티보드 (상품발송-페이백)",
+    "start": "2026-08-19",
+    "end": "2026-08-21",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      8
+    ],
+    "uncertain": [
+      "계정명 gguml/ggumi 마지막 영문 판독 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "멀티보드",
+    "related": "첨부 월별 일정 화면",
+    "id": 134,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "멀티보드",
+    "productNameReview": {
+      "source": "멀티보드",
+      "canonical": "멀티보드",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 dami.momm(박서현) 와우펜 (상품발송-페이백)",
+    "start": "2026-08-20",
+    "end": "2026-08-24",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      8
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 135,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 hello_seonmom(박찬아) 플레이돌 맥스 (상품발송)",
+    "start": "2026-08-24",
+    "end": "2026-08-27",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      8
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 136,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 hello_seonmom(박찬아) 플레이 (상품발송)",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 확인한 4건 직접 지정",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "(취소)sl_won_mom(김민지) 플레이돌 맥스 (상품발송-페이백)",
+    "start": "2026-08-25",
+    "end": "2026-08-30",
+    "color": "#7ba0c4",
+    "owner": "U",
+    "type": "공동구매",
+    "status": "취소",
+    "sourceMonths": [
+      8,
+      9
+    ],
+    "uncertain": [
+      "취소 색상만으로 원담당을 식별할 수 없음"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 137,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "(취소)sl_won_mom(김민지) 플레이5 믹스 (상품발송-페이백)",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이5 믹스",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 믹스 표기 20건 모두 플레이돌 맥스로 직접 확인; 이전 주차 예시보다 최신 확인을 우선",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*계약완료 [로켓-골드박스] 차트 3종 : 35,910원 - 100개",
+    "start": "2026-08-26",
+    "end": "2026-08-26",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      8
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 138,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*전달완료 mini_ddol(이민희)썬더 와우펜 (상품발송)",
+    "start": "2026-08-26",
+    "end": "2026-09-02",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      8,
+      9
+    ],
+    "uncertain": [
+      "상품 앞 썬더 텍스트 판독 확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 139,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 _hayldam(김윤실) 플레이돌 맥스 (상품발송+페이백)",
+    "start": "2026-09-01",
+    "end": "2026-09-04",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-08",
+      "2026-09"
+    ],
+    "uncertain": [
+      "아이디와 괄호 속 이름 작은 글씨 판독 재확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 140,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 _hayldam(김윤실) 플레이도 믹스 (상품발송+페이백)",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이도 믹스",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 믹스 표기 20건 모두 플레이돌 맥스로 직접 확인; 이전 주차 예시보다 최신 확인을 우선",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "jihoomom0.0 - 멀티보드",
+    "start": "2026-09-01",
+    "end": "2026-09-04",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-08",
+      "2026-09"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "멀티보드",
+    "related": "첨부 월별 일정 화면",
+    "id": 141,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "멀티보드",
+    "productNameReview": {
+      "source": "멀티보드",
+      "canonical": "멀티보드",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 dalkom__mom(원혜민) 듀얼USB 2차",
+    "start": "2026-09-03",
+    "end": "2026-09-08",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-08",
+      "2026-09"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "듀얼USB",
+    "related": "첨부 월별 일정 화면",
+    "id": 142,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "듀얼USB",
+    "productNameReview": {
+      "source": "듀얼USB",
+      "canonical": "듀얼USB",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 e.anlll(이한솔) 플레이돌 맥스 (상품발송+페이백)",
+    "start": "2026-09-07",
+    "end": "2026-09-09",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09"
+    ],
+    "uncertain": [
+      "아이디 소문자 l 연속 개수 재확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 143,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 e.anlll(이한솔) 플레이도 믹스 (상품발송+페이백)",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이도 믹스",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 믹스 표기 20건 모두 플레이돌 맥스로 직접 확인; 이전 주차 예시보다 최신 확인을 우선",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 danl.mom22(박현수) 클레이+무한워크북 (상품발송+페이백)",
+    "start": "2026-09-09",
+    "end": "2026-09-11",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09"
+    ],
+    "uncertain": [
+      "괄호 속 이름 박현수/박현숙 작은 글씨 판독 재확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 144,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*전달완료 momjoy0527(조은) 와우펜 (상품발송)",
+    "start": "2026-09-09",
+    "end": "2026-09-11",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 145,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "[로켓-골드박스] 사운드북 그린 16,020원 / 행사수량 100개",
+    "start": "2026-09-10",
+    "end": "2026-09-10",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 146,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "[로켓-골드박스] 차트 3종 패키지 35,910원 / 행사수량 100개",
+    "start": "2026-09-10",
+    "end": "2026-09-10",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 147,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*전달완료 kimnunu_suwon(박아름) 멀티보드 (상품발송)",
+    "start": "2026-09-10",
+    "end": "2026-09-15",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "멀티보드",
+    "related": "첨부 월별 일정 화면",
+    "id": 148,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "멀티보드",
+    "productNameReview": {
+      "source": "멀티보드",
+      "canonical": "멀티보드",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 joyjoa_m(이영주) 와우펜 (상품발송)",
+    "start": "2026-09-14",
+    "end": "2026-09-16",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 149,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "[로켓-장난감] 추석 메인 앵커 : 무선마이크 26,820원 (10% 할인)",
+    "start": "2026-09-14",
+    "end": "2026-09-20",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "무선마이크",
+    "related": "첨부 월별 일정 화면",
+    "id": 150,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "무선마이크",
+    "productNameReview": {
+      "source": "무선마이크",
+      "canonical": "무선마이크",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 chaeeun2_mom(남여지) 클레이",
+    "start": "2026-09-16",
+    "end": "2026-09-18",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09"
+    ],
+    "uncertain": [
+      "괄호 속 이름 작은 글씨 판독 재확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 151,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "(취소) with.soll - 플레이돌 맥스",
+    "start": "2026-09-16",
+    "end": "2026-09-20",
+    "color": "#7ba0c4",
+    "owner": "U",
+    "type": "공동구매",
+    "status": "취소",
+    "sourceMonths": [
+      "2026-09"
+    ],
+    "uncertain": [
+      "첨부 색상표에서 원래 담당자를 확인할 수 없음"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 152,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "(취소) with.soll - 플레이도 믹스",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이도 믹스",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 믹스 표기 20건 모두 플레이돌 맥스로 직접 확인; 이전 주차 예시보다 최신 확인을 우선",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "로켓-도서) CRM 광고 - 유아도서 할인전",
+    "start": "2026-09-16",
+    "end": "2026-09-22",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 153,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*전달완료 bbomlnl__v(이경호) 와우펜",
+    "start": "2026-09-17",
+    "end": "2026-09-20",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09"
+    ],
+    "uncertain": [
+      "아이디 작은 글씨 판독 재확인 필요",
+      "괄호 속 이름 이경호/이경효 판독 재확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 154,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "won2_mompld(최다솜)- 멀티보드",
+    "start": "2026-09-17",
+    "end": "2026-09-20",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09"
+    ],
+    "uncertain": [
+      "아이디 끝 문자 d/c 작은 글씨 판독 재확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "멀티보드",
+    "related": "첨부 월별 일정 화면",
+    "id": 155,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "멀티보드",
+    "productNameReview": {
+      "source": "멀티보드",
+      "canonical": "멀티보드",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 dungdung2__ne(정선이) 플레이돌 맥스 (상품발송+페이백)",
+    "start": "2026-09-17",
+    "end": "2026-09-21",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09"
+    ],
+    "uncertain": [
+      "아이디 밑줄 개수 재확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 156,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 dungdung2__ne(정선이) 플레이도 믹스 (상품발송+페이백)",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이도 믹스",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 믹스 표기 20건 모두 플레이돌 맥스로 직접 확인; 이전 주차 예시보다 최신 확인을 우선",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 __my.ddang(김민원) 키즈탭프로 (상품발송+페이백)",
+    "start": "2026-09-18",
+    "end": "2026-09-25",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09"
+    ],
+    "uncertain": [
+      "괄호 속 이름 작은 글씨 판독 재확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "키즈탭프로",
+    "related": "첨부 월별 일정 화면",
+    "id": 157,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 __my.ddang(김민원) 키즈점프프로 (상품발송+페이백)",
+    "listProduct": "키즈탭프로",
+    "productNameReview": {
+      "source": "키즈점프프로",
+      "canonical": "키즈탭프로",
+      "basis": "키즈·프로 공통 어근 및 제공한 기준 제품",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "[로켓-골드박스] 낱말카드 22,500원 / 행사수량 100개",
+    "start": "2026-09-20",
+    "end": "2026-09-20",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 158,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*전달완료 6a.how(김현수) 와우펜 공구 (상품발송)",
+    "start": "2026-09-21",
+    "end": "2026-09-28",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09",
+      "2026-10"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 159,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "자사몰 타임특가-민감케어 패키지",
+    "start": "2026-09-23",
+    "end": "2026-09-27",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09",
+      "2026-10"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 160,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "[로켓-골드박스] 사운드북 그린 16,020원 / 행사수량 100개",
+    "start": "2026-09-25",
+    "end": "2026-09-25",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 161,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "[로켓-골드박스] 차트 3종 패키지 35,910원 / 행사수량 100개",
+    "start": "2026-09-25",
+    "end": "2026-09-25",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 162,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*전달완료 daml.momm(박서현) 플레이돌 (상품발송+페이백)",
+    "start": "2026-09-28",
+    "end": "2026-10-01",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09",
+      "2026-10"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 163,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 daml.momm(박서현) 플레이도 (상품발송+페이백)",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이도",
+      "canonical": "플레이돌",
+      "basis": "플레이돌과 한 글자 차이",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "*전달완료 mylittleclass_(이수녕) 클레이 (상품발송)",
+    "start": "2026-09-28",
+    "end": "2026-10-06",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09",
+      "2026-10"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 164,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "(취소) 2ddou(또우맘) 와우펜 (상품발송)",
+    "start": "2026-09-30",
+    "end": "2026-10-02",
+    "color": "#7ba0c4",
+    "owner": "U",
+    "type": "공동구매",
+    "status": "취소",
+    "sourceMonths": [
+      "2026-09",
+      "2026-10"
+    ],
+    "uncertain": [
+      "첨부 색상표에서 원래 담당자를 확인할 수 없음"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 165,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "happpy_hyeon(하남/김은자-도현맘) 와우펜 - 이벤트 1건 차감",
+    "start": "2026-09-30",
+    "end": "2026-10-04",
+    "color": "#3fa9f5",
+    "owner": "A",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09",
+      "2026-10"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 166,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "자사몰 타임특가_미술놀이 패키지",
+    "start": "2026-10-02",
+    "end": "2026-10-05",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09",
+      "2026-10"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 167,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "*전달완료 __klmlf(김가영) 플레이돌 (상품발송+페이백)",
+    "start": "2026-10-02",
+    "end": "2026-10-07",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-09",
+      "2026-10"
+    ],
+    "uncertain": [
+      "아이디 작은 글씨 판독 재확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 168,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "*전달완료 __klmlf(김가영) 플레이도 (상품발송+페이백)",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이도",
+      "canonical": "플레이돌",
+      "basis": "플레이돌과 한 글자 차이",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "ttoeyoon_mom-멀티보드",
+    "start": "2026-10-06",
+    "end": "2026-10-10",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-10"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "멀티보드",
+    "related": "첨부 월별 일정 화면",
+    "id": 169,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "멀티보드",
+    "productNameReview": {
+      "source": "멀티보드",
+      "canonical": "멀티보드",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "자사몰 타임특가_한글놀이 패키지",
+    "start": "2026-10-08",
+    "end": "2026-10-11",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-10"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 170,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "[로켓-골드박스] 차트 3종 패키지 35,910원 / 행사수량 100개",
+    "start": "2026-10-10",
+    "end": "2026-10-10",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-10"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 171,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "ebenbebe_(김진경) 플레이돌 맥스 (상품발송+페이백)",
+    "start": "2026-10-12",
+    "end": "2026-10-14",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-10"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 172,
+    "listNickname": "ebenbebe_",
+    "listProduct": "플레이돌 맥스",
+    "listVerifiedAt": "2026-10-13",
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "ebenbebe_(김진경) 플레이도 믹스 (상품발송+페이백)",
+    "productNameReview": {
+      "source": "플레이돌",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 믹스 표기 20건 모두 플레이돌 맥스로 직접 확인; 이전 주차 예시보다 최신 확인을 우선",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "bunnygamza(이중주)-클레이",
+    "start": "2026-10-13",
+    "end": "2026-10-16",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-10"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 173,
+    "listNickname": "bunnygamza",
+    "listProduct": "클레이",
+    "listVerifiedAt": "2026-10-13",
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "jihoomom0.0- 와우펜",
+    "start": "2026-10-14",
+    "end": "2026-10-17",
+    "color": "#b980d0",
+    "owner": "B",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-10"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 174,
+    "listNickname": "jihoomom0.0",
+    "listProduct": "와우펜",
+    "listVerifiedAt": "2026-10-13",
+    "salesCount": null,
+    "salesAmount": null,
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "[로켓-골드박스] 플레이돌 109,000원 / 행사수량 30개",
+    "start": "2026-10-15",
+    "end": "2026-10-15",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-10"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 175,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "[로켓-골드박스] 플레이도 109,000원 / 행사수량 30개",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이도",
+      "canonical": "플레이돌",
+      "basis": "플레이돌과 한 글자 차이",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "daml.momm(박서현) 듀얼USB (상품발송+페이백)",
+    "start": "2026-10-15",
+    "end": "2026-10-19",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-10"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "듀얼USB",
+    "related": "첨부 월별 일정 화면",
+    "id": 176,
+    "listNickname": "dami.momm",
+    "listProduct": "듀얼USB",
+    "listVerifiedAt": "2026-10-13",
+    "salesCount": null,
+    "salesAmount": null,
+    "productNameReview": {
+      "source": "듀얼USB",
+      "canonical": "듀얼USB",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "(취소) grow_mom1004(이슬기) 플레이돌 (상품발송+페이백)",
+    "start": "2026-10-16",
+    "end": "2026-10-20",
+    "color": "#7ba0c4",
+    "owner": "U",
+    "type": "공동구매",
+    "status": "취소",
+    "sourceMonths": [
+      "2026-10"
+    ],
+    "uncertain": [
+      "첨부 색상표에서 원래 담당자를 확인할 수 없음"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 177,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "(취소) grow_mom1004(이슬기) 플레이도 (상품발송+페이백)",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이도",
+      "canonical": "플레이돌",
+      "basis": "플레이돌과 한 글자 차이",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "dundun.mom(하남/류연주-든든맘) 와우펜",
+    "start": "2026-10-19",
+    "end": "2026-10-21",
+    "color": "#3fa9f5",
+    "owner": "A",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-10"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 178,
+    "listNickname": "dundun.mom",
+    "listProduct": "와우펜",
+    "listVerifiedAt": "2026-10-13",
+    "salesCount": null,
+    "salesAmount": null,
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "urlu_grow(심다인) 와우펜 (상품발송)",
+    "start": "2026-10-22",
+    "end": "2026-10-26",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-10"
+    ],
+    "uncertain": [
+      "아이디 urlu_grow/urfu_grow 판독 재확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 179,
+    "listNickname": "uriu_grow",
+    "listProduct": "와우펜",
+    "listVerifiedAt": "2026-10-13",
+    "salesCount": null,
+    "salesAmount": null,
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "crys___tal(최수정) 플레이돌 맥스 2차",
+    "start": "2026-10-22",
+    "end": "2026-10-27",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-10"
+    ],
+    "uncertain": [
+      "아이디 밑줄 개수 재확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 180,
+    "listNickname": "crys.__tal",
+    "listProduct": "플레이돌 맥스",
+    "listVerifiedAt": "2026-10-13",
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "crys___tal(최수정) 플레이도 믹스 2차",
+    "productNameReview": {
+      "source": "플레이돌",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 믹스 표기 20건 모두 플레이돌 맥스로 직접 확인; 이전 주차 예시보다 최신 확인을 우선",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "hodomom.pick(호도맘) 멀티보드 (상품발송)",
+    "start": "2026-10-23",
+    "end": "2026-10-27",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-10"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "멀티보드",
+    "related": "첨부 월별 일정 화면",
+    "id": 181,
+    "listNickname": "hodomom.pick",
+    "listProduct": "멀티보드",
+    "listVerifiedAt": "2026-10-13",
+    "salesCount": null,
+    "salesAmount": null,
+    "productNameReview": {
+      "source": "멀티보드",
+      "canonical": "멀티보드",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "[네이버-보다세일]",
+    "start": "2026-10-26",
+    "end": "2026-11-08",
+    "color": "#00b392",
+    "owner": "S",
+    "type": "행사",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-10",
+      "2026-11"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 182,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "2doa_dyoa(문경아) 듀얼USB (상품발송)",
+    "start": "2026-10-29",
+    "end": "2026-11-02",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-10",
+      "2026-11"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "듀얼USB",
+    "related": "첨부 월별 일정 화면",
+    "id": 183,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "2doa_dyoa(문경아) 듀얼usb (상품발송)",
+    "listProduct": "듀얼USB",
+    "productNameReview": {
+      "source": "듀얼USB",
+      "canonical": "듀얼USB",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "happy_el77(천수현) 플레이돌 맥스 (상품발송+페이백)",
+    "start": "2026-10-29",
+    "end": "2026-11-02",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-10",
+      "2026-11"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 184,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "happy_el77(천수현) 플레이도 믹스 (상품발송+페이백)",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이도 믹스",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 믹스 표기 20건 모두 플레이돌 맥스로 직접 확인; 이전 주차 예시보다 최신 확인을 우선",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "uloppolhs(이희선) 멀티보드 (상품발송)",
+    "start": "2026-10-29",
+    "end": "2026-11-02",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-10",
+      "2026-11"
+    ],
+    "uncertain": [
+      "아이디 작은 글씨 판독 재확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "멀티보드",
+    "related": "첨부 월별 일정 화면",
+    "id": 185,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "멀티보드",
+    "productNameReview": {
+      "source": "멀티보드",
+      "canonical": "멀티보드",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "kkanghyun_mom(최수진) 와우펜 (상품발송)",
+    "start": "2026-10-30",
+    "end": "2026-11-03",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-10",
+      "2026-11"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 186,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "joo.rang_mom/(연락해보기-와우펜)",
+    "start": "2026-11-01",
+    "end": "2026-11-01",
+    "color": "#70d44b",
+    "owner": "U",
+    "type": "기타",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-11"
+    ],
+    "uncertain": [
+      "첨부 색상표에서 원래 담당자를 확인할 수 없음"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 187,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "seo.joo.ha(연락해보기-플레이돌)",
+    "start": "2026-11-01",
+    "end": "2026-11-01",
+    "color": "#70d44b",
+    "owner": "U",
+    "type": "기타",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-11"
+    ],
+    "uncertain": [
+      "첨부 색상표에서 원래 담당자를 확인할 수 없음"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 188,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "seo.joo.ha(연락해보기-플레이도)",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이도",
+      "canonical": "플레이돌",
+      "basis": "플레이돌과 한 글자 차이",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "(취소)songa_mom_(이경진) 키즈탭프로 (상품발송+페이백)",
+    "start": "2026-11-05",
+    "end": "2026-11-09",
+    "color": "#7ba0c4",
+    "owner": "U",
+    "type": "공동구매",
+    "status": "취소",
+    "sourceMonths": [
+      "2026-11"
+    ],
+    "uncertain": [
+      "첨부 색상표에서 원래 담당자를 확인할 수 없음"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "키즈탭프로",
+    "related": "첨부 월별 일정 화면",
+    "id": 189,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "(취소)songa_mom_(이경진) 키즈점프프로 (상품발송+페이백)",
+    "listProduct": "키즈탭프로",
+    "productNameReview": {
+      "source": "키즈점프프로",
+      "canonical": "키즈탭프로",
+      "basis": "키즈·프로 공통 어근 및 제공한 기준 제품",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "jjuml__mom(장효은) 멀티보드 (상품발송)",
+    "start": "2026-11-05",
+    "end": "2026-11-09",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-11"
+    ],
+    "uncertain": [
+      "아이디 작은 글씨 판독 재확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "멀티보드",
+    "related": "첨부 월별 일정 화면",
+    "id": 190,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "멀티보드",
+    "productNameReview": {
+      "source": "멀티보드",
+      "canonical": "멀티보드",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "lucky__jihoo(이은솔) 와우펜 (상품발송 페이백)",
+    "start": "2026-11-05",
+    "end": "2026-11-09",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-11"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 191,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "poopu_zip(김수빈) 플레이돌2차",
+    "start": "2026-11-05",
+    "end": "2026-11-09",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-11"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 192,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "poopu_zip(김수빈) 플레이도2차",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이도",
+      "canonical": "플레이돌",
+      "basis": "플레이돌과 한 글자 차이",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "맘맘 클레이",
+    "start": "2026-11-07",
+    "end": "2026-11-09",
+    "color": "#66c9ba",
+    "owner": "U",
+    "type": "기타",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-11"
+    ],
+    "uncertain": [
+      "민트색 카테고리 담당자 매핑이 첨부 담당자표에 없음"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 193,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "ggobook_mom(김예지) 플레이돌 맥스(상품발송+페이백)",
+    "start": "2026-11-09",
+    "end": "2026-11-11",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-11"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 194,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "ggobook_mom(김예지) 플레이도 믹스(상품발송+페이백)",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이도 믹스",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 믹스 표기 20건 모두 플레이돌 맥스로 직접 확인; 이전 주차 예시보다 최신 확인을 우선",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "2doa_dyoa(문경아) 멀티보드 (상품발송)",
+    "start": "2026-11-11",
+    "end": "2026-11-13",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-11"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "멀티보드",
+    "related": "첨부 월별 일정 화면",
+    "id": 195,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "멀티보드",
+    "productNameReview": {
+      "source": "멀티보드",
+      "canonical": "멀티보드",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "bd_mom(남궁람) 클레이 (상품발송 페이백)",
+    "start": "2026-11-13",
+    "end": "2026-11-17",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-11"
+    ],
+    "uncertain": [
+      "괄호 속 이름 남궁람/남궁맘 판독 재확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 196,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "woo__umom(우유정) 와우펜 (상품발송)",
+    "start": "2026-11-13",
+    "end": "2026-11-17",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-11"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 197,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "plkomom__(산남비) 플레이돌 (상품발송+페이백)",
+    "start": "2026-11-16",
+    "end": "2026-11-18",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-11"
+    ],
+    "uncertain": [
+      "아이디와 괄호 속 이름 작은 글씨 판독 재확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 198,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "plkomom__(산남비) 플레이도 (상품발송+페이백)",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이도",
+      "canonical": "플레이돌",
+      "basis": "플레이돌과 한 글자 차이",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "mo.jj.mom(모찌맘) 멀티보드 (상품발송)",
+    "start": "2026-11-18",
+    "end": "2026-11-23",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-11"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "멀티보드",
+    "related": "첨부 월별 일정 화면",
+    "id": 199,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "멀티보드",
+    "productNameReview": {
+      "source": "멀티보드",
+      "canonical": "멀티보드",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "ln_damlland(다미맘) 플레이돌 맥스 (상품발송+페이백)",
+    "start": "2026-11-19",
+    "end": "2026-11-23",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-11"
+    ],
+    "uncertain": [
+      "아이디 작은 글씨 판독 재확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 200,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "ln_damlland(다미맘) 플레이도 믹스 (상품발송+페이백)",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이도 믹스",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 믹스 표기 20건 모두 플레이돌 맥스로 직접 확인; 이전 주차 예시보다 최신 확인을 우선",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "3blnz__sisters(천유란) 듀얼USB 2차",
+    "start": "2026-11-20",
+    "end": "2026-11-24",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-11"
+    ],
+    "uncertain": [
+      "아이디 작은 글씨 판독 재확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "듀얼USB",
+    "related": "첨부 월별 일정 화면",
+    "id": 201,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "3blnz__sisters(천유란) 듀얼usb 2차",
+    "listProduct": "듀얼USB",
+    "productNameReview": {
+      "source": "듀얼USB",
+      "canonical": "듀얼USB",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "bbomm__02(소이네) 클레이 (상품발송)",
+    "start": "2026-11-25",
+    "end": "2026-11-27",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-11"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "",
+    "related": "첨부 월별 일정 화면",
+    "id": 202,
+    "salesCount": null,
+    "salesAmount": null
+  },
+  {
+    "title": "genius.papalee(이범석) 플레이돌 맥스(상품발송+페이백)",
+    "start": "2026-11-26",
+    "end": "2026-11-30",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-11",
+      "2026-12"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 203,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "genius.papalee(이범석) 플레이도 믹스(상품발송+페이백)",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이도 믹스",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 믹스 표기 20건 모두 플레이돌 맥스로 직접 확인; 이전 주차 예시보다 최신 확인을 우선",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "kkomi__house(권민지) 플레이돌 맥스 (상품발송+페이백)",
+    "start": "2026-12-01",
+    "end": "2026-12-04",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-11",
+      "2026-12"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 204,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "kkomi__house(권민지) 플레이도믹스 (상품발송+페이백)",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이도믹스",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 믹스 표기 20건 모두 플레이돌 맥스로 직접 확인; 이전 주차 예시보다 최신 확인을 우선",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "minl_ddol(이민채)엔더 와우펜2차 (상품발송 페이백)",
+    "start": "2026-12-02",
+    "end": "2026-12-04",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-11",
+      "2026-12"
+    ],
+    "uncertain": [
+      "아이디 작은 글씨 판독 재확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 205,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "jjj.mama_(최민정) 멀티보드 (상품발송)",
+    "start": "2026-12-03",
+    "end": "2026-12-07",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-11",
+      "2026-12"
+    ],
+    "uncertain": [
+      "아이디 j 개수 재확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "멀티보드",
+    "related": "첨부 월별 일정 화면",
+    "id": 206,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "멀티보드",
+    "productNameReview": {
+      "source": "멀티보드",
+      "canonical": "멀티보드",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "chaea__mom(김소희) 키즈탭프로 (상품발송+페이백)",
+    "start": "2026-12-03",
+    "end": "2026-12-08",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-11",
+      "2026-12"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "키즈탭프로",
+    "related": "첨부 월별 일정 화면",
+    "id": 207,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "chaea__mom(김소희) 키즈점프프로 (상품발송+페이백)",
+    "listProduct": "키즈탭프로",
+    "productNameReview": {
+      "source": "키즈점프프로",
+      "canonical": "키즈탭프로",
+      "basis": "키즈·프로 공통 어근 및 제공한 기준 제품",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "nayul.days 플레이돌 (상품발송+페이백)",
+    "start": "2026-12-04",
+    "end": "2026-12-07",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-11",
+      "2026-12"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 208,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "nayul.days 플레이도 (상품발송+페이백)",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이도",
+      "canonical": "플레이돌",
+      "basis": "플레이돌과 한 글자 차이",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "hero__luv(하남/마이히로) 와우펜",
+    "start": "2026-12-07",
+    "end": "2026-12-09",
+    "color": "#3fa9f5",
+    "owner": "A",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-12"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 209,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "woo__umom(우유정) 플레이돌 맥스 (상품발송+페이백)",
+    "start": "2026-12-10",
+    "end": "2026-12-15",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-12"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 210,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "woo__umom(우유정) 플레이도 믹스 (상품발송+페이백)",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이도 믹스",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 믹스 표기 20건 모두 플레이돌 맥스로 직접 확인; 이전 주차 예시보다 최신 확인을 우선",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "ameri__mom(이서예) 와우펜 (상품발송)",
+    "start": "2026-12-11",
+    "end": "2026-12-15",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-12"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 211,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "dalkom__mom(원혜민) 듀얼USB3차",
+    "start": "2026-12-11",
+    "end": "2026-12-15",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-12"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "듀얼USB",
+    "related": "첨부 월별 일정 화면",
+    "id": 212,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "dalkom__mom(원혜민) 듀얼usb3차",
+    "listProduct": "듀얼USB",
+    "productNameReview": {
+      "source": "듀얼USB",
+      "canonical": "듀얼USB",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "podomami(이은지) 키즈탭프로 3차공구",
+    "start": "2026-12-14",
+    "end": "2026-12-16",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-12"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "키즈탭프로",
+    "related": "첨부 월별 일정 화면",
+    "id": 213,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "podomami(이은지) 키즈점프프로 3차공구",
+    "listProduct": "키즈탭프로",
+    "productNameReview": {
+      "source": "키즈점프프로",
+      "canonical": "키즈탭프로",
+      "basis": "키즈·프로 공통 어근 및 제공한 기준 제품",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "hyun__brother(최진영) 와우펜 (상품발송)",
+    "start": "2026-12-15",
+    "end": "2026-12-17",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-12"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 214,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "dapeunjj100(담은지) 와우펜 (상품발송완료)",
+    "start": "2026-12-17",
+    "end": "2026-12-21",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-12"
+    ],
+    "uncertain": [
+      "아이디 dapeunjj100/dapeunji100 작은 글씨 판독 재확인 필요"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 215,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "geoml_mom(천정은) 플레이돌 맥스 3차진행",
+    "start": "2026-12-17",
+    "end": "2026-12-21",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-12"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌 맥스",
+    "related": "첨부 월별 일정 화면",
+    "id": 216,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "geoml_mom(천정은) 플레이도 믹스 3차진행",
+    "listProduct": "플레이돌 맥스",
+    "productNameReview": {
+      "source": "플레이도 믹스",
+      "canonical": "플레이돌 맥스",
+      "basis": "사용자가 믹스 표기 20건 모두 플레이돌 맥스로 직접 확인; 이전 주차 예시보다 최신 확인을 우선",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "lily__mom(정수진) 플레이돌2차",
+    "start": "2026-12-28",
+    "end": "2026-12-30",
+    "color": "#ff9e18",
+    "owner": "C",
+    "type": "공동구매",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-12",
+      "2027-01"
+    ],
+    "uncertain": [],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 217,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "lily__mom(정수진) 플레이도2차",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이도",
+      "canonical": "플레이돌",
+      "basis": "플레이돌과 한 글자 차이",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "cherub.456 와우펜 연락해보기 27년도",
+    "start": "2027-01-01",
+    "end": "2027-01-01",
+    "color": "#70d44b",
+    "owner": "U",
+    "type": "기타",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-12",
+      "2027-01"
+    ],
+    "uncertain": [
+      "첨부 색상표에서 원래 담당자를 확인할 수 없음"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 218,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "dollakong_와우펜_플레이돌 연락해보기",
+    "start": "2027-01-01",
+    "end": "2027-01-01",
+    "color": "#70d44b",
+    "owner": "U",
+    "type": "기타",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-12",
+      "2027-01"
+    ],
+    "uncertain": [
+      "첨부 색상표에서 원래 담당자를 확인할 수 없음"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 219,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "dollakong_와우펜_플레이도 연락해보기",
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "gabihome90 플레이돌/멀티보드 연락해보기",
+    "start": "2027-01-01",
+    "end": "2027-01-01",
+    "color": "#70d44b",
+    "owner": "U",
+    "type": "기타",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-12",
+      "2027-01"
+    ],
+    "uncertain": [
+      "아이디 작은 글씨 판독 재확인 필요",
+      "첨부 색상표에서 원래 담당자를 확인할 수 없음"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "플레이돌",
+    "related": "첨부 월별 일정 화면",
+    "id": 220,
+    "salesCount": null,
+    "salesAmount": null,
+    "originalTitle": "gabihome90 플레이도/멀티보드 연락해보기",
+    "listProduct": "플레이돌",
+    "productNameReview": {
+      "source": "플레이도",
+      "canonical": "플레이돌",
+      "basis": "플레이돌과 한 글자 차이",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "kimnunu_suwon(박아름)멀티보드 연락하기",
+    "start": "2027-01-01",
+    "end": "2027-01-01",
+    "color": "#70d44b",
+    "owner": "U",
+    "type": "기타",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-12",
+      "2027-01"
+    ],
+    "uncertain": [
+      "첨부 색상표에서 원래 담당자를 확인할 수 없음"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "멀티보드",
+    "related": "첨부 월별 일정 화면",
+    "id": 221,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "멀티보드",
+    "productNameReview": {
+      "source": "멀티보드",
+      "canonical": "멀티보드",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  },
+  {
+    "title": "seo1seoa_mom 와우펜 연락해보기",
+    "start": "2027-01-01",
+    "end": "2027-01-01",
+    "color": "#70d44b",
+    "owner": "U",
+    "type": "기타",
+    "status": "미표기",
+    "sourceMonths": [
+      "2026-12",
+      "2027-01"
+    ],
+    "uncertain": [
+      "아이디 숫자 1과 l 재확인 필요",
+      "첨부 색상표에서 원래 담당자를 확인할 수 없음"
+    ],
+    "imported": true,
+    "partner": "",
+    "product": "와우펜",
+    "related": "첨부 월별 일정 화면",
+    "id": 222,
+    "salesCount": null,
+    "salesAmount": null,
+    "listProduct": "와우펜",
+    "productNameReview": {
+      "source": "와우펜",
+      "canonical": "와우펜",
+      "basis": "기준 제품명과 일치",
+      "reviewedAt": "2026-10-13"
+    }
+  }
+]

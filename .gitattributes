@@ -8,3 +8,7 @@
 *.csv -text
 *.png -text
 *.xlsx -text
+
+# Keep handoff/archive files byte-identical to their delivery manifests.
+developer-empty/** -text
+archive/** -text
