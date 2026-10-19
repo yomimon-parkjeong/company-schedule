@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-15",
+  "generatedAt": "2026-10-19",
   "records": 1679,
   "sourceRebuildVerified": true,
   "calendarDataSHA256": "1c46e7926d9603f112829f280486a22207c0f2a5b6fec6f07155b91a3616f274",
@@ -521,8 +521,43 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 22985,
-      "sha256": "c58d4bffb4640ca95d205be9b07dfa91c05ecf3ff104ba8847b54fe0d0309cf1"
+      "bytes": 23888,
+      "sha256": "8c85bc1c0228dd9b58eac7dd26b0bdca76650646d6c09e31831e196836d514ff"
+    },
+    {
+      "path": "README.md",
+      "bytes": 3257,
+      "sha256": "f5074f7ab72f1bcc6a763d6007f5278174fcb8bd6f9efd7d726dc8ca31ad376b"
+    },
+    {
+      "path": "README_개발자인계.md",
+      "bytes": 10420,
+      "sha256": "bd699966870166ec07c38ace8032170de1bc4b2618784196fd3407ac5176b049"
+    },
+    {
+      "path": "SOURCE_MAP.md",
+      "bytes": 2643,
+      "sha256": "a6f94735b34d0fa53123ac7b9af9fd91baeae58ce97db0ae5130a6c1e651ba25"
+    },
+    {
+      "path": "developer-empty/README.md",
+      "bytes": 2406,
+      "sha256": "58f654a46f8675e2c213158a9f6896469be4d6934bba6c4699aacb973bf0577c"
+    },
+    {
+      "path": "developer-empty/data/calendar_import_2023-02-01_2027-01-31.csv",
+      "bytes": 451821,
+      "sha256": "7e38c429088a3ed78a76dd2f79ef2294c78ee999ad312af9f4a6da0cadb2bada"
+    },
+    {
+      "path": "developer-empty/manifest.json",
+      "bytes": 987,
+      "sha256": "956c721f269f21f1741a3e5021023d2dacf1c7a695d79a09dedd2e563a39ddc4"
+    },
+    {
+      "path": "developer-empty/public/index.php",
+      "bytes": 336925,
+      "sha256": "c3df4dbe7fd5a662f026a94cfc1361430c77b25430823c0cf9f7d64ccf7ffccf"
     },
     {
       "path": "owners.seed.json",
@@ -543,6 +578,11 @@
       "path": "quality/csv-verification-results.json",
       "bytes": 6656,
       "sha256": "3225fe6a38139e8c0f53290807a427128c20250e9a24abc5ef481e8d3f65b25a"
+    },
+    {
+      "path": "quality/empty-handoff-verification.json",
+      "bytes": 372,
+      "sha256": "6e099c2f68618c3d8d42e06632ee8ccee93f5ed0d1dc3fba7144d81aaa02b81e"
     },
     {
       "path": "quality/groupbuy-classification-result.json",
@@ -598,16 +638,6 @@
       "path": "quality/weekly-copy-verification.json",
       "bytes": 707,
       "sha256": "40c71b80795da8d2f9445082610c1bf60488f7c9f2b11a87aab3a5ed22e4a643"
-    },
-    {
-      "path": "README_개발자인계.md",
-      "bytes": 10420,
-      "sha256": "bd699966870166ec07c38ace8032170de1bc4b2618784196fd3407ac5176b049"
-    },
-    {
-      "path": "SOURCE_MAP.md",
-      "bytes": 2643,
-      "sha256": "a6f94735b34d0fa53123ac7b9af9fd91baeae58ce97db0ae5130a6c1e651ba25"
     },
     {
       "path": "자료/2026_원본/2026-01.png",
@@ -684,5 +714,7 @@
       "bytes": 451821,
       "sha256": "7e38c429088a3ed78a76dd2f79ef2294c78ee999ad312af9f4a6da0cadb2bada"
     }
-  ]
+  ],
+  "developerEmptyEntry": "developer-empty/public/index.php",
+  "developerEmptyInitialRecords": 0
 }

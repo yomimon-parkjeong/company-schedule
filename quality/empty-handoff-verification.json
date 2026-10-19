@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-19",
+  "initialRecords": 0,
+  "previewNew": 1679,
+  "appliedNew": 1679,
+  "afterApplyIdentical": 1679,
+  "afterRefreshRecords": 0,
+  "emptyNoticeHidesAfterApply": true,
+  "emptyNoticeReturnsAfterRefresh": true,
+  "consoleErrors": 0,
+  "dashboardUnchanged": true,
+  "phpEngineExecuted": false,
+  "browserTestedIdenticalHtmlPayload": true
+}

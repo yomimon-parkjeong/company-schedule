@@ -1,5 +1,12 @@
 # 사내 일정 관리 · 공동구매 정산
 
+## 최신 개발자 CSV 반영 테스트 진입점 (2026-10-19)
+
+developer-empty/public/index.php를 PHP 서버에서 엽니다. 초기 일정은 0건이며, developer-empty/data/의 원본 CSV를 직접 넣어 반영 반응을 확인합니다. CSV 자동 로딩은 없습니다.
+
+실행 방법과 검증 범위는 developer-empty/README.md를 참고하세요. 이 파일은 PHP/DB 저장 구현본이 아니라 PHP 경로로 제공하는 기존 클라이언트 시안입니다. 아래 기존 03 HTML과 데이터는 비교 자료이며 초기 0건 전달본의 실행 진입점이 아닙니다.
+
+
 개발 담당부서 검토용 HTML/CSS/JavaScript 시안입니다. 추후 PHP와 사내 DB 연결을 위한 기능 기준과 원본 일정 데이터를 함께 제공합니다.
 
 ## 확인 방법

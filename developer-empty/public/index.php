@@ -1,0 +1,1898 @@
+<?php
+// CSV import UI prototype. No initial calendar records or server persistence.
+header('Content-Type: text/html; charset=UTF-8');
+?>
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>사내 일정 관리 · 개발자 CSV 반영 테스트</title>
+<style>
+:root{--line:#c7d1dd;--muted:#526175;--ink:#243044;--blue:#245fc5;--bg:#f5f7fa;--a:#3fa9f5;--b:#b980d0;--c:#ff9e18}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 'Malgun Gothic',Arial,sans-serif}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #8eb8ff;outline-offset:2px}button{border:1px solid #d5dce5;background:white;border-radius:5px;padding:7px 12px;color:var(--ink)}button:hover{background:#f0f4fa}.primary{background:var(--blue);border-color:var(--blue);color:#fff}.primary:hover{background:#194fae}header{height:64px;background:#fff;border-bottom:1px solid var(--line);padding:0 28px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:19px;font-weight:700;display:flex;align-items:center;gap:11px}.mark{width:27px;height:27px;background:var(--blue);color:#fff;border-radius:5px;text-align:center;line-height:27px;font-size:16px}.topmeta{display:flex;align-items:center;gap:14px;font-size:12px;color:var(--muted)}.badge{border:1px solid #dbe1ea;border-radius:4px;padding:2px 7px;background:#f6f8fb}.layout{display:grid;grid-template-columns:220px minmax(0,1fr);min-height:calc(100vh - 64px)}aside{background:#fff;border-right:1px solid var(--line);padding:25px 18px}.nav-title{font-size:12px;color:var(--muted);margin:0 10px 12px}.nav-item{background:#edf3ff;color:var(--blue);padding:10px 12px;border-radius:5px;font-weight:700}.filter-group{margin-top:29px}.filter-heading{font-size:12px;font-weight:700;color:var(--muted);margin-bottom:12px}.check{display:flex;align-items:center;gap:9px;padding:8px 3px;cursor:pointer}.check input{accent-color:var(--blue);width:15px;height:15px}.dot{width:9px;height:9px;border-radius:50%;display:inline-block}.owner-count{margin-left:auto;font-size:12px;color:var(--muted)}.side-note{font-size:12px;line-height:1.8;color:var(--muted);border-top:1px solid var(--line);padding-top:17px;margin-top:28px}main{padding:25px 28px;min-width:0}.page-head{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:18px}h1{font-size:23px;margin:0 0 3px;letter-spacing:-.8px}.subtitle{font-size:13px;color:var(--muted);margin:0}.summary{display:flex;gap:12px;margin:16px 0 20px}.summary-item{background:#fff;border:1px solid var(--line);padding:11px 17px;border-radius:6px;min-width:145px;display:flex;justify-content:space-between;gap:24px;align-items:center;color:var(--muted);font-size:12px}.summary-item strong{color:var(--ink);font-size:20px}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:13px;flex-wrap:wrap}.month-control{display:flex;align-items:center;gap:7px}.month{font-size:20px;font-weight:700;margin-right:12px;min-width:100px}.arrow{padding:5px 11px;font-size:19px}.tools{display:flex;gap:8px;flex-wrap:wrap}input[type=search],select,input[type=text],input[type=date]{border:1px solid #d5dce5;border-radius:5px;background:#fff;padding:7px 10px;color:var(--ink)}input[type=search]{width:210px}.view-switch{display:flex}.view-switch button{border-radius:0}.view-switch button:first-child{border-radius:5px 0 0 5px}.view-switch button:last-child{border-radius:0 5px 5px 0;border-left:0}.view-switch .active{background:#eaf1fe;color:var(--blue);font-weight:700}.calendar{border:1px solid var(--line);background:#fff;border-radius:6px;overflow:hidden}.weekdays{display:grid;grid-template-columns:repeat(7,1fr);border-bottom:1px solid var(--line);background:#f9fafc}.weekdays div{text-align:center;padding:10px;color:#34465e;font-size:13px;font-weight:600}.weekdays div:first-child{color:#c55656}.weekdays div:last-child{color:#5676a2}.week{position:relative;min-height:128px;border-bottom:1px solid var(--line);padding:34px 0 12px}.week:last-child{border-bottom:0}.day-grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(7,1fr);pointer-events:none}.day{border-right:1px solid var(--line);padding:7px 9px}.day:last-child{border-right:0}.day.outside{background:#f3f5f8;color:#637083}.day-number{font-size:13px;font-weight:600;display:inline-flex;width:23px;height:23px;align-items:center;justify-content:center}.day.sunday .day-number{color:#be5555}.day.saturday .day-number{color:#5278ab}.day.today .day-number{background:var(--blue);color:#fff;border-radius:50%}.events{position:relative;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));grid-auto-rows:46px;row-gap:4px;padding:0 4px;pointer-events:none}.event{pointer-events:auto;display:block;text-align:left;padding:5px 8px;margin:0 2px;border:0;border-left:3px solid var(--owner);background:var(--owner);color:#fff;border-radius:3px;font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:22px}.event:hover{filter:brightness(.90)}.event.cancelled{color:#fff;background:#536071;border-color:#536071}.event.done{opacity:1}.event .who{font-weight:800;margin-right:5px}.calendar-bottom{display:flex;justify-content:space-between;gap:10px;font-size:12px;color:var(--muted);padding:12px 2px}.legend{display:flex;gap:15px}.legend span{display:flex;gap:5px;align-items:center}.list-wrap{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:auto}table{border-collapse:collapse;width:100%;min-width:720px;text-align:left}th{background:#f9fafc;color:var(--muted);font-size:12px;font-weight:500}th,td{padding:13px 16px;border-bottom:1px solid var(--line)}td button{padding:0;border:0;color:var(--blue);background:none}.empty{padding:35px;text-align:center;color:var(--muted)}[hidden]{display:none!important}dialog{border:0;border-radius:9px;padding:0;width:min(480px,calc(100vw - 30px));box-shadow:0 20px 80px #17283b33;color:var(--ink)}dialog::backdrop{background:#17283b66}.dialog-head{display:flex;justify-content:space-between;align-items:center;padding:19px 22px;border-bottom:1px solid var(--line)}.dialog-head h2{font-size:17px;margin:0}.dialog-body{padding:20px 22px}.details{display:grid;grid-template-columns:88px 1fr;gap:13px;font-size:13px}.details dt{color:var(--muted)}.details dd{margin:0}.dialog-foot{border-top:1px solid var(--line);padding:14px 22px;display:flex;justify-content:flex-end;gap:8px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.form-grid label{display:flex;flex-direction:column;gap:5px;font-size:12px;color:var(--muted)}.full{grid-column:1/-1}.form-note{font-size:12px;color:var(--muted);margin:15px 0 0}.error{color:#be4141;font-size:12px;margin:10px 0 0}footer{font-size:11px;color:#8893a2;margin-top:12px}
+@media(max-width:1050px){.layout{grid-template-columns:180px minmax(0,1fr)}main{padding:20px 16px}.toolbar{align-items:flex-start}.tools{width:100%}.event{font-size:13px}.summary-item{min-width:130px}}
+@media(max-width:700px){header{padding:0 15px}.topmeta .badge{display:none}.layout{display:block}aside{border-right:0;border-bottom:1px solid var(--line);padding:12px 16px}.nav-title,.nav-item,.side-note{display:none}.filter-group{margin-top:0;display:inline-block;margin-right:18px;vertical-align:top}.filter-group .check{display:inline-flex;margin-right:8px}.filter-heading{margin-bottom:3px}.owner-count{display:none}.page-head{align-items:flex-start}h1{font-size:20px}.summary{gap:6px}.summary-item{min-width:0;flex:1;padding:9px;gap:5px}.calendar-scroll{overflow:auto}.calendar{min-width:700px}.calendar-bottom{flex-direction:column}.tools input[type=search]{width:170px}.week{min-height:112px}}
+.groupbuy-summary{display:grid;grid-template-columns:minmax(240px,.8fr) minmax(540px,2fr);gap:14px;margin:18px 0 0}.monthly-panel,.weekly-panel{background:#fff;border:1px solid var(--line);border-radius:6px;min-width:0}.monthly-panel{padding:15px 18px}.weekly-panel{padding:15px 18px 10px}.stats-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}.stats-heading h2{font-size:14px;margin:0;font-weight:700}.stats-heading>span{font-size:11px;color:var(--muted);white-space:nowrap}.monthly-total{display:flex;align-items:baseline;gap:7px;padding:0 0 9px}.monthly-total strong{font-size:33px;line-height:1.25;letter-spacing:-1px;color:#1859b8}.monthly-total>span{font-size:14px;color:var(--muted)}.owner-totals{display:flex;flex-direction:column;gap:7px}.owner-totals>div{display:flex;justify-content:space-between;gap:15px;font-size:13px}.owner-label{display:flex;align-items:center;gap:7px}.owner-totals strong{font-size:14px}.weekly-scroll{overflow:auto}.weekly-table{width:100%;min-width:540px;table-layout:fixed;text-align:center}.weekly-table th,.weekly-table td{padding:5px 4px;font-size:13px;border-bottom:1px solid #dde3eb;vertical-align:middle}.weekly-table th{color:#34465e;font-weight:600;background:#f4f6f9}.weekly-table th:first-child{width:105px;text-align:left;padding-left:9px}.weekly-table td{font-weight:700}.weekly-table .week-range{display:block;font-size:10px;font-weight:400;color:#526175;white-space:nowrap}.weekly-table .owner-label{font-size:12px;font-weight:500}.weekly-table .zero{color:#637083;font-weight:400}.weekly-table .weekly-total th,.weekly-table .weekly-total td{background:#edf3ff;color:#1859b8;border-bottom:0}.weekly-table td:not(.zero){font-variant-numeric:tabular-nums}.stats-note{font-size:11px;color:var(--muted);margin:7px 0 17px}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.stats-heading h2,.stats-note{overflow-wrap:anywhere}@media(max-width:1150px){.groupbuy-summary{grid-template-columns:1fr}.monthly-panel{padding:13px 18px}.monthly-panel .stats-heading{margin-bottom:5px}.monthly-total{display:inline-flex;padding:0 28px 0 0;vertical-align:middle}.owner-totals{display:inline-flex;flex-direction:row;gap:26px;flex-wrap:wrap;vertical-align:middle}.owner-totals>div{gap:12px}.weekly-panel{padding:12px 15px 8px}}@media(max-width:700px){.owner-totals{display:flex;margin-top:12px;gap:16px}.weekly-panel{padding:12px}.weekly-table{min-width:510px}}
+.event{display:flex;flex-direction:column;align-items:flex-start;justify-content:space-between;gap:1px;padding:4px 8px;background:var(--owner);color:var(--event-text,#fff);border:1px solid color-mix(in srgb,var(--owner) 70%,#000);border-left:3px solid var(--owner);line-height:18px;white-space:normal}.event.cancelled{background:var(--owner);color:var(--event-text,#fff);border-color:color-mix(in srgb,var(--owner) 70%,#000)}.event-title{display:block;max-width:100%;font-size:13px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;line-height:18px}.event-owner{display:block;max-width:100%;font-size:11px;font-weight:400;line-height:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.color-settings{border:0;border-top:1px solid var(--line);padding:16px 0 0;margin:22px 0 0;min-width:0}.color-settings legend{font-size:13px;font-weight:700;padding:0 8px 0 0}.color-control{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.color-control label{font-size:12px;color:var(--muted)}input[type=color]{width:46px;height:34px;padding:3px;border:1px solid #b8c4d4;border-radius:4px;background:#fff;cursor:pointer}.color-control output{font-size:12px;color:#34465e;font-family:Consolas,monospace}.color-control button{padding:5px 8px;font-size:12px;margin-left:auto}.color-presets{display:flex;gap:9px;margin:12px 0}.color-presets button{width:30px;height:30px;padding:0;border-radius:4px;background:var(--swatch);border:1px solid #8795a7}.color-presets button:hover{outline:2px solid #526175;outline-offset:2px}.color-preview{display:flex;flex-direction:column;gap:4px;background:var(--preview-bg,#1859b8);color:var(--preview-text,#fff);padding:9px 10px;border:1px solid color-mix(in srgb,var(--preview-bg,#1859b8) 70%,#000);border-radius:4px;min-height:53px}.color-preview-title{font-size:13px;font-weight:600;overflow-wrap:anywhere}.color-preview-owner{font-size:11px;line-height:15px}.form-grid .color-control{margin-top:2px}
+.color-presets{display:grid;grid-template-columns:repeat(4,42px);gap:9px 11px;width:max-content;margin:12px 0 16px}.color-presets button{display:flex;align-items:center;justify-content:center;width:42px;height:42px;padding:8px;background:transparent;border:1px solid transparent;border-radius:8px;margin:0;box-shadow:none}.color-presets button .chip-swatch{display:flex;align-items:center;justify-content:center;width:23px;height:23px;flex-shrink:0;border-radius:4px;background:var(--swatch);border:1px solid color-mix(in srgb,var(--swatch) 85%,#64748b);color:var(--chip-ink);font-weight:700;font-size:14px}.color-presets button:hover{background:#f2f6fa;outline:none}.color-presets button[aria-pressed=true]{background:#edf7ff;border-color:#72bbec;box-shadow:0 0 0 2px #e4f2fc}.color-presets button[aria-pressed=true] .chip-swatch::after{content:'✓'}.color-presets button:focus-visible{outline:3px solid #1859b8;outline-offset:2px}.color-kind{font-size:11px;color:#526175}.color-field-label{font-size:12px;color:var(--muted)}.color-control{gap:8px}.color-control button{margin-left:auto}
+:root{--holiday-red:#b42332}
+.weekdays div:first-child,.day.sunday .day-number{color:var(--holiday-red)}
+.weekdays div:last-child,.day.saturday .day-number{color:#235a9f}
+.week{padding-top:68px;min-height:138px}
+.day-header{position:relative;min-width:0}
+.day.holiday{background:#fff7f7}.day.outside.holiday{background:#fff2f3}
+.day.holiday .day-number{color:var(--holiday-red);font-weight:700}
+.day.today .day-number{color:#fff}
+.day.holiday.today .day-number,.day.sunday.today .day-number{background:var(--holiday-red);color:#fff}
+.holiday-name{display:block;color:var(--holiday-red);font-size:11px;line-height:14px;font-weight:600;margin-top:2px;overflow-wrap:anywhere}
+.holiday-reason{display:block;font-size:10px;font-weight:400;line-height:13px}
+.calendar-meta{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin:0 2px 8px}
+.holiday-key{display:flex;align-items:center;gap:6px;color:var(--holiday-red);font-weight:600}.holiday-key .dot{background:var(--holiday-red);width:7px;height:7px}
+
+
+.page-actions{display:flex;gap:8px;flex-wrap:wrap}.month-control{flex-wrap:wrap}#monthJump{width:135px;font-size:12px}
+.review-badge{display:inline-block;padding:1px 5px;border:1px solid #d4b87d;background:#fff7e7;color:#805119;font-size:10px;border-radius:3px;margin-left:6px}.detail-owner-label{display:flex;justify-content:space-between;align-items:center;gap:12px;font-size:12px;margin-top:19px;color:#526175}.detail-owner-label select{max-width:220px}
+.weekly-table{min-width:650px}.weekly-table th:first-child{width:140px}.weekly-table .owner-label{white-space:nowrap}.legend{flex-wrap:wrap}.owner-totals strong{white-space:nowrap}.owner-label .dot{flex-shrink:0}.source-dialog{width:min(1500px,96vw)}.source-scroll{overflow:auto;max-height:78vh;padding:10px}.source-scroll img{display:block;width:100%;min-width:1000px;height:auto}.event.outside-event{border-color:color-mix(in srgb,var(--owner) 60%,#64748b)}
+@media(max-width:700px){.page-actions{justify-content:flex-end}.legend{gap:10px}.page-head{gap:10px}.month{margin-right:3px}.weekly-table{min-width:620px}}
+
+.field-hint{font-size:11px;line-height:1.6;color:#526175;font-weight:400}.generated-title-label{font-size:10px;line-height:14px;opacity:.85}.color-preview.full{min-height:72px}
+
+/* Start-date weekly opening list */
+.list-wrap.weekly-list-view{background:transparent;border:0;overflow:visible}
+.list-intro{display:flex;justify-content:space-between;align-items:center;gap:16px;background:#fff;border:1px solid #c7d1dd;border-radius:7px;padding:16px 20px;margin-bottom:14px}
+.list-intro h2{font-size:18px;color:#1d2c43;margin:0 0 4px}.list-intro p{font-size:12px;color:#526175;margin:0}.list-count{white-space:nowrap;font-size:13px;color:#245fc5;font-weight:700}
+.weekly-openings{display:flex;flex-direction:column;gap:18px}.opening-week{background:#fff;border:1px solid #bac7d8;border-radius:7px;overflow:hidden}
+.opening-week-head{padding:16px 20px;border-bottom:1px solid #cbd5e1;background:#edf3fc;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.opening-week-head h2{font-size:16px;line-height:1.6;margin:0;color:#192e4b;font-weight:700}.opening-range{font-size:12px;white-space:nowrap;color:#47586f}
+.opening-items{list-style:none;padding:0;margin:0}.opening-items li+li{border-top:1px solid #e1e7ef}
+.opening-item{width:100%;border:0;border-radius:0;background:#fff;padding:16px 22px;text-align:left;display:flex;align-items:center;gap:14px;line-height:1.75;font-size:15px;color:#23324a}
+.opening-item:hover{background:#f3f7fc}.opening-item:focus-visible{outline:3px solid #245fc5;outline-offset:-3px;background:#f3f7fc}
+.opening-color{width:5px;height:32px;border-radius:3px;flex-shrink:0;background:var(--opening-color)}
+.opening-date{font-weight:700;min-width:91px;font-variant-numeric:tabular-nums;white-space:nowrap;color:#243a59}
+.opening-date.holiday{color:#b42332}.opening-line{min-width:0;overflow-wrap:anywhere}.opening-handle{font-weight:700;color:#152d4e}.opening-product{font-weight:600}.opening-owner{color:#40516b}
+.other-list{margin-top:18px;background:#fff;border:1px solid #c7d1dd;border-radius:7px;overflow:hidden}.other-list summary{padding:14px 20px;cursor:pointer;font-weight:600;color:#40516b;font-size:13px}.other-list .opening-item{font-size:13px}.other-list summary:hover{background:#f3f7fc}
+.weekly-table th:first-child{width:180px}.weekly-table .owner-label{white-space:normal;text-align:left}.legend{gap:12px}
+@media(max-width:700px){.list-intro{padding:14px;align-items:flex-start}.list-intro h2{font-size:16px}.list-count{font-size:12px}.opening-week-head{padding:13px 14px;gap:5px}.opening-week-head h2{font-size:14px}.opening-item{padding:14px 12px;gap:9px;font-size:14px;align-items:flex-start}.opening-date{min-width:79px;font-size:13px}.opening-color{margin-top:4px;width:4px;height:25px}.opening-owner{display:inline}.weekly-table th:first-child{width:165px}}
+
+
+/* Adopted calendar option 1 and left schedule tab */
+.day-number{font-size:18px;width:30px;height:30px;font-weight:700}.day{padding:10px}.day.today{box-shadow:inset 0 0 0 2px #245fc5}.week{padding-top:68px}.week+.week{border-top:2px solid #afbed2}.weekdays div{font-size:14px;padding:12px}.event-title{font-size:15px;font-weight:700;line-height:22px}.event-owner{font-size:12px;line-height:17px}.events{grid-auto-rows:56px;row-gap:6px;padding:0 5px}.event{padding:7px 9px;border-radius:5px;gap:3px}.event:hover{filter:none;box-shadow:0 0 0 2px #24304466;position:relative;z-index:2}.event:focus-visible{outline:3px solid #245fc5;outline-offset:1px}.event.selected{outline:3px solid #183f70;outline-offset:1px;z-index:1}.event.cancelled .event-title{text-decoration:line-through}.holiday-name{font-size:12px}
+.layout.has-selection{grid-template-columns:290px minmax(0,1fr)}.schedule-sidebar{padding:20px 16px}.side-tabs{display:flex;gap:4px;border-bottom:1px solid #c7d1dd;padding-bottom:10px;margin-bottom:18px}.side-tabs button{font-size:12px;padding:6px 9px;border-color:transparent}.side-tabs button[aria-selected=true]{background:#eaf1fe;border-color:#c1d2ec;color:#1c55ab;font-weight:700}.side-tabs button:disabled{cursor:default;color:#8a96a5}.side-tabs #closeSelection{margin-left:auto;font-size:17px;line-height:18px;padding:3px 8px}
+.selected-panel{position:sticky;top:16px;min-width:0}.selected-heading{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px}.selected-heading h2{font-size:13px;margin:0;color:#526175}.edit-small{font-size:11px;color:#245fc5;padding:3px 9px;border-color:#bbcee8}.selected-handle{font-size:17px;font-weight:700;color:#233e60;overflow-wrap:anywhere;margin:0}.selected-product{font-size:22px;font-weight:700;line-height:1.5;margin:7px 0 14px;overflow-wrap:anywhere}.selected-owner{display:flex;align-items:flex-start;gap:8px;line-height:1.6;font-size:13px;font-weight:600;margin-bottom:20px}.selected-owner .dot{flex-shrink:0;margin-top:6px}.selected-panel .details{grid-template-columns:48px minmax(0,1fr);gap:11px;font-size:12px}.selected-panel dd{overflow-wrap:anywhere}.selected-sales{background:#f3f6fb;border:1px solid #d0dbe9;border-radius:6px;padding:13px;margin:18px 0}.selected-sales h3{font-size:12px;color:#526175;margin:0 0 9px}.selected-sales dl{margin:0;display:grid;grid-template-columns:1fr auto;gap:8px;font-size:12px}.selected-sales dt{color:#526175}.selected-sales dd{margin:0;font-weight:700;font-size:15px;font-variant-numeric:tabular-nums}.selected-sales p{margin:10px 0 0;font-size:11px;color:#526175}.selected-source{font-size:11px;line-height:1.8;color:#526175;overflow-wrap:anywhere;border-top:1px solid #d6dfeb;padding-top:15px}.selected-source strong{display:block;color:#40516b;font-size:11px;margin-bottom:4px}.selected-review{font-size:11px;line-height:1.8;color:#805119;background:#fff7e7;border:1px solid #dac393;padding:9px;border-radius:4px;margin-top:12px}.selected-color{display:flex;align-items:center;gap:7px;margin-top:14px;font-size:11px;color:#526175}.selected-color .dot{width:12px;height:12px}
+.sales-summary{background:#fff;border:1px solid #c7d1dd;border-radius:6px;margin:0 0 17px;padding:14px 18px}.sales-summary-head{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.sales-summary-head h2{font-size:14px;margin:0}.sales-summary-head p{font-size:11px;color:#526175;margin:2px 0 0}.export-actions{display:flex;gap:6px}.export-actions button{font-size:12px;padding:5px 9px}.sales-metrics{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px;margin-top:12px}.sales-metric{padding-right:15px;border-right:1px solid #dde5ee}.sales-metric:last-child{border:0}.sales-metric label{display:block;font-size:11px;color:#526175}.sales-metric strong{font-size:22px;font-variant-numeric:tabular-nums;color:#1d3b5f}.sales-metric small{display:block;font-size:11px;color:#526175}.sales-summary details{margin-top:12px}.sales-summary summary{cursor:pointer;color:#245fc5;font-size:12px;width:fit-content}.sales-summary .sales-weekly{margin-top:10px;min-width:580px;table-layout:auto}.sales-weekly th,.sales-weekly td{padding:7px 10px;font-size:12px}.sales-weekly th{font-weight:700;background:#f1f5fa}.sales-weekly td:nth-child(n+2){text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}.export-message{color:#526175;font-size:11px;margin-top:6px;min-height:16px}.export-message:empty{display:none}.opening-item.selected{background:#eef5ff;box-shadow:inset 3px 0 0 #245fc5}.opening-sales{margin-left:auto;white-space:nowrap;font-size:12px;font-weight:600;color:#365577;flex-shrink:0}.opening-sales.missing{font-weight:400;color:#637083}.opening-week-sales{font-size:12px;color:#40516b;width:100%}
+input[type=number]{border:1px solid #d5dce5;border-radius:5px;padding:7px 10px;width:100%;color:#243044;background:#fff}.form-grid input,.form-grid select{min-width:0;width:100%}.sales-fields{grid-column:1/-1;border:1px solid #d0dbe9;border-radius:6px;padding:12px;margin:0;display:grid;grid-template-columns:1fr 1fr;gap:12px}.sales-fields legend{font-size:12px;font-weight:700;color:#243044;padding:0 5px}.sales-fields .field-hint{grid-column:1/-1;margin:0}.cancel-field{flex-direction:row!important;align-items:center!important}.cancel-field input{width:15px!important}.edit-note{font-size:11px;line-height:1.7;color:#526175;margin-top:12px}#detailDialog{width:min(550px,calc(100vw - 30px));max-height:92vh}#detailDialog .dialog-body{overflow:auto;max-height:calc(92vh - 140px)}#addDialog{width:min(550px,calc(100vw - 30px));max-height:92vh}#addDialog .dialog-body{overflow:auto;max-height:calc(92vh - 140px)}
+@media(max-width:1150px) and (min-width:701px){.layout.has-selection{grid-template-columns:265px minmax(0,1fr)}.schedule-sidebar{padding:16px 12px}.sales-metric strong{font-size:18px}.opening-item{flex-wrap:wrap}.opening-sales{margin-left:110px}}
+@media(max-width:700px){.layout.has-selection{display:block}.schedule-sidebar{padding:12px 16px}.side-tabs{margin-bottom:10px}.selected-panel{position:static;max-height:460px;overflow:auto}.selected-product{font-size:19px}.selected-panel .details{grid-template-columns:65px minmax(0,1fr)}.sales-metrics{gap:8px}.sales-metric{padding-right:7px}.sales-metric strong{font-size:17px}.sales-summary{padding:12px}.opening-item{flex-wrap:wrap}.opening-line{flex:1}.opening-sales{width:calc(100% - 92px);margin-left:92px;white-space:normal}.export-actions{flex-wrap:wrap}.selected-panel .details dd{font-size:12px}.selected-source{margin-top:10px}}
+
+@media(max-width:700px){.sales-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.sales-metric:nth-child(2){border-right:0}.sales-metric:last-child{grid-column:1/-1;border-top:1px solid #dde5ee;padding-top:8px}.sales-metric strong{display:block;overflow-wrap:anywhere}.selected-sales dd{font-size:14px}}
+
+.calendar-meta{min-height:40px;margin-bottom:10px}.calendar-meta #add{font-size:13px;padding:9px 14px;white-space:nowrap}
+.number-entry{position:relative;display:block;min-width:0}.number-entry input{padding-right:38px;text-align:right;font-variant-numeric:tabular-nums}.number-unit{position:absolute;right:12px;top:50%;transform:translateY(-50%);font-size:12px;font-weight:600;color:#526175;pointer-events:none}
+@media(max-width:480px){.sales-fields{grid-template-columns:1fr}}
+
+
+.sales-summary-controls{display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap}.sales-scope-label{display:flex;flex-direction:column;gap:3px;font-size:11px;color:#526175}.sales-scope-label select{font-size:12px;padding:5px 8px;max-width:100%}.sales-scope-note{font-size:11px;color:#526175;margin:8px 0 0;line-height:1.6}.sales-carry-note{font-size:10px;font-weight:400;color:#526175;margin-top:2px}
+@media(max-width:700px){.sales-summary-controls{width:100%;justify-content:space-between;align-items:center;gap:8px}.sales-summary-head{gap:8px}.sales-scope-label select{max-width:195px}}
+
+
+.catalog-heading{display:flex;align-items:center;justify-content:space-between;gap:8px}.catalog-heading button{font-size:11px;padding:2px 7px;color:#245fc5;border-color:#c4d2e5}.catalog-heading .filter-heading{margin:0}.filter-group .catalog-heading{margin-bottom:10px}.page-head #manageCatalog{font-size:12px;white-space:nowrap;padding:8px 12px}.check .catalog-name{min-width:0;overflow-wrap:anywhere}.owner-totals{max-width:100%}.owner-totals .owner-label{white-space:normal}.weekly-table .owner-label{white-space:normal}.legend span{overflow-wrap:anywhere;min-width:0}
+#catalogDialog{width:min(650px,calc(100vw - 30px));max-height:90vh}.catalog-body{padding:16px 22px;max-height:calc(90vh - 140px);overflow:auto}.catalog-tabs{display:flex;gap:5px;border-bottom:1px solid #d1dce9;padding-bottom:12px;margin-bottom:14px}.catalog-tabs button{padding:7px 16px;font-size:13px}.catalog-tabs button[aria-selected=true]{background:#eaf1fe;border-color:#adc7ee;color:#1859b8;font-weight:700}.catalog-intro{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.catalog-intro p{margin:0;color:#526175;font-size:12px}.catalog-intro button{font-size:12px;white-space:nowrap}.catalog-rows{display:flex;flex-direction:column;gap:10px}.catalog-row{border:1px solid #d0dbe9;border-radius:6px;padding:12px;background:#f8fafc;display:grid;grid-template-columns:minmax(0,1fr) 85px;gap:8px 14px}.catalog-row label{display:flex;flex-direction:column;gap:4px;font-size:11px;color:#526175}.catalog-row input[type=text]{width:100%;min-width:0;font-size:13px}.catalog-row input[type=color]{width:100%;height:36px}.catalog-row .catalog-usage{grid-column:1/-1;color:#526175;font-size:11px}.catalog-row.type-row{grid-template-columns:1fr}.catalog-hint{font-size:11px;line-height:1.7;color:#526175;margin:10px 0 0}.catalog-storage-error{color:#a04412!important}
+.sales-fold-head{display:flex;align-items:center;justify-content:space-between;gap:12px}.sales-fold-head h2{font-size:14px;margin:0}.sales-fold-head p{font-size:12px;line-height:1.6;color:#526175;margin:3px 0 0}.sales-fold-head button{font-size:12px;white-space:nowrap;padding:6px 10px;color:#245fc5;border-color:#bfd0e8}.sales-fold-head button span{display:inline-block;margin-left:5px}#salesSummaryBody{border-top:1px solid #dde5ee;margin-top:12px;padding-top:12px}.sales-summary.sales-collapsed{padding-top:11px;padding-bottom:11px}.sales-summary-head>div:first-child{min-width:0}
+@media(max-width:700px){.catalog-heading{display:inline-flex;gap:9px}.filter-group .catalog-heading{display:flex;justify-content:flex-start}.page-head{flex-wrap:wrap}#catalogDialog .dialog-head{padding:16px}.catalog-body{padding:14px 16px}.catalog-row{padding:10px;grid-template-columns:minmax(0,1fr) 70px}.catalog-intro{align-items:flex-start;gap:8px}.catalog-intro p{max-width:60%;line-height:1.7}.sales-fold-head{align-items:center;gap:8px}.sales-fold-head p{font-size:11px}.sales-fold-head button{padding:6px 8px}.owner-count{display:none}}
+
+/* Internal work navigation remains visible while a schedule is selected. */
+.work-navigation{margin-bottom:24px;padding-bottom:19px;border-bottom:1px solid var(--line)}
+.work-nav-title{font-size:12px;font-weight:700;color:var(--muted);margin:0 10px 10px}
+.work-nav-button{display:flex;align-items:center;gap:9px;text-align:left;width:100%;min-height:41px;border:1px solid transparent;padding:9px 10px;border-radius:5px;background:transparent;font-size:13px;color:#40516b}
+.work-nav-button:hover{background:#f0f4fa}.work-nav-button[aria-current=page]{background:#eaf1fe;border-color:#c1d2ec;color:#194fae;font-weight:700}
+.work-nav-parent{font-weight:700;font-size:14px}.work-nav-icon{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;flex:0 0 28px;line-height:1;color:var(--nav-icon-ink)}
+.work-nav-icon svg{display:block;width:28px;height:28px}
+.work-nav-icon-all{--nav-icon-ink:#245fc5;--nav-icon-fill:#e8f0ff}
+.work-nav-icon-week{--nav-icon-ink:#087a69;--nav-icon-fill:#e0f5ef}
+.work-nav-icon-month{--nav-icon-ink:#7550b4;--nav-icon-fill:#f0e8ff}
+.work-nav-icon-settlement{--nav-icon-ink:#a25a07;--nav-icon-fill:#fff1d7}
+.nav-icon-surface{fill:var(--nav-icon-fill);stroke:currentColor;stroke-width:1.65}
+.nav-icon-stroke{stroke:currentColor;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round}
+.nav-icon-number{stroke:currentColor;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+.nav-icon-solid{fill:currentColor}
+.nav-icon-display{fill:currentColor;fill-opacity:.2;stroke:currentColor;stroke-width:1.2}
+.work-nav-label{min-width:0;line-height:1.5}
+.work-nav-button{gap:10px;min-height:47px;padding:8px 10px}
+.work-nav-button[aria-current=page] .nav-icon-surface{stroke-width:2}
+
+.work-nav-children{border-left:1px solid #cbd5e1;margin:7px 0 0 17px;padding-left:10px;display:flex;flex-direction:column;gap:3px}
+.week-focus-head{display:flex;align-items:center;justify-content:space-between;gap:15px;background:#edf3fc;border:1px solid #b7c9e1;border-radius:6px;padding:16px 18px;margin:0 0 12px}
+.week-focus-head h2{font-size:19px;line-height:1.5;margin:0 0 4px;color:#193653}.week-focus-head p{font-size:12px;color:#40516b;margin:0}.week-focus-head small{font-size:11px;color:#526175}
+.week-focus-head .week-focus-date{font-weight:700}.week-focus-controls{display:flex;gap:7px;flex-shrink:0}.week-focus-controls button{padding:6px 10px;font-size:12px}
+#calendarView.week-focus .day.outside{background:#fff;color:var(--ink)}#calendarView.week-focus .day.outside.holiday{background:#fff7f7}
+#calendarView.week-focus .day-number{width:auto;min-width:30px;padding:0 3px;font-size:17px}#calendarView.week-focus .week{border:0;min-height:270px}
+#calendarView.week-focus .events{grid-auto-rows:64px;row-gap:8px}#calendarView.week-focus .event{padding:8px 10px}
+.settlement-empty{max-width:780px;background:#fff;border:1px solid #c7d1dd;border-radius:8px;padding:40px 32px;text-align:center;margin:25px auto}
+.settlement-mark{display:block;width:54px;height:54px;border-radius:10px;font-size:32px;line-height:54px;margin:0 auto 16px;background:#edf3fc;color:#245fc5}
+.settlement-status{display:inline-block;border:1px solid #ccd5e1;border-radius:4px;padding:3px 9px;background:#f5f7fa;font-size:12px;color:#526175}.settlement-empty h2{font-size:21px;margin:14px 0 10px}.settlement-empty p{font-size:13px;line-height:1.9;color:#40516b;margin:0}.settlement-empty .settlement-separation{margin:7px 0 22px;color:#526175}
+@media(max-width:700px){.work-navigation{margin-bottom:14px;padding-bottom:13px}.work-nav-title{margin-left:0}.work-nav-parent{width:auto}.work-nav-children{flex-direction:row;flex-wrap:wrap;margin-left:0;padding-left:0;border-left:0;gap:5px}.work-nav-children .work-nav-button{width:auto;padding:8px 10px}.week-focus-head{align-items:flex-start;flex-direction:column;padding:13px 14px;gap:10px}.week-focus-head h2{font-size:17px}.settlement-empty{padding:28px 18px}.settlement-empty h2{font-size:19px}}
+
+#schedulePageTitle:focus{outline:none}
+
+/* Product totals stay folded until an employee chooses to inspect them. */
+.sku-month-breakdown{margin:12px 0}
+.sales-summary .sku-month-breakdown>summary{display:flex;align-items:center;justify-content:space-between;gap:12px;color:#29405e;font-size:13px;font-weight:700;list-style:none}
+.sku-month-breakdown>summary::-webkit-details-marker{display:none}
+.sku-month-breakdown>summary>span::before{content:'▸';display:inline-block;width:18px;color:#245fc5}
+.sku-month-breakdown[open]>summary>span::before{content:'▾'}
+.sku-month-breakdown>summary small{font-size:11px;font-weight:400;color:#526175}
+.sku-month-breakdown>summary:focus-visible{outline:3px solid #8eb8ff;outline-offset:2px}
+.sku-help{font-size:11px;color:#526175;margin:6px 0 9px;line-height:1.7}
+.sku-table-scroll{overflow:auto;width:100%}
+.sku-product-table{min-width:680px;width:100%;table-layout:fixed;font-size:12px}
+.sku-product-table>thead>tr>th:first-child{width:28%}
+.sku-product-table>thead>tr>th:nth-child(2){width:11%}
+.sku-product-table>thead>tr>th:nth-child(3){width:18%}
+.sku-product-table>thead>tr>th:nth-child(4){width:19%}
+.sku-product-table>thead>tr>th:nth-child(5){width:24%}
+.sku-product-table>thead>tr>th,.sku-product-table>tbody>.sku-product-total>th,.sku-product-table>tbody>.sku-product-total>td,.sku-product-table>tfoot>tr>*{font-size:12px;padding:10px 12px;border-bottom:1px solid #d3dce8;vertical-align:middle}
+.sku-product-table>thead>tr>th{background:#eef3f9;color:#34465e;font-weight:600}
+.sku-product-table>tbody>.sku-product-total>th{background:#fff;font-weight:600}
+.sku-product-table>tbody>.sku-product-total>td{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+.sku-product-table>tbody>.sku-product-total>td:last-child{white-space:normal;font-size:11px;line-height:1.7}
+.sku-product-table>tfoot>tr>*{background:#edf3ff;color:#194fae;font-weight:700}
+.sku-product-table>tfoot>tr>td{text-align:right;font-variant-numeric:tabular-nums}
+.sku-toggle{display:flex;align-items:center;gap:6px;min-height:28px;width:100%;text-align:left;border:0;border-radius:3px;padding:0;background:transparent;color:#245fc5;font-size:12px}
+.sku-toggle:hover{background:#edf3fc}.sku-toggle:focus-visible{outline:3px solid #8eb8ff;outline-offset:2px}
+.sku-toggle-title{font-weight:700;overflow-wrap:anywhere}.sku-toggle-hint{color:#526175;font-weight:400;font-size:10px;margin-left:3px;white-space:nowrap}.sku-chevron{font-size:12px;width:11px;flex-shrink:0}
+.sales-weekly .sales-week-summary>th{padding:7px 10px}
+.sales-weekly .sales-week-summary .week-range{margin-top:2px;font-weight:400;color:#526175;font-size:11px}
+.sales-weekly .sku-week-detail>td{padding:12px 14px;background:#f7f9fc}
+.sku-week-detail h3{font-size:13px;font-weight:700;color:#29405e;margin:0 0 7px}
+.sku-week-detail .sku-help{margin:0 0 9px}
+.sku-campaign-detail>td{background:#f8fafd;padding:11px 14px!important}
+.sku-campaign-table{min-width:660px;width:100%;table-layout:fixed;text-align:left}
+.sku-campaign-table th,.sku-campaign-table td{font-size:11px;padding:8px 10px;border-bottom:1px solid #dde4ef;vertical-align:middle}
+.sku-campaign-table th{font-weight:600;background:#edf2f8}
+.sku-campaign-table th:first-child{width:15%}.sku-campaign-table th:nth-child(2){width:27%}.sku-campaign-table th:nth-child(3){width:24%}.sku-campaign-table th:nth-child(4){width:15%}.sku-campaign-table th:nth-child(5){width:19%}
+.sku-campaign-table td:nth-child(n+4){text-align:right;font-variant-numeric:tabular-nums}
+.sku-campaign-table td:nth-child(-n+3){overflow-wrap:anywhere}
+.sku-campaign-table td button.sku-schedule-button{font-size:12px;line-height:1.5;color:#245fc5;padding:3px 0;text-align:left;overflow-wrap:anywhere;white-space:normal}
+.sku-schedule-button[aria-pressed=true]{font-weight:700;text-decoration:underline}
+.sku-missing-note{display:block;color:#526175;font-size:10px;font-weight:400}
+.sku-empty{margin:0;padding:15px;color:#526175;font-size:12px}
+@media(max-width:700px){.sales-summary .sku-month-breakdown>summary{align-items:flex-start;gap:5px;flex-wrap:wrap}.sku-month-breakdown>summary small{margin-left:18px}.sales-weekly .sku-week-detail>td{padding:10px}.sku-toggle-hint{font-size:10px}}
+
+/* Match each numeric heading to its value and separate campaign counts from orders. */
+.sales-weekly>thead>tr>th:nth-child(n+2),
+.sku-product-table>thead>tr>th:nth-child(n+2),
+.sku-campaign-table>thead>tr>th:nth-child(n+4){text-align:right}
+.sales-weekly>thead>tr>*+*,
+.sales-weekly>tbody>.sales-week-summary>*+*,
+.sku-product-table>thead>tr>*+*,
+.sku-product-table>tbody>.sku-product-total>*+*,
+.sku-product-table>tfoot>tr>*+*,
+.sku-campaign-table>thead>tr>*+*,
+.sku-campaign-table>tbody>tr>*+*,
+.sku-campaign-table>tfoot>tr>*+*{border-left:1px solid #d3dce8}
+.sku-campaign-table>tbody>tr>td:nth-child(-n+3){text-align:left;font-weight:400}
+.sku-campaign-table>tfoot>tr>*{padding:8px 10px;border-bottom:1px solid #d3dce8;background:#edf3ff;color:#194fae;font-weight:700;font-size:11px}
+.sku-campaign-table>tfoot>tr>td{text-align:right;font-variant-numeric:tabular-nums}
+.sku-campaign-table>tfoot>tr>th{text-align:left}
+
+.notes-field textarea{font:inherit;width:100%;min-height:64px;resize:vertical;border:1px solid #d5dce5;border-radius:5px;background:#fff;padding:8px 10px;color:var(--ink);line-height:1.5}.notes-field textarea:focus-visible{outline:3px solid #8eb8ff;outline-offset:2px}.opening-notes:empty{display:none}#selectedDetails dd{overflow-wrap:anywhere;white-space:pre-line}
+
+.settlement-workspace{padding-bottom:24px}.settlement-workspace .page-head{align-items:center}.settlement-workspace h2{font-size:17px;margin:0 0 14px}.settlement-setup{display:grid;grid-template-columns:1.3fr 1fr;gap:18px}.settlement-step,.settlement-result,.settlement-start{border:1px solid #cbd5e1;background:#fff;border-radius:7px;padding:22px}.settlement-step-number{display:inline-grid;place-items:center;width:23px;height:23px;background:#e8f0ff;border-radius:50%;color:#1d4ed8;font-size:13px;margin-right:6px}.settlement-help{font-size:12px;line-height:1.7;color:#526175;margin:9px 0 0}.settlement-file-name{font-size:12px;margin:12px 0 0;overflow-wrap:anywhere;color:#334155}.settlement-message{font-size:13px;line-height:1.7;margin:12px 0;min-height:20px}.settlement-message.error{color:#b91c1c}.settlement-start{text-align:center;padding:42px 22px;color:#64748b}.settlement-start h2{margin:15px 0 8px;color:#334155}.settlement-start p{font-size:13px}.settlement-result-head{display:flex;align-items:flex-start;justify-content:space-between;gap:15px;margin-bottom:18px}.settlement-result-head h2{margin-bottom:0}.settlement-campaign-label{display:flex;align-items:center;gap:14px;font-size:12px;font-weight:600;margin-bottom:20px}.settlement-campaign-label input{max-width:500px;font-weight:400}.settlement-kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:0 0 22px}.settlement-kpis>div{padding:15px 17px;background:#f3f6fa;border-radius:5px;border:1px solid #e1e7ef}.settlement-kpis span{font-size:12px;color:#526175;display:block}.settlement-kpis strong{font-size:23px;display:block;margin-top:8px;overflow-wrap:anywhere}.settlement-kpis .settlement-payment{background:#edf4ff;border-color:#b7cef4;color:#164bb4}.settlement-calculation-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(230px,1fr);gap:20px}.settlement-calculation{width:100%;font-size:13px;border-collapse:collapse}.settlement-calculation caption{text-align:left;font-size:14px;font-weight:700;padding:0 0 10px}.settlement-calculation th,.settlement-calculation td{padding:12px;border-bottom:1px solid #d7e1ed}.settlement-calculation thead{background:#edf2f8}.settlement-calculation th{text-align:left}.settlement-calculation td{text-align:right;white-space:nowrap}.settlement-calculation thead th:not(:first-child){text-align:right}.settlement-rate-badge{display:inline-block;padding:2px 7px;margin-left:3px;background:#eaf1ff;color:#1d4ed8;font-size:11px;border-radius:3px}.settlement-final-row{background:#edf4ff;font-weight:700;color:#164bb4}.settlement-tax-panel{align-self:start;background:#f7faff;border:1px solid #c3d3e9;padding:18px;border-radius:5px;font-size:13px}.settlement-tax-panel h3{margin:0 0 16px;font-size:14px}.settlement-tax-panel h3 span{float:right;font-size:11px;color:#1d4ed8}.settlement-tax-panel dl{display:grid;grid-template-columns:1fr auto;gap:14px;margin:0}.settlement-tax-panel dd{margin:0;font-weight:600}.settlement-tax-panel p{margin:18px 0 0;line-height:1.7;font-size:12px;color:#526175}.settlement-tax-panel.is-disabled,#settleTaxTotalRow.is-disabled{background:#e9ecef;color:#6b7280;border-color:#d1d5db}.settlement-tax-panel.is-disabled h3 span,.settlement-tax-panel.is-disabled p{color:#6b7280}.settlement-tax-panel.is-disabled dd{font-weight:400}.settlement-export{display:flex;justify-content:space-between;align-items:center;gap:16px;background:#f8fafc;border:1px solid #dbe4ef;border-radius:5px;padding:16px;margin-top:23px;font-size:13px}.settlement-export p{margin-top:3px}.settlement-orders{margin-top:23px;font-size:12px}.settlement-orders summary{cursor:pointer;color:#1d4ed8;padding:8px 0}.settlement-orders summary span{color:#526175;margin-left:5px}.settlement-source-table{max-height:380px;overflow:auto;margin-top:9px;border:1px solid #dbe4ef}.settlement-source-table table{width:100%;min-width:1100px;border-collapse:collapse}.settlement-source-table th{background:#edf2f8;position:sticky;top:0;z-index:1;text-align:left;white-space:nowrap;padding:10px}.settlement-source-table td{padding:10px;border-bottom:1px solid #e1e7ef;vertical-align:top}.settlement-source-table td:nth-child(3){min-width:300px;max-width:500px}.settlement-source-table td:nth-child(4),.settlement-source-table td:nth-child(5){text-align:right;white-space:nowrap}.settlement-source-table tr.excluded{color:#a63737;background:#fff6f6}.settlement-rate-dialog{position:fixed;inset:auto 28px 28px auto;margin:0;width:min(410px,calc(100vw - 32px));padding:22px;border:1px solid #c3d3e9;border-radius:9px;box-shadow:0 12px 50px #142c5133}.settlement-rate-dialog::backdrop{background:#15263d22}.settlement-rate-dialog-head{display:flex;align-items:center;justify-content:space-between;gap:8px}.settlement-rate-dialog-head h2{font-size:17px;margin:0}.settlement-rate-dialog-head button{border:0;padding:3px 9px;font-size:22px}.settlement-rate-dialog>p{font-size:12px;color:#526175;line-height:1.7;margin:13px 0}.settlement-rate-choices{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;border:0;margin:15px 0 22px;padding:0}.settlement-rate-choices label{position:relative;display:block;cursor:pointer}.settlement-rate-choices input{position:absolute;opacity:0;width:1px;height:1px}.settlement-rate-choices span{display:block;text-align:center;border:2px solid #d5dfec;padding:14px 3px;border-radius:5px;font-size:19px;font-weight:700}.settlement-rate-choices input:checked+span{background:#edf4ff;border-color:#2563eb;color:#1d4ed8}.settlement-rate-choices input:focus-visible+span{outline:3px solid #93c5fd;outline-offset:2px}.settlement-rate-dialog-actions{display:flex;justify-content:flex-end;gap:9px}.settlement-rate-dialog .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+@media(max-width:1000px){.settlement-kpis{grid-template-columns:repeat(2,1fr)}.settlement-calculation-grid{grid-template-columns:1fr}.settlement-setup{grid-template-columns:1fr}.settlement-step{padding:18px}}@media(max-width:600px){.settlement-result{padding:16px}.settlement-kpis{gap:8px}.settlement-kpis>div{padding:12px}.settlement-kpis strong{font-size:19px}.settlement-export{align-items:stretch;flex-direction:column}.settlement-calculation th,.settlement-calculation td{padding:10px 5px;font-size:12px}.settlement-campaign-label{align-items:flex-start;flex-direction:column;gap:7px}.settlement-campaign-label input{width:100%;max-width:none}.settlement-rate-dialog{inset:auto 16px 16px 16px;margin:0 auto}.settlement-result-head{align-items:center}}
+
+.settlement-calculation{min-width:0}.settlement-calculation-grid>*{min-width:0}.settlement-workspace button:disabled{opacity:.5;cursor:not-allowed}.settlement-campaign-label input{width:min(500px,100%)}
+/* Centered Excel drop area and import options. */
+.settlement-setup{grid-template-columns:minmax(0,1fr);max-width:960px;margin:0 auto}
+.settlement-upload-step{padding:20px}
+.settlement-drop-zone{border:2px dashed #9cb9dd;border-radius:10px;padding:32px 20px;text-align:center;background:#f7faff;color:#245fc5;transition:background .15s,border-color .15s,box-shadow .15s}
+.settlement-drop-zone>svg{display:block;margin:0 auto 12px}
+.settlement-drop-zone h3{font-size:19px;color:#1e3a5f;margin:0 0 9px}
+.settlement-drop-zone>p:not(.settlement-drop-status){color:#526175;font-size:13px;line-height:1.7;margin:0 0 18px}
+.settlement-drop-zone .primary{padding:10px 20px}
+.settlement-drop-format{display:block;font-size:11px;color:#64748b;margin-top:12px}
+.settlement-drop-status{margin:10px 0 0;font-size:12px;line-height:1.7;color:#526175;overflow-wrap:anywhere}
+.settlement-drop-status.error{color:#b91c1c;font-weight:600}
+.settlement-drop-zone.is-dragging{border-color:#245fc5;background:#e6efff;box-shadow:0 0 0 4px #dce9ff}
+.settlement-drop-zone.is-busy{opacity:.65}
+#settleRateDialog{position:fixed;inset:0;margin:auto;width:min(480px,calc(100vw - 32px));height:fit-content;max-height:calc(100dvh - 32px);overflow:auto;padding:24px;animation:settlement-rate-enter .18s ease-out}
+#settleRateDialog::backdrop{background:#17283b80}
+#settleRateDialog .settlement-rate-dialog-head h2{font-size:19px}
+#settleRateDialog .settlement-rate-file{padding:10px 12px;background:#f1f5fa;border:1px solid #d8e1ee;border-radius:5px;color:#243e5f;font-size:13px;font-weight:600;overflow-wrap:anywhere}
+.settlement-rate-recipient{display:grid;grid-template-columns:1fr 1fr;gap:10px;border:0;padding:0;margin:18px 0}
+.settlement-rate-recipient legend,.settlement-rate-label{color:#40516a;font-size:12px;font-weight:700;padding:0;margin:0 0 9px}
+.settlement-rate-recipient label{cursor:pointer;position:relative}
+.settlement-rate-recipient input{position:absolute;opacity:0;width:1px;height:1px}
+.settlement-rate-recipient span{display:block;border:2px solid #d5dfec;border-radius:5px;text-align:center;padding:11px 5px}
+.settlement-rate-recipient strong{display:block;font-size:14px}
+.settlement-rate-recipient small{display:block;font-size:11px;margin-top:3px;color:#526175}
+.settlement-rate-recipient input:checked+span{border-color:#245fc5;background:#edf4ff;color:#1d4ed8}
+.settlement-rate-recipient input:focus-visible+span{outline:3px solid #93c5fd;outline-offset:2px}
+#settleRateDialog .settlement-rate-choices{margin-top:0}
+#settleRateDialog .settlement-rate-choices span{font-size:24px;padding:18px 3px}
+#settleRateDialog .settlement-rate-dialog-actions{padding-top:14px;border-top:1px solid #dbe3ed}
+@keyframes settlement-rate-enter{from{opacity:0;transform:translateY(10px) scale(.98)}to{opacity:1;transform:none}}
+@media(max-width:600px){.settlement-upload-step{padding:15px}.settlement-drop-zone{padding:26px 14px}.settlement-drop-zone h3{font-size:17px}#settleRateDialog{inset:0;margin:auto;padding:20px;width:calc(100vw - 24px);max-height:calc(100dvh - 24px)}#settleRateDialog .settlement-rate-dialog-head h2{font-size:17px}.settlement-rate-dialog-actions button{font-size:12px}}
+@media(prefers-reduced-motion:reduce){#settleRateDialog{animation:none}.settlement-drop-zone{transition:none}}
+
+.settlement-type-explanation{padding:18px 20px;background:#f6f8fc;border:1px solid #dbe4ee;border-left:4px solid #7c96b7;border-radius:5px;cursor:default}
+.settlement-type-guide-title{display:flex;align-items:center;gap:8px;margin:0;color:#203b59;font-size:15px;line-height:1.6}
+.settlement-type-guide-title svg{flex:none}
+.settlement-type-guide-intro{margin:7px 0 15px;font-size:13px;line-height:1.7;color:#526175}
+.settlement-type-reference{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0}
+.settlement-type-reference>div{padding:0 0 0 12px;border-left:2px solid #d4dfeb}
+.settlement-type-reference dt{font-size:13px;font-weight:700;color:#334155}
+.settlement-type-reference dd{margin:5px 0 0;font-size:12px;line-height:1.7;color:#526175}
+.settlement-type-guide .settlement-help{margin-top:15px;padding-top:12px;border-top:1px solid #dbe4ee}
+@media(max-width:600px){.settlement-type-explanation{padding:15px}.settlement-type-reference{grid-template-columns:1fr;gap:12px}.settlement-type-guide-title{font-size:14px}}
+
+
+.settlement-calendar-link{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin:-7px 0 22px}.settlement-calendar-link>p{width:100%;margin:0}.settlement-calendar-link button{display:inline-flex;gap:7px;align-items:center;font-size:13px}.settlement-calendar-link button[hidden]{display:none}.settlement-calendar-link button.is-applied:disabled{background:#ecfdf5;color:#166534;border-color:#86c9a3;opacity:1;cursor:default}.settlement-calendar-link .just-applied{animation:settlement-applied-pulse .85s ease-in-out 2}@keyframes settlement-applied-pulse{0%,100%{box-shadow:0 0 0 0 #22a46800;transform:scale(1)}50%{box-shadow:0 0 0 6px #22a46822;transform:scale(1.025)}}
+.settlement-calendar-dialog{width:min(970px,calc(100vw - 40px));max-height:90vh;padding:22px;border:1px solid #bacbe0;border-radius:9px;box-sizing:border-box;color:#193653;box-shadow:0 16px 55px #10223a33;overflow:auto}.settlement-calendar-dialog::backdrop{background:#17263f66}.settlement-calendar-dialog-head{display:flex;justify-content:space-between;align-items:flex-start;gap:14px}.settlement-calendar-dialog h2{font-size:19px;margin:0}.settlement-calendar-dialog-head p{margin:6px 0 0;color:#526175;font-size:12px}.settlement-calendar-dialog-head>button{font-size:22px;padding:0 9px;flex-shrink:0}.settlement-link-values{display:flex;gap:20px;flex-wrap:wrap;background:#eff6ff;border:1px solid #c8dbf5;border-radius:5px;padding:13px 16px;margin-top:18px;font-size:13px}.settlement-link-values strong{margin-left:6px;color:#164bb4;font-size:18px}.settlement-link-campaign{font-size:12px;color:#526175;overflow-wrap:anywhere;margin:10px 0}.settlement-link-error{font-size:12px;line-height:1.6;color:#b91c1c;margin:7px 0}.settlement-link-error:empty{display:none}.settlement-mini-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;margin:16px 0 0}.settlement-mini-month{display:flex;align-items:center;gap:6px}.settlement-mini-month input{font-size:15px;font-weight:700;width:162px;min-width:0}.settlement-mini-month button{font-size:20px;padding:3px 12px}.settlement-mini-toolbar>input{width:245px;max-width:100%;font-size:12px}.settlement-mini-scroll{overflow:auto;margin-top:11px;border:1px solid #cedaeb;border-radius:5px}.settlement-mini-calendar{min-width:560px}.settlement-mini-weekdays,.settlement-mini-days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr))}.settlement-mini-weekdays{background:#edf2f8;font-size:12px;text-align:center;padding:9px 0}.settlement-mini-week{border-top:1px solid #cedaeb;padding-bottom:8px;background:linear-gradient(90deg,#f8fafc 14.285%,#fff 14.285%,#fff 85.715%,#f8fafc 85.715%)}.settlement-mini-days>div{min-height:34px;border-right:1px solid #e4eaf3;padding:7px 8px;font-size:12px;box-sizing:border-box}.settlement-mini-days>div:last-child{border-right:0}.settlement-mini-days small{display:block;font-size:9px;margin-top:3px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.settlement-mini-calendar .sunday,.settlement-mini-calendar .holiday{color:#c62828}.settlement-mini-calendar .saturday{color:#2769c4}.settlement-mini-days .outside{opacity:.4}.settlement-mini-events{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px 2px;padding:1px 3px;min-height:36px}.settlement-mini-event{padding:5px 6px;text-align:left;min-width:0;overflow:hidden;border:1px solid #ccd8e7;border-left:4px solid var(--schedule-color);border-radius:4px;background:#fff;color:#243954;font-size:11px}.settlement-mini-event strong,.settlement-mini-event small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.settlement-mini-event small{font-size:9px;color:#526175;margin-top:3px}.settlement-mini-event.matched{background:#eff6ff;outline:1px solid #2563eb;outline-offset:-1px}.settlement-mini-event:hover,.settlement-mini-event:focus-visible{background:#dfeeff;border-color:#2563eb;outline:2px solid #2563eb;outline-offset:0}.settlement-calendar-dialog h3{font-size:18px;line-height:1.6;margin:24px 0 14px}.settlement-link-target{display:flex;flex-direction:column;gap:7px;padding:17px;background:#f3f6fa;border:1px solid #d9e3ef;border-radius:5px}.settlement-link-target strong{font-size:16px}.settlement-link-target span{font-size:12px;color:#526175}.settlement-link-comparison{width:100%;min-width:0;border-collapse:collapse;table-layout:fixed;font-size:14px;margin:24px 0}.settlement-link-comparison th,.settlement-link-comparison td{padding:13px 12px;border-bottom:1px solid #d5dfed;text-align:right;overflow-wrap:anywhere;line-height:1.6}.settlement-link-comparison thead th{font-size:12px;background:#edf2f8;color:#526175}.settlement-link-comparison th:first-child{text-align:left;width:22%}.settlement-link-comparison tbody th{font-size:13px;font-weight:500}.settlement-link-comparison td:first-of-type{color:#64748b}.settlement-link-comparison th:last-child,.settlement-link-comparison td:last-child{background:#eff6ff}.settlement-link-comparison strong{color:#164bb4}.settlement-calendar-dialog #settleCalendarConfirm>p{font-size:12px;line-height:1.7;color:#526175}.settlement-link-confirm-actions{display:flex;justify-content:flex-end;gap:9px;margin-top:22px}.settlement-calendar-dialog [hidden]{display:none!important}
+@media(max-width:600px){.settlement-calendar-dialog{width:calc(100vw - 22px);max-height:92vh;padding:15px}.settlement-mini-toolbar{align-items:stretch;flex-direction:column;gap:9px}.settlement-mini-toolbar>input{width:100%;box-sizing:border-box}.settlement-link-values{gap:10px;padding:11px}.settlement-link-values strong{font-size:17px}.settlement-link-comparison{font-size:12px}.settlement-link-comparison th,.settlement-link-comparison td{padding:10px 5px}.settlement-link-comparison thead th{font-size:11px}.settlement-link-comparison th:first-child{width:18%}.settlement-calendar-link>button{max-width:100%}}
+@media(prefers-reduced-motion:reduce){.settlement-calendar-link .just-applied{animation:none}}
+
+.settlement-mini-scroll{max-height:min(53vh,520px)}.settlement-mini-weekdays{position:sticky;top:0;z-index:1}
+
+.settlement-mini-calendar .holiday{color:#c62828}
+
+/* Original schedule CSV stays separate from calendar records. */
+.schedule-header-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap}.schedule-header-actions button{white-space:nowrap}.schedule-header-actions #openScheduleCsv{display:inline-flex;align-items:center;gap:7px;color:#1857b6;border-color:#abc5ec;background:#f4f8ff}.schedule-header-actions #openScheduleCsv:hover{background:#e8f1ff}
+#scheduleCsvDialog{width:min(1080px,calc(100vw - 40px));max-height:92vh;padding:0;border:1px solid #c1cee0;border-radius:8px;color:#233650;box-shadow:0 16px 55px #13243d40;overflow:auto;box-sizing:border-box}#scheduleCsvDialog::backdrop{background:#17263f66}#scheduleCsvDialog .dialog-head{padding:20px 24px;align-items:flex-start;gap:15px}#scheduleCsvTitle{font-size:19px;margin:0}#scheduleCsvIntro{font-size:12px;color:#526175;margin:7px 0 0;line-height:1.6}#closeScheduleCsv{font-size:20px;padding:2px 10px;flex-shrink:0}.schedule-csv-body{padding:22px 24px}.schedule-csv-drop{display:flex;align-items:center;gap:16px;padding:22px;border:1px dashed #8daed8;border-radius:7px;background:#f7faff}.schedule-csv-drop>svg{color:#2e65b2;flex-shrink:0}.schedule-csv-drop>div{flex:1;min-width:0}.schedule-csv-drop strong{font-size:15px}.schedule-csv-drop p{font-size:12px;color:#526175;margin:7px 0 0;line-height:1.6}.schedule-csv-drop button{white-space:nowrap}.schedule-csv-drop.is-dragging{border:2px solid #2563eb;background:#eaf2ff;padding:21px}.schedule-csv-options{display:flex;align-items:flex-end;gap:14px;margin-top:18px;flex-wrap:wrap}.schedule-csv-options label{display:flex;flex-direction:column;gap:6px;font-size:12px}.schedule-csv-options select{min-width:170px;font-size:12px}.schedule-csv-options>span{font-size:11px;color:#526175;margin:0 0 8px}.schedule-csv-message{font-size:12px;line-height:1.7;color:#235cb2;margin:14px 0 0}.schedule-csv-error{font-size:12px;line-height:1.7;color:#b42332;margin:10px 0 0;white-space:pre-wrap}.schedule-csv-message:empty,.schedule-csv-error:empty{display:none}.schedule-csv-file{display:flex;justify-content:space-between;gap:15px;align-items:center;margin-top:20px;padding-top:19px;border-top:1px solid #dce4ef}.schedule-csv-file>div{display:flex;flex-direction:column;gap:6px;min-width:0}.schedule-csv-file strong{font-size:14px;overflow-wrap:anywhere}.schedule-csv-file span{font-size:11px;color:#64748b}.schedule-csv-file button{flex-shrink:0;font-size:12px}.schedule-csv-stats{display:grid;grid-template-columns:1fr 1fr 1.4fr;gap:10px;margin-top:16px}.schedule-csv-stats>div{padding:13px 15px;border:1px solid #dce5f1;background:#f5f8fc;border-radius:5px;min-width:0}.schedule-csv-stats span{display:block;font-size:11px;color:#526175}.schedule-csv-stats strong{display:block;font-size:21px;color:#1b4f9c;margin-top:7px;overflow-wrap:anywhere}.schedule-csv-stats>div:last-child strong{font-size:14px;line-height:1.8}.schedule-csv-preview-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:20px}.schedule-csv-preview-head h3{font-size:14px;margin:0}.schedule-csv-preview-head p{font-size:11px;color:#526175;margin:0}.schedule-csv-table-wrap{max-height:350px;overflow:auto;margin-top:10px;border:1px solid #cfdaea;border-radius:5px}.schedule-csv-table{width:100%;min-width:660px;border-collapse:collapse;font-size:12px;table-layout:auto}.schedule-csv-table th,.schedule-csv-table td{padding:10px 12px;border-bottom:1px solid #dce4ef;text-align:left;min-width:115px;max-width:260px;vertical-align:top;overflow-wrap:anywhere;white-space:pre-wrap;line-height:1.65}.schedule-csv-table th{position:sticky;top:0;background:#edf3fb;color:#29486f;font-weight:600;z-index:1}.schedule-csv-table th:first-child,.schedule-csv-table td:first-child{min-width:48px;width:48px;color:#64748b}.schedule-csv-table td>span{display:block;max-width:240px;max-height:110px;overflow:auto}.schedule-csv-table tbody tr:nth-child(even){background:#f9fbfe}.schedule-csv-table tr.has-width-warning{background:#fffbeb}.schedule-csv-warning{font-size:12px;line-height:1.7;background:#fffbeb;border:1px solid #f1d38b;border-radius:5px;padding:10px 12px;margin:14px 0 0;color:#8a5a08}.schedule-csv-empty{padding:35px 20px;text-align:center;color:#64748b;font-size:12px;border:1px solid #e0e7f0;border-radius:5px;margin-top:20px;line-height:1.8;background:#fbfcfe}.schedule-csv-note{font-size:11px;line-height:1.8;color:#526175;margin:16px 0 0}.schedule-csv-foot{padding:15px 24px;gap:16px;justify-content:space-between;align-items:center}.schedule-csv-foot>span{font-size:11px;color:#64748b;line-height:1.7}#scheduleCsvDialog [hidden]{display:none!important}
+@media(max-width:700px){.schedule-header-actions{justify-content:flex-start;width:100%}.schedule-header-actions button{font-size:12px;padding:7px 10px}#scheduleCsvDialog{width:calc(100vw - 20px);max-height:94vh}#scheduleCsvDialog .dialog-head{padding:17px 16px}.schedule-csv-body{padding:17px 16px}.schedule-csv-drop{flex-wrap:wrap;padding:17px;gap:12px}.schedule-csv-drop.is-dragging{padding:16px}.schedule-csv-drop>div{min-width:160px}.schedule-csv-drop button{width:100%}.schedule-csv-options{display:grid;grid-template-columns:1fr 1fr;gap:10px}.schedule-csv-options label{min-width:0}.schedule-csv-options select{min-width:0;width:100%}.schedule-csv-options>span{grid-column:1/-1;margin:0;line-height:1.7}.schedule-csv-stats{grid-template-columns:1fr 1fr}.schedule-csv-stats>div:last-child{grid-column:1/-1}.schedule-csv-foot{padding:14px 16px}.schedule-csv-foot>span{max-width:75%}.schedule-csv-preview-head{gap:7px}}
+
+.schedule-csv-apply{padding:16px;border:1px solid #bed0f3;border-radius:6px;background:#f4f7fe;margin-top:16px}.schedule-csv-apply h3{font-size:14px;margin:0 0 10px}.schedule-csv-apply p{font-size:12px;line-height:1.7;margin:8px 0}.schedule-csv-apply strong{font-size:14px}
+
+.groupbuy-count{display:inline-flex;align-items:center;justify-content:center;gap:5px;min-width:54px;padding:4px 7px;border:1px solid transparent;background:transparent;color:#245fc5;font-size:12px;font-weight:700;white-space:nowrap}.groupbuy-count:hover{background:#edf3ff;border-color:#bdcef0}.groupbuy-count.is-active{background:#e4edff;border-color:#7da6ec}.groupbuy-count:focus-visible,.groupbuy-schedule-button:focus-visible{outline:2px solid #245fc5;outline-offset:2px}.groupbuy-count-arrow{font-size:10px}.groupbuy-week-detail{margin-top:12px;border:1px solid #c5d4eb;border-radius:6px;background:#fff;overflow:hidden}.groupbuy-detail-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;padding:12px 14px;background:#f0f5fd}.groupbuy-detail-head h3{font-size:13px;margin:0;line-height:1.6}.groupbuy-detail-head p{font-size:11px;line-height:1.6;color:#526175;margin:3px 0 0}.groupbuy-detail-head button{padding:3px 9px;font-size:11px;white-space:nowrap}.groupbuy-detail-items{list-style:none;margin:0;padding:0;max-height:330px;overflow:auto}.groupbuy-detail-items li+li{border-top:1px solid #e0e7f1}.groupbuy-schedule-button{width:100%;border:0;border-radius:0;padding:11px 14px;background:#fff;text-align:left;display:flex;align-items:flex-start;gap:10px;line-height:1.7;color:#23324a;font-size:12px}.groupbuy-schedule-button:hover,.groupbuy-schedule-button.selected{background:#edf3ff}.groupbuy-detail-date{white-space:nowrap;font-variant-numeric:tabular-nums;font-weight:700;flex:none}.groupbuy-detail-text{min-width:0;overflow-wrap:anywhere}.groupbuy-detail-owner{display:block;font-size:11px;color:#526175}.groupbuy-detail-accent{width:4px;min-height:32px;flex:none;border-radius:2px;margin-top:3px;background:var(--groupbuy-color)}@media(max-width:700px){.groupbuy-detail-head{padding:10px}.groupbuy-schedule-button{padding:10px;gap:8px}.groupbuy-detail-date{font-size:11px}}
+
+.weekly-panel.groupbuy-disclosure{padding:0;align-self:start;border:1px solid #b9cdeb;overflow:hidden}
+.groupbuy-disclosure-toggle{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:54px;padding:12px 16px;cursor:pointer;list-style:none;background:#eef4ff;color:#173f75}
+.groupbuy-disclosure-toggle::-webkit-details-marker{display:none}
+.groupbuy-disclosure-toggle::marker{content:''}
+.groupbuy-disclosure-toggle:focus-visible{outline:3px solid #245fc5;outline-offset:-3px}
+.groupbuy-disclosure-title{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:700;line-height:1.6}
+.groupbuy-disclosure-title svg{flex:none;transition:transform .15s ease}
+.groupbuy-disclosure-status{flex:none;padding:5px 10px;border-radius:4px;background:#245fc5;color:#fff;font-size:12px;font-weight:700;white-space:nowrap}
+.groupbuy-when-open{display:none}
+.groupbuy-disclosure[open] .groupbuy-when-closed{display:none}
+.groupbuy-disclosure[open] .groupbuy-when-open{display:inline}
+.groupbuy-disclosure[open] .groupbuy-disclosure-title svg{transform:rotate(90deg)}
+.groupbuy-disclosure[open] .groupbuy-disclosure-status{background:#dfe9f7;color:#214c85}
+.groupbuy-disclosure-content{padding:12px 16px 14px;border-top:1px solid #c9d9ef}
+.groupbuy-table-period{margin:0 0 9px;color:#526175;font-size:11px}
+.groupbuy-detail-actions{display:flex;align-items:center;gap:7px;flex:none}
+.groupbuy-detail-head .groupbuy-copy-button{border-color:#245fc5;background:#245fc5;color:#fff;font-weight:700}
+.groupbuy-detail-head .groupbuy-copy-button.is-copied{border-color:#23744d;background:#23744d}
+@media(max-width:700px){.groupbuy-disclosure-toggle{padding:11px 12px;gap:8px}.groupbuy-disclosure-title{font-size:13px;gap:6px}.groupbuy-disclosure-status{padding:5px 7px;font-size:11px}.groupbuy-disclosure-content{padding:10px}.groupbuy-detail-head{flex-wrap:wrap}.groupbuy-detail-actions{margin-left:auto}}
+@media(prefers-reduced-motion:reduce){.groupbuy-disclosure-title svg{transition:none}}
+
+/* Schedule popup feedback */
+.side-tabs{display:none}
+#detailDialog,#addDialog{width:min(640px,calc(100vw - 32px));max-height:calc(100dvh - 32px);overflow:hidden;border:1px solid #ccd8e8}
+#detailDialog[open]{display:flex;flex-direction:column}
+#addForm{display:flex;flex-direction:column;max-height:calc(100dvh - 32px)}
+#detailDialog .dialog-head,#addDialog .dialog-head,#detailDialog .dialog-foot,#addDialog .dialog-foot{flex-shrink:0;background:#fff}
+#detailDialog .dialog-head{align-items:flex-start;gap:12px}
+#detailDialog .dialog-body,#addDialog .dialog-body{flex:1 1 auto;min-height:0;max-height:none;overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable}
+#detailDialog .dialog-foot,#addDialog .dialog-foot{border-top:1px solid #c7d1dd;box-shadow:0 -4px 16px #233e6008}
+#detailDialog .dialog-foot .primary,#addDialog .dialog-foot .primary{min-width:108px}
+.popup-editor-heading h2{font-size:18px;margin:0 0 4px}
+.popup-editor-hint{font-size:12px;line-height:1.6;color:#526175;margin:0}
+#detailTitle{font-size:17px!important;color:#1d3b5f;overflow-wrap:anywhere}
+#detailDialog[open],#addDialog[open]{animation:schedule-popup-in .18s ease-out}
+#detailDialog[open]::backdrop,#addDialog[open]::backdrop{background:#17283b80;animation:schedule-backdrop-in .16s ease-out}
+@keyframes schedule-popup-in{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
+@keyframes schedule-backdrop-in{from{opacity:0}to{opacity:1}}
+.schedule-toast{position:fixed;right:24px;bottom:24px;z-index:1000;display:flex;align-items:flex-start;gap:12px;width:min(480px,calc(100vw - 32px));max-height:calc(100dvh - 32px);overflow:auto;background:#163b36;color:#fff;border:1px solid #2d685e;border-radius:10px;padding:16px;box-shadow:0 10px 32px #132e3e33;animation:schedule-toast-in .2s ease-out}
+.schedule-toast-icon{display:flex;align-items:center;justify-content:center;flex:0 0 26px;width:26px;height:26px;border-radius:50%;background:#cbf6e8;color:#145644}
+.schedule-toast-icon svg{width:17px;height:17px}
+.schedule-toast-copy{flex:1;min-width:0}.schedule-toast-copy strong{display:block;font-size:14px;line-height:1.6}.schedule-toast-copy p{font-size:13px;line-height:1.7;margin:3px 0 0;color:#effbf7;overflow-wrap:anywhere;white-space:pre-line}
+.schedule-toast button{padding:0;width:26px;height:26px;flex:0 0 26px;line-height:23px;font-size:20px;border:0;color:#fff;background:transparent}
+.schedule-toast button:hover{background:#ffffff20}.schedule-toast button:focus-visible{outline:3px solid #b5f4df;outline-offset:2px}
+@keyframes schedule-toast-in{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@media(max-width:700px){#detailDialog,#addDialog{width:calc(100vw - 20px);max-height:calc(100dvh - 20px)}#addForm{max-height:calc(100dvh - 20px)}#detailDialog .dialog-head,#addDialog .dialog-head{padding:15px 16px}.popup-editor-hint{font-size:11px}#detailDialog .dialog-body,#addDialog .dialog-body{padding:16px}.schedule-toast{right:16px;bottom:16px;padding:14px;gap:9px}}
+@media(prefers-reduced-motion:reduce){#detailDialog[open],#addDialog[open],#detailDialog[open]::backdrop,#addDialog[open]::backdrop,.schedule-toast{animation:none}}
+
+.developer-csv-empty{padding:16px 18px;margin:0 0 18px;border:1px solid #a9c5eb;border-left:4px solid #245fc5;border-radius:6px;background:#eef5ff;color:#21416b}.developer-csv-empty strong{font-size:14px}.developer-csv-empty p{font-size:12px;line-height:1.7;margin:5px 0 0}
+</style>
+</head>
+<body>
+<header><div class="brand"><span class="mark" aria-hidden="true">▦</span>사내 일정 관리</div><div class="topmeta"><span class="badge">마케팅팀</span><span>공통 업무 캘린더</span></div></header>
+<div class="layout">
+<aside aria-label="업무 관리와 일정 정보" class="schedule-sidebar"><nav class="work-navigation" aria-label="업무 관리">
+ <p class="work-nav-title">업무 관리</p>
+ <button id="navAll" type="button" class="work-nav-button work-nav-parent" data-work-view="all" title="전체일정: 모든 담당자의 일정을 확인합니다." aria-current="page"><span class="work-nav-icon work-nav-icon-all" aria-hidden="true"><svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" focusable="false"><rect x="3.5" y="4.5" width="21" height="19" rx="3" class="nav-icon-surface"/><path d="M4 10h20" class="nav-icon-stroke"/><circle cx="7.5" cy="7.5" r="1" class="nav-icon-solid"/><circle cx="11" cy="7.5" r="1" class="nav-icon-solid"/><rect x="7" y="13.5" width="5" height="6.5" rx="1.3" class="nav-icon-solid"/><path d="M15.5 14.5h5M15.5 19h5" class="nav-icon-stroke"/></svg></span><span class="work-nav-label">전체일정</span></button>
+ <div class="work-nav-children">
+  <button id="navWeek" type="button" class="work-nav-button" data-work-view="week" title="주차 일정: 한 주의 일정과 공동구매 오픈 일정을 확인합니다."><span class="work-nav-icon work-nav-icon-week" aria-hidden="true"><svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" focusable="false"><rect x="4" y="5.5" width="20" height="18.5" rx="3" class="nav-icon-surface"/><path d="M4.5 10.5h19M9 3.5v4M19 3.5v4" class="nav-icon-stroke"/><path d="M10.5 14h7l-5 7" class="nav-icon-number"/></svg></span><span class="work-nav-label">주차 일정</span></button>
+  <button id="navSettlement" type="button" class="work-nav-button" data-work-view="settlement" title="공구정산: 공동구매 정산을 별도로 관리하는 공간입니다."><span class="work-nav-icon work-nav-icon-settlement" aria-hidden="true"><svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" focusable="false"><rect x="6" y="3.5" width="16" height="21" rx="3" class="nav-icon-surface"/><rect x="9" y="7" width="10" height="4" rx="1" class="nav-icon-display"/><path d="M9.5 15h3M11 13.5v3M16 15h3M9.5 20h3M16 19h3M16 21h3" class="nav-icon-stroke"/></svg></span><span class="work-nav-label">공구정산</span></button>
+ </div>
+</nav>
+<div id="scheduleSideContent"><div class="side-tabs" role="tablist" aria-label="일정 정보와 필터"><button id="selectedTab" role="tab" aria-controls="selectedPanel" aria-selected="false" disabled>선택 일정</button><button id="filterTab" role="tab" aria-controls="filterPanel" aria-selected="true">필터</button><button id="closeSelection" aria-label="선택 일정 닫기" hidden>×</button></div><section id="selectedPanel" class="selected-panel" role="tabpanel" aria-labelledby="selectedTab" hidden><div class="selected-heading"><h2>선택한 일정</h2><button class="edit-small" id="editSelected">편집</button></div><p id="selectedHandle" class="selected-handle"></p><h3 id="selectedProduct" class="selected-product"></h3><div class="selected-owner"><i id="selectedOwnerDot" class="dot"></i><span id="selectedOwner"></span></div><dl class="details" id="selectedDetails"></dl><section class="selected-sales"><h3>매출</h3><dl><dt>판매건수</dt><dd id="selectedSalesCount"></dd><dt>매출액</dt><dd id="selectedSalesAmount"></dd></dl><p id="selectedSalesNote"></p></section><div class="selected-color"><i id="selectedColorDot" class="dot"></i><span id="selectedColor"></span></div></section><div id="filterPanel" role="tabpanel" aria-labelledby="filterTab">
+<div class="filter-group"><div class="catalog-heading"><div class="filter-heading">담당자</div><button id="manageOwners" type="button">편집</button></div><div id="ownerFilters">
+<label class="check"><input class="owner-filter" type="checkbox" value="A" checked><span class="dot" style="background:var(--a)"></span>김태수<span class="owner-count" id="countA"></span></label>
+<label class="check"><input class="owner-filter" type="checkbox" value="B" checked><span class="dot" style="background:var(--b)"></span>박정<span class="owner-count" id="countB"></span></label>
+<label class="check"><input class="owner-filter" type="checkbox" value="C" checked><span class="dot" style="background:var(--c)"></span>손안나<span class="owner-count" id="countC"></span></label><label class="check"><input class="owner-filter" type="checkbox" value="S" checked><span class="dot" style="background:#00b392"></span>사이트 행사<span class="owner-count" id="countS"></span></label><label class="check"><input class="owner-filter" type="checkbox" value="U" checked><span class="dot" style="background:#7ba0c4"></span>담당자 미지정<span class="owner-count" id="countU"></span></label></div></div>
+<div class="filter-group"><div class="catalog-heading"><div class="filter-heading">업무 유형</div><button id="manageTypes" type="button">편집</button></div><div id="typeFilters"><label class="check"><input class="type-filter" type="checkbox" value="공동구매" checked>공동구매</label><label class="check"><input class="type-filter" type="checkbox" value="행사" checked>행사</label><label class="check"><input class="type-filter" type="checkbox" value="발송" checked>상품 발송</label><label class="check"><input class="type-filter" type="checkbox" value="페이백" checked>페이백</label><label class="check"><input class="type-filter" type="checkbox" value="기타" checked>기타 / 연락</label></div></div>
+<div class="side-note">색상과 담당자 표시로 공동구매 일정과 사이트 행사를 구분합니다.</div>
+</div></div></aside>
+<main><section id="scheduleWorkspace" aria-labelledby="schedulePageTitle"><div class="page-head"><div><h1 id="schedulePageTitle" tabindex="-1">업무 스케줄</h1><p class="subtitle" id="schedulePageSubtitle">담당자별 공동구매 일정과 주차·월별 매출을 관리합니다.</p></div><div class="schedule-header-actions"><button id="manageCatalog" type="button">담당자 · 업무유형 관리</button><button id="openScheduleCsv" type="button"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" aria-hidden="true"><path d="M6 3h8l5 5v13H5V3h1Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 3v6h5M8 14h8M8 17h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>일정 원본 CSV</span></button></div></div>
+<section id="developerCsvEmptyState" class="developer-csv-empty" aria-label="CSV 반영 전 안내"><strong>일정 데이터가 없습니다.</strong><p>상단의 일정 원본 CSV에서 파일을 선택하고 일정표에 반영해주세요.</p></section>
+<section class="groupbuy-summary" aria-label="월별 공동구매 집계">
+<div class="monthly-panel"><div class="stats-heading"><h2 id="statsMonth">10월 공동구매</h2><span>월 전체</span></div><div class="monthly-total"><strong id="groupbuyTotal">0</strong><span>건</span></div><div class="owner-totals"><div><span class="owner-label"><i class="dot" style="background:var(--a)"></i>김태수</span><strong id="groupbuyA">0건</strong></div><div><span class="owner-label"><i class="dot" style="background:var(--b)"></i>박정</span><strong id="groupbuyB">0건</strong></div><div><span class="owner-label"><i class="dot" style="background:var(--c)"></i>손안나</span><strong id="groupbuyC">0건</strong></div><div id="ownerTotalS"><span class="owner-label"><i class="dot" style="background:#00b392"></i>사이트 행사</span><strong id="groupbuyS">0건</strong></div><div id="ownerTotalU"><span class="owner-label"><i class="dot" style="background:#7ba0c4"></i>담당자 미지정</span><strong id="groupbuyU">0건</strong></div></div></div>
+<details id="weeklyGroupbuyPanel" class="weekly-panel groupbuy-disclosure"><summary id="weeklyGroupbuyToggle" class="groupbuy-disclosure-toggle" aria-controls="weeklyGroupbuyContent" aria-expanded="false"><span class="groupbuy-disclosure-title"><svg viewBox="0 0 24 24" width="19" height="19" fill="none" aria-hidden="true"><path d="m9 5 7 7-7 7" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>주차별 담당자 공구 건수</span><span class="groupbuy-disclosure-status"><span class="groupbuy-when-closed">접힘 · 펼치기</span><span class="groupbuy-when-open">펼침 · 접기</span></span></summary><div id="weeklyGroupbuyContent" class="groupbuy-disclosure-content"><p class="groupbuy-table-period">일요일~토요일 · 공구 시작일 기준</p><div class="weekly-scroll"><table class="weekly-table"><caption class="sr-only">선택한 달의 시작일 기준 담당자별 공동구매 건수</caption><thead id="weeklyHead"></thead><tbody id="weeklyBody"></tbody></table></div><section id="groupbuyWeekDetail" class="groupbuy-week-detail" hidden aria-labelledby="groupbuyWeekTitle">
+ <div class="groupbuy-detail-head"><div><h3 id="groupbuyWeekTitle"></h3><p id="groupbuyWeekPeriod"></p></div><div class="groupbuy-detail-actions"><button id="closeGroupbuyWeek" type="button">접기</button><button id="copyGroupbuyWeek" class="groupbuy-copy-button" type="button" aria-label="주차별 합계 일정 복사" hidden>복사</button></div></div>
+ <ul id="groupbuyWeekItems" class="groupbuy-detail-items"></ul>
+</section></div></details>
+</section><p class="stats-note" id="statsNote">공구 시작일 기준 · 취소 제외 · 검색·필터와 관계없이 월 전체 집계 · 담당 미확인 별도 표시</p>
+<section class="sales-summary sales-collapsed" id="monthSalesSummary" aria-label="월별 주차별 매출 집계"><div class="sales-fold-head"><div><h2 id="salesMonthTitle">월 매출 종합</h2><p id="salesCollapsedSummary"></p></div><button id="toggleSalesSummary" type="button" aria-expanded="false" aria-controls="salesSummaryBody"><span id="salesToggleText">매출 펼치기</span><span id="salesToggleArrow" aria-hidden="true">▾</span></button></div><div id="salesSummaryBody" hidden><div class="sales-summary-head"><div><p id="salesScopeDescription">선택 월에 진행한 공구 기준</p></div><div class="sales-summary-controls"><label class="sales-scope-label">집계 기준<select id="salesScope" aria-label="매출 집계 기준"><option value="active">선택 월에 진행한 공구</option><option value="start">공구 시작일</option></select></label><div class="export-actions"><button id="exportMonthly">월별 엑셀</button><button id="exportWeekly">주차별 엑셀</button></div></div></div><p id="salesScopeNote" class="sales-scope-note"></p><div class="sales-metrics"><div class="sales-metric"><label>판매건수</label><strong id="salesMonthCount">미입력</strong><small id="salesCountCoverage"></small></div><div class="sales-metric"><label>매출액</label><strong id="salesMonthAmount">미입력</strong><small id="salesAmountCoverage"></small></div><div class="sales-metric"><label>매출 입력 완료 공구</label><strong id="salesMonthComplete"></strong><small>건수와 금액을 모두 입력한 일정</small></div></div><details id="salesProductBreakdown" class="sku-month-breakdown">
+ <summary><span>제품별(SKU) 보기</span><small id="salesProductCount"></small></summary>
+ <p class="sku-help">제품명을 누르면 해당 공구의 닉네임·담당자·매출을 확인할 수 있습니다.</p>
+ <div class="sku-table-scroll" id="salesMonthlyProducts"></div>
+</details>
+<details id="salesBreakdown"><summary>주차별 매출 보기</summary><div class="weekly-scroll"><table class="sales-weekly"><caption class="sr-only" id="salesWeeklyCaption">주차별 판매 매출</caption><thead><tr><th>주차 / 기간</th><th scope="col">공구 일정</th><th>입력 완료</th><th>판매건수</th><th>매출액</th><th>미입력 공구</th></tr></thead><tbody id="salesWeeklyBody"></tbody></table></div></details><p id="exportMessage" class="export-message" role="status"></p></div></section>
+<div class="toolbar"><div class="month-control"><span class="month" id="month"></span><button class="arrow" id="prev" aria-label="이전 달">‹</button><button class="arrow" id="next" aria-label="다음 달">›</button><button id="today">오늘</button><select id="monthJump" aria-label="월 바로 선택"></select></div><div class="tools"><input type="search" id="search" aria-label="일정 검색" placeholder="일정명 · 상품 · 거래처 검색"><select id="status" hidden aria-hidden="true" tabindex="-1"><option value=""></option></select><select id="salesFilter" aria-label="매출 입력 필터"><option value="">전체 매출</option><option value="complete">매출 입력 완료</option><option value="missing">매출 미입력 / 일부 입력</option></select><div class="view-switch"><button id="calendarTab" class="active" aria-pressed="true">월간</button><button id="listTab" aria-pressed="false">목록</button></div></div></div>
+
+<section class="week-focus-head" id="weekFocusHeader" aria-label="선택 주" hidden><div><h2><span id="weekFocusTitle"></span> <small>일요일~토요일</small></h2><p id="weekFocusRange" class="week-focus-date"></p><p id="weekFocusCount" role="status"></p></div><div class="week-focus-controls"><button type="button" id="previousWeek">‹ 이전 주</button><button type="button" id="nextWeek">다음 주 ›</button></div></section>
+<div class="calendar-meta"><span class="holiday-key" title="2025~2030년 공휴일 반영. 2028~2030년은 현행 규정 기준이며 선거일은 예정으로 표시합니다."><i class="dot" aria-hidden="true"></i>대한민국 공휴일 · 대체공휴일</span><button class="primary" id="add">+ 일정 등록</button></div>
+<div class="calendar-scroll" id="calendarView"><div class="calendar"><div class="weekdays"><div>일</div><div>월</div><div>화</div><div>수</div><div>목</div><div>금</div><div>토</div></div><div id="weeks"></div></div></div>
+<div class="list-wrap weekly-list-view" id="listView" hidden><div class="list-intro"><div><h2 id="listTitle">공동구매 오픈 일정</h2><p>시작일 기준 · 주차는 일요일~토요일 · 취소 제외 · 현재 검색·필터 결과</p></div><span class="list-count" id="listCount" role="status"></span></div><div class="weekly-openings" id="rows"></div><details class="other-list" id="otherSchedules"><summary id="otherSummary">그 외 일정</summary><ul class="opening-items" id="otherRows"></ul></details></div>
+<div class="calendar-bottom"><div class="legend"><span><i class="dot" style="background:var(--a)"></i>김태수</span><span><i class="dot" style="background:var(--b)"></i>박정</span><span><i class="dot" style="background:var(--c)"></i>손안나</span></div><span id="result" role="status"></span></div>
+<footer>일정을 클릭하면 팝업에서 상세 내용과 매출을 확인하고 바로 편집할 수 있습니다. 마지막으로 본 월과 담당자·업무유형 설정은 같은 PC·브라우저에서 기억합니다. 추가·편집한 일정과 매출은 새로고침하면 초기화됩니다. 필요한 입력값은 엑셀로 내보내세요.</footer>
+</section><section id="settlementWorkspace" class="settlement-workspace" aria-labelledby="settlementTitle" hidden>
+ <div class="page-head"><div><h1 id="settlementTitle">공구정산</h1><p class="subtitle">주문 엑셀을 불러와 수수료와 지급액을 계산합니다.</p></div><button id="backToSchedule" type="button">일정표로 돌아가기</button></div>
+ <div class="settlement-setup">
+  <section class="settlement-step settlement-type-guide" aria-labelledby="settleTypeHeading">
+   <h2 id="settleTypeHeading"><span class="settlement-step-number">1</span> 정산 대상</h2>
+   <div class="settlement-type-explanation">
+    <p class="settlement-type-guide-title"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" aria-hidden="true"><circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.7"/><path d="M12 11v6M12 7v.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><strong>정산 전 대상 유형 사전 확인필요</strong></p>
+    <p class="settlement-type-guide-intro">사업자 여부에 따라 세금 공제 방식이 달라집니다.</p>
+    <dl class="settlement-type-reference"><div><dt>사업자</dt><dd>소득세·지방소득세 미공제</dd></div><div><dt>일반 개인</dt><dd>소득세·지방소득세 3.3% 공제</dd></div></dl>
+    <p id="settleTypeNote" class="settlement-help">엑셀 파일을 넣은 뒤 중앙 팝업에서 대상 유형과 수수료율을 선택해주세요.</p>
+   </div>
+  </section>
+  <section class="settlement-step settlement-upload-step"><h2><span class="settlement-step-number">2</span> 주문 엑셀</h2>
+   <div id="settleDropZone" class="settlement-drop-zone" role="region" aria-labelledby="settleDropTitle" aria-describedby="settleDropHelp" aria-busy="false">
+    <svg viewBox="0 0 48 48" width="48" height="48" fill="none" aria-hidden="true"><path d="M28 5H13a3 3 0 0 0-3 3v32a3 3 0 0 0 3 3h23a3 3 0 0 0 3-3V16L28 5Z" stroke="currentColor" stroke-width="2"/><path d="M28 5v11h11M24 35V22m-6 6 6-6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    <h3 id="settleDropTitle">엑셀 파일을 여기에 끌어 놓으세요</h3><p id="settleDropHelp">파일을 넣으면 화면 중앙에서 정산 대상과 수수료율을 선택합니다.</p>
+    <button id="settleImport" type="button" class="primary">또는 엑셀 파일 선택</button><input id="settleFile" type="file" accept=".xlsx" hidden>
+    <span class="settlement-drop-format">.xlsx · 파일 1개 · 최대 20 MB</span>
+    <p id="settleDropStatus" class="settlement-drop-status" role="status" aria-live="polite">엑셀을 여기에 끌어 놓거나 파일을 선택해주세요.</p>
+   </div><p id="settleFileName" class="settlement-file-name">불러온 파일 없음</p>
+  </section>
+ </div>
+ <p id="settleMessage" class="settlement-message" role="status" aria-live="polite"></p>
+ <div id="settleEmpty" class="sr-only">불러온 정산 내역이 없습니다.</div>
+ <section id="settleResult" class="settlement-result" hidden>
+  <div class="settlement-result-head"><div><h2>정산 미리보기</h2><p id="settlePeriod" class="settlement-help"></p></div><button id="settleRateChange" type="button">수수료율 변경</button></div>
+  <label class="settlement-campaign-label">공구명<input id="settleCampaign" type="text" maxlength="80" placeholder="전달용 시트에 표시할 공구명"></label>
+
+  <div class="settlement-calendar-link">
+   <button id="settleCalendarApply" type="button" class="primary"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3" stroke="currentColor" stroke-width="1.8"/><path d="M7 3v4M17 3v4M3 10h18M8 16l3 3 5-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg><span id="settleCalendarApplyLabel">일정표 매출 반영하기</span></button>
+   <button id="settleCalendarView" type="button" hidden>반영 일정 보기</button>
+   <p id="settleCalendarStatus" class="settlement-help" role="status" aria-live="polite">판매건수와 주문금액을 선택한 일정에 반영합니다.</p>
+  </div>
+
+  <div class="settlement-kpis"><div><span title="제외 대상 주문을 뺀 유효 주문번호 기준">판매건수</span><strong id="settleOrders"></strong></div><div><span>판매 수량</span><strong id="settleQuantity"></strong></div><div><span>정산 기준 매출</span><strong id="settleBasis"></strong></div><div class="settlement-payment"><span>최종 지급액</span><strong id="settlePayment"></strong></div></div>
+  <div class="settlement-calculation-grid">
+   <div class="settlement-table-wrap"><table class="settlement-calculation"><caption>수수료 계산</caption><thead><tr><th scope="col">항목</th><th scope="col">수량</th><th scope="col">금액</th></tr></thead><tbody>
+    <tr><th scope="row">주문금액</th><td id="settleGrossQuantity"></td><td id="settleGross"></td></tr>
+    <tr><th scope="row">정산 제외 내역</th><td id="settleExcludedQuantity"></td><td id="settleExcluded"></td></tr>
+    <tr><th scope="row">정산 기준 매출</th><td id="settleNetQuantity"></td><td id="settleNet"></td></tr>
+    <tr><th scope="row">공구수수료 <span id="settleRateBadge" class="settlement-rate-badge"></span></th><td>—</td><td id="settleCommission"></td></tr>
+    <tr id="settleTaxTotalRow"><th scope="row">소득세·지방소득세</th><td>—</td><td id="settleTaxTotal"></td></tr>
+    <tr class="settlement-final-row"><th scope="row">최종 지급액</th><td>—</td><td id="settleFinal"></td></tr>
+   </tbody></table><p class="settlement-help">취소·입금대기·반품완료는 제외합니다. 교환완료는 매출에 포함합니다.</p></div>
+   <section id="settleTaxPanel" class="settlement-tax-panel" aria-label="소득세 계산"><h3>소득세 계산 <span id="settleTaxState"></span></h3><dl><dt>소득세 3%</dt><dd id="settleIncomeTax"></dd><dt>지방소득세 0.3%</dt><dd id="settleLocalTax"></dd></dl><p id="settleTaxNote"></p></section>
+  </div>
+  <div class="settlement-export"><div><strong id="settleSheetName"></strong><p id="settleOutputNote" class="settlement-help"></p></div><button id="settleDownload" type="button" class="primary">전달용 엑셀 다운로드</button></div>
+  <details class="settlement-orders"><summary>주문 상세 보기 <span id="settleDetailCount"></span></summary><div class="settlement-source-table"><table><thead id="settleOrderHead"></thead><tbody id="settleOrderBody"></tbody></table></div></details>
+ </section>
+ <dialog id="settleRateDialog" class="settlement-rate-dialog" aria-labelledby="settleRateTitle" aria-describedby="settleRateHelp"><div class="settlement-rate-dialog-head"><h2 id="settleRateTitle">수수료율을 선택해주세요</h2><button id="settleRateClose" type="button" aria-label="수수료율 선택 닫기">×</button></div><p id="settleRateFile" class="settlement-rate-file"></p><p id="settleRateHelp">이번 공동구매에 적용할 수수료율입니다.</p><fieldset id="settleRateRecipientGroup" class="settlement-rate-recipient"><legend>정산 대상</legend><label><input type="radio" name="settleRateRecipient" value="business"><span><strong>사업자</strong><small>3.3% 미공제</small></span></label><label><input type="radio" name="settleRateRecipient" value="individual"><span><strong>일반 개인</strong><small>3.3% 공제</small></span></label></fieldset><p class="settlement-rate-label">공구 수수료율</p><fieldset class="settlement-rate-choices"><legend class="sr-only">수수료율</legend><label><input type="radio" name="settleRate" value="10"><span>10%</span></label><label><input type="radio" name="settleRate" value="15"><span>15%</span></label><label><input type="radio" name="settleRate" value="20"><span>20%</span></label></fieldset><div class="settlement-rate-dialog-actions"><button id="settleRateCancel" type="button">취소</button><button id="settleRateContinue" type="button" class="primary" disabled>선택 후 정산 불러오기</button></div></dialog>
+
+ <dialog id="settleCalendarDialog" class="settlement-calendar-dialog" aria-labelledby="settleCalendarTitle">
+  <div class="settlement-calendar-dialog-head"><div><h2 id="settleCalendarTitle">매출을 반영할 일정 선택</h2><p>닉네임·상품·기간·담당자를 확인해주세요.</p></div><button id="settleCalendarClose" type="button" aria-label="일정 선택 닫기">×</button></div>
+  <div class="settlement-link-values"><span>판매건수 <strong id="settleLinkCount"></strong></span><span>주문금액 <strong id="settleLinkAmount"></strong></span></div>
+  <p id="settleLinkCampaign" class="settlement-link-campaign"></p>
+  <p id="settleLinkError" class="settlement-link-error" role="alert"></p>
+  <div id="settleCalendarPick">
+   <div class="settlement-mini-toolbar"><div class="settlement-mini-month"><button id="settleMiniPrev" type="button" aria-label="이전 달">‹</button><input id="settleMiniMonth" type="month" min="2026-01" max="2030-12" aria-label="일정 선택 월"><button id="settleMiniNext" type="button" aria-label="다음 달">›</button></div><input id="settleMiniSearch" type="search" placeholder="닉네임·상품·담당자 검색" aria-label="반영할 일정 검색"></div>
+   <p id="settleMiniCount" class="settlement-help"></p>
+   <div class="settlement-mini-scroll"><div class="settlement-mini-calendar"><div class="settlement-mini-weekdays" aria-hidden="true"><span class="sunday">일</span><span>월</span><span>화</span><span>수</span><span>목</span><span>금</span><span class="saturday">토</span></div><div id="settleMiniWeeks"></div></div></div>
+   <p class="settlement-help">파란 테두리: 공구명과 닉네임 일치 · 취소 일정은 선택 대상에서 제외</p>
+  </div>
+  <div id="settleCalendarConfirm" hidden>
+   <h3 id="settleConfirmTitle">정말 일정표에 해당 매출을 반영하시겠습니까?</h3>
+   <div class="settlement-link-target"><strong id="settleConfirmSchedule"></strong><span id="settleConfirmPeriod"></span><span id="settleConfirmOwner"></span><span id="settleConfirmSource"></span></div>
+   <table class="settlement-link-comparison" aria-label="기존 값과 이번 정산 합산 확인">
+    <thead><tr><th scope="col">항목</th><th scope="col">기존 값</th><th scope="col">이번 정산</th><th scope="col">반영 후 합계</th></tr></thead>
+    <tbody><tr><th scope="row">판매건수</th><td id="settleBeforeCount"></td><td id="settleIncomingCount"></td><td><strong id="settleAfterCount"></strong></td></tr><tr><th scope="row">매출액</th><td id="settleBeforeAmount"></td><td id="settleIncomingAmount"></td><td><strong id="settleAfterAmount"></strong></td></tr></tbody>
+   </table>
+   <p id="settleConfirmNote">이번 정산의 판매건수와 주문금액을 선택한 일정에 저장합니다.</p>
+   <div class="settlement-link-confirm-actions"><button id="settleCalendarNo" type="button">아니요</button><button id="settleCalendarYes" type="button" class="primary">예, 반영하기</button></div>
+  </div>
+ </dialog>
+</section>
+</main></div>
+<dialog id="detailDialog" aria-labelledby="scheduleEditHeading" aria-describedby="popupEditorHint"><div class="dialog-head"><div class="popup-editor-heading"><h2 id="scheduleEditHeading">일정 상세 · 편집</h2><p class="popup-editor-hint" id="popupEditorHint">내용을 바로 수정한 뒤 아래의 변경 저장을 눌러주세요.</p></div><button class="close-detail" aria-label="상세 창 닫기">×</button></div><div class="dialog-body"><h3 id="detailTitle" style="margin:0 0 20px;font-size:18px"></h3><dl class="details" id="details" hidden></dl><div class="form-grid"><label class="full">일정명<input id="editTitle" type="text" required maxlength="200" placeholder="인플루언서 ex. 닉네임(이름)"><small class="field-hint">상품을 입력하면 닉네임(이름) - 상품으로 표시됩니다.</small></label><label>상품<input id="editProduct" type="text" maxlength="120" list="scheduleProductNames"></label><label>업무 유형<select id="editType"><option>공동구매</option><option>행사</option><option>발송</option><option>페이백</option><option>기타</option></select></label><label>시작일<input id="editStart" type="date" required></label><label>종료일<input id="editEnd" type="date" required></label><label class="full notes-field">특이사항<textarea id="editNotes" rows="2" maxlength="200" placeholder="예: 수수료 협의" aria-describedby="notesGuideEdit"></textarea><small class="field-hint" id="notesGuideEdit">입력한 경우에만 일정명 끝에 표시됩니다.</small></label><fieldset class="sales-fields"><legend>매출</legend><label>판매건수 (건)<span class="number-entry"><input type="text" id="editSalesCount" data-sales-number inputmode="numeric" autocomplete="off" maxlength="20" pattern="[0-9]+|[0-9]{1,3}(,[0-9]{3})+" placeholder="미입력"><span class="number-unit" aria-hidden="true">건</span></span></label><label>매출액 (원)<span class="number-entry"><input type="text" id="editSalesAmount" data-sales-number inputmode="numeric" autocomplete="off" maxlength="20" pattern="[0-9]+|[0-9]{1,3}(,[0-9]{3})+" placeholder="미입력"><span class="number-unit" aria-hidden="true">원</span></span></label><p class="field-hint">천 단위 쉼표가 자동으로 표시됩니다. 빈칸은 미입력이며, 실적이 0이면 0을 입력하세요.</p></fieldset><label class="full cancel-field"><input id="editCanceled" type="checkbox">취소 일정</label></div><p class="edit-note">변경은 현재 화면에 반영되며 엑셀로 내보낼 수 있습니다.</p><p class="error" id="editError" role="alert"></p><label class="detail-owner-label">담당자 / 구분<select id="detailOwner"><option value="A">김태수</option><option value="B">박정</option><option value="C">손안나</option><option value="S">사이트 행사</option><option value="U">담당자 미지정</option></select></label><fieldset class="color-settings"><legend>일정 색상</legend><div class="color-control"><label for="detailColor">직접 선택</label><input type="color" id="detailColor" value="#1859b8"><output id="detailColorValue" for="detailColor">#1859B8</output><span class="color-kind" id="detailColorKind">사용자 지정</span><button type="button" id="resetDetailColor">담당자 기본색</button></div><div class="color-presets" id="detailPalette" aria-label="일정 색상 팔레트"></div><div class="color-preview" id="detailColorPreview"><span class="color-preview-title"></span><span class="color-preview-owner"></span></div></fieldset></div><div class="dialog-foot"><button class="close-detail">닫기</button><button class="primary" id="saveDetailColor">변경 저장</button></div></dialog>
+<dialog id="addDialog" aria-labelledby="scheduleAddHeading"><form id="addForm"><div class="dialog-head"><h2 id="scheduleAddHeading">일정 등록</h2><button type="button" class="close-add" aria-label="등록 창 닫기">×</button></div><div class="dialog-body"><div class="form-grid"><label class="full">일정명<input type="text" name="title" maxlength="80" required placeholder="인플루언서 ex. 닉네임(이름)" aria-describedby="titleGuide"><small class="field-hint" id="titleGuide">상품을 입력하면 닉네임(이름) - 상품 형식으로 등록됩니다.</small></label><label>담당자<select name="owner"><option value="A">김태수</option><option value="B">박정</option><option value="C">손안나</option><option value="S">사이트 행사</option><option value="U">담당자 미지정</option></select></label><label>업무 유형<select name="type"><option>공동구매</option><option>행사</option><option>발송</option><option>페이백</option><option>기타</option></select></label><label>시작일<input type="date" name="start" required></label><label>종료일<input type="date" name="end" required></label><label>상품<input type="text" name="product" maxlength="60" placeholder="예: 멀티보드" list="scheduleProductNames"></label><label>거래처<input type="text" name="partner" maxlength="60" placeholder="거래처명"></label><label class="full notes-field">특이사항<textarea name="specialNotes" id="addNotes" rows="2" maxlength="200" placeholder="예: 수수료 협의" aria-describedby="notesGuideAdd"></textarea><small class="field-hint" id="notesGuideAdd">입력한 경우에만 일정명 끝에 표시됩니다.</small></label><fieldset class="sales-fields"><legend>매출</legend><label>판매건수 (건)<span class="number-entry"><input type="text" name="salesCount" data-sales-number inputmode="numeric" autocomplete="off" maxlength="20" pattern="[0-9]+|[0-9]{1,3}(,[0-9]{3})+" placeholder="미입력"><span class="number-unit" aria-hidden="true">건</span></span></label><label>매출액 (원)<span class="number-entry"><input type="text" name="salesAmount" data-sales-number inputmode="numeric" autocomplete="off" maxlength="20" pattern="[0-9]+|[0-9]{1,3}(,[0-9]{3})+" placeholder="미입력"><span class="number-unit" aria-hidden="true">원</span></span></label><p class="field-hint">천 단위 쉼표가 자동으로 표시됩니다. 빈칸은 미입력이며, 실적이 0이면 0을 입력하세요.</p></fieldset><label class="full cancel-field"><input type="checkbox" name="cancelled">취소 일정</label><div class="full color-add-section"><span class="color-field-label">일정 색상</span><div class="color-presets" id="addPalette" aria-label="새 일정 색상 팔레트"></div><div class="color-control"><label for="addColor">직접 선택</label><input type="color" id="addColor" name="color" value="#1859b8"><output id="addColorValue" for="addColor">#1859B8</output><span class="color-kind" id="addColorKind">사용자 지정</span></div></div><div class="color-preview full" id="addColorPreview" aria-live="polite"><span class="generated-title-label">등록될 일정명</span><span class="color-preview-title"></span><span class="color-preview-owner"></span></div></div><p class="form-note">선택한 색상에 맞춰 글자색이 자동 조정됩니다. 시안의 변경 내용은 현재 화면에만 반영됩니다.</p><p class="error" id="formError" role="alert"></p></div><div class="dialog-foot"><button type="button" class="close-add">취소</button><button class="primary" type="submit">등록</button></div></form></dialog>
+<dialog id="catalogDialog" aria-labelledby="catalogDialogTitle">
+ <div class="dialog-head"><h2 id="catalogDialogTitle">담당자 · 업무유형 관리</h2><button class="close-catalog" aria-label="관리 창 닫기">×</button></div>
+ <div class="catalog-body">
+  <div class="catalog-tabs" role="tablist" aria-label="관리 항목"><button id="catalogOwnerTab" role="tab" aria-controls="catalogOwners" aria-selected="true">담당자</button><button id="catalogTypeTab" role="tab" aria-controls="catalogTypes" aria-selected="false" tabindex="-1">업무유형</button></div>
+  <section id="catalogOwners" role="tabpanel" aria-labelledby="catalogOwnerTab"><div class="catalog-intro"><p>이름과 기본 색상을 수정하거나 담당자를 추가하세요.</p><button id="addCatalogOwner" type="button">+ 담당자 추가</button></div><div id="catalogOwnerRows" class="catalog-rows"></div><p class="catalog-hint">기본 색상은 새 일정과 ‘담당자 기본색’ 선택에 사용됩니다.</p></section>
+  <section id="catalogTypes" role="tabpanel" aria-labelledby="catalogTypeTab" hidden><div class="catalog-intro"><p>업무유형 이름을 수정하거나 새 유형을 추가하세요.</p><button id="addCatalogType" type="button">+ 업무유형 추가</button></div><div id="catalogTypeRows" class="catalog-rows"></div><p class="catalog-hint">공동구매 유형은 이름을 바꿔도 공구·매출 집계에 포함됩니다. 새 유형은 일반 일정으로 사용됩니다.</p></section>
+  <p class="catalog-hint">설정은 같은 PC·브라우저에 저장됩니다.</p><p id="catalogError" class="error" role="alert"></p><p id="catalogStorageNote" class="catalog-hint" role="status"></p>
+ </div>
+ <div class="dialog-foot"><button class="close-catalog" type="button">취소</button><button class="primary" id="saveCatalog" type="button">변경 저장</button></div>
+</dialog>
+
+<dialog id="scheduleCsvDialog" aria-labelledby="scheduleCsvTitle" aria-describedby="scheduleCsvIntro">
+ <div class="dialog-head"><div><h2 id="scheduleCsvTitle">일정 데이터 원본 CSV</h2><p id="scheduleCsvIntro">추출한 원본을 확인한 뒤 일정표에 반영하세요.</p></div><button id="closeScheduleCsv" type="button" aria-label="CSV 창 닫기">×</button></div>
+ <div class="schedule-csv-body">
+  <div id="scheduleCsvDrop" class="schedule-csv-drop">
+   <svg viewBox="0 0 32 32" width="34" height="34" fill="none" aria-hidden="true"><path d="M8 3h11l7 7v19H6V3h2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="M19 3v8h7M11 20l5-5 5 5M16 15v10" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+   <div><strong>CSV 원본 파일을 넣어주세요</strong><p>파일을 선택하거나 이 영역에 끌어다 놓으세요.</p></div>
+   <button id="chooseScheduleCsv" class="primary" type="button">CSV 파일 선택</button>
+   <input id="scheduleCsvFile" type="file" accept=".csv,text/csv" hidden>
+  </div>
+  <div class="schedule-csv-options">
+   <label>문자 인코딩<select id="scheduleCsvEncoding"><option value="auto">자동 감지</option><option value="utf-8">UTF-8</option><option value="euc-kr">한글 Windows (CP949)</option></select></label>
+   <label>구분자<select id="scheduleCsvDelimiter"><option value="auto">자동 감지</option><option value=",">쉼표 (,)</option><option value=";">세미콜론 (;)</option><option value="tab">탭</option></select></label>
+   <span>한글이나 열 구분이 맞지 않으면 설정을 바꿔주세요.</span>
+  </div>
+  <p id="scheduleCsvMessage" class="schedule-csv-message" role="status" aria-live="polite"></p>
+  <p id="scheduleCsvError" class="schedule-csv-error" role="alert"></p>
+  <section id="scheduleCsvLoaded" hidden aria-label="불러온 CSV">
+   <div class="schedule-csv-file"><div><strong id="scheduleCsvName"></strong><span id="scheduleCsvMeta"></span></div><button id="clearScheduleCsv" type="button">선택 비우기</button></div>
+   <div class="schedule-csv-stats"><div><span>데이터 행</span><strong id="scheduleCsvRows"></strong></div><div><span>열</span><strong id="scheduleCsvColumns"></strong></div><div><span>읽은 형식</span><strong id="scheduleCsvFormat"></strong></div></div>
+   <p id="scheduleCsvWarning" class="schedule-csv-warning" role="status" hidden></p>
+   <div class="schedule-csv-preview-head"><h3>원본 내용 미리보기</h3><p id="scheduleCsvPreviewNote"></p></div>
+   <div class="schedule-csv-table-wrap" tabindex="0" role="region" aria-label="CSV 원본 표. 가로로 스크롤하여 모든 열을 볼 수 있습니다."><table class="schedule-csv-table"><thead id="scheduleCsvHead"></thead><tbody id="scheduleCsvBody"></tbody></table></div>
+  </section>
+  <section id="scheduleCsvApplyBox" class="schedule-csv-apply" hidden aria-label="일정표 반영">
+   <h3>일정표 반영</h3><strong id="scheduleCsvApplySummary"></strong>
+   <p id="scheduleCsvMappingNote"></p><p id="scheduleCsvApplyError" class="schedule-csv-error" role="alert"></p>
+   <button id="applyScheduleCsv" type="button" class="primary" disabled>일정표에 반영</button>
+  </section>
+  <div id="scheduleCsvEmpty" class="schedule-csv-empty">선택한 CSV의 파일명·행 수·열 이름·원본 내용을 여기에 표시합니다.</div>
+  <p class="schedule-csv-note">sourceId가 같은 일정은 중복 추가하지 않습니다. 직접 수정한 일정 항목과 입력한 매출은 유지합니다. 파일에 없는 기존 일정은 삭제하지 않습니다.</p>
+ </div>
+ <div class="dialog-foot schedule-csv-foot"><span>추가로 불러온 CSV의 반영·편집은 현재 화면에서 유지됩니다. 서버 저장 연결은 별도입니다.</span><button id="finishScheduleCsv" type="button">닫기</button></div>
+</dialog>
+
+<div id="scheduleToastAnnouncer" class="sr-only" role="status" aria-live="polite" aria-atomic="true"></div>
+<div id="scheduleToast" class="schedule-toast" hidden>
+ <span class="schedule-toast-icon" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none"><path d="m4 10 4 4 8-8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+ <div class="schedule-toast-copy"><strong id="scheduleToastTitle"></strong><p id="scheduleToastMessage"></p></div>
+ <button type="button" id="dismissScheduleToast" aria-label="완료 알림 닫기">×</button>
+</div>
+
+<script>
+'use strict';
+const $=id=>document.getElementById(id), dayMs=86400000;
+const date=s=>new Date(s+'T00:00:00Z');
+const iso=d=>d.toISOString().slice(0,10);
+const shift=(d,n)=>new Date(d.getTime()+n*dayMs);
+// 대한민국 공휴일 2025~2030: 2026-10-13 확인. 08_공휴일_반영기준.md 참조.
+// 음력 날짜는 한국천문연구원 자료, 대체공휴일은 현행 규정 기준. 미래 선거일은 예정 표기.
+const holidaysByYear={
+ 2025:[
+  ['01-01','신정'],['01-27','임시공휴일'],['01-28','설날 연휴'],['01-29','설날'],['01-30','설날 연휴'],
+  ['03-01','3·1절'],['03-03','대체공휴일(3·1절)'],['05-05','어린이날','부처님오신날'],['05-06','대체공휴일(부처님오신날)'],
+  ['06-03','대통령선거(임시공휴일)'],['06-06','현충일'],['08-15','광복절'],
+  ['10-03','개천절'],['10-05','추석 연휴'],['10-06','추석'],['10-07','추석 연휴'],['10-08','대체공휴일(추석)'],['10-09','한글날'],['12-25','성탄절']
+ ],
+ 2026:[
+  ['01-01','신정'],['02-16','설날 연휴'],['02-17','설날'],['02-18','설날 연휴'],['03-01','3·1절'],['03-02','대체공휴일(3·1절)'],
+  ['05-01','노동절'],['05-05','어린이날'],['05-24','부처님오신날'],['05-25','대체공휴일(부처님오신날)'],
+  ['06-03','제9회 전국동시지방선거'],['06-06','현충일'],['07-17','제헌절'],['08-15','광복절'],['08-17','대체공휴일(광복절)'],
+  ['09-24','추석 연휴'],['09-25','추석'],['09-26','추석 연휴'],['10-03','개천절'],['10-05','대체공휴일(개천절)'],['10-09','한글날'],['12-25','성탄절']
+ ],
+ 2027:[
+  ['01-01','신정'],['02-06','설날 연휴'],['02-07','설날'],['02-08','설날 연휴'],['02-09','대체공휴일(설날)'],['03-01','3·1절'],
+  ['05-01','노동절'],['05-03','대체공휴일(노동절)'],['05-05','어린이날'],['05-13','부처님오신날'],['06-06','현충일'],
+  ['07-17','제헌절'],['07-19','대체공휴일(제헌절)'],['08-15','광복절'],['08-16','대체공휴일(광복절)'],
+  ['09-14','추석 연휴'],['09-15','추석'],['09-16','추석 연휴'],['10-03','개천절'],['10-04','대체공휴일(개천절)'],
+  ['10-09','한글날'],['10-11','대체공휴일(한글날)'],['12-25','성탄절'],['12-27','대체공휴일(성탄절)']
+ ],
+ 2028:[["01-01","신정"],["01-26","설날 연휴"],["01-27","설날"],["01-28","설날 연휴"],["03-01","3·1절"],["04-12","제23대 국회의원선거(예정)"],["05-01","노동절"],["05-02","부처님오신날"],["05-05","어린이날"],["06-06","현충일"],["07-17","제헌절"],["08-15","광복절"],["10-02","추석 연휴"],["10-03","추석","개천절"],["10-04","추석 연휴"],["10-05","대체공휴일(추석·개천절)"],["10-09","한글날"],["12-25","성탄절"]],
+ 2029:[["01-01","신정"],["02-12","설날 연휴"],["02-13","설날"],["02-14","설날 연휴"],["03-01","3·1절"],["05-01","노동절"],["05-05","어린이날"],["05-07","대체공휴일(어린이날)"],["05-20","부처님오신날"],["05-21","대체공휴일(부처님오신날)"],["06-06","현충일"],["07-17","제헌절"],["08-15","광복절"],["09-21","추석 연휴"],["09-22","추석"],["09-23","추석 연휴"],["09-24","대체공휴일(추석)"],["10-03","개천절"],["10-09","한글날"],["12-25","성탄절"]],
+ 2030:[["01-01","신정"],["02-02","설날 연휴"],["02-03","설날"],["02-04","설날 연휴"],["02-05","대체공휴일(설날)"],["03-01","3·1절"],["03-27","제22대 대통령선거(예정)"],["05-01","노동절"],["05-05","어린이날"],["05-06","대체공휴일(어린이날)"],["05-09","부처님오신날"],["06-06","현충일"],["06-12","제10회 전국동시지방선거(예정)"],["07-17","제헌절"],["08-15","광복절"],["09-11","추석 연휴"],["09-12","추석"],["09-13","추석 연휴"],["10-03","개천절"],["10-09","한글날"],["12-25","성탄절"]]
+};
+const holidayByDate=new Map(Object.entries(holidaysByYear).flatMap(([y,items])=>items.map(([md,...names])=>[y+'-'+md,names])));
+const holidayNames=day=>holidayByDate.get(day)||[];
+const colors={A:['#3fa9f5','#3fa9f5'],B:['#b980d0','#b980d0'],C:['#ff9e18','#ff9e18'],S:['#00b392','#00b392'],U:['#7ba0c4','#7ba0c4']};
+const ownerNames={A:'김태수',B:'박정',C:'손안나',S:'사이트 행사',U:'담당자 미지정'};
+const ownerOrder=['A','B','C','S','U'];
+const ownerCaption=owner=>!['S','U'].includes(owner)?ownerNames[owner]+'의 일정':ownerNames[owner];
+const calendarMonths=Array.from({length:96},(_,i)=>(2023+Math.floor(i/12))+'-'+String(i%12+1).padStart(2,'0'));
+let year=2026,month=0;
+let schedules=[];
+const colorPalette=[
+ {hex:'#3fa9f5',label:'하늘색'},{hex:'#7ba0c4',label:'블루그레이'},{hex:'#b980d0',label:'보라색'},{hex:'#ff4d00',label:'주홍색'},
+ {hex:'#00b392',label:'청록색'},{hex:'#66c9ba',label:'민트색'},{hex:'#fb91a3',label:'분홍색'},{hex:'#f5333f',label:'빨간색'},
+ {hex:'#70d44b',label:'초록색'},{hex:'#d3d655',label:'라임색'},{hex:'#ffd235',label:'노란색'},{hex:'#ff9e18',label:'주황색'}
+];
+function buildColorChips(prefix){const container=$(prefix+'Palette');container.replaceChildren();for(const color of colorPalette){const button=node('button');button.type='button';button.dataset.colorFor=prefix;button.dataset.color=color.hex;button.setAttribute('aria-label',color.label+' '+color.hex.toUpperCase());button.setAttribute('aria-pressed','false');button.style.setProperty('--swatch',color.hex);button.style.setProperty('--chip-ink',colorText(color.hex));const swatch=node('span',undefined,'chip-swatch');swatch.setAttribute('aria-hidden','true');button.append(swatch);container.append(button);}}
+function syncColorChips(prefix,color){const normalized=color.toLowerCase();for(const button of $(prefix+'Palette').querySelectorAll('button'))button.setAttribute('aria-pressed',String(button.dataset.color===normalized));$(prefix+'ColorKind').textContent=colorPalette.some(c=>c.hex===normalized)?'팔레트 색상':'사용자 지정';}
+let selectedScheduleId=null,addColorIsManual=false;
+function relativeLuminance(hex){const values=hex.slice(1).match(/../g).map(v=>parseInt(v,16)/255).map(v=>v<=0.04045?v/12.92:Math.pow((v+0.055)/1.055,2.4));return values[0]*0.2126+values[1]*0.7152+values[2]*0.0722;}
+function colorText(hex){const luminance=relativeLuminance(hex);return 1.05/(luminance+0.05)>=(luminance+0.05)/0.05?'#ffffff':'#000000';}
+function scheduleOwnerName(s){return s.owner==='U'&&s.category?s.category+' · 담당자 미지정':ownerNames[s.owner]||'담당자 미지정';}
+function scheduleOwnerCaption(s){return s.owner==='U'?scheduleOwnerName(s):ownerCaption(s.owner);}
+function scheduleColor(s){return /^#[0-9a-f]{6}$/i.test(s.color||'')?s.color:(s.status==='취소'?'#536071':colors[s.owner][0]);}
+function eventTitle(s){return s.imported||s.autoComposed?s.title:s.title+(s.title.includes(s.type)?'':' · '+s.type)+' / '+s.status;}
+function updateColorPreview(prefix,color,title,owner){const preview=$(prefix+'ColorPreview');preview.style.setProperty('--preview-bg',color);preview.style.setProperty('--preview-text',colorText(color));preview.querySelector('.color-preview-title').textContent=title;preview.querySelector('.color-preview-owner').textContent=ownerCaption(owner);$(prefix+'ColorValue').textContent=color.toUpperCase();syncColorChips(prefix,color);}
+function notesSuffix(value){const text=(typeof value==='string'?value:'').trim().replace(/\s+/g,' ');return text?' - '+text:'';}
+function appendScheduleNotes(title,value){return title+notesSuffix(value);}
+function scheduleTitleBase(s){const suffix=notesSuffix(s.specialNotes);return suffix&&s.title.endsWith(suffix)?s.title.slice(0,-suffix.length):s.title;}
+function composeScheduleTitle(influencer,product,specialNotes=''){return appendScheduleNotes([influencer.trim(),product.trim()].filter(Boolean).join(' - '),specialNotes);}
+function updateAddPreview(){const form=$('addForm');const title=composeScheduleTitle(form.elements.title.value,form.elements.product.value,form.elements.specialNotes.value);updateColorPreview('add',$('addColor').value,title||'닉네임(이름) - 상품',form.elements.owner.value);}
+function node(tag,text,className){const e=document.createElement(tag);if(text!==undefined)e.textContent=text;if(className)e.className=className;return e;}
+function getGroupbuyStats(items,y,m){
+ const first=new Date(Date.UTC(y,m,1)),last=new Date(Date.UTC(y,m+1,0)),gridStart=shift(first,-first.getUTCDay());
+ const weekCount=Math.ceil((first.getUTCDay()+last.getUTCDate())/7);
+ const counts=Object.fromEntries(ownerOrder.map(o=>[o,0])),weeks=Array.from({length:weekCount},(_,index)=>({index,start:new Date(Math.max(first,shift(gridStart,index*7))),end:new Date(Math.min(last,shift(gridStart,index*7+6))),counts:Object.fromEntries(ownerOrder.map(o=>[o,0])),total:0}));
+ const itemsInMonth=items.filter(s=>s.type==='공동구매'&&s.status!=='취소'&&date(s.start)>=first&&date(s.start)<=last);
+ for(const s of itemsInMonth){const index=Math.floor((date(s.start)-gridStart)/dayMs/7);counts[s.owner]++;weeks[index].counts[s.owner]++;weeks[index].total++;}
+ return {total:itemsInMonth.length,counts,weeks};
+}
+let groupbuyWeekSelection=null,groupbuyTableContext=null;
+function groupbuyWeekContext(){return year+'-'+String(month+1).padStart(2,'0');}
+function groupbuyWeekItems(owner,index){
+ const stats=getGroupbuyStats(schedules,year,month),week=stats.weeks[index];if(!week)return [];
+ const start=iso(week.start),end=iso(week.end);
+ return schedules.filter(s=>s.type==='공동구매'&&s.status!=='취소'&&s.start>=start&&s.start<=end&&(owner==='*'||s.owner===owner)).sort((a,b)=>a.start.localeCompare(b.start)||a.id-b.id);
+}
+function groupbuyCountButton(owner,index,count){
+ const cell=node('td',undefined,count?'':'zero');if(!count){cell.textContent='0건';return cell;}
+ const button=node('button',undefined,'groupbuy-count'),arrow=node('span','▸','groupbuy-count-arrow');button.type='button';button.dataset.groupbuyOwner=owner;button.dataset.groupbuyWeek=String(index);arrow.setAttribute('aria-hidden','true');button.append(arrow,node('span',count+'건'));
+ button.setAttribute('aria-controls','groupbuyWeekDetail');button.setAttribute('aria-expanded','false');button.setAttribute('aria-label',(month+1)+'월 '+(index+1)+'주차 '+(owner==='*'?'전체 담당자':ownerNames[owner])+' 공동구매 '+count+'건 상세 보기');
+ button.onclick=()=>{const current=groupbuyWeekSelection;groupbuyWeekSelection=current?.context===groupbuyWeekContext()&&current.owner===owner&&current.index===index?null:{context:groupbuyWeekContext(),owner,index};renderGroupbuyWeekDetail();refreshSelected();};
+ cell.append(button);return cell;
+}
+function groupbuyDetailLine(s){
+ const inferred=s.typeClassification?.rule==='nickname-name-product'?s.typeClassification:null;
+ let influencer=(s.influencer||'').trim()||(inferred?inferred.nickname+'('+inferred.person+')':'');
+ const fields=openingFields(s);if(!influencer)influencer=fields.nickname;
+ if(!influencer)return s.title;
+ const round=(s.title.match(/(\d+\s*차)/)||[])[1]||'';
+ let product=fields.product;if(round&&!product.includes(round))product+=' '+round.replace(/\s/g,'');
+ return '@'+influencer.replace(/^@+/,'')+' : '+product;
+}
+function renderGroupbuyWeekDetail(){
+ const selection=groupbuyWeekSelection;
+ if(selection&&selection.context!==groupbuyWeekContext())groupbuyWeekSelection=null;
+ const state=groupbuyWeekSelection,items=state?groupbuyWeekItems(state.owner,state.index):[];
+ $('groupbuyWeekDetail').hidden=!state||!items.length;
+ const copy=$('copyGroupbuyWeek');copy.hidden=!state||state.owner!=='*'||!items.length;
+ copy.disabled=false;copy.textContent='복사';copy.classList.remove('is-copied');
+ for(const button of document.querySelectorAll('[data-groupbuy-owner]')){
+  const active=!!state&&items.length>0&&button.dataset.groupbuyOwner===state.owner&&Number(button.dataset.groupbuyWeek)===state.index;
+  button.setAttribute('aria-expanded',String(active));button.classList.toggle('is-active',active);button.querySelector('.groupbuy-count-arrow').textContent=active?'▾':'▸';
+ }
+ $('groupbuyWeekItems').replaceChildren();if(!state||!items.length){if(!items.length)groupbuyWeekSelection=null;return;}
+ const week=getGroupbuyStats(schedules,year,month).weeks[state.index];
+ $('groupbuyWeekTitle').textContent=(month+1)+'월 '+(state.index+1)+'주차 · '+(state.owner==='*'?'전체 담당자':ownerNames[state.owner])+' · 공동구매 '+items.length+'건';
+ $('groupbuyWeekPeriod').textContent=openingDate(iso(week.start))+' ~ '+openingDate(iso(week.end))+' · 공구 시작일 기준 · 일정을 누르면 팝업에서 확인하고 편집할 수 있습니다.';
+ for(const s of items){
+  const li=node('li'),button=node('button',undefined,'groupbuy-schedule-button'),accent=node('span',undefined,'groupbuy-detail-accent'),when=node('time',openingDate(s.start),'groupbuy-detail-date'),text=node('span',undefined,'groupbuy-detail-text');
+  button.type='button';button.dataset.scheduleId=String(s.id);button.style.setProperty('--groupbuy-color',scheduleColor(s));when.dateTime=s.start;accent.setAttribute('aria-hidden','true');
+  text.append(node('span',groupbuyDetailLine(s)),node('span',scheduleOwnerName(s)+' · '+s.start+' ~ '+s.end,'groupbuy-detail-owner'));
+  button.append(accent,when,text);button.title=s.title;button.setAttribute('aria-label',openingDate(s.start)+' '+groupbuyDetailLine(s)+' - '+scheduleOwnerName(s));button.onclick=()=>openDetail(s);li.append(button);$('groupbuyWeekItems').append(li);
+ }
+}
+function renderGroupbuyStats(){
+ const context=groupbuyWeekContext();
+ if(groupbuyTableContext!==context){$('weeklyGroupbuyPanel').open=false;groupbuyWeekSelection=null;groupbuyTableContext=context;}
+ const stats=getGroupbuyStats(schedules,year,month);
+ $('statsMonth').textContent=(month+1)+'월 공동구매';$('groupbuyTotal').textContent=stats.total;
+ for(const owner of ownerOrder)$('groupbuy'+owner).textContent=stats.counts[owner]+'건';
+ for(const owner of ['S','U'])$('ownerTotal'+owner).hidden=!stats.counts[owner];
+ const header=node('tr');header.append(node('th','담당자'));
+ const shortDate=d=>(d.getUTCMonth()+1)+'/'+String(d.getUTCDate()).padStart(2,'0');
+ for(const week of stats.weeks){const cell=node('th',(week.index+1)+'주차');cell.scope='col';cell.append(node('span',shortDate(week.start)+'~'+String(week.end.getUTCDate()).padStart(2,'0'),'week-range'));header.append(cell);}
+ $('weeklyHead').replaceChildren(header);$('weeklyBody').replaceChildren();
+ for(const owner of ownerOrder.filter(o=>!['S','U'].includes(o)||stats.counts[o]>0)){
+  const row=node('tr'),heading=node('th'),label=node('span',undefined,'owner-label'),dot=node('i',undefined,'dot');dot.style.background=colors[owner][0];label.append(dot,document.createTextNode(ownerNames[owner]));heading.scope='row';heading.append(label);row.append(heading);
+  for(const week of stats.weeks)row.append(groupbuyCountButton(owner,week.index,week.counts[owner]));$('weeklyBody').append(row);
+ }
+ const totalRow=node('tr',undefined,'weekly-total'),label=node('th','합계');label.scope='row';totalRow.append(label);
+ for(const week of stats.weeks)totalRow.append(groupbuyCountButton('*',week.index,week.total));$('weeklyBody').append(totalRow);
+ renderGroupbuyWeekDetail();
+}
+$('closeGroupbuyWeek').onclick=()=>{
+ const state=groupbuyWeekSelection;groupbuyWeekSelection=null;renderGroupbuyWeekDetail();
+ if(state)document.querySelector('[data-groupbuy-owner="'+state.owner+'"][data-groupbuy-week="'+state.index+'"]')?.focus();
+};
+
+function groupbuyWeekCopyText(){
+ const state=groupbuyWeekSelection;
+ if(!state||state.owner!=='*'||state.context!==groupbuyWeekContext())return '';
+ const items=groupbuyWeekItems('*',state.index);if(!items.length)return '';
+ const heading=(month+1)+'월 '+(state.index+1)+'주차 공동구매 '+items.length+'건';
+ const entries=items.map(s=>[openingDate(s.start),groupbuyDetailLine(s),scheduleOwnerName(s)+' · '+s.start+' ~ '+s.end].join('\n'));
+ return [heading,...entries].join('\n\n');
+}
+async function writeGroupbuyWeekClipboard(text){
+ if(navigator.clipboard?.writeText){
+  try{await navigator.clipboard.writeText(text);return;}catch{}
+ }
+ const previous=document.activeElement,field=document.createElement('textarea');
+ field.value=text;field.readOnly=true;field.style.cssText='position:fixed;left:-10000px;top:0';document.body.append(field);
+ try{field.select();if(!document.execCommand('copy'))throw new Error('Clipboard unavailable');}
+ finally{field.remove();previous?.focus({preventScroll:true});}
+}
+$('copyGroupbuyWeek').onclick=async()=>{
+ const text=groupbuyWeekCopyText();if(!text)return;
+ const state=groupbuyWeekSelection,key=state.context+'/'+state.owner+'/'+state.index,button=$('copyGroupbuyWeek');button.disabled=true;
+ try{
+  await writeGroupbuyWeekClipboard(text);
+  const current=groupbuyWeekSelection;
+  if(current&&key===current.context+'/'+current.owner+'/'+current.index){button.textContent='복사 완료';button.classList.add('is-copied');}
+  showScheduleToast('복사 완료',text.split('\n')[0]+'을 복사했습니다.');
+ }catch{showScheduleToast('복사 실패','주차별 일정을 복사하지 못했습니다.');}
+ finally{button.disabled=false;}
+};
+$('weeklyGroupbuyPanel').addEventListener('toggle',()=>{
+ const panel=$('weeklyGroupbuyPanel');$('weeklyGroupbuyToggle').setAttribute('aria-expanded',String(panel.open));
+ if(!panel.open&&groupbuyWeekSelection){groupbuyWeekSelection=null;renderGroupbuyWeekDetail();}
+});
+
+
+function openingFields(s){
+ const source=s.influencer||s.title;
+ const cleaned=source.replace(/^(?:[＊*]?전달완료\s*|\[(?:전달완료|취소)\]\s*|\(취소\)\s*)+/,'').trim();
+ let nickname=s.listNickname||(s.influencer||'').replace(/^@+/,'').split(/[（(]/)[0].trim();
+ if(!nickname){const handle=cleaned.match(/@?([A-Za-z0-9_][A-Za-z0-9_.]*)(?=[\s(（/\-]|$)/);nickname=handle?handle[1]:(s.influencer||'').replace(/^@/,'').split(/[（(]/)[0].trim();}
+ let product=s.listProduct||s.product?.trim()||s.typeClassification?.product||'';
+ if(!product){const known=s.title.match(/플레이돌\s*맥스|그리고지우고북|키즈탭프로|세탁볼|클레이\s*\+\s*무한워크북(?:보드)?|키즈점프프로|키즈점프로|키즈챔프프로|키즈챔프로|키즈주니어마이크|무한워크북보드|무선워크북보드|무한워크북|무선마이크|멀티보드|낱말카드|샤워타월|세타글단본|플레이5\s*max|플레이5\s*믹스|플레이5|플레이10중택|뉴원USB|클레이|플레이도\s*믹스|플레이돌\s*믹스|플레이도\s*max|플레이돌\s*max|플레이도5|플레이돌5|플레이도|플레이돌|와우펜|듀얼\s*USB|사파리펜|세라믹펜|플레이|USB/iu);product=known?known[0].replace(/듀얼\s*usb/iu,'듀얼USB'):'상품 확인 필요';}
+ return {nickname:nickname.replace(/^@+/,''),product};
+}
+function openingDate(value){const d=date(value);return (d.getUTCMonth()+1)+'/'+String(d.getUTCDate()).padStart(2,'0')+'('+['일','월','화','수','목','금','토'][d.getUTCDay()]+')';}
+function openingLine(s){const fields=openingFields(s);return '@'+(fields.nickname||'닉네임 확인 필요')+' : '+fields.product+notesSuffix(s.specialNotes)+' - '+scheduleOwnerName(s);}
+function getOpeningGroups(items,y,m){
+ const first=new Date(Date.UTC(y,m,1)),last=new Date(Date.UTC(y,m+1,0)),gridStart=shift(first,-first.getUTCDay());
+ const eligible=items.filter(s=>s.type==='공동구매'&&s.status!=='취소'&&date(s.start)>=first&&date(s.start)<=last).sort((a,b)=>a.start.localeCompare(b.start)||openingFields(a).nickname.localeCompare(openingFields(b).nickname,'en')||a.id-b.id);
+ const groups=new Map();for(const s of eligible){const index=Math.floor((date(s.start)-gridStart)/dayMs/7);if(!groups.has(index))groups.set(index,{index,start:new Date(Math.max(first,shift(gridStart,index*7))),end:new Date(Math.min(last,shift(gridStart,index*7+6))),items:[]});groups.get(index).items.push(s);}
+ return [...groups.values()];
+}
+function openingButton(s,full=false){
+ const button=node('button',undefined,'opening-item');button.type='button';button.dataset.scheduleId=String(s.id);button.style.setProperty('--opening-color',scheduleColor(s));
+ const accent=node('span',undefined,'opening-color');accent.setAttribute('aria-hidden','true');
+ const d=node('time',openingDate(s.start),'opening-date'+(holidayNames(s.start).length?' holiday':''));d.dateTime=s.start;
+ const line=node('span',undefined,'opening-line');
+ if(full){line.textContent=s.title+' - '+scheduleOwnerName(s);}else{const fields=openingFields(s);line.append(node('span','@'+(fields.nickname||'닉네임 확인 필요'),'opening-handle'),document.createTextNode(' : '),node('span',fields.product,'opening-product'),node('span',notesSuffix(s.specialNotes),'opening-notes'),document.createTextNode(' - '),node('span',scheduleOwnerName(s),'opening-owner'));}
+ button.append(accent,d,line);button.title=s.title+' | '+s.start+' ~ '+s.end;button.setAttribute('aria-label',openingDate(s.start)+' '+(full?s.title+' - '+scheduleOwnerName(s):openingLine(s)));button.addEventListener('click',()=>openDetail(s));return button;
+}
+function renderOpeningList(shown){
+ const first=new Date(Date.UTC(year,month,1)),last=new Date(Date.UTC(year,month+1,0));
+ const monthItems=shown.filter(s=>date(s.start)>=first&&date(s.start)<=last),groups=getOpeningGroups(monthItems,year,month),total=groups.reduce((n,g)=>n+g.items.length,0);
+ $('listTitle').textContent=(month+1)+'월 공동구매 오픈 일정';$('listCount').textContent=total+'건 표시';$('rows').replaceChildren();$('otherRows').replaceChildren();
+ for(const group of groups){const section=node('section',undefined,'opening-week');section.dataset.week=String(group.index+1);const head=node('div',undefined,'opening-week-head');const h=node('h2',"'마케팅팀' "+(month+1)+'월 '+(group.index+1)+'주차 공동구매 - '+group.items.length+'건 오픈 예정');head.append(h,node('span',openingDate(iso(group.start))+' ~ '+openingDate(iso(group.end)),'opening-range'));const list=node('ul',undefined,'opening-items');for(const s of group.items){const li=node('li');li.append(openingButton(s));list.append(li);}section.append(head,list);$('rows').append(section);}
+ if(!total)$('rows').append(node('p','선택한 조건에 해당하는 공동구매 오픈 일정이 없습니다.','empty'));
+ const others=monthItems.filter(s=>s.type!=='공동구매'||s.status==='취소').sort((a,b)=>a.start.localeCompare(b.start)||a.id-b.id);
+ $('otherSchedules').hidden=!others.length;$('otherSummary').textContent='그 외 일정 · 행사 / 발송 / 취소 '+others.length+'건';for(const s of others){const li=node('li');li.append(openingButton(s,true));$('otherRows').append(li);}
+ return {total,count:monthItems.length};
+}
+
+const salesWorkbookTemplate={"parts": {"xl/workbook.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><x:workbook xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"><x:sheets><x:sheet name=\"매출집계\" sheetId=\"1\" r:id=\"R29092966a61241b6\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" /><x:sheet name=\"일정별매출\" sheetId=\"2\" r:id=\"R1be90651b14e4d03\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" /><\/x:sheets><\/x:workbook>", "xl/styles.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><x:styleSheet xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"><x:numFmts count=\"2\"><x:numFmt numFmtId=\"200\" formatCode=\"#,##0\" /><x:numFmt numFmtId=\"201\" formatCode=\"yyyy-mm-dd\" /><\/x:numFmts><x:fonts count=\"5\"><x:font><x:sz val=\"11\" /><x:name val=\"Carlito\" /><\/x:font><x:font><x:sz val=\"11\" /><x:color rgb=\"FF243044\" /><x:name val=\"Arial\" /><\/x:font><x:font><x:b /><x:sz val=\"18\" /><x:color rgb=\"FFFFFFFF\" /><x:name val=\"Arial\" /><\/x:font><x:font><x:sz val=\"10\" /><x:color rgb=\"FF526175\" /><x:name val=\"Arial\" /><\/x:font><x:font><x:b /><x:sz val=\"11\" /><x:color rgb=\"FF193653\" /><x:name val=\"Arial\" /><\/x:font><\/x:fonts><x:fills count=\"5\"><x:fill><x:patternFill patternType=\"none\" /><\/x:fill><x:fill><x:patternFill patternType=\"gray125\" /><\/x:fill><x:fill><x:patternFill patternType=\"solid\"><x:fgColor rgb=\"FF193653\" /><\/x:patternFill><\/x:fill><x:fill><x:patternFill patternType=\"solid\"><x:fgColor rgb=\"FFEAF0F8\" /><\/x:patternFill><\/x:fill><x:fill><x:patternFill patternType=\"solid\"><x:fgColor rgb=\"FFFFFFFF\" /><\/x:patternFill><\/x:fill><\/x:fills><x:borders count=\"3\"><x:border><x:left /><x:right /><x:top /><x:bottom /><x:diagonal /><\/x:border><x:border><x:left /><x:right /><x:top /><x:bottom style=\"thin\"><x:color rgb=\"FFB7C7DA\" /><\/x:bottom><x:diagonal /><\/x:border><x:border><x:left /><x:right /><x:top /><x:bottom style=\"thin\"><x:color rgb=\"FFE1E7EF\" /><\/x:bottom><x:diagonal /><\/x:border><\/x:borders><x:cellStyleXfs count=\"1\"><x:xf numFmtId=\"0\" fontId=\"0\" fillId=\"0\" borderId=\"0\" /><\/x:cellStyleXfs><x:cellXfs count=\"20\"><x:xf numFmtId=\"0\" fontId=\"0\" fillId=\"0\" borderId=\"0\" xfId=\"0\" /><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"2\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"0\" fontId=\"2\" fillId=\"2\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"0\" fontId=\"3\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"0\" fontId=\"3\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"3\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"0\" fontId=\"4\" fillId=\"3\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"0\" fontId=\"4\" fillId=\"3\" borderId=\"1\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"0\" fontId=\"4\" fillId=\"3\" borderId=\"1\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"4\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"4\" borderId=\"2\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"4\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"4\" borderId=\"2\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"4\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"4\" borderId=\"2\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"201\" fontId=\"1\" fillId=\"4\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"201\" fontId=\"1\" fillId=\"4\" borderId=\"2\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"4\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"4\" borderId=\"2\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment wrapText=\"1\" /><\/x:xf><\/x:cellXfs><x:cellStyles count=\"1\"><x:cellStyle name=\"Normal\" xfId=\"0\" /><\/x:cellStyles><\/x:styleSheet>", "xl/theme/theme1.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><a:theme name=\"ChatGPT\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:themeElements><a:clrScheme name=\"ChatGPT\"><a:dk1><a:sysClr val=\"windowText\" lastClr=\"000000\" /><\/a:dk1><a:lt1><a:sysClr val=\"window\" lastClr=\"FFFFFF\" /><\/a:lt1><a:dk2><a:srgbClr val=\"0E2841\" /><\/a:dk2><a:lt2><a:srgbClr val=\"E8E8E8\" /><\/a:lt2><a:accent1><a:srgbClr val=\"156082\" /><\/a:accent1><a:accent2><a:srgbClr val=\"E97132\" /><\/a:accent2><a:accent3><a:srgbClr val=\"196B24\" /><\/a:accent3><a:accent4><a:srgbClr val=\"0F9ED5\" /><\/a:accent4><a:accent5><a:srgbClr val=\"A02B93\" /><\/a:accent5><a:accent6><a:srgbClr val=\"4EA72E\" /><\/a:accent6><a:hlink><a:srgbClr val=\"467886\" /><\/a:hlink><a:folHlink><a:srgbClr val=\"96607D\" /><\/a:folHlink><\/a:clrScheme><a:fontScheme name=\"Office\"><a:majorFont><a:latin typeface=\"Calibri Light\" /><a:ea typeface=\"Calibri Light\" /><a:cs typeface=\"Calibri Light\" /><\/a:majorFont><a:minorFont><a:latin typeface=\"Calibri\" /><a:ea typeface=\"Calibri\" /><a:cs typeface=\"Calibri\" /><\/a:minorFont><\/a:fontScheme><a:fmtScheme name=\"ChatGPT\"><a:fillStyleLst><a:solidFill><a:schemeClr val=\"phClr\" /><\/a:solidFill><a:gradFill><a:gsLst><a:gs pos=\"0\"><a:schemeClr val=\"phClr\"><a:tint val=\"67000\" /><a:lumMod val=\"110000\" /><a:satMod val=\"105000\" /><\/a:schemeClr><\/a:gs><a:gs pos=\"50000\"><a:schemeClr val=\"phClr\"><a:tint val=\"73000\" /><a:lumMod val=\"105000\" /><a:satMod val=\"103000\" /><\/a:schemeClr><\/a:gs><a:gs pos=\"100000\"><a:schemeClr val=\"phClr\"><a:tint val=\"81000\" /><a:lumMod val=\"105000\" /><a:satMod val=\"109000\" /><\/a:schemeClr><\/a:gs><\/a:gsLst><a:lin ang=\"5400000\" scaled=\"0\" /><\/a:gradFill><a:gradFill><a:gsLst><a:gs pos=\"0\"><a:schemeClr val=\"phClr\"><a:tint val=\"94000\" /><a:lumMod val=\"102000\" /><a:satMod val=\"103000\" /><\/a:schemeClr><\/a:gs><a:gs pos=\"50000\"><a:schemeClr val=\"phClr\"><a:shade val=\"100000\" /><a:lumMod val=\"100000\" /><a:satMod val=\"110000\" /><\/a:schemeClr><\/a:gs><a:gs pos=\"100000\"><a:schemeClr val=\"phClr\"><a:shade val=\"78000\" /><a:lumMod val=\"99000\" /><a:satMod val=\"120000\" /><\/a:schemeClr><\/a:gs><\/a:gsLst><a:lin ang=\"5400000\" scaled=\"0\" /><\/a:gradFill><\/a:fillStyleLst><a:lnStyleLst><a:ln w=\"12700\"><a:solidFill><a:schemeClr val=\"phClr\" /><\/a:solidFill><a:prstDash val=\"solid\" /><\/a:ln><a:ln w=\"19050\"><a:solidFill><a:schemeClr val=\"phClr\" /><\/a:solidFill><a:prstDash val=\"solid\" /><\/a:ln><a:ln w=\"25400\"><a:solidFill><a:schemeClr val=\"phClr\" /><\/a:solidFill><a:prstDash val=\"solid\" /><\/a:ln><\/a:lnStyleLst><a:effectStyleLst><a:effectStyle><a:effectLst /><\/a:effectStyle><a:effectStyle><a:effectLst /><\/a:effectStyle><a:effectStyle><a:effectLst><a:outerShdw blurRad=\"57150\" dist=\"19050\" dir=\"5400000\"><a:srgbClr val=\"000000\"><a:alpha val=\"63000\" /><\/a:srgbClr><\/a:outerShdw><\/a:effectLst><\/a:effectStyle><\/a:effectStyleLst><a:bgFillStyleLst><a:solidFill><a:schemeClr val=\"phClr\" /><\/a:solidFill><a:solidFill><a:schemeClr val=\"phClr\"><a:tint val=\"95000\" /><a:satMod val=\"170000\" /><\/a:schemeClr><\/a:solidFill><a:gradFill><a:gsLst><a:gs pos=\"0\"><a:schemeClr val=\"phClr\"><a:tint val=\"93000\" /><a:shade val=\"98000\" /><a:lumMod val=\"102000\" /><a:satMod val=\"150000\" /><\/a:schemeClr><\/a:gs><a:gs pos=\"50000\"><a:schemeClr val=\"phClr\"><a:tint val=\"98000\" /><a:shade val=\"90000\" /><a:lumMod val=\"103000\" /><a:satMod val=\"130000\" /><\/a:schemeClr><\/a:gs><a:gs pos=\"100000\"><a:schemeClr val=\"phClr\"><a:shade val=\"63000\" /><a:satMod val=\"120000\" /><\/a:schemeClr><\/a:gs><\/a:gsLst><a:lin ang=\"5400000\" scaled=\"0\" /><\/a:gradFill><\/a:bgFillStyleLst><\/a:fmtScheme><\/a:themeElements><\/a:theme>", "xl/sharedStrings.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><x:sst xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" />", "xl/worksheets/sheet1.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><x:worksheet xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"><x:sheetViews><x:sheetView showGridLines=\"0\" workbookViewId=\"0\"><x:pane ySplit=\"5\" topLeftCell=\"A6\" activePane=\"bottomLeft\" state=\"frozen\" /><\/x:sheetView><\/x:sheetViews><x:sheetFormatPr defaultRowHeight=\"15\" /><x:cols><x:col min=\"1\" max=\"1\" width=\"24\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"2\" max=\"2\" width=\"30\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"3\" max=\"3\" width=\"14\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"4\" max=\"4\" width=\"17\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"5\" max=\"5\" width=\"23\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"6\" max=\"6\" width=\"21\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"7\" max=\"7\" width=\"15\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"8\" max=\"8\" width=\"15\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"9\" max=\"9\" width=\"15\" hidden=\"0\" customWidth=\"1\" /><\/x:cols><x:sheetData><x:row r=\"1\" ht=\"38\" customHeight=\"1\"><x:c r=\"A1\" s=\"3\" t=\"str\"><x:v>마케팅팀 공동구매 매출 집계<\/x:v><\/x:c><x:c r=\"B1\" s=\"3\" /><x:c r=\"C1\" s=\"3\" /><x:c r=\"D1\" s=\"3\" /><x:c r=\"E1\" s=\"3\" /><x:c r=\"F1\" s=\"3\" /><x:c r=\"G1\" s=\"3\" /><x:c r=\"H1\" s=\"3\" /><x:c r=\"I1\" s=\"3\" /><\/x:row><x:row r=\"2\" ht=\"30\" customHeight=\"1\"><x:c r=\"A2\" s=\"5\" t=\"str\"><x:v>선택 월 · 공구 시작일 기준 · 주차 일요일~토요일 · 취소 제외<\/x:v><\/x:c><x:c r=\"B2\" s=\"5\" /><x:c r=\"C2\" s=\"5\" /><x:c r=\"D2\" s=\"5\" /><x:c r=\"E2\" s=\"5\" /><x:c r=\"F2\" s=\"5\" /><x:c r=\"G2\" s=\"5\" /><x:c r=\"H2\" s=\"5\" /><x:c r=\"I2\" s=\"5\" /><\/x:row><x:row r=\"3\" ht=\"30\" customHeight=\"1\"><x:c r=\"A3\" s=\"5\" t=\"str\"><x:v>출처: 사내 일정에서 직접 입력한 판매건수와 매출액. 빈칸은 미입력, 0은 입력값.<\/x:v><\/x:c><x:c r=\"B3\" s=\"5\" /><x:c r=\"C3\" s=\"5\" /><x:c r=\"D3\" s=\"5\" /><x:c r=\"E3\" s=\"5\" /><x:c r=\"F3\" s=\"5\" /><x:c r=\"G3\" s=\"5\" /><x:c r=\"H3\" s=\"5\" /><x:c r=\"I3\" s=\"5\" /><\/x:row><x:row r=\"4\" ht=\"26\" customHeight=\"1\"><x:c r=\"A4\" s=\"1\" /><x:c r=\"B4\" s=\"1\" /><x:c r=\"C4\" s=\"1\" /><x:c r=\"D4\" s=\"1\" /><x:c r=\"E4\" s=\"1\" /><x:c r=\"F4\" s=\"1\" /><x:c r=\"G4\" s=\"1\" /><x:c r=\"H4\" s=\"1\" /><x:c r=\"I4\" s=\"1\" /><\/x:row><x:row r=\"5\" ht=\"38\" customHeight=\"1\"><x:c r=\"A5\" s=\"9\" t=\"str\"><x:v>집계구간<\/x:v><\/x:c><x:c r=\"B5\" s=\"9\" t=\"str\"><x:v>담당자<\/x:v><\/x:c><x:c r=\"C5\" s=\"9\" t=\"str\"><x:v>공구 건수<\/x:v><\/x:c><x:c r=\"D5\" s=\"9\" t=\"str\"><x:v>입력완료 공구<\/x:v><\/x:c><x:c r=\"E5\" s=\"9\" t=\"str\"><x:v>판매건수(건)<\/x:v><\/x:c><x:c r=\"F5\" s=\"9\" t=\"str\"><x:v>매출액(원)<\/x:v><\/x:c><x:c r=\"G5\" s=\"9\" t=\"str\"><x:v>미입력 공구<\/x:v><\/x:c><x:c r=\"H5\" s=\"9\" t=\"str\"><x:v>건수 미입력<\/x:v><\/x:c><x:c r=\"I5\" s=\"9\" t=\"str\"><x:v>금액 미입력<\/x:v><\/x:c><\/x:row><x:row r=\"6\" ht=\"26\" customHeight=\"1\"><x:c r=\"A6\" s=\"10\" t=\"str\"><x:v>월 전체<\/x:v><\/x:c><x:c r=\"B6\" s=\"10\" t=\"str\"><x:v>합계<\/x:v><\/x:c><x:c r=\"C6\" s=\"12\" t=\"n\"><x:v>1<\/x:v><\/x:c><x:c r=\"D6\" s=\"12\" t=\"n\"><x:v>1<\/x:v><\/x:c><x:c r=\"E6\" s=\"12\" t=\"n\"><x:v>0<\/x:v><\/x:c><x:c r=\"F6\" s=\"12\" t=\"n\"><x:v>0<\/x:v><\/x:c><x:c r=\"G6\" s=\"12\" t=\"n\"><x:v>0<\/x:v><\/x:c><x:c r=\"H6\" s=\"12\" t=\"n\"><x:v>0<\/x:v><\/x:c><x:c r=\"I6\" s=\"12\" t=\"n\"><x:v>0<\/x:v><\/x:c><\/x:row><x:row r=\"7\" ht=\"26\" customHeight=\"1\"><x:c r=\"A7\" s=\"10\" /><x:c r=\"B7\" s=\"10\" /><x:c r=\"C7\" s=\"12\" /><x:c r=\"D7\" s=\"12\" /><x:c r=\"E7\" s=\"12\" /><x:c r=\"F7\" s=\"12\" /><x:c r=\"G7\" s=\"12\" /><x:c r=\"H7\" s=\"12\" /><x:c r=\"I7\" s=\"12\" /><\/x:row><x:row r=\"8\" ht=\"26\" customHeight=\"1\"><x:c r=\"A8\" s=\"11\" /><x:c r=\"B8\" s=\"11\" /><x:c r=\"C8\" s=\"13\" /><x:c r=\"D8\" s=\"13\" /><x:c r=\"E8\" s=\"13\" /><x:c r=\"F8\" s=\"13\" /><x:c r=\"G8\" s=\"13\" /><x:c r=\"H8\" s=\"13\" /><x:c r=\"I8\" s=\"13\" /><\/x:row><\/x:sheetData><x:mergeCells><x:mergeCell ref=\"A1:I1\" /><x:mergeCell ref=\"A2:I2\" /><x:mergeCell ref=\"A3:I3\" /><\/x:mergeCells><x:pageMargins left=\"0.7\" right=\"0.7\" top=\"0.75\" bottom=\"0.75\" header=\"0.3\" footer=\"0.3\" /><\/x:worksheet>", "xl/worksheets/sheet2.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><x:worksheet xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"><x:sheetViews><x:sheetView showGridLines=\"0\" workbookViewId=\"0\"><x:pane ySplit=\"5\" topLeftCell=\"A6\" activePane=\"bottomLeft\" state=\"frozen\" /><\/x:sheetView><\/x:sheetViews><x:sheetFormatPr defaultRowHeight=\"15\" /><x:cols><x:col min=\"1\" max=\"1\" width=\"14\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"2\" max=\"2\" width=\"14\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"3\" max=\"3\" width=\"10\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"4\" max=\"4\" width=\"24\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"5\" max=\"5\" width=\"24\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"6\" max=\"6\" width=\"30\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"7\" max=\"7\" width=\"22\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"8\" max=\"8\" width=\"20\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"9\" max=\"9\" width=\"15\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"10\" max=\"10\" width=\"14\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"11\" max=\"11\" width=\"65\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"12\" max=\"12\" width=\"60\" hidden=\"0\" customWidth=\"1\" /><\/x:cols><x:sheetData><x:row r=\"1\" ht=\"38\" customHeight=\"1\"><x:c r=\"A1\" s=\"3\" t=\"str\"><x:v>일정별 판매 매출<\/x:v><\/x:c><x:c r=\"B1\" s=\"3\" /><x:c r=\"C1\" s=\"3\" /><x:c r=\"D1\" s=\"3\" /><x:c r=\"E1\" s=\"3\" /><x:c r=\"F1\" s=\"3\" /><x:c r=\"G1\" s=\"3\" /><x:c r=\"H1\" s=\"3\" /><x:c r=\"I1\" s=\"3\" /><x:c r=\"J1\" s=\"3\" /><x:c r=\"K1\" s=\"3\" /><x:c r=\"L1\" s=\"3\" /><\/x:row><x:row r=\"2\" ht=\"30\" customHeight=\"1\"><x:c r=\"A2\" s=\"5\" t=\"str\"><x:v>선택 월 · 공구 시작일 기준 · 주차 일요일~토요일 · 취소 제외<\/x:v><\/x:c><x:c r=\"B2\" s=\"5\" /><x:c r=\"C2\" s=\"5\" /><x:c r=\"D2\" s=\"5\" /><x:c r=\"E2\" s=\"5\" /><x:c r=\"F2\" s=\"5\" /><x:c r=\"G2\" s=\"5\" /><x:c r=\"H2\" s=\"5\" /><x:c r=\"I2\" s=\"5\" /><x:c r=\"J2\" s=\"5\" /><x:c r=\"K2\" s=\"5\" /><x:c r=\"L2\" s=\"5\" /><\/x:row><x:row r=\"3\" ht=\"30\" customHeight=\"1\"><x:c r=\"A3\" s=\"5\" t=\"str\"><x:v>출처: 사내 일정에서 직접 입력한 판매건수와 매출액. 빈칸은 미입력, 0은 입력값.<\/x:v><\/x:c><x:c r=\"B3\" s=\"5\" /><x:c r=\"C3\" s=\"5\" /><x:c r=\"D3\" s=\"5\" /><x:c r=\"E3\" s=\"5\" /><x:c r=\"F3\" s=\"5\" /><x:c r=\"G3\" s=\"5\" /><x:c r=\"H3\" s=\"5\" /><x:c r=\"I3\" s=\"5\" /><x:c r=\"J3\" s=\"5\" /><x:c r=\"K3\" s=\"5\" /><x:c r=\"L3\" s=\"5\" /><\/x:row><x:row r=\"4\" ht=\"26\" customHeight=\"1\"><x:c r=\"A4\" s=\"1\" /><x:c r=\"B4\" s=\"1\" /><x:c r=\"C4\" s=\"1\" /><x:c r=\"D4\" s=\"1\" /><x:c r=\"E4\" s=\"1\" /><x:c r=\"F4\" s=\"1\" /><x:c r=\"G4\" s=\"1\" /><x:c r=\"H4\" s=\"1\" /><x:c r=\"I4\" s=\"1\" /><x:c r=\"J4\" s=\"1\" /><x:c r=\"K4\" s=\"1\" /><x:c r=\"L4\" s=\"1\" /><\/x:row><x:row r=\"5\" ht=\"38\" customHeight=\"1\"><x:c r=\"A5\" s=\"9\" t=\"str\"><x:v>시작일<\/x:v><\/x:c><x:c r=\"B5\" s=\"9\" t=\"str\"><x:v>종료일<\/x:v><\/x:c><x:c r=\"C5\" s=\"9\" t=\"str\"><x:v>주차<\/x:v><\/x:c><x:c r=\"D5\" s=\"9\" t=\"str\"><x:v>닉네임<\/x:v><\/x:c><x:c r=\"E5\" s=\"9\" t=\"str\"><x:v>상품<\/x:v><\/x:c><x:c r=\"F5\" s=\"9\" t=\"str\"><x:v>담당자<\/x:v><\/x:c><x:c r=\"G5\" s=\"9\" t=\"str\"><x:v>판매건수(건)<\/x:v><\/x:c><x:c r=\"H5\" s=\"9\" t=\"str\"><x:v>매출액(원)<\/x:v><\/x:c><x:c r=\"I5\" s=\"9\" t=\"str\"><x:v>입력현황<\/x:v><\/x:c><x:c r=\"J5\" s=\"9\" t=\"str\"><x:v>일정색상<\/x:v><\/x:c><x:c r=\"K5\" s=\"9\" t=\"str\"><x:v>원본 일정명<\/x:v><\/x:c><x:c r=\"L5\" s=\"9\" t=\"str\"><x:v>원본 확인사항<\/x:v><\/x:c><\/x:row><x:row r=\"6\" ht=\"26\" customHeight=\"1\"><x:c r=\"A6\" s=\"16\" t=\"n\"><x:v>46035<\/x:v><\/x:c><x:c r=\"B6\" s=\"16\" t=\"n\"><x:v>46037<\/x:v><\/x:c><x:c r=\"C6\" s=\"14\" t=\"str\"><x:v>3주차<\/x:v><\/x:c><x:c r=\"D6\" s=\"14\" t=\"str\"><x:v>검증_A<\/x:v><\/x:c><x:c r=\"E6\" s=\"14\" t=\"str\"><x:v>멀티보드<\/x:v><\/x:c><x:c r=\"F6\" s=\"14\" t=\"str\"><x:v>A<\/x:v><\/x:c><x:c r=\"G6\" s=\"18\" t=\"n\"><x:v>0<\/x:v><\/x:c><x:c r=\"H6\" s=\"18\" t=\"n\"><x:v>0<\/x:v><\/x:c><x:c r=\"I6\" s=\"14\" t=\"str\"><x:v>입력 완료<\/x:v><\/x:c><x:c r=\"J6\" s=\"14\" t=\"str\"><x:v>#3fa9f5<\/x:v><\/x:c><x:c r=\"K6\" s=\"14\" t=\"str\"><x:v>검증_A - 멀티보드<\/x:v><\/x:c><x:c r=\"L6\" s=\"14\" t=\"str\" /><\/x:row><x:row r=\"7\" ht=\"26\" customHeight=\"1\"><x:c r=\"A7\" s=\"16\" /><x:c r=\"B7\" s=\"16\" /><x:c r=\"C7\" s=\"14\" /><x:c r=\"D7\" s=\"14\" /><x:c r=\"E7\" s=\"14\" /><x:c r=\"F7\" s=\"14\" /><x:c r=\"G7\" s=\"18\" /><x:c r=\"H7\" s=\"18\" /><x:c r=\"I7\" s=\"14\" /><x:c r=\"J7\" s=\"14\" /><x:c r=\"K7\" s=\"14\" /><x:c r=\"L7\" s=\"14\" /><\/x:row><x:row r=\"8\" ht=\"26\" customHeight=\"1\"><x:c r=\"A8\" s=\"17\" /><x:c r=\"B8\" s=\"17\" /><x:c r=\"C8\" s=\"15\" /><x:c r=\"D8\" s=\"15\" /><x:c r=\"E8\" s=\"15\" /><x:c r=\"F8\" s=\"15\" /><x:c r=\"G8\" s=\"19\" /><x:c r=\"H8\" s=\"19\" /><x:c r=\"I8\" s=\"15\" /><x:c r=\"J8\" s=\"15\" /><x:c r=\"K8\" s=\"15\" /><x:c r=\"L8\" s=\"15\" /><\/x:row><\/x:sheetData><x:mergeCells><x:mergeCell ref=\"A1:L1\" /><x:mergeCell ref=\"A2:L2\" /><x:mergeCell ref=\"A3:L3\" /><\/x:mergeCells><x:pageMargins left=\"0.7\" right=\"0.7\" top=\"0.75\" bottom=\"0.75\" header=\"0.3\" footer=\"0.3\" /><\/x:worksheet>", "_rels/.rels": "﻿<?xml version=\"1.0\" encoding=\"utf-8\"?><Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\"><Relationship Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument\" Target=\"/xl/workbook.xml\" Id=\"R3a560f7bd3814c20\" /><\/Relationships>", "xl/_rels/workbook.xml.rels": "﻿<?xml version=\"1.0\" encoding=\"utf-8\"?><Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\"><Relationship Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles\" Target=\"/xl/styles.xml\" Id=\"R9a0170ab2e3448c2\" /><Relationship Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme\" Target=\"/xl/theme/theme1.xml\" Id=\"Rf6057219ec7b4705\" /><Relationship Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/sharedStrings\" Target=\"/xl/sharedStrings.xml\" Id=\"R9c5ee89a961a4d2e\" /><Relationship Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet\" Target=\"/xl/worksheets/sheet1.xml\" Id=\"R29092966a61241b6\" /><Relationship Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet\" Target=\"/xl/worksheets/sheet2.xml\" Id=\"R1be90651b14e4d03\" /><\/Relationships>", "[Content_Types].xml": "﻿<?xml version=\"1.0\" encoding=\"utf-8\"?><Types xmlns=\"http://schemas.openxmlformats.org/package/2006/content-types\"><Default Extension=\"xml\" ContentType=\"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml\" /><Default Extension=\"rels\" ContentType=\"application/vnd.openxmlformats-package.relationships+xml\" /><Override PartName=\"/xl/styles.xml\" ContentType=\"application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml\" /><Override PartName=\"/xl/theme/theme1.xml\" ContentType=\"application/vnd.openxmlformats-officedocument.theme+xml\" /><Override PartName=\"/xl/sharedStrings.xml\" ContentType=\"application/vnd.openxmlformats-officedocument.spreadsheetml.sharedStrings+xml\" /><Override PartName=\"/xl/worksheets/sheet1.xml\" ContentType=\"application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml\" /><Override PartName=\"/xl/worksheets/sheet2.xml\" ContentType=\"application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml\" /><\/Types>"}, "sheets": [{"prefix": "<?xml version=\"1.0\" encoding=\"utf-8\"?><x:worksheet xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"><x:sheetViews><x:sheetView showGridLines=\"0\" workbookViewId=\"0\"><x:pane ySplit=\"5\" topLeftCell=\"A6\" activePane=\"bottomLeft\" state=\"frozen\" /><\/x:sheetView><\/x:sheetViews><x:sheetFormatPr defaultRowHeight=\"15\" /><x:cols><x:col min=\"1\" max=\"1\" width=\"24\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"2\" max=\"2\" width=\"30\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"3\" max=\"3\" width=\"14\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"4\" max=\"4\" width=\"17\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"5\" max=\"5\" width=\"23\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"6\" max=\"6\" width=\"21\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"7\" max=\"7\" width=\"15\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"8\" max=\"8\" width=\"15\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"9\" max=\"9\" width=\"15\" hidden=\"0\" customWidth=\"1\" /><\/x:cols>", "suffix": "<x:mergeCells><x:mergeCell ref=\"A1:I1\" /><x:mergeCell ref=\"A2:I2\" /><x:mergeCell ref=\"A3:I3\" /><\/x:mergeCells><x:pageMargins left=\"0.7\" right=\"0.7\" top=\"0.75\" bottom=\"0.75\" header=\"0.3\" footer=\"0.3\" /><\/x:worksheet>", "top": "<x:row r=\"1\" ht=\"38\" customHeight=\"1\"><x:c r=\"A1\" s=\"3\" t=\"str\"><x:v>__REPORT_TITLE__<\/x:v><\/x:c><x:c r=\"B1\" s=\"3\" /><x:c r=\"C1\" s=\"3\" /><x:c r=\"D1\" s=\"3\" /><x:c r=\"E1\" s=\"3\" /><x:c r=\"F1\" s=\"3\" /><x:c r=\"G1\" s=\"3\" /><x:c r=\"H1\" s=\"3\" /><x:c r=\"I1\" s=\"3\" /><\/x:row><x:row r=\"2\" ht=\"30\" customHeight=\"1\"><x:c r=\"A2\" s=\"5\" t=\"str\"><x:v>__REPORT_SCOPE__<\/x:v><\/x:c><x:c r=\"B2\" s=\"5\" /><x:c r=\"C2\" s=\"5\" /><x:c r=\"D2\" s=\"5\" /><x:c r=\"E2\" s=\"5\" /><x:c r=\"F2\" s=\"5\" /><x:c r=\"G2\" s=\"5\" /><x:c r=\"H2\" s=\"5\" /><x:c r=\"I2\" s=\"5\" /><\/x:row><x:row r=\"3\" ht=\"30\" customHeight=\"1\"><x:c r=\"A3\" s=\"5\" t=\"str\"><x:v>출처: 사내 일정에서 직접 입력한 판매건수와 매출액. 빈칸은 미입력, 0은 입력값.<\/x:v><\/x:c><x:c r=\"B3\" s=\"5\" /><x:c r=\"C3\" s=\"5\" /><x:c r=\"D3\" s=\"5\" /><x:c r=\"E3\" s=\"5\" /><x:c r=\"F3\" s=\"5\" /><x:c r=\"G3\" s=\"5\" /><x:c r=\"H3\" s=\"5\" /><x:c r=\"I3\" s=\"5\" /><\/x:row><x:row r=\"4\" ht=\"26\" customHeight=\"1\"><x:c r=\"A4\" s=\"1\" /><x:c r=\"B4\" s=\"1\" /><x:c r=\"C4\" s=\"1\" /><x:c r=\"D4\" s=\"1\" /><x:c r=\"E4\" s=\"1\" /><x:c r=\"F4\" s=\"1\" /><x:c r=\"G4\" s=\"1\" /><x:c r=\"H4\" s=\"1\" /><x:c r=\"I4\" s=\"1\" /><\/x:row><x:row r=\"5\" ht=\"38\" customHeight=\"1\"><x:c r=\"A5\" s=\"9\" t=\"str\"><x:v>집계구간<\/x:v><\/x:c><x:c r=\"B5\" s=\"9\" t=\"str\"><x:v>담당자<\/x:v><\/x:c><x:c r=\"C5\" s=\"9\" t=\"str\"><x:v>공구 건수<\/x:v><\/x:c><x:c r=\"D5\" s=\"9\" t=\"str\"><x:v>입력완료 공구<\/x:v><\/x:c><x:c r=\"E5\" s=\"9\" t=\"str\"><x:v>판매건수(건)<\/x:v><\/x:c><x:c r=\"F5\" s=\"9\" t=\"str\"><x:v>매출액(원)<\/x:v><\/x:c><x:c r=\"G5\" s=\"9\" t=\"str\"><x:v>미입력 공구<\/x:v><\/x:c><x:c r=\"H5\" s=\"9\" t=\"str\"><x:v>건수 미입력<\/x:v><\/x:c><x:c r=\"I5\" s=\"9\" t=\"str\"><x:v>금액 미입력<\/x:v><\/x:c><\/x:row>", "bodyStyle": "10", "numberStyle": "12", "dateStyle": "0"}, {"prefix": "<?xml version=\"1.0\" encoding=\"utf-8\"?><x:worksheet xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"><x:sheetViews><x:sheetView showGridLines=\"0\" workbookViewId=\"0\"><x:pane ySplit=\"5\" topLeftCell=\"A6\" activePane=\"bottomLeft\" state=\"frozen\" /><\/x:sheetView><\/x:sheetViews><x:sheetFormatPr defaultRowHeight=\"15\" /><x:cols><x:col min=\"1\" max=\"1\" width=\"14\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"2\" max=\"2\" width=\"14\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"3\" max=\"3\" width=\"10\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"4\" max=\"4\" width=\"24\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"5\" max=\"5\" width=\"24\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"6\" max=\"6\" width=\"30\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"7\" max=\"7\" width=\"22\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"8\" max=\"8\" width=\"20\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"9\" max=\"9\" width=\"15\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"10\" max=\"10\" width=\"14\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"11\" max=\"11\" width=\"65\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"12\" max=\"12\" width=\"60\" hidden=\"0\" customWidth=\"1\" /><\/x:cols>", "suffix": "<x:mergeCells><x:mergeCell ref=\"A1:L1\" /><x:mergeCell ref=\"A2:L2\" /><x:mergeCell ref=\"A3:L3\" /><\/x:mergeCells><x:pageMargins left=\"0.7\" right=\"0.7\" top=\"0.75\" bottom=\"0.75\" header=\"0.3\" footer=\"0.3\" /><\/x:worksheet>", "top": "<x:row r=\"1\" ht=\"38\" customHeight=\"1\"><x:c r=\"A1\" s=\"3\" t=\"str\"><x:v>__REPORT_TITLE__<\/x:v><\/x:c><x:c r=\"B1\" s=\"3\" /><x:c r=\"C1\" s=\"3\" /><x:c r=\"D1\" s=\"3\" /><x:c r=\"E1\" s=\"3\" /><x:c r=\"F1\" s=\"3\" /><x:c r=\"G1\" s=\"3\" /><x:c r=\"H1\" s=\"3\" /><x:c r=\"I1\" s=\"3\" /><x:c r=\"J1\" s=\"3\" /><x:c r=\"K1\" s=\"3\" /><x:c r=\"L1\" s=\"3\" /><\/x:row><x:row r=\"2\" ht=\"30\" customHeight=\"1\"><x:c r=\"A2\" s=\"5\" t=\"str\"><x:v>__REPORT_SCOPE__<\/x:v><\/x:c><x:c r=\"B2\" s=\"5\" /><x:c r=\"C2\" s=\"5\" /><x:c r=\"D2\" s=\"5\" /><x:c r=\"E2\" s=\"5\" /><x:c r=\"F2\" s=\"5\" /><x:c r=\"G2\" s=\"5\" /><x:c r=\"H2\" s=\"5\" /><x:c r=\"I2\" s=\"5\" /><x:c r=\"J2\" s=\"5\" /><x:c r=\"K2\" s=\"5\" /><x:c r=\"L2\" s=\"5\" /><\/x:row><x:row r=\"3\" ht=\"30\" customHeight=\"1\"><x:c r=\"A3\" s=\"5\" t=\"str\"><x:v>출처: 사내 일정에서 직접 입력한 판매건수와 매출액. 빈칸은 미입력, 0은 입력값.<\/x:v><\/x:c><x:c r=\"B3\" s=\"5\" /><x:c r=\"C3\" s=\"5\" /><x:c r=\"D3\" s=\"5\" /><x:c r=\"E3\" s=\"5\" /><x:c r=\"F3\" s=\"5\" /><x:c r=\"G3\" s=\"5\" /><x:c r=\"H3\" s=\"5\" /><x:c r=\"I3\" s=\"5\" /><x:c r=\"J3\" s=\"5\" /><x:c r=\"K3\" s=\"5\" /><x:c r=\"L3\" s=\"5\" /><\/x:row><x:row r=\"4\" ht=\"26\" customHeight=\"1\"><x:c r=\"A4\" s=\"1\" /><x:c r=\"B4\" s=\"1\" /><x:c r=\"C4\" s=\"1\" /><x:c r=\"D4\" s=\"1\" /><x:c r=\"E4\" s=\"1\" /><x:c r=\"F4\" s=\"1\" /><x:c r=\"G4\" s=\"1\" /><x:c r=\"H4\" s=\"1\" /><x:c r=\"I4\" s=\"1\" /><x:c r=\"J4\" s=\"1\" /><x:c r=\"K4\" s=\"1\" /><x:c r=\"L4\" s=\"1\" /><\/x:row><x:row r=\"5\" ht=\"38\" customHeight=\"1\"><x:c r=\"A5\" s=\"9\" t=\"str\"><x:v>시작일<\/x:v><\/x:c><x:c r=\"B5\" s=\"9\" t=\"str\"><x:v>종료일<\/x:v><\/x:c><x:c r=\"C5\" s=\"9\" t=\"str\"><x:v>주차<\/x:v><\/x:c><x:c r=\"D5\" s=\"9\" t=\"str\"><x:v>닉네임<\/x:v><\/x:c><x:c r=\"E5\" s=\"9\" t=\"str\"><x:v>상품<\/x:v><\/x:c><x:c r=\"F5\" s=\"9\" t=\"str\"><x:v>담당자<\/x:v><\/x:c><x:c r=\"G5\" s=\"9\" t=\"str\"><x:v>판매건수(건)<\/x:v><\/x:c><x:c r=\"H5\" s=\"9\" t=\"str\"><x:v>매출액(원)<\/x:v><\/x:c><x:c r=\"I5\" s=\"9\" t=\"str\"><x:v>입력현황<\/x:v><\/x:c><x:c r=\"J5\" s=\"9\" t=\"str\"><x:v>일정색상<\/x:v><\/x:c><x:c r=\"K5\" s=\"9\" t=\"str\"><x:v>원본 일정명<\/x:v><\/x:c><x:c r=\"L5\" s=\"9\" t=\"str\"><x:v>원본 확인사항<\/x:v><\/x:c><\/x:row>", "bodyStyle": "14", "numberStyle": "18", "dateStyle": "16"}]};
+
+/* Sales use explicit entered values, never source product prices. */
+const countLimit=1000000000,amountLimit=1000000000000;
+function salesValue(value,limit){return typeof value==='number'&&Number.isSafeInteger(value)&&value>=0&&value<=limit?value:null;}
+function salesOf(s){return {count:salesValue(s.salesCount,countLimit),amount:salesValue(s.salesAmount,amountLimit)};}
+function salesComplete(s){const v=salesOf(s);return v.count!==null&&v.amount!==null;}
+function summarizeSales(items){let count=0,amount=0,countEntered=0,amountEntered=0,complete=0;for(const s of items){const v=salesOf(s);if(v.count!==null){count+=v.count;countEntered++;}if(v.amount!==null){amount+=v.amount;amountEntered++;}if(salesComplete(s))complete++;}return {total:items.length,count:countEntered?count:null,amount:amountEntered?amount:null,countEntered,amountEntered,complete,missing:items.length-complete};}
+function salesText(value,unit){return value===null?'미입력':value.toLocaleString('ko-KR')+unit;}
+function salesLabel(s){const v=salesOf(s);return v.count===null&&v.amount===null?'매출 미입력':salesText(v.count,'건')+' · '+salesText(v.amount,'원');}
+function salesMatches(s){const mode=$('salesFilter').value;return !mode||(s.type==='공동구매'&&s.status!=='취소'&&(mode==='complete'?salesComplete(s):!salesComplete(s)));}
+/* Campaign-wide sales: this view does not split orders by transaction date. */
+function salesScope(){return $('salesScope').value==='start'?'start':'active';}
+function salesScopeLabel(){return salesScope()==='start'?'공구 시작일 기준':'선택 월에 진행한 공구 기준';}
+function currentMonthPeriod(){return {first:iso(new Date(Date.UTC(year,month,1))),last:iso(new Date(Date.UTC(year,month+1,0)))};}
+function currentSalesItems(scope=salesScope()){
+ const {first,last}=currentMonthPeriod();
+ return schedules.filter(s=>s.type==='공동구매'&&s.status!=='취소'&&(scope==='start'?s.start>=first&&s.start<=last:s.start<=last&&s.end>=first)).sort((a,b)=>a.start.localeCompare(b.start)||a.id-b.id);
+}
+function salesWeeks(items=currentSalesItems()){
+ const first=new Date(Date.UTC(year,month,1)),last=new Date(Date.UTC(year,month+1,0)),start=shift(first,-first.getUTCDay()),n=Math.ceil((first.getUTCDay()+last.getUTCDate())/7);
+ return Array.from({length:n},(_,i)=>{const ws=shift(start,i*7),we=shift(ws,6);return {index:i+1,start:iso(new Date(Math.max(first,ws))),end:iso(new Date(Math.min(last,we))),items:items.filter(s=>i===0&&date(s.start)<first||date(s.start)>=ws&&date(s.start)<=we)};});
+}
+function salesViewContext(){
+ const monthItems=currentSalesItems(),weeks=salesWeeks(monthItems),weekly=workView==='week';
+ if(!weekly)return {weekly,items:monthItems,weeks,week:null,index:null,label:(month+1)+'월'};
+ const range=ensureWeeklyAnchor(),index=Math.round((range.start-range.gridStart)/dayMs/7)+1,week=weeks.find(w=>w.index===index);
+ return {weekly,items:week?week.items:[],weeks,week,index,label:(month+1)+'월 '+index+'주차'};
+}
+function renderSales(){
+ updateSalesCollapsedSummary();
+ const context=salesViewContext(),items=context.items,v=summarizeSales(items),{first}=currentMonthPeriod(),carry=currentSalesItems('active').filter(s=>s.start<first);
+ $('salesMonthTitle').textContent=context.weekly?context.label+' 종합 매출':(month+1)+'월 매출 종합';
+ $('monthSalesSummary').setAttribute('aria-label',context.weekly?context.label+' 매출 집계':'월별 주차별 매출 집계');
+ $('salesBreakdown').hidden=context.weekly;document.querySelector('#monthSalesSummary .export-actions').hidden=context.weekly;
+ $('salesScopeDescription').textContent=(context.weekly?'전체일정의 해당 주차 집계와 동일 · ':'')+salesScopeLabel()+' · 취소 제외 · 검색·필터와 관계없이 전체 입력값 합계';
+ $('salesScopeNote').textContent=context.weekly?
+  (context.week?openingDate(context.week.start)+' ~ '+openingDate(context.week.end):'해당 주차 없음')+' · 공구 전체 실적 기준'+(items.some(s=>s.start<first)?' · 전월 시작 공구 '+items.filter(s=>s.start<first).length+'개 포함':''):
+  salesScope()==='active'?'전월 시작 공구 '+carry.length+'개 포함 · 공구 전체 실적을 표시하며, 주문일별로 월 매출을 나누지는 않습니다.':'전월 시작 공구 '+carry.length+'개는 시작월 매출에 포함됩니다.';
+ $('salesMonthCount').textContent=salesText(v.count,'건');$('salesMonthAmount').textContent=salesText(v.amount,'원');
+ $('salesCountCoverage').textContent=v.countEntered+'/'+v.total+'개 공구 입력 · 미입력 '+(v.total-v.countEntered)+'개';
+ $('salesAmountCoverage').textContent=v.amountEntered+'/'+v.total+'개 공구 입력 · 미입력 '+(v.total-v.amountEntered)+'개';
+ $('salesMonthComplete').textContent=v.complete+' / '+v.total+'개';
+ $('salesWeeklyCaption').textContent='선택 월의 '+salesScopeLabel()+' 주차별 판매 매출. 전월 시작 공구는 첫 주에 한 번 집계합니다.';
+ renderSkuSales(items,first);
+ document.querySelectorAll('.opening-sales,.opening-week-sales').forEach(el=>el.remove());
+ for(const button of document.querySelectorAll('.opening-item')){
+  const s=schedules.find(s=>s.id===Number(button.dataset.scheduleId));if(!s||s.type!=='공동구매'||s.status==='취소')continue;
+  button.append(node('span',salesLabel(s),'opening-sales'+(!salesComplete(s)?' missing':'')));
+  button.setAttribute('aria-label',openingLine(s)+' · '+openingDate(s.start)+' 시작 · '+salesLabel(s));
+ }
+ for(const section of document.querySelectorAll('.opening-week')){
+  const rows=[...section.querySelectorAll('.opening-item')].map(b=>schedules.find(s=>s.id===Number(b.dataset.scheduleId))),t=summarizeSales(rows);
+  section.querySelector('.opening-week-head').append(node('span','표시 일정 매출 · '+salesText(t.count,'건')+' · '+salesText(t.amount,'원')+' · 입력 완료 '+t.complete+'/'+t.total+'개','opening-week-sales'));
+ }
+ refreshSelected();
+}
+function selectedSalesSummary(s){
+ if(s.type!=='공동구매')return '공동구매 매출 집계 대상이 아닙니다.';
+ if(s.status==='취소')return '취소 일정은 매출 집계에서 제외됩니다.';
+ if(!salesComplete(s))return '편집에서 판매건수와 매출액을 입력하세요.';
+ const context=salesViewContext(),included=context.items.some(row=>row.id===s.id);
+ return '입력 완료 · '+(included?context.label+' 매출 집계에 반영':'현재 매출 집계 범위에서 제외');
+}
+
+function calendarTitle(s){if(s.type!=='공동구매')return s.title;const f=openingFields(s);return (s.status==='취소'?'[취소] ':'')+'@'+(f.nickname||'닉네임 확인 필요')+' : '+f.product+notesSuffix(s.specialNotes);}
+function activateSide(which){const selected=which==='selected'&&selectedScheduleId!==null;$('selectedPanel').hidden=!selected;$('filterPanel').hidden=selected;$('selectedTab').setAttribute('aria-selected',String(selected));$('filterTab').setAttribute('aria-selected',String(!selected));document.querySelector('.layout').classList.toggle('has-selection',selected);$('selectedTab').tabIndex=selected?0:-1;$('filterTab').tabIndex=selected?-1:0;}
+function refreshSelected(){
+ const s=schedules.find(s=>s.id===selectedScheduleId);
+ $('selectedTab').disabled=!s;$('closeSelection').hidden=!s;
+ document.querySelectorAll('.event,.opening-item,.sku-schedule-button,.groupbuy-schedule-button').forEach(el=>{const on=!!s&&Number(el.dataset.scheduleId)===s.id;el.classList.toggle('selected',on);el.setAttribute('aria-pressed',String(on));});
+ if(!s){activateSide('filter');return;}
+ const f=openingFields(s);$('selectedHandle').textContent=s.type==='공동구매'?'@'+(f.nickname||'닉네임 확인 필요'):workTypeLabel(s.type);$('selectedProduct').textContent=s.type==='공동구매'?f.product:s.title;
+ $('selectedOwner').textContent=scheduleOwnerName(s);$('selectedOwnerDot').style.background=scheduleColor(s);
+ $('selectedDetails').replaceChildren();const pairs=[['시작',s.start.replaceAll('-','.')+' '+openingDate(s.start).slice(-3)],['종료',s.end.replaceAll('-','.')+' '+openingDate(s.end).slice(-3)],['유형',workTypeLabel(s.type)]];if(s.typeClassification?.type===s.type&&s.typeClassification.rule==='payback-keyword')pairs.push(['분류 근거','페이백 포함']);if(s.typeClassification?.type===s.type&&s.typeClassification.rule==='nickname-name-product')pairs.push(['분류 근거','닉네임(이름) + 상품·차수']);if(s.category)pairs.push(['카테고리',s.category]);if(!s.allDay&&(s.startTime||s.endTime))pairs.push(['시간',[s.startTime,s.endTime].filter(Boolean).join(' ~ ')+(s.timezone?' ('+s.timezone+')':'')]);if(s.colorUnresolved)pairs.push(['원본 색상','색상 코드 '+(s.sourceCsv?.sourceColorCode||'미확인')+' · 미확정']);if(s.partner)pairs.push(['거래처',s.partner]);if(s.specialNotes?.trim())pairs.push(['특이사항',s.specialNotes.trim()]);if(s.status==='취소')pairs.push(['취소',s.reason||'취소 일정']);for(const [k,v] of pairs)$('selectedDetails').append(node('dt',k),node('dd',v));
+ const sales=salesOf(s);$('selectedSalesCount').textContent=salesText(sales.count,'건');$('selectedSalesAmount').textContent=salesText(sales.amount,'원');$('selectedSalesNote').textContent=selectedSalesSummary(s);
+ $('selectedColorDot').style.background=scheduleColor(s);$('selectedColor').textContent='일정 색상 '+scheduleColor(s).toUpperCase();
+}
+function openDetail(s){selectedScheduleId=s.id;refreshSelected();activateSide('filter');pulseScheduleSelection(s.id);openEdit();}
+let editInitial=null;
+function editTitleValue(s){if(s.influencer)return s.influencer;if(s.type!=='공동구매')return scheduleTitleBase(s);const f=openingFields(s);const handle=f.nickname;const match=s.title.match(/([A-Za-z0-9_.]+)\s*([（(][^）)]*[）)])/);return match&&(match[1]===handle||s.listVerifiedAt)?handle+match[2]:handle||scheduleTitleBase(s);}
+function openEdit(){const s=schedules.find(s=>s.id===selectedScheduleId);if(!s)return;const f=openingFields(s);$('detailTitle').textContent=calendarTitle(s);$('details').replaceChildren();$('editTitle').value=editTitleValue(s);$('editProduct').value=s.type==='공동구매'?f.product==='상품 확인 필요'?'':f.product:s.product||'';$('editType').value=s.type;$('editStart').value=s.start;$('editEnd').value=s.end;$('editCanceled').checked=s.status==='취소';$('editNotes').value=s.specialNotes||'';const v=salesOf(s);$('editSalesCount').value=v.count===null?'':v.count.toLocaleString('ko-KR');$('editSalesAmount').value=v.amount===null?'':v.amount.toLocaleString('ko-KR');$('detailOwner').value=s.owner;$('detailColor').value=scheduleColor(s);$('editError').textContent='';editInitial={id:s.id,title:$('editTitle').value,product:$('editProduct').value,type:s.type,notes:$('editNotes').value};updateColorPreview('detail',$('detailColor').value,composeScheduleTitle($('editTitle').value,$('editProduct').value,$('editNotes').value),$('detailOwner').value);if(!$('detailDialog').open)$('detailDialog').showModal();$('detailDialog').querySelector('.dialog-body').scrollTop=0;$('editTitle').focus({preventScroll:true});}
+function readSalesInputs(countRaw,amountRaw){
+ const read=(raw,limit,label)=>{
+  const value=raw.trim();if(value==='')return null;
+  if(!/^(?:\d+|\d{1,3}(?:,\d{3})+)$/.test(value))throw new Error(label+'은 0 이상의 정수로 입력해주세요.');
+  const n=Number(value.replaceAll(',',''));
+  if(!Number.isSafeInteger(n)||n>limit)throw new Error(label+' 입력 범위를 확인해주세요.');
+  return n;
+ };
+ return {salesCount:read(countRaw,countLimit,'판매건수'),salesAmount:read(amountRaw,amountLimit,'매출액')};
+}
+function validPeriod(start,end){return /^\d{4}-\d{2}-\d{2}$/.test(start)&&/^\d{4}-\d{2}-\d{2}$/.test(end)&&!Number.isNaN(date(start).getTime())&&!Number.isNaN(date(end).getTime())&&iso(date(start))===start&&iso(date(end))===end&&end>=start;}
+function saveEdit(){const s=schedules.find(s=>s.id===selectedScheduleId);if(!s||!editInitial||editInitial.id!==s.id)return;try{const title=$('editTitle').value.trim(),product=$('editProduct').value.trim(),notes=$('editNotes').value.trim(),start=$('editStart').value,end=$('editEnd').value;if(!title)throw new Error('일정명을 입력해주세요.');if(!validPeriod(start,end))throw new Error('시작일과 종료일을 확인해주세요.');if(!ownerOrder.includes($('detailOwner').value)||!workTypeOrder.includes($('editType').value))throw new Error('담당자와 업무유형을 확인해주세요.');const sales=readSalesInputs($('editSalesCount').value,$('editSalesAmount').value);if(title!==editInitial.title||product!==editInitial.product||$('editType').value!==editInitial.type){if(s.imported&&!s.originalTitle)s.originalTitle=s.title;s.influencer=title;s.product=product;s.title=composeScheduleTitle(title,product,notes);s.autoComposed=true;s.listNickname=title.replace(/^@+/,'').split(/[（(]/)[0].trim();s.listProduct=product;}else if(notes!==editInitial.notes){if(s.imported&&!s.originalTitle)s.originalTitle=s.title;s.title=appendScheduleNotes(scheduleTitleBase(s),notes);}Object.assign(s,sales,{specialNotes:notes,owner:$('detailOwner').value,color:$('detailColor').value,type:$('editType').value,start,end,status:$('editCanceled').checked?'취소':s.status==='취소'?'미표기':s.status});$('detailDialog').close();render();activateSide('filter');pulseScheduleSelection(s.id);showScheduleToast('일정 수정 완료',s.title+' 일정이 수정 완료되었습니다.');}catch(err){$('editError').textContent=err.message;}}
+/* Excel snapshot fills the artifact-tool-authored, embedded workbook template. */
+function xmlText(value){return String(value).replace(/[\u0000-\u0008\u000b\u000c\u000e-\u001f]/g,'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&apos;');}
+function excelDate(value){return Math.round((date(value)-Date.UTC(1899,11,30))/dayMs);}
+function reportData(mode){
+ if(!['month','week'].includes(mode))throw new Error('집계 단위를 확인해주세요.');
+ const items=currentSalesItems(),scope=year+'년 '+(month+1)+'월',summary=[];
+ const add=(label,who,rows)=>{const v=summarizeSales(rows);summary.push([label,who,v.total,v.complete,v.count,v.amount,v.missing,v.total-v.countEntered,v.total-v.amountEntered]);};
+ if(mode==='month'){add('월 전체','합계',items);for(const owner of ownerOrder){const rows=items.filter(s=>s.owner===owner);if(rows.length)add('월 전체',ownerNames[owner],rows);}}
+ else for(const w of salesWeeks(items)){const carried=w.items.filter(s=>s.start<currentMonthPeriod().first).length;const label=w.index+'주차 ('+w.start.slice(5)+' ~ '+w.end.slice(5)+(carried?' · 전월 시작 포함':'')+')';add(label,'합계',w.items);for(const owner of ownerOrder){const rows=w.items.filter(s=>s.owner===owner);if(rows.length)add(label,ownerNames[owner],rows);}}
+ const first=date(iso(new Date(Date.UTC(year,month,1)))),gridStart=shift(first,-first.getUTCDay());
+ const detail=items.map(s=>{const f=openingFields(s),v=salesOf(s),week=Math.max(1,Math.floor((date(s.start)-gridStart)/dayMs/7)+1);return [excelDate(s.start),excelDate(s.end),week+'주차','@'+(f.nickname||'닉네임 확인 필요'),f.product,scheduleOwnerName(s),v.count,v.amount,salesComplete(s)?'입력 완료':v.count!==null||v.amount!==null?'일부 입력':'미입력',scheduleColor(s),s.originalTitle||s.title,s.uncertain?.join(' · ')||''];});
+ return {scope,mode,summary,detail,total:items.length};
+}
+function reportWorksheet(template,rows,title,scope,numericCols,dateCols=[]){
+ const cell=(value,col,r,style)=>{const ref=String.fromCharCode(65+col)+r;if(value===null||value===undefined)return '<x:c r="'+ref+'" s="'+style+'"/>';if(typeof value==='number'){if(!Number.isSafeInteger(value))throw new Error('집계값의 숫자 범위를 확인해주세요.');return '<x:c r="'+ref+'" s="'+style+'"><x:v>'+value+'</x:v></x:c>';}return '<x:c r="'+ref+'" s="'+style+'" t="inlineStr"><x:is><x:t xml:space="preserve">'+xmlText(value)+'</x:t></x:is></x:c>';};
+ const top=template.top.replace(/__REPORT_TITLE__/g,xmlText(title)).replace(/__REPORT_SCOPE__/g,xmlText(scope));
+ const body=rows.map((row,i)=>'<x:row r="'+(i+6)+'" ht="'+(row.length>9?60:30)+'" customHeight="1">'+row.map((v,c)=>cell(v,c,i+6,dateCols.includes(c)?template.dateStyle:numericCols.includes(c)?template.numberStyle:template.bodyStyle)).join('')+'</x:row>').join('');
+ return template.prefix+'<x:sheetData>'+top+body+'</x:sheetData>'+template.suffix;
+}
+function crc32(bytes){let crc=0xffffffff;for(const byte of bytes){crc^=byte;for(let i=0;i<8;i++)crc=(crc>>>1)^((crc&1)?0xedb88320:0);}return (crc^0xffffffff)>>>0;}
+function zipWorkbook(parts){
+ const encoder=new TextEncoder(),chunks=[],central=[];let offset=0,centralSize=0;
+ const record=(size,write)=>{const a=new Uint8Array(size);write(new DataView(a.buffer));return a;};
+ for(const [name,content] of Object.entries(parts)){const filename=encoder.encode(name),data=encoder.encode(content),crc=crc32(data);
+ const head=record(30,v=>{v.setUint32(0,0x04034b50,true);v.setUint16(4,20,true);v.setUint16(6,0x0800,true);v.setUint16(12,0x0021,true);v.setUint32(14,crc,true);v.setUint32(18,data.length,true);v.setUint32(22,data.length,true);v.setUint16(26,filename.length,true);});
+ const directory=record(46,v=>{v.setUint32(0,0x02014b50,true);v.setUint16(4,20,true);v.setUint16(6,20,true);v.setUint16(8,0x0800,true);v.setUint16(14,0x0021,true);v.setUint32(16,crc,true);v.setUint32(20,data.length,true);v.setUint32(24,data.length,true);v.setUint16(28,filename.length,true);v.setUint32(42,offset,true);});
+ chunks.push(head,filename,data);central.push(directory,filename);offset+=head.length+filename.length+data.length;centralSize+=directory.length+filename.length;
+ }
+ const end=record(22,v=>{v.setUint32(0,0x06054b50,true);v.setUint16(8,Object.keys(parts).length,true);v.setUint16(10,Object.keys(parts).length,true);v.setUint32(12,centralSize,true);v.setUint32(16,offset,true);});
+ const all=[...chunks,...central,end],out=new Uint8Array(offset+centralSize+22);let at=0;for(const chunk of all){out.set(chunk,at);at+=chunk.length;}return out;
+}
+function makeSalesWorkbook(mode){const data=reportData(mode),parts={...salesWorkbookTemplate.parts},period=data.scope+' · '+(mode==='week'?'주차별':'월별')+' · '+salesScopeLabel()+' · 공구 전체 실적 · 취소 제외 · 화면 필터와 무관';
+ parts['xl/worksheets/sheet1.xml']=reportWorksheet(salesWorkbookTemplate.sheets[0],data.summary,'마케팅팀 공동구매 '+(mode==='week'?'주차별':'월별')+' 매출',period,[2,3,4,5,6,7,8]);
+ parts['xl/worksheets/sheet2.xml']=reportWorksheet(salesWorkbookTemplate.sheets[1],data.detail,'일정별 판매 매출',period,[6,7],[0,1]);
+ return {bytes:zipWorkbook(parts),data,filename:'마케팅팀_'+year+'-'+String(month+1).padStart(2,'0')+'_'+(mode==='week'?'주차별':'월별')+'_매출.xlsx'};
+}
+function exportSales(mode){try{const report=makeSalesWorkbook(mode),url=URL.createObjectURL(new Blob([report.bytes],{type:'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet'})),link=node('a');link.href=url;link.download=report.filename;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);$('exportMessage').textContent=report.data.scope+' '+(mode==='week'?'주차별':'월별')+' 매출 '+report.data.total+'개 공구 · 미입력은 빈칸으로 내보냈습니다.';}catch(err){$('exportMessage').textContent='내보내기 오류: '+err.message;}}
+
+function sizeCalendarHeaders(){
+ if($('calendarView').hidden)return;
+ for(const week of document.querySelectorAll('#weeks .week')){
+  if(week.hidden)continue;const cells=[...week.querySelectorAll('.day')];
+  const height=Math.ceil(Math.max(68,...cells.map(cell=>cell.querySelector('.day-header').offsetHeight+parseFloat(getComputedStyle(cell).paddingTop)+12)));
+  week.style.paddingTop=height+'px';
+  const focused=$('calendarView').classList.contains('week-focus');week.style.minHeight=Math.max(focused?270:144,height+16+Number(week.dataset.lanes)*(focused?72:62))+'px';
+ }
+}
+const calendarResize=new ResizeObserver(sizeCalendarHeaders);calendarResize.observe(document.querySelector('.calendar'));
+function render(){
+ $('developerCsvEmptyState').hidden=schedules.length>0;
+ if(workView==='week')ensureWeeklyAnchor();
+ const first=new Date(Date.UTC(year,month,1)),last=new Date(Date.UTC(year,month+1,0)),gridStart=shift(first,-first.getUTCDay());
+ const weekCount=Math.ceil((first.getUTCDay()+last.getUTCDate())/7),gridEnd=shift(gridStart,weekCount*7-1);
+ const all=schedules.filter(s=>date(s.start)<=last&&date(s.end)>=first),gridItems=schedules.filter(s=>date(s.start)<=gridEnd&&date(s.end)>=gridStart);
+ const owners=[...document.querySelectorAll('.owner-filter:checked')].map(e=>e.value),types=[...document.querySelectorAll('.type-filter:checked')].map(e=>e.value),query=$('search').value.trim().toLowerCase(),status=$('status').value;
+ const shown=gridItems.filter(s=>salesMatches(s)&&owners.includes(s.owner)&&types.includes(s.type)&&(!status||s.status===status)&&[s.title,s.product,s.partner,openingFields(s).nickname,openingFields(s).product,scheduleOwnerName(s),workTypeLabel(s.type)].join(' ').toLowerCase().includes(query)).sort((a,b)=>a.start.localeCompare(b.start)||a.id-b.id);
+ $('month').textContent=year+'.'+String(month+1).padStart(2,'0');renderGroupbuyStats();
+ for(const owner of ownerOrder)$('count'+owner).textContent=all.filter(s=>s.owner===owner).length;
+ $('result').textContent='월 일정 '+all.length+'건 · 달력 표시 '+shown.length+'건 (앞뒤 달 포함)';$('weeks').replaceChildren();$('rows').replaceChildren();
+ const nowParts=new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date());const parts=Object.fromEntries(nowParts.map(p=>[p.type,p.value]));const now=parts.year+'-'+parts.month+'-'+parts.day;
+ const currentMonth=year+'-'+String(month+1).padStart(2,'0');$('monthJump').value=calendarMonths.includes(currentMonth)?currentMonth:'';rememberCalendarMonth();
+ for(let w=0;w<weekCount;w++){
+  const ws=shift(gridStart,w*7),we=shift(ws,6),week=node('div',undefined,'week'),days=node('div',undefined,'day-grid'),events=node('div',undefined,'events');
+  for(let d=0;d<7;d++){
+   const dt=shift(ws,d),day=iso(dt),names=holidayNames(day);
+   const cell=node('div',undefined,'day'+(dt.getUTCMonth()!==month?' outside':'')+(d===0?' sunday':d===6?' saturday':'')+(day===now?' today':'')+(names.length?' holiday':''));
+   cell.dataset.date=day;cell.setAttribute('role','group');cell.setAttribute('aria-label',day+' '+['일요일','월요일','화요일','수요일','목요일','금요일','토요일'][d]+(names.length?' · '+names.join(' · '):''));
+   const heading=node('div',undefined,'day-header');heading.append(node('span',workView==='week'?(dt.getUTCMonth()+1)+'/'+dt.getUTCDate():String(dt.getUTCDate()),'day-number'));
+   if(names.length){const label=node('span',undefined,'holiday-name');label.title=names.join(' · ');for(const name of names){const substitute=name.match(/^대체공휴일\((.+)\)$/);if(substitute){label.append(node('span','대체공휴일'),node('span','('+substitute[1]+')','holiday-reason'));}else{label.append(node('span',name));if(names.length>1)label.lastChild.style.display='block';}}heading.append(label);}
+   cell.append(heading);days.append(cell);
+  }
+  const lanes=[];
+  for(const s of shown.filter(s=>date(s.start)<=we&&date(s.end)>=ws)){
+   const start=Math.max(0,Math.round((date(s.start)-ws)/dayMs)),end=Math.min(6,Math.round((date(s.end)-ws)/dayMs));let lane=0;while(lanes[lane]&&lanes[lane].some(v=>start<=v[1]&&end>=v[0]))lane++;(lanes[lane]??=[]).push([start,end]);
+   const e=node('button',undefined,'event'+(s.status==='취소'?' cancelled':s.status==='완료'?' done':''));const outsideOnly=date(s.end)<first||date(s.start)>last;const sourceColor=scheduleColor(s),eventColor=workView!=='week'&&outsideOnly?'#'+sourceColor.slice(1).match(/../g).map(v=>Math.round(parseInt(v,16)*.4+255*.6).toString(16).padStart(2,'0')).join(''):sourceColor;if(workView!=='week'&&outsideOnly)e.classList.add('outside-event');e.dataset.sourceColor=sourceColor;e.dataset.scheduleId=String(s.id);e.style.gridColumn=(start+1)+' / '+(end+2);e.style.gridRow=String(lane+1);e.style.setProperty('--owner',eventColor);e.style.setProperty('--event-text',colorText(eventColor));e.append(node('span',calendarTitle(s),'event-title'),node('span',scheduleOwnerCaption(s),'event-owner'));e.title=scheduleOwnerName(s)+' | '+s.title+' | '+s.start+' ~ '+s.end+' | '+s.status;e.setAttribute('aria-label',e.title);e.addEventListener('click',()=>openDetail(s));events.append(e);
+  }
+  week.dataset.start=iso(ws);week.dataset.lanes=String(lanes.length);week.style.minHeight=Math.max(144,84+lanes.length*62)+'px';week.append(days,events);$('weeks').append(week);
+ }
+ sizeCalendarHeaders();const listInfo=renderOpeningList(shown);renderSales();if(!$('listView').hidden)$('result').textContent='시작일 기준 '+listInfo.count+'건 · 공동구매 '+listInfo.total+'건';applyWorkView(shown);
+}
+function changeMonth(n){if(workView==='week'){moveCalendarWeek(n);return;}const d=new Date(Date.UTC(year,month+n,1));year=d.getUTCFullYear();month=d.getUTCMonth();render();}
+$('prev').onclick=()=>changeMonth(-1);$('next').onclick=()=>changeMonth(1);$('today').onclick=()=>{const values=Object.fromEntries(new Intl.DateTimeFormat('en',{timeZone:'Asia/Seoul',year:'numeric',month:'numeric'}).formatToParts(new Date()).map(p=>[p.type,p.value]));year=Number(values.year);month=Number(values.month)-1;weeklyAnchor=sundayOf(koreaToday());render();};
+for(const e of document.querySelectorAll('.owner-filter,.type-filter'))e.addEventListener('change',render);$('search').addEventListener('input',render);$('status').addEventListener('change',render);
+function setView(list){$('calendarView').hidden=list;$('listView').hidden=!list;for(const [id,active]of [['calendarTab',!list],['listTab',list]]){$(id).classList.toggle('active',active);$(id).setAttribute('aria-pressed',String(active));}render();}
+$('calendarTab').onclick=()=>setView(false);$('listTab').onclick=()=>setView(true);
+for(const e of document.querySelectorAll('.close-detail'))e.onclick=()=>$('detailDialog').close();for(const e of document.querySelectorAll('.close-add'))e.onclick=()=>$('addDialog').close();
+$('add').onclick=()=>{$('addForm').reset();addColorIsManual=false;$('addColor').value=colors[$('addForm').elements.owner.value][0];const d=workView==='week'?weekSuggestedDate():iso(new Date(Date.UTC(year,month,12)));$('addForm').elements.start.value=d;$('addForm').elements.end.value=d;$('formError').textContent='';updateAddPreview();$('addDialog').showModal();};
+$('addForm').onsubmit=e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.target));if(!f.title.trim()){$('formError').textContent='일정명을 입력해주세요.';return;}if(f.end<f.start){$('formError').textContent='종료일은 시작일보다 빠를 수 없습니다.';return;}schedules.push({...f,influencer:f.title.trim(),product:f.product.trim(),specialNotes:(f.specialNotes||"").trim(),title:composeScheduleTitle(f.title,f.product,f.specialNotes),autoComposed:true,id:Math.max(0,...schedules.map(s=>s.id))+1,related:'시안 추가 일정'});const d=date(f.start);year=d.getUTCFullYear();month=d.getUTCMonth();weeklyAnchor=sundayOf(f.start);$('addDialog').close();render();};
+$('detailColor').addEventListener('input',()=>{const s=schedules.find(s=>s.id===selectedScheduleId);if(s)updateColorPreview('detail',$('detailColor').value,composeScheduleTitle($('editTitle').value,$('editProduct').value,$('editNotes').value),$('detailOwner').value);});
+$('resetDetailColor').onclick=()=>{const s=schedules.find(s=>s.id===selectedScheduleId);if(s){$('detailColor').value=colors[$('detailOwner').value][0];updateColorPreview('detail',$('detailColor').value,composeScheduleTitle($('editTitle').value,$('editProduct').value,$('editNotes').value),$('detailOwner').value);}};
+$('saveDetailColor').onclick=()=>{const s=schedules.find(s=>s.id===selectedScheduleId);if(!s)return;s.color=$('detailColor').value;s.owner=$('detailOwner').value;$('detailDialog').close();render();};
+buildColorChips('detail');buildColorChips('add');
+for(const button of document.querySelectorAll('[data-color-for]'))button.addEventListener('click',()=>{const prefix=button.dataset.colorFor;$(prefix+'Color').value=button.dataset.color;if(prefix==='add'){addColorIsManual=true;updateAddPreview();}else{const s=schedules.find(s=>s.id===selectedScheduleId);if(s)updateColorPreview('detail',$('detailColor').value,composeScheduleTitle($('editTitle').value,$('editProduct').value,$('editNotes').value),$('detailOwner').value);}});
+$('addColor').addEventListener('input',()=>{addColorIsManual=true;updateAddPreview();});
+$('addForm').elements.owner.addEventListener('change',()=>{if(!addColorIsManual)$('addColor').value=colors[$('addForm').elements.owner.value][0];updateAddPreview();});
+$('addForm').elements.title.addEventListener('input',updateAddPreview);
+$('addForm').elements.product.addEventListener('input',updateAddPreview);
+$('addForm').elements.specialNotes.addEventListener('input',updateAddPreview);
+
+$('monthJump').append(node('option','월 바로 선택'));$('monthJump').firstChild.value='';for(const value of calendarMonths){const option=node('option',value.slice(0,4)+'년 '+Number(value.slice(5))+'월');option.value=value;$('monthJump').append(option);}
+$('monthJump').onchange=()=>{if(!$('monthJump').value)return;const [y,m]=$('monthJump').value.split('-').map(Number);year=y;month=m-1;weeklyAnchor='';render();};
+$('detailOwner').onchange=()=>{const s=schedules.find(s=>s.id===selectedScheduleId);if(s)updateColorPreview('detail',$('detailColor').value,composeScheduleTitle($('editTitle').value,$('editProduct').value,$('editNotes').value),$('detailOwner').value);};
+
+
+$('selectedTab').onclick=()=>activateSide('selected');$('filterTab').onclick=()=>activateSide('filter');
+$('closeSelection').onclick=()=>{selectedScheduleId=null;refreshSelected();activateSide('filter');};
+$('editSelected').onclick=openEdit;$('salesFilter').addEventListener('change',render);
+$('exportMonthly').onclick=()=>exportSales('month');$('exportWeekly').onclick=()=>exportSales('week');
+$('saveDetailColor').onclick=saveEdit;
+for(const id of ['editTitle','editProduct','editNotes'])$(id).addEventListener('input',()=>updateColorPreview('detail',$('detailColor').value,composeScheduleTitle($('editTitle').value,$('editProduct').value,$('editNotes').value),$('detailOwner').value));
+$('detailOwner').onchange=()=>updateColorPreview('detail',$('detailColor').value,composeScheduleTitle($('editTitle').value,$('editProduct').value,$('editNotes').value),$('detailOwner').value);
+$('addForm').onsubmit=e=>{e.preventDefault();try{const f=Object.fromEntries(new FormData(e.target));if(!f.title.trim())throw new Error('일정명을 입력해주세요.');if(!validPeriod(f.start,f.end))throw new Error('시작일과 종료일을 확인해주세요.');if(!ownerOrder.includes(f.owner)||!workTypeOrder.includes(f.type))throw new Error('담당자와 업무유형을 확인해주세요.');const sales=readSalesInputs(f.salesCount,f.salesAmount);schedules.push({...f,...sales,influencer:f.title.trim(),product:f.product.trim(),specialNotes:(f.specialNotes||"").trim(),title:composeScheduleTitle(f.title,f.product,f.specialNotes),status:e.target.elements.cancelled.checked?'취소':'미표기',autoComposed:true,id:Math.max(0,...schedules.map(s=>s.id))+1,related:'시안 추가 일정'});const d=date(f.start);year=d.getUTCFullYear();month=d.getUTCMonth();weeklyAnchor=sundayOf(f.start);$('addDialog').close();render();}catch(err){$('formError').textContent=err.message;}};
+
+for(const tab of [$('selectedTab'),$('filterTab')])tab.addEventListener('keydown',e=>{if(!['ArrowLeft','ArrowRight','Home','End'].includes(e.key))return;const tabs=[$('selectedTab'),$('filterTab')].filter(t=>!t.disabled);const next=e.key==='Home'?tabs[0]:e.key==='End'?tabs.at(-1):tabs[(tabs.indexOf(e.currentTarget)+1)%tabs.length];e.preventDefault();next.click();next.focus();});
+
+/* Grouping separators are display-only; schedules and Excel keep numeric values. */
+function formatSalesInput(input){
+ const raw=input.value,start=input.selectionStart??raw.length,end=input.selectionEnd??start;
+ if(!/^[0-9,]*$/.test(raw))return;
+ const digits=raw.replaceAll(',','').replace(/^0+(?=\d)/,'');
+ const formatted=digits.replace(/\B(?=(\d{3})+(?!\d))/g,',');
+ const position=old=>{const count=raw.slice(0,old).replace(/\D/g,'').length;let seen=0,i=0;while(i<formatted.length&&seen<count){if(/\d/.test(formatted[i]))seen++;i++;}return i;};
+ input.value=formatted;input.setSelectionRange(position(start),position(end));
+}
+for(const input of document.querySelectorAll('[data-sales-number]')){
+ input.addEventListener('input',()=>formatSalesInput(input));
+ input.addEventListener('blur',()=>formatSalesInput(input));
+}
+
+/* Remember the last calendar month; schedule/sales edits remain session-only. */
+const monthHistoryKey='company-schedule.dev-empty.last-month.v1';
+const salesScopeHistoryKey='company-schedule.dev-empty.sales-scope.v1';
+let lastRememberedMonth=null;
+function validViewMonth(value){return typeof value==='string'&&/^(20\d{2}|2100)-(0[1-9]|1[0-2])$/.test(value);}
+function seoulMonthKey(now=new Date()){
+ const values=Object.fromEntries(new Intl.DateTimeFormat('en',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit'}).formatToParts(now).map(p=>[p.type,p.value]));
+ return values.year+'-'+values.month;
+}
+function readMonthHistory(){try{const value=localStorage.getItem(monthHistoryKey);return validViewMonth(value)?value:null;}catch{return null;}}
+function initialCalendarMonth(search,saved,now=new Date()){
+ const requested=new URLSearchParams(search).get('month');
+ return validViewMonth(requested)?requested:validViewMonth(saved)?saved:seoulMonthKey(now);
+}
+function restoreCalendarHistory(){
+ const value=initialCalendarMonth(location.search,readMonthHistory());const [y,m]=value.split('-').map(Number);year=y;month=m-1;
+ try{const scope=localStorage.getItem(salesScopeHistoryKey);if(['active','start'].includes(scope))$('salesScope').value=scope;}catch{}
+}
+function rememberCalendarMonth(){
+ const value=year+'-'+String(month+1).padStart(2,'0');if(!validViewMonth(value)||value===lastRememberedMonth)return;lastRememberedMonth=value;
+ try{localStorage.setItem(monthHistoryKey,value);}catch{}
+ try{const url=new URL(location.href);if(url.searchParams.get('month')!==value){url.searchParams.set('month',value);history.replaceState(history.state,'',url.href);}}catch{}
+}
+function rememberSalesScope(){try{localStorage.setItem(salesScopeHistoryKey,salesScope());}catch{}}
+$('salesScope').addEventListener('change',()=>{rememberSalesScope();render();});
+
+/* Catalog keys stay stable when display names are edited. */
+const workTypeOrder=['공동구매','행사','발송','페이백','기타','미분류'];
+const workTypeNames={'공동구매':'공동구매','행사':'행사','발송':'상품 발송','페이백':'페이백','기타':'기타 / 연락','미분류':'미분류'};
+const catalogStorageKey='company-schedule.dev-empty.catalog.v1';
+const salesExpandedKey='company-schedule.dev-empty.sales-expanded.v1';
+let catalogDraft=null;
+function workTypeLabel(key){return workTypeNames[key]||key;}
+function catalogSettings(){return {version:1,owners:ownerOrder.map(id=>({id,name:ownerNames[id],color:colors[id][0]})),types:workTypeOrder.map(id=>({id,name:workTypeNames[id]}))};}
+const defaultCatalogSettings=catalogSettings();
+function validateCatalog(settings){
+ if(!settings||settings.version!==1||!Array.isArray(settings.owners)||!Array.isArray(settings.types)||settings.owners.length>100||settings.types.length>100)throw Error('설정 항목을 확인해주세요.');
+ if(!settings.types.some(row=>row.id==='미분류'))settings.types.push({id:'미분류',name:'미분류'});
+ const validate=(rows,kind,required)=>{
+  const ids=new Set(),names=new Set();for(const row of rows){
+   if(!row||typeof row.id!=='string'||ids.has(row.id))throw Error('설정 항목을 확인해주세요.');
+   if(kind==='담당자'?!/^(A|B|C|S|U|OWNER_[1-9][0-9]*)$/.test(row.id):!required.includes(row.id)&&!/^TYPE_[1-9][0-9]*$/.test(row.id))throw Error('설정 항목을 확인해주세요.');
+   if(typeof row.name!=='string')throw Error(kind+' 이름을 입력해주세요.');
+   row.name=row.name.trim();if(!row.name)throw Error(kind+' 이름을 입력해주세요.');if(row.name.length>(kind==='담당자'?50:40))throw Error(kind+' 이름의 길이를 확인해주세요.');
+   const name=row.name.normalize('NFKC').replace(/\s+/g,' ').toLocaleLowerCase('ko-KR');if(names.has(name))throw Error('같은 '+kind+' 이름이 있습니다.');
+   if(kind==='담당자'&&(typeof row.color!=='string'||!/^#[0-9a-f]{6}$/i.test(row.color)))throw Error('담당자 기본 색상을 확인해주세요.');
+   ids.add(row.id);names.add(name);
+  }
+  if(required.some(id=>!ids.has(id)))throw Error('기존 '+kind+' 항목을 확인해주세요.');
+ };
+ validate(settings.owners,'담당자',['A','B','C','S','U']);validate(settings.types,'업무유형',['공동구매','행사','발송','페이백','기타','미분류']);return settings;
+}
+const legacyOwnerLabels={A:['김태수 부장(레몬트리)','김태수 차장'],B:['박정 주임'],C:['손안나 알바']};
+function ownerDisplayName(id,name){
+ const names={A:'김태수',B:'박정',C:'손안나'};
+ return legacyOwnerLabels[id]?.includes(name)?names[id]:name;
+}
+function applyCatalogSettings(settings){
+ for(const id of Object.keys(ownerNames))delete ownerNames[id];for(const id of Object.keys(colors))delete colors[id];
+ ownerOrder.splice(0,ownerOrder.length,...settings.owners.map(row=>row.id));
+ for(const row of settings.owners){ownerNames[row.id]=ownerDisplayName(row.id,row.name);colors[row.id]=[row.color,row.color];}
+ for(const id of Object.keys(workTypeNames))delete workTypeNames[id];workTypeOrder.splice(0,workTypeOrder.length,...settings.types.map(row=>row.id));
+ for(const row of settings.types)workTypeNames[row.id]=row.name;
+ for(const [id,key] of [['A','--a'],['B','--b'],['C','--c']])document.documentElement.style.setProperty(key,colors[id][0]);
+}
+function restoreCatalogSettings(){
+ try{const raw=localStorage.getItem(catalogStorageKey);if(raw&&raw.length<100000)applyCatalogSettings(validateCatalog(JSON.parse(raw)));}catch{}
+}
+function catalogOptionList(select,rows){
+ const previous=select.value;select.replaceChildren(...rows.map(({id,name})=>{const option=node('option',name);option.value=id;return option;}));
+ if(rows.some(row=>row.id===previous))select.value=previous;
+}
+function renderCatalogControls(){
+ const ownerInputs=[...document.querySelectorAll('.owner-filter')],oldOwners=new Map(ownerInputs.map(input=>[input.value,input.checked]));
+ const typeInputs=[...document.querySelectorAll('.type-filter')],oldTypes=new Map(typeInputs.map(input=>[input.value,input.checked]));
+ $('ownerFilters').replaceChildren();$('typeFilters').replaceChildren();
+ for(const owner of ownerOrder){
+  const label=node('label',undefined,'check'),input=node('input');input.type='checkbox';input.className='owner-filter';input.value=owner;input.checked=oldOwners.get(owner)??true;input.addEventListener('change',render);
+  const dot=node('span',undefined,'dot');dot.style.background=colors[owner][0];const count=node('span',undefined,'owner-count');count.id='count'+owner;
+  label.append(input,dot,node('span',ownerNames[owner],'catalog-name'),count);$('ownerFilters').append(label);
+ }
+ for(const type of workTypeOrder){
+  const label=node('label',undefined,'check'),input=node('input');input.type='checkbox';input.className='type-filter';input.value=type;input.checked=oldTypes.get(type)??true;input.addEventListener('change',render);
+  label.append(input,node('span',workTypeLabel(type),'catalog-name'));$('typeFilters').append(label);
+ }
+ const settings=catalogSettings();catalogOptionList($('detailOwner'),settings.owners);catalogOptionList($('addForm').elements.owner,settings.owners);
+ catalogOptionList($('editType'),settings.types);catalogOptionList($('addForm').elements.type,settings.types);
+ const totals=document.querySelector('.owner-totals');totals.replaceChildren();
+ for(const owner of ownerOrder){
+  const row=node('div');row.id='ownerTotal'+owner;const label=node('span',undefined,'owner-label'),dot=node('i',undefined,'dot');dot.style.background=colors[owner][0];label.append(dot,node('span',ownerNames[owner]));
+  const total=node('strong','0건');total.id='groupbuy'+owner;row.append(label,total);totals.append(row);
+ }
+ const legend=document.querySelector('.calendar-bottom .legend');legend.replaceChildren();
+ for(const owner of ownerOrder.filter(id=>!['S','U'].includes(id))){const item=node('span'),dot=node('i',undefined,'dot');dot.style.background=colors[owner][0];item.append(dot,node('span',ownerNames[owner]));legend.append(item);}
+}
+function catalogTab(kind){
+ const owner=kind==='owners';$('catalogOwners').hidden=!owner;$('catalogTypes').hidden=owner;
+ for(const [id,active] of [['catalogOwnerTab',owner],['catalogTypeTab',!owner]]){$(id).setAttribute('aria-selected',String(active));$(id).tabIndex=active?0:-1;}
+}
+function syncCatalogDraft(){
+ if(!catalogDraft)return;
+ for(const input of document.querySelectorAll('#catalogDialog [data-catalog-kind]')){
+  const rows=input.dataset.catalogKind==='owner'?catalogDraft.owners:catalogDraft.types,row=rows.find(row=>row.id===input.dataset.catalogId);
+  if(row)row[input.dataset.catalogField]=input.value;
+ }
+}
+function catalogRow(row,kind){
+ const box=node('div',undefined,'catalog-row'+(kind==='type'?' type-row':''));box.dataset.catalogId=row.id;
+ const label=node('label',kind==='owner'?'담당자 이름':'업무유형 이름'),name=node('input');name.type='text';name.value=row.name;name.maxLength=kind==='owner'?50:40;name.placeholder=kind==='owner'?'예: 성함':'업무유형 이름';
+ name.dataset.catalogKind=kind;name.dataset.catalogId=row.id;name.dataset.catalogField='name';name.setAttribute('aria-label',(row.name||'새 '+(kind==='owner'?'담당자':'업무유형'))+' 이름');label.append(name);box.append(label);
+ if(kind==='owner'){const colorLabel=node('label','기본 색상'),color=node('input');color.type='color';color.value=row.color;color.dataset.catalogKind=kind;color.dataset.catalogId=row.id;color.dataset.catalogField='color';color.setAttribute('aria-label',(row.name||'새 담당자')+' 기본 색상');colorLabel.append(color);box.append(colorLabel);}
+ const count=schedules.filter(s=>kind==='owner'?s.owner===row.id:s.type===row.id).length;box.append(node('span','연결된 일정 '+count+'건'+(kind==='type'&&row.id==='공동구매'?' · 공구·매출 집계 대상':''),'catalog-usage'));return box;
+}
+function renderCatalogDraft(){
+ $('catalogOwnerRows').replaceChildren(...catalogDraft.owners.map(row=>catalogRow(row,'owner')));
+ $('catalogTypeRows').replaceChildren(...catalogDraft.types.map(row=>catalogRow(row,'type')));
+}
+function openCatalog(kind='owners'){
+ catalogDraft=catalogSettings();$('catalogError').textContent='';$('catalogStorageNote').textContent='';renderCatalogDraft();catalogTab(kind);$('catalogDialog').showModal();
+}
+function addCatalogRow(kind){
+ syncCatalogDraft();const owner=kind==='owner',rows=owner?catalogDraft.owners:catalogDraft.types;
+ if(rows.length>=100){$('catalogError').textContent='항목은 최대 100개까지 추가할 수 있습니다.';return;}
+ const prefix=owner?'OWNER_':'TYPE_';let number=1;while(rows.some(row=>row.id===prefix+number))number++;
+ const row={id:prefix+number,name:''};if(owner)row.color='#3fa9f5';rows.push(row);renderCatalogDraft();catalogTab(owner?'owners':'types');
+ const container=owner?$('catalogOwnerRows'):$('catalogTypeRows');container.lastChild.querySelector('input[type=text]').focus();$('catalogError').textContent='';
+}
+function saveCatalog(){
+ try{
+  syncCatalogDraft();const settings=validateCatalog(catalogDraft);applyCatalogSettings(settings);renderCatalogControls();render();
+  let stored=true;try{localStorage.setItem(catalogStorageKey,JSON.stringify(settings));}catch{stored=false;}
+  if(stored){$('catalogDialog').close();catalogDraft=null;}else{$('catalogStorageNote').textContent='현재 화면에 반영했지만 브라우저 저장에 실패했습니다.';$('catalogStorageNote').classList.add('catalog-storage-error');}
+ }catch(error){$('catalogError').textContent=error.message;}
+}
+function updateSalesCollapsedSummary(){
+ const total=summarizeSales(salesViewContext().items);$('salesCollapsedSummary').textContent='판매 '+salesText(total.count,'건')+' · 매출 '+salesText(total.amount,'원');
+}
+function setSalesSummaryExpanded(expanded,persist=true){
+ $('salesSummaryBody').hidden=!expanded;$('monthSalesSummary').classList.toggle('sales-collapsed',!expanded);
+ $('toggleSalesSummary').setAttribute('aria-expanded',String(expanded));$('salesToggleText').textContent=expanded?'매출 접기':'매출 펼치기';$('salesToggleArrow').textContent=expanded?'▴':'▾';
+ if(persist)try{localStorage.setItem(salesExpandedKey,expanded?'1':'0');}catch{}
+}
+function restoreSalesSummaryExpanded(){let expanded=false;try{expanded=localStorage.getItem(salesExpandedKey)==='1';}catch{}setSalesSummaryExpanded(expanded,false);}
+$('manageCatalog').onclick=$('manageOwners').onclick=()=>openCatalog('owners');$('manageTypes').onclick=()=>openCatalog('types');
+$('catalogOwnerTab').onclick=()=>catalogTab('owners');$('catalogTypeTab').onclick=()=>catalogTab('types');
+for(const tab of [$('catalogOwnerTab'),$('catalogTypeTab')])tab.addEventListener('keydown',event=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){event.preventDefault();const owner=event.key==='Home'||event.key!=='End'&&event.currentTarget===$('catalogTypeTab');catalogTab(owner?'owners':'types');$(owner?'catalogOwnerTab':'catalogTypeTab').focus();}});
+for(const button of document.querySelectorAll('.close-catalog'))button.onclick=()=>{$('catalogDialog').close();catalogDraft=null;};
+$('catalogDialog').addEventListener('cancel',()=>{catalogDraft=null;});
+$('addCatalogOwner').onclick=()=>addCatalogRow('owner');$('addCatalogType').onclick=()=>addCatalogRow('type');$('saveCatalog').onclick=saveCatalog;
+$('toggleSalesSummary').onclick=()=>setSalesSummaryExpanded($('salesSummaryBody').hidden);
+restoreCatalogSettings();renderCatalogControls();restoreSalesSummaryExpanded();
+
+/* Settlement is an isolated entry screen; no settlement data or calculations are loaded here. */
+let workView='all',lastScheduleView='all',weeklyAnchor='',navigationShown=[],mainListView=false;
+const workViewLabels={all:'전체일정',week:'주차 일정'};
+function koreaToday(){
+ const parts=Object.fromEntries(new Intl.DateTimeFormat('en-CA',{timeZone:'Asia/Seoul',year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(new Date()).map(p=>[p.type,p.value]));
+ return parts.year+'-'+parts.month+'-'+parts.day;
+}
+function sundayOf(day){const d=typeof day==='string'?date(day):day;return iso(shift(d,-d.getUTCDay()));}
+function ensureWeeklyAnchor(){
+ const first=new Date(Date.UTC(year,month,1)),last=new Date(Date.UTC(year,month+1,0));
+ const gridStart=shift(first,-first.getUTCDay()),gridEnd=shift(last,6-last.getUTCDay());
+ if(!weeklyAnchor||date(weeklyAnchor)<gridStart||date(weeklyAnchor)>gridEnd){
+  const today=date(koreaToday()),selected=schedules.find(s=>s.id===selectedScheduleId),chosen=selected?date(selected.start):null;
+  const candidate=chosen&&chosen>=first&&chosen<=last?chosen:today>=first&&today<=last?today:first;
+  weeklyAnchor=sundayOf(candidate);
+ }
+ return {start:date(weeklyAnchor),end:shift(date(weeklyAnchor),6),gridStart};
+}
+function weekSuggestedDate(){const range=ensureWeeklyAnchor(),today=date(koreaToday());return today>=range.start&&today<=range.end?iso(today):iso(range.start);}
+function moveCalendarWeek(direction){
+ const range=ensureWeeklyAnchor(),next=shift(range.start,direction*7),end=shift(next,6);
+ weeklyAnchor=iso(next);
+ const first=new Date(Date.UTC(year,month,1)),last=new Date(Date.UTC(year,month+1,0));
+ if(next>last||end<first){const middle=shift(next,3);year=middle.getUTCFullYear();month=middle.getUTCMonth();}
+ render();
+}
+function applyWorkView(shown=navigationShown){
+ navigationShown=shown;
+ const settlement=workView==='settlement',weekly=workView==='week';
+ $('scheduleWorkspace').hidden=settlement;$('settlementWorkspace').hidden=!settlement;$('scheduleSideContent').hidden=settlement;
+ document.querySelector('.layout').classList.toggle('has-selection',!settlement&&$('selectedTab').getAttribute('aria-selected')==='true');
+ for(const button of document.querySelectorAll('[data-work-view]')){
+  const active=button.dataset.workView===workView;button.classList.toggle('active',active);
+  if(active)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');
+ }
+ if(settlement)return;
+ $('schedulePageTitle').textContent=workViewLabels[workView];
+ $('schedulePageSubtitle').textContent=weekly?'일요일부터 토요일까지 한 주의 일정과 담당자를 확인합니다.':'담당자별 공동구매 일정과 주차·월별 매출을 관리합니다.';
+ $('weekFocusHeader').hidden=!weekly;document.querySelector('.view-switch').hidden=weekly;
+ document.querySelector('.groupbuy-summary').hidden=weekly;$('statsNote').hidden=weekly;
+ $('calendarView').classList.toggle('week-focus',weekly);
+ $('prev').hidden=weekly;$('next').hidden=weekly;$('prev').setAttribute('aria-label','이전 달');$('next').setAttribute('aria-label','다음 달');
+ let range=null;
+ if(weekly){
+  range=ensureWeeklyAnchor();const index=Math.round((range.start-range.gridStart)/dayMs/7)+1;
+  const displayed=shown.filter(s=>date(s.start)<=range.end&&date(s.end)>=range.start);
+  const openings=displayed.filter(s=>s.type==='공동구매'&&s.status!=='취소'&&date(s.start)>=range.start&&date(s.start)<=range.end);
+  $('weekFocusTitle').textContent=(month+1)+'월 '+index+'주차';
+  $('weekFocusRange').textContent=range.start.getUTCFullYear()+'.'+openingDate(iso(range.start))+' ~ '+(range.end.getUTCFullYear()!==range.start.getUTCFullYear()?range.end.getUTCFullYear()+'.':'')+openingDate(iso(range.end));
+  $('weekFocusCount').textContent='표시 일정 '+displayed.length+'건 · 공동구매 '+openings.length+'건 오픈';
+  $('result').textContent='선택 주 일정 '+displayed.length+'건 · 현재 검색·필터 결과';
+  for(const owner of ownerOrder)$('count'+owner).textContent=schedules.filter(s=>s.owner===owner&&date(s.start)<=range.end&&date(s.end)>=range.start).length;
+ }
+ for(const week of document.querySelectorAll('#weeks .week'))week.hidden=weekly&&week.dataset.start!==iso(range.start);
+ sizeCalendarHeaders();
+}
+function switchWorkView(view){
+ if(view==='month')view='all';
+ if(!['all','week','settlement'].includes(view))return;
+ if(workView==='all'&&view!=='all')mainListView=!$('listView').hidden;
+ if(view==='settlement'){
+  if(workView!=='settlement'){lastScheduleView=workView;}
+  workView=view;applyWorkView();return;
+ }
+ workView=view;lastScheduleView=view;
+ if(view==='week')ensureWeeklyAnchor();
+ setView(view==='all'?mainListView:false);
+}
+for(const button of document.querySelectorAll('[data-work-view]'))button.onclick=()=>switchWorkView(button.dataset.workView);
+$('backToSchedule').onclick=()=>{switchWorkView(lastScheduleView);$('schedulePageTitle').focus();};
+
+$('previousWeek').onclick=()=>moveCalendarWeek(-1);$('nextWeek').onclick=()=>moveCalendarWeek(1);
+/* Product names identify the current schedule's product; no option revenue is inferred. */
+let skuSalesContext='',skuWeekExpanded=new Set(),skuProductExpanded=new Set();
+function skuProductName(s){return (openingFields(s).product||'상품 확인 필요').normalize('NFC').replace(/\s+/g,' ').trim()||'상품 확인 필요';}
+function groupSkuSales(items){
+ const groups=new Map();
+ for(const s of items){const name=skuProductName(s);if(!groups.has(name))groups.set(name,{name,items:[]});groups.get(name).items.push(s);}
+ return [...groups.values()].sort((a,b)=>a.name.localeCompare(b.name,'ko')).map(group=>({...group,totals:summarizeSales(group.items)}));
+}
+function skuToggle(label,controlId,expanded,onChange){
+ const button=node('button',undefined,'sku-toggle'),arrow=node('span',expanded?'▾':'▸','sku-chevron');button.type='button';arrow.setAttribute('aria-hidden','true');
+ button.append(arrow,node('span',label,'sku-toggle-title'));button.setAttribute('aria-expanded',String(expanded));button.setAttribute('aria-controls',controlId);
+ button.onclick=()=>{const open=button.getAttribute('aria-expanded')!=='true';button.setAttribute('aria-expanded',String(open));arrow.textContent=open?'▾':'▸';onChange(open);};
+ return button;
+}
+function skuCoverage(v){
+ const cell=node('td',v.complete+' / '+v.total+'개 완료');
+ if(v.missing)cell.append(node('small','미입력·일부 입력 '+v.missing+'개','sku-missing-note'));return cell;
+}
+function skuCampaignTable(items,label){
+ const table=node('table',undefined,'sku-campaign-table'),caption=node('caption',label+' 공구별 매출','sr-only'),thead=node('thead'),head=node('tr'),body=node('tbody');
+ for(const title of ['시작일','닉네임','담당자','판매건수','매출액']){const th=node('th',title);th.scope='col';head.append(th);}thead.append(head);
+ for(const s of [...items].sort((a,b)=>a.start.localeCompare(b.start)||a.id-b.id)){
+  const row=node('tr'),v=salesOf(s),name=node('td'),fields=openingFields(s),button=node('button','@'+(fields.nickname||'닉네임 확인 필요'),'sku-schedule-button');
+  button.type='button';button.dataset.scheduleId=String(s.id);button.setAttribute('aria-label',openingDate(s.start)+' '+openingLine(s)+' · '+salesLabel(s));button.onclick=()=>openDetail(s);name.append(button);
+  row.dataset.scheduleId=String(s.id);row.append(node('td',openingDate(s.start)),name,node('td',scheduleOwnerName(s)),node('td',salesText(v.count,'건')),node('td',salesText(v.amount,'원')));body.append(row);
+ }
+ const total=summarizeSales(items),foot=node('tfoot'),totalRow=node('tr'),totalLabel=node('th','제품 합계');totalLabel.scope='row';totalLabel.colSpan=3;totalRow.append(totalLabel,node('td',salesText(total.count,'건')),node('td',salesText(total.amount,'원')));foot.append(totalRow);
+ table.append(caption,thead,body,foot);return table;
+}
+function skuProductTable(items,namespace,label){
+ const groups=groupSkuSales(items);
+ if(!groups.length)return node('p','선택한 집계 기준에 해당하는 공동구매가 없습니다.','sku-empty');
+ const table=node('table',undefined,'sku-product-table'),caption=node('caption',label+' 제품별(SKU) 매출','sr-only'),thead=node('thead'),head=node('tr'),body=node('tbody'),foot=node('tfoot');
+ for(const title of ['제품(SKU)','공구 일정','판매건수','매출액','입력 현황']){const th=node('th',title);th.scope='col';head.append(th);}thead.append(head);
+ groups.forEach((group,index)=>{
+  const row=node('tr',undefined,'sku-product-total'),th=node('th'),v=group.totals,panel=node('tr',undefined,'sku-campaign-detail'),cell=node('td'),id='sku-'+namespace+'-product-'+index+'-detail',key=JSON.stringify([namespace,group.name]);
+  row.dataset.product=group.name;th.scope='row';panel.id=id;panel.hidden=!skuProductExpanded.has(key);cell.colSpan=5;cell.append(skuCampaignTable(group.items,group.name));panel.append(cell);
+  const toggle=skuToggle(group.name,id,!panel.hidden,open=>{panel.hidden=!open;if(open)skuProductExpanded.add(key);else skuProductExpanded.delete(key);});toggle.setAttribute('aria-label',group.name+' 공구별 내역');th.append(toggle);
+  row.append(th,node('td',v.total+'개'),node('td',salesText(v.count,'건')),node('td',salesText(v.amount,'원')),skuCoverage(v));body.append(row,panel);
+ });
+ const total=summarizeSales(items),totalRow=node('tr'),totalLabel=node('th',label+' 합계');totalLabel.scope='row';totalRow.append(totalLabel,node('td',total.total+'개'),node('td',salesText(total.count,'건')),node('td',salesText(total.amount,'원')),skuCoverage(total));foot.append(totalRow);
+ table.append(caption,thead,body,foot);return table;
+}
+function renderSkuSales(items,first){
+ const view=salesViewContext(),context=year+'-'+month+'-'+salesScope()+'-'+(view.weekly?view.index:'all');
+ if(context!==skuSalesContext){skuSalesContext=context;skuWeekExpanded.clear();skuProductExpanded.clear();$('salesProductBreakdown').open=false;}
+ const groups=groupSkuSales(items);$('salesProductCount').textContent=groups.length+'개 제품 · '+items.length+'개 공구';
+ $('salesMonthlyProducts').replaceChildren(skuProductTable(items,view.weekly?'selected-week':'month',view.label));
+ $('salesWeeklyBody').replaceChildren();
+ if(view.weekly)return;
+ for(const w of salesWeeks(items)){
+  const v=summarizeSales(w.items),tr=node('tr',undefined,'sales-week-summary'),th=node('th'),panel=node('tr',undefined,'sku-week-detail'),cell=node('td'),id='sku-week-'+w.index+'-detail';th.scope='row';tr.dataset.week=String(w.index);panel.id=id;panel.hidden=!skuWeekExpanded.has(w.index);cell.colSpan=6;
+  const toggle=skuToggle(w.index+'주차',id,!panel.hidden,open=>{panel.hidden=!open;if(open)skuWeekExpanded.add(w.index);else skuWeekExpanded.delete(w.index);});toggle.append(node('span','제품별 보기','sku-toggle-hint'));toggle.setAttribute('aria-label',w.index+'주차 제품별(SKU) 매출 보기');th.append(toggle,node('div',openingDate(w.start)+' ~ '+openingDate(w.end),'week-range'));
+  const carried=w.items.filter(s=>s.start<first).length;if(carried)th.append(node('div','전월 시작 '+carried+'개 포함','sales-carry-note'));
+  tr.append(th,node('td',v.total+'개'),node('td',v.complete+'개'),node('td',v.total?salesText(v.count,'건'):'공구 없음'),node('td',v.total?salesText(v.amount,'원'):'공구 없음'),node('td',v.missing+'개'));
+  const content=node('div');content.append(node('h3',w.index+'주차 제품별(SKU) 매출'),node('p','제품명을 누르면 공구별 내역을 확인할 수 있습니다.','sku-help'));
+  const scroll=node('div',undefined,'sku-table-scroll');scroll.append(skuProductTable(w.items,'week'+w.index,w.index+'주차'));content.append(scroll);cell.append(content);panel.append(cell);$('salesWeeklyBody').append(tr,panel);
+ }
+}
+
+const calendarClassificationRules={"version":1,"identity":"(@?[A-Za-z0-9_][A-Za-z0-9_.]*)\\s*[(（]([^()（）\\r\\n]{1,30})[)）]\\s*[-:：_]?\\s*([\\s\\S]+)","products":"플레이돌\\s*(?:맥스|max)?|와우펜(?:북)?|멀티보드|그리고\\s*지우고(?:북)?|무한\\s*워크북(?:보드)?|듀얼\\s*usb|키즈탭\\s*프로|키즈탭|세탁(?:클린)?볼|무선마이크|매직패드|매직폰|사운드\\s*차트|사운드북|베이비\\s*오디오|키즈오디오|오디오|빅북|차트|클린파워볼|동화툰\\s*패키지|낱말카드|샤워타월|클레이(?:10종팩)?|폰\\s*[/+&,·]\\s*패드|패드\\s*[/+&,·]\\s*폰|usb","nonSalesCategory":"릴스|체험단|블로그\\s*출고|사이트\\s*행사","nonSalesTitle":"릴스|체험단|협찬|시딩","rejectedNames":["월","화","수","목","금","토","일","취소","샘플","상품발송","제품수령","협찬","미정"]};
+/* Apply the user-confirmed title rules without editing sourceCsv. */
+function classifyCalendarType(raw){
+ const title=String(raw.title||'').trim(),explicit=String(raw.type||'').trim(),category=String(raw.category||'').trim();
+ const result=(type,rule,parsed=null)=>({type,rule,version:calendarClassificationRules.version,...(parsed||{})});
+ if(title.includes('페이백'))return result('페이백','payback-keyword');
+ if(explicit&&explicit!=='미분류')return result(explicit,'explicit-type');
+ if(new RegExp(calendarClassificationRules.nonSalesCategory,'i').test(category))return result('미분류','other-category');
+ const match=title.match(new RegExp(calendarClassificationRules.identity,'i'));
+ if(!match||!/[_a-z]/i.test(match[1])||calendarClassificationRules.rejectedNames.includes(match[2].trim()))return result('미분류','unresolved');
+ if(new RegExp(calendarClassificationRules.nonSalesTitle,'i').test(title)&&!/(?:공구|공동구매)/.test(title))return result('미분류','other-work');
+ const tail=match[3],productMatch=tail.match(new RegExp(calendarClassificationRules.products,'i'));
+ if(!productMatch)return result('미분류','unresolved-product');
+ const round=tail.match(/(\d+\s*차)/),product=String(raw.product||'').trim()||productMatch[0];
+ return result('공동구매','nickname-name-product',{nickname:match[1].replace(/^@/,''),person:match[2].trim(),product,round:round?round[1].replace(/\s/g,''):''});
+}
+
+/* Original CSV fields remain separate from editable calendar fields. */
+const scheduleCsvRequired=['sourceId','title','start','end','owner','category','type','color','influencer','product','specialNotes','status','sourceUrl'];
+const scheduleCsvCalendarFields=['title','start','end','owner','category','type','color','influencer','product','specialNotes','status','startTime','endTime','timezone','allDay','colorUnresolved','typeClassification'];
+function scheduleCsvValidDate(value){return /^(19|20)\d{2}-\d{2}-\d{2}$/.test(value)&&!Number.isNaN(Date.parse(value+'T00:00:00Z'))&&new Date(value+'T00:00:00Z').toISOString().slice(0,10)===value;}
+function scheduleCsvNormalize(raw,id,filename=''){
+ const value=key=>String(raw[key]??'').trim(),sourceId=value('sourceId'),title=value('title'),start=value('start'),end=value('end'),owner=value('owner'),type=value('type'),color=value('color'),status=value('status');
+ if(!sourceId||!title)throw Error('sourceId와 title은 필수입니다.');
+ if(!scheduleCsvValidDate(start)||!scheduleCsvValidDate(end)||end<start)throw Error('시작일·종료일은 YYYY-MM-DD로 입력하고 종료일을 확인해주세요.');
+ if(owner&&!Object.hasOwn(ownerNames,owner))throw Error('등록되지 않은 담당자 키입니다: '+owner);
+ if(type&&!workTypeOrder.includes(type))throw Error('등록되지 않은 업무유형입니다: '+type);
+ if(color&&!/^#[0-9a-f]{6}$/i.test(color))throw Error('색상은 #RRGGBB 형식이어야 합니다.');
+ if(status&&!['취소','예정','진행','완료','미표기'].includes(status))throw Error('등록되지 않은 일정 상태입니다: '+status);
+ for(const key of ['startTime','endTime'])if(value(key)&&!/^([01]\d|2[0-3]):[0-5]\d(?::[0-5]\d)?$/.test(value(key)))throw Error('시간은 HH:MM 또는 HH:MM:SS 형식이어야 합니다.');
+ if(value('allDay')&&!['true','false'].includes(value('allDay')))throw Error('allDay는 true 또는 false여야 합니다.');
+ if(start===end&&value('startTime')&&value('endTime')&&value('endTime')<value('startTime'))throw Error('종료 시간을 확인해주세요.');
+ const classification=classifyCalendarType(raw);
+ return {id,sourceId,title,originalTitle:raw.title,start,end,owner:owner||'U',category:value('category'),type:classification.type,color:color||'#94A3B8',colorUnresolved:!color,influencer:value('influencer'),product:value('product'),specialNotes:value('specialNotes'),status:status||'미표기',startTime:value('startTime'),endTime:value('endTime'),timezone:value('timezone'),allDay:value('allDay')?value('allDay')==='true':!(value('startTime')||value('endTime')),partner:'',related:'TimeBlocks 원본 CSV',imported:true,uncertain:[],salesCount:null,salesAmount:null,sourceFile:filename,sourceCsv:{...raw},typeClassification:classification};
+}
+function scheduleCsvSourceEqual(a,b){return !!a&&!!b&&Object.keys(a).length===Object.keys(b).length&&Object.keys(a).every(key=>a[key]===b[key]);}
+function scheduleCsvPlan(parsed,filename){
+ if(!parsed)throw Error('먼저 CSV를 선택해주세요.');
+ if(parsed.irregular||parsed.duplicates||parsed.blank)throw Error('열 이름·열 수 오류를 수정한 뒤 반영해주세요.');
+ const missing=scheduleCsvRequired.filter(key=>!parsed.headers.includes(key));
+ if(missing.length)throw Error('필수 열이 없습니다: '+missing.join(', '));
+ const existing=new Map();for(const item of schedules){if(!item.sourceId)continue;if(existing.has(item.sourceId))throw Error('현재 일정에 원본 ID가 중복되어 있습니다.');existing.set(item.sourceId,item);}
+ const incoming=new Set(),changes=new Map(),additions=[],stats={added:0,updated:0,unchanged:0,protected:0,unassigned:0,unclassified:0,unresolved:0};
+ let nextId=Math.max(1000000,...schedules.map(s=>s.id))+1;
+ for(let i=0;i<parsed.records.length;i++){
+  const raw=Object.fromEntries(parsed.headers.map((key,column)=>[key,parsed.records[i][column]]));let item;
+  try{item=scheduleCsvNormalize(raw,0,filename);}catch(error){throw Error(parsed.recordLines[i]+'행: '+error.message);}
+  if(incoming.has(item.sourceId))throw Error(parsed.recordLines[i]+'행: 같은 sourceId가 중복되어 있습니다.');incoming.add(item.sourceId);
+  if(!raw.owner.trim())stats.unassigned++;if(item.type==='미분류')stats.unclassified++;if(!raw.color.trim())stats.unresolved++;
+  const current=existing.get(item.sourceId);
+  if(!current){item.id=nextId++;additions.push(item);stats.added++;continue;}
+  if(scheduleCsvSourceEqual(current.sourceCsv,raw)){stats.unchanged++;continue;}
+  const updated={...current,sourceCsv:item.sourceCsv,sourceFile:filename,originalTitle:raw.title};
+  if(current.sourceCsv){
+   const previous=scheduleCsvNormalize(current.sourceCsv,current.id,current.sourceFile);
+   for(const field of scheduleCsvCalendarFields){
+    if(JSON.stringify(current[field])===JSON.stringify(previous[field])||JSON.stringify(current[field])===JSON.stringify(item[field]))updated[field]=item[field];
+    else if(JSON.stringify(previous[field])!==JSON.stringify(item[field]))stats.protected++;
+   }
+  }else{stats.protected++;} // Unknown provenance must not overwrite edited calendar fields.
+  changes.set(current.id,updated);stats.updated++;
+ }
+ return {rows:schedules.map(s=>changes.get(s.id)||s).concat(additions),stats};
+}
+function scheduleCsvRenderPlan(){
+ const box=$('scheduleCsvApplyBox');box.hidden=!scheduleCsvState.parsed;scheduleCsvState.plan=null;
+ $('applyScheduleCsv').disabled=true;$('scheduleCsvApplyError').textContent='';
+ if(box.hidden)return;
+ try{
+  const plan=scheduleCsvPlan(scheduleCsvState.parsed,scheduleCsvState.source.file.name);scheduleCsvState.plan=plan;const s=plan.stats;
+  $('scheduleCsvApplySummary').textContent='신규 '+s.added.toLocaleString('ko-KR')+'건 · 원본 갱신 '+s.updated.toLocaleString('ko-KR')+'건 · 동일 '+s.unchanged.toLocaleString('ko-KR')+'건';
+  $('scheduleCsvMappingNote').textContent='담당자 공란 '+s.unassigned+'건은 원래 카테고리·색상으로 표시 · 분류 미확정 '+s.unclassified+'건은 미분류'+(s.unresolved?' · 원본 색상 미확정 '+s.unresolved+'건은 회색으로 표시':'')+(s.protected?' · 직접 편집한 항목 '+s.protected+'개 유지':'');
+  $('applyScheduleCsv').disabled=scheduleCsvState.busy||!(s.added+s.updated);
+ }catch(error){$('scheduleCsvApplySummary').textContent='일정표 반영 조건을 확인해주세요.';$('scheduleCsvMappingNote').textContent='';$('scheduleCsvApplyError').textContent=error.message;}
+}
+function scheduleCsvApply(){
+ if(scheduleCsvState.busy)return;
+ try{
+  const plan=scheduleCsvPlan(scheduleCsvState.parsed,scheduleCsvState.source.file.name),s=plan.stats;
+  if(!(s.added+s.updated)){scheduleCsvRenderPlan();return;}
+  schedules=plan.rows;render();scheduleCsvRenderPlan();
+  $('scheduleCsvMessage').textContent='일정표에 반영했습니다. 신규 '+s.added+'건 · 갱신 '+s.updated+'건'+(s.protected?' · 직접 편집한 항목 '+s.protected+'개 유지':'')+'.';
+  $('scheduleCsvError').textContent='';
+ }catch(error){$('scheduleCsvError').textContent=error.message;}
+}
+
+/* Read the original CSV locally; mapping and calendar writes are separate steps. */
+const scheduleCsvState={source:null,parsed:null,request:0,busy:false};
+const scheduleCsvLimits={bytes:10000000,rows:50001,columns:200,cells:2000000,field:1000000,preview:20};
+function scheduleCsvParse(text,delimiter){
+ const rows=[],lines=[];let row=[],field='',quoted=false,closed=false,line=1,recordLine=1,cells=0;
+ const pushField=()=>{if(field.length>scheduleCsvLimits.field)throw Error('내용이 너무 긴 셀이 있습니다. 원본 CSV를 확인해주세요.');row.push(field);field='';closed=false;if(row.length>scheduleCsvLimits.columns)throw Error('CSV는 최대 200개 열까지 확인할 수 있습니다.');};
+ const pushRow=()=>{pushField();if(row.some(value=>value!=='')){cells+=row.length;if(cells>scheduleCsvLimits.cells||rows.length>=scheduleCsvLimits.rows)throw Error('CSV 행 또는 셀 수가 너무 많습니다. 파일을 나누어 선택해주세요.');rows.push(row);lines.push(recordLine);}row=[];};
+ for(let i=0;i<text.length;i++){
+  const ch=text[i];
+  if(quoted){
+   if(ch==='"'){if(text[i+1]==='"'){field+='"';i++;}else{quoted=false;closed=true;}}
+   else{field+=ch;if(ch==='\n'||ch==='\r'&&text[i+1]!=='\n')line++;}
+   continue;
+  }
+  if(ch===delimiter){pushField();continue;}
+  if(ch==='\r'||ch==='\n'){pushRow();if(ch==='\r'&&text[i+1]==='\n')i++;line++;recordLine=line;continue;}
+  if(closed){if(ch===' '||ch==='\t')continue;throw Error(line+'행: 닫는 따옴표 뒤의 구분자를 확인해주세요.');}
+  if(ch==='"'){if(field!=='')throw Error(line+'행: 셀 안의 따옴표 형식을 확인해주세요.');quoted=true;}else field+=ch;
+ }
+ if(quoted)throw Error(recordLine+'행부터 시작한 따옴표가 닫히지 않았습니다.');
+ if(row.length||field!==''||closed)pushRow();
+ return {rows,lines};
+}
+function scheduleCsvDecode(bytes,selection='auto'){
+ const decode=encoding=>new TextDecoder(encoding,{fatal:true}).decode(bytes).replace(/^\uFEFF/,'');
+ let encoding=selection,text;
+ if(selection==='auto'){
+  if(bytes[0]===255&&bytes[1]===254)encoding='utf-16le';
+  else if(bytes[0]===254&&bytes[1]===255)encoding='utf-16be';
+  else{try{text=decode('utf-8');encoding='utf-8';}catch{encoding='euc-kr';}}
+ }
+ try{if(text===undefined)text=decode(encoding);}catch{throw Error('한글을 읽을 수 없습니다. 문자 인코딩을 바꾸거나 원본을 CSV UTF-8로 저장해주세요.');}
+ if(text.includes('\u0000'))throw Error('CSV 문자 형식을 확인해주세요. UTF-8 또는 한글 Windows 형식의 CSV를 선택해주세요.');
+ return {text,encoding};
+}
+function scheduleCsvRead(bytes,encodingSelection,delimiterSelection){
+ const decoded=scheduleCsvDecode(bytes,encodingSelection);let text=decoded.text,forced='';
+ const separator=text.match(/^sep=([,;\t])(?:\r\n|\r|\n)/i);if(separator){forced=separator[1];text=text.slice(separator[0].length);}
+ const explicit=delimiterSelection==='tab'?'\t':delimiterSelection;
+ let result,delimiter;
+ if(explicit!=='auto'){delimiter=explicit;result=scheduleCsvParse(text,delimiter);}
+ else if(forced){delimiter=forced;result=scheduleCsvParse(text,delimiter);}
+ else{
+  let best=null,firstError=null;
+  for(const candidate of [',',';','\t']){
+   try{
+    const parsed=scheduleCsvParse(text,candidate),width=parsed.rows[0]?.length||0,sample=parsed.rows.slice(1,51),consistent=sample.filter(row=>row.length===width).length;
+    const score=width>1?1000+consistent*10+Math.min(width,20):0;
+    if(!best||score>best.score)best={parsed,delimiter:candidate,score};
+   }catch(error){firstError??=error;}
+  }
+  if(!best)throw firstError||Error('CSV 내용을 확인해주세요.');
+  result=best.parsed;delimiter=best.delimiter;
+ }
+ if(!result.rows.length)throw Error('CSV 파일에 확인할 내용이 없습니다.');
+ const headers=result.rows[0],records=result.rows.slice(1),recordLines=result.lines.slice(1).map(line=>line+(separator?1:0));
+ if(!records.length)throw Error('열 이름 다음에 일정 데이터가 없습니다.');
+ const irregular=records.reduce((count,row)=>count+Number(row.length!==headers.length),0);
+ const seen=new Set();let duplicates=0,blank=0;
+ for(const value of headers){const name=value.trim();if(!name)blank++;else if(seen.has(name))duplicates++;seen.add(name);}
+ return {headers,records,recordLines,encoding:decoded.encoding,delimiter,irregular,duplicates,blank};
+}
+function scheduleCsvFormat(parsed){
+ const encoding={'utf-8':'UTF-8','euc-kr':'CP949','utf-16le':'UTF-16 LE','utf-16be':'UTF-16 BE'}[parsed.encoding]||parsed.encoding;
+ return encoding+' · '+({',':'쉼표',';':'세미콜론','\t':'탭'}[parsed.delimiter]||parsed.delimiter);
+}
+function scheduleCsvSetBusy(busy){
+ scheduleCsvState.busy=busy;$('scheduleCsvDialog').setAttribute('aria-busy',String(busy));
+ for(const id of ['chooseScheduleCsv','scheduleCsvEncoding','scheduleCsvDelimiter'])$(id).disabled=busy;
+ scheduleCsvRenderPlan();
+}
+function scheduleCsvRender(){
+ scheduleCsvRenderPlan();
+ const source=scheduleCsvState.source,parsed=scheduleCsvState.parsed;
+ $('scheduleCsvLoaded').hidden=!source;$('scheduleCsvEmpty').hidden=!!source;$('scheduleCsvHead').replaceChildren();$('scheduleCsvBody').replaceChildren();
+ if(!source||!parsed)return;
+ $('scheduleCsvName').textContent=source.file.name;
+ $('scheduleCsvMeta').textContent=(source.bytes.length/1024).toLocaleString('ko-KR',{maximumFractionDigits:1})+' KB · 일정 원본';
+ $('scheduleCsvRows').textContent=parsed.records.length.toLocaleString('ko-KR')+'행';$('scheduleCsvColumns').textContent=parsed.headers.length+'열';$('scheduleCsvFormat').textContent=scheduleCsvFormat(parsed);
+ const warnings=[];
+ if(parsed.irregular)warnings.push('열 수가 다른 데이터 '+parsed.irregular.toLocaleString('ko-KR')+'행이 있습니다. 원본 구조를 확인해주세요.');
+ if(parsed.duplicates)warnings.push('같은 열 이름이 '+parsed.duplicates+'개 있습니다.');
+ if(parsed.blank)warnings.push('이름이 없는 열이 '+parsed.blank+'개 있습니다.');
+ $('scheduleCsvWarning').textContent=warnings.join(' ');$('scheduleCsvWarning').hidden=!warnings.length;
+ const head=node('tr'),lineTitle=node('th','원본 행');lineTitle.scope='col';head.append(lineTitle);
+ const preview=parsed.records.slice(0,scheduleCsvLimits.preview),width=Math.max(parsed.headers.length,...preview.map(row=>row.length));
+ for(let i=0;i<width;i++){const label=parsed.headers[i]||'이름 없는 열 '+(i+1),th=node('th',label);th.scope='col';head.append(th);}
+ $('scheduleCsvHead').append(head);
+ for(let i=0;i<preview.length;i++){
+  const row=preview[i],tr=node('tr',undefined,row.length!==parsed.headers.length?'has-width-warning':''),number=node('td',String(parsed.recordLines[i]));tr.append(number);
+  for(let col=0;col<width;col++){const text=row[col]??'',td=node('td'),span=node('span',text);span.title=text;td.append(span);tr.append(td);}$('scheduleCsvBody').append(tr);
+ }
+ $('scheduleCsvPreviewNote').textContent='전체 '+parsed.records.length.toLocaleString('ko-KR')+'행 중 처음 '+preview.length+'행 표시';
+}
+async function scheduleCsvImport(file){
+ const request=++scheduleCsvState.request;scheduleCsvSetBusy(true);$('scheduleCsvError').textContent='';$('scheduleCsvMessage').textContent='CSV 원본을 읽고 있습니다.';
+ try{
+  if(!file||!/\.csv$/i.test(file.name))throw Error('.csv 형식의 일정 원본 파일을 선택해주세요.');
+  if(file.size>scheduleCsvLimits.bytes)throw Error('CSV 파일은 10 MB 이하로 나누어 선택해주세요.');
+  if(!file.size)throw Error('비어 있는 CSV 파일입니다.');
+  const bytes=new Uint8Array(await file.arrayBuffer());if(request!==scheduleCsvState.request)return;
+  const parsed=scheduleCsvRead(bytes,$('scheduleCsvEncoding').value,$('scheduleCsvDelimiter').value);
+  scheduleCsvState.source={file,bytes};scheduleCsvState.parsed=parsed;scheduleCsvRender();
+  $('scheduleCsvMessage').textContent='CSV 원본을 읽었습니다. '+parsed.records.length.toLocaleString('ko-KR')+'행 · '+parsed.headers.length+'열';
+ }catch(error){
+  if(request!==scheduleCsvState.request)return;
+  $('scheduleCsvError').textContent=error.message+(scheduleCsvState.source?' 이전에 확인한 CSV는 유지했습니다.':'');
+  $('scheduleCsvMessage').textContent='';
+ }finally{if(request===scheduleCsvState.request)scheduleCsvSetBusy(false);}
+}
+function scheduleCsvReparse(){
+ if(!scheduleCsvState.source)return;
+ try{
+  const parsed=scheduleCsvRead(scheduleCsvState.source.bytes,$('scheduleCsvEncoding').value,$('scheduleCsvDelimiter').value);
+  scheduleCsvState.parsed=parsed;scheduleCsvRender();$('scheduleCsvError').textContent='';$('scheduleCsvMessage').textContent='선택한 설정으로 원본을 다시 읽었습니다.';
+ }catch(error){$('scheduleCsvError').textContent=error.message+' 이전 미리보기는 유지했습니다.';}
+}
+function scheduleCsvClear(){
+ scheduleCsvState.request++;scheduleCsvState.source=null;scheduleCsvState.parsed=null;scheduleCsvSetBusy(false);
+ $('scheduleCsvFile').value='';$('scheduleCsvMessage').textContent='';$('scheduleCsvError').textContent='';scheduleCsvRender();
+}
+$('openScheduleCsv').onclick=()=>{$('scheduleCsvDialog').showModal();$('chooseScheduleCsv').focus();};
+$('closeScheduleCsv').onclick=$('finishScheduleCsv').onclick=()=>$('scheduleCsvDialog').close();
+$('chooseScheduleCsv').onclick=()=>$('scheduleCsvFile').click();
+$('scheduleCsvFile').onchange=event=>{const file=event.target.files[0];event.target.value='';if(file)scheduleCsvImport(file);};
+$('clearScheduleCsv').onclick=scheduleCsvClear;$('scheduleCsvEncoding').onchange=$('scheduleCsvDelimiter').onchange=scheduleCsvReparse;
+const scheduleCsvDrop=$('scheduleCsvDrop');
+scheduleCsvDrop.addEventListener('dragover',event=>{event.preventDefault();scheduleCsvDrop.classList.add('is-dragging');});
+scheduleCsvDrop.addEventListener('dragleave',event=>{if(!scheduleCsvDrop.contains(event.relatedTarget))scheduleCsvDrop.classList.remove('is-dragging');});
+$('scheduleCsvDialog').addEventListener('dragover',event=>event.preventDefault());
+$('scheduleCsvDialog').addEventListener('drop',event=>{
+ event.preventDefault();scheduleCsvDrop.classList.remove('is-dragging');const files=event.dataTransfer?.files;
+ if(!files?.length)return;if(files.length!==1){$('scheduleCsvError').textContent='CSV 원본은 한 번에 한 파일씩 선택해주세요.';return;}scheduleCsvImport(files[0]);
+});
+
+$('applyScheduleCsv').onclick=scheduleCsvApply;
+
+const settlementWorkbookTemplate={"parts": {"xl/workbook.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><x:workbook xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"><x:sheets><x:sheet name=\"전달용_개인\" sheetId=\"1\" r:id=\"R5f17b650c38646b9\" xmlns:r=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships\" /><\/x:sheets><\/x:workbook>", "xl/styles.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><x:styleSheet xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"><x:numFmts count=\"5\"><x:numFmt numFmtId=\"200\" formatCode=\"#,##0\" /><x:numFmt numFmtId=\"201\" formatCode=\"0.0%\" /><x:numFmt numFmtId=\"202\" formatCode=\"0%\" /><x:numFmt numFmtId=\"203\" formatCode=\"[=0]&quot;미적용&quot;;[=1]&quot;적용&quot;;General\" /><x:numFmt numFmtId=\"204\" formatCode=\"#,##0.00\" /><\/x:numFmts><x:fonts count=\"12\"><x:font><x:sz val=\"11\" /><x:name val=\"Carlito\" /><\/x:font><x:font><x:sz val=\"10\" /><x:color rgb=\"FF243447\" /><x:name val=\"Arial\" /><\/x:font><x:font><x:b /><x:sz val=\"10\" /><x:color rgb=\"FFFFFFFF\" /><x:name val=\"Arial\" /><\/x:font><x:font><x:b /><x:sz val=\"10\" /><x:color rgb=\"FF203B59\" /><x:name val=\"Arial\" /><\/x:font><x:font><x:b /><x:sz val=\"12\" /><x:color rgb=\"FF203B59\" /><x:name val=\"Arial\" /><\/x:font><x:font><x:sz val=\"9\" /><x:color rgb=\"FF526175\" /><x:name val=\"Arial\" /><\/x:font><x:font><x:sz val=\"10\" /><x:color rgb=\"FFB42318\" /><x:name val=\"Arial\" /><\/x:font><x:font><x:sz val=\"10\" /><x:color rgb=\"FF526175\" /><x:name val=\"Arial\" /><\/x:font><x:font><x:b /><x:sz val=\"10\" /><x:color rgb=\"FF526175\" /><x:name val=\"Arial\" /><\/x:font><x:font><x:sz val=\"10\" /><x:color rgb=\"FF1D4ED8\" /><x:name val=\"Arial\" /><\/x:font><x:font><x:b /><x:sz val=\"12\" /><x:color rgb=\"FF146344\" /><x:name val=\"Arial\" /><\/x:font><x:font><x:sz val=\"10\" /><x:color rgb=\"FF6B7280\" /><x:name val=\"Arial\" /><\/x:font><\/x:fonts><x:fills count=\"11\"><x:fill><x:patternFill patternType=\"none\" /><\/x:fill><x:fill><x:patternFill patternType=\"gray125\" /><\/x:fill><x:fill><x:patternFill patternType=\"solid\"><x:fgColor rgb=\"FF203B59\" /><\/x:patternFill><\/x:fill><x:fill><x:patternFill patternType=\"solid\"><x:fgColor rgb=\"FFE6EDF5\" /><\/x:patternFill><\/x:fill><x:fill><x:patternFill patternType=\"solid\"><x:fgColor rgb=\"FFF0F5FA\" /><\/x:patternFill><\/x:fill><x:fill><x:patternFill patternType=\"solid\"><x:fgColor rgb=\"FFFFF3CD\" /><\/x:patternFill><\/x:fill><x:fill><x:patternFill patternType=\"solid\"><x:fgColor rgb=\"FFF7F9FC\" /><\/x:patternFill><\/x:fill><x:fill><x:patternFill patternType=\"solid\"><x:fgColor rgb=\"FFEDF2F7\" /><\/x:patternFill><\/x:fill><x:fill><x:patternFill patternType=\"solid\"><x:fgColor rgb=\"FFEDF4FF\" /><\/x:patternFill><\/x:fill><x:fill><x:patternFill patternType=\"solid\"><x:fgColor rgb=\"FFE2F0E9\" /><\/x:patternFill><\/x:fill><x:fill><x:patternFill patternType=\"solid\"><x:fgColor rgb=\"FFE5E7EB\" /><\/x:patternFill><\/x:fill><\/x:fills><x:borders count=\"10\"><x:border><x:left /><x:right /><x:top /><x:bottom /><x:diagonal /><\/x:border><x:border><x:left /><x:right /><x:top /><x:bottom style=\"medium\"><x:color rgb=\"FF203B59\" /><\/x:bottom><x:diagonal /><\/x:border><x:border><x:left /><x:right style=\"thin\"><x:color rgb=\"FFEBEFF4\" /><\/x:right><x:top /><x:bottom /><x:diagonal /><\/x:border><x:border><x:left /><x:right /><x:top /><x:bottom style=\"thin\"><x:color rgb=\"FFD8E1EB\" /><\/x:bottom><x:diagonal /><\/x:border><x:border><x:left /><x:right style=\"thin\"><x:color rgb=\"FFEBEFF4\" /><\/x:right><x:top /><x:bottom style=\"thin\"><x:color rgb=\"FFD8E1EB\" /><\/x:bottom><x:diagonal /><\/x:border><x:border><x:left /><x:right /><x:top style=\"medium\"><x:color rgb=\"FF93A8BF\" /><\/x:top><x:bottom style=\"thin\"><x:color rgb=\"FFD8E1EB\" /><\/x:bottom><x:diagonal /><\/x:border><x:border><x:left /><x:right style=\"thin\"><x:color rgb=\"FFD8E1EB\" /><\/x:right><x:top /><x:bottom /><x:diagonal /><\/x:border><x:border><x:left /><x:right style=\"thin\"><x:color rgb=\"FFD8E1EB\" /><\/x:right><x:top /><x:bottom style=\"thin\"><x:color rgb=\"FFD8E1EB\" /><\/x:bottom><x:diagonal /><\/x:border><x:border><x:left /><x:right /><x:top style=\"medium\"><x:color rgb=\"FF6FA58C\" /><\/x:top><x:bottom style=\"medium\"><x:color rgb=\"FF6FA58C\" /><\/x:bottom><x:diagonal /><\/x:border><x:border><x:left /><x:right style=\"thin\"><x:color rgb=\"FFD8E1EB\" /><\/x:right><x:top style=\"medium\"><x:color rgb=\"FF6FA58C\" /><\/x:top><x:bottom style=\"medium\"><x:color rgb=\"FF6FA58C\" /><\/x:bottom><x:diagonal /><\/x:border><\/x:borders><x:cellStyleXfs count=\"1\"><x:xf numFmtId=\"0\" fontId=\"0\" fillId=\"0\" borderId=\"0\" /><\/x:cellStyleXfs><x:cellXfs count=\"102\"><x:xf numFmtId=\"0\" fontId=\"0\" fillId=\"0\" borderId=\"0\" xfId=\"0\" /><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"2\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"2\" fillId=\"2\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"2\" fillId=\"2\" borderId=\"1\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"2\" fillId=\"2\" borderId=\"1\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"center\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"0\" borderId=\"2\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"0\" borderId=\"3\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"0\" borderId=\"4\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"center\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"0\" borderId=\"3\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"center\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"right\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"0\" borderId=\"3\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"right\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"center\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"right\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"0\" borderId=\"3\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"center\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"0\" borderId=\"3\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"right\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"3\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"3\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"3\" fillId=\"3\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"3\" fillId=\"3\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"3\" fillId=\"3\" borderId=\"5\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"3\" fillId=\"3\" borderId=\"5\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"3\" fillId=\"3\" borderId=\"5\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"right\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"4\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"4\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"4\" borderId=\"6\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"4\" borderId=\"3\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"4\" borderId=\"7\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"4\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"center\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"4\" borderId=\"6\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"center\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"4\" borderId=\"3\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"center\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"4\" borderId=\"7\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"center\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"4\" fillId=\"4\" borderId=\"3\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"center\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"4\" fillId=\"4\" borderId=\"7\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"center\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"5\" fillId=\"4\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"5\" fillId=\"4\" borderId=\"3\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"5\" fillId=\"4\" borderId=\"3\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"center\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"201\" fontId=\"1\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"0\" borderId=\"6\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"0\" borderId=\"3\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"0\" borderId=\"7\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"5\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"5\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"5\" borderId=\"6\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"6\" fillId=\"5\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"6\" fillId=\"5\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"6\" fillId=\"5\" borderId=\"6\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"4\" borderId=\"6\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"3\" fillId=\"4\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"3\" fillId=\"4\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"3\" fillId=\"4\" borderId=\"6\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"0\" borderId=\"6\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"right\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"6\" fillId=\"5\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"right\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"6\" fillId=\"5\" borderId=\"6\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"right\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"3\" fillId=\"4\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"right\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"3\" fillId=\"4\" borderId=\"6\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"right\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"201\" fontId=\"1\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"right\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"0\" borderId=\"7\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"right\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"6\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"7\" fillId=\"6\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"7\" fillId=\"6\" borderId=\"6\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"7\" fillId=\"6\" borderId=\"3\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"7\" fillId=\"6\" borderId=\"7\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"202\" fontId=\"1\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"203\" fontId=\"1\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"7\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"7\" borderId=\"3\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"8\" fillId=\"7\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"8\" fillId=\"7\" borderId=\"3\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"8\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"202\" fontId=\"1\" fillId=\"8\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"203\" fontId=\"1\" fillId=\"8\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"9\" fillId=\"8\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"202\" fontId=\"9\" fillId=\"8\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"203\" fontId=\"9\" fillId=\"8\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"2\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"2\" fillId=\"2\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"2\" fillId=\"2\" borderId=\"3\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"2\" fillId=\"2\" borderId=\"3\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"1\" fillId=\"9\" borderId=\"3\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"9\" borderId=\"3\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"right\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"1\" fillId=\"9\" borderId=\"7\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"right\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"10\" fillId=\"9\" borderId=\"3\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"10\" fillId=\"9\" borderId=\"3\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"right\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"10\" fillId=\"9\" borderId=\"7\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"right\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"10\" fillId=\"9\" borderId=\"8\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"10\" fillId=\"9\" borderId=\"8\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"right\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"200\" fontId=\"10\" fillId=\"9\" borderId=\"9\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"right\" vertical=\"center\" wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"0\" fontId=\"0\" fillId=\"10\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"0\" fontId=\"11\" fillId=\"10\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"0\" fontId=\"11\" fillId=\"10\" borderId=\"3\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"0\" fontId=\"11\" fillId=\"10\" borderId=\"3\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment wrapText=\"1\" /><\/x:xf><x:xf numFmtId=\"204\" fontId=\"0\" fillId=\"0\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"204\" fontId=\"0\" fillId=\"0\" borderId=\"7\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"204\" fontId=\"0\" fillId=\"9\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"204\" fontId=\"10\" fillId=\"9\" borderId=\"0\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"204\" fontId=\"10\" fillId=\"9\" borderId=\"9\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" /><x:xf numFmtId=\"204\" fontId=\"10\" fillId=\"9\" borderId=\"9\" xfId=\"0\" applyNumberFormat=\"1\" applyFont=\"1\" applyFill=\"1\" applyBorder=\"1\" applyAlignment=\"1\"><x:alignment horizontal=\"right\" /><\/x:xf><\/x:cellXfs><x:cellStyles count=\"1\"><x:cellStyle name=\"Normal\" xfId=\"0\" /><\/x:cellStyles><x:dxfs count=\"1\"><x:dxf><x:font><x:color rgb=\"FFB42318\" /><\/x:font><x:fill><x:patternFill patternType=\"solid\"><x:bgColor rgb=\"FFFFF3CD\" /><\/x:patternFill><\/x:fill><\/x:dxf><\/x:dxfs><\/x:styleSheet>", "xl/theme/theme1.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><a:theme name=\"ChatGPT\" xmlns:a=\"http://schemas.openxmlformats.org/drawingml/2006/main\"><a:themeElements><a:clrScheme name=\"ChatGPT\"><a:dk1><a:sysClr val=\"windowText\" lastClr=\"000000\" /><\/a:dk1><a:lt1><a:sysClr val=\"window\" lastClr=\"FFFFFF\" /><\/a:lt1><a:dk2><a:srgbClr val=\"0E2841\" /><\/a:dk2><a:lt2><a:srgbClr val=\"E8E8E8\" /><\/a:lt2><a:accent1><a:srgbClr val=\"156082\" /><\/a:accent1><a:accent2><a:srgbClr val=\"E97132\" /><\/a:accent2><a:accent3><a:srgbClr val=\"196B24\" /><\/a:accent3><a:accent4><a:srgbClr val=\"0F9ED5\" /><\/a:accent4><a:accent5><a:srgbClr val=\"A02B93\" /><\/a:accent5><a:accent6><a:srgbClr val=\"4EA72E\" /><\/a:accent6><a:hlink><a:srgbClr val=\"467886\" /><\/a:hlink><a:folHlink><a:srgbClr val=\"96607D\" /><\/a:folHlink><\/a:clrScheme><a:fontScheme name=\"Office\"><a:majorFont><a:latin typeface=\"Calibri Light\" /><a:ea typeface=\"Calibri Light\" /><a:cs typeface=\"Calibri Light\" /><\/a:majorFont><a:minorFont><a:latin typeface=\"Calibri\" /><a:ea typeface=\"Calibri\" /><a:cs typeface=\"Calibri\" /><\/a:minorFont><\/a:fontScheme><a:fmtScheme name=\"ChatGPT\"><a:fillStyleLst><a:solidFill><a:schemeClr val=\"phClr\" /><\/a:solidFill><a:gradFill><a:gsLst><a:gs pos=\"0\"><a:schemeClr val=\"phClr\"><a:tint val=\"67000\" /><a:lumMod val=\"110000\" /><a:satMod val=\"105000\" /><\/a:schemeClr><\/a:gs><a:gs pos=\"50000\"><a:schemeClr val=\"phClr\"><a:tint val=\"73000\" /><a:lumMod val=\"105000\" /><a:satMod val=\"103000\" /><\/a:schemeClr><\/a:gs><a:gs pos=\"100000\"><a:schemeClr val=\"phClr\"><a:tint val=\"81000\" /><a:lumMod val=\"105000\" /><a:satMod val=\"109000\" /><\/a:schemeClr><\/a:gs><\/a:gsLst><a:lin ang=\"5400000\" scaled=\"0\" /><\/a:gradFill><a:gradFill><a:gsLst><a:gs pos=\"0\"><a:schemeClr val=\"phClr\"><a:tint val=\"94000\" /><a:lumMod val=\"102000\" /><a:satMod val=\"103000\" /><\/a:schemeClr><\/a:gs><a:gs pos=\"50000\"><a:schemeClr val=\"phClr\"><a:shade val=\"100000\" /><a:lumMod val=\"100000\" /><a:satMod val=\"110000\" /><\/a:schemeClr><\/a:gs><a:gs pos=\"100000\"><a:schemeClr val=\"phClr\"><a:shade val=\"78000\" /><a:lumMod val=\"99000\" /><a:satMod val=\"120000\" /><\/a:schemeClr><\/a:gs><\/a:gsLst><a:lin ang=\"5400000\" scaled=\"0\" /><\/a:gradFill><\/a:fillStyleLst><a:lnStyleLst><a:ln w=\"12700\"><a:solidFill><a:schemeClr val=\"phClr\" /><\/a:solidFill><a:prstDash val=\"solid\" /><\/a:ln><a:ln w=\"19050\"><a:solidFill><a:schemeClr val=\"phClr\" /><\/a:solidFill><a:prstDash val=\"solid\" /><\/a:ln><a:ln w=\"25400\"><a:solidFill><a:schemeClr val=\"phClr\" /><\/a:solidFill><a:prstDash val=\"solid\" /><\/a:ln><\/a:lnStyleLst><a:effectStyleLst><a:effectStyle><a:effectLst /><\/a:effectStyle><a:effectStyle><a:effectLst /><\/a:effectStyle><a:effectStyle><a:effectLst><a:outerShdw blurRad=\"57150\" dist=\"19050\" dir=\"5400000\"><a:srgbClr val=\"000000\"><a:alpha val=\"63000\" /><\/a:srgbClr><\/a:outerShdw><\/a:effectLst><\/a:effectStyle><\/a:effectStyleLst><a:bgFillStyleLst><a:solidFill><a:schemeClr val=\"phClr\" /><\/a:solidFill><a:solidFill><a:schemeClr val=\"phClr\"><a:tint val=\"95000\" /><a:satMod val=\"170000\" /><\/a:schemeClr><\/a:solidFill><a:gradFill><a:gsLst><a:gs pos=\"0\"><a:schemeClr val=\"phClr\"><a:tint val=\"93000\" /><a:shade val=\"98000\" /><a:lumMod val=\"102000\" /><a:satMod val=\"150000\" /><\/a:schemeClr><\/a:gs><a:gs pos=\"50000\"><a:schemeClr val=\"phClr\"><a:tint val=\"98000\" /><a:shade val=\"90000\" /><a:lumMod val=\"103000\" /><a:satMod val=\"130000\" /><\/a:schemeClr><\/a:gs><a:gs pos=\"100000\"><a:schemeClr val=\"phClr\"><a:shade val=\"63000\" /><a:satMod val=\"120000\" /><\/a:schemeClr><\/a:gs><\/a:gsLst><a:lin ang=\"5400000\" scaled=\"0\" /><\/a:gradFill><\/a:bgFillStyleLst><\/a:fmtScheme><\/a:themeElements><\/a:theme>", "xl/sharedStrings.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><x:sst xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\" />", "xl/worksheets/sheet1.xml": "<?xml version=\"1.0\" encoding=\"utf-8\"?><x:worksheet xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"><x:sheetViews><x:sheetView showGridLines=\"0\" workbookViewId=\"0\"><x:pane ySplit=\"1\" topLeftCell=\"A2\" activePane=\"bottomLeft\" state=\"frozen\" /><\/x:sheetView><\/x:sheetViews><x:sheetFormatPr defaultRowHeight=\"15\" /><x:cols><x:col min=\"1\" max=\"1\" width=\"14\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"2\" max=\"2\" width=\"23\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"3\" max=\"3\" width=\"64\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"4\" max=\"4\" width=\"10\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"5\" max=\"5\" width=\"18\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"6\" max=\"6\" width=\"14\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"7\" max=\"7\" width=\"26\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"8\" max=\"8\" width=\"24\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"9\" max=\"9\" width=\"38\" hidden=\"0\" customWidth=\"1\" /><\/x:cols><x:sheetData><x:row r=\"1\" ht=\"30\" customHeight=\"1\"><x:c r=\"A1\" s=\"7\" t=\"str\"><x:v>번호<\/x:v><\/x:c><x:c r=\"B1\" s=\"7\" t=\"str\"><x:v>주문일자<\/x:v><\/x:c><x:c r=\"C1\" s=\"7\" t=\"str\"><x:v>상품명<\/x:v><\/x:c><x:c r=\"D1\" s=\"7\" t=\"str\"><x:v>수량<\/x:v><\/x:c><x:c r=\"E1\" s=\"7\" t=\"str\"><x:v>판매가<\/x:v><\/x:c><x:c r=\"F1\" s=\"7\" t=\"str\"><x:v>구매자<\/x:v><\/x:c><x:c r=\"G1\" s=\"7\" t=\"str\"><x:v>주문번호<\/x:v><\/x:c><x:c r=\"H1\" s=\"7\" t=\"str\"><x:v>처리현황<\/x:v><\/x:c><x:c r=\"I1\" s=\"7\" t=\"str\"><x:v>택배사/송장번호<\/x:v><\/x:c><\/x:row><x:row r=\"2\" ht=\"28\" customHeight=\"1\"><x:c r=\"A2\" s=\"11\" /><x:c r=\"B2\" s=\"11\" /><x:c r=\"C2\" s=\"3\" /><x:c r=\"D2\" s=\"15\" /><x:c r=\"E2\" s=\"16\" /><x:c r=\"F2\" s=\"11\" /><x:c r=\"G2\" s=\"11\" /><x:c r=\"H2\" s=\"11\" /><x:c r=\"I2\" s=\"8\" /><\/x:row><x:row r=\"3\" ht=\"28\" customHeight=\"1\"><x:c r=\"A3\" s=\"11\" /><x:c r=\"B3\" s=\"11\" /><x:c r=\"C3\" s=\"3\" /><x:c r=\"D3\" s=\"15\" /><x:c r=\"E3\" s=\"16\" /><x:c r=\"F3\" s=\"11\" /><x:c r=\"G3\" s=\"11\" /><x:c r=\"H3\" s=\"11\" /><x:c r=\"I3\" s=\"8\" /><\/x:row><x:row r=\"4\" ht=\"28\" customHeight=\"1\"><x:c r=\"A4\" s=\"11\" /><x:c r=\"B4\" s=\"11\" /><x:c r=\"C4\" s=\"3\" /><x:c r=\"D4\" s=\"15\" /><x:c r=\"E4\" s=\"16\" /><x:c r=\"F4\" s=\"11\" /><x:c r=\"G4\" s=\"11\" /><x:c r=\"H4\" s=\"11\" /><x:c r=\"I4\" s=\"8\" /><\/x:row><x:row r=\"5\" ht=\"28\" customHeight=\"1\"><x:c r=\"A5\" s=\"11\" /><x:c r=\"B5\" s=\"11\" /><x:c r=\"C5\" s=\"3\" /><x:c r=\"D5\" s=\"15\" /><x:c r=\"E5\" s=\"16\" /><x:c r=\"F5\" s=\"11\" /><x:c r=\"G5\" s=\"11\" /><x:c r=\"H5\" s=\"11\" /><x:c r=\"I5\" s=\"8\" /><\/x:row><x:row r=\"6\" ht=\"28\" customHeight=\"1\"><x:c r=\"A6\" s=\"11\" /><x:c r=\"B6\" s=\"11\" /><x:c r=\"C6\" s=\"3\" /><x:c r=\"D6\" s=\"15\" /><x:c r=\"E6\" s=\"16\" /><x:c r=\"F6\" s=\"11\" /><x:c r=\"G6\" s=\"11\" /><x:c r=\"H6\" s=\"11\" /><x:c r=\"I6\" s=\"8\" /><\/x:row><x:row r=\"7\" ht=\"28\" customHeight=\"1\"><x:c r=\"A7\" s=\"11\" /><x:c r=\"B7\" s=\"11\" /><x:c r=\"C7\" s=\"3\" /><x:c r=\"D7\" s=\"15\" /><x:c r=\"E7\" s=\"16\" /><x:c r=\"F7\" s=\"11\" /><x:c r=\"G7\" s=\"11\" /><x:c r=\"H7\" s=\"11\" /><x:c r=\"I7\" s=\"8\" /><\/x:row><x:row r=\"8\" ht=\"28\" customHeight=\"1\"><x:c r=\"A8\" s=\"11\" /><x:c r=\"B8\" s=\"11\" /><x:c r=\"C8\" s=\"3\" /><x:c r=\"D8\" s=\"15\" /><x:c r=\"E8\" s=\"16\" /><x:c r=\"F8\" s=\"11\" /><x:c r=\"G8\" s=\"11\" /><x:c r=\"H8\" s=\"11\" /><x:c r=\"I8\" s=\"8\" /><\/x:row><x:row r=\"9\" ht=\"28\" customHeight=\"1\"><x:c r=\"A9\" s=\"11\" /><x:c r=\"B9\" s=\"11\" /><x:c r=\"C9\" s=\"3\" /><x:c r=\"D9\" s=\"15\" /><x:c r=\"E9\" s=\"16\" /><x:c r=\"F9\" s=\"11\" /><x:c r=\"G9\" s=\"11\" /><x:c r=\"H9\" s=\"11\" /><x:c r=\"I9\" s=\"8\" /><\/x:row><x:row r=\"10\" ht=\"28\" customHeight=\"1\"><x:c r=\"A10\" s=\"11\" /><x:c r=\"B10\" s=\"11\" /><x:c r=\"C10\" s=\"3\" /><x:c r=\"D10\" s=\"15\" /><x:c r=\"E10\" s=\"16\" /><x:c r=\"F10\" s=\"11\" /><x:c r=\"G10\" s=\"11\" /><x:c r=\"H10\" s=\"11\" /><x:c r=\"I10\" s=\"8\" /><\/x:row><x:row r=\"11\" ht=\"28\" customHeight=\"1\"><x:c r=\"A11\" s=\"11\" /><x:c r=\"B11\" s=\"11\" /><x:c r=\"C11\" s=\"3\" /><x:c r=\"D11\" s=\"15\" /><x:c r=\"E11\" s=\"16\" /><x:c r=\"F11\" s=\"11\" /><x:c r=\"G11\" s=\"11\" /><x:c r=\"H11\" s=\"11\" /><x:c r=\"I11\" s=\"8\" /><\/x:row><x:row r=\"12\" ht=\"28\" customHeight=\"1\"><x:c r=\"A12\" s=\"12\" /><x:c r=\"B12\" s=\"12\" /><x:c r=\"C12\" s=\"9\" /><x:c r=\"D12\" s=\"17\" /><x:c r=\"E12\" s=\"18\" /><x:c r=\"F12\" s=\"12\" /><x:c r=\"G12\" s=\"12\" /><x:c r=\"H12\" s=\"12\" /><x:c r=\"I12\" s=\"10\" /><\/x:row><x:row r=\"13\" ht=\"30\" customHeight=\"1\"><x:c r=\"A13\" s=\"24\" t=\"str\"><x:v>주문 내역 합계<\/x:v><\/x:c><x:c r=\"B13\" s=\"24\" /><x:c r=\"C13\" s=\"24\" /><x:c r=\"D13\" s=\"26\" t=\"n\"><x:f>SUM(D2:D12)<\/x:f><x:v>0<\/x:v><\/x:c><x:c r=\"E13\" s=\"26\" t=\"n\"><x:f>SUM(E2:E12)<\/x:f><x:v>0<\/x:v><\/x:c><x:c r=\"F13\" s=\"24\" /><x:c r=\"G13\" s=\"24\" /><x:c r=\"H13\" s=\"24\" /><x:c r=\"I13\" s=\"24\" /><\/x:row><x:row r=\"14\" ht=\"30\" customHeight=\"1\"><x:c r=\"A14\" s=\"81\" t=\"str\"><x:v>소득세 계산<\/x:v><\/x:c><x:c r=\"B14\" s=\"81\" /><x:c r=\"C14\" s=\"81\" t=\"str\"><x:v>공구수수료 정산<\/x:v><\/x:c><x:c r=\"D14\" s=\"82\" t=\"str\"><x:v>수량<\/x:v><\/x:c><x:c r=\"E14\" s=\"82\" t=\"str\"><x:v>금액<\/x:v><\/x:c><x:c r=\"F14\" s=\"81\" t=\"str\"><x:v>안내<\/x:v><\/x:c><x:c r=\"G14\" s=\"81\" /><x:c r=\"H14\" s=\"71\" t=\"str\"><x:v>정산 대상<\/x:v><\/x:c><x:c r=\"I14\" s=\"76\" t=\"str\"><x:v>일반 개인<\/x:v><\/x:c><\/x:row><x:row r=\"15\" ht=\"30\" customHeight=\"1\"><x:c r=\"A15\" s=\"32\" t=\"str\"><x:v>소득세 3%<\/x:v><\/x:c><x:c r=\"B15\" s=\"33\" t=\"str\"><x:v>지방소득세 0.3%<\/x:v><\/x:c><x:c r=\"C15\" s=\"3\" t=\"str\"><x:v>주문금액<\/x:v><\/x:c><x:c r=\"D15\" s=\"16\" t=\"n\"><x:f>D13<\/x:f><x:v>0<\/x:v><\/x:c><x:c r=\"E15\" s=\"55\" t=\"n\"><x:f>E13<\/x:f><x:v>0<\/x:v><\/x:c><x:c r=\"F15\" s=\"63\" t=\"str\"><x:v>일반 개인: 소득세 3%와 지방소득세 공제.\n세목별 10원 단위 버림.<\/x:v><\/x:c><x:c r=\"G15\" s=\"64\" /><x:c r=\"H15\" s=\"71\" t=\"str\"><x:v>수수료율<\/x:v><\/x:c><x:c r=\"I15\" s=\"77\" t=\"n\"><x:v>0.15<\/x:v><\/x:c><\/x:row><x:row r=\"16\" ht=\"30\" customHeight=\"1\"><x:c r=\"A16\" s=\"36\" t=\"n\"><x:f>IF($I$16=0,0,ROUNDDOWN(E18*0.03,-1))<\/x:f><x:v>0<\/x:v><\/x:c><x:c r=\"B16\" s=\"37\" t=\"n\"><x:f>IF($I$16=0,0,ROUNDDOWN(A16*0.1,-1))<\/x:f><x:v>0<\/x:v><\/x:c><x:c r=\"C16\" s=\"48\" t=\"str\"><x:v>취소건<\/x:v><\/x:c><x:c r=\"D16\" s=\"56\" t=\"n\"><x:f>0<\/x:f><x:v>0<\/x:v><\/x:c><x:c r=\"E16\" s=\"57\" t=\"n\"><x:f>0<\/x:f><x:v>0<\/x:v><\/x:c><x:c r=\"F16\" s=\"63\" /><x:c r=\"G16\" s=\"64\" /><x:c r=\"H16\" s=\"71\" t=\"str\"><x:v>세금 공제 적용<\/x:v><\/x:c><x:c r=\"I16\" s=\"78\" t=\"n\"><x:v>1<\/x:v><\/x:c><\/x:row><x:row r=\"17\" ht=\"30\" customHeight=\"1\"><x:c r=\"A17\" s=\"40\" t=\"str\"><x:v>세목별 10원 단위 버림<\/x:v><\/x:c><x:c r=\"B17\" s=\"40\" /><x:c r=\"C17\" s=\"52\" t=\"str\"><x:v>정산 기준 매출<\/x:v><\/x:c><x:c r=\"D17\" s=\"58\" t=\"n\"><x:f>D15-D16<\/x:f><x:v>0<\/x:v><\/x:c><x:c r=\"E17\" s=\"59\" t=\"n\"><x:f>E15-E16<\/x:f><x:v>0<\/x:v><\/x:c><x:c r=\"F17\" s=\"63\" /><x:c r=\"G17\" s=\"64\" /><x:c r=\"H17\" s=\"71\" t=\"str\"><x:v>공구명<\/x:v><\/x:c><x:c r=\"I17\" s=\"3\" t=\"str\" /><\/x:row><x:row r=\"18\" ht=\"30\" customHeight=\"1\"><x:c r=\"A18\" s=\"3\" /><x:c r=\"B18\" s=\"3\" /><x:c r=\"C18\" s=\"3\" t=\"str\"><x:v>공구수수료<\/x:v><\/x:c><x:c r=\"D18\" s=\"60\" t=\"n\"><x:f>$I$15<\/x:f><x:v>0.15<\/x:v><\/x:c><x:c r=\"E18\" s=\"55\" t=\"n\"><x:f>E17*D18<\/x:f><x:v>0<\/x:v><\/x:c><x:c r=\"F18\" s=\"63\" /><x:c r=\"G18\" s=\"64\" /><x:c r=\"H18\" s=\"71\" t=\"str\"><x:v>주문 기간<\/x:v><\/x:c><x:c r=\"I18\" s=\"3\" t=\"str\" /><\/x:row><x:row r=\"19\" ht=\"30\" customHeight=\"1\"><x:c r=\"A19\" s=\"3\" /><x:c r=\"B19\" s=\"3\" /><x:c r=\"C19\" s=\"3\" t=\"str\"><x:v>소득세·지방소득세<\/x:v><\/x:c><x:c r=\"D19\" s=\"60\" t=\"n\"><x:f>0.033<\/x:f><x:v>0.033<\/x:v><\/x:c><x:c r=\"E19\" s=\"55\" t=\"n\"><x:f>A16+B16<\/x:f><x:v>0<\/x:v><\/x:c><x:c r=\"F19\" s=\"63\" /><x:c r=\"G19\" s=\"64\" /><x:c r=\"H19\" s=\"71\" /><x:c r=\"I19\" s=\"3\" /><\/x:row><x:row r=\"20\" ht=\"34\" customHeight=\"1\"><x:c r=\"A20\" s=\"3\" /><x:c r=\"B20\" s=\"3\" /><x:c r=\"C20\" s=\"89\" t=\"str\"><x:v>최종 지급액<\/x:v><\/x:c><x:c r=\"D20\" s=\"90\" t=\"n\"><x:f>D17<\/x:f><x:v>0<\/x:v><\/x:c><x:c r=\"E20\" s=\"91\" t=\"n\"><x:f>E18-E19<\/x:f><x:v>0<\/x:v><\/x:c><x:c r=\"F20\" s=\"65\" /><x:c r=\"G20\" s=\"66\" /><x:c r=\"H20\" s=\"72\" t=\"str\"><x:v>불러온 파일<\/x:v><\/x:c><x:c r=\"I20\" s=\"9\" t=\"str\" /><\/x:row><x:row r=\"21\"><x:c r=\"I21\" s=\"95\" t=\"str\"><x:v>disabled-style<\/x:v><\/x:c><\/x:row><x:row r=\"22\"><x:c r=\"I22\" s=\"97\" t=\"n\"><x:v>1.25<\/x:v><\/x:c><\/x:row><x:row r=\"23\"><x:c r=\"I23\" s=\"101\" t=\"n\"><x:v>1.25<\/x:v><\/x:c><\/x:row><\/x:sheetData><x:mergeCells><x:mergeCell ref=\"A13:C13\" /><x:mergeCell ref=\"A14:B14\" /><x:mergeCell ref=\"A17:B17\" /><x:mergeCell ref=\"F14:G14\" /><x:mergeCell ref=\"F15:G20\" /><\/x:mergeCells><x:conditionalFormatting sqref=\"A2:I12\"><x:cfRule type=\"expression\" dxfId=\"0\" priority=\"1\"><x:formula>OR($H2=\"취소\",$H2=\"입금대기\",$H2=\"반품완료\",$H2=\"반품완료 - 환불완료\")<\/x:formula><\/x:cfRule><\/x:conditionalFormatting><x:pageMargins left=\"0.7\" right=\"0.7\" top=\"0.75\" bottom=\"0.75\" header=\"0.3\" footer=\"0.3\" /><\/x:worksheet>", "_rels/.rels": "﻿<?xml version=\"1.0\" encoding=\"utf-8\"?><Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\"><Relationship Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument\" Target=\"/xl/workbook.xml\" Id=\"Ra09c54dec0824d25\" /><\/Relationships>", "xl/_rels/workbook.xml.rels": "﻿<?xml version=\"1.0\" encoding=\"utf-8\"?><Relationships xmlns=\"http://schemas.openxmlformats.org/package/2006/relationships\"><Relationship Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles\" Target=\"/xl/styles.xml\" Id=\"Rd5f297ad7c0843b6\" /><Relationship Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/theme\" Target=\"/xl/theme/theme1.xml\" Id=\"Raa7d4800fa0044bb\" /><Relationship Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/sharedStrings\" Target=\"/xl/sharedStrings.xml\" Id=\"Ra328691fa8524c5b\" /><Relationship Type=\"http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet\" Target=\"/xl/worksheets/sheet1.xml\" Id=\"R5f17b650c38646b9\" /><\/Relationships>", "[Content_Types].xml": "﻿<?xml version=\"1.0\" encoding=\"utf-8\"?><Types xmlns=\"http://schemas.openxmlformats.org/package/2006/content-types\"><Default Extension=\"xml\" ContentType=\"application/vnd.openxmlformats-officedocument.spreadsheetml.sheet.main+xml\" /><Default Extension=\"rels\" ContentType=\"application/vnd.openxmlformats-package.relationships+xml\" /><Override PartName=\"/xl/styles.xml\" ContentType=\"application/vnd.openxmlformats-officedocument.spreadsheetml.styles+xml\" /><Override PartName=\"/xl/theme/theme1.xml\" ContentType=\"application/vnd.openxmlformats-officedocument.theme+xml\" /><Override PartName=\"/xl/sharedStrings.xml\" ContentType=\"application/vnd.openxmlformats-officedocument.spreadsheetml.sharedStrings+xml\" /><Override PartName=\"/xl/worksheets/sheet1.xml\" ContentType=\"application/vnd.openxmlformats-officedocument.spreadsheetml.worksheet+xml\" /><\/Types>"}, "prefix": "<?xml version=\"1.0\" encoding=\"utf-8\"?><x:worksheet xmlns:x=\"http://schemas.openxmlformats.org/spreadsheetml/2006/main\"><x:sheetViews><x:sheetView showGridLines=\"0\" workbookViewId=\"0\"><x:pane ySplit=\"1\" topLeftCell=\"A2\" activePane=\"bottomLeft\" state=\"frozen\" /><\/x:sheetView><\/x:sheetViews><x:sheetFormatPr defaultRowHeight=\"15\" /><x:cols><x:col min=\"1\" max=\"1\" width=\"14\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"2\" max=\"2\" width=\"23\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"3\" max=\"3\" width=\"64\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"4\" max=\"4\" width=\"10\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"5\" max=\"5\" width=\"18\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"6\" max=\"6\" width=\"14\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"7\" max=\"7\" width=\"26\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"8\" max=\"8\" width=\"24\" hidden=\"0\" customWidth=\"1\" /><x:col min=\"9\" max=\"9\" width=\"38\" hidden=\"0\" customWidth=\"1\" /><\/x:cols>", "suffix": "<x:mergeCells><x:mergeCell ref=\"A13:C13\" /><x:mergeCell ref=\"A14:B14\" /><x:mergeCell ref=\"A17:B17\" /><x:mergeCell ref=\"F14:G14\" /><x:mergeCell ref=\"F15:G20\" /><\/x:mergeCells><x:conditionalFormatting sqref=\"A2:I12\"><x:cfRule type=\"expression\" dxfId=\"0\" priority=\"1\"><x:formula>OR($H2=\"취소\",$H2=\"입금대기\",$H2=\"반품완료\",$H2=\"반품완료 - 환불완료\")<\/x:formula><\/x:cfRule><\/x:conditionalFormatting><x:pageMargins left=\"0.7\" right=\"0.7\" top=\"0.75\" bottom=\"0.75\" header=\"0.3\" footer=\"0.3\" /><\/x:worksheet>", "headerStyles": ["7", "7", "7", "7", "7", "7", "7", "7", "7"], "bodyStyles": ["11", "11", "3", "15", "16", "11", "11", "11", "8"], "columnWidths": [14, 23, 64, 10, 18, 14, 26, 24, 38], "disabledStyle": "95", "decimalStyle": "97", "finalDecimalStyle": "101", "footer": [{"row": 13, "cells": [{"ref": "A13", "style": "24", "value": "주문 내역 합계"}, {"ref": "B13", "style": "24", "value": null}, {"ref": "C13", "style": "24", "value": null}, {"ref": "D13", "style": "26", "value": 0}, {"ref": "E13", "style": "26", "value": 0}, {"ref": "F13", "style": "24", "value": null}, {"ref": "G13", "style": "24", "value": null}, {"ref": "H13", "style": "24", "value": null}, {"ref": "I13", "style": "24", "value": null}]}, {"row": 14, "cells": [{"ref": "A14", "style": "81", "value": "소득세 계산"}, {"ref": "B14", "style": "81", "value": null}, {"ref": "C14", "style": "81", "value": "공구수수료 정산"}, {"ref": "D14", "style": "82", "value": "수량"}, {"ref": "E14", "style": "82", "value": "금액"}, {"ref": "F14", "style": "81", "value": "안내"}, {"ref": "G14", "style": "81", "value": null}, {"ref": "H14", "style": "71", "value": "정산 대상"}, {"ref": "I14", "style": "76", "value": "일반 개인"}]}, {"row": 15, "cells": [{"ref": "A15", "style": "32", "value": "소득세 3%"}, {"ref": "B15", "style": "33", "value": "지방소득세 0.3%"}, {"ref": "C15", "style": "3", "value": "주문금액"}, {"ref": "D15", "style": "16", "value": 0}, {"ref": "E15", "style": "55", "value": 0}, {"ref": "F15", "style": "63", "value": "일반 개인: 소득세 3%와 지방소득세 공제.\n세목별 10원 단위 버림."}, {"ref": "G15", "style": "64", "value": null}, {"ref": "H15", "style": "71", "value": "수수료율"}, {"ref": "I15", "style": "77", "value": 0.15}]}, {"row": 16, "cells": [{"ref": "A16", "style": "36", "value": 0}, {"ref": "B16", "style": "37", "value": 0}, {"ref": "C16", "style": "48", "value": "취소건"}, {"ref": "D16", "style": "56", "value": 0}, {"ref": "E16", "style": "57", "value": 0}, {"ref": "F16", "style": "63", "value": null}, {"ref": "G16", "style": "64", "value": null}, {"ref": "H16", "style": "71", "value": "세금 공제 적용"}, {"ref": "I16", "style": "78", "value": 1}]}, {"row": 17, "cells": [{"ref": "A17", "style": "40", "value": "세목별 10원 단위 버림"}, {"ref": "B17", "style": "40", "value": null}, {"ref": "C17", "style": "52", "value": "정산 기준 매출"}, {"ref": "D17", "style": "58", "value": 0}, {"ref": "E17", "style": "59", "value": 0}, {"ref": "F17", "style": "63", "value": null}, {"ref": "G17", "style": "64", "value": null}, {"ref": "H17", "style": "71", "value": "공구명"}, {"ref": "I17", "style": "3", "value": null}]}, {"row": 18, "cells": [{"ref": "A18", "style": "3", "value": null}, {"ref": "B18", "style": "3", "value": null}, {"ref": "C18", "style": "3", "value": "공구수수료"}, {"ref": "D18", "style": "60", "value": 0.15}, {"ref": "E18", "style": "55", "value": 0}, {"ref": "F18", "style": "63", "value": null}, {"ref": "G18", "style": "64", "value": null}, {"ref": "H18", "style": "71", "value": "주문 기간"}, {"ref": "I18", "style": "3", "value": null}]}, {"row": 19, "cells": [{"ref": "A19", "style": "3", "value": null}, {"ref": "B19", "style": "3", "value": null}, {"ref": "C19", "style": "3", "value": "소득세·지방소득세"}, {"ref": "D19", "style": "60", "value": 0.033}, {"ref": "E19", "style": "55", "value": 0}, {"ref": "F19", "style": "63", "value": null}, {"ref": "G19", "style": "64", "value": null}, {"ref": "H19", "style": "71", "value": null}, {"ref": "I19", "style": "3", "value": null}]}, {"row": 20, "cells": [{"ref": "A20", "style": "3", "value": null}, {"ref": "B20", "style": "3", "value": null}, {"ref": "C20", "style": "89", "value": "최종 지급액"}, {"ref": "D20", "style": "90", "value": 0}, {"ref": "E20", "style": "91", "value": 0}, {"ref": "F20", "style": "65", "value": null}, {"ref": "G20", "style": "66", "value": null}, {"ref": "H20", "style": "72", "value": "불러온 파일"}, {"ref": "I20", "style": "9", "value": null}]}]};
+
+/* Settlement imports remain separate; calendar sales are applied only through explicit confirmation. */
+const settlementState={recipient:null,rate:null,book:null,busy:false};
+let settlementRateAction='import',settlementPendingRate=null;
+const settlementHeaders=['번호','주문일자','상품명','수량','판매가','구매자','주문번호','처리현황','택배사/송장번호'];
+const settlementRecipients={business:'사업자',individual:'일반 개인'};
+const settlementXlsxMime='application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+function settlementMoney(value){return value.toLocaleString('ko-KR',{maximumFractionDigits:2})+'원';}
+function settlementNotice(message,error=false){$('settleMessage').textContent=message;$('settleMessage').classList.toggle('error',error);}
+function settlementXml(source){const xml=new DOMParser().parseFromString(source,'application/xml');if(xml.getElementsByTagName('parsererror').length)throw new Error('엑셀 내부 자료를 읽을 수 없습니다. 파일을 다시 저장해주세요.');return xml;}
+function settlementElements(element,name){return Array.from(element.getElementsByTagNameNS('*',name));}
+function settlementZipPath(base,target){const pieces=(target.startsWith('/')?target.slice(1):base+target).split('/'),out=[];for(const p of pieces){if(!p||p==='.')continue;if(p==='..'){if(!out.length)throw new Error('엑셀 파일 경로가 올바르지 않습니다.');out.pop();}else out.push(p);}return out.join('/');}
+async function settlementUnzip(bytes){
+ const view=new DataView(bytes.buffer,bytes.byteOffset,bytes.byteLength),decoder=new TextDecoder('utf-8',{fatal:true});
+ if(bytes.length<22||view.getUint32(0,true)!==0x04034b50)throw new Error('암호가 없는 .xlsx 파일을 넣어주세요.');
+ let end=-1;for(let p=bytes.length-22;p>=Math.max(0,bytes.length-65557);p--)if(view.getUint32(p,true)===0x06054b50&&p+22+view.getUint16(p+20,true)===bytes.length){end=p;break;}
+ if(end<0)throw new Error('엑셀 파일이 손상됐거나 지원하지 않는 형식입니다.');
+ const count=view.getUint16(end+10,true),centralSize=view.getUint32(end+12,true),centralOffset=view.getUint32(end+16,true);
+ if(count>2000||count===65535||centralOffset+centralSize>end)throw new Error('엑셀 파일 구조 또는 크기를 확인해주세요.');
+ const parts={};let p=centralOffset,total=0;
+ for(let i=0;i<count;i++){
+  if(p+46>bytes.length||view.getUint32(p,true)!==0x02014b50)throw new Error('엑셀 파일 목록을 읽을 수 없습니다.');
+  const flags=view.getUint16(p+8,true),method=view.getUint16(p+10,true),checksum=view.getUint32(p+16,true),packed=view.getUint32(p+20,true),unpacked=view.getUint32(p+24,true),nameSize=view.getUint16(p+28,true),extraSize=view.getUint16(p+30,true),commentSize=view.getUint16(p+32,true),offset=view.getUint32(p+42,true);
+  if(flags&1)throw new Error('암호가 없는 .xlsx 파일을 넣어주세요.');
+  if(unpacked>40000000||(total+=unpacked)>80000000||p+46+nameSize+extraSize+commentSize>bytes.length)throw new Error('엑셀 파일이 너무 큽니다. 공구별로 나누어 넣어주세요.');
+  const name=decoder.decode(bytes.subarray(p+46,p+46+nameSize));p+=46+nameSize+extraSize+commentSize;
+  if(!(/(^xl\/.*\.xml$)|(^xl\/_rels\/workbook\.xml\.rels$)/.test(name)))continue;
+  if(offset+30>bytes.length||view.getUint32(offset,true)!==0x04034b50)throw new Error('엑셀 자료 위치를 확인할 수 없습니다.');
+  const at=offset+30+view.getUint16(offset+26,true)+view.getUint16(offset+28,true);
+  if(at+packed>bytes.length)throw new Error('엑셀 자료가 일부 누락됐습니다.');
+  const compressed=bytes.slice(at,at+packed);let data;
+  if(method===0)data=compressed;
+  else if(method===8){
+   if(typeof DecompressionStream!=='function')throw new Error('이 브라우저에서는 엑셀을 읽을 수 없습니다. 최신 Edge 또는 Chrome을 사용해주세요.');
+   const stream=new Blob([compressed]).stream().pipeThrough(new DecompressionStream('deflate-raw')),reader=stream.getReader(),chunks=[];let length=0;
+   for(;;){const chunk=await reader.read();if(chunk.done)break;length+=chunk.value.length;if(length>unpacked){await reader.cancel();throw new Error('엑셀 압축 자료의 크기가 올바르지 않습니다.');}chunks.push(chunk.value);}
+   data=new Uint8Array(length);let pos=0;for(const c of chunks){data.set(c,pos);pos+=c.length;}
+  }else throw new Error('지원하지 않는 엑셀 압축 형식입니다.');
+  if(data.length!==unpacked||crc32(data)!==checksum)throw new Error('엑셀 파일의 일부 자료가 손상됐습니다.');
+  parts[name]=decoder.decode(data);
+ }
+ return parts;
+}
+function settlementSheetRows(xml,shared){
+ const rows=[];
+ for(const row of settlementElements(xml,'row')){
+  const values=[];for(const cell of settlementElements(row,'c')){
+   const ref=cell.getAttribute('r')||'',col=ref.match(/^[A-Z]+/);if(!col)continue;let index=0;for(const c of col[0])index=index*26+c.charCodeAt(0)-64;index--;
+   if(index>9)continue;
+   const type=cell.getAttribute('t')||'n',v=settlementElements(cell,'v')[0]?.textContent??'';
+   let value;if(type==='s'){const n=Number(v);if(!Number.isInteger(n)||n<0||n>=shared.length)throw new Error('엑셀 문자열 자료가 누락됐습니다.');value=shared[n];}
+   else if(type==='inlineStr')value=settlementElements(cell,'t').map(n=>n.textContent).join('');
+   else if(type==='e')throw new Error('엑셀에 계산 오류가 있습니다: '+ref);
+   else value=v;
+   values[index]={value,type};
+  }
+  rows.push({number:Number(row.getAttribute('r')),cells:values});
+  if(rows.length>25020)throw new Error('주문 상세가 너무 많습니다. 공구별로 나누어 넣어주세요.');
+ }
+ return rows;
+}
+function settlementNumber(raw,label,row){
+ const text=String(raw??'').trim().replace(/,/g,'').replace(/\s*원$/,'');
+ if(!/^\d+(?:\.0+)?$/.test(text))throw new Error(row+'행 '+label+'을 확인해주세요. 빈칸과 오류값은 0으로 계산하지 않습니다.');
+ const value=Number(text);if(!Number.isSafeInteger(value)||value<0||value>1000000000000)throw new Error(row+'행 '+label+'의 숫자 범위를 확인해주세요.');
+ return value;
+}
+function settlementStatus(value){
+ // Keep the original status in the source sheet; classify each complete status in a compound label.
+ const states=String(value??'').normalize('NFKC').replace(/\s/g,'').split(/[-\u2010-\u2015\u2212]/);
+ const included=['발송완료','배송완료','배송중','배송준비중','배송준비','배송대기','상품준비중','결제완료','배송전','교환완료'];
+ const excluded=['취소','취소완료','환불완료','반품완료','반품처리완료','입금대기','결제대기','미입금'];
+ if(states.every(status=>included.includes(status)||excluded.includes(status)))return states.some(status=>excluded.includes(status))?'excluded':'included';
+ throw new Error('처리현황 "'+value+'"는 정산 포함 여부를 확인해야 합니다. 부분 취소·환불은 차감 수량·금액이 있는 자료로 확인해주세요.');
+}
+function settlementDate(cell,epoch1904){
+ const value=String(cell?.value??'').trim();
+ if(cell?.type==='n'&&/^\d+(?:\.\d+)?$/.test(value)){
+  const d=new Date((epoch1904?Date.UTC(1904,0,1):Date.UTC(1899,11,30))+Math.round(Number(value)*86400000));
+  if(Number.isNaN(d.getTime()))throw new Error('주문일자를 확인해주세요.');
+  return d.toISOString().slice(0,19).replace('T',' ');
+ }
+ if(!/^\d{4}[-/.]\d{2}[-/.]\d{2}(?:[ T]\d{2}:\d{2}(?::\d{2})?)?$/.test(value))throw new Error('주문일자는 YYYY-MM-DD 형식의 자료가 필요합니다.');
+ const normalized=value.replaceAll('/','-').replaceAll('.','-').replace('T',' '),day=normalized.slice(0,10),dt=new Date(day+'T00:00:00Z');
+ if(Number.isNaN(dt.getTime())||dt.toISOString().slice(0,10)!==day)throw new Error('존재하지 않는 주문일자가 있습니다.');
+ return normalized;
+}
+async function settlementReadWorkbook(bytes){
+ const parts=await settlementUnzip(bytes);
+ if(!parts['xl/workbook.xml']||!parts['xl/_rels/workbook.xml.rels'])throw new Error('일반 .xlsx 엑셀 파일을 넣어주세요.');
+ const workbook=settlementXml(parts['xl/workbook.xml']),relations=settlementElements(settlementXml(parts['xl/_rels/workbook.xml.rels']),'Relationship'),epoch1904=['1','true'].includes(settlementElements(workbook,'workbookPr')[0]?.getAttribute('date1904'));
+ const shared=parts['xl/sharedStrings.xml']?settlementElements(settlementXml(parts['xl/sharedStrings.xml']),'si').map(si=>settlementElements(si,'t').map(t=>t.textContent).join('')):[];
+ const candidates=[];
+ for(const sheet of settlementElements(workbook,'sheet')){
+  const rid=sheet.getAttributeNS('http://schemas.openxmlformats.org/officeDocument/2006/relationships','id'),relation=relations.find(r=>r.getAttribute('Id')===rid);
+  if(!relation||relation.getAttribute('TargetMode')==='External')continue;
+  const target=settlementZipPath('xl/',relation.getAttribute('Target')||'');
+  if(!parts[target])continue;
+  const rows=settlementSheetRows(settlementXml(parts[target]),shared);
+  let columnMap=null;
+  const headerIndex=rows.findIndex(row=>{
+   const names=row.cells.map(c=>String(c?.value??'').replace(/\s/g,''));
+   const indices=settlementHeaders.map(h=>names.indexOf(h.replace(/\s/g,'')));
+   if(indices.some(i=>i<0)||new Set(indices).size!==settlementHeaders.length)return false;
+   columnMap=indices;return true;
+  });
+  if(headerIndex>=0)candidates.push({name:sheet.getAttribute('name'),rows:rows.slice(headerIndex+1),columnMap});
+ }
+ if(candidates.length!==1)throw new Error(candidates.length?'주문 내역 시트가 여러 개입니다. 정산할 시트 하나만 남긴 파일을 넣어주세요.':'DB 주문 엑셀의 번호·주문일자·상품명·수량·판매가·구매자·주문번호·처리현황·택배사/송장번호 열을 확인해주세요.');
+ const detail=[];
+ for(const source of candidates[0].rows){
+  const raw=candidates[0].columnMap.map(i=>source.cells[i]?.value??'');
+  if(raw.every(v=>String(v).trim()===''))continue;
+  if(!String(raw[6]).trim()){
+   if(raw.slice(0,3).some(v=>/합계|소득세 계산|공구수수료 정산/.test(String(v))))break;
+   throw new Error(source.number+'행 주문번호가 비어 있습니다.');
+  }
+  const quantity=settlementNumber(raw[3],'수량',source.number),sales=settlementNumber(raw[4],'판매가',source.number);
+  if(quantity===0)throw new Error(source.number+'행 수량은 1 이상이어야 합니다.');
+  const status=settlementStatus(String(raw[7]).trim());
+  raw[1]=settlementDate(source.cells[candidates[0].columnMap[1]],epoch1904);raw[3]=quantity;raw[4]=sales;
+  raw[6]=String(raw[6]).trim();if(!String(raw[2]).trim())throw new Error(source.number+'행 상품명이 비어 있습니다.');
+  detail.push({values:raw,quantity,sales,order:raw[6],excluded:status==='excluded'});
+ }
+ if(!detail.length)throw new Error('정산할 주문 상세가 없습니다.');
+ const sum=(rows,key)=>rows.reduce((a,r)=>a+r[key],0),excluded=detail.filter(r=>r.excluded),active=detail.filter(r=>!r.excluded);
+ const book={rows:detail,sheet:candidates[0].name,gross:sum(detail,'sales'),grossQuantity:sum(detail,'quantity'),excludedSales:sum(excluded,'sales'),excludedQuantity:sum(excluded,'quantity'),orderCount:new Set(detail.map(r=>r.order)).size,activeOrderCount:new Set(active.map(r=>r.order)).size};
+ if(!Number.isSafeInteger(book.gross)||book.gross>1000000000000)throw new Error('총 매출의 계산 범위를 확인해주세요.');
+ const dates=detail.map(r=>r.values[1].slice(0,10)).sort();book.start=dates[0];book.end=dates.at(-1);
+ // The calendar keeps an opaque import identity, never the customer/order details.
+ const digest=await crypto.subtle.digest('SHA-256',new TextEncoder().encode(JSON.stringify(detail.map(r=>r.values))));
+ book.calendarSalesKey=Array.from(new Uint8Array(digest),byte=>byte.toString(16).padStart(2,'0')).join('');
+ return book;
+}
+function settlementCalculate(book,recipient,rate){
+ if(!Object.hasOwn(settlementRecipients,recipient)||![10,15,20].includes(rate))throw new Error('정산 대상과 수수료율을 선택해주세요.');
+ const basis=book.gross-book.excludedSales,quantity=book.grossQuantity-book.excludedQuantity;
+ const hundredths=BigInt(basis)*BigInt(rate),commission=Number(hundredths)/100;
+ const income=recipient==='business'?0:Number((hundredths*3n/100000n)*10n),local=recipient==='business'?0:Number((BigInt(income)/100n)*10n),tax=income+local;
+ return {basis,quantity,commission,income,local,tax,payment:commission-tax};
+}
+function settlementRender(){
+ const state=settlementState,business=state.recipient==='business';
+ $('settleImport').disabled=state.busy;$('settleDropZone').classList.toggle('is-busy',state.busy);$('settleDropZone').setAttribute('aria-busy',String(state.busy));
+ $('settleResult').hidden=!state.book;$('settleEmpty').hidden=!!state.book;
+ settlementRenderCalendarLink();
+ if(!state.book)return;
+ const b=state.book,m=settlementCalculate(b,state.recipient,state.rate);
+ $('settleOrders').textContent=b.activeOrderCount.toLocaleString('ko-KR')+'건';$('settleQuantity').textContent=m.quantity.toLocaleString('ko-KR')+'개';$('settleBasis').textContent=settlementMoney(m.basis);$('settlePayment').textContent=settlementMoney(m.payment);
+ for(const [id,value] of [['settleGross',b.gross],['settleExcluded',b.excludedSales],['settleNet',m.basis],['settleCommission',m.commission],['settleFinal',m.payment]])$(id).textContent=settlementMoney(value);
+ for(const [id,value] of [['settleGrossQuantity',b.grossQuantity],['settleExcludedQuantity',b.excludedQuantity],['settleNetQuantity',m.quantity]])$(id).textContent=value.toLocaleString('ko-KR')+'개';
+ $('settleRateBadge').textContent=state.rate+'%';$('settleTaxTotal').textContent=business?'미부과':settlementMoney(m.tax);$('settleTaxTotalRow').classList.toggle('is-disabled',business);
+ $('settleIncomeTax').textContent=business?'미부과':settlementMoney(m.income);$('settleLocalTax').textContent=business?'미부과':settlementMoney(m.local);
+ $('settleTaxPanel').classList.toggle('is-disabled',business);$('settleTaxPanel').setAttribute('aria-disabled',String(business));$('settleTaxState').textContent=business?'미적용':'3.3% 적용';
+ $('settleTaxNote').textContent=business?'사업자 정산은 소득세·지방소득세를 공제하지 않습니다. 다른 계산 기준은 동일합니다.':'소득세 3%를 계산한 뒤 그 세액의 10%를 지방소득세로 계산합니다. 첨부 파일과 동일하게 세목별 10원 단위로 버립니다.';
+ $('settlePeriod').textContent=b.start+' ~ '+b.end+' · '+settlementRecipients[state.recipient]+' · 수수료 '+state.rate+'%';
+ $('settleSheetName').textContent=business?'전달용_사업자':'전달용_개인';$('settleOutputNote').textContent=business?'선택한 사업자 시트를 출력합니다. 세금 영역은 회색으로 표시합니다.':'선택한 개인 시트를 출력합니다. 소득세·지방소득세와 지급액을 표시합니다.';
+ $('settleDetailCount').textContent=b.rows.length+'행 · 주문번호 '+b.orderCount+'건';
+ $('settleRateChange').disabled=state.busy;$('settleDownload').disabled=state.busy;
+}
+function settlementRenderOrders(book){
+ const head=node('tr');for(const text of settlementHeaders)head.append(node('th',text));$('settleOrderHead').replaceChildren(head);
+ const fragment=document.createDocumentFragment();
+ for(const row of book.rows){const tr=node('tr');if(row.excluded)tr.classList.add('excluded');for(let i=0;i<settlementHeaders.length;i++)tr.append(node('td',typeof row.values[i]==='number'?row.values[i].toLocaleString('ko-KR'):String(row.values[i])));fragment.append(tr);}
+ $('settleOrderBody').replaceChildren(fragment);
+}
+async function settlementImportFile(file,rate,recipient=settlementState.recipient){
+ if(!file)return;
+ const previous=settlementState.book;
+ try{
+  if(!Object.hasOwn(settlementRecipients,recipient)||![10,15,20].includes(rate))throw new Error('정산 대상과 수수료율을 선택해주세요.');
+  if(!/\.xlsx$/i.test(file.name))throw new Error('.xlsx 형식의 주문 엑셀을 넣어주세요.');
+  if(file.size>20000000)throw new Error('파일이 너무 큽니다. 공구별로 나누어 넣어주세요.');
+  settlementState.busy=true;settlementRender();settlementNotice('엑셀 주문 내역을 확인하고 있습니다.');
+  const book=await settlementReadWorkbook(new Uint8Array(await file.arrayBuffer()));
+  book.filename=file.name;settlementState.book=book;settlementState.rate=rate;settlementState.recipient=recipient;
+  $('settleFileName').textContent=file.name;
+  $('settleCampaign').value=file.name.replace(/\.xlsx$/i,'').replace(/_공구.*$/,'')||'공동구매';
+  settlementRenderOrders(book);settlementNotice('주문 상세 '+book.rows.length+'행을 불러왔습니다. 수수료 '+rate+'%를 적용했습니다.');
+ }catch(error){settlementNotice(error.message+(previous?' 이전에 불러온 정산은 유지했습니다.':''),true);}
+ finally{settlementState.busy=false;settlementRender();$('settleFile').value='';}
+}
+function settlementWorkbook(){
+ const state=settlementState;if(!state.book||state.busy)throw new Error('정산할 엑셀을 먼저 넣어주세요.');
+ const b=state.book,m=settlementCalculate(b,state.recipient,state.rate),business=state.recipient==='business',template=settlementWorkbookTemplate,parts={...template.parts},delta=b.rows.length-11,at=n=>n+delta;
+ const cell=(ref,value,style,formula='')=>{
+  const f=formula?'<x:f>'+xmlText(formula.replace(/^=/,''))+'</x:f>':'';
+  if(typeof value==='number'){if(!Number.isFinite(value))throw new Error('정산값을 확인해주세요.');return '<x:c r="'+ref+'" s="'+style+'">'+f+'<x:v>'+value+'</x:v></x:c>';}
+  if(value===null||value===undefined||value==='')return '<x:c r="'+ref+'" s="'+style+'"/>';
+  return '<x:c r="'+ref+'" s="'+style+'" t="inlineStr"><x:is><x:t xml:space="preserve">'+xmlText(value)+'</x:t></x:is></x:c>';
+ };
+ const rows=['<x:row r="1" ht="30" customHeight="1">'+settlementHeaders.map((v,c)=>cell(String.fromCharCode(65+c)+'1',v,template.headerStyles[c])).join('')+'</x:row>'];
+ // Compact by default; keep long raw product names readable without clipping.
+ const widths=template.columnWidths;
+ const lineCount=(value,width)=>String(value??'').split(/\r?\n/).reduce((sum,line)=>sum+Math.max(1,Math.ceil(Array.from(line).reduce((n,ch)=>n+(ch.charCodeAt(0)>255?2:1),0)/Math.max(1,width-2))),0);
+ b.rows.forEach((row,i)=>{const height=Math.max(28,...row.values.map((v,c)=>lineCount(v,widths[c])*14+4));rows.push('<x:row r="'+(i+2)+'" ht="'+height+'" customHeight="1">'+row.values.map((v,c)=>cell(String.fromCharCode(65+c)+(i+2),v,template.bodyStyles[c])).join('')+'</x:row>');});
+ const exclude=(col)=>{const statuses=[...new Set(b.rows.filter(r=>r.excluded).map(r=>String(r.values[7])))],last=b.rows.length+1;if(statuses.length>200)throw new Error('처리현황 표기가 너무 많습니다. 동일 상태의 표기를 정리해주세요.');return statuses.length?'SUM('+statuses.map(status=>'SUMIF($H$2:$H$'+last+',"'+status.replaceAll('"','""')+'",$'+col+'$2:$'+col+'$'+last+')').join(',')+')':'0';};
+ const formulas={'D13':'SUM(D2:D'+(b.rows.length+1)+')','E13':'SUM(E2:E'+(b.rows.length+1)+')',
+ 'A16':'IF($I$'+at(16)+'=0,0,ROUNDDOWN(E'+at(18)+'*0.03,-1))','B16':'IF($I$'+at(16)+'=0,0,ROUNDDOWN(A'+at(16)+'*0.1,-1))',
+ 'D15':'D'+at(13),'E15':'E'+at(13),'D16':exclude('D'),'E16':exclude('E'),'D17':'D'+at(15)+'-D'+at(16),'E17':'E'+at(15)+'-E'+at(16),
+ 'D18':'$I$'+at(15),'E18':'E'+at(17)+'*D'+at(18),'E19':'A'+at(16)+'+B'+at(16),'D20':'D'+at(17),'E20':'E'+at(18)+'-E'+at(19)};
+ const values={'A13':'주문 내역 합계','D13':b.grossQuantity,'E13':b.gross,'A14':'소득세 계산','A15':'소득세 3%','B15':'지방소득세 0.3%','A16':m.income,'B16':m.local,'A17':business?'사업자: 세금 미적용':'세목별 10원 단위 버림',
+ 'C14':'공구수수료 정산','D14':'수량','E14':'금액','D15':b.grossQuantity,'E15':b.gross,'C16':'취소건','D16':b.excludedQuantity,'E16':b.excludedSales,'D17':m.quantity,'E17':m.basis,'D18':state.rate/100,'E18':m.commission,'D19':business?'미적용':0.033,'E19':m.tax,'D20':m.quantity,'E20':m.payment,
+ 'F15':business?'사업자 정산: 소득세·지방소득세 미부과.':'일반 개인: 소득세 3%와 지방소득세 공제.\n세목별 10원 단위 버림.',
+ 'I14':settlementRecipients[state.recipient],'I15':state.rate/100,'I16':business?0:1,'I17':$('settleCampaign').value.trim(),'I18':b.start+' ~ '+b.end,'I20':b.filename};
+ for(const original of template.footer){
+  const nr=at(original.row);
+  const cells=original.cells.map(c=>{
+   const ref=c.ref.replace(/\d+$/,String(nr)),inactive=business&&((original.row>=14&&original.row<=17&&/^[AB]/.test(c.ref))||original.row===19&&/^[CDE]/.test(c.ref)||c.ref==='F15');
+   const value=Object.hasOwn(values,c.ref)?values[c.ref]:c.value;const moneyCell=['E13','A16','B16','E15','E16','E17','E18','E19','E20'].includes(c.ref);const style=inactive?template.disabledStyle:moneyCell&&typeof value==='number'&&!Number.isInteger(value)?(c.ref==='E20'?template.finalDecimalStyle:template.decimalStyle):c.style;return cell(ref,value,style,formulas[c.ref]||'');
+  });
+  const meta=values['I'+original.row],height=Math.max(original.row===20?38:32,[17,20].includes(original.row)?lineCount(meta,widths[8])*14+4:0);
+  rows.push('<x:row r="'+nr+'" ht="'+height+'" customHeight="1">'+cells.join('')+'</x:row>');
+ }
+ const shiftRef=ref=>ref.replace(/([A-Z]+)(\d+)/g,(_,col,row)=>col+(Number(row)>=13?at(Number(row)):row));
+ const statuses=[...new Set(b.rows.filter(r=>r.excluded).map(r=>String(r.values[7])))];
+ // Use the exact same excluded status values as the financial SUMIF formulas.
+ const cancelFormula=statuses.length?'OR('+statuses.map(status=>'$H2="'+status.replaceAll('"','""')+'"').join(',')+')':'FALSE';
+ const suffix=template.suffix.replace(/<x:conditionalFormatting[\s\S]*?<\/x:conditionalFormatting>/g,block=>block.replace(/sqref="[^"]+"/,'sqref="A2:I'+(b.rows.length+1)+'"').replace(/<x:formula>[\s\S]*?<\/x:formula>/,'<x:formula>'+xmlText(cancelFormula)+'</x:formula>')).replace(/(?<!sq)ref="([^"]+)"/g,(_,ref)=>'ref="'+shiftRef(ref)+'"');
+ parts['xl/worksheets/sheet1.xml']=template.prefix.replace(/<x:dimension[^>]*\/>/,'<x:dimension ref="A1:I'+at(20)+'"/>')+'<x:sheetData>'+rows.join('')+'</x:sheetData>'+suffix;
+ const sheetName=business?'전달용_사업자':'전달용_개인';
+ parts['xl/workbook.xml']=parts['xl/workbook.xml'].replace(/name="전달용_개인"/,'name="'+sheetName+'"');
+ const campaign=($('settleCampaign').value.trim()||'공동구매').replace(/[\\/:*?"<>|]/g,'_');
+ return {bytes:zipWorkbook(parts),filename:campaign+'_공구정산_'+settlementRecipients[state.recipient]+'_'+state.rate+'%.xlsx',model:m,sheetName};
+}
+function settlementDownload(){
+ try{const result=settlementWorkbook(),url=URL.createObjectURL(new Blob([result.bytes],{type:settlementXlsxMime})),link=node('a');link.href=url;link.download=result.filename;document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);settlementNotice(result.sheetName+' 시트를 다운로드했습니다. 지급액 '+settlementMoney(result.model.payment));}
+ catch(error){settlementNotice(error.message,true);}
+}
+/* A file is staged locally; calculation starts only after confirming recipient and rate. */
+let settlementPendingFile=null,settlementPendingRecipient=null;
+function settlementDropNotice(message,error=false){
+ $('settleDropStatus').textContent=message;$('settleDropStatus').classList.toggle('error',error);
+}
+function settlementUpdateRateContinue(){
+ const valid=[10,15,20].includes(settlementPendingRate)&&Object.hasOwn(settlementRecipients,settlementPendingRecipient);
+ $('settleRateContinue').disabled=!valid||settlementState.busy;
+ $('settleRateContinue').textContent=settlementRateAction==='change'?'수수료율 적용':valid?settlementPendingRate+'%로 정산 불러오기':'선택 후 정산 불러오기';
+}
+function settlementOpenRate(action='import',file=null){
+ if(settlementState.busy||$('settleRateDialog').open)return;
+ if(action==='change'&&!settlementState.book)return;
+ if(action==='import'&&!file){$('settleFile').value='';$('settleFile').click();return;}
+ settlementRateAction=action;settlementPendingFile=file;settlementPendingRate=null;settlementPendingRecipient=settlementState.recipient;
+ for(const input of document.querySelectorAll('input[name="settleRate"]'))input.checked=false;
+ for(const input of document.querySelectorAll('input[name="settleRateRecipient"]'))input.checked=input.value===settlementPendingRecipient;
+ $('settleRateRecipientGroup').hidden=action==='change';
+ $('settleRateFile').textContent=file?file.name:settlementState.book.filename;
+ $('settleRateHelp').textContent=action==='change'?'현재 정산에 적용할 수수료율을 선택해주세요.':'정산 대상과 수수료율을 확인하면 선택한 엑셀을 불러옵니다.';
+ settlementUpdateRateContinue();$('settleRateDialog').showModal();
+ const first=settlementPendingRecipient?document.querySelector('input[name="settleRate"]'):document.querySelector('input[name="settleRateRecipient"]');
+ first.focus({preventScroll:true});
+}
+function settlementStageFiles(files){
+ $('settleDropZone').classList.remove('is-dragging');
+ if(settlementState.busy){settlementDropNotice('엑셀을 읽고 있습니다. 잠시 후 다시 넣어주세요.',true);return;}
+ if($('settleRateDialog').open)return;
+ if(files.length!==1){settlementDropNotice('정산할 엑셀 파일을 한 개씩 넣어주세요.',true);return;}
+ const file=files[0];
+ if(!/\.xlsx$/i.test(file.name)){settlementDropNotice('.xlsx 형식의 주문 엑셀을 넣어주세요.',true);return;}
+ if(!file.size){settlementDropNotice('비어 있는 파일입니다. 엑셀 내용을 확인해주세요.',true);return;}
+ if(file.size>20000000){settlementDropNotice('파일이 너무 큽니다. 20 MB 이하로 나누어 넣어주세요.',true);return;}
+ settlementDropNotice(file.name+' · 수수료율 선택 대기');
+ settlementOpenRate('import',file);
+}
+for(const radio of document.querySelectorAll('input[name="settleRate"]'))radio.onchange=()=>{settlementPendingRate=Number(radio.value);settlementUpdateRateContinue();};
+for(const radio of document.querySelectorAll('input[name="settleRateRecipient"]'))radio.onchange=()=>{settlementPendingRecipient=radio.value;settlementUpdateRateContinue();};
+$('settleImport').onclick=()=>{if(!settlementState.busy){$('settleFile').value='';$('settleFile').click();}};
+$('settleRateChange').onclick=()=>settlementOpenRate('change');
+$('settleRateClose').onclick=$('settleRateCancel').onclick=()=>$('settleRateDialog').close();
+$('settleRateDialog').addEventListener('close',()=>{
+ if($('settleRateDialog').open)return;
+ settlementPendingFile=null;settlementPendingRate=null;settlementPendingRecipient=null;
+ if(!settlementState.busy)settlementDropNotice('엑셀을 여기에 끌어 놓거나 파일을 선택해주세요.');
+});
+$('settleRateContinue').onclick=async()=>{
+ if(settlementState.busy||![10,15,20].includes(settlementPendingRate)||!Object.hasOwn(settlementRecipients,settlementPendingRecipient))return;
+ const action=settlementRateAction,rate=settlementPendingRate,recipient=settlementPendingRecipient,file=settlementPendingFile;
+ if(action==='import'&&!file)return;
+ $('settleRateContinue').disabled=true;$('settleRateDialog').close();
+ if(action==='change'){
+  settlementState.rate=rate;settlementRender();settlementNotice('수수료 '+rate+'%를 적용했습니다.');
+ }else{
+  await settlementImportFile(file,rate,recipient);
+  settlementDropNotice(settlementState.book?.filename===file.name?'다른 엑셀로 교체하려면 여기에 끌어 놓으세요.':'엑셀을 여기에 끌어 놓거나 파일을 선택해주세요.');
+ }
+};
+$('settleFile').onchange=event=>{const files=Array.from(event.target.files);event.target.value='';if(files.length)settlementStageFiles(files);};
+const settleDropZone=$('settleDropZone');
+settleDropZone.addEventListener('dragenter',event=>{event.preventDefault();if(!settlementState.busy)settleDropZone.classList.add('is-dragging');});
+settleDropZone.addEventListener('dragover',event=>{event.preventDefault();if(event.dataTransfer)event.dataTransfer.dropEffect=settlementState.busy?'none':'copy';});
+settleDropZone.addEventListener('dragleave',event=>{if(!settleDropZone.contains(event.relatedTarget))settleDropZone.classList.remove('is-dragging');});
+settleDropZone.addEventListener('drop',event=>{event.preventDefault();event.stopPropagation();settlementStageFiles(Array.from(event.dataTransfer?.files||[]));});
+$('settlementWorkspace').addEventListener('dragover',event=>{if(event.dataTransfer?.types.includes('Files'))event.preventDefault();});
+$('settlementWorkspace').addEventListener('drop',event=>{
+ if(!event.dataTransfer?.files.length)return;event.preventDefault();settlementStageFiles(Array.from(event.dataTransfer.files));
+});
+$('settleDownload').onclick=settlementDownload;
+
+
+/* A settlement writes calendar sales only after schedule selection and explicit confirmation. */
+const settlementCalendarState={year:2026,month:0,pending:null,linkedId:null};
+function settlementCalendarKey(book){
+ if(!/^[a-f0-9]{64}$/.test(book.calendarSalesKey||''))throw new Error('정산 자료의 반영 이력을 확인할 수 없습니다. 엑셀을 다시 불러와주세요.');
+ return book.calendarSalesKey;
+}
+function settlementCalendarValues(){
+ const b=settlementState.book;if(!b||settlementState.busy)throw new Error('정산할 엑셀을 먼저 불러와주세요.');
+ const amount=b.gross,count=b.activeOrderCount;
+ if(salesValue(count,countLimit)===null||salesValue(amount,amountLimit)===null)throw new Error('일정표에 반영할 판매건수와 매출액의 범위를 확인해주세요.');
+ return {count,amount,key:settlementCalendarKey(b),book:b};
+}
+function settlementCalendarEligible(s){return !!s&&s.type==='공동구매'&&s.status!=='취소';}
+function settlementCalendarLinks(s){
+ const links=Array.isArray(s.settlementSalesLinks)?s.settlementSalesLinks.slice():[];
+ if(s.settlementSalesLink?.key&&!links.some(link=>link.key===s.settlementSalesLink.key))links.push(s.settlementSalesLink);
+ return links;
+}
+function settlementCalendarCompleted(){
+ if(!settlementState.book||settlementState.busy)return null;
+ const v=settlementCalendarValues();
+ // Keep every applied source key even if later settlements or manual edits change the total.
+ return schedules.find(s=>settlementCalendarLinks(s).some(link=>link.key===v.key))||null;
+}
+function settlementCalendarTotals(before,v){
+ const count=(before.count??0)+v.count,amount=(before.amount??0)+v.amount;
+ if(salesValue(count,countLimit)===null||salesValue(amount,amountLimit)===null)throw new Error('합산 후 판매건수 또는 매출액이 입력 가능한 범위를 초과합니다. 기존 값을 확인해주세요.');
+ return {count,amount};
+}
+function settlementRenderCalendarLink(){
+ const b=settlementState.book,button=$('settleCalendarApply');if(!button)return;
+ let linked=null;try{linked=settlementCalendarCompleted();}catch{}
+ button.disabled=!b||settlementState.busy||!!linked;button.classList.toggle('is-applied',!!linked);
+ if(!linked)button.classList.remove('just-applied');
+ $('settleCalendarApplyLabel').textContent=linked?'✓ 일정표에 반영완료':'일정표 매출 반영하기';
+ $('settleCalendarView').hidden=!linked;settlementCalendarState.linkedId=linked?.id??null;
+ $('settleCalendarStatus').textContent=linked?calendarTitle(linked)+' · '+linked.start+' ~ '+linked.end+' · '+salesText(linked.salesCount,'건')+' / '+salesText(linked.salesAmount,'원')+' 누적 반영 완료':'판매건수와 주문금액을 선택한 일정에 반영합니다. 판매건수는 유효 주문번호 기준이며 매출액은 취소·반품 차감 전 주문금액입니다.';
+}
+function settlementCalendarNicknameMatch(s){
+ const nickname=String(openingFields(s).nickname||'').replace(/^@+/,'').toLowerCase();if(!nickname)return false;
+ const escaped=nickname.replace(/[|\\{}()[\]^$+*?.]/g,'\\$&');
+ return new RegExp('(?:^|[^a-z0-9_.])@?'+escaped+'(?=$|[^a-z0-9_.])','i').test([$('settleCampaign').value,settlementState.book?.filename||''].join(' ').normalize('NFKC'));
+}
+function settlementOpenCalendar(){
+ try{
+  const v=settlementCalendarValues();settlementRenderCalendarLink();if(settlementCalendarCompleted())return;
+  const matches=schedules.filter(s=>settlementCalendarEligible(s)&&settlementCalendarNicknameMatch(s)),overlapping=s=>s.start<=v.book.end&&s.end>=v.book.start;
+  matches.sort((a,b)=>Number(overlapping(b))-Number(overlapping(a))||Math.abs(date(a.start)-date(v.book.start))-Math.abs(date(b.start)-date(v.book.start))||a.id-b.id);
+  const suggested=matches[0]?.start.slice(0,7)||v.book.start.slice(0,7),chosen=calendarMonths.includes(suggested)?suggested:year+'-'+String(month+1).padStart(2,'0');
+  [settlementCalendarState.year,settlementCalendarState.month]=chosen.split('-').map(Number);settlementCalendarState.month--;
+  settlementCalendarState.pending=null;$('settleMiniSearch').value='';$('settleLinkError').textContent='';
+  $('settleLinkCount').textContent=salesText(v.count,'건');$('settleLinkAmount').textContent=salesText(v.amount,'원');
+  $('settleLinkCampaign').textContent='공구명: '+($('settleCampaign').value.trim()||v.book.filename);
+  $('settleCalendarPick').hidden=false;$('settleCalendarConfirm').hidden=true;
+  settlementRenderMiniCalendar();$('settleCalendarDialog').showModal();$('settleMiniSearch').focus();
+  $('settleMiniWeeks').querySelector('.matched')?.scrollIntoView({block:'nearest',inline:'nearest'});
+ }catch(error){settlementNotice(error.message,true);}
+}
+function settlementRenderMiniCalendar(){
+ const {year:y,month:m}=settlementCalendarState,first=new Date(Date.UTC(y,m,1)),last=new Date(Date.UTC(y,m+1,0)),gridStart=shift(first,-first.getUTCDay()),n=Math.ceil((first.getUTCDay()+last.getUTCDate())/7);
+ const value=y+'-'+String(m+1).padStart(2,'0'),query=$('settleMiniSearch').value.normalize('NFKC').trim().toLowerCase();
+ $('settleMiniMonth').value=value;$('settleMiniPrev').disabled=value===calendarMonths[0];$('settleMiniNext').disabled=value===calendarMonths.at(-1);
+ const rows=schedules.filter(s=>settlementCalendarEligible(s)&&[calendarTitle(s),s.influencer||'',s.title,scheduleOwnerName(s)].join(' ').normalize('NFKC').toLowerCase().includes(query)).sort((a,b)=>a.start.localeCompare(b.start)||a.id-b.id);
+ const visible=rows.filter(s=>date(s.start)<=last&&date(s.end)>=first),matched=visible.filter(settlementCalendarNicknameMatch);
+ $('settleMiniCount').textContent='선택 월 공동구매 '+visible.length+'건 · 닉네임 일치 '+matched.length+'건';$('settleMiniWeeks').replaceChildren();
+ for(let w=0;w<n;w++){
+  const ws=shift(gridStart,w*7),we=shift(ws,6),week=node('div',undefined,'settlement-mini-week'),days=node('div',undefined,'settlement-mini-days'),events=node('div',undefined,'settlement-mini-events');
+  for(let d=0;d<7;d++){
+   const dt=shift(ws,d),names=holidayNames(iso(dt)),cell=node('div',undefined,(d===0?'sunday':d===6?'saturday':'')+(dt.getUTCMonth()!==m?' outside':'')+(names.length?' holiday':''));
+   cell.append(node('span',String(dt.getUTCDate())));if(names.length){const holiday=node('small',names.join(' · '));holiday.title=names.join(' · ');cell.append(holiday);}days.append(cell);
+  }
+  const lanes=[];
+  for(const s of rows.filter(s=>date(s.start)<=we&&date(s.end)>=ws)){
+   const start=Math.max(0,Math.round((date(s.start)-ws)/dayMs)),end=Math.min(6,Math.round((date(s.end)-ws)/dayMs));let lane=0;while(lanes[lane]?.some(([a,b])=>start<=b&&end>=a))lane++;(lanes[lane]??=[]).push([start,end]);
+   const button=node('button',undefined,'settlement-mini-event'+(settlementCalendarNicknameMatch(s)?' matched':''));button.type='button';button.dataset.settleSchedule=String(s.id);
+   button.style.gridColumn=(start+1)+' / '+(end+2);button.style.gridRow=String(lane+1);button.style.setProperty('--schedule-color',scheduleColor(s));
+   button.append(node('strong',calendarTitle(s)),node('small',scheduleOwnerName(s)+' · '+s.start.slice(5)+' ~ '+s.end.slice(5)));
+   button.title=calendarTitle(s)+' · '+scheduleOwnerName(s)+' · '+s.start+' ~ '+s.end;button.setAttribute('aria-label',button.title+' · 이 일정 선택');
+   button.onclick=()=>settlementConfirmCalendar(s.id);events.append(button);
+  }
+  week.append(days,events);$('settleMiniWeeks').append(week);
+ }
+}
+function settlementMoveMiniMonth(direction){
+ const state=settlementCalendarState,current=state.year+'-'+String(state.month+1).padStart(2,'0'),index=calendarMonths.indexOf(current),next=calendarMonths[index+direction];if(!next)return;
+ [state.year,state.month]=next.split('-').map(Number);state.month--;settlementRenderMiniCalendar();
+}
+function settlementConfirmCalendar(id){
+ try{
+  settlementCalendarState.pending=null;
+  if(!$('settleCalendarDialog').open)return;
+  const s=schedules.find(row=>row.id===id);if(!settlementCalendarEligible(s))throw new Error('취소되지 않은 공동구매 일정을 선택해주세요.');
+  const v=settlementCalendarValues();
+  if(settlementCalendarCompleted())throw new Error('이미 일정표에 반영한 정산 자료입니다. 같은 내역은 다시 합산할 수 없습니다.');
+  const before=salesOf(s),after=settlementCalendarTotals(before,v),hasExisting=before.count!==null||before.amount!==null;
+  settlementCalendarState.pending={id,...v,before,after,history:JSON.stringify(settlementCalendarLinks(s))};
+  $('settleConfirmTitle').textContent=hasExisting?'기존 매출액과 판매건수가 있습니다. 내역을 합산할까요?':'정말 일정표에 해당 매출을 반영하시겠습니까?';
+  $('settleConfirmSchedule').textContent=calendarTitle(s);$('settleConfirmPeriod').textContent=s.start+' ~ '+s.end;$('settleConfirmOwner').textContent='담당자: '+scheduleOwnerName(s);
+  $('settleConfirmSource').textContent='이번 정산 주문기간: '+v.book.start+' ~ '+v.book.end;
+  for(const [field,value] of [['settleBeforeCount',salesText(before.count,'건')],['settleBeforeAmount',salesText(before.amount,'원')],['settleIncomingCount',salesText(v.count,'건')],['settleIncomingAmount',salesText(v.amount,'원')],['settleAfterCount',salesText(after.count,'건')],['settleAfterAmount',salesText(after.amount,'원')]])$(field).textContent=value;
+  $('settleConfirmNote').textContent=hasExisting?'기존 값에 이번 정산의 판매건수와 주문금액을 더합니다. 미입력 항목은 0으로 계산합니다.':'이번 정산의 판매건수와 주문금액을 선택한 일정에 저장합니다.';
+  $('settleCalendarYes').textContent=hasExisting?'예, 합산하기':'예, 반영하기';
+  $('settleLinkError').textContent='';$('settleCalendarPick').hidden=true;$('settleCalendarConfirm').hidden=false;$('settleCalendarNo').focus();
+ }catch(error){$('settleLinkError').textContent=error.message;}
+}
+function settlementDeclineCalendar(){
+ settlementCalendarState.pending=null;$('settleCalendarPick').hidden=false;$('settleCalendarConfirm').hidden=true;$('settleLinkError').textContent='';$('settleMiniSearch').focus();
+}
+function settlementApplyCalendar(){
+ const pending=settlementCalendarState.pending;if(!pending||!$('settleCalendarDialog').open||$('settleCalendarConfirm').hidden)return;
+ try{
+  const v=settlementCalendarValues(),s=schedules.find(row=>row.id===pending.id),before=s?salesOf(s):null;
+  const existing=settlementCalendarCompleted();if(existing){settlementCalendarState.pending=null;$('settleCalendarDialog').close();settlementRenderCalendarLink();settlementNotice('이미 일정표에 반영한 정산 자료입니다. 같은 내역은 다시 합산하지 않았습니다.');return;}
+  if(!settlementCalendarEligible(s)||v.book!==pending.book||v.key!==pending.key||v.count!==pending.count||v.amount!==pending.amount||before.count!==pending.before.count||before.amount!==pending.before.amount||JSON.stringify(settlementCalendarLinks(s))!==pending.history){
+   settlementDeclineCalendar();$('settleLinkError').textContent='정산 또는 일정 매출이 변경되었습니다. 최신 값을 확인하고 일정을 다시 선택해주세요.';return;
+  }
+  const after=settlementCalendarTotals(before,v),links=settlementCalendarLinks(s),entry={key:v.key,source:pending.book.filename,start:pending.book.start,end:pending.book.end,count:v.count,amount:v.amount,basis:'gross-order-amount',appliedAt:new Date().toISOString()};
+  Object.assign(s,{salesCount:after.count,salesAmount:after.amount,settlementSalesLinks:[...links,entry],settlementSalesLink:entry});
+  settlementCalendarState.pending=null;$('settleCalendarDialog').close();render();settlementRenderCalendarLink();
+  const button=$('settleCalendarApply');button.classList.remove('just-applied');void button.offsetWidth;button.classList.add('just-applied');
+  settlementNotice('반영이 완료되었습니다. '+calendarTitle(s)+' · 누적 '+salesText(after.count,'건')+' / '+salesText(after.amount,'원'));
+ }catch(error){$('settleLinkError').textContent=error.message;}
+}
+function settlementViewLinkedCalendar(){
+ const s=schedules.find(row=>row.id===settlementCalendarState.linkedId);if(!s)return;
+ year=Number(s.start.slice(0,4));month=Number(s.start.slice(5,7))-1;weeklyAnchor=sundayOf(s.start);switchWorkView('month');render();openDetail(s);
+}
+$('settleCalendarApply').onclick=settlementOpenCalendar;$('settleCalendarView').onclick=settlementViewLinkedCalendar;
+$('settleCalendarClose').onclick=()=>$('settleCalendarDialog').close();
+$('settleCalendarDialog').addEventListener('close',()=>{if(!$('settleCalendarDialog').open)settlementCalendarState.pending=null;});
+$('settleCalendarNo').onclick=settlementDeclineCalendar;$('settleCalendarYes').onclick=settlementApplyCalendar;
+$('settleMiniSearch').oninput=settlementRenderMiniCalendar;$('settleMiniPrev').onclick=()=>settlementMoveMiniMonth(-1);$('settleMiniNext').onclick=()=>settlementMoveMiniMonth(1);
+$('settleMiniMonth').onchange=()=>{const value=$('settleMiniMonth').value;if(!calendarMonths.includes(value)){settlementRenderMiniCalendar();return;}[settlementCalendarState.year,settlementCalendarState.month]=value.split('-').map(Number);settlementCalendarState.month--;settlementRenderMiniCalendar();};
+$('settleCampaign').addEventListener('input',()=>{if($('settleCalendarDialog').open&&!$('settleCalendarPick').hidden)settlementRenderMiniCalendar();});
+$('navSettlement').addEventListener('click',settlementRenderCalendarLink);
+$('settleCalendarApply').addEventListener('animationend',()=>{$('settleCalendarApply').classList.remove('just-applied');});
+
+settlementRender();
+
+document.addEventListener('DOMContentLoaded',()=>{if(new URLSearchParams(location.search).get('view')==='settlement')switchWorkView('settlement');},{once:true});
+
+/* Schedule popup feedback */
+let scheduleToastTimer=null;
+function closeScheduleToast(){clearTimeout(scheduleToastTimer);$('scheduleToast').hidden=true;}
+function armScheduleToast(){clearTimeout(scheduleToastTimer);scheduleToastTimer=setTimeout(closeScheduleToast,6500);}
+function showScheduleToast(heading,message){
+ $('scheduleToastTitle').textContent=heading;$('scheduleToastMessage').textContent=message;$('scheduleToast').hidden=false;
+ $('scheduleToastAnnouncer').textContent='';queueMicrotask(()=>{$('scheduleToastAnnouncer').textContent=message;});armScheduleToast();
+}
+function pulseScheduleSelection(id){
+ if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ for(const item of document.querySelectorAll('[data-schedule-id]')){
+  if(item.dataset.scheduleId!==String(id)||!item.getClientRects().length||typeof item.animate!=='function')continue;
+  item.animate([{transform:'scale(1)',filter:'brightness(1)'},{transform:'scale(.985)',filter:'brightness(1.13)'},{transform:'scale(1)',filter:'brightness(1)'}],{duration:220,easing:'ease-out'});
+ }
+}
+function installSchedulePopupFeedback(){
+ const submit=$('addForm').onsubmit;
+ $('addForm').onsubmit=function(event){
+  const previous=new Set(schedules.map(s=>s.id));submit.call(this,event);
+  const added=schedules.find(s=>!previous.has(s.id));if(!added||$('addDialog').open)return;
+  pulseScheduleSelection(added.id);
+  showScheduleToast('일정 등록 완료',added.title+' 일정이 등록 완료되었습니다.');
+ };
+ $('dismissScheduleToast').onclick=closeScheduleToast;
+ $('scheduleToast').addEventListener('mouseenter',()=>clearTimeout(scheduleToastTimer));
+ $('scheduleToast').addEventListener('mouseleave',armScheduleToast);
+ $('scheduleToast').addEventListener('focusin',()=>clearTimeout(scheduleToastTimer));
+ $('scheduleToast').addEventListener('focusout',armScheduleToast);
+ $('detailDialog').addEventListener('close',()=>queueMicrotask(()=>{
+  const target=[...document.querySelectorAll('[data-schedule-id]')].find(el=>el.dataset.scheduleId===String(selectedScheduleId)&&el.getClientRects().length);
+  if(target)target.focus({preventScroll:true});
+ }));
+}
+installSchedulePopupFeedback();
+
+restoreCalendarHistory();
+render();if(location.hash==='#list')setView(true);
+const requestedSchedule=Number(new URLSearchParams(location.search).get('schedule'));const previewSchedule=schedules.find(s=>s.id===requestedSchedule);if(previewSchedule)openDetail(previewSchedule);
+</script>
+<datalist id="scheduleProductNames"><option value="플레이돌"></option><option value="플레이돌 맥스"></option><option value="와우펜"></option><option value="멀티보드"></option><option value="그리고지우고북"></option><option value="무한워크북"></option><option value="듀얼USB"></option><option value="키즈탭프로"></option><option value="세탁볼"></option><option value="무선마이크"></option></datalist>
+</body>
+</html>
+
+
+
+
+
+
