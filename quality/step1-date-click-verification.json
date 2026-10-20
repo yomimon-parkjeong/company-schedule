@@ -62,7 +62,9 @@
   ],
   "consoleErrors": 0,
   "phpEngineExecuted": false,
-  "userReview": "pending",
+  "userReview": "approved",
   "productionDeployment": false,
-  "sampleSettlementExcelRead": false
+  "sampleSettlementExcelRead": false,
+  "userReviewedAt": "2026-10-20",
+  "nextStageAuthorized": 2
 }

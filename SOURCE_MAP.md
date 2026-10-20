@@ -26,3 +26,8 @@ index.php에 기존 HTML/CSS/JavaScript, CSV 입력·중복 판별·일정 편�
 - updates/2026-10-20-step1-date-click/: 날짜 클릭 기능 변경분과 회사 서버 병합 안내.
 - quality/step1-date-click-verification.json: 단계별 UI 검증.
 - 현재 서버의 DB 연결 코드는 GitHub 검토용 PHP에 없으므로 전체 파일 교체 금지.
+
+## 2026-10-20 2단계
+- updates/2026-10-20-step2-compact-bars/: 2단계 단독/1·2단계 통합 변경분과 회사 서버 병합 안내.
+- quality/step2-compact-bars-verification.json: 가상 일정으로 바 높이·담당자 정보·1단계 유지 검증.
+- 1단계 사용자 승인 완료, 2단계 검토 대기, 3단계 미착수.

@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-20",
+  "stage": 2,
+  "stage1UserApproved": true,
+  "beforePhpSha256": "34ea48d6033e955c2ad81710fd2daaaa6407b88b695a03a9ebbfe4201d3d2b82",
+  "afterPhpSha256": "e9ac41c691b1ed019c20e5367a2335d4ce27cd85f71cf80b6ba5b63892df1275",
+  "monthBarHeightBefore": 56,
+  "monthBarHeightAfter": 34,
+  "weekBarHeightBefore": 64,
+  "weekBarHeightAfter": 40,
+  "titleFontSize": 15,
+  "stage1RegistrationCodeUnchanged": true,
+  "settlementLogicUnchanged": true,
+  "initialRecords": 0,
+  "productionServerChanged": false,
+  "databaseChanged": false,
+  "stage3Started": false,
+  "browserChecks": [
+    {
+      "allOwnerTooltipsPreserved": true,
+      "barHeights": [
+        34,
+        34,
+        34,
+        34,
+        34
+      ],
+      "case": "month-bars",
+      "longTitleTruncated": [
+        {
+          "clipped": true,
+          "ellipsis": "ellipsis"
+        }
+      ],
+      "ownerLabels": 0,
+      "result": "월 일정 4건 · 달력 표시 4건 (앞뒤 달 포함)",
+      "titleFonts": [
+        "15px",
+        "15px",
+        "15px",
+        "15px",
+        "15px"
+      ]
+    },
+    {
+      "addOpen": false,
+      "case": "edit-owner-preserved",
+      "editOpen": true,
+      "owner": "B"
+    },
+    {
+      "case": "owner-filter",
+      "filteredOwnerAbsent": true,
+      "monthlyCount": "10월 공동구매월 전체"
+    },
+    {
+      "case": "step1-date-click-preserved",
+      "end": "2026-10-20",
+      "open": true,
+      "start": "2026-10-20"
+    },
+    {
+      "barHeights": [
+        40,
+        40,
+        40,
+        40
+      ],
+      "case": "week-bars",
+      "ownerLabels": 0,
+      "rowsFit": true,
+      "stats": "표시 일정 4건 · 공동구매 4건 오픈"
+    },
+    {
+      "case": "monthly-aggregates",
+      "ownerA": "김태수2건",
+      "ownerB": "박정1건",
+      "ownerC": "손안나1건",
+      "summary": " 10월 공동구매월 전체4건김태수2건박정1건손안나1건사이트 행사0건담당자 미지정0건 주차별 담당자 공구 건수접힘 · 펼치기펼침 · 접기일요일~토요일 · 공구 시작일 기준선택한 달의 시작일 기준 담당자별 공동구매 건수담당자1주차10/01~032주차10/04~103주차10/11~174주차10/18~245주차10/25~31김태수0건0건0건▸2건0건박정0건0건0건▸1건0건손안나0건0건0건▸1건0건합계0건0건0건▸4건0건 접기복사 "
+    }
+  ],
+  "consoleErrors": 0,
+  "phpEngineExecuted": false,
+  "userReview": "pending",
+  "sampleSettlementExcelRead": false
+}
