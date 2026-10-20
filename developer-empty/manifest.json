@@ -6,7 +6,7 @@
   "serverPersistence": false,
   "dashboardUnchanged": true,
   "dashboardSha256": "e48c513ef753ba9ce8a1b8d5abacc86208b81ee4b074b806a7b65c7b149c9cd5",
-  "phpPayloadSha256": "4f07803f59745c812de156075142868fcc67368bea1344656b807ca0e29c0068",
+  "phpPayloadSha256": "04a97f05a5127d2f731dcf2fb96a02b2f1d4c98ff730bbc87091a71771055754",
   "containsSourceIds": false,
   "containsRawScheduleTitles": false,
   "storageNamespace": "company-schedule.dev-empty.",
@@ -23,8 +23,8 @@
     },
     {
       "path": "public/index.php",
-      "bytes": 340286,
-      "sha256": "4f07803f59745c812de156075142868fcc67368bea1344656b807ca0e29c0068"
+      "bytes": 340863,
+      "sha256": "04a97f05a5127d2f731dcf2fb96a02b2f1d4c98ff730bbc87091a71771055754"
     },
     {
       "path": "README.md",
@@ -37,7 +37,7 @@
   "csvProductNamesFullyCorrected": false,
   "latestStage": 3,
   "productionDatabaseCodeIncluded": false,
-  "latestFeature": "notes-visibility",
+  "latestFeature": "csv-owner-groupbuy",
   "previousStagesUserApproved": [
     1,
     2,

@@ -1,0 +1,26 @@
+{
+  "scriptSyntax": true,
+  "allCsvRowsValidated": 1679,
+  "staffGroupbuys": 869,
+  "otherRows": 810,
+  "sameCsvReclassification": true,
+  "salesNotesAndDisplayFlagPreserved": true,
+  "onlyPhpOpeningTag": true,
+  "excelTemplateRuntimeContentUnchanged": true,
+  "phpEngineExecuted": false,
+  "productionDatabaseChanged": false,
+  "csv": {
+    "rows": 1679,
+    "columns": 24,
+    "assignedABC": 869,
+    "changedTypeCells": 684,
+    "paybackIncluded": 31,
+    "other810TypesUnchanged": true,
+    "allDayCaseNormalized": 1679,
+    "otherColumnsUnchanged": true,
+    "sourceUnchanged": true
+  },
+  "date": "2026-10-20",
+  "statusRegressionTests": 33,
+  "userPolicyConfirmed": true
+}

@@ -17,8 +17,8 @@
     },
     {
       "path": "AGENTS.md",
-      "bytes": 28348,
-      "sha256": "9e72b5b316aa759a660743c3fb0042ea0cc05f3a550509cc01cd0af3a6360d0a"
+      "bytes": 29045,
+      "sha256": "1e46c4000374dbe18c3fa7617a864c8c005241bdaaccf8814f966bcab2f0936d"
     },
     {
       "path": "archive/legacy-before-csv-test/.work/catalog-management/manager.css",
@@ -722,13 +722,13 @@
     },
     {
       "path": "developer-empty/manifest.json",
-      "bytes": 1433,
-      "sha256": "a8838d5a60808654fd48e55bb01a3d9e5ce0d5d6964fd20ee9d751b96552455f"
+      "bytes": 1435,
+      "sha256": "299e1eea28af60ae8ae7f9a4a3e8df782579280c903eee9c5e88b507b6d15136"
     },
     {
       "path": "developer-empty/public/index.php",
-      "bytes": 340286,
-      "sha256": "4f07803f59745c812de156075142868fcc67368bea1344656b807ca0e29c0068"
+      "bytes": 340863,
+      "sha256": "04a97f05a5127d2f731dcf2fb96a02b2f1d4c98ff730bbc87091a71771055754"
     },
     {
       "path": "developer-empty/README.md",
@@ -742,8 +742,8 @@
     },
     {
       "path": "docs/index.html",
-      "bytes": 338217,
-      "sha256": "8805fa66b81e4f98a0b41df8fc7f51bea20548144e37bbc26c452abdeac5c037"
+      "bytes": 338791,
+      "sha256": "974d3a2a9b2cff8a25f5b82c5b80cc42d98ace0ca44c1e930633e7efbfb9213c"
     },
     {
       "path": "quality/csv-only-cleanup-verification.json",
@@ -757,8 +757,8 @@
     },
     {
       "path": "quality/pages-preview-verification.json",
-      "bytes": 696,
-      "sha256": "2822d6754eb7ebb2b019b7f30acad1497307ee35933dae96242bc6dde1a8badf"
+      "bytes": 775,
+      "sha256": "f45b3db672721e9d14553cf3dcff92b848bd5712938fee2344545340777d5e2f"
     },
     {
       "path": "quality/step1-date-click-verification.json",
@@ -777,8 +777,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 3813,
-      "sha256": "0b1f33392cf9f077bcf615474fbdad388993d26100fa12d5455a9e880c6042a3"
+      "bytes": 4150,
+      "sha256": "c6162616814bab5493c308b70eacd10a609457867ccb7ac9c2a121095051287e"
     },
     {
       "path": "README_개발자인계.md",
@@ -787,8 +787,8 @@
     },
     {
       "path": "SOURCE_MAP.md",
-      "bytes": 2903,
-      "sha256": "d7befc14dfa539b4ec96319cf84d4ee1062f7894b97ac11d63ca1f90b62d0da9"
+      "bytes": 3240,
+      "sha256": "93d8c28d60e28b21f373de9a935221046f61e8f5353256d460b46cb2d19e8ac3"
     },
     {
       "path": "tools/build-pages-preview.py",
@@ -859,13 +859,33 @@
       "path": "quality/notes-visibility-verification.json",
       "bytes": 789,
       "sha256": "d6b4bab83e70c0905ebf5b857dc9f21fde9937def128c014c0a1dc04cfcad3ae"
+    },
+    {
+      "path": "updates/2026-10-20-csv-owner-groupbuy/csv-owner-and-xml.patch",
+      "bytes": 165263,
+      "sha256": "4b579dfc12d9cd21a6de79b52fd8ba5afaa20a9d9c369f6fab8c36474d16ba2f"
+    },
+    {
+      "path": "updates/2026-10-20-csv-owner-groupbuy/cumulative.patch",
+      "bytes": 243959,
+      "sha256": "1b47bd6e3186e0664223480073953730603b54a8e611376729b745ca23fe845f"
+    },
+    {
+      "path": "updates/2026-10-20-csv-owner-groupbuy/README.md",
+      "bytes": 3982,
+      "sha256": "12d67d413f6e34d5e18ea63e5782f02a4bfd81c5eb8aee33bd56a9ef6517d265"
+    },
+    {
+      "path": "quality/csv-owner-groupbuy-verification.json",
+      "bytes": 706,
+      "sha256": "4c7d7cb6b15eed1ddfa29c8b87e881a27f6d29ac69500287146ec96a95da9d04"
     }
   ],
   "pagesPreviewEntry": "docs/index.html",
   "pagesPublishPath": "/docs",
   "latestStage": 3,
   "nextStageRequiresUserReview": false,
-  "latestFeature": "notes-visibility",
+  "latestFeature": "csv-owner-groupbuy",
   "previousStagesUserApproved": [
     1,
     2,
