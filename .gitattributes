@@ -12,3 +12,6 @@
 # Keep handoff/archive files byte-identical to their delivery manifests.
 developer-empty/** -text
 archive/** -text
+
+# Preserve the tested mixed line endings in the v58.3 handoff patch.
+updates/v58.3-sidebar-search/*.patch -text
