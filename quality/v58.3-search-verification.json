@@ -1,0 +1,31 @@
+{
+  "version": "58.3",
+  "feature": "sidebar-all-period-search",
+  "baseVersion": "58.2",
+  "productionDatabaseChanged": false,
+  "serverPersistence": false,
+  "initialSchedules": 0,
+  "yearLimit": null,
+  "pageSize": 50,
+  "phpSha256": "a7add07e36196ea18030f0f0725d9d8661e6c1ea130892d47091a0bdee56151b",
+  "javascriptSyntax": true,
+  "partialKoreanMatch": true,
+  "allDatesIncluding2020And2035": true,
+  "hiddenNotesNotSearched": true,
+  "rawAndArchivedTitlesNotSearched": true,
+  "safeHighlight": true,
+  "sourceObjectsUnchanged": true,
+  "phpLintShortOpenTag0And1": true,
+  "actualPhpOutputMatchesPages": true,
+  "previousNameRowsVerified": 1679,
+  "browser": {
+    "fakeRecords": 65,
+    "crossYearResultCount": 4,
+    "editRecalculatesResults": true,
+    "pagination61In50And11": true,
+    "clearRestoresMonth": true,
+    "backRestoresWeek": true,
+    "hiddenNoteZeroMatches": true,
+    "consoleErrors": 0
+  }
+}

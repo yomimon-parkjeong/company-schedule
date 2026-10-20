@@ -1,0 +1,11 @@
+{
+  "version": "58.3",
+  "feature": "sidebar-all-period-search",
+  "baseVersion": "58.2",
+  "productionDatabaseChanged": false,
+  "serverPersistence": false,
+  "initialSchedules": 0,
+  "yearLimit": null,
+  "pageSize": 50,
+  "phpSha256": "a7add07e36196ea18030f0f0725d9d8661e6c1ea130892d47091a0bdee56151b"
+}

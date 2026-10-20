@@ -6,7 +6,7 @@
   "serverPersistence": false,
   "dashboardUnchanged": true,
   "dashboardSha256": "e48c513ef753ba9ce8a1b8d5abacc86208b81ee4b074b806a7b65c7b149c9cd5",
-  "phpPayloadSha256": "34af730b2f767c531b1df91af5b67c839773af34c610f21c611d59dbaa816678",
+  "phpPayloadSha256": "a7add07e36196ea18030f0f0725d9d8661e6c1ea130892d47091a0bdee56151b",
   "containsSourceIds": false,
   "containsRawScheduleTitles": false,
   "storageNamespace": "company-schedule.dev-empty.",
@@ -23,8 +23,8 @@
     },
     {
       "path": "public/index.php",
-      "bytes": 345777,
-      "sha256": "34af730b2f767c531b1df91af5b67c839773af34c610f21c611d59dbaa816678"
+      "bytes": 355558,
+      "sha256": "a7add07e36196ea18030f0f0725d9d8661e6c1ea130892d47091a0bdee56151b"
     },
     {
       "path": "README.md",
@@ -37,11 +37,11 @@
   "csvProductNamesFullyCorrected": false,
   "latestStage": 3,
   "productionDatabaseCodeIncluded": false,
-  "latestFeature": "influencer-name-display",
+  "latestFeature": "sidebar-all-period-search",
   "previousStagesUserApproved": [
     1,
     2,
     3
   ],
-  "version": "58.2"
+  "version": "58.3"
 }

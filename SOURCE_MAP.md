@@ -48,3 +48,9 @@ index.php에 기존 HTML/CSS/JavaScript, CSV 입력·중복 판별·일정 편�
 
 ## v58.2 인플루언서 이름 표시
 updates/v58.2-influencer-name/의 v58.1 기준 패치 또는 v58 기준 통합 패치 중 하나를 병합합니다. quality/v58.2-name-verification.json에 원본 보존·이름 표시·PHP/기존 기능 검증을 기록했습니다.
+
+## v58.3 왼쪽 전체 기간 검색
+- updates/v58.3-sidebar-search/: v58.2 기준 변경분, 미리보기와 운영 DB 검색의 구분.
+- tools/verify-sidebar-search.cjs: 부분 일치·기간 제한 없음·숨긴 메모 보호 검사.
+- quality/v58.3-search-verification.json: 코드·PHP·가상 일정 화면 검증.
+- 실제 운영 DB 소스와 API 규격은 저장소에 없으며 서버 검색은 미연결.

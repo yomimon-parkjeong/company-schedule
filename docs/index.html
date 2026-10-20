@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>사내 일정 관리 · v58.2</title>
+<title>사내 일정 관리 · v58.3</title>
 <style>
 :root{--line:#c7d1dd;--muted:#526175;--ink:#243044;--blue:#245fc5;--bg:#f5f7fa;--a:#3fa9f5;--b:#b980d0;--c:#ff9e18}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 'Malgun Gothic',Arial,sans-serif}button,input,select{font:inherit}button{cursor:pointer}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #8eb8ff;outline-offset:2px}button{border:1px solid #d5dce5;background:white;border-radius:5px;padding:7px 12px;color:var(--ink)}button:hover{background:#f0f4fa}.primary{background:var(--blue);border-color:var(--blue);color:#fff}.primary:hover{background:#194fae}header{height:64px;background:#fff;border-bottom:1px solid var(--line);padding:0 28px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:19px;font-weight:700;display:flex;align-items:center;gap:11px}.mark{width:27px;height:27px;background:var(--blue);color:#fff;border-radius:5px;text-align:center;line-height:27px;font-size:16px}.topmeta{display:flex;align-items:center;gap:14px;font-size:12px;color:var(--muted)}.badge{border:1px solid #dbe1ea;border-radius:4px;padding:2px 7px;background:#f6f8fb}.layout{display:grid;grid-template-columns:220px minmax(0,1fr);min-height:calc(100vh - 64px)}aside{background:#fff;border-right:1px solid var(--line);padding:25px 18px}.nav-title{font-size:12px;color:var(--muted);margin:0 10px 12px}.nav-item{background:#edf3ff;color:var(--blue);padding:10px 12px;border-radius:5px;font-weight:700}.filter-group{margin-top:29px}.filter-heading{font-size:12px;font-weight:700;color:var(--muted);margin-bottom:12px}.check{display:flex;align-items:center;gap:9px;padding:8px 3px;cursor:pointer}.check input{accent-color:var(--blue);width:15px;height:15px}.dot{width:9px;height:9px;border-radius:50%;display:inline-block}.owner-count{margin-left:auto;font-size:12px;color:var(--muted)}.side-note{font-size:12px;line-height:1.8;color:var(--muted);border-top:1px solid var(--line);padding-top:17px;margin-top:28px}main{padding:25px 28px;min-width:0}.page-head{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:18px}h1{font-size:23px;margin:0 0 3px;letter-spacing:-.8px}.subtitle{font-size:13px;color:var(--muted);margin:0}.summary{display:flex;gap:12px;margin:16px 0 20px}.summary-item{background:#fff;border:1px solid var(--line);padding:11px 17px;border-radius:6px;min-width:145px;display:flex;justify-content:space-between;gap:24px;align-items:center;color:var(--muted);font-size:12px}.summary-item strong{color:var(--ink);font-size:20px}.toolbar{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:13px;flex-wrap:wrap}.month-control{display:flex;align-items:center;gap:7px}.month{font-size:20px;font-weight:700;margin-right:12px;min-width:100px}.arrow{padding:5px 11px;font-size:19px}.tools{display:flex;gap:8px;flex-wrap:wrap}input[type=search],select,input[type=text],input[type=date]{border:1px solid #d5dce5;border-radius:5px;background:#fff;padding:7px 10px;color:var(--ink)}input[type=search]{width:210px}.view-switch{display:flex}.view-switch button{border-radius:0}.view-switch button:first-child{border-radius:5px 0 0 5px}.view-switch button:last-child{border-radius:0 5px 5px 0;border-left:0}.view-switch .active{background:#eaf1fe;color:var(--blue);font-weight:700}.calendar{border:1px solid var(--line);background:#fff;border-radius:6px;overflow:hidden}.weekdays{display:grid;grid-template-columns:repeat(7,1fr);border-bottom:1px solid var(--line);background:#f9fafc}.weekdays div{text-align:center;padding:10px;color:#34465e;font-size:13px;font-weight:600}.weekdays div:first-child{color:#c55656}.weekdays div:last-child{color:#5676a2}.week{position:relative;min-height:128px;border-bottom:1px solid var(--line);padding:34px 0 12px}.week:last-child{border-bottom:0}.day-grid{position:absolute;inset:0;display:grid;grid-template-columns:repeat(7,1fr);pointer-events:none}.day{border-right:1px solid var(--line);padding:7px 9px}.day:last-child{border-right:0}.day.outside{background:#f3f5f8;color:#637083}.day-number{font-size:13px;font-weight:600;display:inline-flex;width:23px;height:23px;align-items:center;justify-content:center}.day.sunday .day-number{color:#be5555}.day.saturday .day-number{color:#5278ab}.day.today .day-number{background:var(--blue);color:#fff;border-radius:50%}.events{position:relative;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));grid-auto-rows:46px;row-gap:4px;padding:0 4px;pointer-events:none}.event{pointer-events:auto;display:block;text-align:left;padding:5px 8px;margin:0 2px;border:0;border-left:3px solid var(--owner);background:var(--owner);color:#fff;border-radius:3px;font-size:13px;font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:22px}.event:hover{filter:brightness(.90)}.event.cancelled{color:#fff;background:#536071;border-color:#536071}.event.done{opacity:1}.event .who{font-weight:800;margin-right:5px}.calendar-bottom{display:flex;justify-content:space-between;gap:10px;font-size:12px;color:var(--muted);padding:12px 2px}.legend{display:flex;gap:15px}.legend span{display:flex;gap:5px;align-items:center}.list-wrap{background:#fff;border:1px solid var(--line);border-radius:6px;overflow:auto}table{border-collapse:collapse;width:100%;min-width:720px;text-align:left}th{background:#f9fafc;color:var(--muted);font-size:12px;font-weight:500}th,td{padding:13px 16px;border-bottom:1px solid var(--line)}td button{padding:0;border:0;color:var(--blue);background:none}.empty{padding:35px;text-align:center;color:var(--muted)}[hidden]{display:none!important}dialog{border:0;border-radius:9px;padding:0;width:min(480px,calc(100vw - 30px));box-shadow:0 20px 80px #17283b33;color:var(--ink)}dialog::backdrop{background:#17283b66}.dialog-head{display:flex;justify-content:space-between;align-items:center;padding:19px 22px;border-bottom:1px solid var(--line)}.dialog-head h2{font-size:17px;margin:0}.dialog-body{padding:20px 22px}.details{display:grid;grid-template-columns:88px 1fr;gap:13px;font-size:13px}.details dt{color:var(--muted)}.details dd{margin:0}.dialog-foot{border-top:1px solid var(--line);padding:14px 22px;display:flex;justify-content:flex-end;gap:8px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.form-grid label{display:flex;flex-direction:column;gap:5px;font-size:12px;color:var(--muted)}.full{grid-column:1/-1}.form-note{font-size:12px;color:var(--muted);margin:15px 0 0}.error{color:#be4141;font-size:12px;margin:10px 0 0}footer{font-size:11px;color:#8893a2;margin-top:12px}
@@ -311,10 +311,36 @@ button.delete-schedule-button:focus-visible,button.delete-confirm-button:focus-v
 #deleteSchedulePeriod{font-size:12px;color:#526175;margin:0 0 18px}
 .delete-warning-text{color:#b42332;background:#fff3f4;border:1px solid #edc1c6;border-radius:6px;padding:12px;line-height:1.7;margin:0;font-weight:700}
 #deleteScheduleDialog .dialog-foot{justify-content:flex-end;gap:8px}
+
+/* Sidebar search: all loaded schedules, with no month/year cutoff. */
+.schedule-search-form{margin:0 0 22px;padding:15px 0 18px;border-bottom:1px solid var(--line)}
+.schedule-search-form label{display:block;font-size:13px;font-weight:700;color:#243a59;margin-bottom:8px}
+.schedule-search-controls{display:flex;gap:5px;align-items:center}
+.schedule-search-controls input[type=search]{width:100%;min-width:0;font-size:13px;padding:9px 8px}
+.schedule-search-controls button{display:flex;align-items:center;justify-content:center;flex-shrink:0;padding:8px;width:35px;height:37px}
+.schedule-search-controls svg{width:17px;height:17px}
+.schedule-search-hint{display:block;font-size:11px;line-height:1.7;color:var(--muted);margin-top:7px}
+.schedule-search-form.is-active label{color:var(--blue)}
+.search-results-head{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:18px 0 12px}
+.search-results-head h2{font-size:17px;margin:0;overflow-wrap:anywhere}
+.search-results-head button{font-size:12px}
+.search-results-meta{font-size:12px;color:var(--muted);margin:0 0 14px}
+.schedule-search-results{display:grid;gap:10px;list-style:none;margin:0;padding:0}
+.schedule-search-item{display:block;width:100%;text-align:left;background:#fff;border:1px solid var(--line);border-left:5px solid var(--search-color);border-radius:7px;padding:16px 18px;line-height:1.65;overflow-wrap:anywhere}
+.schedule-search-item:hover{background:#f3f7ff;border-color:#8aaee2;border-left-color:var(--search-color)}
+.schedule-search-item:focus-visible{outline:3px solid #245fc5;outline-offset:2px}
+.schedule-search-item strong{display:block;font-size:16px;color:#183758;margin:5px 0}
+.schedule-search-item mark{background:#fff0ad;color:inherit;border-radius:2px;padding:0 1px}
+.search-item-dates{display:block;font-size:12px;color:#526175;font-variant-numeric:tabular-nums}
+.search-item-meta{display:block;font-size:12px;color:#526175}
+.search-empty{background:#fff;border:1px dashed #bac7d8;border-radius:7px;padding:38px 20px;text-align:center;color:var(--muted)}
+.search-pagination{display:flex;align-items:center;justify-content:center;gap:14px;margin-top:20px;font-size:13px}
+.search-pagination button:disabled{cursor:default;opacity:.45}
+@media(max-width:700px){.schedule-search-form{margin:5px 0 12px;padding:8px 0 14px}.schedule-search-controls{max-width:440px}.schedule-search-item{padding:13px 14px}.schedule-search-item strong{font-size:14px}}
 </style>
 </head>
 <body>
-<header><div class="brand"><span class="mark" aria-hidden="true">▦</span>사내 일정 관리</div><div class="topmeta"><span class="badge">마케팅팀</span><span>공통 업무 캘린더</span><span class="app-version" aria-label="현재 버전 v58.2">v58.2</span></div></header>
+<header><div class="brand"><span class="mark" aria-hidden="true">▦</span>사내 일정 관리</div><div class="topmeta"><span class="badge">마케팅팀</span><span>공통 업무 캘린더</span><span class="app-version" aria-label="현재 버전 v58.3">v58.3</span></div></header>
 <div class="layout">
 <aside aria-label="업무 관리와 일정 정보" class="schedule-sidebar"><nav class="work-navigation" aria-label="업무 관리">
  <p class="work-nav-title">업무 관리</p>
@@ -324,6 +350,11 @@ button.delete-schedule-button:focus-visible,button.delete-confirm-button:focus-v
   <button id="navSettlement" type="button" class="work-nav-button" data-work-view="settlement" title="공구정산: 공동구매 정산을 별도로 관리하는 공간입니다."><span class="work-nav-icon work-nav-icon-settlement" aria-hidden="true"><svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" fill="none" aria-hidden="true" focusable="false"><rect x="6" y="3.5" width="16" height="21" rx="3" class="nav-icon-surface"/><rect x="9" y="7" width="10" height="4" rx="1" class="nav-icon-display"/><path d="M9.5 15h3M11 13.5v3M16 15h3M9.5 20h3M16 19h3M16 21h3" class="nav-icon-stroke"/></svg></span><span class="work-nav-label">공구정산</span></button>
  </div>
 </nav>
+<form id="scheduleSearchForm" class="schedule-search-form" role="search" aria-label="전체 기간 일정 검색">
+ <label for="search">일정 검색</label>
+ <div class="schedule-search-controls"><input type="search" id="search" aria-label="전체 기간 일정 검색" aria-describedby="scheduleSearchHint" aria-controls="scheduleSearchWorkspace" placeholder="닉네임 · 일정명 · 상품" maxlength="200" autocomplete="off"><button type="submit" class="primary" aria-label="일정 검색 실행"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" stroke="currentColor" stroke-width="1.8"/><path d="m15.5 15.5 5 5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
+ <span id="scheduleSearchHint" class="schedule-search-hint">전체 기간 · 단어 일부만 입력해도 검색</span>
+</form>
 <div id="scheduleSideContent"><div class="side-tabs" role="tablist" aria-label="일정 정보와 필터"><button id="selectedTab" role="tab" aria-controls="selectedPanel" aria-selected="false" disabled>선택 일정</button><button id="filterTab" role="tab" aria-controls="filterPanel" aria-selected="true">필터</button><button id="closeSelection" aria-label="선택 일정 닫기" hidden>×</button></div><section id="selectedPanel" class="selected-panel" role="tabpanel" aria-labelledby="selectedTab" hidden><div class="selected-heading"><h2>선택한 일정</h2><button class="edit-small" id="editSelected">편집</button></div><p id="selectedHandle" class="selected-handle"></p><h3 id="selectedProduct" class="selected-product"></h3><div class="selected-owner"><i id="selectedOwnerDot" class="dot"></i><span id="selectedOwner"></span></div><dl class="details" id="selectedDetails"></dl><section class="selected-sales"><h3>매출</h3><dl><dt>판매건수</dt><dd id="selectedSalesCount"></dd><dt>매출액</dt><dd id="selectedSalesAmount"></dd></dl><p id="selectedSalesNote"></p></section><div class="selected-color"><i id="selectedColorDot" class="dot"></i><span id="selectedColor"></span></div></section><div id="filterPanel" role="tabpanel" aria-labelledby="filterTab">
 <div class="filter-group"><div class="catalog-heading"><div class="filter-heading">담당자</div><button id="manageOwners" type="button">편집</button></div><div id="ownerFilters">
 <label class="check"><input class="owner-filter" type="checkbox" value="A" checked><span class="dot" style="background:var(--a)"></span>김태수<span class="owner-count" id="countA"></span></label>
@@ -332,7 +363,14 @@ button.delete-schedule-button:focus-visible,button.delete-confirm-button:focus-v
 <div class="filter-group"><div class="catalog-heading"><div class="filter-heading">업무 유형</div><button id="manageTypes" type="button">편집</button></div><div id="typeFilters"><label class="check"><input class="type-filter" type="checkbox" value="공동구매" checked>공동구매</label><label class="check"><input class="type-filter" type="checkbox" value="행사" checked>행사</label><label class="check"><input class="type-filter" type="checkbox" value="발송" checked>상품 발송</label><label class="check"><input class="type-filter" type="checkbox" value="페이백" checked>페이백</label><label class="check"><input class="type-filter" type="checkbox" value="기타" checked>기타 / 연락</label></div></div>
 <div class="side-note">색상과 담당자 표시로 공동구매 일정과 사이트 행사를 구분합니다.</div>
 </div></div></aside>
-<main><section id="scheduleWorkspace" aria-labelledby="schedulePageTitle"><div class="page-head"><div><h1 id="schedulePageTitle" tabindex="-1">업무 스케줄</h1><p class="subtitle" id="schedulePageSubtitle">담당자별 공동구매 일정과 주차·월별 매출을 관리합니다.</p></div><div class="schedule-header-actions"><button id="manageCatalog" type="button">담당자 · 업무유형 관리</button><button id="openScheduleCsv" type="button"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" aria-hidden="true"><path d="M6 3h8l5 5v13H5V3h1Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 3v6h5M8 14h8M8 17h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>일정 원본 CSV</span></button></div></div>
+<main><section id="scheduleSearchWorkspace" aria-labelledby="scheduleSearchTitle" hidden>
+ <div class="page-head"><div><h1 id="scheduleSearchTitle" tabindex="-1">전체 기간 일정 검색</h1><p class="subtitle">일정명 · 닉네임 · 상품 · 담당자 · 거래처의 일부로 찾습니다.</p></div><button id="backFromSearch" type="button">일정표로 돌아가기</button></div>
+ <div class="search-results-head"><h2 id="scheduleSearchSummary" role="status" aria-live="polite"></h2><button id="clearScheduleSearch" type="button">검색 지우기</button></div>
+ <p id="scheduleSearchMeta" class="search-results-meta"></p>
+ <ul id="scheduleSearchResults" class="schedule-search-results" aria-label="검색된 일정"></ul>
+ <p id="scheduleSearchEmpty" class="search-empty" hidden></p>
+ <nav id="scheduleSearchPagination" class="search-pagination" aria-label="검색 결과 페이지" hidden><button id="searchPrevious" type="button">이전</button><span id="searchPageLabel" role="status"></span><button id="searchNext" type="button">다음</button></nav>
+</section><section id="scheduleWorkspace" aria-labelledby="schedulePageTitle"><div class="page-head"><div><h1 id="schedulePageTitle" tabindex="-1">업무 스케줄</h1><p class="subtitle" id="schedulePageSubtitle">담당자별 공동구매 일정과 주차·월별 매출을 관리합니다.</p></div><div class="schedule-header-actions"><button id="manageCatalog" type="button">담당자 · 업무유형 관리</button><button id="openScheduleCsv" type="button"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" aria-hidden="true"><path d="M6 3h8l5 5v13H5V3h1Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M14 3v6h5M8 14h8M8 17h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span>일정 원본 CSV</span></button></div></div>
 <section id="developerCsvEmptyState" class="developer-csv-empty" aria-label="CSV 반영 전 안내"><strong>일정 데이터가 없습니다.</strong><p>상단의 일정 원본 CSV에서 파일을 선택하고 일정표에 반영해주세요.</p></section>
 <section class="groupbuy-summary" aria-label="월별 공동구매 집계">
 <div class="monthly-panel"><div class="stats-heading"><h2 id="statsMonth">10월 공동구매</h2><span>월 전체</span></div><div class="monthly-total"><strong id="groupbuyTotal">0</strong><span>건</span></div><div class="owner-totals"><div><span class="owner-label"><i class="dot" style="background:var(--a)"></i>김태수</span><strong id="groupbuyA">0건</strong></div><div><span class="owner-label"><i class="dot" style="background:var(--b)"></i>박정</span><strong id="groupbuyB">0건</strong></div><div><span class="owner-label"><i class="dot" style="background:var(--c)"></i>손안나</span><strong id="groupbuyC">0건</strong></div><div id="ownerTotalS"><span class="owner-label"><i class="dot" style="background:#00b392"></i>사이트 행사</span><strong id="groupbuyS">0건</strong></div><div id="ownerTotalU"><span class="owner-label"><i class="dot" style="background:#7ba0c4"></i>담당자 미지정</span><strong id="groupbuyU">0건</strong></div></div></div>
@@ -347,7 +385,7 @@ button.delete-schedule-button:focus-visible,button.delete-confirm-button:focus-v
  <div class="sku-table-scroll" id="salesMonthlyProducts"></div>
 </details>
 <details id="salesBreakdown"><summary>주차별 매출 보기</summary><div class="weekly-scroll"><table class="sales-weekly"><caption class="sr-only" id="salesWeeklyCaption">주차별 판매 매출</caption><thead><tr><th>주차 / 기간</th><th scope="col">공구 일정</th><th>입력 완료</th><th>판매건수</th><th>매출액</th><th>미입력 공구</th></tr></thead><tbody id="salesWeeklyBody"></tbody></table></div></details><p id="exportMessage" class="export-message" role="status"></p></div></section>
-<div class="toolbar"><div class="month-control"><span class="month" id="month"></span><button class="arrow" id="prev" aria-label="이전 달">‹</button><button class="arrow" id="next" aria-label="다음 달">›</button><button id="today">오늘</button><select id="monthJump" aria-label="월 바로 선택"></select></div><div class="tools"><input type="search" id="search" aria-label="일정 검색" placeholder="일정명 · 상품 · 거래처 검색"><select id="status" hidden aria-hidden="true" tabindex="-1"><option value=""></option></select><select id="salesFilter" aria-label="매출 입력 필터"><option value="">전체 매출</option><option value="complete">매출 입력 완료</option><option value="missing">매출 미입력 / 일부 입력</option></select><div class="view-switch"><button id="calendarTab" class="active" aria-pressed="true">월간</button><button id="listTab" aria-pressed="false">목록</button></div></div></div>
+<div class="toolbar"><div class="month-control"><span class="month" id="month"></span><button class="arrow" id="prev" aria-label="이전 달">‹</button><button class="arrow" id="next" aria-label="다음 달">›</button><button id="today">오늘</button><select id="monthJump" aria-label="월 바로 선택"></select></div><div class="tools"><select id="status" hidden aria-hidden="true" tabindex="-1"><option value=""></option></select><select id="salesFilter" aria-label="매출 입력 필터"><option value="">전체 매출</option><option value="complete">매출 입력 완료</option><option value="missing">매출 미입력 / 일부 입력</option></select><div class="view-switch"><button id="calendarTab" class="active" aria-pressed="true">월간</button><button id="listTab" aria-pressed="false">목록</button></div></div></div>
 
 <section class="week-focus-head" id="weekFocusHeader" aria-label="선택 주" hidden><div><h2><span id="weekFocusTitle"></span> <small>일요일~토요일</small></h2><p id="weekFocusRange" class="week-focus-date"></p><p id="weekFocusCount" role="status"></p></div><div class="week-focus-controls"><button type="button" id="previousWeek">‹ 이전 주</button><button type="button" id="nextWeek">다음 주 ›</button></div></section>
 <div class="calendar-meta"><span class="holiday-key" title="2025~2030년 공휴일 반영. 2028~2030년은 현행 규정 기준이며 선거일은 예정으로 표시합니다."><i class="dot" aria-hidden="true"></i>대한민국 공휴일 · 대체공휴일</span><button class="primary" id="add">+ 일정 등록</button></div>
@@ -784,7 +822,7 @@ function activateSide(which){const selected=which==='selected'&&selectedSchedule
 function refreshSelected(){
  const s=schedules.find(s=>s.id===selectedScheduleId);
  $('selectedTab').disabled=!s;$('closeSelection').hidden=!s;
- document.querySelectorAll('.event,.opening-item,.sku-schedule-button,.groupbuy-schedule-button').forEach(el=>{const on=!!s&&Number(el.dataset.scheduleId)===s.id;el.classList.toggle('selected',on);el.setAttribute('aria-pressed',String(on));});
+ document.querySelectorAll('.event,.opening-item,.sku-schedule-button,.groupbuy-schedule-button,.schedule-search-item').forEach(el=>{const on=!!s&&Number(el.dataset.scheduleId)===s.id;el.classList.toggle('selected',on);el.setAttribute('aria-pressed',String(on));});
  if(!s){activateSide('filter');return;}
  const f=openingFields(s);$('selectedHandle').textContent=s.type==='공동구매'?'@'+(f.displayName||f.nickname||'닉네임 확인 필요'):workTypeLabel(s.type);$('selectedProduct').textContent=s.type==='공동구매'?f.product:displayScheduleTitle(s);
  $('selectedOwner').textContent=scheduleOwnerName(s);$('selectedOwnerDot').style.background=scheduleColor(s);
@@ -893,12 +931,13 @@ function sizeCalendarHeaders(){
 const calendarResize=new ResizeObserver(sizeCalendarHeaders);calendarResize.observe(document.querySelector('.calendar'));
 function render(){
  $('developerCsvEmptyState').hidden=schedules.length>0;
+ if(workView==='search'){renderScheduleSearch();applyWorkView();return;}
  if(workView==='week')ensureWeeklyAnchor();
  const first=new Date(Date.UTC(year,month,1)),last=new Date(Date.UTC(year,month+1,0)),gridStart=shift(first,-first.getUTCDay());
  const weekCount=Math.ceil((first.getUTCDay()+last.getUTCDate())/7),gridEnd=shift(gridStart,weekCount*7-1);
  const all=schedules.filter(s=>date(s.start)<=last&&date(s.end)>=first),gridItems=schedules.filter(s=>date(s.start)<=gridEnd&&date(s.end)>=gridStart);
- const owners=[...document.querySelectorAll('.owner-filter:checked')].map(e=>e.value),types=[...document.querySelectorAll('.type-filter:checked')].map(e=>e.value),query=$('search').value.trim().toLowerCase(),status=$('status').value;
- const shown=gridItems.filter(s=>salesMatches(s)&&owners.includes(s.owner)&&types.includes(s.type)&&(!status||s.status===status)&&[s.title,s.product,s.partner,openingFields(s).nickname,openingFields(s).product,scheduleOwnerName(s),workTypeLabel(s.type)].join(' ').toLowerCase().includes(query)).sort((a,b)=>a.start.localeCompare(b.start)||a.id-b.id);
+ const owners=[...document.querySelectorAll('.owner-filter:checked')].map(e=>e.value),types=[...document.querySelectorAll('.type-filter:checked')].map(e=>e.value),status=$('status').value;
+ const shown=gridItems.filter(s=>salesMatches(s)&&owners.includes(s.owner)&&types.includes(s.type)&&(!status||s.status===status)).sort((a,b)=>a.start.localeCompare(b.start)||a.id-b.id);
  $('month').textContent=year+'.'+String(month+1).padStart(2,'0');renderGroupbuyStats();
  for(const owner of ownerOrder)$('count'+owner).textContent=all.filter(s=>s.owner===owner).length;
  $('result').textContent='월 일정 '+all.length+'건 · 달력 표시 '+shown.length+'건 (앞뒤 달 포함)';$('weeks').replaceChildren();$('rows').replaceChildren();
@@ -926,7 +965,7 @@ function render(){
 }
 function changeMonth(n){if(workView==='week'){moveCalendarWeek(n);return;}const d=new Date(Date.UTC(year,month+n,1));year=d.getUTCFullYear();month=d.getUTCMonth();render();}
 $('prev').onclick=()=>changeMonth(-1);$('next').onclick=()=>changeMonth(1);$('today').onclick=()=>{const values=Object.fromEntries(new Intl.DateTimeFormat('en',{timeZone:'Asia/Seoul',year:'numeric',month:'numeric'}).formatToParts(new Date()).map(p=>[p.type,p.value]));year=Number(values.year);month=Number(values.month)-1;weeklyAnchor=sundayOf(koreaToday());render();};
-for(const e of document.querySelectorAll('.owner-filter,.type-filter'))e.addEventListener('change',render);$('search').addEventListener('input',render);$('status').addEventListener('change',render);
+for(const e of document.querySelectorAll('.owner-filter,.type-filter'))e.addEventListener('change',render);$('status').addEventListener('change',render);
 function setView(list){$('calendarView').hidden=list;$('listView').hidden=!list;for(const [id,active]of [['calendarTab',!list],['listTab',list]]){$(id).classList.toggle('active',active);$(id).setAttribute('aria-pressed',String(active));}render();}
 $('calendarTab').onclick=()=>setView(false);$('listTab').onclick=()=>setView(true);
 for(const e of document.querySelectorAll('.close-detail'))e.onclick=()=>$('detailDialog').close();for(const e of document.querySelectorAll('.close-add'))e.onclick=()=>$('addDialog').close();
@@ -1172,14 +1211,15 @@ function moveCalendarWeek(direction){
 }
 function applyWorkView(shown=navigationShown){
  navigationShown=shown;
- const settlement=workView==='settlement',weekly=workView==='week';
- $('scheduleWorkspace').hidden=settlement;$('settlementWorkspace').hidden=!settlement;$('scheduleSideContent').hidden=settlement;
+ const settlement=workView==='settlement',weekly=workView==='week',searching=workView==='search';
+ $('scheduleSearchWorkspace').hidden=!searching;$('scheduleSearchForm').classList.toggle('is-active',searching);
+ $('scheduleWorkspace').hidden=settlement||searching;$('settlementWorkspace').hidden=!settlement;$('scheduleSideContent').hidden=settlement||searching;
  document.querySelector('.layout').classList.toggle('has-selection',!settlement&&$('selectedTab').getAttribute('aria-selected')==='true');
  for(const button of document.querySelectorAll('[data-work-view]')){
   const active=button.dataset.workView===workView;button.classList.toggle('active',active);
   if(active)button.setAttribute('aria-current','page');else button.removeAttribute('aria-current');
  }
- if(settlement)return;
+ if(settlement||searching)return;
  $('schedulePageTitle').textContent=workViewLabels[workView];
  $('schedulePageSubtitle').textContent=weekly?'일요일부터 토요일까지 한 주의 일정과 담당자를 확인합니다.':'담당자별 공동구매 일정과 주차·월별 매출을 관리합니다.';
  $('weekFocusHeader').hidden=!weekly;document.querySelector('.view-switch').hidden=weekly;
@@ -1202,10 +1242,16 @@ function applyWorkView(shown=navigationShown){
 }
 function switchWorkView(view){
  if(view==='month')view='all';
- if(!['all','week','settlement'].includes(view))return;
+ if(!['all','week','settlement','search'].includes(view))return;
+ if(view==='search'){
+  if(workView==='all')mainListView=!$('listView').hidden;
+  if(workView!=='search'&&workView!=='settlement')lastScheduleView=workView;
+  workView='search';render();return;
+ }
+ if(workView==='search'){$('search').value='';scheduleSearchPage=0;}
  if(workView==='all'&&view!=='all')mainListView=!$('listView').hidden;
  if(view==='settlement'){
-  if(workView!=='settlement'){lastScheduleView=workView;}
+  if(workView!=='settlement'&&workView!=='search'){lastScheduleView=workView;}
   workView=view;applyWorkView();return;
  }
  workView=view;lastScheduleView=view;
@@ -1978,6 +2024,66 @@ function installSchedulePopupFeedback(){
  }));
 }
 installSchedulePopupFeedback();
+
+
+/* Search is deliberately independent of the visible month and calendar filters.
+ * The preview searches only records already loaded into schedules. Production must
+ * query the authenticated company DB across all dates; never add a two-year limit.
+ * Private notes and archived/raw titles are not used as hidden search fields. */
+let scheduleSearchPage=0;
+const scheduleSearchPageSize=50;
+function normalizeScheduleSearch(value){return String(value??'').normalize('NFKC').toLowerCase().trim();}
+function scheduleSearchFields(s){
+ const f=openingFields(s);
+ return [scheduleTitleBase(s),s.influencer,s.listNickname,f.displayName,f.nickname,s.product,s.listProduct,f.product,s.partner,scheduleOwnerName(s),workTypeLabel(s.type),visibleScheduleNotes(s)].filter(Boolean).map(normalizeScheduleSearch);
+}
+function scheduleSearchMatches(s,query){
+ const terms=normalizeScheduleSearch(query).split(/\s+/u).filter(Boolean);
+ if(!terms.length)return false;
+ const fields=scheduleSearchFields(s);
+ return terms.every(term=>fields.some(value=>value.includes(term)));
+}
+function findScheduleSearchResults(items,query){
+ return items.filter(s=>scheduleSearchMatches(s,query)).sort((a,b)=>String(b.start).localeCompare(String(a.start))||String(b.end).localeCompare(String(a.end))||String(a.id).localeCompare(String(b.id),'en',{numeric:true}));
+}
+function appendScheduleSearchHighlight(target,value,query){
+ const text=String(value??''),lower=text.toLowerCase(),spans=[];
+ for(const term of String(query).toLowerCase().trim().split(/\s+/u).filter(Boolean)){
+  let at=lower.indexOf(term);while(at!==-1){spans.push([at,at+term.length]);at=lower.indexOf(term,at+term.length);}
+ }
+ spans.sort((a,b)=>a[0]-b[0]);const merged=[];
+ for(const span of spans){const last=merged[merged.length-1];if(last&&span[0]<=last[1])last[1]=Math.max(last[1],span[1]);else merged.push([...span]);}
+ let at=0;for(const [start,end]of merged){target.append(document.createTextNode(text.slice(at,start)),node('mark',text.slice(start,end)));at=end;}target.append(document.createTextNode(text.slice(at)));
+}
+function renderScheduleSearch(){
+ const query=$('search').value.trim(),matches=findScheduleSearchResults(schedules,query);
+ const pages=Math.max(1,Math.ceil(matches.length/scheduleSearchPageSize));scheduleSearchPage=Math.max(0,Math.min(scheduleSearchPage,pages-1));
+ const start=scheduleSearchPage*scheduleSearchPageSize,items=matches.slice(start,start+scheduleSearchPageSize);
+ $('scheduleSearchSummary').textContent=query?'“'+query+'” 검색 결과 '+matches.length.toLocaleString('ko-KR')+'건':'검색어를 입력해주세요.';
+ $('scheduleSearchMeta').textContent='전체 기간 · 시작일 최신순 · 전체 일정 '+schedules.length.toLocaleString('ko-KR')+'건'+(matches.length?' · '+(start+1)+'~'+(start+items.length)+'번째 표시':'');
+ $('scheduleSearchResults').replaceChildren();
+ for(const s of items){
+  const li=node('li'),button=node('button',undefined,'schedule-search-item');button.type='button';button.dataset.scheduleId=String(s.id);button.style.setProperty('--search-color',scheduleColor(s));
+  button.append(node('span',s.start+' ~ '+s.end,'search-item-dates'));
+  const title=node('strong');appendScheduleSearchHighlight(title,calendarTitle(s),query);button.append(title);
+  const meta=node('span',undefined,'search-item-meta');appendScheduleSearchHighlight(meta,scheduleOwnerName(s)+' · '+workTypeLabel(s.type)+(s.status==='취소'?' · 취소 일정':''),query);button.append(meta);
+  button.addEventListener('click',()=>openDetail(s));li.append(button);$('scheduleSearchResults').append(li);
+ }
+ $('scheduleSearchEmpty').hidden=items.length>0;
+ $('scheduleSearchEmpty').textContent=!schedules.length?'검색할 일정이 없습니다. 일정표에서 CSV를 먼저 반영해주세요.':query?'일치하는 일정이 없습니다. 다른 단어 또는 이름의 일부를 입력해주세요.':'왼쪽 검색창에 이름이나 상품의 일부를 입력해주세요.';
+ $('scheduleSearchPagination').hidden=pages<=1;$('searchPrevious').disabled=scheduleSearchPage===0;$('searchNext').disabled=scheduleSearchPage===pages-1;$('searchPageLabel').textContent=(scheduleSearchPage+1)+' / '+pages+' 페이지';
+}
+function runScheduleSearch(){
+ scheduleSearchPage=0;
+ if(!$('search').value.trim()){if(workView==='search')switchWorkView(lastScheduleView);return;}
+ switchWorkView('search');
+}
+$('scheduleSearchForm').addEventListener('submit',event=>{event.preventDefault();runScheduleSearch();if(workView==='search')$('scheduleSearchTitle').focus();});
+$('search').addEventListener('input',runScheduleSearch);
+$('clearScheduleSearch').onclick=()=>{$('search').value='';scheduleSearchPage=0;switchWorkView(lastScheduleView);$('search').focus();};
+$('backFromSearch').onclick=()=>{switchWorkView(lastScheduleView);$('schedulePageTitle').focus();};
+$('searchPrevious').onclick=()=>{scheduleSearchPage--;renderScheduleSearch();$('scheduleSearchTitle').focus();};
+$('searchNext').onclick=()=>{scheduleSearchPage++;renderScheduleSearch();$('scheduleSearchTitle').focus();};
 
 restoreCalendarHistory();
 render();if(location.hash==='#list')setView(true);
