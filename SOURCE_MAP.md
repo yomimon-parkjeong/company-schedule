@@ -45,3 +45,6 @@ index.php에 기존 HTML/CSS/JavaScript, CSV 입력·중복 판별·일정 편�
 
 ## v58.1 일정 삭제
 기존 일정 편집 창 하단의 삭제→경고→취소/삭제→완료 흐름을 추가했습니다. [v58 기준 변경분과 DB 삭제 연결 안내](updates/v58.1-delete-schedule/README.md)를 따릅니다. 회사 서버에는 직접 적용하지 않았습니다.
+
+## v58.2 인플루언서 이름 표시
+updates/v58.2-influencer-name/의 v58.1 기준 패치 또는 v58 기준 통합 패치 중 하나를 병합합니다. quality/v58.2-name-verification.json에 원본 보존·이름 표시·PHP/기존 기능 검증을 기록했습니다.

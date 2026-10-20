@@ -1,0 +1,39 @@
+{
+  "javascriptSyntax": true,
+  "parenthesizedNamesShown": true,
+  "fullWidthParenthesesSupported": true,
+  "missingNamesNotInvented": true,
+  "notesNotUsedForIdentity": true,
+  "currentNamePrecedence": true,
+  "nicknameDotsEscaped": true,
+  "lookupAndProductUnchangedForCsvRows": 1679,
+  "csvRowsWithDisplayNames": 907,
+  "sourceObjectsUnchanged": true,
+  "settlementMatchingUnchanged": true,
+  "version": "58.2",
+  "date": "2026-10-20",
+  "php": {
+    "runtime": "PHP 8.5.11",
+    "shortOpenTagOnAndOffLintPassed": true,
+    "bothRenderedOutputsMatchPages": true,
+    "companyServerModified": false
+  },
+  "browser": {
+    "calendarNamesShown": true,
+    "detailHeadingMatchesInput": true,
+    "editedNameSaved": true,
+    "listAndWeekDetailNamesShown": true,
+    "missingNameNotInvented": true,
+    "notesHidden": true,
+    "monthHeightPx": 34,
+    "weekHeightPx": 40,
+    "deleteButtonRetained": true,
+    "consoleErrors": 0
+  },
+  "previousDeleteGuardsPassed": true,
+  "previousCsvImportRowsPassed": 1679,
+  "previousSettlementStatusTestsPassed": 33,
+  "companyDatabaseChanged": false,
+  "sourceCsvFilesChanged": false,
+  "userReview": "pending"
+}

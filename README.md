@@ -56,3 +56,6 @@ developer-empty/public/index.php를 수정한 후 다음을 실행하고 docs/ �
 
 ## v58.1 일정 삭제
 기존 일정 편집 창 하단의 삭제→경고→취소/삭제→완료 흐름을 추가했습니다. [v58 기준 변경분과 DB 삭제 연결 안내](updates/v58.1-delete-schedule/README.md)를 따릅니다. 회사 서버에는 직접 적용하지 않았습니다.
+
+## v58.2 닉네임(이름) 표시
+CSV에 저장된 이름을 화면 제목에서 생략하던 표시를 수정했습니다. 내부 계정 매칭은 유지합니다. [변경분과 운영 병합 안내](updates/v58.2-influencer-name/README.md)를 확인하세요.

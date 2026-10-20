@@ -1,0 +1,10 @@
+{
+  "version": "58.2",
+  "previousVersion": "58.1",
+  "baseCommit": "7ca5fe3ce25a72f3cae890bb3f2f959c571069bc",
+  "feature": "influencer-name-display",
+  "initialRecords": 0,
+  "storedScheduleDataModified": false,
+  "companyServerModified": false,
+  "databasePersistenceIncluded": false
+}
