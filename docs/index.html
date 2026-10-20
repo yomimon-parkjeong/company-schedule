@@ -290,6 +290,14 @@ input[type=number]{border:1px solid #d5dce5;border-radius:5px;padding:7px 10px;w
 @media(prefers-reduced-motion:reduce){#detailDialog[open],#addDialog[open],#detailDialog[open]::backdrop,#addDialog[open]::backdrop,.schedule-toast{animation:none}}
 
 .developer-csv-empty{padding:16px 18px;margin:0 0 18px;border:1px solid #a9c5eb;border-left:4px solid #245fc5;border-radius:6px;background:#eef5ff;color:#21416b}.developer-csv-empty strong{font-size:14px}.developer-csv-empty p{font-size:12px;line-height:1.7;margin:5px 0 0}
+
+/* Step 1: select a calendar date to register a schedule. */
+.day-grid .day{pointer-events:auto;cursor:pointer}
+.day-grid .day:hover{box-shadow:inset 0 0 0 2px #b8cef0}
+.day-grid .calendar-date-button{padding:0;border:0;background:transparent;border-radius:4px;color:inherit;font:inherit;font-size:13px;font-weight:600;line-height:normal;flex-shrink:0}
+.day-grid .calendar-date-button:hover{background:#e6effd}
+.day-grid .calendar-date-button:focus-visible{outline:3px solid #8eb8ff;outline-offset:2px}
+.day-grid .day.today .calendar-date-button:hover{background:var(--blue)}
 </style>
 </head>
 <body>
@@ -833,8 +841,9 @@ function render(){
    const dt=shift(ws,d),day=iso(dt),names=holidayNames(day);
    const cell=node('div',undefined,'day'+(dt.getUTCMonth()!==month?' outside':'')+(d===0?' sunday':d===6?' saturday':'')+(day===now?' today':'')+(names.length?' holiday':''));
    cell.dataset.date=day;cell.setAttribute('role','group');cell.setAttribute('aria-label',day+' '+['일요일','월요일','화요일','수요일','목요일','금요일','토요일'][d]+(names.length?' · '+names.join(' · '):''));
-   const heading=node('div',undefined,'day-header');heading.append(node('span',workView==='week'?(dt.getUTCMonth()+1)+'/'+dt.getUTCDate():String(dt.getUTCDate()),'day-number'));
+   const heading=node('div',undefined,'day-header'),dateButton=node('button',workView==='week'?(dt.getUTCMonth()+1)+'/'+dt.getUTCDate():String(dt.getUTCDate()),'day-number calendar-date-button');dateButton.type='button';dateButton.setAttribute('aria-label',day+' 일정 등록');dateButton.title=day+' 일정 등록';heading.append(dateButton);
    if(names.length){const label=node('span',undefined,'holiday-name');label.title=names.join(' · ');for(const name of names){const substitute=name.match(/^대체공휴일\((.+)\)$/);if(substitute){label.append(node('span','대체공휴일'),node('span','('+substitute[1]+')','holiday-reason'));}else{label.append(node('span',name));if(names.length>1)label.lastChild.style.display='block';}}heading.append(label);}
+   cell.addEventListener('click',()=>openAddForDate(day,cell.querySelector('.calendar-date-button')));
    cell.append(heading);days.append(cell);
   }
   const lanes=[];
@@ -852,7 +861,24 @@ for(const e of document.querySelectorAll('.owner-filter,.type-filter'))e.addEven
 function setView(list){$('calendarView').hidden=list;$('listView').hidden=!list;for(const [id,active]of [['calendarTab',!list],['listTab',list]]){$(id).classList.toggle('active',active);$(id).setAttribute('aria-pressed',String(active));}render();}
 $('calendarTab').onclick=()=>setView(false);$('listTab').onclick=()=>setView(true);
 for(const e of document.querySelectorAll('.close-detail'))e.onclick=()=>$('detailDialog').close();for(const e of document.querySelectorAll('.close-add'))e.onclick=()=>$('addDialog').close();
-$('add').onclick=()=>{$('addForm').reset();addColorIsManual=false;$('addColor').value=colors[$('addForm').elements.owner.value][0];const d=workView==='week'?weekSuggestedDate():iso(new Date(Date.UTC(year,month,12)));$('addForm').elements.start.value=d;$('addForm').elements.end.value=d;$('formError').textContent='';updateAddPreview();$('addDialog').showModal();};
+let addDialogOrigin=null;
+function openAddForDate(selectedDate,origin){
+ const d=selectedDate??(workView==='week'?weekSuggestedDate():iso(new Date(Date.UTC(year,month,12))));
+ if(!validPeriod(d,d))return;
+ addDialogOrigin=origin||document.activeElement;
+ $('addForm').reset();addColorIsManual=false;
+ $('addColor').value=colors[$('addForm').elements.owner.value][0];
+ $('addForm').elements.start.value=d;$('addForm').elements.end.value=d;
+ $('formError').textContent='';updateAddPreview();
+ if(!$('addDialog').open)$('addDialog').showModal();
+ $('addDialog').querySelector('.dialog-body').scrollTop=0;
+ $('addForm').elements.title.focus({preventScroll:true});
+}
+$('add').onclick=()=>openAddForDate();
+$('addDialog').addEventListener('close',()=>queueMicrotask(()=>{
+ const target=addDialogOrigin?.isConnected&&addDialogOrigin.getClientRects().length?addDialogOrigin:$('add');
+ target.focus({preventScroll:true});addDialogOrigin=null;
+}));
 $('addForm').onsubmit=e=>{e.preventDefault();const f=Object.fromEntries(new FormData(e.target));if(!f.title.trim()){$('formError').textContent='일정명을 입력해주세요.';return;}if(f.end<f.start){$('formError').textContent='종료일은 시작일보다 빠를 수 없습니다.';return;}schedules.push({...f,influencer:f.title.trim(),product:f.product.trim(),specialNotes:(f.specialNotes||"").trim(),title:composeScheduleTitle(f.title,f.product,f.specialNotes),autoComposed:true,id:Math.max(0,...schedules.map(s=>s.id))+1,related:'시안 추가 일정'});const d=date(f.start);year=d.getUTCFullYear();month=d.getUTCMonth();weeklyAnchor=sundayOf(f.start);$('addDialog').close();render();};
 $('detailColor').addEventListener('input',()=>{const s=schedules.find(s=>s.id===selectedScheduleId);if(s)updateColorPreview('detail',$('detailColor').value,composeScheduleTitle($('editTitle').value,$('editProduct').value,$('editNotes').value),$('detailOwner').value);});
 $('resetDetailColor').onclick=()=>{const s=schedules.find(s=>s.id===selectedScheduleId);if(s){$('detailColor').value=colors[$('detailOwner').value][0];updateColorPreview('detail',$('detailColor').value,composeScheduleTitle($('editTitle').value,$('editProduct').value,$('editNotes').value),$('detailOwner').value);}};

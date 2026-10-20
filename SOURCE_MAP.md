@@ -21,3 +21,8 @@ index.php에 기존 HTML/CSS/JavaScript, CSV 입력·중복 판별·일정 편�
 - docs/.nojekyll: Jekyll 문서 변환 없이 HTML 제공.
 - tools/build-pages-preview.py: 빈 PHP에서 미리보기 생성. 초기 일정이 0건인지 검증.
 - 게시 소스: main /docs. data·archive·quality 폴더를 배포하지 않음.
+
+## 2026-10-20 1단계
+- updates/2026-10-20-step1-date-click/: 날짜 클릭 기능 변경분과 회사 서버 병합 안내.
+- quality/step1-date-click-verification.json: 단계별 UI 검증.
+- 현재 서버의 DB 연결 코드는 GitHub 검토용 PHP에 없으므로 전체 파일 교체 금지.

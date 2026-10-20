@@ -1,0 +1,68 @@
+{
+  "date": "2026-10-20",
+  "stage": 1,
+  "beforePhpSha256": "c3df4dbe7fd5a662f026a94cfc1361430c77b25430823c0cf9f7d64ccf7ffccf",
+  "afterPhpSha256": "34ea48d6033e955c2ad81710fd2daaaa6407b88b695a03a9ebbfe4201d3d2b82",
+  "initialRecords": 0,
+  "calendarBarsUnchanged": true,
+  "settlementLogicUnchanged": true,
+  "productionServerChanged": false,
+  "databaseChanged": false,
+  "stage2Started": false,
+  "stage3Started": false,
+  "browserChecks": [
+    {
+      "case": "date-number",
+      "date": "2026-10-20",
+      "passed": true
+    },
+    {
+      "case": "blank-cell",
+      "date": "2026-10-21",
+      "passed": true
+    },
+    {
+      "case": "adjacent-month",
+      "date": "2026-09-27",
+      "passed": true
+    },
+    {
+      "case": "holiday-keyboard-enter",
+      "date": "2026-10-09",
+      "passed": true
+    },
+    {
+      "case": "keyboard-space",
+      "date": "2026-10-20",
+      "passed": true
+    },
+    {
+      "case": "register-local-only",
+      "records": 1,
+      "toastShown": true,
+      "passed": true
+    },
+    {
+      "case": "existing-event-opens-edit",
+      "editOpen": true,
+      "addOpen": false,
+      "ownerLabelStillShown": true,
+      "passed": true
+    },
+    {
+      "case": "weekly-date",
+      "date": "2026-10-18",
+      "passed": true
+    },
+    {
+      "case": "reload-empty",
+      "records": 0,
+      "passed": true
+    }
+  ],
+  "consoleErrors": 0,
+  "phpEngineExecuted": false,
+  "userReview": "pending",
+  "productionDeployment": false,
+  "sampleSettlementExcelRead": false
+}
