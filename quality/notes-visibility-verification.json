@@ -1,0 +1,28 @@
+{
+  "scriptSyntax": true,
+  "legacyMultilineSuffixHidden": true,
+  "strictBooleanOptIn": true,
+  "groupbuyAndOtherTypes": true,
+  "csvDefaultsHidden": true,
+  "csvReimportPreservesChoice": true,
+  "sourceNotesUnchanged": true,
+  "stages1To3Present": true,
+  "date": "2026-10-20",
+  "browser": {
+    "csvLegacyHidden": true,
+    "tooltipAndAriaHidden": true,
+    "editDefaultUnchecked": true,
+    "optInShown": true,
+    "uncheckHidden": true,
+    "notesPreserved": true,
+    "newScheduleDefaultHidden": true,
+    "registrationToastHidden": true,
+    "monthHeightPx": 34,
+    "weekHeightPx": 40,
+    "consoleErrors": 0
+  },
+  "priorSettlementStatusTestsPassed": 33,
+  "productionDatabaseChanged": false,
+  "phpEngineExecuted": false,
+  "userReview": "pending"
+}

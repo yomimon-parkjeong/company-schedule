@@ -47,3 +47,6 @@ developer-empty/public/index.php를 수정한 후 다음을 실행하고 docs/ �
 
 빌더는 PHP의 응답 헤더 부분만 제거하여 같은 HTML/CSS/JavaScript를 생성합니다.
 초기 일정이 빈 배열이 아니면 빌드를 중단합니다. Pages 게시 소스는 main 브랜치의 /docs입니다.
+
+## 특이사항 표시 선택 (2026-10-20)
+등록·편집에서 체크한 경우에만 일정 바와 요약에 특이사항을 표시합니다. 기존 일정·CSV는 기본 숨김이며 내용은 보존됩니다. [회사 서버 병합 안내](updates/2026-10-20-notes-visibility/README.md)를 따르세요. 기존 1~3단계는 사용자 확인 완료입니다.
