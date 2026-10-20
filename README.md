@@ -53,3 +53,6 @@ developer-empty/public/index.php를 수정한 후 다음을 실행하고 docs/ �
 
 ## CSV 담당자 공동구매·서버 호환 (2026-10-20)
 [업데이트 병합 안내](updates/2026-10-20-csv-owner-groupbuy/README.md): 사이트 행사·미지정 외 담당 CSV 일정은 공동구매, allDay 대소문자 호환, PHP/XML 짧은 태그 충돌 방지. 실제 CSV는 공개 업데이트에 포함하지 않습니다.
+
+## v58.1 일정 삭제
+기존 일정 편집 창 하단의 삭제→경고→취소/삭제→완료 흐름을 추가했습니다. [v58 기준 변경분과 DB 삭제 연결 안내](updates/v58.1-delete-schedule/README.md)를 따릅니다. 회사 서버에는 직접 적용하지 않았습니다.

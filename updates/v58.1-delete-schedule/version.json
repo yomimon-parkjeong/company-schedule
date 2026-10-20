@@ -1,0 +1,9 @@
+{
+  "version": "58.1",
+  "baseVersion": "58",
+  "baseCommit": "2cda95c6cc6982e20f10119bfe75c429e53d6a27",
+  "feature": "delete-schedule",
+  "initialRecords": 0,
+  "databaseDeletionImplemented": false,
+  "companyServerModified": false
+}

@@ -1,0 +1,39 @@
+{
+  "version": "58.1",
+  "date": "2026-10-20",
+  "php": {
+    "runtime": "PHP 8.5.11",
+    "shortOpenTagOnLintPassed": true,
+    "shortOpenTagOffLintPassed": true,
+    "renderedOutputMatchesPagesForBothSettings": true,
+    "companyServerModified": false
+  },
+  "browser": {
+    "newFormDeleteAbsent": true,
+    "existingEditorRedDeleteButton": true,
+    "warningWithCancelAndDelete": true,
+    "cancelDefaultFocus": true,
+    "cancelAndEscapeKeepUnsavedInput": true,
+    "exactScheduleRemoved": true,
+    "otherSchedulesRetained": true,
+    "countsAndSalesRecalculated": true,
+    "listRemoval": true,
+    "weeklyRemoval": true,
+    "deleteCompletedToast": true,
+    "consoleErrors": 0
+  },
+  "guardTests": {
+    "noPendingNoDelete": true,
+    "selectionChangedNoDelete": true,
+    "recordReplacedNoDelete": true,
+    "duplicateClickSingleDelete": true,
+    "linkedStateCleared": true
+  },
+  "priorCsvRowsValidated": 1679,
+  "priorSettlementStatusTests": 33,
+  "privateQaFixturesNotPublished": true,
+  "initialRecords": 0,
+  "companyDatabaseModified": false,
+  "databaseDeletionApiImplemented": false,
+  "userReview": "pending"
+}
