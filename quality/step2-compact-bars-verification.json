@@ -81,6 +81,8 @@
   ],
   "consoleErrors": 0,
   "phpEngineExecuted": false,
-  "userReview": "pending",
-  "sampleSettlementExcelRead": false
+  "userReview": "approved",
+  "sampleSettlementExcelRead": false,
+  "userReviewedAt": "2026-10-20",
+  "nextStageAuthorized": 3
 }

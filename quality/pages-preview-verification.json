@@ -5,8 +5,8 @@
   "source": "developer-empty/public/index.php",
   "phpUnchanged": false,
   "htmlMatchesPhpPayload": true,
-  "phpSha256": "e9ac41c691b1ed019c20e5367a2335d4ce27cd85f71cf80b6ba5b63892df1275",
-  "htmlSha256": "d262b50b12a3c8e3bf52961e2c2995bd6411ce9fa90e4bc45cf12fac694bcaee",
+  "phpSha256": "f671b18ebf384293f81e64412f04fdbb7a5920f9a118b7afbc911cfd34d9ff6f",
+  "htmlSha256": "c2a352ce2153a4bc8685d9172ecf5a6d4dfb187350d4df385116418dbf38b646",
   "deployedFiles": [
     "index.html",
     ".nojekyll"
@@ -15,6 +15,6 @@
   "screenshotsDeployed": false,
   "phpEngineExecuted": false,
   "repositoryVisibilityChanged": false,
-  "latestStage": 2,
-  "latestBrowserVerification": "quality/step2-compact-bars-verification.json"
+  "latestStage": 3,
+  "latestBrowserVerification": "quality/step3-cancelled-settlement-verification.json"
 }

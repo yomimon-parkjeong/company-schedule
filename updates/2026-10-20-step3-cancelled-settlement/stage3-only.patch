@@ -1,0 +1,22 @@
+diff --git a/developer-empty/public/index.php b/developer-empty/public/index.php
+index 5908e20..afbe5d6 100644
+--- a/developer-empty/public/index.php
++++ b/developer-empty/public/index.php
+@@ -389,7 +389,7 @@ input[type=number]{border:1px solid #d5dce5;border-radius:5px;padding:7px 10px;w
+     <tr><th scope="row">공구수수료 <span id="settleRateBadge" class="settlement-rate-badge"></span></th><td>—</td><td id="settleCommission"></td></tr>
+     <tr id="settleTaxTotalRow"><th scope="row">소득세·지방소득세</th><td>—</td><td id="settleTaxTotal"></td></tr>
+     <tr class="settlement-final-row"><th scope="row">최종 지급액</th><td>—</td><td id="settleFinal"></td></tr>
+-   </tbody></table><p class="settlement-help">취소·입금대기·반품완료는 제외합니다. 교환완료는 매출에 포함합니다.</p></div>
++   </tbody></table><p class="settlement-help">취소(취소관련 포함)·입금대기·반품완료·환불완료는 제외합니다. 교환완료는 매출에 포함합니다.</p></div>
+    <section id="settleTaxPanel" class="settlement-tax-panel" aria-label="소득세 계산"><h3>소득세 계산 <span id="settleTaxState"></span></h3><dl><dt>소득세 3%</dt><dd id="settleIncomeTax"></dd><dt>지방소득세 0.3%</dt><dd id="settleLocalTax"></dd></dl><p id="settleTaxNote"></p></section>
+   </div>
+   <div class="settlement-export"><div><strong id="settleSheetName"></strong><p id="settleOutputNote" class="settlement-help"></p></div><button id="settleDownload" type="button" class="primary">전달용 엑셀 다운로드</button></div>
+@@ -1504,7 +1504,7 @@ function settlementStatus(value){
+  // Keep the original status in the source sheet; classify each complete status in a compound label.
+  const states=String(value??'').normalize('NFKC').replace(/\s/g,'').split(/[-\u2010-\u2015\u2212]/);
+  const included=['발송완료','배송완료','배송중','배송준비중','배송준비','배송대기','상품준비중','결제완료','배송전','교환완료'];
+- const excluded=['취소','취소완료','환불완료','반품완료','반품처리완료','입금대기','결제대기','미입금'];
++ const excluded=['취소','취소관련','취소완료','환불완료','반품완료','반품처리완료','입금대기','결제대기','미입금'];
+  if(states.every(status=>included.includes(status)||excluded.includes(status)))return states.some(status=>excluded.includes(status))?'excluded':'included';
+  throw new Error('처리현황 "'+value+'"는 정산 포함 여부를 확인해야 합니다. 부분 취소·환불은 차감 수량·금액이 있는 자료로 확인해주세요.');
+ }

@@ -1,0 +1,228 @@
+{
+  "date": "2026-10-20",
+  "stage": 3,
+  "stage2UserApproved": true,
+  "beforePhpSha256": "e9ac41c691b1ed019c20e5367a2335d4ce27cd85f71cf80b6ba5b63892df1275",
+  "afterPhpSha256": "f671b18ebf384293f81e64412f04fdbb7a5920f9a118b7afbc911cfd34d9ff6f",
+  "newExcludedStatus": "취소관련",
+  "partialStatusGuardPreserved": true,
+  "exchangeCompletedIncluded": true,
+  "calendarCodeUnchanged": true,
+  "commissionAndTaxCodeUnchanged": true,
+  "exportBuilderUnchanged": true,
+  "calendarGrossSalesLinkUnchanged": true,
+  "productionServerChanged": false,
+  "databaseChanged": false,
+  "oldImportErrorReproduced": true,
+  "providedSampleImportVerified": true,
+  "sourceWorkbookModified": false,
+  "sampleDataPublished": false,
+  "statusTests": [
+    {
+      "status": "발송완료",
+      "expected": "included",
+      "passed": true
+    },
+    {
+      "status": "배송완료",
+      "expected": "included",
+      "passed": true
+    },
+    {
+      "status": "배송중",
+      "expected": "included",
+      "passed": true
+    },
+    {
+      "status": "배송준비중",
+      "expected": "included",
+      "passed": true
+    },
+    {
+      "status": "배송준비",
+      "expected": "included",
+      "passed": true
+    },
+    {
+      "status": "배송대기",
+      "expected": "included",
+      "passed": true
+    },
+    {
+      "status": "상품준비중",
+      "expected": "included",
+      "passed": true
+    },
+    {
+      "status": "결제완료",
+      "expected": "included",
+      "passed": true
+    },
+    {
+      "status": "배송전",
+      "expected": "included",
+      "passed": true
+    },
+    {
+      "status": "교환완료",
+      "expected": "included",
+      "passed": true
+    },
+    {
+      "status": "교환완료 - 배송완료",
+      "expected": "included",
+      "passed": true
+    },
+    {
+      "status": "취소",
+      "expected": "excluded",
+      "passed": true
+    },
+    {
+      "status": "취소관련",
+      "expected": "excluded",
+      "passed": true
+    },
+    {
+      "status": "취소완료",
+      "expected": "excluded",
+      "passed": true
+    },
+    {
+      "status": "환불완료",
+      "expected": "excluded",
+      "passed": true
+    },
+    {
+      "status": "반품완료",
+      "expected": "excluded",
+      "passed": true
+    },
+    {
+      "status": "반품처리완료",
+      "expected": "excluded",
+      "passed": true
+    },
+    {
+      "status": "입금대기",
+      "expected": "excluded",
+      "passed": true
+    },
+    {
+      "status": "결제대기",
+      "expected": "excluded",
+      "passed": true
+    },
+    {
+      "status": "미입금",
+      "expected": "excluded",
+      "passed": true
+    },
+    {
+      "status": "취소관련 - 취소완료",
+      "expected": "excluded",
+      "passed": true
+    },
+    {
+      "status": "반품완료 - 환불완료",
+      "expected": "excluded",
+      "passed": true
+    },
+    {
+      "status": "발송완료 - 취소관련",
+      "expected": "excluded",
+      "passed": true
+    },
+    {
+      "status": "교환완료 - 취소관련",
+      "expected": "excluded",
+      "passed": true
+    },
+    {
+      "status": "  취소관련  ",
+      "expected": "excluded",
+      "passed": true
+    },
+    {
+      "status": "발송완료－취소관련",
+      "expected": "excluded",
+      "passed": true
+    },
+    {
+      "status": "부분취소",
+      "expected": "error",
+      "passed": true
+    },
+    {
+      "status": "부분환불",
+      "expected": "error",
+      "passed": true
+    },
+    {
+      "status": "발송완료 - 부분취소",
+      "expected": "error",
+      "passed": true
+    },
+    {
+      "status": "취소없음",
+      "expected": "error",
+      "passed": true
+    },
+    {
+      "status": "취소철회",
+      "expected": "error",
+      "passed": true
+    },
+    {
+      "status": "확인중",
+      "expected": "error",
+      "passed": true
+    },
+    {
+      "status": "",
+      "expected": "error",
+      "passed": true
+    }
+  ],
+  "commissionModels": [
+    {
+      "recipient": "individual",
+      "rate": 10,
+      "passed": true
+    },
+    {
+      "recipient": "individual",
+      "rate": 15,
+      "passed": true
+    },
+    {
+      "recipient": "individual",
+      "rate": 20,
+      "passed": true
+    },
+    {
+      "recipient": "business",
+      "rate": 10,
+      "passed": true
+    },
+    {
+      "recipient": "business",
+      "rate": 15,
+      "passed": true
+    },
+    {
+      "recipient": "business",
+      "rate": 20,
+      "passed": true
+    }
+  ],
+  "allCancelledZeroPayout": true,
+  "exportFormulaAndCachedValuesVerified": true,
+  "exportRecalculationVerified": true,
+  "cancelRowVisualHighlightVerified": true,
+  "providedSampleVisualReview": true,
+  "consoleErrors": 0,
+  "phpEngineExecuted": false,
+  "nativeExcelEngineExecuted": false,
+  "userReview": "pending"
+}

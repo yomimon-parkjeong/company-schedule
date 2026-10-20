@@ -6,7 +6,7 @@
   "serverPersistence": false,
   "dashboardUnchanged": true,
   "dashboardSha256": "e48c513ef753ba9ce8a1b8d5abacc86208b81ee4b074b806a7b65c7b149c9cd5",
-  "phpPayloadSha256": "e9ac41c691b1ed019c20e5367a2335d4ce27cd85f71cf80b6ba5b63892df1275",
+  "phpPayloadSha256": "f671b18ebf384293f81e64412f04fdbb7a5920f9a118b7afbc911cfd34d9ff6f",
   "containsSourceIds": false,
   "containsRawScheduleTitles": false,
   "storageNamespace": "company-schedule.dev-empty.",
@@ -23,8 +23,8 @@
     },
     {
       "path": "public/index.php",
-      "bytes": 338262,
-      "sha256": "e9ac41c691b1ed019c20e5367a2335d4ce27cd85f71cf80b6ba5b63892df1275"
+      "bytes": 338312,
+      "sha256": "f671b18ebf384293f81e64412f04fdbb7a5920f9a118b7afbc911cfd34d9ff6f"
     },
     {
       "path": "README.md",
@@ -35,6 +35,6 @@
   "screenshotRecordsEmbedded": 0,
   "screenshotAssetsIncluded": false,
   "csvProductNamesFullyCorrected": false,
-  "latestStage": 2,
+  "latestStage": 3,
   "productionDatabaseCodeIncluded": false
 }
