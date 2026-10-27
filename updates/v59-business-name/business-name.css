@@ -1,0 +1,18 @@
+.settlement-business-field{display:flex;flex-direction:column;gap:7px;margin:16px 0;font-size:13px;color:#34465e}
+.settlement-business-field input{width:100%;max-width:560px;box-sizing:border-box;padding:10px 12px}
+.settlement-business-field small{color:var(--muted);font-size:12px;line-height:1.6}
+.settlement-business-actions{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin-top:8px}
+.settlement-business-actions p{margin:0}
+.settlement-business-difference{padding:12px 14px;border:1px solid #d4a23a;background:#fff8e6;border-radius:6px;margin:12px 0;color:#634900;font-size:13px}
+.settlement-business-difference label{display:flex;gap:8px;align-items:flex-start;line-height:1.7}
+.settlement-business-difference input{margin-top:5px;flex-shrink:0}
+.sku-campaign-table .sku-business-name{min-width:145px;max-width:310px;white-space:normal;overflow-wrap:anywhere;text-align:left}
+.sku-campaign-table{min-width:820px}
+.sku-campaign-table th:first-child{width:12%}.sku-campaign-table th:nth-child(2){width:24%}.sku-campaign-table th:nth-child(3){width:24%}.sku-campaign-table th:nth-child(4){width:12%}.sku-campaign-table th:nth-child(5){width:13%}.sku-campaign-table th:nth-child(6){width:15%}
+.sku-campaign-table>thead>tr>th:nth-child(4),.sku-campaign-table>tbody>tr>td:nth-child(4){text-align:left}
+.sku-campaign-table>thead>tr>th:nth-child(n+5),.sku-campaign-table>tbody>tr>td:nth-child(n+5){text-align:right;font-variant-numeric:tabular-nums}
+#settleBusinessEditDialog{width:min(600px,calc(100vw - 30px));max-height:90vh}
+#settleBusinessEditDialog .dialog-body{overflow:auto}
+#settleBusinessEditDialog dd{overflow-wrap:anywhere}
+#settleBusinessEditDialog .dialog-foot{flex-wrap:wrap}
+.preview-storage-note{margin:0 0 16px;padding:10px 13px;background:#edf3ff;border:1px solid #cbd9f1;border-radius:5px;font-size:12px;color:#344d70;line-height:1.7}
