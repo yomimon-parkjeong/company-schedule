@@ -80,9 +80,24 @@
   "publicInitialSchedules": 0,
   "productionFirebaseAccessed": false,
   "productionPhpModified": false,
-  "realBrowserAutomatedVerification": "unavailable: browser tool initialization failed",
-  "phpSha256": "f24cf7b5399797c6756b0d2ef58617825c7361b7b569d66c0e6f8a6bdb09de08",
-  "htmlSha256": "961d922f517156ad24803c1b580216432590fd7e33da8c1281340c9adb94f54c",
+  "realBrowserAutomatedVerification": "passed: isolated headless Microsoft Edge, generated preview served on loopback; external page requests blocked",
+  "browserRegression": {
+    "script": "tools/test-sales-records-browser.cjs",
+    "reproducedBeforeFix": "Dialog open=true, visible=false, zero-size rectangle, hidden ancestor settlementWorkspace; no JavaScript errors",
+    "fix": "Move salesRecordDialog to a direct child of body, outside the hidden settlement workspace",
+    "manualScheduleWithSales": true,
+    "dialogActuallyVisible": true,
+    "scopeButtons": true,
+    "closeMethods": ["X", "outside", "Escape", "return"],
+    "unsavedInputsScrollFocusPreserved": true,
+    "storedSchedulesUnchangedByViewing": true,
+    "mobile375pxViewport": true,
+    "javascriptErrors": [],
+    "buildRejectsHiddenDialogPlacement": true,
+    "productionPhpSha256Unchanged": "789d22ca685514037d659a0d0f1ba2ef21220144d12abadc1b6d24194c38c55c"
+  },
+  "phpSha256": "a357a5d73e1116f1be06995192d269e292c1d212b77d24641676ca2f7ab0ed3d",
+  "htmlSha256": "62f1f7ae82dd1ed147f7558bafac40a3376cad84f587a6b20f748b99e1bdcc8b",
   "uniqueHtmlIds": true,
   "buttonBelowSales": true
 }

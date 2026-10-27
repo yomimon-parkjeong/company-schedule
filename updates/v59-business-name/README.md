@@ -27,6 +27,10 @@ GitHub Pages에서 검토할 클라이언트 시안입니다. 회사 운영 PHP�
 
 ## 검증 범위
 
-18개 로컬 상호작용 모델 검사로 부모 입력·스크롤 보존, 초점 복귀, X/바깥 클릭/ESC/돌아가기, 내부 클릭과 드래그 구분, 같은 닉네임 범위, 월/연도·말일 표기, 미등록과 0 구분을 확인했습니다. PHP/JavaScript 문법도 확인했습니다. 실제 브라우저 자동 검사는 도구 초기화 오류로 완료하지 못했으며 GitHub 게시 성공을 실제 브라우저 검수 완료로 간주하지 않습니다.
+초기 18개 로컬 상호작용 모델 검사는 숨겨진 상위 화면의 영향을 검증하지 못했습니다. 사용자 제보 후 별도의 headless Edge 브라우저에서 수동 일정 등록 → 판매건수·매출액 입력 → 상세 매출 기록 클릭으로 오류를 재현했습니다. `salesRecordDialog`가 숨겨진 `settlementWorkspace` 안에서 열려 화면은 보이지 않고 모달의 클릭 차단만 적용되는 배치 오류였습니다.
+
+팝업을 `body` 바로 아래의 공통 영역으로 옮겼습니다. `sales-records.html`은 정산 탭 안이 아니라 `detailDialog` 앞에 삽입해야 합니다. Pages 생성기는 이 위치를 검사하며 잘못된 위치의 빌드를 차단합니다. 수정 후 실제 브라우저에서 팝업 표시, X/바깥 클릭/ESC/돌아가기, 미저장 입력·스크롤·초점·저장된 일정 보존, 모바일 너비에서 표시를 검증했습니다. PHP/JavaScript 문법과 기존 모델 검사도 확인했습니다.
+
+브라우저 회귀 검사는 `tools/test-sales-records-browser.cjs`입니다. Playwright가 제공되는 Node 환경에서 `TEST_BROWSER_EXECUTABLE`(필요 시), `TEST_OUTPUT_DIR`, `TEMP/TMP`를 프로젝트 드라이브로 지정한 뒤 실행합니다. 생성된 Pages 파일을 독립적인 로컬 HTTP 서버와 브라우저에서만 검사하며 외부 요청을 차단합니다. 사용자 브라우저나 회사 운영 DB에는 접속하지 않습니다.
 
 기능 소스는 business-name.js/css, sales-records.js/css/html입니다. 실제 실행 소스는 developer-empty/public/index.php이며 tools/build-pages-preview.py가 docs/index.html을 생성합니다. 로컬 가상 자료·주문 파일·테스트용 저장 엔드포인트는 저장소와 Pages에 포함하지 않습니다.
