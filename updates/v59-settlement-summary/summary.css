@@ -1,0 +1,29 @@
+/* v59 settlement-summary preview */
+.sales-settlement-summary{margin:16px 0 12px;padding:15px 16px;border:1px solid #d3dfed;border-radius:6px;background:#f8fbff}
+.settlement-summary-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.settlement-summary-head h3{font-size:13px;color:#24486f;margin:0}
+.settlement-summary-head>span,.settlement-summary-note{font-size:11px;line-height:1.7;color:#526175}
+.settlement-summary-note{margin:7px 0 0}
+.settlement-summary-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:12px}
+.settlement-summary-metric{min-width:0;padding-right:15px;border-right:1px solid #d3dfed}
+.settlement-summary-metric:last-child{border:0}
+.settlement-summary-metric span,.settlement-summary-metric small{display:block;color:#526175;font-size:11px;line-height:1.6}
+.settlement-summary-metric strong{display:block;color:#1d3b5f;font-size:21px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere;line-height:1.5}
+.settlement-payout-coverage{display:block!important;font-size:10px;font-weight:400;color:#63738a;line-height:1.6;white-space:normal}
+.settlement-payout-cell{font-variant-numeric:tabular-nums;text-align:right;overflow-wrap:anywhere}
+.sku-product-table{min-width:960px}
+.sku-product-table>thead>tr>th:nth-child(1){width:25%}
+.sku-product-table>thead>tr>th:nth-child(2){width:10%}
+.sku-product-table>thead>tr>th:nth-child(3){width:12%}
+.sku-product-table>thead>tr>th:nth-child(4){width:16%}
+.sku-product-table>thead>tr>th:nth-child(5){width:22%}
+.sku-product-table>thead>tr>th:nth-child(6){width:15%}
+.sku-campaign-table{min-width:1080px}
+.sku-campaign-table th:first-child{width:10%}
+.sku-campaign-table th:nth-child(2){width:19%}
+.sku-campaign-table th:nth-child(3){width:18%}
+.sku-campaign-table th:nth-child(4){width:10%}
+.sku-campaign-table th:nth-child(5){width:10%}
+.sku-campaign-table th:nth-child(6){width:14%}
+.sku-campaign-table th:nth-child(7){width:19%}
+@media(max-width:700px){.sales-settlement-summary{padding:12px}.settlement-summary-metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.settlement-summary-metric:nth-child(2){border-right:0}.settlement-summary-metric:last-child{grid-column:1/-1;border-top:1px solid #d3dfed;padding-top:8px}.settlement-summary-metric strong{font-size:18px}}

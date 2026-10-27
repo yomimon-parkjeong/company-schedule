@@ -396,6 +396,36 @@ button.delete-schedule-button:focus-visible,button.delete-confirm-button:focus-v
 .sales-record-empty{padding:24px;text-align:center;color:#63738a;font-size:13px;border:1px dashed #c5d1e2;border-radius:6px}
 @media(max-width:700px){#salesRecordDialog{width:calc(100vw - 20px);max-height:92vh}.sales-record-body{padding:14px}.sales-record-summary{grid-template-columns:repeat(2,minmax(0,1fr))}.sales-record-metric:nth-child(3){border-left:0;border-top:1px solid #d4deec}.sales-record-metric:nth-child(4){border-top:1px solid #d4deec}.sales-record-metric strong{font-size:18px}#salesRecordDialog .dialog-foot button{width:100%}}
 
+/* v59 settlement-summary preview */
+.sales-settlement-summary{margin:16px 0 12px;padding:15px 16px;border:1px solid #d3dfed;border-radius:6px;background:#f8fbff}
+.settlement-summary-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.settlement-summary-head h3{font-size:13px;color:#24486f;margin:0}
+.settlement-summary-head>span,.settlement-summary-note{font-size:11px;line-height:1.7;color:#526175}
+.settlement-summary-note{margin:7px 0 0}
+.settlement-summary-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:12px}
+.settlement-summary-metric{min-width:0;padding-right:15px;border-right:1px solid #d3dfed}
+.settlement-summary-metric:last-child{border:0}
+.settlement-summary-metric span,.settlement-summary-metric small{display:block;color:#526175;font-size:11px;line-height:1.6}
+.settlement-summary-metric strong{display:block;color:#1d3b5f;font-size:21px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere;line-height:1.5}
+.settlement-payout-coverage{display:block!important;font-size:10px;font-weight:400;color:#63738a;line-height:1.6;white-space:normal}
+.settlement-payout-cell{font-variant-numeric:tabular-nums;text-align:right;overflow-wrap:anywhere}
+.sku-product-table{min-width:960px}
+.sku-product-table>thead>tr>th:nth-child(1){width:25%}
+.sku-product-table>thead>tr>th:nth-child(2){width:10%}
+.sku-product-table>thead>tr>th:nth-child(3){width:12%}
+.sku-product-table>thead>tr>th:nth-child(4){width:16%}
+.sku-product-table>thead>tr>th:nth-child(5){width:22%}
+.sku-product-table>thead>tr>th:nth-child(6){width:15%}
+.sku-campaign-table{min-width:1080px}
+.sku-campaign-table th:first-child{width:10%}
+.sku-campaign-table th:nth-child(2){width:19%}
+.sku-campaign-table th:nth-child(3){width:18%}
+.sku-campaign-table th:nth-child(4){width:10%}
+.sku-campaign-table th:nth-child(5){width:10%}
+.sku-campaign-table th:nth-child(6){width:14%}
+.sku-campaign-table th:nth-child(7){width:19%}
+@media(max-width:700px){.sales-settlement-summary{padding:12px}.settlement-summary-metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.settlement-summary-metric:nth-child(2){border-right:0}.settlement-summary-metric:last-child{grid-column:1/-1;border-top:1px solid #d3dfed;padding-top:8px}.settlement-summary-metric strong{font-size:18px}}
+
 </style>
 </head>
 <body>
@@ -438,7 +468,7 @@ button.delete-schedule-button:focus-visible,button.delete-confirm-button:focus-v
  <ul id="groupbuyWeekItems" class="groupbuy-detail-items"></ul>
 </section></div></details>
 </section><p class="stats-note" id="statsNote">공구 시작일 기준 · 취소 제외 · 검색·필터와 관계없이 월 전체 집계 · 담당 미확인 별도 표시</p>
-<section class="sales-summary sales-collapsed" id="monthSalesSummary" aria-label="월별 주차별 매출 집계"><div class="sales-fold-head"><div><h2 id="salesMonthTitle">월 매출 종합</h2><p id="salesCollapsedSummary"></p></div><button id="toggleSalesSummary" type="button" aria-expanded="false" aria-controls="salesSummaryBody"><span id="salesToggleText">매출 펼치기</span><span id="salesToggleArrow" aria-hidden="true">▾</span></button></div><div id="salesSummaryBody" hidden><div class="sales-summary-head"><div><p id="salesScopeDescription">선택 월에 진행한 공구 기준</p></div><div class="sales-summary-controls"><label class="sales-scope-label">집계 기준<select id="salesScope" aria-label="매출 집계 기준"><option value="active">선택 월에 진행한 공구</option><option value="start">공구 시작일</option></select></label><div class="export-actions"><button id="exportMonthly">월별 엑셀</button><button id="exportWeekly">주차별 엑셀</button></div></div></div><p id="salesScopeNote" class="sales-scope-note"></p><div class="sales-metrics"><div class="sales-metric"><label>판매건수</label><strong id="salesMonthCount">미입력</strong><small id="salesCountCoverage"></small></div><div class="sales-metric"><label>매출액</label><strong id="salesMonthAmount">미입력</strong><small id="salesAmountCoverage"></small></div><div class="sales-metric"><label>매출 입력 완료 공구</label><strong id="salesMonthComplete"></strong><small>건수와 금액을 모두 입력한 일정</small></div></div><details id="salesProductBreakdown" class="sku-month-breakdown">
+<section class="sales-summary sales-collapsed" id="monthSalesSummary" aria-label="월별 주차별 매출 집계"><div class="sales-fold-head"><div><h2 id="salesMonthTitle">월 매출 종합</h2><p id="salesCollapsedSummary"></p></div><button id="toggleSalesSummary" type="button" aria-expanded="false" aria-controls="salesSummaryBody"><span id="salesToggleText">매출 펼치기</span><span id="salesToggleArrow" aria-hidden="true">▾</span></button></div><div id="salesSummaryBody" hidden><div class="sales-summary-head"><div><p id="salesScopeDescription">선택 월에 진행한 공구 기준</p></div><div class="sales-summary-controls"><label class="sales-scope-label">집계 기준<select id="salesScope" aria-label="매출 집계 기준"><option value="active">선택 월에 진행한 공구</option><option value="start">공구 시작일</option></select></label><div class="export-actions"><button id="exportMonthly">월별 엑셀</button><button id="exportWeekly">주차별 엑셀</button></div></div></div><p id="salesScopeNote" class="sales-scope-note"></p><div class="sales-metrics"><div class="sales-metric"><label>판매건수</label><strong id="salesMonthCount">미입력</strong><small id="salesCountCoverage"></small></div><div class="sales-metric"><label>매출액</label><strong id="salesMonthAmount">미입력</strong><small id="salesAmountCoverage"></small></div><div class="sales-metric"><label>매출 입력 완료 공구</label><strong id="salesMonthComplete"></strong><small>건수와 금액을 모두 입력한 일정</small></div></div><section class="sales-settlement-summary" aria-labelledby="settlementSummaryTitle"><div class="settlement-summary-head"><h3 id="settlementSummaryTitle">공구 정산 요약</h3><span id="settlementSummaryCoverage" role="status"></span></div><div class="settlement-summary-metrics"><div class="settlement-summary-metric"><span>정산 기준 매출</span><strong id="settlementSummaryBasis">미등록</strong><small>매출·수수료가 함께 확인된 정산</small></div><div class="settlement-summary-metric"><span>수수료 합계</span><strong id="settlementSummaryCommission">미등록</strong><small>세전 수수료 기준</small></div><div class="settlement-summary-metric"><span>수수료 차감 후 금액</span><strong id="settlementSummaryRetained">미등록</strong><small>정산 기준 매출 − 세전 수수료</small></div></div><p id="settlementSummaryNote" class="settlement-summary-note"></p></section><details id="salesProductBreakdown" class="sku-month-breakdown">
  <summary><span>제품별(SKU) 보기</span><small id="salesProductCount"></small></summary>
  <p class="sku-help">제품명을 누르면 해당 공구의 닉네임·담당자·매출을 확인할 수 있습니다.</p>
  <div class="sku-table-scroll" id="salesMonthlyProducts"></div>
@@ -875,6 +905,7 @@ function renderSales(){
  $('salesAmountCoverage').textContent=v.amountEntered+'/'+v.total+'개 공구 입력 · 미입력 '+(v.total-v.amountEntered)+'개';
  $('salesMonthComplete').textContent=v.complete+' / '+v.total+'개';
  $('salesWeeklyCaption').textContent='선택 월의 '+salesScopeLabel()+' 주차별 판매 매출. 전월 시작 공구는 첫 주에 한 번 집계합니다.';
+ renderSettlementSalesSummary(context);
  renderSkuSales(items,first);
  document.querySelectorAll('.opening-sales,.opening-week-sales').forEach(el=>el.remove());
  for(const button of document.querySelectorAll('.opening-item')){
@@ -1361,27 +1392,27 @@ function skuCoverage(v){
 }
 function skuCampaignTable(items,label){
  const table=node('table',undefined,'sku-campaign-table'),caption=node('caption',label+' 공구별 매출','sr-only'),thead=node('thead'),head=node('tr'),body=node('tbody');
- for(const title of ['시작일','닉네임','사업자명','담당자','판매건수','매출액']){const th=node('th',title);th.scope='col';head.append(th);}thead.append(head);
+ for(const title of ['시작일','닉네임','사업자명','담당자','판매건수','매출액']){const th=node('th',title);th.scope='col';head.append(th);}head.append(settlementPayoutHeading());thead.append(head);
  for(const s of [...items].sort((a,b)=>a.start.localeCompare(b.start)||a.id-b.id)){
   const row=node('tr'),v=salesOf(s),name=node('td'),fields=openingFields(s),button=node('button','@'+(fields.displayName||fields.nickname||'닉네임 확인 필요'),'sku-schedule-button');
   button.type='button';button.dataset.scheduleId=String(s.id);button.setAttribute('aria-label',openingDate(s.start)+' '+openingLine(s)+' · '+salesLabel(s));button.onclick=()=>openDetail(s);name.append(button);
-  row.dataset.scheduleId=String(s.id);row.append(node('td',openingDate(s.start)),name,node('td',settlementBusinessNameLabel(s),'sku-business-name'),node('td',scheduleOwnerName(s)),node('td',salesText(v.count,'건')),node('td',salesText(v.amount,'원')));body.append(row);
+  row.dataset.scheduleId=String(s.id);row.append(node('td',openingDate(s.start)),name,node('td',settlementBusinessNameLabel(s),'sku-business-name'),node('td',scheduleOwnerName(s)),node('td',salesText(v.count,'건')),node('td',salesText(v.amount,'원')),settlementPayoutCell([s]));body.append(row);
  }
- const total=summarizeSales(items),foot=node('tfoot'),totalRow=node('tr'),totalLabel=node('th','제품 합계');totalLabel.scope='row';totalLabel.colSpan=4;totalRow.append(totalLabel,node('td',salesText(total.count,'건')),node('td',salesText(total.amount,'원')));foot.append(totalRow);
+ const total=summarizeSales(items),foot=node('tfoot'),totalRow=node('tr'),totalLabel=node('th','제품 합계');totalLabel.scope='row';totalLabel.colSpan=4;totalRow.append(totalLabel,node('td',salesText(total.count,'건')),node('td',salesText(total.amount,'원')),settlementPayoutCell(items));foot.append(totalRow);
  table.append(caption,thead,body,foot);return table;
 }
 function skuProductTable(items,namespace,label){
  const groups=groupSkuSales(items);
  if(!groups.length)return node('p','선택한 집계 기준에 해당하는 공동구매가 없습니다.','sku-empty');
  const table=node('table',undefined,'sku-product-table'),caption=node('caption',label+' 제품별(SKU) 매출','sr-only'),thead=node('thead'),head=node('tr'),body=node('tbody'),foot=node('tfoot');
- for(const title of ['제품(SKU)','공구 일정','판매건수','매출액','입력 현황']){const th=node('th',title);th.scope='col';head.append(th);}thead.append(head);
+ for(const title of ['제품(SKU)','공구 일정','판매건수','매출액']){const th=node('th',title);th.scope='col';head.append(th);}head.append(settlementPayoutHeading(),node('th','입력 현황'));thead.append(head);
  groups.forEach((group,index)=>{
   const row=node('tr',undefined,'sku-product-total'),th=node('th'),v=group.totals,panel=node('tr',undefined,'sku-campaign-detail'),cell=node('td'),id='sku-'+namespace+'-product-'+index+'-detail',key=JSON.stringify([namespace,group.name]);
-  row.dataset.product=group.name;th.scope='row';panel.id=id;panel.hidden=!skuProductExpanded.has(key);cell.colSpan=5;cell.append(skuCampaignTable(group.items,group.name));panel.append(cell);
+  row.dataset.product=group.name;th.scope='row';panel.id=id;panel.hidden=!skuProductExpanded.has(key);cell.colSpan=6;cell.append(skuCampaignTable(group.items,group.name));panel.append(cell);
   const toggle=skuToggle(group.name,id,!panel.hidden,open=>{panel.hidden=!open;if(open)skuProductExpanded.add(key);else skuProductExpanded.delete(key);});toggle.setAttribute('aria-label',group.name+' 공구별 내역');th.append(toggle);
-  row.append(th,node('td',v.total+'개'),node('td',salesText(v.count,'건')),node('td',salesText(v.amount,'원')),skuCoverage(v));body.append(row,panel);
+  row.append(th,node('td',v.total+'개'),node('td',salesText(v.count,'건')),node('td',salesText(v.amount,'원')),settlementPayoutCell(group.items),skuCoverage(v));body.append(row,panel);
  });
- const total=summarizeSales(items),totalRow=node('tr'),totalLabel=node('th',label+' 합계');totalLabel.scope='row';totalRow.append(totalLabel,node('td',total.total+'개'),node('td',salesText(total.count,'건')),node('td',salesText(total.amount,'원')),skuCoverage(total));foot.append(totalRow);
+ const total=summarizeSales(items),totalRow=node('tr'),totalLabel=node('th',label+' 합계');totalLabel.scope='row';totalRow.append(totalLabel,node('td',total.total+'개'),node('td',salesText(total.count,'건')),node('td',salesText(total.amount,'원')),settlementPayoutCell(items),skuCoverage(total));foot.append(totalRow);
  table.append(caption,thead,body,foot);return table;
 }
 function renderSkuSales(items,first){
@@ -2346,6 +2377,59 @@ $('salesRecordDialog').addEventListener('close',()=>queueMicrotask(()=>{
  if($('detailDialog').open&&selectedScheduleId===salesRecordState.scheduleId){$('detailDialog').querySelector('.dialog-body').scrollTop=salesRecordState.parentScroll;$('openSalesRecords').focus({preventScroll:true});}
 }));
 $('detailDialog').addEventListener('close',closeSalesRecords);
+
+
+/* Read-only totals for the same campaigns as the existing sales view. */
+function settlementSummaryCents(value){
+ if(typeof value!=='number'||!Number.isFinite(value)||value<0||value>amountLimit)return null;
+ const cents=Math.round(value*100);
+ return Number.isSafeInteger(cents)&&Math.abs(value-cents/100)<=0.0001?BigInt(cents):null;
+}
+function settlementSummaryMoney(cents,known){
+ if(!known)return '미등록';
+ const whole=cents/100n,fraction=String(cents%100n).padStart(2,'0').replace(/0+$/,'');
+ return whole.toLocaleString('ko-KR')+(fraction?'.'+fraction:'')+'원';
+}
+function summarizeSettlementSales(items){
+ const totals={campaigns:items.length,unlinked:0,links:0,financialKnown:0,paymentKnown:0,duplicates:0,basis:0n,commission:0n,retained:0n,payment:0n},seen=new Set();
+ for(const schedule of items){
+  const links=settlementCalendarLinks(schedule);if(!links.length)totals.unlinked++;
+  for(const link of links){
+   if(!link||typeof link!=='object'){totals.links++;continue;}
+   if(typeof link.key==='string'&&link.key){if(seen.has(link.key)){totals.duplicates++;continue;}seen.add(link.key);}
+   totals.links++;
+   const basis=settlementSummaryCents(link.financial?.basis),commission=settlementSummaryCents(link.financial?.commission),payment=settlementSummaryCents(link.financial?.payment);
+   // Match basis and fee on each record; partial metadata must not skew subtraction.
+   if(basis!==null&&commission!==null&&commission<=basis){totals.financialKnown++;totals.basis+=basis;totals.commission+=commission;totals.retained+=basis-commission;}
+   if(payment!==null){totals.paymentKnown++;totals.payment+=payment;}
+  }
+ }
+ return totals;
+}
+function settlementSummaryCoverage(totals,kind='financial'){
+ const known=kind==='payment'?totals.paymentKnown:totals.financialKnown;
+ return (known<totals.links||totals.unlinked?'일부 등록 · ':'')+'정산 '+known+'/'+totals.links+'건 확인 · 미연결 '+totals.unlinked+'개 공구'+(totals.duplicates?' · 중복 자료 '+totals.duplicates+'건 제외':'');
+}
+function renderSettlementSalesSummary(context){
+ const totals=summarizeSettlementSales(context.items);
+ $('settlementSummaryTitle').textContent=context.label+' 공구 정산 요약';
+ $('settlementSummaryCoverage').textContent=settlementSummaryCoverage(totals);
+ $('settlementSummaryBasis').textContent=settlementSummaryMoney(totals.basis,totals.financialKnown);
+ $('settlementSummaryCommission').textContent=settlementSummaryMoney(totals.commission,totals.financialKnown);
+ $('settlementSummaryRetained').textContent=settlementSummaryMoney(totals.retained,totals.financialKnown);
+ $('settlementSummaryNote').textContent='위 매출과 같은 공구 대상 · 해당 공구의 전체 정산 이력 중 매출·수수료가 함께 등록된 내역만 합산합니다. 주문일·지급일별 월 분할이 아니며, 미등록 내역은 0원으로 계산하지 않습니다.';
+}
+function settlementPayoutCell(items){
+ const totals=summarizeSettlementSales(items),cell=node('td',settlementSummaryMoney(totals.payment,totals.paymentKnown),'settlement-payout-cell');
+ cell.append(node('small',settlementSummaryCoverage(totals,'payment'),'settlement-payout-coverage'));
+ cell.title='최종 지급수수료: 세금 공제 후 지급 예정액이며 실제 송금 완료액이 아닙니다.';
+ return cell;
+}
+function settlementPayoutHeading(){
+ const cell=node('th','최종 지급수수료');cell.scope='col';
+ cell.append(node('small','세금 공제 후 · 지급 예정','settlement-payout-coverage'));
+ return cell;
+}
 
 </script>
 <datalist id="scheduleProductNames"><option value="플레이돌"></option><option value="플레이돌 맥스"></option><option value="와우펜"></option><option value="멀티보드"></option><option value="그리고지우고북"></option><option value="무한워크북"></option><option value="듀얼USB"></option><option value="키즈탭프로"></option><option value="세탁볼"></option><option value="무선마이크"></option></datalist>
