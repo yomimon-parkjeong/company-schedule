@@ -749,8 +749,8 @@ function groupbuyWeekCopyText(){
  if(!state||state.owner!=='*'||state.context!==groupbuyWeekContext())return '';
  const items=groupbuyWeekItems('*',state.index);if(!items.length)return '';
  const heading=(month+1)+'월 '+(state.index+1)+'주차 공동구매 '+items.length+'건';
- const entries=items.map(s=>[openingDate(s.start),groupbuyDetailLine(s),scheduleOwnerName(s)+' · '+s.start+' ~ '+s.end].join('\n'));
- return [heading,...entries].join('\n\n');
+ const entries=items.map(s=>openingDate(s.start)+' '+groupbuyDetailLine(s)+' - '+scheduleOwnerName(s));
+ return heading+'\n\n'+entries.join('\n');
 }
 async function writeGroupbuyWeekClipboard(text){
  if(navigator.clipboard?.writeText){
